@@ -64,6 +64,18 @@ else
 fi
 PS1="${PS1}\h${reset}:${blue}\w${reset}"
 
+# Orange jail
+if [ -e /etc/jail ]
+then
+    PS1="${PS1}${orange}$(cat /etc/jail)${reset}"
+fi
+
+# Git branch
+if [ "$(type -t __git_ps1)" = 'function' ]
+then
+    PS1="${PS1}\$(__git_ps1 ' (%s)')"
+fi
+
 # PS1 end
 if [ "$USER" = 'root' ]
 then
