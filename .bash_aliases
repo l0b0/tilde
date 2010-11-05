@@ -25,7 +25,8 @@ alias df='df -h'
 # Update everything
 alias upgrade='sudo sh -c "aptitude update;aptitude dist-upgrade;aptitude autoclean"' 
 
-# Image files
+# Mount images, as described at
+# http://l0b0.wordpress.com/2008/03/15/iso-mount-script-for-nautilus-shell/
 alias mountiso='$HOME/.gnome2/nautilus-scripts/mountiso.sh'
 alias unmountiso='$HOME/.gnome2/nautilus-scripts/unmountiso.sh'
 
