@@ -82,3 +82,14 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+# Default editor
+export GIT_EDITOR='vim'
+export VISUAL='vim'
+export EDITOR='vim'
+
+# Java
+export JAVA_HOME='/usr/'
+
+# OpenOffice.org
+export MOZILLA_CERTIFICATE_FOLDER="$HOME/settings/Firefox/Profile"
