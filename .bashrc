@@ -30,47 +30,48 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
+chroot='${debian_chroot:+($debian_chroot)}'
+PS1="$chroot"
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
+# Color support detection from Ubuntu
+if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null
+then
+    reset='\[\e[0m\]'
+    red='\[\e[1;31m\]'
+    green='\[\e[1;32m\]'
+    orange='\[\e[1;33m\]'
+    blue='\[\e[1;34m\]'
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# Red user if root, orange if su
+if [ "$USER" == 'root' ]
+then
+    PS1="$PS1$red"
+elif [ -n "$SUDO_USER" ]
+then
+    PS1="$PS1$orange"
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="$PS1$green"
 fi
-unset color_prompt force_color_prompt
+PS1="${PS1}\u${reset}@"
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-
+# Red host if SSH
+if [ -n "$SSH_CONNECTION" ]
+then
+    PS1="$PS1$red"
+else
+    PS1="$PS1$green"
 fi
+PS1="${PS1}\h${reset}:${blue}\w${reset}"
 
-
+# PS1 end
+if [ "$USER" = 'root' ]
+then
+    separator='#'
+else
+    separator='$'
+fi
+PS1="${PS1}${separator} "
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
