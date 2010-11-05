@@ -1,0 +1,22 @@
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[5C": forward-word
+"\e[5D": backward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+"\e[3;3~": kill-word
+set match-hidden-files off
+set page-completions off
+set completion-query-items 350
+set show-all-if-ambiguous on
+
+# Use visual bell instead of sound
+set bell-style visible
+
+# Show extra information when completing
+set visible-stats on
+
+# Auto-complete files with the wrong case
+set completion-ignore-case on
