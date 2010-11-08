@@ -29,5 +29,5 @@ do
     then
         rm "$link_path"
     fi
-    ln -s $path $link_dir
+    ln -s $path $link_dir || error "Could not create link"
 done
