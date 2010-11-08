@@ -3,7 +3,7 @@
 apt-get update
 
 # Version control
-apt-get install git-completion git-core git-gui gitk meld subversion
+apt-get install colordiff git-completion git-core git-gui gitk meld subversion
 
 # Python
 apt-get install ipython libxml2-dev libxslt-dev pychecker pylint python-dev python-epydoc python-lxml python-setuptools
