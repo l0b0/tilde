@@ -1,0 +1,8 @@
+Include exit code somehow in PS1:
+* Pre/postfix in red
+* Swap background/foreground colors
+* Make the last character red?
+
+Something like __git_ps1() for Subversion in PS1
+
+declare -r / local where possible.
