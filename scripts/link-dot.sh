@@ -20,7 +20,7 @@ link_dir=$(readlink -f "$2")
 
 echo "Creating symlinks to $file_dir in $link_dir"
 
-find $file_dir -maxdepth 1 -name ".*" -print0 | while read -r -d $'\0' path
+find $file_dir -maxdepth 1 -name '.*' -not -name '.git' -print0 | while read -r -d $'\0' path
 do
     echo "Creating symlink $path -> $link_path"
     filename=$(basename "$path")
@@ -29,5 +29,5 @@ do
     then
         rm "$link_path"
     fi
-    ln -s $path $link_dir || error "Could not create link"
+    ln -s $path $link_dir || error 'Could not create link'
 done
