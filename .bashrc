@@ -100,4 +100,4 @@ export EDITOR='vim'
 export JAVA_HOME='/usr/'
 
 # OpenOffice.org
-export MOZILLA_CERTIFICATE_FOLDER="$HOME/settings/Firefox/Profile"
+export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
