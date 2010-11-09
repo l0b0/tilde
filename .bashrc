@@ -25,14 +25,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-chroot='${debian_chroot:+($debian_chroot)}'
-PS1="$chroot"
-
 # Color support detection from Ubuntu
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null
 then
@@ -42,6 +34,14 @@ then
     orange='\[\e[1;33m\]'
     blue='\[\e[1;34m\]'
 fi
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, overwrite the one in /etc/profile)
+PS1="${orange}\${debian_chroot:+(\$debian_chroot)}${reset}"
 
 # Red user if root, orange if su
 if [ "$USER" == 'root' ]
@@ -64,11 +64,6 @@ else
 fi
 PS1="${PS1}\h${reset}:${blue}\w${reset}"
 
-# Orange jail
-if [ -e /etc/jail ]
-then
-    PS1="${PS1}${orange}\$(cat /etc/jail)${reset}"
-fi
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
