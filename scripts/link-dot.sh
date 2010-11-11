@@ -22,9 +22,9 @@ echo "Creating symlinks to $file_dir in $link_dir"
 
 find $file_dir -maxdepth 1 -name '.*' -not -name '.git' -print0 | while read -r -d $'\0' path
 do
-    echo "Creating symlink $path -> $link_path"
     filename=$(basename "$path")
     link_path="$link_dir/$filename"
+    echo "Creating symlink $link_path -> $path"
     if [ -L "$link_path" ]
     then
         rm "$link_path"
