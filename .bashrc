@@ -101,3 +101,5 @@ export JAVA_HOME='/usr/'
 
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
+
+test -r "$HOME/.bashrc_local" && source "$HOME/.bashrc_local"
