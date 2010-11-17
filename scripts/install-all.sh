@@ -36,6 +36,9 @@ apt-get install myspell-de-ch myspell-de-de myspell-en-us myspell-fr-fr myspell-
 # Misc
 apt-get install gnokii-cli keepassx openssh-server thunderbird
 
+# Aptitude cleanup
+apt-get autoclean
+
 # Configure default editors
 update-alternatives --install /usr/bin/gnome-text-editor gnome-text-editor "$HOME/.jedit/shortcut.sh" 100
 update-alternatives --set editor /usr/bin/vim.basic
