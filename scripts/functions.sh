@@ -37,7 +37,7 @@ error() # Synopsis: error <message> [exit code]
     # Output error message with optional error code
     test -t 1 && tput setf 4
     echo "$1" >&2
-    tput sgr0 # Reset terminal
+    test -t 1 && tput sgr0 # Reset terminal
 
     exit ${2:-$EX_UNKNOWN}
 }
