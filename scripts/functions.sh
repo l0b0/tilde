@@ -49,7 +49,7 @@ usage()
     do
         if [ ! "$line" ]
         then
-            exit $EX_USAGE
+            exit
         fi
         echo "$line"
     done < "$0"
