@@ -38,4 +38,16 @@ alias fgit='$HOME/dev/fgit/fgit.sh'
 # Subversion
 alias svndiff='svn diff "$@" | colordiff'
 
+# Git
+mkgithub()
+{
+    mkdir "$1" && \
+    cd "$1" && \
+    git init && \
+    git remote add origin "git@github.com:l0b0/${1}.git" && \
+    git config push.default matching && \
+    git config branch.master.remote origin && \
+    git config branch.master.merge refs/heads/master
+}
+
 test -r "$HOME/.bash_aliases_local" && source "$HOME/.bash_aliases_local"
