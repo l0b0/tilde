@@ -41,7 +41,10 @@ alias svndiff='svn diff "$@" | colordiff'
 # Git
 mkgithub()
 {
-    mkdir "$1" && \
+    if [ ! -e "$1" ]
+    then
+        mkdir "$1"
+    fi
     cd "$1" && \
     git init && \
     git remote add origin "git@github.com:l0b0/${1}.git" && \
