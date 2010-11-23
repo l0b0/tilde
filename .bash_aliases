@@ -45,9 +45,15 @@ mkgithub()
     then
         mkdir "$1"
     fi
-    cd "$1" && \
-    git init && \
-    git remote add origin "git@github.com:l0b0/${1}.git" && \
+    cd "$1"
+
+    if [ ! -e '.git' ]
+    then
+        git init
+    fi
+
+    git remote add origin "git@github.com:l0b0/${1}.git"
+
     git config push.default matching && \
     git config branch.master.remote origin && \
     git config branch.master.merge refs/heads/master
