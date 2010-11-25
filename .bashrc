@@ -38,6 +38,8 @@ fi
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
+elif [ -r /etc/jail ]; then
+    debian_chroot=$(cat /etc/jail)
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
