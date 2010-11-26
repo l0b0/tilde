@@ -23,7 +23,7 @@ alias du='du -h'
 alias df='df -h'
 
 # Update everything
-alias upgrade='sudo sh -c "aptitude update;aptitude dist-upgrade;aptitude autoclean"' 
+alias upgrade='sudo sh -c "aptitude update;aptitude dist-upgrade;aptitude autoclean"'
 
 # Mount images, as described at
 # http://l0b0.wordpress.com/2008/03/15/iso-mount-script-for-nautilus-shell/
@@ -57,6 +57,37 @@ mkgithub()
     git config push.default matching && \
     git config branch.master.remote origin && \
     git config branch.master.merge refs/heads/master
+}
+
+verify_all() # $1 dir
+{
+    find "$1" -type f -not -name "*.asc" -not -name "*.md5" -not -name "*.pgp" -print0 | \
+    while read -r -d $'\0' -- path
+    do
+        echo "Verifying $path"
+        success=0
+        if [ -e "${path}.asc" ]
+        then
+            gpg --verify "${path}.asc" || exit 1
+            success=1
+        fi
+        if [ -e "${path}.sig" ]
+        then
+            gpg --verify "${path}.sig" || exit 1
+            success=1
+        fi
+        if [ -e "${path}.md5" ]
+        then
+            md5sum -c "${path}.md5" || exit 1
+            success=1
+        fi
+
+        if [ $success -eq 0 ]
+        then
+            echo 'No signatures found; fallback to MD5'
+            md5sum "$path"
+        fi
+    done
 }
 
 test -r "$HOME/.bash_aliases_local" && source "$HOME/.bash_aliases_local"
