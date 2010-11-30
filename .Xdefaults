@@ -1,1 +1,7 @@
-*metaSendsEscape:true
+*metaSendsEscape: true
+*saveLines: 32767
+*reverseVideo: true
+
+! XTerm
+XTerm*utf8: 1
+XTerm*antialias: true
