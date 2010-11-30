@@ -1,12 +1,25 @@
+# Up and down arrows
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
-"\e[5C": forward-word
-"\e[5D": backward-word
-"\e\e[C": forward-word
-"\e\e[D": backward-word
+
+# Meta-Delete
 "\e[3;3~": kill-word
+
+# Delete for wonky terminals
+"\e[3~": delete-char
+
+# Ctrl/Meta arrow keys
+"\e[1;5D": backward-word
+"\e[1;3D": backward-word
+"\e[1;5C": forward-word
+"\e[1;3C": forward-word
+
+# Escape keys
+"\e[5D": backward-word
+"\e\e[D": backward-word
+"\e[5C": forward-word
+"\e\e[C": forward-word
+
 set match-hidden-files off
 set page-completions off
 set completion-query-items 350

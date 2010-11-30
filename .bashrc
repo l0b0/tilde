@@ -26,7 +26,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Color support detection from Ubuntu
-if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null
+if [ -x /usr/bin/tput ]
 then
     reset='\[\e[0m\]'
     red='\[\e[1;31m\]'
