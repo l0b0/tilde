@@ -66,7 +66,7 @@ do
             shift
             ;;
         --)
-            url="${includes:+${includes},}*${2}*"
+            url="$2"
             version="$3"
             target="$(readlink -f -- "$4")"
             shift 4
@@ -90,4 +90,3 @@ wget --accept "$includes" --reject "$excludes" \
     --force-directories --protocol-directories --directory-prefix="$target" \
     --recursive --level=1 $verbose "$url" \
     || error "Could not get sources"
-
