@@ -82,10 +82,6 @@ else
 fi
 PS1="${PS1}${separator} "
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -105,3 +101,8 @@ export JAVA_HOME='/usr/'
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
 test -r "$HOME/.bashrc_local" && source "$HOME/.bashrc_local"
+
+if [ -f ~/.bash_aliases ]
+then
+    source ~/.bash_aliases
+fi
