@@ -73,14 +73,7 @@ then
     PS1="${PS1}\$(__git_ps1 ' (%s)')"
 fi
 
-# PS1 end
-if [ "$USER" = 'root' ]
-then
-    separator='#'
-else
-    separator='$'
-fi
-PS1="${PS1}${separator} "
+PS1="${PS1}\\$ "
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
