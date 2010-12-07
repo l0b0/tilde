@@ -93,4 +93,7 @@ verify_all() # $1 dir
 # Terminal settings
 alias xterm-settings='xrdb -merge ~/.Xresources'
 
-test -r "$HOME/.bash_aliases_local" && source "$HOME/.bash_aliases_local"
+if [ -r "$HOME/.bash_aliases_local" ]
+then
+    source "$HOME/.bash_aliases_local"
+fi

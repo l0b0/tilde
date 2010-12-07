@@ -6,7 +6,8 @@
 [ -z "$PS1" ] && return
 
 # Make sure all terminals save history
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a;"
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -23,7 +24,11 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+if [ -x /usr/bin/lesspipe ]
+then
+    eval "$(SHELL=/bin/sh lesspipe)"
+fi
+
 
 # Color support detection from Ubuntu
 if [ -x /usr/bin/tput ]
@@ -36,9 +41,11 @@ then
 fi
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]
+then
     debian_chroot=$(cat /etc/debian_chroot)
-elif [ -r /etc/jail ]; then
+elif [ -r /etc/jail ]
+then
     debian_chroot=$(cat /etc/jail)
 fi
 
@@ -78,7 +85,8 @@ PS1="${PS1}\\$ "
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+if [ -f /etc/bash_completion ] && ! shopt -oq posix
+then
     . /etc/bash_completion
 fi
 
@@ -93,9 +101,12 @@ export JAVA_HOME='/usr/'
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
-test -r "$HOME/.bashrc_local" && source "$HOME/.bashrc_local"
-
-if [ -f ~/.bash_aliases ]
+if [ -r "$HOME/.bashrc_local" ]
 then
-    source ~/.bash_aliases
+    source "$HOME/.bashrc_local"
+fi
+
+if [ -r "$HOME/.bash_aliases" ]
+then
+    source "$HOME/.bash_aliases"
 fi
