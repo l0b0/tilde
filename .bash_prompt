@@ -1,5 +1,7 @@
 bash_prompt()
 {
+    local exit_code=$?
+
     # Color support detection from Ubuntu
     if [ -x /usr/bin/tput ]
     then
@@ -48,6 +50,12 @@ bash_prompt()
     then
         PS1="${PS1}\$(__git_ps1 ' (%s)')"
     fi
+    
+    separator="\\$"
+    if [ $exit_code -ne 0 ]
+    then
+        separator="${red}${separator}${reset}"
+    fi
 
-    PS1="${PS1}\\$ "
+    PS1="${PS1}$separator "
 }
