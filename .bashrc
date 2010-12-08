@@ -30,8 +30,66 @@ then
 fi
 
 # Set prompt
-source ~/.bash_prompt
-PROMPT_COMMAND="bash_prompt; ${PROMPT_COMMAND}"
+
+# Color support detection from Ubuntu
+if [ -x /usr/bin/tput ]
+then
+    reset='\[\e[0m\]'
+    red='\[\e[1;31m\]'
+    green='\[\e[1;32m\]'
+    orange='\[\e[1;33m\]'
+    blue='\[\e[1;34m\]'
+fi
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]
+then
+    debian_chroot=$(cat /etc/debian_chroot)
+elif [ -r /etc/jail ]
+then
+    debian_chroot=$(cat /etc/jail)
+fi
+
+# set a fancy prompt (non-color, overwrite the one in /etc/profile)
+PS1="${orange}\${debian_chroot:+(\$debian_chroot)}${reset}"
+
+# Red user if root, orange if su
+if [ "$USER" == 'root' ]
+then
+    PS1="$PS1$red"
+elif [ -n "$SUDO_USER" ]
+then
+    PS1="$PS1$orange"
+else
+    PS1="$PS1$green"
+fi
+PS1="${PS1}\u${reset}@"
+
+# Red host if SSH
+if [ -n "$SSH_CONNECTION" ]
+then
+    PS1="$PS1$red"
+else
+    PS1="$PS1$green"
+fi
+PS1="${PS1}\h${reset}:${blue}\w${reset}"
+
+# Git branch
+if [ -f /etc/bash_completion.d/git ]
+then
+    ps1_command="__git_ps1 ' (%s)'"
+fi
+
+ps1_command="exit_code=\$?
+${ps1_command}
+if [ \$exit_code -ne 0 ]
+then
+    printf \"${red}\\n\${exit_code} \\\$${reset}\"
+else
+    printf \"\\n\\\$\"
+fi"
+
+PS1="${PS1}\$(${ps1_command}) "
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
