@@ -32,6 +32,10 @@ EX_USAGE=64       # command line usage error
 # Custom errors
 EX_UNKNOWN=1
 
+cmdname="$(basename -- "$0")"
+
+help_info="Try \`$cmdname --help\` for more information."
+
 error()
 {
     # Output error messages with optional exit code
