@@ -75,7 +75,7 @@ usage()
             # Shebang line
             continue
         fi
-        echo "${line:2}"
+        echo -e "${line:2}"
     done < "$0"
 }
 
