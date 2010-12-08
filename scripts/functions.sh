@@ -36,30 +36,42 @@ cmdname="$(basename -- "$0")"
 
 help_info="Try \`$cmdname --help\` for more information."
 
+warning()
+{
+    # Output warning messages
+    # Color the output red if it's an interactive terminal
+    # @param $1...: Messages
+
+    test -t 1 && tput setf 4
+
+    while [ -n "$1" ]
+    do
+        echo -e "$1" >&2
+        shift
+    done
+
+    test -t 1 && tput sgr0 # Reset terminal
+}
+
 error()
 {
     # Output error messages with optional exit code
     # @param $1...: Messages
     # @param $N: Exit code (optional)
-    test -t 1 && tput setf 4
 
-    while [ -n "$1" ]
-    do
-        case "$1" in
-            [0-9]*)
-                # Use $1 for exit code
-                break
-                ;;
-            *)
-                echo "$1" >&2
-                shift
-                ;;
-        esac
-    done
+    messages=( "$@" )
 
-    test -t 1 && tput sgr0 # Reset terminal
+    # If the last parameter is a number, it's not part of the messages
+    eval last_parameter="\$$#"
+    if [[ "$last_parameter" =~ ^[0-9]*$ ]]
+    then
+        exit_code=$last_parameter
+        unset messages[$((${#messages[@]} - 1))]
+    fi
 
-    exit ${1:-$EX_UNKNOWN}
+    warning "${messages[@]}"
+
+    exit ${exit_code:-$EX_UNKNOWN}
 }
 
 usage()
@@ -81,14 +93,20 @@ usage()
 
 verbose_echo()
 {
+    # @param $1: Optionally '-n' for echo to output without newline
+    # @param $(1|2)...: Messages
     if [ "$verbose" ]
     then
         if [ "$1" = "-n" ]
         then
+            $newline='-n'
             shift
-            echo -n "$*"
-        else
-            echo "$*"
         fi
+
+        while [ -n "$1" ]
+        do
+            echo -e $newline "$1" >&2
+            shift
+        done
     fi
 }
