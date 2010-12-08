@@ -66,6 +66,10 @@ usage()
         if [ ! "$line" ]
         then
             exit
+        elif [ "${line:0:2}" == '#!' ]
+        then
+            # Shebang line
+            continue
         fi
         echo "$line"
     done < "$0"
