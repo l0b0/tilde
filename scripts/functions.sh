@@ -32,14 +32,30 @@ EX_USAGE=64       # command line usage error
 # Custom errors
 EX_UNKNOWN=1
 
-error() # Synopsis: error <message> [exit code]
+error()
 {
-    # Output error message with optional error code
+    # Output error messages with optional exit code
+    # @param $1...: Messages
+    # @param $N: Exit code (optional)
     test -t 1 && tput setf 4
-    echo "$1" >&2
+
+    while [ -n "$1" ]
+    do
+        case "$1" in
+            [0-9]*)
+                # Use $1 for exit code
+                break
+                ;;
+            *)
+                echo "$1" >&2
+                shift
+                ;;
+        esac
+    done
+
     test -t 1 && tput sgr0 # Reset terminal
 
-    exit ${2:-$EX_UNKNOWN}
+    exit ${1:-$EX_UNKNOWN}
 }
 
 usage()
