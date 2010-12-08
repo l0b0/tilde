@@ -46,67 +46,20 @@
 #
 ################################################################################
 
-# Output error message with optional error code
-error()
-{
-    test -t 1 && {
-        tput setf 4
-        echo "$1" >&2
-        tput setf 7
-    } || echo "$1" >&2
-    if [ -z "$2" ]
-    then
-        exit $EX_UNKNOWN
-    else
-        exit $2
-    fi
-}
-
-usage()
-{
-    # Print documentation until the first empty line
-    while read line
-    do
-        if [ ! "$line" ]
-        then
-            exit $EX_USAGE
-        fi
-        echo "$line"
-    done < $0
-}
-
-verbose_echo()
-{
-    if [ $verbose ]
-    then
-        if [ "$1" = "-n" ]
-        then
-            shift
-            echo -n "$*"
-        else
-            echo "$*"
-        fi
-    fi
-}
-
 ifs_original="$IFS" # Reset when done
 IFS='
 ' # Make sure paths with spaces don't make any trouble when looping
 
 PATH='/usr/bin:/bin'
-cmdname=$(basename $0)
-directory=$(dirname $(readlink -f $0))
 
+directory=$(dirname -- $(readlink -fn -- "$0"))
 diff=/usr/bin/meld
 target_base="${directory}/home/$(whoami)/"
 directory_base="$HOME"
 
-# Exit codes from /usr/include/sysexits.h, as recommended by
-# http://www.faqs.org/docs/abs/HTML/exitcodes.html
-EX_USAGE=64       # command line usage error
+. "$directory/functions.sh"
 
 # Custom errors
-EX_UNKNOWN=1
 EX_NO_SUCH_DIR=91
 EX_NO_SUCH_EXEC=92
 
