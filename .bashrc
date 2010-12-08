@@ -29,6 +29,7 @@ then
     eval "$(SHELL=/bin/sh lesspipe)"
 fi
 
+# Set prompt
 source ~/.bash_prompt
 PROMPT_COMMAND="bash_prompt; ${PROMPT_COMMAND}"
 

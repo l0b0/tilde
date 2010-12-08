@@ -54,8 +54,8 @@ bash_prompt()
     separator="\\$"
     if [ $exit_code -ne 0 ]
     then
-        separator="${red}${separator}${reset}"
+        separator="${red}${exit_code} ${separator}${reset}"
     fi
 
-    PS1="${PS1}$separator "
+    PS1="${PS1}\n$separator "
 }
