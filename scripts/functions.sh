@@ -87,7 +87,7 @@ usage()
             # Shebang line
             continue
         fi
-        echo -e "${line:2}"
+        echo -e "${line:2}" # Remove comment characters
     done < "$0"
 }
 
