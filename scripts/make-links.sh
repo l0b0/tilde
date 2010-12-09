@@ -16,8 +16,7 @@
 #               targets
 #
 #        -e, --exclude
-#               exclude regular expressions; default ".", "..", "\.git" and
-#               "\.svn"
+#               exclude regular expressions; see $default_excludes
 #
 #        -f, --force
 #               create symlinks without asking for confirmation
@@ -36,10 +35,10 @@
 #               Create links in the home directory to the regular files in
 #               ~/settings.
 #
-#        make-links.sh -d meld ~/dev/tilde/.* ~
+#        make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~
 #               Create links in the home directory to all dot-files in
-#               ~/dev/tilde. If any of the files already exist, they can be
-#               displayed in meld.
+#               ~/dev/tilde and ~/settings. If any of the files already exist,
+#               the diffs can be reviewed in meld.
 #
 # REPORTING BUGS
 #        Report bugs to victor.engmark@gmail.com
@@ -86,6 +85,7 @@ do
             shift 2
             ;;
         -e|--exclude)
+            # Will override $default_excludes
             excludes[${#excludes[*]}]="$2"
             shift 2
             ;;
