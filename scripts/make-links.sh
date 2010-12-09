@@ -85,7 +85,7 @@ do
             diff_exec="$2"
             shift 2
             ;;
-        -e|--excludes)
+        -e|--exclude)
             excludes[${#excludes[*]}]="$2"
             shift 2
             ;;
