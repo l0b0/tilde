@@ -1,61 +1,65 @@
-#!/bin/sh
+#!/bin/bash
 #
 # NAME
-#    make-links.sh - Create/check symlinks recursively
+#        make-links.sh - Create symlinks
 #
 # SYNOPSIS
-#    make-links.sh [options]
-#
-# OPTIONS
-#    -d,--directory    Specify where to create symlinks (default current $HOME)
-#    -t,--target       Specify where to target symlinks (default ./home/<user>)
-#    -v,--verbose      Verbose output
-#
-# EXAMPLE
-#    /path/to/make-links.sh -d ~/settings/Linux
-#        Create links in the home directory based on files in ~/settings/Linux.
-#
-#    /path/to/make-links.sh -v
-#        Create links in ~ based on files in the directory of this file.
+#        make-links.sh [OPTION]... TARGETS DIRECTORY
 #
 # DESCRIPTION
-#    If the file in the source directory doesn't exist in the target directory,
-#    a symlink is created directly.
-#    If the file exists, or the target directory does not exist, the user is
-#    given options to continue.
+#        Creates one symlink for each of the TARGETS in DIRECTORY. If the
+#        link already exists, it is replaced. If it is a proper file or
+#        directory, the user is given options to continue.
 #
-# BUGS
-#    Email bugs to victor dot engmark at gmail dot com. Please include the
-#    output of running this script in verbose mode (-v).
+#        -d, --diff
+#               executable to use instead of diff to compare existing files to
+#               targets
 #
-# COPYRIGHT AND LICENSE
-#    Copyright (C) 2008-2010 Victor Engmark
+#        -e, --exclude
+#               exclude regular expressions; default ".", "..", "\.git" and
+#               "\.svn"
 #
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
+#        -f, --force
+#               create symlinks without asking for confirmation
 #
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+#        -s, --skip-existing
+#               skips existing files without prompting; overrides --force
 #
-#    You should have received a copy of the GNU General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#        -h, --help
+#               display this information and quit
+#
+#        -v, --verbose
+#               verbose output
+#
+# EXAMPLES
+#        make-links.sh ~/settings/* ~
+#               Create links in the home directory to the regular files in
+#               ~/settings.
+#
+#        make-links.sh -d meld ~/dev/tilde/.* ~
+#               Create links in the home directory to all dot-files in
+#               ~/dev/tilde. If any of the files already exist, they can be
+#               displayed in meld.
+#
+# REPORTING BUGS
+#        Report bugs to victor.engmark@gmail.com
+#
+# AUTHOR
+#        Written by Victor Engmark
+#
+# COPYRIGHT
+#        Copyright © 2008-2010 Victor Engmark. License GPLv3+: GNU GPL
+#        version 3 or later <http://gnu.org/licenses/gpl.html>.
+#        This is free software: you are free to change and redistribute it.
+#        There is NO WARRANTY, to the extent permitted by law.
 #
 ################################################################################
 
-ifs_original="$IFS" # Reset when done
-IFS='
-' # Make sure paths with spaces don't make any trouble when looping
-
-PATH='/usr/bin:/bin'
+# Defaults
+default_diff='diff -s'
+default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
 
 directory=$(dirname -- $(readlink -fn -- "$0"))
-diff=/usr/bin/meld
-target_base="${directory}/home/$(whoami)/"
-directory_base="$HOME"
 
 . "$directory/functions.sh"
 
@@ -64,7 +68,9 @@ EX_NO_SUCH_DIR=91
 EX_NO_SUCH_EXEC=92
 
 # Process parameters
-params=$(getopt -o d:t:v -l directory:,target:,verbose --name $cmdname -- "$@")
+params=$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
+    --name "$cmdname" -- "$@")
+
 if [ $? -ne 0 ]
 then
     usage
@@ -75,19 +81,38 @@ eval set -- "$params"
 while true
 do
     case $1 in
-        -d|--directory)
-            directory=$2
+        -d|--diff)
+            diff_exec="$2"
             shift 2
             ;;
-        -t|--target)
-            target=$2
+        -e|--excludes)
+            excludes[${#excludes[*]}]="$2"
             shift 2
             ;;
-        -v|--verbose)
-            verbose=1
+        -f|--force)
+            force='--force'
             shift
             ;;
-        --) shift
+        -s|--skip-existing)
+            skip='--skip-existing'
+            shift
+            ;;
+        -h|--help)
+            usage
+            exit
+            ;;
+        -v|--verbose)
+            verbose='--verbose'
+            shift
+            ;;
+        --)
+            while [ -n "$3" ]
+            do
+                targets[${#targets[*]}]="$2"
+                shift
+            done
+            source_dir=$(readlink -fn -- "$2")
+            shift 2
             break
             ;;
         *)
@@ -96,92 +121,104 @@ do
     esac
 done
 
-if [ $# -ne 0 ]
+if [ -z "$targets" ]
 then
-    usage
+    error "Missing targets." "$help_info" $EX_USAGE
 fi
 
-verbose_echo "Running $cmdname at $(date)."
+if [ -z "$source_dir" ]
+then
+    error "Missing directory." "$help_info" $EX_USAGE
+fi
 
-# Make sure the directory paths don't end with a slash
-target_base="${target_base%\/}"
-directory_base="${directory_base%\/}"
+if [ ! -d "$source_dir" ]
+then
+    error "Not a directory: $source_dir" "$help_info" $EX_USAGE
+fi
 
-verbose_echo "Directory: '${directory_base}'"
-verbose_echo "Target: '${target_base}'"
+if [ $# -ne 0 ]
+then
+    error "Extraneous parameters." "$help_info" $EX_USAGE
+fi
 
-# Find files
-for target_path in $(find "$target_base" -mindepth 1 -type f)
+# Set defaults
+diff_exec="${diff_exec:-$default_diff}"
+if [ -z "$excludes" ]
+then
+    excludes=( "${default_excludes[@]}" )
+fi
+
+for target_path in "${targets[@]}"
 do
-    directory_path="${directory_base}${target_path#${target_base}}"
-    directory_dir="$(dirname "${directory_path}")"
-    unset replace_file
-    unset create_dir
-
-    # Trivial case
-    if [ -L "$directory_path" ]
+    if [ ! -e "$target_path" ]
     then
-        verbose_echo "${directory_path} -> ${target_path} already exists; skipping."
-        continue
+        error "Target does not exist: $target_path" $EX_USAGE
+    fi
+    
+    target_fullpath="$(readlink -fn -- "$target_path")"
+
+    target_dir="$(dirname -- "$target_fullpath")"
+    target_file="$(basename -- "$target_fullpath")"
+
+    # Check excludes on relative and absolute path
+    rel="$(basename -- "$target_path")"
+    for exclude in "${excludes[@]}"
+    do
+        if [[ "$rel" =~ ^${exclude}$ || "$target_path" =~ ^${exclude}$ ]]
+        then
+            continue 2 # Got to continue main loop
+        fi
+    done
+    
+    source_path="${source_dir}/${target_file}"
+
+    unset do_replace
+    do_replace="${force:+r}" # Always replace
+
+    if [ -L "$source_path" ]
+    then
+        do_replace=r # Replace existing symlinks
     fi
 
-    # Identical file
-    if [ "$(readlink -f $target_path)" = "$(readlink -f $directory_path)" ]
+    if [ -n "$skip" ]
     then
-        verbose_echo "${directory_path} == ${target_path}; skipping."
-        continue
+        do_replace='s' # Always skip
     fi
 
     # File exists
-    if [ -f "$directory_path" ]
+    if [ -f "$source_path" -o -d "$source_path" ]
     then
         # Make sure we skip or replace in the end
-        while ! expr "$replace_file" : "^[SsRr]$" > /dev/null
+        while [[ ! "$do_replace" =~ ^[SsRr]$ ]]
         do
-            echo "\"${directory_path}\" is a proper file. What do you want to do?"
-            read -p '[S]kip, [D]iff, [R]eplace: ' replace_file
-            if expr "$replace_file" : "^[Dd]$" > /dev/null
+            echo "${source_path} exists. What do you want to do?"
+            read -n 1 -p '[S]kip, [D]iff, [R]eplace: ' do_replace
+            echo
+
+            if [[ "$do_replace" =~ ^[Dd]$ ]]
             then
-                verbose_echo "Diffing ${target_path} and ${directory_path}"
-                $diff "$target_path" "$directory_path"
+                $diff_exec -- "$target_fullpath" "$source_path"
             fi
         done
 
-        if expr "$replace_file" : "^[Rr]$"
+        if [[ "$do_replace" =~ ^[Ss]$ ]]
         then
-            verbose_echo "Removing ${directory_path}"
-            rm "$directory_path"
-        else
             continue
         fi
     fi
 
-    # Not a proper file
-    if [ -e "$directory_path" ]
+    if [ "$do_replace" == 'r' ]
     then
-        echo "${directory_path} exists but is not a file; skipping."
+        rm -- "$source_path" || error "rm failed" $?
+        #verbose_echo "Removed ${source_path}"
+    fi
+
+    if [ -e "$source_path" ]
+    then
+        warning "${source_path} exists but is not a standard file; skipping."
         continue
     fi
 
-    # Directory missing; might have to create it
-    if [ ! -e "$directory_dir" ]
-    then
-        while ! expr "$create_dir" : "^[SsCc]$" > /dev/null
-        do
-            echo "\"${directory_dir}\" doesn't exist. What do you want to do?"
-            read -p '[S]kip or [C]reate: ' create_dir
-        done
-
-        if expr "$create_dir" : "^[Cc]$" > /dev/null
-        then
-            mkdir -p "$directory_dir"
-        else
-            continue
-        fi
-    fi
-
-    echo "Creating symlink ${directory_path} -> ${target_path}."
-    ln -s "$target_path" "$directory_path"
+    ln -s "$target_fullpath" "$source_path" || error "ln failed" $?
+    verbose_echo "${source_path} -> ${target_fullpath}"
 done
-
-verbose_echo "${cmdname} completed at $(date)."
