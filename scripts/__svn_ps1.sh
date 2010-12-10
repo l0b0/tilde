@@ -17,18 +17,20 @@
 # If in trunk, just output "trunk". If anywhere else, output the next part of the path
 #
 # Tests:
-# $ echo 'URL: http://example.org/svn/branches/test/foo' | sed -rne "s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;(\2\4) ;p"
-# test
-# $ echo 'URL: http://example.org/svn/tags/test/foo' | sed -rne "s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;(\2\4) ;p"
-# test
-# $ echo 'URL: http://example.org/svn/trunk/test/foo' | sed -rne "s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;(\2\4) ;p"
+# $ echo 'URL: http://example.org/svn/branches/SUCCESS/FAIL' | perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p'
+# SUCCESS
+# $ echo 'URL: http://example.org/svn/tags/SUCCESS/FAIL' | perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p'
+# SUCCESS
+# $ echo 'URL: http://example.org/svn/trunk/FAIL' | perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p'
 # trunk
+# $ echo 'URL: http://example.org/svn/tags/SUCCESS/tags/FAIL' | perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p'
+# SUCCESS
 
 __svn_ps1()
 {
     local result=$(
         svn info 2>/dev/null | \
-        sed -rne "s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p")
+        perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;p')
     if [ -n "$result" ]
     then
         printf "${1:- (%s)}" $result
