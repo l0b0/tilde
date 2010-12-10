@@ -80,6 +80,9 @@ then
     ps1_command="__git_ps1 ' (%s)'"
 fi
 
+ps1_command="__svn_ps1 ' (%s)'
+${ps1_command}"
+
 ps1_command="exit_code=\$?
 ${ps1_command}
 if [ \$exit_code -ne 0 ]
