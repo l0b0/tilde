@@ -30,8 +30,7 @@ __svn_ps1()
 {
     local result=$(
         svn info 2>/dev/null | \
-        grep '^URL: ' | \
-        perl -pe 's;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;')
+        perl -ne 'print if s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;')
     if [ -n "$result" ]
     then
         printf "${1:- (%s)}" $result
