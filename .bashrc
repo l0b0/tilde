@@ -6,7 +6,10 @@
 [ -z "$PS1" ] && return
 
 # Make sure all terminals save history
-PROMPT_COMMAND="history -a;"
+if [ -z "$PROMPT_COMMAND" ]
+then
+    PROMPT_COMMAND="history -a;"
+fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
