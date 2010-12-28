@@ -83,7 +83,7 @@ then
     ps1_command="__git_ps1 ' (%s)'"
 fi
 
-if [ "$(type -t __svn_ps1)" == 'function' ]
+if [ -f /etc/bash_completion.d/svn ]
 then
     ps1_command="__svn_ps1 ' (%s)'
     ${ps1_command}"
