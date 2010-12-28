@@ -28,13 +28,6 @@ set autowrite    	" Automatically save before commands like :next and :make
 set hidden    	" Hide buffers when they are abandoned
 "set mouse=a    	" Enable mouse usage (all modes) in terminals
 
-" Indentation lengths
-set tabstop=4
-set shiftwidth=4
-
-" Spaces for tabs
-set expandtab
-
 " Backspace behaving as in other editors
 set backspace=indent,eol,start
 
@@ -43,5 +36,6 @@ nnoremap <F2> :set invpaste paste?<CR>
 imap <F2> <C-O><F2>
 set pastetoggle=<F2>
 
-" 4 space indentation in Python
-au FileType python setl sw=4 sts=4 et
+" Indentation/tabs
+autocmd FileType * set tabstop=4|set shiftwidth=4|set expandtab
+autocmd FileType make set tabstop=8|set shiftwidth=8|set noexpandtab
