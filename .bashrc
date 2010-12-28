@@ -83,8 +83,11 @@ then
     ps1_command="__git_ps1 ' (%s)'"
 fi
 
-ps1_command="__svn_ps1 ' (%s)'
-${ps1_command}"
+if [ "$(type -t __svn_ps1)" == 'function' ]
+then
+    ps1_command="__svn_ps1 ' (%s)'
+    ${ps1_command}"
+fi
 
 ps1_command="exit_code=\$?
 ${ps1_command}
