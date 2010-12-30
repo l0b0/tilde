@@ -33,6 +33,7 @@ then
 fi
 
 # Set prompt
+unset PS1
 
 # Color support detection from Ubuntu
 if [ -x /usr/bin/tput ]
