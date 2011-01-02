@@ -52,7 +52,8 @@ mkgithub()
         git init
     fi
 
-    git remote add origin "git@github.com:l0b0/${1}.git"
+    repo="$(basename -- "$1")"
+    git remote add origin "git@github.com:l0b0/${repo}.git"
 
     git config push.default matching && \
     git config branch.master.remote origin && \
