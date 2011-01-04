@@ -1,0 +1,8 @@
+# terreActive Perl formatting
+--nooutdent-long-lines     # Keep indentation of long lines
+--paren-tightness=2        # Whitespace within parens
+--brace-tightness=2        # Whitespace within curly braces which do not contain code blocks
+--delete-old-whitespace    # Allow removal of whitespace between characters
+--static-block-comments    # Treat "##" comments specially
+--cuddled-else             # "else" and "elsif" follow immediately after the curly brace closing the previous block.
+--noblanks-before-comments # Keep comment lines with the code
