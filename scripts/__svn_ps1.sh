@@ -1,16 +1,32 @@
 #!/bin/sh
-# Usage:
 #
-# sudo mv __svn_ps1.sh /etc/bash_completion.d/svn
+# NAME
+#        __svn_ps1.sh - Get the current Subversion branch, tag or "trunk"
 #
-# Then the PS1 variable in ~/.bashrc:
+# SYNOPSIS
+#        __svn_ps1.sh [FORMAT]
 #
-# PS1="${PS1}\$(__svn_ps1 ' (%s)')"
+# DESCRIPTION
+#        For use with the PS1 or other PS variables in Bash.
 #
-# The format string at the end is optional.
+#        The FORMAT string at the end is optional. If present, it *must* contain
+#        a valid printf format string including a '%s'. Default ' (%s)'.
 #
-# Based on the awesome __git_ps1.
+#        Based on the awesome __git_ps1.
 #
+# INSTALLATION
+#        Add the following line to ~/.bashrc:
+#        PS1="${PS1}\$(__svn_ps1 ' (%s)')"
+#
+#        To install for all users who have bash_completion:
+#        $ sudo mv __svn_ps1.sh /etc/bash_completion.d/
+#
+#        If that doesn't work, or you prefer a single user installation, add
+#        also the following line to ~/.bashrc:
+#        source /path/to/__svn_ps1.sh
+#
+################################################################################
+
 # Explanation:
 # `svn info` gets the branch and other information
 # `sed -r` allows extended regular expressions
@@ -34,5 +50,5 @@ __svn_ps1()
     if [ -n "$result" ]
     then
         printf "${1:- (%s)}" $result
-    fi  
+    fi
 }
