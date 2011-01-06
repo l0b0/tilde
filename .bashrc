@@ -93,7 +93,7 @@ then
 fi
 
 # Subversion branch
-if [ -f /etc/bash_completion.d/svn ]
+if type -t __svn_ps1 >/dev/null
 then
     ps1_command="__svn_ps1 ' (%s)'
     ${ps1_command}"
