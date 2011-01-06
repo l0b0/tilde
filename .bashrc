@@ -84,12 +84,14 @@ then
     ps1_command="__git_ps1 ' (%s)'"
 fi
 
+# Subversion branch
 if [ -f /etc/bash_completion.d/svn ]
 then
     ps1_command="__svn_ps1 ' (%s)'
     ${ps1_command}"
 fi
 
+# Exit code of the last command
 ps1_command="exit_code=\$?
 ${ps1_command}
 if [ \$exit_code -ne 0 ]
