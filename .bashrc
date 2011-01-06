@@ -32,6 +32,14 @@ then
     eval "$(SHELL=/bin/sh lesspipe)"
 fi
 
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix
+then
+    . /etc/bash_completion
+fi
+
 # Set prompt
 unset PS1
 
@@ -102,14 +110,6 @@ else
 fi"
 
 PS1="${PS1}\$(${ps1_command}) "
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix
-then
-    . /etc/bash_completion
-fi
 
 # Default editor
 export GIT_EDITOR='vim'

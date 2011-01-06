@@ -36,4 +36,3 @@ __svn_ps1()
         printf "${1:- (%s)}" $result
     fi  
 }
-__svn_ps1 "$1"
