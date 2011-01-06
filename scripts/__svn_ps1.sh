@@ -18,7 +18,7 @@
 #        Add the following line to ~/.bashrc:
 #        PS1="${PS1}\$(__svn_ps1 ' (%s)')"
 #
-#        To install for all users who have bash_completion:
+#        To enable for all users who have bash_completion:
 #        $ sudo mv __svn_ps1.sh /etc/bash_completion.d/
 #
 #        If that doesn't work, or you prefer a single user installation, add
