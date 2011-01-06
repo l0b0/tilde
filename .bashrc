@@ -38,6 +38,8 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
     . /etc/bash_completion
+else
+    source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
 
 # Set prompt
