@@ -52,7 +52,8 @@ mkgithub()
 
     git config push.default matching && \
     git config branch.master.remote origin && \
-    git config branch.master.merge refs/heads/master
+    git config branch.master.merge refs/heads/master && \
+    git config merge.conflictstyle diff3
 }
 
 verify_all() # $1 dir
