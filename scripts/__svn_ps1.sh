@@ -44,6 +44,7 @@
 
 __svn_ps1()
 {
+    test -d '.svn' || return
     local result=$(
         svn info 2>/dev/null | \
         perl -ne 'print if s;^URL: .*?/((trunk)|(branches|tags)/([^/]*)).*;\2\4 ;')
