@@ -17,10 +17,7 @@ loose_shell()
 strict_shell
 
 # Make sure all terminals save history
-if [ -z "$PROMPT_COMMAND" ]
-then
-    PROMPT_COMMAND="history -a;"
-fi
+[ -z "${PROMPT_COMMAND:-}" ] && PROMPT_COMMAND="history -a;"
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -38,10 +35,7 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
-if [ -x /usr/bin/lesspipe ]
-then
-    eval "$(SHELL=/bin/sh lesspipe)"
-fi
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -72,10 +66,10 @@ fi
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]
 then
-    debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot="$(cat /etc/debian_chroot)"
 elif [ -r /etc/jail ]
 then
-    debian_chroot=$(cat /etc/jail)
+    debian_chroot="$(cat /etc/jail)"
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
