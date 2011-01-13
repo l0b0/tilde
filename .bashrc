@@ -5,6 +5,17 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+strict_shell()
+{
+    # Exit on error; error on unset variable use
+    set -o errexit nounset
+}
+loose_shell()
+{
+    set +o errexit nounset
+}
+strict_shell
+
 # Make sure all terminals save history
 if [ -z "$PROMPT_COMMAND" ]
 then
@@ -37,8 +48,11 @@ fi
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
-    . /etc/bash_completion
-else
+    loose_shell # Unsafe script
+    source /etc/bash_completion
+    strict_shell
+elif [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
+then
     source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
 
@@ -56,7 +70,7 @@ then
 fi
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]
 then
     debian_chroot=$(cat /etc/debian_chroot)
 elif [ -r /etc/jail ]
@@ -65,28 +79,28 @@ then
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${orange}\${debian_chroot:+(\$debian_chroot)}${reset}"
+PS1="${orange:-}\${debian_chroot:+(\$debian_chroot)}${reset:-}"
 
 # Red user if root, orange if su
 if [ "$USER" == 'root' ]
 then
-    PS1="$PS1$red"
-elif [ -n "$SUDO_USER" ]
+    PS1="$PS1${red:-}"
+elif [ -n "${SUDO_USER:-}" ]
 then
-    PS1="$PS1$orange"
+    PS1="$PS1${orange:-}"
 else
-    PS1="$PS1$green"
+    PS1="$PS1${green:-}"
 fi
-PS1="${PS1}\u${reset}@"
+PS1="${PS1}\u${reset:-}@"
 
 # Red host if SSH
-if [ -n "$SSH_CONNECTION" ]
+if [ -n "${SSH_CONNECTION:-}" ]
 then
-    PS1="$PS1$red"
+    PS1="$PS1${red:-}"
 else
-    PS1="$PS1$green"
+    PS1="$PS1${green:-}"
 fi
-PS1="${PS1}\h${reset}:${blue}\w${reset}"
+PS1="${PS1}\h${reset:-}:${blue:-}\w${reset:-}"
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
@@ -98,15 +112,15 @@ fi
 if type -t __svn_ps1 >/dev/null
 then
     ps1_command="__svn_ps1 ' (%s)'
-    ${ps1_command}"
+    ${ps1_command:-}"
 fi
 
 # Exit code of the last command
 ps1_command="exit_code=\$?
-${ps1_command}
+${ps1_command:-}
 if [ \$exit_code -ne 0 ]
 then
-    printf \"${red}\\n\${exit_code} \\\$${reset}\"
+    printf \"${red:-}\\n\${exit_code} \\\$${reset:-}\"
 else
     printf \"\\n\\\$\"
 fi"
@@ -133,3 +147,5 @@ if [ -r "$HOME/.bash_aliases" ]
 then
     source "$HOME/.bash_aliases"
 fi
+
+loose_shell # Don't want to exit on the first error
