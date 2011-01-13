@@ -47,7 +47,7 @@ mkgithub()
         git init
     fi
 
-    repo="$(basename -- "$1")"
+    local repo="$(basename -- "$1")"
     git remote add origin "git@github.com:l0b0/${repo}.git"
 
     git config push.default matching && \
@@ -58,6 +58,7 @@ mkgithub()
 
 verify_all() # $1 dir
 {
+    local success
     find "$1" -type f -not -name "*.asc" -not -name "*.md5" -not -name "*.pgp" -print0 | \
     while read -r -d $'\0' -- path
     do
