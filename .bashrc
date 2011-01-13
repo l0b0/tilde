@@ -50,9 +50,6 @@ then
     source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
 
-# Set prompt
-unset PS1
-
 # Color support detection from Ubuntu
 if [ -x /usr/bin/tput ]
 then
