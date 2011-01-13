@@ -93,6 +93,8 @@ else
 fi
 PS1="${PS1}\h${reset:-}:${blue:-}\w${reset:-}"
 
+unset ps1_command # Avoid duplicates
+
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
 then
