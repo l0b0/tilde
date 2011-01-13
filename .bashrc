@@ -93,8 +93,6 @@ else
 fi
 PS1="${PS1}\h${reset:-}:${blue:-}\w${reset:-}"
 
-unset ps1_command # Avoid duplicates
-
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
 then
@@ -119,6 +117,9 @@ else
 fi"
 
 PS1="${PS1}\$(${ps1_command}) "
+
+# Clean up
+unset reset red green orange blue debian_chroot ps1_command
 
 # Default editor
 export GIT_EDITOR='vim'
