@@ -1,0 +1,9 @@
+[user]
+	name = Victor Engmark
+[alias]
+	st = status
+	history = !gitk --all &
+[color]
+	diff = auto
+[merge]
+	conflictstyle = diff3
