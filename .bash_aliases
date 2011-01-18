@@ -56,36 +56,11 @@ mkgithub()
     git config merge.conflictstyle diff3
 }
 
-verify_all() # $1 dir
+git-tar()
 {
-    local success
-    find "$1" -type f -not -name "*.asc" -not -name "*.md5" -not -name "*.pgp" -print0 | \
-    while read -r -d $'\0' -- path
-    do
-        echo "Verifying $path"
-        success=0
-        if [ -e "${path}.asc" ]
-        then
-            gpg --verify "${path}.asc" || exit 1
-            success=1
-        fi
-        if [ -e "${path}.sig" ]
-        then
-            gpg --verify "${path}.sig" || exit 1
-            success=1
-        fi
-        if [ -e "${path}.md5" ]
-        then
-            md5sum -c "${path}.md5" || exit 1
-            success=1
-        fi
-
-        if [ $success -eq 0 ]
-        then
-            echo 'No signatures found; fallback to MD5'
-            md5sum "$path"
-        fi
-    done
+    # @param $1: Commit-like
+    # @param $2: Name of output file (without extension)
+    git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
 }
 
 # Terminal settings
