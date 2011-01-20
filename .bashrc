@@ -70,7 +70,7 @@ then
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${orange:-}\${debian_chroot:+(\$debian_chroot)}${reset:-}"
+PS1="${orange:-}\${debian_chroot:+(\$debian_chroot) }${reset:-}"
 
 # Red user if root, orange if su
 if [ "$USER" == 'root' ]
