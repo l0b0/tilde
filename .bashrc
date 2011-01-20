@@ -119,7 +119,7 @@ fi"
 PS1="${PS1}\$(${ps1_command}) "
 
 # Clean up
-unset reset red green orange blue debian_chroot ps1_command
+unset reset red green orange blue ps1_command
 
 # Default editor
 export GIT_EDITOR='vim'
