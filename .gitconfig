@@ -1,5 +1,6 @@
 [user]
 	name = Victor Engmark
+	email = victor.engmark@gmail.com
 [alias]
 	st = status
 	history = !gitk --all &
