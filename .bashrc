@@ -5,17 +5,6 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-strict_shell()
-{
-    # Exit on error; error on unset variable use
-    set -o errexit nounset
-}
-loose_shell()
-{
-    set +o errexit nounset
-}
-strict_shell
-
 # Make sure all terminals save history
 [ -z "${PROMPT_COMMAND:-}" ] && PROMPT_COMMAND="history -a;"
 
@@ -42,9 +31,7 @@ shopt -s checkwinsize
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
-    loose_shell # Unsafe script
     source /etc/bash_completion
-    strict_shell
 elif [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
 then
     source ~/dev/tilde/scripts/__svn_ps1.sh
@@ -141,5 +128,3 @@ if [ -r "$HOME/.bash_aliases" ]
 then
     source "$HOME/.bash_aliases"
 fi
-
-loose_shell # Don't want to exit on the first error
