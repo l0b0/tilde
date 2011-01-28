@@ -70,3 +70,9 @@ if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
 fi
+
+smb_ls()
+{
+    # @param $1: Hostname
+    sudo smbclient -A /etc/auto.cifs.$1 -gL $1 2>/dev/null | grep '^Disk|' | cut -d '|' -f 2
+}
