@@ -39,3 +39,7 @@ set pastetoggle=<F2>
 " Indentation/tabs
 autocmd FileType * set tabstop=4|set shiftwidth=4|set expandtab
 autocmd FileType make set tabstop=8|set shiftwidth=8|set noexpandtab
+
+" Unicode
+set encoding=utf-8
+set fileencodings=
