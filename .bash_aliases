@@ -103,6 +103,11 @@ date_sorted_find()
 grouped_find()
 {
     target="${1%%/}/"
+    if [ ! -d "$target" ]
+    then
+        echo "${target}: No such directory"
+        return 1
+    fi
 
     echo -e '# Directories'
     find "$target" -mindepth 1 -type d | cut -c ${#target}- | sort
