@@ -90,3 +90,12 @@ smb_mount_all()
     done < <(smb_ls $1)
     echo "To unmount all, run \`sudo umount /mnt/*\`"
 }
+
+date_sorted_find()
+{
+    # Ascending, by ISO date
+    local dirx=$(readlink -fn "${1:-.}"; echo x)
+    local dir="${dirx%x}"
+    shift
+    find "$dir" "$@" -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort | cut -d ' ' -f 3-
+}
