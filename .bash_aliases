@@ -99,3 +99,23 @@ date_sorted_find()
     shift
     find "$dir" "$@" -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort | cut -d ' ' -f 3-
 }
+
+grouped_find()
+{
+    target="${1%%/}/"
+
+    echo -e '# Directories'
+    find "$target" -mindepth 1 -type d | cut -c ${#target}- | sort
+
+    echo -e '\n# Files'
+    while IFS= read -rd $'\n' dir
+    do
+        find "$dir" -maxdepth 1 -type f | cut -c ${#target}- | sort
+    done < <(find "$target" -mindepth 1 -type d | sort)
+
+    echo -e '\n# Symbolic links'
+    while IFS= read -rd $'\n' dir
+    do
+        find "$dir" -maxdepth 1 -type l | cut -c ${#target}- | sort
+    done < <(find "$target" -mindepth 1 -type d | sort)
+}
