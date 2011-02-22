@@ -112,15 +112,9 @@ grouped_find()
     echo -e '# Directories'
     find "$target" -mindepth 1 -type d | cut -c ${#target}- | sort
 
-    echo -e '\n# Files'
+    echo -e '\n# Files and symlinks'
     while IFS= read -rd $'\n' dir
     do
-        find "$dir" -maxdepth 1 -type f | cut -c ${#target}- | sort
-    done < <(find "$target" -mindepth 1 -type d | sort)
-
-    echo -e '\n# Symbolic links'
-    while IFS= read -rd $'\n' dir
-    do
-        find "$dir" -maxdepth 1 -type l | cut -c ${#target}- | sort
+        find "$dir" -maxdepth 1 \( -type f -o -type l \) | cut -c ${#target}- | sort
     done < <(find "$target" -mindepth 1 -type d | sort)
 }
