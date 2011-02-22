@@ -109,12 +109,14 @@ grouped_find()
         return 1
     fi
 
-    echo -e '# Directories'
-    find "$target" -mindepth 1 -type d | cut -c ${#target}- | sort
-
-    echo -e '\n# Files and symlinks'
     while IFS= read -rd $'\n' dir
     do
-        find "$dir" -maxdepth 1 \( -type f -o -type l \) | cut -c ${#target}- | sort
+        files="$(mktemp)"
+        find "$dir" -maxdepth 1 \( -type f -o -type l \) | cut -c ${#target}- | sort > "$files"
+        cat "$files"
+        if [ -s "$files" ]
+        then
+            echo
+        fi
     done < <(find "$target" -mindepth 1 -type d | sort)
 }
