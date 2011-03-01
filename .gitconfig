@@ -4,6 +4,9 @@
 [alias]
 	st = status
 	history = !qgit --all &
+	undo = checkout
+	postpone = stash
+	resume = stash apply
 [color]
 	diff = auto
 [merge]
