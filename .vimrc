@@ -46,3 +46,7 @@ autocmd BufRead,BufNewFile pkginfo set tabstop=8|set shiftwidth=8|set noexpandta
 " Unicode
 set encoding=utf-8
 set fileencodings=
+
+" Temporary files
+set backupdir=~/.vimtmp,.
+set directory=~/.vimtmp,.
