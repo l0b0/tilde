@@ -54,6 +54,13 @@ then
 elif [ -r /etc/jail ]
 then
     debian_chroot="$(cat /etc/jail)"
+else
+    root_inode=$(stat -c %i /)
+    if [ $root_inode -ne 2 -a $root_inode -ne 128 ]
+    then
+        # Non-standard root inode
+        debian_chroot="unknown chroot"
+    fi
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
