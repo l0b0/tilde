@@ -1,6 +1,4 @@
-*metaSendsEscape: true
-*saveLines: 32767
-*reverseVideo: true
-
-! XTerm
-XTerm*utf8: 1
+XTerm*geometry: 100x80
+XTerm*metaSendsEscape: true
+XTerm*reverseVideo: true
+XTerm*saveLines: 32767
