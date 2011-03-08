@@ -109,14 +109,18 @@ grouped_find()
         return 1
     fi
 
-    while IFS= read -rd $'\n' dir
+    while IFS= read -rd $'\0' dir
     do
-        files="$(mktemp)"
-        find "$dir" -maxdepth 1 \( -type f -o -type l \) | cut -c ${#target}- | sort > "$files"
-        cat "$files"
-        if [ -s "$files" ]
+        files_found=0
+        while IFS= read -rd $'\0' path
+        do
+            files_found=1
+            ls -- "$path"
+        done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -print0 | sort -z)
+
+        if [ $files_found -eq 1 ]
         then
             echo
         fi
-    done < <(find "$target" -mindepth 1 -type d | sort)
+    done < <(find "$target" -mindepth 1 -type d -print0 | sort -z)
 }
