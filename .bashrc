@@ -126,12 +126,12 @@ export JAVA_HOME='/usr/'
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
-if [ -r "$HOME/.bashrc_local" ]
-then
-    source "$HOME/.bashrc_local"
-fi
-
 if [ -r "$HOME/.bash_aliases" ]
 then
     source "$HOME/.bash_aliases"
+fi
+
+if [ -r "$HOME/.bashrc_local" ]
+then
+    source "$HOME/.bashrc_local"
 fi
