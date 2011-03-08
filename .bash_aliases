@@ -124,3 +124,13 @@ grouped_find()
         fi
     done < <(find "$target" -mindepth 1 -type d -print0 | sort -z)
 }
+
+bash_timeout()
+{
+    local timeout=$1
+    timeout=${timeout//d/*24h}
+    timeout=${timeout//h/*60m}
+    timeout=${timeout//m/*60}
+    timeout=${timeout//s/}
+    export TMOUT=$(($timeout))
+}
