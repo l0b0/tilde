@@ -102,27 +102,32 @@ date_sorted_find()
 
 grouped_find()
 {
-    target="${1%%/}/"
-    if [ ! -d "$target" ]
-    then
-        echo "${target}: No such directory"
-        return 1
-    fi
-
-    while IFS= read -rd $'\0' dir
+    while [ -n "${1:-}" ]
     do
-        files_found=0
-        while IFS= read -rd $'\0' path
-        do
-            files_found=1
-            ls -- "$path"
-        done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -print0 | sort -z)
-
-        if [ $files_found -eq 1 ]
+        target="${1%%/}/"
+        if [ ! -d "$target" ]
         then
-            echo
+            echo "${target}: No such directory"
+            return 1
         fi
-    done < <(find "$target" -mindepth 1 -type d -print0 | sort -z)
+
+        while IFS= read -rd $'\0' dir
+        do
+            files_found=0
+            while IFS= read -rd $'\0' path
+            do
+                files_found=1
+                ls -- "$path"
+            done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -print0 | sort -z)
+
+            if [ $files_found -eq 1 ]
+            then
+                echo
+            fi
+        done < <(find "$target" -mindepth 1 -type d -print0 | sort -z)
+
+        shift
+    done
 }
 
 bash_timeout()
