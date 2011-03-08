@@ -1,1 +1,1 @@
-xrdb $HOME/.Xdefaults
+xrdb -merge $HOME/.Xresources
