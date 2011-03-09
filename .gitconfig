@@ -9,5 +9,6 @@
 	resume = stash apply
 [color]
 	diff = auto
+	status = auto
 [merge]
 	conflictstyle = diff3
