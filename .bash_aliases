@@ -139,3 +139,13 @@ bash_timeout()
     timeout=${timeout//s/}
     export TMOUT=$(($timeout))
 }
+
+shortest()
+{
+    awk '(NR == 1 || length < length(line)) { line = $0 } END { print line }'
+}
+
+longest()
+{
+    awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
+}
