@@ -3,7 +3,7 @@
 # for examples
 
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[ -z "${PS1:-}" ] && return
 
 # Make sure all terminals save history
 [ -z "${PROMPT_COMMAND:-}" ] && PROMPT_COMMAND="history -a;"
