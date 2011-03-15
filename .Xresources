@@ -1,4 +1,4 @@
-XTerm*geometry: 98x80
+XTerm*geometry: 96x68
 XTerm*metaSendsEscape: true
 XTerm*reverseVideo: true
 XTerm*saveLines: 32767
