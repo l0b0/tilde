@@ -4,7 +4,7 @@ directory=$(dirname "$0")
 
 . "$directory/functions.sh"
 
-for name in "$@"
+for name
 do
     if [ ! -r $name.tex ]
     then
