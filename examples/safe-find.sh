@@ -1,0 +1,56 @@
+#!/bin/bash
+# Filenames can contain *any* character except only null (\0) and slash (/);
+# here's some general rules to handle them:
+#
+# $'...' can be used to create human readable strings with escape sequences.
+#
+# ' -- ' in commands is necessary to separate arguments from filenames, since
+# filenames can start with '--', and would therefore be handled as parameters.
+# To handle parameters properly (like GNU tools) use `getopt`.
+#
+# `find` doesn't support this syntax, so we use `readlink` to get an absolute
+# path which by definition starts with slash.
+#
+# The "$()" construct strips trailing newlines, so we have to add a different
+# character and then strip it outside the "$()" construct.
+#
+# `IFS=` is necessary to avoid that any characters in IFS are stripped from
+# the start and end of $path.
+#
+# '-r' avoids interpreting backslash in filenames specially.
+#
+# '-d $'\0' splits filenames by the null character.
+#
+# '-print0' separates find output by null characters.
+#
+# Variables inside '$()' have to be quoted just like outside this construct.
+#
+# Use process substitution with "<(" instead of pipes to avoid broken pipes.
+#
+# Use file descriptor 9 for data storage instead of standard input to avoid
+# greedy commands like `cat` eating all of it.
+
+set -o errexit
+set -o nounset
+set -o noclobber
+
+test_file_name=$'--$`\! *@ \a\b\e\E\f\r\t\v\\\"\' \n'
+test_dir_path="$test_file_name"
+test_file_path="${test_dir_path}/${test_file_name}"
+
+mkdir -- "$test_dir_path"
+touch -- "$test_file_path"
+
+absolute_dir_path_x="$(readlink -fn -- "$test_dir_path"; echo x)"
+absolute_dir_path="${absolute_dir_path_x%x}"
+
+exec 9< <( find "$absolute_dir_path" -type f -print0 )
+while IFS= read -rd $'\0' -u 9
+do
+file_path="$(readlink -fn -- "$REPLY"; echo x)"
+    file_path="${file_path%x}"
+    echo "START${file_path}END"
+done
+
+rm -- "$test_file_path"
+rmdir -- "$test_dir_path"
