@@ -19,7 +19,7 @@
 #
 # '-r' avoids interpreting backslash in filenames specially.
 #
-# '-d $'\0' splits filenames by the null character.
+# '-d '' splits filenames by the null character.
 #
 # '-print0' separates find output by null characters.
 #
@@ -45,7 +45,7 @@ absolute_dir_path_x="$(readlink -fn -- "$test_dir_path"; echo x)"
 absolute_dir_path="${absolute_dir_path_x%x}"
 
 exec 9< <( find "$absolute_dir_path" -type f -print0 )
-while IFS= read -rd $'\0' -u 9
+while IFS= read -r -d '' -u 9
 do
 file_path="$(readlink -fn -- "$REPLY"; echo x)"
     file_path="${file_path%x}"
