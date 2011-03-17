@@ -47,7 +47,7 @@ absolute_dir_path="${absolute_dir_path_x%x}"
 exec 9< <( find "$absolute_dir_path" -type f -print0 )
 while IFS= read -r -d '' -u 9
 do
-file_path="$(readlink -fn -- "$REPLY"; echo x)"
+    file_path="$(readlink -fn -- "$REPLY"; echo x)"
     file_path="${file_path%x}"
     echo "START${file_path}END"
 done
