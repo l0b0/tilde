@@ -1,5 +1,47 @@
 #!/bin/bash
-[ -n "$1" ] || exit 1
+#
+# NAME
+#        duplicates.sh - Check for duplicate files
+#
+# SYNOPSIS
+#        duplicates.sh [OPTION]... DIRECTORY
+#
+# DESCRIPTION
+#        Compares all files to all other files recursively in the specified
+#        directory. If they are binary equal, prints out the command necessary
+#        for you to check for yourself.
+#
+#        Based on
+#        https://github.com/l0b0/tilde/blob/master/examples/safe-find.sh
+#
+# EXAMPLES
+#        duplicates.sh ~/music
+#               Check for duplicate music files.
+#
+#        duplicates.sh /tmp 2>/dev/null
+#               Check for duplicate temporary files, discarding any error
+#               messages (typically "Permission denied").
+#
+# BUGS
+#        https://github.com/l0b0/tilde/issues
+#
+# COPYRIGHT
+#        Copyright © 2011 Victor Engmark. License GPLv3+: GNU GPL
+#        version 3 or later <http://gnu.org/licenses/gpl.html>.
+#        This is free software: you are free to change and redistribute it.
+#        There is NO WARRANTY, to the extent permitted by law.
+#
+################################################################################
+
+directory=$(dirname -- $(readlink -fn -- "$0"))
+
+. "$directory/functions.sh"
+
+if [ ! -d "$1" ]
+then
+    usage
+fi
+
 exec 9< <( find "$1" -type f -print0 )
 while IFS= read -r -d '' -u 9
 do
