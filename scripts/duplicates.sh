@@ -33,21 +33,24 @@
 #
 ################################################################################
 
-directory=$(dirname -- $(readlink -fn -- "$0"))
+directory="$(dirname -- "$(readlink -fn -- "$0")")"
 
 . "$directory/functions.sh"
 
-if [ ! -d "$1" ]
+start_dir_x="$(readlink -fn -- "$1"; echo x)"
+start_dir="${start_dir_x%x}"
+
+if [ ! -d "$start_dir" ]
 then
     usage
 fi
 
-exec 9< <( find "$1" -type f -print0 )
+exec 9< <( find "$start_dir" -type f -print0 )
 while IFS= read -r -d '' -u 9
 do
     file_path="$(readlink -fn -- "$REPLY"; echo x)"
     file_path="${file_path%x}"
-    exec 8< <( find "$1" -type f -not -path "$file_path" -print0 )
+    exec 8< <( find "$start_dir" -type f \( -path "$file_path" -o -print0 \) )
     while IFS= read -r -d '' -u 8 OTHER
     do
         cmp --quiet -- "$REPLY" "$OTHER"
