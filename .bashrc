@@ -40,11 +40,10 @@ fi
 # Color support detection from Ubuntu
 if [ -x /usr/bin/tput ]
 then
-    reset='\[\e[0m\]'
-    red='\[\e[1;31m\]'
-    green='\[\e[1;32m\]'
-    orange='\[\e[1;33m\]'
-    blue='\[\e[1;34m\]'
+    info=$(tput bold; tput setaf 4)
+    warning=$(tput bold; tput setaf 3)
+    error=$(tput bold; tput setaf 1)
+    reset=$(tput sgr0)
 fi
 
 # set variable identifying the chroot you work in (used in the prompt below)
@@ -64,28 +63,22 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${orange:-}\${debian_chroot:+(\$debian_chroot) }${reset:-}"
+PS1="${warning:-}\${debian_chroot:+(\$debian_chroot) }${reset:-}"
 
-# Red user if root, orange if su
 if [ "$USER" == 'root' ]
 then
-    PS1="$PS1${red:-}"
+    PS1="$PS1${error:-}"
 elif [ -n "${SUDO_USER:-}" ]
 then
-    PS1="$PS1${orange:-}"
-else
-    PS1="$PS1${green:-}"
+    PS1="$PS1${warning:-}"
 fi
 PS1="${PS1}\u${reset:-}@"
 
-# Red host if SSH
 if [ -n "${SSH_CONNECTION:-}" ]
 then
-    PS1="$PS1${red:-}"
-else
-    PS1="$PS1${green:-}"
+    PS1="$PS1${warning:-}"
 fi
-PS1="${PS1}\h${reset:-}:${blue:-}\w${reset:-}"
+PS1="${PS1}\h${reset:-}:${info:-}\w${reset:-}"
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
@@ -105,7 +98,7 @@ ps1_command="exit_code=\$?
 ${ps1_command:-}
 if [ \$exit_code -ne 0 ]
 then
-    printf \"${red:-}\\n\${exit_code} \\\$${reset:-}\"
+    printf \"${error:-}\\n\${exit_code} \\\$${reset:-}\"
 else
     printf \"\\n\\\$\"
 fi"
@@ -113,7 +106,7 @@ fi"
 PS1="${PS1}\$(${ps1_command}) "
 
 # Clean up
-unset reset red green orange blue ps1_command
+unset info warning error reset ps1_command
 
 # Default editor
 export GIT_EDITOR='vim'
