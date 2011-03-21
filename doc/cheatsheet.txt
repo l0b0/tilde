@@ -22,3 +22,6 @@ Enable/disable: `rctool -e/-d daemon`
 
 # top
 Sort column: `O`
+
+# Tail following with highlight
+less, search, Shift-F
