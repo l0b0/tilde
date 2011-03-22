@@ -37,14 +37,42 @@ then
     source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
 
-# Color support detection from Ubuntu
-if [ -x /usr/bin/tput ]
+highlight()
+{
+    if [ -x /usr/bin/tput ]
+    then
+        tput bold
+        tput setaf $1
+    fi
+    shift
+    printf -- "$@"
+    if [ -x /usr/bin/tput ]
+    then
+        tput sgr0
+    fi
+}
+
+highlight_error()
+{
+    highlight 1 "$@"
+}
+
+highlight_warning()
+{
+    highlight 3 "$@"
+}
+
+highlight_info()
+{
+    highlight 4 "$@"
+}
+
+# Exit code
+PS1="\$(exit_code=\$?
+if [ \$exit_code -ne 0 ]
 then
-    info=$(tput bold; tput setaf 4)
-    warning=$(tput bold; tput setaf 3)
-    error=$(tput bold; tput setaf 1)
-    reset=$(tput sgr0)
-fi
+    printf \"\$(highlight_error \"\${exit_code} \")\"
+fi)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
@@ -63,22 +91,26 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${warning:-}\${debian_chroot:+(\$debian_chroot) }${reset:-}"
+PS1="${PS1}$(highlight_warning "\${debian_chroot:+(\$debian_chroot) }")"
 
 if [ "$USER" == 'root' ]
 then
-    PS1="$PS1${error:-}"
+    PS1="${PS1}$(highlight_error '\u')"
 elif [ -n "${SUDO_USER:-}" ]
 then
-    PS1="$PS1${warning:-}"
+    PS1="${PS1}$(highlight_warning '\u')"
+else
+    PS1="${PS1}\u"
 fi
-PS1="${PS1}\u${reset:-}@"
+PS1="${PS1}@"
 
 if [ -n "${SSH_CONNECTION:-}" ]
 then
-    PS1="$PS1${warning:-}"
+    PS1="${PS1}$(highlight_warning '\h')"
+else
+    PS1="${PS1}\h"
 fi
-PS1="${PS1}\h${reset:-}:${info:-}\w${reset:-}"
+PS1="${PS1}:$(highlight_info '\w')"
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
@@ -93,20 +125,10 @@ then
     ${ps1_command:-}"
 fi
 
-# Exit code of the last command
-ps1_command="exit_code=\$?
-${ps1_command:-}
-if [ \$exit_code -ne 0 ]
-then
-    printf \"${error:-}\\n\${exit_code} \\\$${reset:-}\"
-else
-    printf \"\\n\\\$\"
-fi"
-
-PS1="${PS1}\$(${ps1_command}) "
+PS1="${PS1}\$(${ps1_command})\n\\\$ "
 
 # Clean up
-unset info warning error reset ps1_command
+unset ps1_command
 
 # Default editor
 export GIT_EDITOR='vim'
