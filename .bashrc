@@ -32,7 +32,8 @@ shopt -s checkwinsize
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
     source /etc/bash_completion
-elif [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
+fi
+if [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
 then
     source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
