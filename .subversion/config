@@ -65,7 +65,7 @@
 ### Set merge-tool-cmd to the command used to invoke your external
 ### merging tool of choice. Subversion will pass 4 arguments to
 ### the specified command: base theirs mine merged
-# merge-tool-cmd = merge_command
+merge-tool-cmd = /usr/bin/svn-merge3-meld
 
 ### Section for configuring tunnel agents.
 [tunnels]
