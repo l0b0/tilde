@@ -66,9 +66,6 @@ git-tar()
     git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
 }
 
-# Terminal settings
-alias xterm-settings='xrdb -merge ~/.Xresources'
-
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
