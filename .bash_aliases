@@ -132,6 +132,7 @@ grouped_find()
 
 bash_timeout()
 {
+    # Set the idle timeout before the shell will be closed automatically
     local timeout=$1
     timeout=${timeout//d/*24h}
     timeout=${timeout//h/*60m}
@@ -142,10 +143,12 @@ bash_timeout()
 
 shortest()
 {
+    # Print only the (first) shortest line
     awk '(NR == 1 || length < length(line)) { line = $0 } END { print line }'
 }
 
 longest()
 {
+    # Print only the (first) longest line
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
