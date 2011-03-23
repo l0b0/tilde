@@ -31,7 +31,10 @@ alias play-iso-dir='mplayer -dvd-device dvd:// -slang en' # dir
 alias fgit='$HOME/dev/fgit/fgit.sh'
 
 # Subversion
-alias svndiff='svn diff "$@" | colordiff'
+svndiff()
+{
+    svn diff "$@" | colordiff
+}
 
 # Git
 mkgithub()
