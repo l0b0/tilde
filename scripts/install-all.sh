@@ -19,7 +19,7 @@ apt-get install gimp hugin inkscape jhead pngcrush graphviz python-pydot
 apt-get install sqlite3
 
 # Python
-apt-get install ipython libxml2-dev libxslt-dev pychecker pylint python-dev python-epydoc python-lxml python-matplotlib python-setuptools
+apt-get install ipython libxml2-dev libxslt-dev pep8 pychecker pylint python-dev python-epydoc python-lxml python-matplotlib python-setuptools
 
 # Compiling
 apt-get install rpm
