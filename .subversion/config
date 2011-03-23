@@ -121,7 +121,7 @@
 ### Set enable-auto-props to 'yes' to enable automatic properties
 ### for 'svn add' and 'svn import', it defaults to 'no'.
 ### Automatic properties are defined in the section 'auto-props'.
-# enable-auto-props = yes
+enable-auto-props = yes
 ### Set interactive-conflicts to 'no' to disable interactive
 ### conflict resolution prompting.  It defaults to 'yes'.
 # interactive-conflicts = no
@@ -135,14 +135,64 @@
 ### applied to the file.  Note that auto-props functionality
 ### must be enabled, which is typically done by setting the
 ### 'enable-auto-props' option.
-# *.c = svn:eol-style=native
-# *.cpp = svn:eol-style=native
-# *.h = svn:keywords=Author Date Id Rev URL;svn:eol-style=native
-# *.dsp = svn:eol-style=CRLF
-# *.dsw = svn:eol-style=CRLF
-# *.sh = svn:eol-style=native;svn:executable
-# *.txt = svn:eol-style=native;svn:keywords=Author Date Id Rev URL;
-# *.png = svn:mime-type=image/png
-# *.jpg = svn:mime-type=image/jpeg
-# Makefile = svn:eol-style=native
-
+*.c = svn:eol-style=native;svn:keywords=Id HeadURL
+*.cpp = svn:eol-style=native;svn:keywords=Id HeadURL
+*.h = svn:eol-style=native;svn:keywords=Id HeadURL
+*.sh = svn:executable;svn:eol-style=native;svn:keywords=Id HeadURL
+*.cmd = svn:mime-type=text/plain;svn:eol-style=CRLF
+*.bat = svn:mime-type=text/plain;svn:eol-style=CRLF
+Makefile* = svn:eol-style=native;svn:keywords=Id HeadURL
+*.obj = svn:mime-type=application/octet-stream
+*.bin = svn:mime-type=application/octet-stream
+*.bmp = svn:mime-type=image/bmp
+*.class = svn:mime-type=application/java
+*.doc = svn:mime-type=application/msword
+*.exe = svn:mime-type=application/octet-stream
+*.gif = svn:mime-type=image/gif
+*.gz = svn:mime-type=application/x-gzip
+*.jar = svn:mime-type=application/java-archive
+*.jelly = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.jpg = svn:mime-type=image/jpeg
+*.jpeg = svn:mime-type=image/jpeg
+*.pdf = svn:mime-type=application/pdf
+*.png = svn:mime-type=image/png
+*.tgz = svn:mime-type=application/octet-stream
+*.tif = svn:mime-type=image/tiff
+*.tiff = svn:mime-type=image/tiff
+*.zip = svn:mime-type=application/zip
+*.txt = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.xml = svn:mime-type=text/xml;svn:eol-style=native;svn:keywords=Id HeadURL
+*.ent = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.dtd = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.vsl = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.xsd = svn:mime-type=text/xml;svn:eol-style=native;svn:keywords=Id HeadURL
+*.xsl = svn:mime-type=text/xml;svn:eol-style=native;svn:keywords=Id HeadURL
+*.wsdl = svn:mime-type=text/xml;svn:eol-style=native;svn:keywords=Id HeadURL
+*.htm = svn:mime-type=text/html;svn:eol-style=native;svn:keywords=Id HeadURL
+*.html = svn:mime-type=text/html;svn:eol-style=native;svn:keywords=Id HeadURL
+*.tmpl = svn:mime-type=text/html;svn:eol-style=native;svn:keywords=Id HeadURL
+*.css = svn:mime-type=text/css;svn:eol-style=native;svn:keywords=Id HeadURL
+*.js = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.jsp = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.txt = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.java = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.properties = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.sql = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+README = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+ReleaseNotes = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.launch = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+.project = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+.classpath = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.rb = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.erb = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.yml = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.rake = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.sample = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.conf = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.rc = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.pl = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.pm = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.t = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.tt = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.launch = svn:mime-type=text/plain;svn:eol-style=native;svn:keywords=Id HeadURL
+*.diff = svn:eol-style=native;svn:keywords=Id HeadURL
