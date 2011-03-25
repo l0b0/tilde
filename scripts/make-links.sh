@@ -40,11 +40,8 @@
 #               ~/dev/tilde and ~/settings. If any of the files already exist,
 #               the diffs can be reviewed in meld.
 #
-# REPORTING BUGS
-#        Report bugs to victor.engmark@gmail.com
-#
-# AUTHOR
-#        Written by Victor Engmark
+# BUGS
+#        https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT
 #        Copyright © 2008-2010 Victor Engmark. License GPLv3+: GNU GPL
