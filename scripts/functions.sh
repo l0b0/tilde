@@ -103,9 +103,9 @@ verbose_echo()
             shift
         fi
 
-        while [ -n "$1" ]
+        while [ -n "${1:-}" ]
         do
-            echo -e $newline "$1" >&2
+            echo -e ${newline:-} "$1" >&2
             shift
         done
     fi
