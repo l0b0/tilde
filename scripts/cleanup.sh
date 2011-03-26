@@ -61,6 +61,9 @@ gpg --export-ownertrust > ~/.gnupg/ownertrust.txt
 verbose_echo "Remove comments from text files"
 sed -i -e '/^#/D' ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
 
+verbose_echo "Collapse consecutive blank lines in text files"
+sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
+
 verbose_echo "Sort text files"
 for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat}
 do
