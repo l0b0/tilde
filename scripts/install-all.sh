@@ -4,7 +4,7 @@
 apt-get update
 
 # Misc
-apt-get install gnokii-cli keepassx openssh-server thunderbird
+apt-get install gnokii-cli keepassx openssh-server thunderbird unrar
 
 # Editors
 apt-get install jedit vim
