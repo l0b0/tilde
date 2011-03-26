@@ -151,3 +151,6 @@ if [ -r "$HOME/.bashrc_local" ]
 then
     source "$HOME/.bashrc_local"
 fi
+
+# Avoid Bash autocompletion tilde expansion
+_expand(){ true; }
