@@ -59,7 +59,7 @@ verbose_echo "Backup GPG trust values"
 gpg --export-ownertrust > ~/.gnupg/ownertrust.txt
 
 verbose_echo "Remove comments from text files"
-sed -i -e '/^#/D' -e 's/[[:space:]]+#.*$//g' ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
+sed -i -e '/^#/D' -e 's/[[:space:]]\+#.*$//g' ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
 
 verbose_echo "Collapse consecutive blank lines in text files"
 sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
