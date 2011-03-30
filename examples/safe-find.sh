@@ -19,7 +19,7 @@
 #
 # '-r' avoids interpreting backslash in filenames specially.
 #
-# '-d '' splits filenames by the null character.
+# '-d ""' splits filenames by the null character.
 #
 # '-print0' separates find output by null characters.
 #
