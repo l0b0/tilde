@@ -134,7 +134,10 @@ longest()
 # GNU Make
 make_targets()
 {
-    make --print-data-base --question | grep '^[^.%][-A-Za-z0-9_]*:' | cut -d : -f 1 | sort -u
+    targets="$(make --print-data-base --question | grep '^[^.%][-A-Za-z0-9_]*:' | cut -d : -f 1 | sort -u)"
+    longest_line="$(longest <<< "$targets")"
+    columns=$(bc <<< "${COLUMNS:-80} / (${#longest_line} + 1)")
+    pr --omit-pagination --width=${COLUMNS:-80} --columns=$columns <<< "$targets"
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
