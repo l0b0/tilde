@@ -71,26 +71,6 @@ then
     source "$HOME/.bash_aliases_local"
 fi
 
-smb_ls()
-{
-    # @param $1: Hostname
-    sudo smbclient -A /etc/auto.cifs.$1 -gL $1 2>/dev/null | grep '^Disk|' | cut -d '|' -f 2
-}
-
-smb_mount_all()
-{
-    # Mount all available Samba shares read-only
-    # @param $1: Hostname
-    while IFS= read -rd $'\n' dir
-    do
-        dir_escaped="$(printf %q "$dir")"
-        sudo mkdir -p -- "/mnt/${dir_escaped}"
-        sudo mount -t cifs //${1}/${dir_escaped} /mnt/${dir_escaped} -o credentials=/etc/auto.cifs.$1,ro \
-            || sudo rmdir "/mnt/${dir_escaped}"
-    done < <(smb_ls $1)
-    echo "To unmount all, run \`sudo umount /mnt/*\`"
-}
-
 date_sorted_find()
 {
     # Ascending, by ISO date
