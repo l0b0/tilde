@@ -66,6 +66,7 @@ git-tar()
     git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
 }
 
+# Find
 date_sorted_find()
 {
     # Ascending, by ISO date
@@ -105,6 +106,7 @@ grouped_find()
     done
 }
 
+# Bash
 bash_timeout()
 {
     # Set the idle timeout before the shell will be closed automatically
@@ -116,6 +118,7 @@ bash_timeout()
     export TMOUT=$(($timeout))
 }
 
+# String handling
 shortest()
 {
     # Print only the (first) shortest line
