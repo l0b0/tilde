@@ -29,6 +29,14 @@
 #
 # Use file descriptor 9 for data storage instead of standard input to avoid
 # greedy commands like `cat` eating all of it.
+#
+# As with all software ever, this comes with no warranty whatsoever. However,
+# the code has been subjected to public scrutiny (and a bounty for a week)
+# without anyone reporting an error
+# <http://codereview.stackexchange.com/questions/1343/can-you-break-this-code>.
+# If you find some way to break this code as described after the jump, please
+# send a message either there or at the GitHub issue tracker
+# <https://github.com/l0b0/tilde/issues>.
 
 set -o errexit
 set -o nounset
