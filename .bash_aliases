@@ -131,6 +131,12 @@ longest()
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
 
+# GNU Make
+make_targets()
+{
+    make --print-data-base --question | grep '^[^.%][-A-Za-z0-9_]*:' | cut -d : -f 1 | sort -u
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
