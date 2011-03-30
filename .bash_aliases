@@ -66,11 +66,6 @@ git-tar()
     git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
 }
 
-if [ -r "$HOME/.bash_aliases_local" ]
-then
-    source "$HOME/.bash_aliases_local"
-fi
-
 date_sorted_find()
 {
     # Ascending, by ISO date
@@ -132,3 +127,8 @@ longest()
     # Print only the (first) longest line
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
+
+if [ -r "$HOME/.bash_aliases_local" ]
+then
+    source "$HOME/.bash_aliases_local"
+fi
