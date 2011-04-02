@@ -154,3 +154,4 @@ fi
 
 # Avoid Bash autocompletion tilde expansion
 _expand(){ true; }
+__expand_tilde_by_ref(){ true; }
