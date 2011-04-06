@@ -36,6 +36,12 @@ svndiff()
     svn diff "$@" | colordiff
 }
 
+# Diff
+worddiff()
+{
+    wdiff -w "$(tput setaf 1)" -x "$(tput sgr0)" -y "$(tput setaf 2)" -z "$(tput sgr0)" "$@"
+}
+
 # Git
 mkgithub()
 {
