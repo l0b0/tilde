@@ -168,7 +168,7 @@ do
     fi
 
     # File exists
-    if [ -f "$source_path" -o -d "$source_path" ]
+    if [[ -w "$source_path" && ! -L "$source_path" ]]
     then
         # Make sure we skip or replace in the end
         while [[ ! "$do_replace" =~ ^[SsRr]$ ]]
