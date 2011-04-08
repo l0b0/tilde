@@ -164,7 +164,7 @@ do
 
     if [ -n "${skip:-}" ]
     then
-        do_replace='s' # Always skip
+        do_replace=s # Always skip
     fi
 
     # File exists
