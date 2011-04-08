@@ -140,7 +140,7 @@ do
     then
         error "Target does not exist: $target_path" $EX_USAGE
     fi
-    
+
     target_file="$(basename -- "$target_path")"
 
     # Check excludes on file name and path
@@ -151,8 +151,6 @@ do
             continue 2 # Next target path
         fi
     done
-    
-    source_path="${source_dir}/${target_file}"
 
     unset do_replace
     do_replace="${force:+r}" # Always replace
@@ -163,6 +161,7 @@ do
     fi
 
     # File exists
+    source_path="${source_dir}/${target_file}"
     if [[ -w "$source_path" && ! -L "$source_path" ]]
     then
         # Make sure we skip or replace in the end
@@ -190,5 +189,5 @@ do
         rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
     fi
 
-    ln ${verbose:-} --force --symbolic "$target_path" "$source_path" || error "ln failed" $?
+    ln ${verbose:-} --force --symbolic "$target_path" "$source_dir" || error "ln failed" $?
 done
