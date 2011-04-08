@@ -179,7 +179,8 @@ do
 
             if [[ "$do_replace" =~ ^[Dd]$ ]]
             then
-                $diff_exec -- "$target_path" "$source_path"
+                $diff_exec -- "$target_path" "$source_path" || exit_code=$?
+                [ $exit_code -le 1 ] || error "$diff_exec failed"
             fi
         done
 
@@ -191,7 +192,7 @@ do
 
     if [ "$do_replace" == 'r' ]
     then
-        rm ${verbose:-} -- "$source_path" || error "rm failed" $?
+        rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
     fi
 
     if [ -e "$source_path" ]
