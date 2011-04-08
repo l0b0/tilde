@@ -39,7 +39,7 @@ svndiff()
 # Diff
 wdiffc()
 {
-    wdiff -w "$(tput setaf 1)" -x "$(tput sgr0)" -y "$(tput setaf 2)" -z "$(tput sgr0)" "$@"
+    wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" "$@"
 }
 
 # Git
