@@ -37,7 +37,7 @@ svndiff()
 }
 
 # Diff
-worddiff()
+wdiffc()
 {
     wdiff -w "$(tput setaf 1)" -x "$(tput sgr0)" -y "$(tput setaf 2)" -z "$(tput sgr0)" "$@"
 }
@@ -65,7 +65,7 @@ mkgithub()
     git config merge.conflictstyle diff3
 }
 
-git-tar()
+gitar()
 {
     # @param $1: Commit-like
     # @param $2: Name of output file (without extension)
@@ -73,7 +73,7 @@ git-tar()
 }
 
 # Find
-date_sorted_find()
+find_date_sorted()
 {
     # Ascending, by ISO date
     local dirx=$(readlink -fn "${1:-.}"; echo x)
@@ -82,7 +82,7 @@ date_sorted_find()
     find "$dir" "$@" -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort | cut -d ' ' -f 3-
 }
 
-grouped_find()
+find_grouped()
 {
     while [ -n "${1:-}" ]
     do
