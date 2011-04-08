@@ -58,13 +58,13 @@ set -o noclobber
 default_diff='diff -s'
 default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
 
-directory=$(dirname -- $(readlink -fn -- "$0"))
+directory="$(dirname -- "$(readlink -fn -- "$0")")"
 
 . "$directory/functions.sh"
 
 # Process parameters
-params=$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
-    --name "$cmdname" -- "$@")
+params="$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
+    --name "$cmdname" -- "$@")"
 
 if [ $? -ne 0 ]
 then
