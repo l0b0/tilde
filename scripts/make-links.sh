@@ -102,13 +102,17 @@ do
             shift
             ;;
         --)
-            while [ -n "$3" ]
-            do
-                targets[${#targets[*]}]="$2"
-                shift
-            done
-            source_dir=$(readlink -fn -- "$2")
-            shift 2
+            shift
+            if [ -z "${1:-}" ]
+            then
+                error "Missing targets." "$help_info" $EX_USAGE
+            fi
+            if [ -z "${2:-}" ]
+            then
+                error "Missing directory." "$help_info" $EX_USAGE
+            fi
+            targets=(${@:1:$(($#-1))})
+            source_dir="${@:$#}"
             break
             ;;
         *)
@@ -117,24 +121,9 @@ do
     esac
 done
 
-if [ -z "$targets" ]
-then
-    error "Missing targets." "$help_info" $EX_USAGE
-fi
-
-if [ -z "$source_dir" ]
-then
-    error "Missing directory." "$help_info" $EX_USAGE
-fi
-
 if [ ! -d "$source_dir" ]
 then
     error "Not a directory: $source_dir" "$help_info" $EX_USAGE
-fi
-
-if [ $# -ne 0 ]
-then
-    error "Extraneous parameters." "$help_info" $EX_USAGE
 fi
 
 # Set defaults
