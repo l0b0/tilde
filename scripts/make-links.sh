@@ -59,10 +59,6 @@ directory=$(dirname -- $(readlink -fn -- "$0"))
 
 . "$directory/functions.sh"
 
-# Custom errors
-EX_NO_SUCH_DIR=91
-EX_NO_SUCH_EXEC=92
-
 # Process parameters
 params=$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
     --name "$cmdname" -- "$@")
