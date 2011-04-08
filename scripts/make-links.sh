@@ -141,7 +141,6 @@ do
         error "Target does not exist: $target_path" $EX_USAGE
     fi
     
-    target_dir="$(dirname -- "$target_path")"
     target_file="$(basename -- "$target_path")"
 
     # Check excludes on file name and path
