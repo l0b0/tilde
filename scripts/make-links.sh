@@ -140,16 +140,13 @@ do
         error "Target does not exist: $target_path" $EX_USAGE
     fi
     
-    target_fullpath="$(readlink -fn -- "$target_path")"
+    target_dir="$(dirname -- "$target_path")"
+    target_file="$(basename -- "$target_path")"
 
-    target_dir="$(dirname -- "$target_fullpath")"
-    target_file="$(basename -- "$target_fullpath")"
-
-    # Check excludes on relative and absolute path
-    rel="$(basename -- "$target_path")"
+    # Check excludes on file name and path
     for exclude in "${excludes[@]}"
     do
-        if [[ "$rel" =~ ^${exclude}$ || "$target_path" =~ ^${exclude}$ ]]
+        if [[ "$target_file" =~ ^${exclude}$ || "$target_path" =~ ^${exclude}$ ]]
         then
             continue 2 # Got to continue main loop
         fi
@@ -182,7 +179,7 @@ do
 
             if [[ "$do_replace" =~ ^[Dd]$ ]]
             then
-                $diff_exec -- "$target_fullpath" "$source_path"
+                $diff_exec -- "$target_path" "$source_path"
             fi
         done
 
@@ -203,5 +200,5 @@ do
         continue
     fi
 
-    ln ${verbose:-} -s "$target_fullpath" "$source_path" || error "ln failed" $?
+    ln ${verbose:-} -s "$target_path" "$source_path" || error "ln failed" $?
 done
