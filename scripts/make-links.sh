@@ -52,6 +52,7 @@
 ################################################################################
 
 set -o nounset
+set -o noclobber
 
 # Defaults
 default_diff='diff -s'
