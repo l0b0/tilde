@@ -148,7 +148,7 @@ do
     do
         if [[ "$target_file" =~ ^${exclude}$ || "$target_path" =~ ^${exclude}$ ]]
         then
-            continue 2 # Got to continue main loop
+            continue 2 # Next target path
         fi
     done
     
