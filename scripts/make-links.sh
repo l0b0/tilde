@@ -173,7 +173,7 @@ do
         # Make sure we skip or replace in the end
         while [[ ! "$do_replace" =~ ^[SsRr]$ ]]
         do
-            echo "${source_path} exists. What do you want to do?"
+            echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
             read -n 1 -p '[S]kip, [D]iff, [R]eplace: ' do_replace
             echo
 
