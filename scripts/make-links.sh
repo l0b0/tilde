@@ -206,8 +206,7 @@ do
 
     if [ "$do_replace" == 'r' ]
     then
-        rm -- "$source_path" || error "rm failed" $?
-        #verbose_echo "Removed ${source_path}"
+        rm ${verbose:-} -- "$source_path" || error "rm failed" $?
     fi
 
     if [ -e "$source_path" ]
@@ -216,6 +215,5 @@ do
         continue
     fi
 
-    ln -s "$target_fullpath" "$source_path" || error "ln failed" $?
-    verbose_echo "${source_path} -> ${target_fullpath}"
+    ln ${verbose:-} -s "$target_fullpath" "$source_path" || error "ln failed" $?
 done
