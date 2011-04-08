@@ -157,11 +157,6 @@ do
     unset do_replace
     do_replace="${force:+r}" # Always replace
 
-    if [ -L "$source_path" ]
-    then
-        do_replace=r # Replace existing symlinks
-    fi
-
     if [ -n "${skip:-}" ]
     then
         do_replace=s # Always skip
@@ -195,11 +190,5 @@ do
         rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
     fi
 
-    if [ -e "$source_path" ]
-    then
-        warning "${source_path} exists but is not a standard file; skipping."
-        continue
-    fi
-
-    ln ${verbose:-} -s "$target_path" "$source_path" || error "ln failed" $?
+    ln ${verbose:-} --force --symbolic "$target_path" "$source_path" || error "ln failed" $?
 done
