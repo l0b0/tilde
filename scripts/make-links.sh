@@ -51,6 +51,8 @@
 #
 ################################################################################
 
+set -o nounset
+
 # Defaults
 default_diff='diff -s'
 default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
@@ -136,7 +138,7 @@ fi
 
 # Set defaults
 diff_exec="${diff_exec:-$default_diff}"
-if [ -z "$excludes" ]
+if [ -z "${excludes:-}" ]
 then
     excludes=( "${default_excludes[@]}" )
 fi
@@ -173,7 +175,7 @@ do
         do_replace=r # Replace existing symlinks
     fi
 
-    if [ -n "$skip" ]
+    if [ -n "${skip:-}" ]
     then
         do_replace='s' # Always skip
     fi
