@@ -68,9 +68,17 @@ highlight_info()
     highlight 4 "$@"
 }
 
+highlight_exit_code()
+{
+    exit_code=$?
+    if [ $exit_code -ne 0 ]
+    then
+        highlight_error "$exit_code "
+    fi
+}
+
 # Exit code
-PS1="\$(exit_code=\${?#0}
-highlight_error \"\${exit_code}\${exit_code:+ }\")"
+PS1='$(highlight_exit_code)'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
