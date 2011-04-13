@@ -41,4 +41,4 @@ update-alternatives --install /usr/bin/gnome-text-editor gnome-text-editor "$HOM
 update-alternatives --set editor /usr/bin/vim.basic
 
 # Own developments
-easy_install -U filterous mian vcard-module
+easy_install -U filterous flickrapi mian vcard-module
