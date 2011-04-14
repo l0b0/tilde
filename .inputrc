@@ -20,6 +20,9 @@
 "\e[5C": forward-word
 "\e\e[C": forward-word
 
+# Flip through autocompletion matches with Shift-Tab
+"\e[Z": menu-complete
+
 set match-hidden-files off
 set page-completions off
 set completion-query-items 350
