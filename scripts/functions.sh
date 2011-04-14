@@ -44,11 +44,7 @@ warning()
 
     test -t 1 && tput setf 4
 
-    while [ -n "$1" ]
-    do
-        echo -e "$1" >&2
-        shift
-    done
+    printf '%s\n' "$@" >&2
 
     test -t 1 && tput sgr0 # Reset terminal
 }
