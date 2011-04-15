@@ -139,6 +139,12 @@ path_common()
     printf %s "$common_path"
 }
 
+compare_dirs()
+{
+    # Shows which files exist in one directory but not both
+    comm -3 <(cd -- "$1"; find_grouped ".") <(cd -- "$2"; find_grouped ".")
+}
+
 # Bash
 bash_timeout()
 {
