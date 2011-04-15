@@ -84,6 +84,8 @@ find_date_sorted()
 
 find_grouped()
 {
+    # Outputs files (not directories) recursively, with an empty line between
+    # directories.
     while [ -n "${1:-}" ]
     do
         target="${1%%/}/"
