@@ -127,12 +127,14 @@ path_common()
             if ! [[ "$path" = "$common_path"* ]]
             then
                 new_common_path="${common_path%/*}"
-                [ "$new_common_path" = "$common_path" ] && return 1
+
+                [ "$new_common_path" = "$common_path" ] && return 1 # Dead end
+
                 common_path="${new_common_path}"
-                continue 2
+                continue 2 # Restart files
             fi
         done
-        break
+        break # Found a substring of all paths
     done
     printf %s "$common_path"
 }
