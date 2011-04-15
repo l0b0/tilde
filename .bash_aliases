@@ -146,6 +146,54 @@ make_targets()
     pr --omit-pagination --width=${COLUMNS:-80} --columns=$columns <<< "$targets"
 }
 
+locale_value()
+{
+    # Return the highest priority language variable available
+    # Based on http://mywiki.wooledge.org/BashFAQ/098
+    # To print which variable was used, uncomment the `echo` line
+    # $1: Optional locale category variable name (see `man locale`)
+
+    local varname=LANG # Fallback
+
+    if [[ "${1:-}" =~ ^LC_[A-Z]+$ ]] && declare -p "${1:-}" >/dev/null 2>&1
+    then
+        varname="$1"
+    fi
+
+    if [ -n "${LC_ALL+defined}" ]
+    then
+        varname=LC_ALL
+    fi
+
+    if [ -n "${LANGUAGE+defined}" -a "${LANG:-}" != C ]
+    then
+        varname=LANGUAGE
+    fi
+
+    #echo "$varname" >&2
+    printf "${!varname}"
+
+    # Tests:
+    # my_lang=0
+    # unset LANG LC_NAME LC_ALL LANGUAGE
+    # test "$(locale_value)" = '' || echo fail
+    # test "$(locale_value LC_NAME)" = '' || echo fail
+    # test "$(LANG=$my_lang locale_value)" = "$my_lang" || echo fail
+    # test "$(LANG=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
+    # test "$(LC_ALL=$my_lang locale_value)" = "$my_lang" || echo fail
+    # test "$(LC_ALL=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
+    # test "$(LC_NAME=$my_lang locale_value)" = '' || echo fail
+    # test "$(LC_NAME=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
+    # test "$(LANGUAGE=$my_lang locale_value)" = "$my_lang" || echo fail
+    # test "$(LANGUAGE=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
+    # test "$(LANG=a LC_ALL=b LC_NAME=c LANGUAGE=d locale_value)" = d || echo fail
+    # test "$(LANG=a LC_ALL=b LC_NAME=c LANGUAGE=d locale_value LC_NAME)" = d || echo fail
+    # test "$(LANG=$my_lang LANGUAGE=a locale_value)" = a || echo fail
+    # test "$(LANG=$my_lang LANGUAGE=a locale_value LC_NAME)" = a || echo fail
+    # test "$(LANG=C LANGUAGE=a locale_value)" = C || echo fail
+    # test "$(LANG=C LANGUAGE=a locale_value LC_NAME)" = C || echo fail
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
