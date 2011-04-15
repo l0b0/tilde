@@ -200,3 +200,4 @@ if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
 fi
+true
