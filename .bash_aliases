@@ -114,6 +114,29 @@ find_grouped()
     done
 }
 
+path_common()
+{
+    # Get the deepest common path.
+    local common_path="${1:-}"
+    shift # $1 is obviously part of $1
+
+    while true
+    do
+        for path in "$@"
+        do
+            if ! [[ "$path" = "$common_path"* ]]
+            then
+                new_common_path="${common_path%/*}"
+                [ "$new_common_path" = "$common_path" ] && return 1
+                common_path="${new_common_path}"
+                continue 2
+            fi
+        done
+        break
+    done
+    printf %s "$common_path"
+}
+
 # Bash
 bash_timeout()
 {
