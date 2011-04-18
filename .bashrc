@@ -127,7 +127,13 @@ fi
 # Subversion branch
 if type -t __svn_ps1 >/dev/null
 then
-    ps1_command="__svn_ps1 ' (%s)'
+    # Warn if you're not in the top directory of the checkout
+    ps1_command="if [ -d ../.svn ]
+then
+    highlight_warning \"\$(__svn_ps1 ' (%s)')\"
+else
+    __svn_ps1 ' (%s)'
+fi
     ${ps1_command:-}"
 fi
 
