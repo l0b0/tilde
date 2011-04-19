@@ -117,24 +117,23 @@ find_grouped()
 path_common()
 {
     # Get the deepest common path.
-    local common_path="${1:-}"
+    local common_path="$(echo -n "${1:-}x" | tr -s '/')"
+    common_path="${common_path%x}"
     shift # $1 is obviously part of $1
+    local path
 
-    while true
+    while [ -n "${1+defined}" ]
     do
-        for path in "$@"
-        do
-            if ! [[ "$path" = "$common_path"* ]]
-            then
-                new_common_path="${common_path%/*}"
-
-                [ "$new_common_path" = "$common_path" ] && return 1 # Dead end
-
-                common_path="${new_common_path}"
-                continue 2 # Restart files
-            fi
-        done
-        break # Found a substring of all paths
+        path="$(echo -n "${1}x" | tr -s '/')"
+        path="${path%x}"
+        if [[ "${path%/}/" = "${common_path%/}/"* ]]
+        then
+            shift
+        else
+            new_common_path="${common_path%/*}"
+            [ "$new_common_path" = "$common_path" ] && return 1 # Dead end
+            common_path="$new_common_path"
+        fi
     done
     printf %s "$common_path"
 }
