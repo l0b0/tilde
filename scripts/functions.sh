@@ -73,7 +73,7 @@ error()
 usage()
 {
     # Print documentation until the first empty line
-    while read line
+    while IFS= read line
     do
         if [ ! "$line" ]
         then
