@@ -73,11 +73,12 @@ error()
 usage()
 {
     # Print documentation until the first empty line
+    # @param $1: Exit code (optional)
     while IFS= read line
     do
         if [ -z "$line" ]
         then
-            exit
+            exit ${1:-0}
         elif [ "${line:0:2}" == '#!' ]
         then
             # Shebang line
