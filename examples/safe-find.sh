@@ -15,7 +15,7 @@
 # character and then strip it outside the "$()" construct.
 #
 # `IFS=` is necessary to avoid that any characters in IFS are stripped from
-# the start and end of $path.
+# the start and end of $REPLY.
 #
 # '-r' avoids interpreting backslash in filenames specially.
 #
