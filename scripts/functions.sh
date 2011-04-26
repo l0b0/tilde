@@ -75,7 +75,7 @@ usage()
     # Print documentation until the first empty line
     while IFS= read line
     do
-        if [ ! "$line" ]
+        if [ -z "$line" ]
         then
             exit
         elif [ "${line:0:2}" == '#!' ]
