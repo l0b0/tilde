@@ -144,6 +144,16 @@ compare_dirs()
     comm -3 <(cd -- "$1"; find_grouped ".") <(cd -- "$2"; find_grouped ".")
 }
 
+count_files()
+{
+    local -i file_count=0
+    while IFS= read -r -d '' -u 9
+    do
+        let file_count=$file_count+1
+    done 9< <( find "$@" -type f -print0 )
+    printf %d $file_count
+}
+
 # Bash
 bash_timeout()
 {
