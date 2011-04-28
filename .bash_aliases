@@ -169,6 +169,22 @@ bash_timeout()
     export TMOUT=$(($timeout))
 }
 
+# Perl
+perl_module_version()
+{
+    local version
+    for module
+    do
+        version=$(perl -M${module} -e "print \$${module}::VERSION")
+        if [ -n "$version" ]
+        then
+            echo "$module $version"
+        else
+            echo "Unknown module $module" >&2
+        fi
+    done
+}
+
 # String handling
 shortest()
 {
