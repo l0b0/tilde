@@ -196,6 +196,16 @@ perl_modules()
     perl -MExtUtils::Installed -e'my $inst = ExtUtils::Installed->new();print $_, $/ for $inst->modules'
 }
 
+perl_modules_test()
+{
+    local -i error=0
+    while IFS= read -r -u 9
+    do
+        perl_module_version "$REPLY" 2>&1 >/dev/null || let error=1
+    done 9< <( perl_modules )
+    return $error
+}
+
 # String handling
 shortest()
 {
