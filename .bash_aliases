@@ -181,6 +181,7 @@ perl_module_version()
             echo "$module $version"
         else
             echo "Unknown module $module" >&2
+            return 1
         fi
     done
 }
