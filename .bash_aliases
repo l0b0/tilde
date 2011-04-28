@@ -186,6 +186,16 @@ perl_module_version()
     done
 }
 
+perl_module_files()
+{
+    perl -MFile::Find=find -MFile::Spec::Functions -Tlwe 'find { wanted => sub { print canonpath $_ if /\.pm\z/ }, no_chdir => 1 }, @INC'
+}
+
+perl_modules()
+{
+    perl -MExtUtils::Installed -e'my $inst = ExtUtils::Installed->new();print $_, $/ for $inst->modules'
+}
+
 # String handling
 shortest()
 {
