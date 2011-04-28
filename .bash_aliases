@@ -116,24 +116,27 @@ find_grouped()
 
 path_common()
 {
-    # Get the deepest common path.
-    local common_path="$(echo -n "${1:-}x" | tr -s '/')"
-    common_path="${common_path%x}"
-    shift # $1 is obviously part of $1
-    local path
-
-    while [ -n "${1+defined}" ]
+    # Rotate parameters and clean up
+    for param
     do
-        path="$(echo -n "${1}x" | tr -s '/')"
-        path="${path%x}"
-        if [[ "${path%/}/" = "${common_path%/}/"* ]]
-        then
-            shift
-        else
-            new_common_path="${common_path%/*}"
-            [ "$new_common_path" = "$common_path" ] && return 1 # Dead end
-            common_path="$new_common_path"
-        fi
+        param=$(printf %s. "$1" | tr -s "/")
+        set -- "$@" "${param%.}"
+        shift
+    done
+
+    common_path=$1
+    shift
+
+    for param
+    do
+        while case ${param%/}/ in "${common_path%/}/"*) false;; esac; do
+            new_common_path=${common_path%/*}
+            if [ "$new_common_path" = "$common_path" ]
+            then
+                return 1 # Dead end
+            fi
+            common_path=$new_common_path
+        done
     done
     printf %s "$common_path"
 }
