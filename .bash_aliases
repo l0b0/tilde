@@ -36,6 +36,19 @@ svndiff()
     svn diff "$@" | colordiff
 }
 
+cvsignore2svn()
+{
+    # $@: Directories to search through recursively
+    local dir_path
+    while IFS= read -r -d '' -u 9
+    do
+        dir_path="$(dirname -- "$REPLY")x"
+        dir_path="${dir_path%x}"
+        svn propset svn:ignore -F "$REPLY" -- "$dir_path"
+        svn remove "$REPLY"
+    done 9< <( find "$@" -name .cvsignore -print0 )
+}
+
 # Diff
 wdiffc()
 {
