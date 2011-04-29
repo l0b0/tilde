@@ -174,8 +174,10 @@ path_common()
 
 compare_dirs()
 {
-    # Shows which files exist in one directory but not both
-    comm -3 <(cd -- "$1"; find_grouped ".") <(cd -- "$2"; find_grouped ".")
+    # Shows which files and directories exist in one directory but not both
+    comm -3 \
+        <(cd -- "$1"; find . -print0 | sort -z | quote_shell) \
+        <(cd -- "$2"; find . -print0 | sort -z | quote_shell)
 }
 
 count_files()
