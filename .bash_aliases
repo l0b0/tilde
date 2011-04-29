@@ -254,26 +254,6 @@ locale_value()
 
     #echo "$varname" >&2
     printf "${!varname}"
-
-    # Tests:
-    # my_lang=0
-    # unset LANG LC_NAME LC_ALL LANGUAGE
-    # test "$(locale_value)" = '' || echo fail
-    # test "$(locale_value LC_NAME)" = '' || echo fail
-    # test "$(LANG=$my_lang locale_value)" = "$my_lang" || echo fail
-    # test "$(LANG=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
-    # test "$(LC_ALL=$my_lang locale_value)" = "$my_lang" || echo fail
-    # test "$(LC_ALL=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
-    # test "$(LC_NAME=$my_lang locale_value)" = '' || echo fail
-    # test "$(LC_NAME=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
-    # test "$(LANGUAGE=$my_lang locale_value)" = "$my_lang" || echo fail
-    # test "$(LANGUAGE=$my_lang locale_value LC_NAME)" = "$my_lang" || echo fail
-    # test "$(LANG=a LC_ALL=b LC_NAME=c LANGUAGE=d locale_value)" = d || echo fail
-    # test "$(LANG=a LC_ALL=b LC_NAME=c LANGUAGE=d locale_value LC_NAME)" = d || echo fail
-    # test "$(LANG=$my_lang LANGUAGE=a locale_value)" = a || echo fail
-    # test "$(LANG=$my_lang LANGUAGE=a locale_value LC_NAME)" = a || echo fail
-    # test "$(LANG=C LANGUAGE=a locale_value)" = C || echo fail
-    # test "$(LANG=C LANGUAGE=a locale_value LC_NAME)" = C || echo fail
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
