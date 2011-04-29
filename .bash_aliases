@@ -102,6 +102,17 @@ find_date_sorted()
     find "$dir" "$@" -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort | cut -d ' ' -f 3-
 }
 
+quote_shell()
+{
+    # Ensure that the output is escaped so that each line corresponds to a NUL-
+    # separated entry
+    while IFS= read -r -d ''
+    do
+        printf %q "$REPLY"
+        printf '\n'
+    done
+}
+
 find_grouped()
 {
     # Outputs files (not directories) recursively, with an empty line between
