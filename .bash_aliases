@@ -72,6 +72,13 @@ gitar()
     git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
 }
 
+git_send_commits()
+{
+    # Send all commits ahead of origin
+    git format-patch -C -M origin
+    git send-email [0-9][0-9][0-9][0-9]-*.patch
+}
+
 # Find
 find_date_sorted()
 {
