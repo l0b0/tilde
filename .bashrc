@@ -97,7 +97,7 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${PS1}$(highlight_warning "\${debian_chroot:+(\$debian_chroot) }")"
+PS1="${PS1}$(highlight_warning "\${debian_chroot+(\$debian_chroot) }")"
 
 if [ "$USER" == 'root' ]
 then
