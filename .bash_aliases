@@ -189,8 +189,8 @@ compare_dirs()
         fi
     done
     comm -3 \
-        <(cd -- "$1"; find . -print0 | sort -z | quote_shell) \
-        <(cd -- "$2"; find . -print0 | sort -z | quote_shell)
+        <(cd -- "$1"; find . -print0 | sort -z | quote_shell | cut -c 3-) \
+        <(cd -- "$2"; find . -print0 | sort -z | quote_shell | cut -c 3-)
 }
 
 count_files()
