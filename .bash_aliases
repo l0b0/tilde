@@ -175,6 +175,19 @@ path_common()
 compare_dirs()
 {
     # Shows which files and directories exist in one directory but not both
+    if [ $# -ne 2 ]
+    then
+        echo "Usage: compare_dirs dir1 dir2" >&2
+        return 2
+    fi
+    for path in "$@"
+    do
+        if [ ! -d "$path" ]
+        then
+            echo "Not a directory: $path" >&2
+            return 1
+        fi
+    done
     comm -3 \
         <(cd -- "$1"; find . -print0 | sort -z | quote_shell) \
         <(cd -- "$2"; find . -print0 | sort -z | quote_shell)
