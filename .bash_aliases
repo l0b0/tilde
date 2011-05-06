@@ -265,6 +265,33 @@ longest()
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
 
+longer()
+{
+    # Print any lines in $2... which are more characters than $1.
+    if [ $# -lt 2 ]
+    then
+        echo 'Synopsis: longer NUMBER FILE...' >&2
+        return 2
+    fi
+    local -ri length="$1"
+    shift
+
+    local -i line_number
+    for path
+    do
+        line_number=1
+        while IFS= read -r -d $'\n'
+        do
+            if [ ${#REPLY} -gt $length ]
+            then
+                printf %q $path : $line_number :... ${REPLY:${length}}
+                printf '\n'
+            fi
+            let line_number++
+        done < "$path"
+    done
+}
+
 # GNU Make
 make_targets()
 {
