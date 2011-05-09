@@ -23,7 +23,10 @@ alias du='du -h'
 alias df='df -h'
 
 # Update everything
-alias upgrade='sudo sh -c "apt-get update;apt-get dist-upgrade;apt-get autoclean"'
+upgrade()
+{
+    sudo sh -c "apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"
+}
 
 # Play ISO file of DVD
 alias play-iso-dir='mplayer -dvd-device dvd:// -slang en' # dir
