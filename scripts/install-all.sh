@@ -13,7 +13,7 @@ apt-get install jedit vim
 apt-get install colordiff git-completion git-core git-gui gitk meld subversion
 
 # Graphics
-apt-get install gimp hugin inkscape jhead pngcrush graphviz python-pydot
+apt-get install gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush graphviz python-pydot
 
 # Database
 apt-get install sqlite3
