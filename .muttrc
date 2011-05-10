@@ -1,5 +1,8 @@
 # Reference: <http://www.mutt.org/doc/manual/manual-6.html>
 
+# Mailboxes
+set sort_browser=alpha
+
 # Use IMAP instead of POP
 bind index G imap-fetch-mail
 bind pager G imap-fetch-mail
