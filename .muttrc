@@ -3,15 +3,16 @@
 # Use IMAP instead of POP
 bind index G imap-fetch-mail
 bind pager G imap-fetch-mail
+set imap_check_subscribed # Poll subscribed mailboxes for new mail
 
 # Simpler than `sendmail`
 set sendmail="/usr/bin/esmtp"
 
-# LDAP query command <http://wiki.mutt.org/?QueryCommand>
-set query_command = "/usr/local/bin/mutt-ldap.pl '%s'"
+# Headers
 
-# Automatically poll subscribed mailboxes for new mail
-set imap_check_subscribed
+
+## Recipients
+set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
 
 # Settings relevant only to me or this machine
 source ~/.muttrc_local
