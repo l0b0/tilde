@@ -8,5 +8,8 @@ set sendmail="/usr/bin/esmtp"
 # LDAP query command <http://wiki.mutt.org/?QueryCommand>
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'"
 
+# Automatically poll subscribed mailboxes for new mail
+set imap_check_subscribed
+
 # Settings relevant only to me or this machine
 source ~/.muttrc_local
