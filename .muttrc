@@ -22,5 +22,10 @@ set alias_file = ~/.mutt_aliases
 source ~/.mutt_aliases
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
 
+# Body
+
+## Signature
+set signature = "~/.signature"
+
 # Settings relevant only to me or this machine
 source ~/.muttrc_local
