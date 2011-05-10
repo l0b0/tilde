@@ -1,3 +1,5 @@
+# Reference: <http://www.mutt.org/doc/manual/manual-6.html>
+
 # Use IMAP instead of POP
 bind index G imap-fetch-mail
 bind pager G imap-fetch-mail
