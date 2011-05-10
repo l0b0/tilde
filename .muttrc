@@ -10,6 +10,9 @@ set sendmail="/usr/bin/esmtp"
 
 # Headers
 
+## Sender
+set envelope_from = yes
+set use_from = yes
 
 ## Recipients
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
