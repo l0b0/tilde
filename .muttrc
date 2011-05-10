@@ -29,5 +29,8 @@ set copy=yes
 set record="=Sent"
 set sendmail="/usr/bin/esmtp"
 
+# Printing
+set print_command="/usr/bin/enscript"
+
 # Settings relevant only to me or this machine
 source ~/.muttrc_local
