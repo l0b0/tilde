@@ -3,7 +3,7 @@
 # Mailboxes
 set sort_browser=alpha
 
-# Use IMAP instead of POP
+# Use IMAP instead of local mailboxes
 bind index G imap-fetch-mail
 bind pager G imap-fetch-mail
 set imap_check_subscribed # Poll subscribed mailboxes for new mail
