@@ -10,6 +10,7 @@ set imap_check_subscribed # Poll subscribed mailboxes for new mail
 
 # Navigation
 bind index,pager v next-unread-mailbox
+macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
 unset mark_old
 
 # Headers
