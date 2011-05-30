@@ -14,6 +14,12 @@ macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the curre
 unset mark_old
 set delete=yes
 
+unset confirmappend
+folder-hook . 'macro index d "<save-message>=trash<enter>"'
+folder-hook . 'macro pager d "<save-message>=trash<enter>"'
+folder-hook =trash 'macro index d <delete-message>'
+folder-hook =trash 'macro pager d <delete-message>'
+
 # Headers
 
 ## Sender
