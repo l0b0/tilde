@@ -27,6 +27,9 @@ set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?
 
 # Body
 
+## Editing
+set editor = "vim -c 'set spell spelllang=en' -c 'set tw=72' -c 'set filetype=mail'"
+
 ## Signature
 set signature = "~/.signature"
 
