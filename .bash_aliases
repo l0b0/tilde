@@ -25,7 +25,7 @@ alias df='df -h'
 # Update everything
 upgrade()
 {
-    sudo sh -c "apt-get update && apt-get dist-upgrade && apt-get autoremove && apt-get autoclean"
+    sudo sh -c "apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get autoclean"
 }
 
 # Play ISO file of DVD
