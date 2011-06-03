@@ -47,6 +47,7 @@ warning()
     printf '%s\n' "$@" >&2
 
     test -t 1 && tput sgr0 # Reset terminal
+    true
 }
 
 error()
@@ -106,4 +107,5 @@ verbose_echo()
             shift
         done
     fi
+    true
 }
