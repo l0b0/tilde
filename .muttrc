@@ -10,7 +10,7 @@ bind pager G imap-fetch-mail
 set imap_check_subscribed # Poll subscribed mailboxes for new mail
 
 # Navigation
-bind index,pager v next-unread-mailbox
+bind index,pager \Cv next-unread-mailbox
 macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
 unset mark_old
 set delete=yes
