@@ -59,7 +59,7 @@ error()
     messages=( "$@" )
 
     # If the last parameter is a number, it's not part of the messages
-    eval last_parameter="\$$#"
+    last_parameter="${messages[@]: -1}"
     if [[ "$last_parameter" =~ ^[0-9]*$ ]]
     then
         exit_code=$last_parameter
