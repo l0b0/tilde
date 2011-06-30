@@ -1,8 +1,8 @@
 # Reference: <http://www.mutt.org/doc/manual/manual-6.html>
 
 # Mailboxes
-set sort_browser=alpha
-set postponed="=postponed"
+set sort_browser = alpha
+set postponed = =postponed
 
 # Use IMAP instead of local mailboxes
 bind index G imap-fetch-mail
@@ -13,8 +13,9 @@ set imap_check_subscribed # Poll subscribed mailboxes for new mail
 bind index,pager \Cv next-unread-mailbox
 macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
 unset mark_old
-set delete=yes
+set delete = yes
 
+# Delete via trash
 unset confirmappend
 folder-hook . 'macro index d "<save-message>=trash<enter>"'
 folder-hook . 'macro pager d "<save-message>=trash<enter>"'
@@ -38,15 +39,15 @@ set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?
 set editor = "vim -c 'set spell spelllang=en' -c 'set tw=72' -c 'set filetype=mail'"
 
 ## Signature
-set signature = "~/.signature"
+set signature = ~/.signature
 
 # Sending
-set copy=yes
-set record="=sent"
-set sendmail="/usr/bin/esmtp"
+set copy = yes
+set record = "=sent"
+set sendmail = /usr/bin/esmtp
 
 # Printing
-set print_command="/usr/bin/enscript"
+set print_command = /usr/bin/enscript
 
 # Settings relevant only to me or this machine
 source ~/.muttrc_local
