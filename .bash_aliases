@@ -332,6 +332,11 @@ locale_value()
     printf "${!varname}"
 }
 
+schroedinger(){
+    # Succeed or fail randomly
+    return $((RANDOM%2))
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
