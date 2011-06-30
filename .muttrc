@@ -17,10 +17,8 @@ set delete = yes
 
 # Delete via trash
 unset confirmappend
-folder-hook . 'macro index d "<save-message>=trash<enter>"'
-folder-hook . 'macro pager d "<save-message>=trash<enter>"'
-folder-hook =trash 'macro index d <delete-message>'
-folder-hook =trash 'macro pager d <delete-message>'
+folder-hook .         'macro index,pager d "<save-message>=trash<enter>"'
+folder-hook ".*trash" 'macro index,pager d <delete-message>'
 
 # Headers
 
