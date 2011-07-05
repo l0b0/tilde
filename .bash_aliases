@@ -340,6 +340,7 @@ schroedinger()
 
 ltrim()
 {
+    # Left-trim $IFS from stdin as a single line
     # $1: Line separator (default NUL)
     local trimmed
     while IFS= read -r -d "${1-}" -u 9
@@ -368,6 +369,7 @@ ltrim()
 
 rtrim()
 {
+    # Right-trim $IFS from stdin as a single line
     # $1: Line separator (default NUL)
     local previous last
     while IFS= read -r -d "${1-}" -u 9
@@ -398,6 +400,7 @@ rtrim()
 
 trim()
 {
+    # Trim $IFS from stdin as a single line
     ltrim "${1-}" | rtrim "${1-}"
 }
 
