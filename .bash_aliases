@@ -84,8 +84,7 @@ mkgithub()
 gitar()
 {
     # @param $1: Commit-like
-    # @param $2: Name of output file (without extension)
-    git archive --format=tar --prefix="${2}/" "$1" | gzip > "${2}.tar.gz"
+    git archive --format=tar --prefix="${2}/" "$1" | gzip
 }
 
 git_send_commits()
