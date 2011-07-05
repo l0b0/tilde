@@ -98,10 +98,10 @@ git_send_commits()
 find_date_sorted()
 {
     # Ascending, by ISO date
-    local dirx=$(readlink -fn "${1:-.}"; echo x)
-    local dir="${dirx%x}"
-    shift
-    find "$dir" "$@" -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\n' | sort | cut -d ' ' -f 3-
+    while IFS= read -r -d '' -u 9
+    do
+        cut -d ' ' -f 3- <<< "$REPLY"
+    done 9< <(find "$@" -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\0' | sort -z)
 }
 
 quote_shell()
