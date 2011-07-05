@@ -332,7 +332,8 @@ locale_value()
     printf "${!varname}"
 }
 
-schroedinger(){
+schroedinger()
+{
     # Succeed or fail randomly
     return $((RANDOM%2))
 }
