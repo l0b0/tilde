@@ -340,8 +340,9 @@ schroedinger()
 
 ltrim()
 {
+    # $1: Line separator (default NUL)
     local trimmed
-    while IFS= read -r -d '' -u 9
+    while IFS= read -r -d "${1-}" -u 9
     do
         if [ -n "${trimmed+defined}" ]
         then
@@ -349,7 +350,7 @@ ltrim()
         else
             printf %s "${REPLY#"${REPLY%%[!$IFS]*}"}"
         fi
-        printf "\x00"
+        printf "${1-\x00}"
         trimmed=true
     done 9<&0
 
@@ -367,13 +368,14 @@ ltrim()
 
 rtrim()
 {
+    # $1: Line separator (default NUL)
     local previous last
-    while IFS= read -r -d '' -u 9
+    while IFS= read -r -d "${1-}" -u 9
     do
         if [ -n "${previous+defined}" ]
         then
             printf %s "$previous"
-            printf "\x00"
+            printf "${1-\x00}"
         fi
         previous="$REPLY"
     done 9<&0
@@ -385,7 +387,7 @@ rtrim()
         printf %s "$previous"
         if [ -n "${previous+defined}" ]
         then
-            printf "\x00"
+            printf "${1-\x00}"
         fi
     else
         last="$previous"
@@ -396,7 +398,7 @@ rtrim()
 
 trim()
 {
-    ltrim | rtrim
+    ltrim "${1-}" | rtrim "${1-}"
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
