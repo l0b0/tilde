@@ -91,7 +91,7 @@ git_send_commits()
 {
     # Send all commits ahead of origin
     git format-patch -C -M origin
-    git send-email [0-9][0-9][0-9][0-9]-*.patch
+    git send-email --confirm=always [0-9][0-9][0-9][0-9]-*.patch
 }
 
 # Find
