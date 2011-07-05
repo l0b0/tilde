@@ -394,6 +394,11 @@ rtrim()
     printf %s "${last%"${last##*[![:space:]]}"}"
 }
 
+trim()
+{
+    ltrim | rtrim
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
