@@ -398,10 +398,26 @@ rtrim()
     printf %s "${last%"${last##*[!$IFS]}"}"
 }
 
-trim()
+trim_stdin()
 {
     # Trim $IFS from stdin as a single line
     ltrim "${1-}" | rtrim "${1-}"
+}
+
+trim()
+{
+    # Trim $IFS from individual lines
+    # $1: Line separator (default NUL)
+    while IFS= read -r -d "${1-}" -u 9
+    do
+        trim_stdin <<< "$REPLY"
+        printf "${1-\x00}"
+    done 9<&0
+
+    if [[ $REPLY ]]
+    then
+        trim_stdin <<< "$REPLY"
+    fi
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
