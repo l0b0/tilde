@@ -338,6 +338,62 @@ schroedinger()
     return $((RANDOM%2))
 }
 
+ltrim()
+{
+    local trimmed
+    while IFS= read -r -d '' -u 9
+    do
+        if [ -n "${trimmed+defined}" ]
+        then
+            printf %s "$REPLY"
+        else
+            printf %s "${REPLY#"${REPLY%%[![:space:]]*}"}"
+        fi
+        printf "\x00"
+        trimmed=true
+    done 9<&0
+
+    if [[ $REPLY ]]
+    then
+        # No delimiter at last line
+        if [ -n "${trimmed+defined}" ]
+        then
+            printf %s "$REPLY"
+        else
+            printf %s "${REPLY#"${REPLY%%[![:space:]]*}"}"
+        fi
+    fi
+}
+
+rtrim()
+{
+    local previous last
+    while IFS= read -r -d '' -u 9
+    do
+        if [ -n "${previous+defined}" ]
+        then
+            printf %s "$previous"
+            printf "\x00"
+        fi
+        previous="$REPLY"
+    done 9<&0
+
+    if [[ $REPLY ]]
+    then
+        # No delimiter at last line
+        last="$REPLY"
+        printf %s "$previous"
+        if [ -n "${previous+defined}" ]
+        then
+            printf "\x00"
+        fi
+    else
+        last="$previous"
+    fi
+
+    printf %s "${last%"${last##*[![:space:]]}"}"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
