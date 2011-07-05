@@ -347,7 +347,7 @@ ltrim()
         then
             printf %s "$REPLY"
         else
-            printf %s "${REPLY#"${REPLY%%[![:space:]]*}"}"
+            printf %s "${REPLY#"${REPLY%%[!$IFS]*}"}"
         fi
         printf "\x00"
         trimmed=true
@@ -360,7 +360,7 @@ ltrim()
         then
             printf %s "$REPLY"
         else
-            printf %s "${REPLY#"${REPLY%%[![:space:]]*}"}"
+            printf %s "${REPLY#"${REPLY%%[!$IFS]*}"}"
         fi
     fi
 }
@@ -391,7 +391,7 @@ rtrim()
         last="$previous"
     fi
 
-    printf %s "${last%"${last##*[![:space:]]}"}"
+    printf %s "${last%"${last##*[!$IFS]}"}"
 }
 
 trim()
