@@ -38,47 +38,27 @@ then
     source ~/dev/tilde/scripts/__svn_ps1.sh
 fi
 
-highlight()
-{
-    if [ -x /usr/bin/tput ]
-    then
-        tput bold
-        tput setaf $1
-    fi
-    shift
-    printf -- "$@"
-    if [ -x /usr/bin/tput ]
-    then
-        tput sgr0
-    fi
+color_enabled() {
+    test -x /usr/bin/tput
 }
 
-highlight_error()
-{
-    highlight 1 "$@"
-}
+BOLD_FORMAT=$(color_enabled && tput bold)
+ERROR_FORMAT=$(color_enabled && tput setaf 1)
+WARNING_FORMAT=$(color_enabled && tput setaf 3)
+INFO_FORMAT=$(color_enabled && tput setaf 4)
+RESET_FORMAT=$(color_enabled && tput sgr0)
 
-highlight_warning()
-{
-    highlight 3 "$@"
-}
-
-highlight_info()
-{
-    highlight 4 "$@"
-}
-
-highlight_exit_code()
+exit_code()
 {
     exit_code=$?
     if [ $exit_code -ne 0 ]
     then
-        highlight_error "$exit_code "
+        printf "$exit_code "
     fi
 }
 
 # Exit code
-PS1='$(highlight_exit_code)'
+PS1='\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]$(exit_code)\[$RESET_FORMAT\]'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
@@ -97,26 +77,26 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${PS1}$(highlight_warning "\${debian_chroot+(\$debian_chroot) }")"
+PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]${debian_chroot+($debian_chroot) }\[$RESET_FORMAT\]'
 
 if [ "$USER" == 'root' ]
 then
-    PS1="${PS1}$(highlight_error '\u')"
+    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]\u\[$RESET_FORMAT\]'
 elif [ -n "${SUDO_USER:-}" ]
 then
-    PS1="${PS1}$(highlight_warning '\u')"
+    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\u\[$RESET_FORMAT\]'
 else
-    PS1="${PS1}\u"
+    PS1="${PS1}"'\u'
 fi
 PS1="${PS1}@"
 
 if [ -n "${SSH_CONNECTION:-}" ]
 then
-    PS1="${PS1}$(highlight_warning '\h')"
+    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\h\[$RESET_FORMAT\]'
 else
-    PS1="${PS1}\h"
+    PS1="${PS1}"'\h'
 fi
-PS1="${PS1}:$(highlight_info '\w')"
+PS1="${PS1}:"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
@@ -130,7 +110,7 @@ then
     # Warn if you're not in the top directory of the checkout
     ps1_command="if [ -d ../.svn ]
 then
-    highlight_warning \"\$(__svn_ps1 ' (%s)')\"
+    __svn_ps1 ' (\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]%s\[$RESET_FORMAT\])'
 else
     __svn_ps1 ' (%s)'
 fi
