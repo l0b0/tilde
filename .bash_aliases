@@ -419,6 +419,24 @@ trim()
     fi
 }
 
+trs()
+{
+    # Translate strings
+    # $1: Original string
+    # $2, $4, ...: Search strings
+    # $3, $5, ...: Replacement strings
+
+    local string=$1
+    shift
+
+    while [ $# -gt 0 ]
+    do
+        string="$(sed -e "s/$1/$2/g" <<< "$string")"
+        shift 2
+    done
+    printf "$string"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
