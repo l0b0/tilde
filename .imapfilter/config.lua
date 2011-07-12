@@ -16,4 +16,8 @@ recipient_mail = function (mailbox, address)
            mailbox:contain_cc(address)
 end
 
+subject_mail = function (mailbox, subject)
+    return mailbox:contain_subject(subject)
+end
+
 dofile(os.getenv("HOME") .. "/.imapfilter/config_local.lua")
