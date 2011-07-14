@@ -437,6 +437,43 @@ trs()
     printf "$string"
 }
 
+zsed()
+{
+    # Replace within tarballs
+    # $1: Replacement string
+    # $2...: tar gzip files
+
+    if [[ "${2+defined}" != defined ]]
+    then
+        return 2
+    fi
+
+    local replacement="$1"
+    shift
+    local -i exit_code
+
+    for path
+    do
+        if [[ ! -r "${path}" ]]
+        then
+            exit_code=2
+            continue
+        fi
+        full_pathx="$(readlink -fn -- "$path"; echo x)"
+        full_path="${full_pathx%x}"
+        tmp="$(mktemp -d)"
+        cd "$tmp"
+        tar -xzf "$full_path"
+        while IFS= read -r -d '' -u 9
+        do
+            sed -i -e "$replacement" "$REPLY"
+        done 9< <( find . -type f -print0 )
+        tar -czf "$full_path" .
+        cd - >/dev/null
+    done
+    return ${exit_code-0}
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
