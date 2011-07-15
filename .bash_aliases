@@ -394,7 +394,8 @@ rtrim()
         last="$previous"
     fi
 
-    printf %s "${last%"${last##*[!$IFS]}"}"
+    right_whitespace="${last##*[!$IFS]}"
+    printf %s "${last%$right_whitespace}"
 }
 
 trim_stdin()
