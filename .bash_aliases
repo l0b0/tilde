@@ -128,10 +128,10 @@ find_grouped()
             return 1
         fi
 
-        while IFS= read -rd $'\0' dir
+        while IFS= read -rd '' dir
         do
             files_found=0
-            while IFS= read -rd $'\0' path
+            while IFS= read -rd '' path
             do
                 files_found=1
                 ls -- "$path"
