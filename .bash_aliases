@@ -119,7 +119,7 @@ find_grouped()
 {
     # Outputs files (not directories) recursively, with an empty line between
     # directories.
-    while [ -n "${1:-}" ]
+    while [ -n "${1-}" ]
     do
         target="${1%%/}/"
         if [ ! -d "$target" ]
@@ -304,8 +304,8 @@ make_targets()
 {
     targets="$(make --print-data-base --question | grep '^[^.%][-A-Za-z0-9_]*:' | cut -d : -f 1 | sort -u)"
     longest_line="$(longest <<< "$targets")"
-    columns=$(bc <<< "${COLUMNS:-80} / (${#longest_line} + 1)")
-    pr --omit-pagination --width=${COLUMNS:-80} --columns=$columns <<< "$targets"
+    columns=$(bc <<< "${COLUMNS-80} / (${#longest_line} + 1)")
+    pr --omit-pagination --width=${COLUMNS-80} --columns=$columns <<< "$targets"
 }
 
 locale_value()
@@ -317,7 +317,7 @@ locale_value()
 
     local varname=LANG # Fallback
 
-    if [[ "${1:-}" =~ ^LC_[A-Z]+$ ]] && declare -p "${1:-}" >/dev/null 2>&1
+    if [[ "${1-}" =~ ^LC_[A-Z]+$ ]] && declare -p "${1-}" >/dev/null 2>&1
     then
         varname="$1"
     fi
@@ -327,7 +327,7 @@ locale_value()
         varname=LC_ALL
     fi
 
-    if [ -n "${LANGUAGE+defined}" -a "${LANG:-}" != C ]
+    if [ -n "${LANGUAGE+defined}" -a "${LANG-}" != C ]
     then
         varname=LANGUAGE
     fi
