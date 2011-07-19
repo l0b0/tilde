@@ -198,10 +198,10 @@ compare_dirs()
 count_files()
 {
     local -i file_count=0
-    while IFS= read -r -d '' -u 9
+    while IFS= read -r -d ''
     do
-        let file_count=$file_count+1
-    done 9< <( find "$@" -type f -print0 )
+        let file_count++
+    done < <( find "$@" -type f -print0 )
     printf %d $file_count
 }
 
