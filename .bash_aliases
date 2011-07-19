@@ -18,10 +18,6 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
-# Human readable disk usage
-alias du='du -h'
-alias df='df -h'
-
 # Update everything
 upgrade()
 {
