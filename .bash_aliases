@@ -182,7 +182,7 @@ compare_dirs()
         echo "Usage: compare_dirs dir1 dir2" >&2
         return 2
     fi
-    for path in "$@"
+    for path
     do
         if [ ! -d "$path" ]
         then
