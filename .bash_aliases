@@ -32,7 +32,7 @@ alias fgit='$HOME/dev/fgit/fgit.sh'
 # Subversion
 svndiff()
 {
-    svn diff "$@" | colordiff
+    svn diff ${1+"$@"} | colordiff
 }
 
 cvsignore2svn()
@@ -45,13 +45,13 @@ cvsignore2svn()
         dir_path="${dir_path%x}"
         svn propset svn:ignore -F "$REPLY" -- "$dir_path"
         svn remove "$REPLY"
-    done 9< <( find "$@" -name .cvsignore -print0 )
+    done 9< <( find ${1+"$@"} -name .cvsignore -print0 )
 }
 
 # Diff
 wdiffc()
 {
-    wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" "$@"
+    wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" ${1+"$@"}
 }
 
 # Git
@@ -97,7 +97,7 @@ find_date_sorted()
     while IFS= read -r -d '' -u 9
     do
         cut -d ' ' -f 3- <<< "$REPLY"
-    done 9< <(find "$@" -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\0' | sort -z)
+    done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\0' | sort -z)
 }
 
 quote_shell()
@@ -149,7 +149,7 @@ path_common()
     for param
     do
         param=$(printf %s. "$1" | tr -s "/")
-        set -- "$@" "${param%.}"
+        set -- ${1+"$@"} "${param%.}"
         shift
     done
 
@@ -197,7 +197,7 @@ count_files()
     while IFS= read -r -d ''
     do
         let file_count++
-    done < <( find "$@" -type f -print0 )
+    done < <( find ${1+"$@"} -type f -print0 )
     printf %d $file_count
 }
 
