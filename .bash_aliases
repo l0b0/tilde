@@ -51,6 +51,10 @@ cvsignore2svn()
 # Diff
 wdiffc()
 {
+    if [ -z "${2-}" ]
+    then
+        return 2
+    fi
     wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" ${1+"$@"}
 }
 
@@ -145,7 +149,12 @@ find_grouped()
 
 path_common()
 {
-    # Rotate parameters and clean up
+    if [ -z "${2-}" ]
+    then
+        return 2
+    fi
+
+    # Remove repeated slashes
     for param
     do
         param=$(printf %s. "$1" | tr -s "/")
