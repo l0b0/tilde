@@ -137,15 +137,17 @@ test_separator_space_tab_both() {
 }
 
 test_text_file() {
-    assertEquals ltrim "$(printf x; cat ~/.bash_aliases; printf x)" "$((printf x; cat ~/.bash_aliases; printf x) | ltrim)"
-    assertEquals rtrim "$(printf x; cat ~/.bash_aliases; printf x)" "$((printf x; cat ~/.bash_aliases; printf x) | rtrim)"
-    assertEquals trim  "$(printf x; cat ~/.bash_aliases; printf x)" "$((printf x; cat ~/.bash_aliases; printf x) | trim)"
+    file="$HOME/.bash_aliases"
+    assertEquals ltrim "$(printf x; cat "$file"; printf x)" "$((printf x; cat "$file"; printf x) | ltrim)"
+    assertEquals rtrim "$(printf x; cat "$file"; printf x)" "$((printf x; cat "$file"; printf x) | rtrim)"
+    assertEquals trim  "$(printf x; cat "$file"; printf x)" "$((printf x; cat "$file"; printf x) | trim)"
 }
 
 test_binary_file() {
-    assertEquals ltrim "$(printf x; cat $(which bash); printf x)" "$((printf x; cat $(which bash); printf x) | ltrim)"
-    assertEquals rtrim "$(printf x; cat $(which bash); printf x)" "$((printf x; cat $(which bash); printf x) | rtrim)"
-    assertEquals trim  "$(printf x; cat $(which bash); printf x)" "$((printf x; cat $(which bash); printf x) | trim)"
+    file="$(which bash)"
+    assertTrue ltrim '$(cmp --quiet <(printf x; cat "'"$file"'"; printf x) <((printf x; cat "'"$file"'"; printf x) | ltrim))'
+    assertTrue rtrim '$(cmp --quiet <(printf x; cat "'"$file"'"; printf x) <((printf x; cat "'"$file"'"; printf x) | rtrim))'
+    assertTrue trim  '$(cmp --quiet <(printf x; cat "'"$file"'"; printf x) <((printf x; cat "'"$file"'"; printf x) | trim))'
 }
 
 # load and run shUnit2
