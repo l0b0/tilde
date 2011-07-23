@@ -31,7 +31,7 @@ apt-get install myspell-de-ch myspell-de-de myspell-en-us myspell-fr-fr myspell-
 apt-get install pdftk xournal
 
 # Entertainment
-apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly vlc
+apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly vlc flashplugin-nonfree
 
 # Aptitude cleanup
 apt-get autoclean
