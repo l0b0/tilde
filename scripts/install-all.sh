@@ -19,7 +19,7 @@ apt-get install gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush g
 apt-get install sqlite3
 
 # Python
-apt-get install ipython libxml2-dev libxslt-dev pep8 pychecker pylint python-dev python-epydoc python-lxml python-matplotlib python-setuptools
+apt-get install ipython libxml2-dev libxslt-dev pep8 pychecker pyflakes pylint python2.6-dev python2.6-doc python-dev python-doc python-epydoc python-lxml python-matplotlib python-setuptools
 
 # LISP
 apt-get install mit-scheme mit-scheme-dbg
