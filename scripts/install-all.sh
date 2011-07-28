@@ -7,7 +7,7 @@ apt-get update
 apt-get install default-jre gnokii-cli keepassx markdown openssh-server thunderbird unrar
 
 # Editors
-apt-get install jedit vim
+apt-get install gedit gedit-developer-plugins jedit vim
 
 # Version control
 apt-get install colordiff git-completion git-core git-gui gitk meld subversion
