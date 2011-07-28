@@ -17,7 +17,7 @@ apt-get install colordiff git-completion git-core git-gui gitk meld subversion
 apt-get install gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush graphviz python-pydot
 
 # Database
-apt-get install sqlite3
+apt-get install sqlite3 sqlite3-doc
 
 # Python
 apt-get install ipython libxml2-dev libxslt-dev pep8 pychecker pyflakes pylint python2.6-dev python2.6-doc python-dev python-doc python-epydoc python-lxml python-matplotlib python-setuptools
@@ -35,7 +35,7 @@ apt-get install myspell-de-ch myspell-de-de myspell-en-us myspell-fr-fr myspell-
 apt-get install pdftk xournal
 
 # Entertainment
-apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly vlc flashplugin-nonfree
+apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly mplayer vlc flashplugin-nonfree
 
 # Games
 apt-get install beneath-a-steel-sky freeciv-client-sdl freeciv-sound-standard neverball nexuiz openarena sauerbraten scorched3d teeworlds wormux xmoto
