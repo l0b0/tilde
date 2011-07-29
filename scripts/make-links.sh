@@ -175,6 +175,11 @@ do
         continue
     fi
 
+    if [[ -L "$source_path" && ! "${action-}" =~ ^[Ss]$ ]]
+    then
+        action=r
+    fi
+
     # Have to either skip or replace
     while [[ ! "${action-}" =~ ^[SsRr]$ ]]
     do
