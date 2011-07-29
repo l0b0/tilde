@@ -161,26 +161,30 @@ do
         unset action
     fi
 
-    # File exists
     source_path="${source_dir}/${target_file}"
-    if [[ -w "$source_path" && ! -L "$source_path" ]]
+
+    # Can we create the link?
+    if [[ ! -w "$source_path" ]]
     then
-        # Make sure we skip or replace in the end
-        while [[ ! "${action-}" =~ ^[SsRr]$ ]]
-        do
-            echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
-            read -n 1 -p $'[d]iff, [s]kip, [S]kip all, [r]eplace, [R]eplace all: \n' action
+        warning "Path is not writeable; skipping: $source_path"
+        continue
+    fi
 
-            if [[ "${action-}" =~ ^[Dd]$ ]]
-            then
-                "${diff_exec[@]}" -- "$target_path" "$source_path"
-            fi
-        done
+    # Have to either skip or replace
+    while [[ ! "${action-}" =~ ^[SsRr]$ ]]
+    do
+        echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
+        read -n 1 -p $'[d]iff, [s]kip, [S]kip all, [r]eplace, [R]eplace all: \n' action
 
-        if [[ "${action-}" =~ ^[Ss]$ ]]
+        if [[ "${action-}" =~ ^[Dd]$ ]]
         then
-            continue
+            "${diff_exec[@]}" -- "$target_path" "$source_path"
         fi
+    done
+
+    if [[ "${action-}" =~ ^[Ss]$ ]]
+    then
+        continue
     fi
 
     if [[ "${action-}" =~ ^[Rr]$ ]]
