@@ -19,10 +19,13 @@
 #               exclude regular expressions; see $default_excludes
 #
 #        -f, --force
-#               create symlinks without asking for confirmation
+#               Create symlinks without asking for confirmation, overwriting any
+#               existing files.
 #
 #        -s, --skip-existing
-#               skips existing files without prompting; overrides --force
+#               Skip existing files without asking for confirmation. If this and
+#               --force have been specified, the last occurrence takes
+#               precedence.
 #
 #        -h, --help
 #               display this information and quit
@@ -87,11 +90,11 @@ do
             shift 2
             ;;
         -f|--force)
-            force='--force'
+            action='R'
             shift
             ;;
         -s|--skip-existing)
-            skip='--skip-existing'
+            action='S'
             shift
             ;;
         -h|--help)
@@ -152,12 +155,10 @@ do
         fi
     done
 
-    unset do_replace
-    do_replace="${force:+r}" # Always replace
-
-    if [ -n "${skip:-}" ]
+    # Ask again if it has not been forced
+    if [[ ! "${action-}" =~ ^[SR]$ ]]
     then
-        do_replace=s # Always skip
+        unset action
     fi
 
     # File exists
@@ -165,26 +166,25 @@ do
     if [[ -w "$source_path" && ! -L "$source_path" ]]
     then
         # Make sure we skip or replace in the end
-        while [[ ! "$do_replace" =~ ^[SsRr]$ ]]
+        while [[ ! "${action-}" =~ ^[SsRr]$ ]]
         do
             echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
-            read -n 1 -p '[S]kip, [D]iff, [R]eplace: ' do_replace
-            echo
+            read -n 1 -p $'[d]iff, [s]kip, [S]kip all, [r]eplace, [R]eplace all: \n' action
 
-            if [[ "$do_replace" =~ ^[Dd]$ ]]
+            if [[ "${action-}" =~ ^[Dd]$ ]]
             then
                 $diff_exec -- "$target_path" "$source_path" || exit_code=$?
                 [ $exit_code -le 1 ] || error "$diff_exec failed"
             fi
         done
 
-        if [[ "$do_replace" =~ ^[Ss]$ ]]
+        if [[ "${action-}" =~ ^[Ss]$ ]]
         then
             continue
         fi
     fi
 
-    if [ "$do_replace" == 'r' ]
+    if [[ "${action-}" =~ ^[Rr]$ ]]
     then
         rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
     fi
