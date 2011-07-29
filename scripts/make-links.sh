@@ -178,7 +178,7 @@ do
 
         if [[ "${action-}" =~ ^[Dd]$ ]]
         then
-            "${diff_exec[@]}" -- "$target_path" "$source_path"
+            "${diff_exec[@]}" -- "$target_path" "$source_path" || true
         fi
     done
 
