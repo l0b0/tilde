@@ -12,8 +12,8 @@
 #        directory, the user is given options to continue.
 #
 #        -d, --diff
-#               executable to use instead of diff to compare existing files to
-#               targets
+#               Command to use instead of diff to compare existing files to
+#               targets.
 #
 #        -e, --exclude
 #               exclude regular expressions; see $default_excludes
@@ -59,7 +59,7 @@ set -o nounset
 set -o noclobber
 
 # Defaults
-default_diff='diff -s'
+default_diff=(diff -s)
 default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
 
 directory="$(dirname -- "$(readlink -fn -- "$0")")"
@@ -81,7 +81,7 @@ while true
 do
     case $1 in
         -d|--diff)
-            diff_exec="$2"
+            diff_exec=(${2-})
             shift 2
             ;;
         -e|--exclude)
@@ -131,7 +131,7 @@ then
 fi
 
 # Set defaults
-diff_exec="${diff_exec:-$default_diff}"
+diff_exec=(${diff_exec:-$default_diff})
 if [ -z "${excludes:-}" ]
 then
     excludes=( "${default_excludes[@]}" )
@@ -173,7 +173,7 @@ do
 
             if [[ "${action-}" =~ ^[Dd]$ ]]
             then
-                $diff_exec -- "$target_path" "$source_path" || exit_code=$?
+                "${diff_exec[@]}" -- "$target_path" "$source_path"
             fi
         done
 
