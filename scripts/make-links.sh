@@ -76,6 +76,7 @@ then
 fi
 
 eval set -- "$params"
+unset params
 
 while true
 do
