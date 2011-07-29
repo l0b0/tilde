@@ -184,6 +184,7 @@ do
 
     if [[ "${action-}" =~ ^[Ss]$ ]]
     then
+        verbose_echo "Skipping $source_path"
         continue
     fi
 
