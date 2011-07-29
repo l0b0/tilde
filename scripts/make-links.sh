@@ -62,7 +62,7 @@ set -o noclobber
 default_diff=(diff -s)
 default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
 
-directory="$(dirname -- "$(readlink -fn -- "$0")")"
+directory="$(dirname -- "$0")"
 
 . "$directory/functions.sh"
 
