@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # NAME
-#        make-links.sh - Create symlinks
+#        make-links.sh - Create symbolic links
 #
 # SYNOPSIS
 #        make-links.sh [OPTION]... TARGETS DIRECTORY
@@ -16,7 +16,7 @@
 #               targets.
 #
 #        -e, --exclude
-#               exclude regular expressions; see $default_excludes
+#               Exclude regular expressions; see default_excludes variable.
 #
 #        -f, --force
 #               Create symlinks without asking for confirmation, overwriting any
@@ -28,10 +28,10 @@
 #               precedence.
 #
 #        -h, --help
-#               display this information and quit
+#               Display this information and quit.
 #
 #        -v, --verbose
-#               verbose output
+#               Verbose output.
 #
 # EXAMPLES
 #        make-links.sh ~/settings/* ~
