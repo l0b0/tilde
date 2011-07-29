@@ -174,7 +174,6 @@ do
             if [[ "${action-}" =~ ^[Dd]$ ]]
             then
                 $diff_exec -- "$target_path" "$source_path" || exit_code=$?
-                [ $exit_code -le 1 ] || error "$diff_exec failed"
             fi
         done
 
@@ -186,8 +185,8 @@ do
 
     if [[ "${action-}" =~ ^[Rr]$ ]]
     then
-        rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
+        rm ${verbose-} --recursive -- "$source_path"
     fi
 
-    ln ${verbose:-} --force --symbolic "$target_path" "$source_dir" || error "ln failed" $?
+    ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
 done
