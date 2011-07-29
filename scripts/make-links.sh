@@ -163,6 +163,11 @@ do
 
     source_path="${source_dir}/${target_file}"
 
+    if [[ ! -e "$source_path" ]]
+    then
+        ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
+    fi
+
     # Can we create the link?
     if [[ ! -w "$source_path" ]]
     then
