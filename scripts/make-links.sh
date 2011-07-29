@@ -54,20 +54,19 @@
 #
 ################################################################################
 
-set -o errexit
-set -o nounset
-set -o noclobber
+set -o errexit -o noclobber -o nounset -o pipefail
 
 # Defaults
 default_diff=(diff -s)
-default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
+default_excludes=('\.' '\.\.' '\.git' '\.svn')
 
 directory="$(dirname -- "$0")"
 
 . "$directory/functions.sh"
 
 # Process parameters
-params="$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
+params="$(getopt -o d:e:fshv \
+    -l diff:,exclude:,force,skip-existing,help,verbose \
     --name "$cmdname" -- "$@")"
 
 if [ $? -ne 0 ]
@@ -87,7 +86,7 @@ do
             ;;
         -e|--exclude)
             # Will override $default_excludes
-            excludes[${#excludes[*]}]="$2"
+            excludes+=("${2-}")
             shift 2
             ;;
         -f|--force)
@@ -133,7 +132,7 @@ fi
 
 # Set defaults
 diff_exec=(${diff_exec:-$default_diff})
-if [ -z "${excludes:-}" ]
+if [ -z "${excludes-}" ]
 then
     excludes=( "${default_excludes[@]}" )
 fi
