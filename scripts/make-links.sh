@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # NAME
-#        make-links.sh - Create symlinks
+#        make-links.sh - Create symbolic links
 #
 # SYNOPSIS
 #        make-links.sh [OPTION]... TARGETS DIRECTORY
@@ -12,23 +12,26 @@
 #        directory, the user is given options to continue.
 #
 #        -d, --diff
-#               executable to use instead of diff to compare existing files to
-#               targets
+#               Command to use instead of diff to compare existing files to
+#               targets.
 #
 #        -e, --exclude
-#               exclude regular expressions; see $default_excludes
+#               Exclude regular expressions; see default_excludes variable.
 #
 #        -f, --force
-#               create symlinks without asking for confirmation
+#               Create symlinks without asking for confirmation, overwriting any
+#               existing files.
 #
 #        -s, --skip-existing
-#               skips existing files without prompting; overrides --force
+#               Skip existing files without asking for confirmation. If this and
+#               --force have been specified, the last occurrence takes
+#               precedence.
 #
 #        -h, --help
-#               display this information and quit
+#               Display this information and quit.
 #
 #        -v, --verbose
-#               verbose output
+#               Verbose output.
 #
 # EXAMPLES
 #        make-links.sh ~/settings/* ~
@@ -51,20 +54,19 @@
 #
 ################################################################################
 
-set -o errexit
-set -o nounset
-set -o noclobber
+set -o errexit -o noclobber -o nounset -o pipefail
 
 # Defaults
-default_diff='diff -s'
-default_excludes=( '\.' '\.\.' '\.git' '\.svn' )
+default_diff=(diff -s)
+default_excludes=('\.' '\.\.' '\.git' '\.svn')
 
-directory="$(dirname -- "$(readlink -fn -- "$0")")"
+directory="$(dirname -- "$0")"
 
 . "$directory/functions.sh"
 
 # Process parameters
-params="$(getopt -o d:e:fshv -l diff:,exclude:,force,skip-existing,help,verbose \
+params="$(getopt -o d:e:fshv \
+    -l diff:,exclude:,force,skip-existing,help,verbose \
     --name "$cmdname" -- "$@")"
 
 if [ $? -ne 0 ]
@@ -73,25 +75,26 @@ then
 fi
 
 eval set -- "$params"
+unset params
 
 while true
 do
     case $1 in
         -d|--diff)
-            diff_exec="$2"
+            diff_exec=(${2-})
             shift 2
             ;;
         -e|--exclude)
             # Will override $default_excludes
-            excludes[${#excludes[*]}]="$2"
+            excludes+=("${2-}")
             shift 2
             ;;
         -f|--force)
-            force='--force'
+            action='R'
             shift
             ;;
         -s|--skip-existing)
-            skip='--skip-existing'
+            action='S'
             shift
             ;;
         -h|--help)
@@ -128,8 +131,8 @@ then
 fi
 
 # Set defaults
-diff_exec="${diff_exec:-$default_diff}"
-if [ -z "${excludes:-}" ]
+diff_exec=(${diff_exec:-$default_diff})
+if [ -z "${excludes-}" ]
 then
     excludes=( "${default_excludes[@]}" )
 fi
@@ -152,42 +155,53 @@ do
         fi
     done
 
-    unset do_replace
-    do_replace="${force:+r}" # Always replace
-
-    if [ -n "${skip:-}" ]
+    # Ask again if it has not been forced
+    if [[ ! "${action-}" =~ ^[SR]$ ]]
     then
-        do_replace=s # Always skip
+        unset action
     fi
 
-    # File exists
     source_path="${source_dir}/${target_file}"
-    if [[ -w "$source_path" && ! -L "$source_path" ]]
+
+    if [[ ! -e "$source_path" ]]
     then
-        # Make sure we skip or replace in the end
-        while [[ ! "$do_replace" =~ ^[SsRr]$ ]]
-        do
-            echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
-            read -n 1 -p '[S]kip, [D]iff, [R]eplace: ' do_replace
-            echo
+        ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
+    fi
 
-            if [[ "$do_replace" =~ ^[Dd]$ ]]
-            then
-                $diff_exec -- "$target_path" "$source_path" || exit_code=$?
-                [ $exit_code -le 1 ] || error "$diff_exec failed"
-            fi
-        done
+    # Can we create the link?
+    if [[ ! -w "$source_path" ]]
+    then
+        warning "Path is not writeable; skipping: $source_path"
+        continue
+    fi
 
-        if [[ "$do_replace" =~ ^[Ss]$ ]]
+    if [[ -L "$source_path" && ! "${action-}" =~ ^[Ss]$ ]]
+    then
+        action=r
+    fi
+
+    # Have to either skip or replace
+    while [[ ! "${action-}" =~ ^[SsRr]$ ]]
+    do
+        echo "${source_path} exists and is a $(stat -c %F -- "${source_path}"). What do you want to do?"
+        read -n 1 -p $'[d]iff, [s]kip, [S]kip all, [r]eplace, [R]eplace all: \n' action
+
+        if [[ "${action-}" =~ ^[Dd]$ ]]
         then
-            continue
+            "${diff_exec[@]}" -- "$target_path" "$source_path" || true
         fi
-    fi
+    done
 
-    if [ "$do_replace" == 'r' ]
+    if [[ "${action-}" =~ ^[Ss]$ ]]
     then
-        rm ${verbose:-} --recursive -- "$source_path" || error "rm failed" $?
+        verbose_echo "Skipping $source_path"
+        continue
     fi
 
-    ln ${verbose:-} --force --symbolic "$target_path" "$source_dir" || error "ln failed" $?
+    if [[ "${action-}" =~ ^[Rr]$ ]]
+    then
+        rm ${verbose-} --recursive -- "$source_path"
+    fi
+
+    ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
 done
