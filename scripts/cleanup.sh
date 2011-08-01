@@ -26,14 +26,10 @@
 #
 ################################################################################
 
-set -o errexit
-set -o nounset
+set -o errexit -o nounset -o pipefail
 shopt -s globstar
 
-self_x="$(readlink -fn -- "$0"; echo x)"
-self="${self_x%x}"
-directory="$(dirname -- "$self")"
-base="$(basename -- "$0")"
+directory="$(dirname -- "$0")"
 PATH='/usr/bin:/bin'
 
 . "$directory/functions.sh"
