@@ -4,6 +4,9 @@
 
 apt-get update
 
+# Remove junk
+apt-get remove ubuntuone-client
+
 # Misc
 apt-get install default-jre gnokii-cli keepassx markdown openssh-server thunderbird unrar
 
