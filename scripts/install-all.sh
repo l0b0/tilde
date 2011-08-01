@@ -38,7 +38,7 @@ apt-get install pdftk xournal
 apt-get install comix gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly mplayer vlc flashplugin-nonfree
 
 # Games
-apt-get install beneath-a-steel-sky freeciv-client-sdl freeciv-sound-standard neverball nexuiz openarena sauerbraten scorched3d teeworlds wormux xmoto
+apt-get install beneath-a-steel-sky dosbox freeciv-client-sdl freeciv-sound-standard neverball nexuiz openarena sauerbraten scorched3d teeworlds wormux xmoto
 
 # Aptitude cleanup
 apt-get autoclean
