@@ -93,17 +93,17 @@ verbose_echo()
 {
     # @param $1: Optionally '-n' for echo to output without newline
     # @param $(1|2)...: Messages
-    if [ "$verbose" ]
+    if [ "${verbose-}" ]
     then
-        if [ "$1" = "-n" ]
+        if [ "${1-}" = "-n" ]
         then
             $newline='-n'
             shift
         fi
 
-        while [ -n "${1:-}" ]
+        while [ "${1+defined}" = defined ]
         do
-            echo -e ${newline:-} "$1" >&2
+            echo -e ${newline-} "$1" >&2
             shift
         done
     fi
