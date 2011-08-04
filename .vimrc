@@ -44,18 +44,7 @@ autocmd FileType make set tabstop=8|set shiftwidth=8|set noexpandtab
 autocmd BufRead,BufNewFile pkginfo set tabstop=8|set shiftwidth=8|set noexpandtab
 nmap <silent> ]] :let &tabstop += 1 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0 <CR> :echo 'tabstop =' &tabstop <CR>
-nmap <S-t> :call InventTab()<CR>
-
-function InventTab()
-    set expandtab!
-    if &expandtab
-        retab
-        echo 'spaces'
-    else
-        retab!
-        echo 'tabs'
-    endif
-endfunction
+nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
 
 " Unicode
 set encoding=utf-8
