@@ -22,6 +22,15 @@ apt-get install gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush g
 # Desktop recording
 apt-get install istanbul recordmydesktop xvidcap
 
+# Virtualization
+apt-get install virtualbox-ose
+if egrep '(vmx|svm)' /proc/cpuinfo
+then
+    apt-get install kvm
+else
+    echo "Your machine doesn't support hardware virtualization" >&2
+fi
+
 # Database
 apt-get install sqlite3 sqlite3-doc
 
