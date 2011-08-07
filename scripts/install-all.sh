@@ -19,6 +19,9 @@ apt-get install colordiff git-completion git-core git-gui gitk meld qgit subvers
 # Graphics
 apt-get install gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush graphviz python-pydot
 
+# Desktop recording
+apt-get install istanbul recordmydesktop xvidcap
+
 # Database
 apt-get install sqlite3 sqlite3-doc
 
