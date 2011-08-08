@@ -62,5 +62,10 @@ apt-get autoclean
 update-alternatives --install /usr/bin/gnome-text-editor gnome-text-editor "$HOME/.jedit/shortcut.sh" 100
 update-alternatives --set editor /usr/bin/vim.basic
 
+if [ -e /usr/bin/wish8.5 ]
+then
+    update-alternatives --set wish /usr/bin/wish8.5
+fi
+
 # Own developments
 easy_install -U filterous flickrapi mian vcard-module
