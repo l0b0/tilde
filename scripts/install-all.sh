@@ -38,7 +38,7 @@ apt-get install pgadmin3 sqlite3 sqlite3-doc
 apt-get install epydoc epydoc-doc ipython libxml2-dev libxslt-dev pep8 pychecker pyflakes pylint python2.6-dev python2.6-doc python-dev python-doc python-epydoc python-lxml python-matplotlib python-numpy python-numpy-doc python-opengl python-profiler python-pygame python-setuptools
 
 # LISP
-apt-get install mit-scheme mit-scheme-dbg
+apt-get install bison-doc clisp clisp-dev clisp-doc mit-scheme mit-scheme-dbg sbcl
 
 # Compiling
 apt-get install rpm
