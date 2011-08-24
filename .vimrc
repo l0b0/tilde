@@ -45,6 +45,9 @@ nmap <silent> ]] :let &tabstop += 1 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
 
+" Replace CR with LF
+noremap <C-n> :%s/\r/\r/g <CR>
+
 " Unicode
 set encoding=utf-8
 set fileencodings=
