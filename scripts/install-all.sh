@@ -73,5 +73,5 @@ then
     update-alternatives --set wish /usr/bin/wish8.5
 fi
 
-# Own developments
-easy_install -U filterous flickrapi mian vcard-module
+# Own developments and requirements
+apt-get install python-pip python-matplotlib && pip install -U isodate && pip install -U filterous flickrapi mian && pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
