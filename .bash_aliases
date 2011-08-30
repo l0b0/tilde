@@ -27,8 +27,6 @@ upgrade()
 # Play ISO file of DVD
 alias play-iso-dir='mplayer -dvd-device dvd:// -slang en' # dir
 
-alias fgit='$HOME/dev/fgit/fgit.sh'
-
 # Subversion
 svndiff()
 {
