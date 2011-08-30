@@ -8,7 +8,7 @@ apt-get update
 apt-get remove ubuntuone-client
 
 # Misc
-apt-get install default-jre gnokii-cli keepassx markdown openssh-server thunderbird unrar wine
+apt-get install default-jre keepassx markdown openssh-server thunderbird unrar wine
 
 # Email clients
 apt-get mutt thunderbird
