@@ -10,6 +10,12 @@ apt-get remove ubuntuone-client
 # Misc
 apt-get install default-jre gnokii-cli keepassx markdown openssh-server thunderbird unrar wine
 
+# Email clients
+apt-get mutt thunderbird
+
+# Email handling
+apt-get install enscript imapfilter
+
 # Editors
 apt-get install gedit gedit-developer-plugins jedit vim
 
