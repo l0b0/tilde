@@ -463,6 +463,31 @@ zsed()
     return ${exit_code-0}
 }
 
+collapse()
+{
+    # Collapse lines based on first column
+    local name old_name value
+    local first=1
+    while read -r name value
+    do
+        [ "$name" != "${old_name-}" -a "${first+defined}" != defined ] && printf "${IFS: -1}"
+        [ "$name" != "${old_name-}" ] && printf %s "$name"
+        [ -n "$value" ] && printf %s "${IFS:0:1}"
+        printf %s "$value"
+        old_name="$name"
+        unset first
+    done
+    if [[ $name ]]
+    then
+        [ "$name" != "${old_name-}" -a "${first+defined}" != defined ] && printf "${IFS: -1}"
+        [ "$name" != "${old_name-}" ] && printf %s "$name"
+        [ -n "$value" ] && printf %s "${IFS:0:1}"
+        printf %s "$value"
+    else
+        [ "${first+defined}" != defined ] && printf "${IFS: -1}"
+    fi
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
