@@ -15,3 +15,5 @@
 	conflictstyle = diff3
 [gui]
 	diffcontext = 3
+[core]
+	quotepath = false
