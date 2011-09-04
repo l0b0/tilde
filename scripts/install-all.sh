@@ -5,28 +5,56 @@
 apt-get update
 
 # Remove junk
-apt-get remove ubuntuone-client
+apt-get remove -y ubuntuone-client
 
 # Misc
-apt-get install default-jre keepassx markdown openssh-server thunderbird unrar wine
+apt-get install default-jre
+apt-get install -y keepassx
+apt-get install markdown
+apt-get install openssh-server
+apt-get install thunderbird
+apt-get install -y unrar
+apt-get install wine
 
 # Email clients
-apt-get mutt thunderbird
+apt-get install mutt
+apt-get install thunderbird
 
 # Email handling
-apt-get install enscript imapfilter
+apt-get install enscript
+apt-get install imapfilter
 
 # Editors
-apt-get install gedit gedit-developer-plugins jedit vim
+apt-get install gedit
+apt-get install gedit-developer-plugins
+apt-get install -y jedit
+apt-get install -y vim
 
 # Version control
-apt-get install colordiff git-completion git-core git-gui gitk meld qgit subversion
+apt-get install colordiff
+apt-get install -y git-core
+apt-get install git-gui
+apt-get install gitk
+apt-get install -y meld
+apt-get install qgit
+apt-get install subversion
 
 # Graphics
-apt-get install feh gimp hugin imagemagick imagemagick-doc inkscape jhead pngcrush graphviz python-pydot
+apt-get install feh
+apt-get install -y gimp
+apt-get install hugin
+apt-get install imagemagick
+apt-get install imagemagick-doc
+apt-get install inkscape
+apt-get install jhead
+apt-get install graphviz
+apt-get install -y pngcrush
+apt-get install python-pydot
 
 # Desktop recording
-apt-get install istanbul recordmydesktop xvidcap
+apt-get install istanbul
+apt-get install recordmydesktop
+apt-get install xvidcap
 
 # Virtualization
 apt-get install virtualbox-ose
@@ -38,28 +66,75 @@ else
 fi
 
 # Database
-apt-get install pgadmin3 sqlite3 sqlite3-doc
+apt-get install pgadmin3
+apt-get install -y sqlite3
+apt-get install sqlite3-doc
 
 # Python
-apt-get install epydoc epydoc-doc ipython libxml2-dev libxslt-dev pep8 pychecker pyflakes pylint python2.6-dev python2.6-doc python-dev python-doc python-epydoc python-lxml python-matplotlib python-numpy python-numpy-doc python-opengl python-profiler python-pygame python-setuptools
+apt-get install python-epydoc
+apt-get install epydoc-doc
+apt-get install ipython
+apt-get install libxml2-dev
+apt-get install libxslt1-dev
+apt-get install pep8
+apt-get install pychecker
+apt-get install pyflakes
+apt-get install pylint
+apt-get install python2.6-dev
+apt-get install python2.6-doc
+apt-get install python-dev
+apt-get install python-doc
+apt-get install python-epydoc
+apt-get install python-lxml
+apt-get install python-matplotlib
+apt-get install python-numpy
+apt-get install python-numpy-doc
+apt-get install python-opengl
+apt-get install python-profiler
+apt-get install python-pygame
+apt-get install python-setuptools
 
 # LISP
-apt-get install bison-doc clisp clisp-dev clisp-doc mit-scheme mit-scheme-dbg sbcl
+apt-get install bison-doc
+apt-get install clisp
+apt-get install clisp-dev
+apt-get install clisp-doc
+apt-get install mit-scheme
+apt-get install mit-scheme-dbg
+apt-get install sbcl
 
 # Compiling
 apt-get install rpm
 
 # Spell checking
-apt-get install myspell-de-ch myspell-de-de myspell-en-us myspell-fr-fr myspell-nb
+apt-get install hunspell-de-ch
+apt-get install hunspell-de-de
+apt-get install hunspell-en-us
+apt-get install hunspell-fr
 
 # PDF
-apt-get install pdftk xournal
+apt-get install pdftk
+apt-get install xournal
 
 # Entertainment
-apt-get install comix gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly mplayer vlc flashplugin-nonfree
+apt-get install comix
+apt-get install flashplugin-nonfree
+apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly
+apt-get install mplayer
+apt-get install vlc
 
 # Games
-apt-get install beneath-a-steel-sky dosbox freeciv-client-sdl freeciv-sound-standard neverball nexuiz openarena sauerbraten scorched3d teeworlds wormux xmoto
+apt-get install beneath-a-steel-sky
+apt-get install dosbox
+apt-get install freeciv-client-sdl freeciv-sound-standard
+apt-get install neverball
+apt-get install nexuiz
+apt-get install openarena
+apt-get install sauerbraten
+apt-get install scorched3d
+apt-get install teeworlds
+apt-get install wormux
+apt-get install xmoto
 
 # Aptitude cleanup
 apt-get autoclean
@@ -74,4 +149,8 @@ then
 fi
 
 # Own developments and requirements
-apt-get install python-pip python-matplotlib && pip install -U isodate && pip install -U filterous flickrapi mian && pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
+apt-get install -y python-docutils python-pip
+pip install -U filterous
+pip install -U flickrapi
+pip install -U mian
+pip install isodate && pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
