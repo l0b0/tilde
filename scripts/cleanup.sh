@@ -51,14 +51,26 @@ done
 verbose_echo "Reset GNOME configuration modification times"
 sed -i -e 's/ mtime="[0-9]*"/ mtime="0"/g' -- ~/.gconf/**/%gconf.xml
 
-verbose_echo "Backup GPG trust values"
-gpg --export-ownertrust > ~/.gnupg/ownertrust.txt
+if [ -e ~/.gnupg/trustdb.gpg ]
+then
+    verbose_echo "Backup GPG trust values"
+    gpg --export-ownertrust > ~/.gnupg/ownertrust.txt
+fi
 
 verbose_echo "Remove comments from text files"
-sed -i -e '/^#/D' -e 's/[[:space:]]\+#.*$//g' ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
+for path in ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
+do
+    if [ -e "$path" ]
+    then
+        sed -i -e '/^#/D' -e 's/[[:space:]]\+#.*$//g' "$path"
+    fi
+done
 
-verbose_echo "Collapse consecutive blank lines in text files"
-sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
+if [ -e ~/.config/vlc/vlcrc ]
+then
+    verbose_echo "Collapse consecutive blank lines in text files"
+    sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
+fi
 
 verbose_echo "Sort text files"
 for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat}
