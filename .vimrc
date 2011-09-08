@@ -34,8 +34,6 @@ set hidden      " Hide buffers when they are abandoned
 set backspace=indent,eol,start
 
 " Press F2 before pasting text to avoid crazy indentation
-nnoremap <F2> :set invpaste paste?<CR>
-imap <F2> <C-O><F2>
 set pastetoggle=<F2>
 
 " Indentation/tabs
