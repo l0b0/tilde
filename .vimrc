@@ -47,8 +47,7 @@ nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' 
 noremap <C-n> :%s/\r/\r/g <CR>
 
 " Unicode
-set encoding=utf-8
-set fileencodings=
+set fileencodings=utf-8,latin1,ascii
 
 " Temporary files
 set backupdir=~/.vimtmp,.
