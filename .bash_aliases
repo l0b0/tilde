@@ -137,6 +137,36 @@ quote_shell()
     done
 }
 
+substring()
+{
+    # Extract substring with positive or negative indexes
+    # @param $1: String
+    # @param $2: Start (default start of string)
+    # @param $3: Length (default until end of string)
+
+    local -i strlen="${#1}"
+    local -i start="${2-0}"
+    local -i length="${3-${#1}}"
+
+    if [[ "$start" -lt 0 ]]
+    then
+        let start+=$strlen
+    fi
+
+    if [[ "$length" -lt 0 ]]
+    then
+        let length+=$strlen
+        let length-=$start
+    fi
+
+    if [[ "$length" -lt 0 ]]
+    then
+        return
+    fi
+
+    printf %s "${1:$start:$length}"
+}
+
 find_grouped()
 {
     # Outputs files (not directories) recursively, with an empty line between
