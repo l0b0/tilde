@@ -46,6 +46,30 @@ cvsignore2svn()
     done 9< <( find ${1+"$@"} -name .cvsignore -print0 )
 }
 
+diff_ignore_moved_lines()
+{
+    # @param $1: Diff file from either plain `diff` or
+    #            `svn diff --diff-cmd diff -x -b`
+    while IFS= read -r -u 9
+    do
+        contents="${REPLY:2}"
+
+        if [[ "${REPLY:0:1}" =~ [\<\>] ]]
+        then
+            count1="$(grep -cFxe "< $contents" "$1")"
+            count2="$(grep -cFxe "> $contents" "$1")"
+            if [[ "$count1" -eq "$count2" ]]
+            then
+                # Line has been moved; skip it.
+                continue
+            fi
+        fi
+
+        printf %s "$REPLY"
+        printf '\n'
+    done 9< "$1"
+}
+
 # Diff
 wdiffc()
 {
