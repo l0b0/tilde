@@ -512,6 +512,17 @@ collapse()
     fi
 }
 
+jail()
+{
+    # @param $1: Chroot jail directory (default /var/jail/*user*)
+    # @param $2: Login (default current user)
+    local -r login="${2-$USER}"
+    local -a default_path=("/var/jail/*${login}*")
+    local -r path=${1-${default_path[0]}}
+    unset default_path
+    sudo chroot "$path" su - "$login"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
