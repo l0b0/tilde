@@ -46,6 +46,21 @@ nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' 
 " Replace CR with LF
 noremap <C-n> :%s/\r/\r/g <CR>
 
+" Sort words
+command! -nargs=0 -range SortWords call VisualSortWords()
+
+function! VisualSortWords()
+    let rv = @"
+    let rt = getregtype('"')
+    try
+        norm! gvd
+        call setreg('"', join(sort(split(@")), ' '), visualmode()[0])
+        norm! P
+    finally
+        call setreg('"', rv, rt)
+    endtry
+endfunction
+
 " Unicode
 set fileencodings=utf-8,latin1,ascii
 
