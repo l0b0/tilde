@@ -55,9 +55,9 @@ function! VisualSortWords()
     let rv = @"
     let rt = getregtype('"')
     try
-        norm! gvd
+        norm! gvy
         call setreg('"', join(sort(split(@")), ' '), visualmode()[0])
-        norm! P
+        norm! `>pgvd
     finally
         call setreg('"', rv, rt)
     endtry
