@@ -239,16 +239,6 @@ compare_dirs()
         <(cd -- "$2" && find . -printf '%P\0' | sort -z | quote_shell)
 }
 
-count_files()
-{
-    local -i file_count=0
-    while IFS= read -r -d ''
-    do
-        let file_count++
-    done < <( find ${1+"$@"} -type f -print0 )
-    printf %d $file_count
-}
-
 # Bash
 bash_timeout()
 {
