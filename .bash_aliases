@@ -57,6 +57,50 @@ diff_ignore_moved_lines()
     done 9< "$1"
 }
 
+diff_fields()
+{
+    # Creates a simple diff for lines which have some equal fields, but others
+    # are different.
+    # @param $1: Field(s) which should be identical
+    # @param $2: File
+    # @param $3: File
+    local fields="${1:-1}"
+    local separator="${IFS:0:1}"
+    if [[ -z "$separator" ]]
+    then
+        separator=' '
+    fi
+
+    similarities="$(comm -12 \
+        <(sort "$2" | cut -d "$separator" -f "$fields" | uniq) \
+        <(sort "$3" | cut -d "$separator" -f "$fields" | uniq))"
+
+    diff \
+        <(while IFS= read -r -u 9 line
+        do
+            fields_text="$(echo "$line" | cut -d "$separator" -f "$fields")"
+            while IFS= read -r -u 8 similarity
+            do
+                if [[ "$fields_text" = "$similarity" ]]
+                then
+                    echo "$line"
+                fi
+            done 8<<<"$similarities"
+        done 9< <(sort "$2")) \
+        <(while IFS= read -r -u 9 line
+        do
+            fields_text="$(echo "$line" | cut -d "$separator" -f "$fields")"
+            while IFS= read -r -u 8 similarity
+            do
+                if [[ "$fields_text" = "$similarity" ]]
+                then
+                    echo "$line"
+                fi
+            done 8<<<"$similarities"
+        done 9< <(sort "$3"))
+}
+
+
 # Diff
 wdiffc()
 {
