@@ -78,7 +78,7 @@ diff_fields()
     diff \
         <(while IFS= read -r -u 9 line
         do
-            fields_text="$(echo "$line" | cut -d "$separator" -f "$fields")"
+            fields_text="$(cut -d "$separator" -f "$fields" <<<"$line")"
             while IFS= read -r -u 8 similarity
             do
                 if [[ "$fields_text" = "$similarity" ]]
@@ -89,7 +89,7 @@ diff_fields()
         done 9< <(sort "$2")) \
         <(while IFS= read -r -u 9 line
         do
-            fields_text="$(echo "$line" | cut -d "$separator" -f "$fields")"
+            fields_text="$(cut -d "$separator" -f "$fields" <<<"$line")"
             while IFS= read -r -u 8 similarity
             do
                 if [[ "$fields_text" = "$similarity" ]]
