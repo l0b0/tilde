@@ -530,6 +530,15 @@ jail()
     sudo chroot "$path" su - "$login"
 }
 
+empty_line_before_eof()
+{
+    # Insert a newline after the last line if it's not empty.
+    # Note that this means that the empty file will *not* be changed (it
+    # already ends with an empty line).
+    # @param $1...: Sed options and/or input files
+    sed -e '/.$/a\' "$@"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
