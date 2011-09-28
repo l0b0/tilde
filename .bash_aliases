@@ -539,6 +539,28 @@ empty_line_before_eof()
     sed -e '/.$/a\' "$@"
 }
 
+valid_ipv4()
+{
+    declare -i quads=0
+    while IFS= read -r quad
+    do
+        let quads++
+        while [[ $quad = 0* ]]
+        do
+            quad=${quad#0}
+        done
+        if [[ $quads -gt 4 || ! "${quad:-0}" =~ [0-9]+ || "${quad:-0}" -lt 0 || "${quad:-0}" -gt 255 ]]
+        then
+            return 1
+        fi
+    done < <(echo "$1" | tr '.' '\n')
+    if [[ ! $quads -eq 4 ]]
+    then
+        return 1
+    fi
+
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
