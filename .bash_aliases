@@ -531,13 +531,43 @@ collapse()
 
 jail()
 {
-    # @param $1: Chroot jail directory (default /var/jail/*user*)
-    # @param $2: Login (default current user)
-    local -r login="${2-$USER}"
-    local -a default_path=("/var/jail/*${login}*")
-    local -r path=${1-${default_path[0]}}
-    unset default_path
-    sudo chroot "$path" su - "$login"
+    # Change root
+    #
+    # Options:
+    # -u, --user: User (default root)
+    # -d, --directory: Directory of chroot jail (default the first
+    # /var/jail/*user*)
+
+    local -a login
+    local directory
+    while [[ $# -ne 0 ]]
+    do
+        case "$1" in
+            -u|--user)
+                if [[ "${2}" != root ]]
+                then
+                    local -r login=(su - "$2") || return 2
+                fi
+                shift 2
+                ;;
+            -d|--directory)
+                local -r directory="$2" || return 2
+                shift 2
+                ;;
+            *)
+                echo "${FUNCNAME[0]}: invalid option: $1" >&2
+                return 2
+                ;;
+        esac
+    done
+
+    if [[ -z "${directory:-}" ]]
+    then
+        local -a paths=("/var/jail/*${USER}*")
+        directory=${paths[0]-}
+    fi
+
+    sudo chroot "$directory" ${login[@]-}
 }
 
 empty_line_before_eof()
