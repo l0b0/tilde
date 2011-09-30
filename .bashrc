@@ -42,11 +42,11 @@ color_enabled() {
     test -x /usr/bin/tput
 }
 
-BOLD_FORMAT=$(color_enabled && tput bold)
-ERROR_FORMAT=$(color_enabled && tput setaf 1)
-WARNING_FORMAT=$(color_enabled && tput setaf 3)
-INFO_FORMAT=$(color_enabled && tput setaf 4)
-RESET_FORMAT=$(color_enabled && tput sgr0)
+BOLD_FORMAT="${BOLD_FORMAT-$(color_enabled && tput bold)}"
+ERROR_FORMAT="${ERROR_FORMAT-$(color_enabled && tput setaf 1)}"
+WARNING_FORMAT="${WARNING_FORMAT-$(color_enabled && tput setaf 3)}"
+INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
+RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
 exit_code()
 {
