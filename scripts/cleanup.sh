@@ -73,10 +73,13 @@ then
 fi
 
 verbose_echo "Sort text files"
-for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat}
+for text_file in ~/.bash_history ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat}
 do
-    sort --output=$text_file $text_file
+    sort --unique --output=$text_file $text_file
 done
+
+verbose_echo "Add space at end of commands"
+sed -i -e 's/ *$/ /g' "${directory}/.bash_history"
 
 verbose_echo "Vacuum SQLite databases"
 for db_file in ~/.mozilla/**/*.sqlite
