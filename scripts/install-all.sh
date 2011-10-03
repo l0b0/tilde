@@ -10,6 +10,7 @@ apt-get remove -y ubuntuone-client
 # Misc
 apt-get install cloc sloccount
 apt-get install compizconfig-settings-manager
+apt-get install curl
 apt-get install default-jre
 apt-get install -y keepassx
 apt-get install markdown
