@@ -1,4 +1,5 @@
 apt-cache depends bash 
+apt-cache search bash 
 apt-cache show bash 
 apt-cache showsrc bash 
 apt-cache stats bash 
@@ -13,7 +14,9 @@ cd ~/dev/tilde/
 cucumber 
 cucumber --dry-run 
 date +%Y-%m-%d 
+~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh ~/dev/tilde/.* ~/ 
+~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 dot -O -Tsvg graph.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
@@ -29,12 +32,15 @@ fgit st -- ~/* ~/dev/*
 git add . 
 git checkout . 
 git checkout master 
+git clone git@github.com:l0b0/tilde.git 
 git diff 
 git diff --ignore-space-change 
+git diff --staged 
 git diff --word-diff 
 git gui & 
 git log 
 git log --oneline --decorate 
+git log --patch-with-stat 
 git pull 
 git push 
 git push --force 
@@ -57,6 +63,7 @@ ifconfig -a eth0
 iotop 
 jail 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
+java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 l 
 l ~ 
 la 
@@ -81,6 +88,7 @@ make test 2>&1 | tee > make_test.out~
 man bash 
 man chmod 
 man chroot 
+man cp 
 man diff 
 man dot 
 man dotty 
@@ -90,23 +98,30 @@ man getopt
 man grep 
 man head 
 man hostname 
+man id 
 man interfaces 
 man join 
 man less 
+man locate 
+man markdown 
 man mktemp 
+man nautilus 
 man netstat 
 man patch 
 man pod2man 
 man puppet 
 man rename 
+man rm 
 man sed 
 man seq 
 man sh 
+man shunit2 
 man signal 
 man sort 
 man ssh 
 man ssh_config 
 man su 
+man sudo 
 man tail 
 man tee 
 man tput 
@@ -118,6 +133,8 @@ man watch
 man wc 
 man wdiff 
 man wget 
+man xdg-desktop-menu 
+markdown README.markdown > README.html 
 meld . & 
 mkdir test 
 mutt 
@@ -141,12 +158,15 @@ sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history
 set -o nounset 
 set +o nounset 
 set -x 
+sloccount . 
 sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bashrc 
 strings /usr/bin/strings 
 sudo apt-get install bash 
 sudo apt-get purge bash 
+sudo apt-get update 
+sudo dmidecode 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 2>&1 | tee make_install.out~ 
@@ -197,9 +217,12 @@ unset -a array
 unset -f function 
 unset var 
 upgrade 
+vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
 vim ~/.bashrc 
 vim ~/.gitconfig 
+vim .git/config 
+vim .gitignore 
 vim Makefile 
 vim ~/.ssh/config 
 vim ~/.subversion/config 
