@@ -78,6 +78,13 @@ do
     sort --output=$text_file $text_file
 done
 
+verbose_echo "Create DAT files for signatures"
+shopt -s extglob
+for text_file in "${directory}/../.signatures/"!(*.dat)
+do
+    strfile "$text_file"
+done
+
 verbose_echo "Vacuum SQLite databases"
 for db_file in ~/.mozilla/**/*.sqlite
 do
