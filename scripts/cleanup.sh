@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # NAME
 #        cleanup.sh - Clean up settings before commit

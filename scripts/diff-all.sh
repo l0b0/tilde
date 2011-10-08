@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # NAME
 #        diff-all.sh - Diff all files in the current directory against the

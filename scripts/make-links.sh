@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # NAME
 #        make-links.sh - Create symbolic links
