@@ -73,9 +73,9 @@ then
 fi
 
 verbose_echo "Sort text files"
-for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat}
+for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
 do
-    sort --output=$text_file $text_file
+    sort --unique --output=$text_file $text_file
 done
 
 verbose_echo "Create DAT files for signatures"
@@ -84,6 +84,9 @@ for text_file in "${directory}/../.signatures/"!(*.dat)
 do
     strfile "$text_file"
 done
+
+verbose_echo "Fix .bash_history line endings"
+sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
 
 verbose_echo "Vacuum SQLite databases"
 for db_file in ~/.mozilla/**/*.sqlite
