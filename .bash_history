@@ -6,17 +6,34 @@ apt-cache stats bash
 bash -x 
 bg 
 builtin 
+cat ~/contacts/*.vcf > ~/all.vcf 
+cat /sys/class/dmi/id/product_name 
+cat /sys/class/dmi/id/sys_vendor 
 cd 
 cd - 
 cd .. 
+cd ~/contacts/ 
+cd ~/dev/bm 
+cd ~/dev/count/ 
+cd ~/dev/https-everywhere/ 
+cd ~/dev/mian/ 
+cd ~/dev/minecraft-scripts/ 
 cd ~/dev/tilde/ 
+cd ~/dev/tilde/scripts/ 
+cd ~/dev/vcard2mutt/ 
+cd ~/.minecraft/ 
+cd ~/personal/ 
+cd ~/settings/ 
 ./configure 
 cucumber 
 cucumber --dry-run 
 date +%Y-%m-%d 
+~/dev/minecraft-scripts/install-Minecraft.sh 
+~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
+~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
 dot -O -Tsvg graph.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
@@ -28,8 +45,17 @@ env
 exit 
 fg 
 fgit pull -- ~/* ~/dev/* 
+fgit push -- ~/* ~/dev/* 
 fgit st -- ~/* ~/dev/* 
+fgit st -sb -- ~/* ~/dev/* 
+firefox -profilemanager 
+fortune 
 git add . 
+git add .gitignore 
+git add LICENSE 
+git add Makefile 
+git add README.markdown 
+git add tools.mk 
 git checkout . 
 git checkout master 
 git clone git@github.com:l0b0/tilde.git 
@@ -38,10 +64,12 @@ git diff --ignore-space-change
 git diff --staged 
 git diff --word-diff 
 git gui & 
+git init 
 git log 
 git log --oneline --decorate 
 git log --patch-with-stat 
 git pull 
+git pull origin master 
 git push 
 git push --force 
 git push -u origin master 
@@ -64,6 +92,7 @@ iotop
 jail 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
+killall plugin-container 
 l 
 l ~ 
 la 
@@ -71,6 +100,12 @@ la ~
 ldconfig 
 less /etc/passwd 
 less Makefile 
+less /var/log/auth.log 
+less /var/log/dmesg 
+less /var/log/kern.log 
+less /var/log/syslog 
+less /var/log/Xorg.0.log 
+/lib/udev/findkeyboards 
 ll 
 locale 
 locale -a 
@@ -79,12 +114,15 @@ ls -1
 ls -la 
 ls -lr 
 ls -lt 
+ls -lt /var/log/ 
 lsof 
+make 
 make 2>&1 | tee > make_compile.out~ 
 make clean 
 make explain 2>&1 | grep MAKE 
 make explain-MAKE 
 make test 2>&1 | tee > make_test.out~ 
+make variables 
 man bash 
 man chmod 
 man chroot 
@@ -94,6 +132,7 @@ man dot
 man dotty 
 man file 
 man find 
+man fortune 
 man getopt 
 man grep 
 man head 
@@ -120,12 +159,14 @@ man signal
 man sort 
 man ssh 
 man ssh_config 
+man strfile 
 man su 
 man sudo 
 man tail 
 man tee 
 man tput 
 man tr 
+man ubuntu-bug 
 man uniq 
 man updatedb 
 man useradd 
@@ -136,6 +177,7 @@ man wget
 man xdg-desktop-menu 
 markdown README.markdown > README.html 
 meld . & 
+minecraft & 
 mkdir test 
 mutt 
 neato -O -Tsvg graph.dot 
@@ -144,6 +186,7 @@ netstat -a
 patch -p0 < patch.diff 
 perl_modules 
 perl_module_version URI 
+PREFIX=~ sudo make install 
 printf %s "${IFS:0:1}" 
 ps wafux 
 read -r var 
@@ -157,7 +200,10 @@ rvm use
 sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
 set -o nounset 
 set +o nounset 
+./setup.py test 
 set -x 
+set +x 
+shopt -s extglob 
 sloccount . 
 sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
@@ -169,11 +215,13 @@ sudo apt-get update
 sudo dmidecode 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
+sudo make install 
 sudo make install 2>&1 | tee make_install.out~ 
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo rm -rf ~/build ~/src 
 sudo updatedb 
+sudo update-grub 
 svn add . 
 svn blame -x -w Makefile 
 svn ci -m "Test" 
@@ -213,6 +261,9 @@ tail -F /var/log/messages
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
 top 
+traceroute 
+udevadm info --export-db > udev-db.txt 
+uname -a 
 unset -a array 
 unset -f function 
 unset var 
@@ -220,10 +271,16 @@ upgrade
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
 vim ~/.bashrc 
+vim ~/dev/tilde/.bash_history 
+vim ~/dev/tilde/scripts/install-all.sh 
+vim ~/dev/tilde/scripts/make-links.sh 
 vim ~/.gitconfig 
 vim .git/config 
 vim .gitignore 
+vim /lib/udev/rules.d/95-keymap.rules 
 vim Makefile 
+vim ~/.muttrc_local 
+vim README.markdown 
 vim ~/.ssh/config 
 vim ~/.subversion/config 
 vim ~/.subversion/servers 
