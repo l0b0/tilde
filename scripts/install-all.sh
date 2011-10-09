@@ -107,6 +107,7 @@ apt-get install mit-scheme-dbg
 apt-get install sbcl
 
 # Compiling
+apt-get install build-essential
 apt-get install rpm
 
 # Spell checking
