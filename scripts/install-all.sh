@@ -152,7 +152,8 @@ then
 fi
 
 # Own developments and requirements
-apt-get install -y python-docutils python-pip
+apt-get install -y python-docutils
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
 pip install -U filterous
 pip install -U flickrapi
 pip install -U mian
