@@ -153,9 +153,13 @@ then
 fi
 
 # Own developments and requirements
-apt-get install -y python-docutils
+apt-get install -y libfreetype6-dev libpng12-dev python-docutils
 curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+pip install -U isodate
+pip install -Uf http://garr.dl.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.0.1/matplotlib-1.0.1.tar.gz matplotlib
+
 pip install -U filterous
 pip install -U flickrapi
 pip install -U mian
-pip install isodate && pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
+
+pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
