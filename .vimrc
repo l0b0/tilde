@@ -64,7 +64,7 @@ function! VisualSortWords()
 endfunction
 
 " Unicode
-set fileencodings=utf-8,latin1,ascii
+set encoding=utf-8
 
 " Temporary files
 set backupdir=~/.vimtmp,.
