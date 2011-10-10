@@ -10,6 +10,7 @@ apt-get remove -y ubuntuone-client
 # Misc
 apt-get install cloc sloccount
 apt-get install compizconfig-settings-manager
+apt-get install curl
 apt-get install default-jre
 apt-get install -y keepassx
 apt-get install markdown
@@ -106,6 +107,7 @@ apt-get install mit-scheme-dbg
 apt-get install sbcl
 
 # Compiling
+apt-get install build-essential
 apt-get install rpm
 
 # Spell checking
@@ -151,8 +153,13 @@ then
 fi
 
 # Own developments and requirements
-apt-get install -y python-docutils python-pip
+apt-get install -y libfreetype6-dev libpng12-dev python-docutils
+curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+pip install -U isodate
+pip install -Uf http://garr.dl.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.0.1/matplotlib-1.0.1.tar.gz matplotlib
+
 pip install -U filterous
 pip install -U flickrapi
 pip install -U mian
-pip install isodate && pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
+
+pip install -U -e git+git://github.com/l0b0/vCard-module.git#egg=vCard-module
