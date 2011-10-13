@@ -21,6 +21,7 @@ cd ~/dev/minecraft-scripts/
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
+cd /home/$USER 
 cd ~/.minecraft/ 
 cd ~/personal/ 
 cd ~/settings/ 
@@ -31,10 +32,10 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/tilde/scripts/cleanup.sh -v 
-~/dev/tilde/scripts/make-links.sh ~/dev/tilde/.* ~/ 
+~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
-dot -O -Tsvg graph.dot 
+dot -O -Tsvg *.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
 echo $? 
@@ -63,7 +64,7 @@ git diff
 git diff --ignore-space-change 
 git diff --staged 
 git diff --word-diff 
-git gui & 
+git gui& 
 git init 
 git log 
 git log --oneline --decorate 
@@ -134,6 +135,7 @@ man file
 man find 
 man fortune 
 man getopt 
+man gnome-terminal 
 man grep 
 man head 
 man hostname 
@@ -180,7 +182,7 @@ meld . &
 minecraft & 
 mkdir test 
 mutt 
-neato -O -Tsvg graph.dot 
+neato -O -Tsvg *.dot 
 netstat 
 netstat -a 
 patch -p0 < patch.diff 
@@ -272,6 +274,7 @@ vcard ~/contacts/*.vcf
 vim ~/.bash_aliases 
 vim ~/.bashrc 
 vim ~/dev/tilde/.bash_history 
+vim ~/dev/tilde/scripts/cleanup.sh 
 vim ~/dev/tilde/scripts/install-all.sh 
 vim ~/dev/tilde/scripts/make-links.sh 
 vim ~/.gitconfig 
@@ -288,4 +291,5 @@ vim ~/.vimrc
 visudo 
 vmware 
 watch 'svn diff' 
+while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
 xkill 
