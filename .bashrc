@@ -102,6 +102,9 @@ PS1="${PS1}:"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
 if [ -f /etc/bash_completion.d/git ]
 then
     ps1_command="__git_ps1 ' (%s)'"
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export GIT_PS1_SHOWSTASHSTATE=1
+    export GIT_PS1_SHOWUPSTREAM="auto"
 fi
 
 # Subversion branch
