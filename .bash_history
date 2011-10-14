@@ -11,7 +11,8 @@ cat /sys/class/dmi/id/product_name
 cat /sys/class/dmi/id/sys_vendor 
 cd 
 cd - 
-cd .. 
+cd ./ 
+cd ../ 
 cd ~/contacts/ 
 cd ~/dev/bm 
 cd ~/dev/count/ 
@@ -21,7 +22,7 @@ cd ~/dev/minecraft-scripts/
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
-cd /home/$USER 
+cd /home/$USER/ 
 cd ~/.minecraft/ 
 cd ~/personal/ 
 cd ~/settings/ 
@@ -49,6 +50,7 @@ fgit pull -- ~/* ~/dev/*
 fgit push -- ~/* ~/dev/* 
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
+find . -empty 
 firefox -profilemanager 
 fortune 
 git add . 
@@ -77,6 +79,9 @@ git push -u origin master
 git st 
 git stash 
 git stash apply 
+git stash clear 
+git stash list 
+git status 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
@@ -142,6 +147,7 @@ man hostname
 man id 
 man interfaces 
 man join 
+man kill 
 man less 
 man locate 
 man markdown 
@@ -240,6 +246,7 @@ svn diff -x -u
 svn diff -x -u > patch.diff 
 svn diff -x -w 
 svn diff -x -w --ignore-eol-style 
+svn help 
 svn help ci 
 svn help co 
 svn help diff 
