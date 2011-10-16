@@ -72,24 +72,33 @@ then
     sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
 fi
 
+verbose_echo "Fix .bash_history line endings"
+sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
+
 verbose_echo "Sort text files"
-for text_file in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
+for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
 do
-    sort --unique --output=$text_file $text_file
+    if [ -e "$path" ]
+    then
+        sort --unique --output="$path" "$path"
+    fi
 done
 
 verbose_echo "Create DAT files for signatures"
 shopt -s extglob
-for text_file in "${directory}/../.signatures/"!(*.dat)
+for path in "${directory}/../.signatures/"!(*.dat)
 do
-    strfile "$text_file"
+    if [ -e "$path" ]
+    then
+        strfile "$path"
+    fi
 done
-
-verbose_echo "Fix .bash_history line endings"
-sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
 
 verbose_echo "Vacuum SQLite databases"
 for db_file in ~/.mozilla/**/*.sqlite
 do
-    echo 'VACUUM;' | sqlite3 $db_file
+    if [ -e "$path" ]
+    then
+        echo 'VACUUM;' | sqlite3 $db_file
+    fi
 done

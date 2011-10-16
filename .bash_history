@@ -11,7 +11,8 @@ cat /sys/class/dmi/id/product_name
 cat /sys/class/dmi/id/sys_vendor 
 cd 
 cd - 
-cd .. 
+cd ./ 
+cd ../ 
 cd ~/contacts/ 
 cd ~/dev/bm 
 cd ~/dev/count/ 
@@ -21,6 +22,7 @@ cd ~/dev/minecraft-scripts/
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
+cd /home/$USER/ 
 cd ~/.minecraft/ 
 cd ~/personal/ 
 cd ~/settings/ 
@@ -31,10 +33,10 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/tilde/scripts/cleanup.sh -v 
-~/dev/tilde/scripts/make-links.sh ~/dev/tilde/.* ~/ 
+~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
-dot -O -Tsvg graph.dot 
+dot -O -Tsvg *.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
 echo $? 
@@ -48,6 +50,7 @@ fgit pull -- ~/* ~/dev/*
 fgit push -- ~/* ~/dev/* 
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
+find . -empty 
 firefox -profilemanager 
 fortune 
 git add . 
@@ -64,7 +67,7 @@ git diff --ignore-space-change
 git diff --raw 
 git diff --staged 
 git diff --word-diff 
-git gui & 
+git gui& 
 git init 
 git log 
 git log --oneline --decorate 
@@ -77,6 +80,9 @@ git push -u origin master
 git st 
 git stash 
 git stash apply 
+git stash clear 
+git stash list 
+git status 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
@@ -136,12 +142,14 @@ man file
 man find 
 man fortune 
 man getopt 
+man gnome-terminal 
 man grep 
 man head 
 man hostname 
 man id 
 man interfaces 
 man join 
+man kill 
 man less 
 man locate 
 man markdown 
@@ -182,7 +190,7 @@ meld . &
 minecraft & 
 mkdir test 
 mutt 
-neato -O -Tsvg graph.dot 
+neato -O -Tsvg *.dot 
 netstat 
 netstat -a 
 patch -p0 < patch.diff 
@@ -241,6 +249,7 @@ svn diff -x -u
 svn diff -x -u > patch.diff 
 svn diff -x -w 
 svn diff -x -w --ignore-eol-style 
+svn help 
 svn help ci 
 svn help co 
 svn help diff 
@@ -276,6 +285,7 @@ vim ~/.bash_aliases
 vim ~/.bashrc 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
+vim ~/dev/tilde/scripts/cleanup.sh 
 vim ~/dev/tilde/scripts/install-all.sh 
 vim ~/dev/tilde/scripts/make-links.sh 
 vim ~/.gitconfig 
@@ -292,4 +302,6 @@ vim ~/.vimrc
 visudo 
 vmware 
 watch 'svn diff' 
+while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
 xkill 
+git stash && git pull

@@ -338,6 +338,26 @@ longer()
     done
 }
 
+exclude_cvs()
+{
+    grep -Fv '/CVS/'
+}
+
+exclude_svn()
+{
+    grep -Fv '/.svn/'
+}
+
+exclude_git()
+{
+    grep -Fv '/.git/'
+}
+
+exclude_vcs()
+{
+    exclude_cvs | exclude_svn | exclude_git
+}
+
 # GNU Make
 make_targets()
 {
