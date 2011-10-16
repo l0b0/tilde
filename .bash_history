@@ -61,6 +61,7 @@ git checkout master
 git clone git@github.com:l0b0/tilde.git 
 git diff 
 git diff --ignore-space-change 
+git diff --raw 
 git diff --staged 
 git diff --word-diff 
 git gui & 
@@ -121,6 +122,7 @@ make 2>&1 | tee > make_compile.out~
 make clean 
 make explain 2>&1 | grep MAKE 
 make explain-MAKE 
+make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
 man bash 
@@ -190,6 +192,7 @@ PREFIX=~ sudo make install
 printf %s "${IFS:0:1}" 
 ps wafux 
 read -r var 
+rmdir * 
 rvm 
 rvm gem install cucumber 
 rvm install 1.9.2 
@@ -262,7 +265,7 @@ tail -F /var/log/messages
 ./test.sh "first argument" "second argument" 
 top 
 traceroute 
-udevadm info --export-db > udev-db.txt 
+udevadm info --export-db 
 uname -a 
 unset -a array 
 unset -f function 
@@ -272,6 +275,7 @@ vcard ~/contacts/*.vcf
 vim ~/.bash_aliases 
 vim ~/.bashrc 
 vim ~/dev/tilde/.bash_history 
+vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/install-all.sh 
 vim ~/dev/tilde/scripts/make-links.sh 
 vim ~/.gitconfig 
