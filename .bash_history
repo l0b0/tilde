@@ -43,6 +43,7 @@ echo $?
 echo $COLUMNS 
 echo $LINES 
 echo "$PATH" 
+empty_line_before_eof -i * 
 env 
 exit 
 fg 
@@ -96,6 +97,7 @@ ifconfig -a
 ifconfig -a eth0 
 iotop 
 jail 
+jail -u $USER 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall plugin-container 
@@ -127,6 +129,7 @@ make 2>&1 | tee > make_compile.out~
 make clean 
 make explain 2>&1 | grep MAKE 
 make explain-MAKE 
+make install 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
 man bash 
@@ -183,10 +186,12 @@ man wc
 man wdiff 
 man wget 
 man xdg-desktop-menu 
+markdown README.markdown 
 markdown README.markdown > README.html 
 meld . & 
 minecraft & 
 mkdir test 
+mkgithub ~/dev/indentect 
 mutt 
 neato -O -Tsvg *.dot 
 netstat 
@@ -279,6 +284,7 @@ unset var
 upgrade 
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
+vim ~/.bash_history 
 vim ~/.bashrc 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/scripts/cleanup.sh 
@@ -299,4 +305,5 @@ visudo
 vmware 
 watch 'svn diff' 
 while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
+worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xkill 
