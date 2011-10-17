@@ -3,6 +3,7 @@ apt-cache search bash
 apt-cache show bash 
 apt-cache showsrc bash 
 apt-cache stats bash 
+bash 
 bash -x 
 bg 
 builtin 
@@ -89,6 +90,7 @@ grep -r --exclude-dir .svn '' .
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
 groups $USER 
+help read 
 hostname 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
@@ -97,6 +99,7 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+info sed 
 iotop 
 jail 
 jail -u $USER 
@@ -144,6 +147,7 @@ man dot
 man dotty 
 man file 
 man find 
+man fmt 
 man fortune 
 man getopt 
 man gnome-terminal 
@@ -184,6 +188,7 @@ man ubuntu-bug
 man uniq 
 man updatedb 
 man useradd 
+man vim 
 man watch 
 man wc 
 man wdiff 
@@ -192,6 +197,7 @@ man xdg-desktop-menu
 markdown README.markdown 
 markdown README.markdown > README.html 
 meld . & 
+meld old new& 
 minecraft & 
 mkdir test 
 mkgithub ~/dev/indentect 
@@ -241,6 +247,7 @@ sudo updatedb
 sudo update-grub 
 svn add . 
 svn blame -x -w Makefile 
+svn cat -r 1 Makefile | less 
 svn ci -m "Test" 
 svn ci --non-recursive doc 
 svn diff 
@@ -290,6 +297,7 @@ vcard ~/contacts/*.vcf
 vim ~/.bash_aliases 
 vim ~/.bash_history 
 vim ~/.bashrc 
+vim -c "setfiletype sh" test 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/cleanup.sh 
