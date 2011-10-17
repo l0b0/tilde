@@ -82,6 +82,7 @@ git st
 git stash 
 git stash apply 
 git stash clear 
+git stash && git pull 
 git stash list 
 git status 
 grep -r --exclude-dir .svn '' . 
