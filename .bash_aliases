@@ -595,7 +595,20 @@ empty_line_before_eof()
     # Insert a newline after the last line if it's not empty.
     # Note that this means that the empty file will *not* be changed (it
     # already ends with an empty line).
+    #
     # @param $1...: Sed options and/or input files
+    #
+    # Example:
+    # $ empty_line_before_eof -i .bak *
+    #   Save backups to filename.bak, and process each file
+    #
+    # Command breakdown:
+    # '.' denotes any character *except* newline
+    # '$' denotes the end of file
+    # 'a\' appends the following text (which is nothing, in this case) on a new line
+    # In other words, if the last line contains a character that is not newline,
+    # append a newline.
+
     sed -e '/.$/a\' "$@"
 }
 
