@@ -53,6 +53,8 @@ fgit push -- ~/* ~/dev/*
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
 find . -empty 
+find . -name '*.orig' 
+find . -name '*.orig' -delete 
 firefox -profilemanager 
 fortune 
 git add . 
