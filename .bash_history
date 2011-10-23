@@ -3,6 +3,7 @@ apt-cache search bash
 apt-cache show bash 
 apt-cache showsrc bash 
 apt-cache stats bash 
+bash 
 bash -x 
 bg 
 builtin 
@@ -46,6 +47,7 @@ echo $?
 echo $COLUMNS 
 echo $LINES 
 echo "$PATH" 
+empty_line_before_eof -i * 
 env 
 exit 
 fg 
@@ -54,6 +56,8 @@ fgit push -- ~/* ~/dev/*
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
 find . -empty 
+find . -name '*.orig' 
+find . -name '*.orig' -delete 
 firefox -profilemanager 
 fortune 
 git 
@@ -96,6 +100,7 @@ grep -r --exclude-dir .svn '' .
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
 groups $USER 
+help read 
 hostname 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
@@ -104,8 +109,10 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+info sed 
 iotop 
 jail 
+jail -u $USER 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall plugin-container 
@@ -155,6 +162,7 @@ man dot
 man dotty 
 man file 
 man find 
+man fmt 
 man fortune 
 man getopt 
 man gksu 
@@ -197,16 +205,20 @@ man udevadm
 man uniq 
 man updatedb 
 man useradd 
+man vim 
 man watch 
 man wc 
 man wdiff 
 man wget 
 man xdg-desktop-menu 
 man xinput 
+markdown README.markdown 
 markdown README.markdown > README.html 
 meld . & 
+meld old new& 
 minecraft & 
 mkdir test 
+mkgithub ~/dev/indentect 
 mutt 
 neato -O -Tsvg *.dot 
 netstat 
@@ -257,6 +269,7 @@ sudo vim /etc/fstab
 sudo Xorg :1 -configure 
 svn add . 
 svn blame -x -w Makefile 
+svn cat -r 1 Makefile | less 
 svn ci -m "Test" 
 svn ci --non-recursive doc 
 svn diff 
@@ -306,7 +319,9 @@ unset var
 upgrade 
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
+vim ~/.bash_history 
 vim ~/.bashrc 
+vim -c "setfiletype sh" test 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/cleanup.sh 
@@ -327,6 +342,7 @@ visudo
 vmware 
 watch 'svn diff' 
 while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
+worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xinput --list 
 xinput --list 10 
 xinput --list-props 10 
