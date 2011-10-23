@@ -17,6 +17,7 @@ apt-get install markdown
 apt-get install openssh-server
 apt-get install -y sun-java6-jre
 update-java-alternatives -s java-6-sun
+apt-get install sun-java6-fonts
 apt-get install thunderbird
 apt-get install -y unrar
 apt-get install wine
@@ -47,6 +48,7 @@ apt-get install subversion
 # Graphics
 apt-get install feh
 apt-get install -y gimp
+apt-get install gimp-help gimp-help-en
 apt-get install hugin
 apt-get install imagemagick
 apt-get install imagemagick-doc
@@ -113,6 +115,7 @@ apt-get install build-essential
 apt-get install rpm
 
 # Spell checking
+apt-get install hunspell
 apt-get install hunspell-de-ch
 apt-get install hunspell-de-de
 apt-get install hunspell-en-us
@@ -127,11 +130,13 @@ apt-get install comix
 apt-get install flashplugin-nonfree
 apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly
 apt-get install mplayer
+apt-get install mplayer-doc
 apt-get install vlc
 
 # Games
 apt-get install beneath-a-steel-sky
 apt-get install dosbox
+apt-get install flight-of-the-amazon-queen
 apt-get install freeciv-client-sdl freeciv-sound-standard
 apt-get install neverball
 apt-get install nexuiz
