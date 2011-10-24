@@ -8,8 +8,7 @@ bash -x
 bg 
 builtin 
 cat ~/contacts/*.vcf > ~/all.vcf 
-cat /sys/class/dmi/id/product_name 
-cat /sys/class/dmi/id/sys_vendor 
+cat /etc/*release 
 cd 
 cd - 
 cd ./ 
@@ -17,9 +16,11 @@ cd ../
 cd ~/contacts/ 
 cd ~/dev/bm 
 cd ~/dev/count/ 
+cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
 cd ~/dev/mian/ 
 cd ~/dev/minecraft-scripts/ 
+cd ~/dev/mount-image/ 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
@@ -37,6 +38,8 @@ date +%Y-%m-%d
 ~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
+df -h 
+dmesg 
 dot -O -Tsvg *.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
@@ -53,8 +56,11 @@ fgit push -- ~/* ~/dev/*
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
 find . -empty 
+find . -name '*.orig' 
+find . -name '*.orig' -delete 
 firefox -profilemanager 
 fortune 
+git 
 git add . 
 git add .gitignore 
 git add LICENSE 
@@ -64,6 +70,7 @@ git add tools.mk
 git checkout . 
 git checkout master 
 git clone git@github.com:l0b0/tilde.git 
+git commit 
 git diff 
 git diff --ignore-space-change 
 git diff --raw 
@@ -74,11 +81,13 @@ git init
 git log 
 git log --oneline --decorate 
 git log --patch-with-stat 
+git mergetool 
 git pull 
 git pull origin master 
 git push 
 git push --force 
 git push -u origin master 
+git reset HEAD * 
 git st 
 git stash 
 git stash apply 
@@ -86,6 +95,7 @@ git stash clear
 git stash && git pull 
 git stash list 
 git status 
+glxinfo 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
@@ -111,8 +121,12 @@ l ~
 la 
 la ~ 
 ldconfig 
+less /etc/issue 
 less /etc/passwd 
 less Makefile 
+less /proc/bus/input/devices 
+less /sys/class/dmi/id/product_name 
+less /sys/class/dmi/id/sys_vendor 
 less /var/log/auth.log 
 less /var/log/dmesg 
 less /var/log/kern.log 
@@ -128,6 +142,7 @@ ls -la
 ls -lr 
 ls -lt 
 ls -lt /var/log/ 
+lsmod 
 lsof 
 make 
 make 2>&1 | tee > make_compile.out~ 
@@ -150,6 +165,7 @@ man find
 man fmt 
 man fortune 
 man getopt 
+man gksu 
 man gnome-terminal 
 man grep 
 man head 
@@ -185,6 +201,7 @@ man tee
 man tput 
 man tr 
 man ubuntu-bug 
+man udevadm 
 man uniq 
 man updatedb 
 man useradd 
@@ -194,6 +211,7 @@ man wc
 man wdiff 
 man wget 
 man xdg-desktop-menu 
+man xinput 
 markdown README.markdown 
 markdown README.markdown > README.html 
 meld . & 
@@ -237,6 +255,7 @@ strings /usr/bin/strings
 sudo apt-get install bash 
 sudo apt-get purge bash 
 sudo apt-get update 
+sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
@@ -244,9 +263,12 @@ sudo make install
 sudo make install 2>&1 | tee make_install.out~ 
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
+sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo updatedb 
 sudo update-grub 
+sudo vim /etc/fstab 
+sudo Xorg :1 -configure 
 svn add . 
 svn blame -x -w Makefile 
 svn cat -r 1 Makefile | less 
@@ -289,8 +311,10 @@ tail -F /var/log/messages
 ./test.sh "first argument" "second argument" 
 top 
 traceroute 
+ubuntu-bug linux 
 udevadm info --export-db 
 uname -a 
+unetbootin 
 unset -a array 
 unset -f function 
 unset var 
@@ -321,4 +345,8 @@ vmware
 watch 'svn diff' 
 while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
+xinput --list 
+xinput --list 10 
+xinput --list-props 10 
 xkill 
+xmodmap -pp >~/xmodmap 
