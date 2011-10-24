@@ -208,6 +208,8 @@ netstat -a
 patch -p0 < patch.diff 
 perl_modules 
 perl_module_version URI 
+ping -c 4 example.org 
+ping example.org 
 PREFIX=~ sudo make install 
 printf %s "${IFS:0:1}" 
 ps wafux 
