@@ -113,6 +113,8 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+indentect -v < "$(which indentect)" 
+indentect < "$(which indentect)" 
 info sed 
 iotop 
 jail 
