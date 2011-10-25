@@ -29,6 +29,7 @@ cd ~/.minecraft/
 cd ~/personal/ 
 cd ~/settings/ 
 ./configure 
+count . 
 cucumber 
 cucumber --dry-run 
 date +%Y-%m-%d 
