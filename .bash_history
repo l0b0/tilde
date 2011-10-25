@@ -92,7 +92,7 @@ git st
 git stash 
 git stash apply 
 git stash clear 
-git stash && git pull 
+git stash && git pull && git stash apply 
 git stash list 
 git status 
 glxinfo 
