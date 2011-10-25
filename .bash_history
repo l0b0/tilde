@@ -104,6 +104,7 @@ grep $USER /etc/passwd
 groups $USER 
 gunzip example.gz 
 gzip example.txt 
+help local 
 help read 
 hostname 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
@@ -162,6 +163,7 @@ make variables
 man bash 
 man chmod 
 man chroot 
+man comm 
 man cp 
 man diff 
 man dot 
@@ -187,6 +189,7 @@ man mktemp
 man nautilus 
 man netstat 
 man patch 
+man ping 
 man pod2man 
 man puppet 
 man rename 
