@@ -72,6 +72,7 @@ git checkout .
 git checkout master 
 git clone git@github.com:l0b0/tilde.git 
 git commit 
+git commit -am "Example" 
 git diff 
 git diff --ignore-space-change 
 git diff --raw 
