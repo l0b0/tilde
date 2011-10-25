@@ -367,6 +367,7 @@ tail -F /var/log/messages
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+time make test 
 top 
 traceroute 
 ubuntu-bug linux 
