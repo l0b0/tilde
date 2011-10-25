@@ -227,7 +227,56 @@ meld . &
 meld old new& 
 minecraft & 
 mkdir test 
+mkgithub ~/dev/bm 
+mkgithub ~/dev/bookmarklets 
+mkgithub ~/dev/bookmarklets-janmoesen 
+mkgithub ~/dev/cds-invenio-vengmark 
+mkgithub ~/dev/CERN-Central-Library-bookmark 
+mkgithub ~/dev/coin-sorter 
+mkgithub ~/dev/count 
+mkgithub ~/dev/cvsignore2svn 
+mkgithub ~/dev/difff 
+mkgithub ~/dev/diff-ignore-moved-lines 
+mkgithub ~/dev/digbuild 
+mkgithub ~/dev/export 
+mkgithub ~/dev/fgit 
+mkgithub ~/dev/filterous 
+mkgithub ~/dev/highlight 
+mkgithub ~/dev/https-everywhere 
+mkgithub ~/dev/Hypervolume 
+mkgithub ~/dev/img2scad 
+mkgithub ~/dev/img2vcard 
 mkgithub ~/dev/indentect 
+mkgithub ~/dev/jail 
+mkgithub ~/dev/job-board 
+mkgithub ~/dev/lwpb 
+mkgithub ~/dev/metal-book 
+mkgithub ~/dev/mian 
+mkgithub ~/dev/minecraft-scripts 
+mkgithub ~/dev/mount-image 
+mkgithub ~/dev/offlickr 
+mkgithub ~/dev/OpenSCAD-Minimizer 
+mkgithub ~/dev/parametric-box 
+mkgithub ~/dev/progit 
+mkgithub ~/dev/Project-Euler 
+mkgithub ~/dev/qr2scad 
+mkgithub ~/dev/RAYT 
+mkgithub ~/dev/rvm 
+mkgithub ~/dev/schemaspy2svg 
+mkgithub ~/dev/screensaver-info 
+mkgithub ~/dev/see-colon 
+mkgithub ~/dev/shunit-ng 
+mkgithub ~/dev/SICP 
+mkgithub ~/dev/Standardy 
+mkgithub ~/dev/tilde 
+mkgithub ~/dev/txt2cloud 
+mkgithub ~/dev/unflickr 
+mkgithub ~/dev/unrarr 
+mkgithub ~/dev/vcard2mutt 
+mkgithub ~/dev/vCard-module 
+mkgithub ~/dev/worktime 
+mkgithub ~/dev/xbug 
+mkgithub ~/dev/xFormsCal 
 mutt 
 neato -O -Tsvg *.dot 
 netstat 
