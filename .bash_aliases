@@ -549,47 +549,6 @@ collapse()
     fi
 }
 
-jail()
-{
-    # Change root
-    #
-    # Options:
-    # -u, --user: User (default root)
-    # -d, --directory: Directory of chroot jail (default the first
-    # /var/jail/*user*)
-
-    local -a login
-    local directory
-    while [[ $# -ne 0 ]]
-    do
-        case "$1" in
-            -u|--user)
-                if [[ "${2}" != root ]]
-                then
-                    local -r login=(su - "$2") || return 2
-                fi
-                shift 2
-                ;;
-            -d|--directory)
-                local -r directory="$2" || return 2
-                shift 2
-                ;;
-            *)
-                echo "${FUNCNAME[0]}: invalid option: $1" >&2
-                return 2
-                ;;
-        esac
-    done
-
-    if [[ -z "${directory:-}" ]]
-    then
-        local -a paths=("/var/jail/*${USER}*")
-        directory=${paths[0]-}
-    fi
-
-    sudo chroot "$directory" ${login[@]-}
-}
-
 empty_line_before_eof()
 {
     # Insert a newline after the last line if it's not empty.
