@@ -102,6 +102,8 @@ grep -r --exclude-dir .svn '' .
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
 groups $USER 
+gunzip example.gz 
+gzip example.txt 
 help read 
 hostname 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
