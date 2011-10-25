@@ -352,6 +352,7 @@ svn help log
 svn info 
 svn list http://svn/repo 
 svn log | less 
+svn log -r 1 
 svn log --stop-on-copy | less 
 svn log --verbose | less 
 svn merge http://svn/repo 
