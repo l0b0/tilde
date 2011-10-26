@@ -97,7 +97,7 @@ verbose_echo()
     then
         if [ "${1-}" = "-n" ]
         then
-            $newline='-n'
+            local -r newline='-n'
             shift
         fi
 
