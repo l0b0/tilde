@@ -68,28 +68,6 @@ wdiffc()
 }
 
 # Git
-mkgithub()
-{
-    if [ ! -e "$1" ]
-    then
-        mkdir "$1"
-    fi
-    cd "$1"
-
-    if [ ! -e '.git' ]
-    then
-        git init
-    fi
-
-    local repo="$(basename -- "$1")"
-    git remote add origin "git@github.com:l0b0/${repo}.git"
-
-    git config push.default matching && \
-    git config branch.master.remote origin && \
-    git config branch.master.merge refs/heads/master && \
-    git config merge.conflictstyle diff3
-}
-
 gitar()
 {
     # @param $1: Commit-like
