@@ -20,6 +20,7 @@ cd ~/dev/fgit/
 cd ~/dev/https-everywhere/ 
 cd ~/dev/mian/ 
 cd ~/dev/minecraft-scripts/ 
+cd ~/dev/mkgithub/ 
 cd ~/dev/mount-image/ 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
@@ -234,6 +235,8 @@ meld . &
 meld old new& 
 minecraft & 
 mkdir test 
+mkgithub -chvu l0b0 
+mkgithub -csvu l0b0 
 mkgithub ~/dev/bm 
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
@@ -285,6 +288,8 @@ mkgithub ~/dev/vCard-module
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
+mkgithub -h 
+mkgithub --help 
 mutt 
 neato -O -Tsvg *.dot 
 netstat 
@@ -402,6 +407,7 @@ vim .git/config
 vim .gitignore 
 vim /lib/udev/rules.d/95-keymap.rules 
 vim Makefile 
+vim ~/.mkgithub 
 vim ~/.muttrc_local 
 vim README.markdown 
 vim ~/.ssh/config 
