@@ -120,7 +120,9 @@ ifconfig -a eth0
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
 info sed 
+iostat 
 iotop 
+iotop -bn 1 
 jail 
 jail -u $USER 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
@@ -183,6 +185,8 @@ man head
 man hostname 
 man id 
 man interfaces 
+man iostat 
+man iotop 
 man join 
 man kill 
 man less 
