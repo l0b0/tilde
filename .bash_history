@@ -260,6 +260,7 @@ mkgithub ~/dev/lwpb
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
 mkgithub ~/dev/minecraft-scripts 
+mkgithub ~/dev/mkgithub 
 mkgithub ~/dev/mount-image 
 mkgithub ~/dev/offlickr 
 mkgithub ~/dev/OpenSCAD-Minimizer 
