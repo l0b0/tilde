@@ -79,6 +79,9 @@ git diff --raw
 git diff --staged 
 git diff --word-diff 
 git gui& 
+git help config 
+git help init 
+git help remote 
 git init 
 git log 
 git log --oneline --decorate 
