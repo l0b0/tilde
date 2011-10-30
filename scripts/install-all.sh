@@ -1,6 +1,5 @@
 #!/bin/sh
-# Last updated to Ubuntu 11.04
-# Test: yes n | sudo install-all.sh >/dev/null
+# Last updated to Ubuntu 11.10
 
 apt-get update
 
