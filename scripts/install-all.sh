@@ -43,7 +43,7 @@ apt-get install subversion
 # Graphics
 apt-get install feh
 apt-get install -y gimp
-apt-get install gimp-help gimp-help-en
+apt-get install gimp-help-en
 apt-get install hugin
 apt-get install imagemagick
 apt-get install imagemagick-doc
