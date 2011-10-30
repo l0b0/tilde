@@ -17,7 +17,7 @@ apt-get install openssh-server
 apt-get install -y sun-java6-jre
 update-java-alternatives --jre -s java-6-sun
 apt-get install sun-java6-fonts
-apt-get install -y unrar
+apt-get install -y unrar-free
 apt-get install wine
 
 # Email clients
