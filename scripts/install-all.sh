@@ -50,6 +50,7 @@ apt-get install imagemagick-doc
 apt-get install inkscape
 apt-get install jhead
 apt-get install graphviz
+apt-get install graphviz-doc
 apt-get install -y pngcrush
 apt-get install python-pydot
 
