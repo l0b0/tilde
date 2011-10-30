@@ -11,7 +11,7 @@ apt-get install cloc sloccount
 apt-get install compizconfig-settings-manager
 apt-get install curl
 apt-get install default-jre
-apt-get install -y keepassx
+apt-get install -y keepassx # keepass2 is not ready for production
 apt-get install markdown
 apt-get install openssh-server
 apt-get install -y sun-java6-jre
