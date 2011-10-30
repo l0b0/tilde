@@ -97,7 +97,7 @@ apt-get install xournal
 
 # Entertainment
 apt-get install comix
-apt-get install flashplugin-nonfree
+apt-get install adobe-flashplugin ttf-bitstream-vera ttf-dejavu ttf-xfree86-nonfree
 apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly
 apt-get install smplayer
 apt-get install mplayer-doc
