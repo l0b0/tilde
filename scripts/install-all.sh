@@ -78,8 +78,6 @@ apt-get install bison-doc
 apt-get install clisp
 apt-get install clisp-dev
 apt-get install clisp-doc
-apt-get install mit-scheme
-apt-get install mit-scheme-dbg
 apt-get install sbcl
 
 # Compiling
