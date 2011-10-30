@@ -15,7 +15,7 @@ apt-get install -y keepassx # keepass2 is not ready for production
 apt-get install markdown
 apt-get install openssh-server
 apt-get install -y sun-java6-jre
-update-java-alternatives -s java-6-sun
+update-java-alternatives --jre -s java-6-sun
 apt-get install sun-java6-fonts
 apt-get install -y unrar
 apt-get install wine
