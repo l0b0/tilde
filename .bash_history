@@ -57,6 +57,7 @@ exit
 fg 
 fgit pull -- ~/* ~/dev/* 
 fgit push -- ~/* ~/dev/* 
+fgit status -- ~/* ~/dev/* 
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
 find . -empty 
