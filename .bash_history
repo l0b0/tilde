@@ -330,6 +330,7 @@ shopt -s extglob
 sloccount . 
 sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
+source ~/.bash_aliases_local 
 source ~/.bashrc 
 strings /usr/bin/strings 
 sudo apt-get install bash 
@@ -404,6 +405,7 @@ unset var
 upgrade 
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
+vim ~/.bash_aliases_local 
 vim ~/.bash_history 
 vim ~/.bashrc 
 vim -c "setfiletype sh" test 
