@@ -438,6 +438,7 @@ visudo
 vmware 
 watch 'svn diff' 
 while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
+while inotifywait -e close_write *.markdown; do for path in *.markdown; do markdown_page "$path" > "${path%.markdown}.xhtml"; done; done; 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xinput --list 
 xinput --list 10 
