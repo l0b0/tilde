@@ -310,6 +310,7 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 ps wafux 
+pwd 
 read -r var 
 rmdir * 
 rvm 
