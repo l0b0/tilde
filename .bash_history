@@ -206,6 +206,7 @@ man pod2man
 man puppet 
 man rename 
 man rm 
+man scp 
 man sed 
 man seq 
 man sh 
@@ -321,6 +322,8 @@ rvm list known
 rvm notes 
 rvm usage 
 rvm use 
+scp example.org:/home/jdoe/example.txt . 
+scp -P 2222 example.org:/home/jdoe/example.txt . 
 sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
 set -o nounset 
 set +o nounset 
