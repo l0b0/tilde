@@ -336,6 +336,10 @@ sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
+ssh-copy-id example.org 
+ssh example.org 
+ssh -p 2222 example.org 
+ssh -Y example.org 
 strings /usr/bin/strings 
 sudo apt-get install bash 
 sudo apt-get purge bash 
