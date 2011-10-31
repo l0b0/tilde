@@ -295,6 +295,7 @@ mkgithub ~/dev/xbug
 mkgithub ~/dev/xFormsCal 
 mkgithub -h 
 mkgithub --help 
+mount 
 mutt 
 neato -O -Tsvg *.dot 
 netstat 
@@ -339,6 +340,7 @@ sudo make install
 sudo make install 2>&1 | tee make_install.out~ 
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
+sudo mount -a 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo updatedb 
