@@ -174,6 +174,7 @@ man chmod
 man chroot 
 man comm 
 man cp 
+man curl 
 man diff 
 man dot 
 man dotty 
@@ -213,6 +214,7 @@ man signal
 man sort 
 man ssh 
 man ssh_config 
+man ssh-copy-id 
 man strfile 
 man su 
 man sudo 
