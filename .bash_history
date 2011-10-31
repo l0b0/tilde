@@ -238,6 +238,7 @@ markdown README.markdown
 markdown README.markdown > README.html 
 meld . & 
 meld old new& 
+meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 minecraft & 
 mkdir test 
 mkgithub -chvu l0b0 
