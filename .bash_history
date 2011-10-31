@@ -18,6 +18,7 @@ cd ~/dev/bm
 cd ~/dev/count/ 
 cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
+cd ~/dev/jail/ 
 cd ~/dev/mian/ 
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
