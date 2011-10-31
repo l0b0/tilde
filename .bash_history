@@ -46,6 +46,7 @@ dmesg
 dot -O -Tsvg *.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
+dpkg -s bash 
 echo $? 
 echo $COLUMNS 
 echo $LINES 
