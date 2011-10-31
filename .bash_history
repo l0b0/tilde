@@ -307,6 +307,8 @@ ping -c 4 example.org
 ping example.org 
 PREFIX=~ sudo make install 
 printf %s "${IFS:0:1}" 
+prove 
+prove -r 
 ps wafux 
 read -r var 
 rmdir * 
