@@ -429,6 +429,7 @@ tail -F /var/log/messages
 ./test.sh "first argument" "second argument" 
 time make test 
 top 
+tput colors 
 traceroute 
 ubuntu-bug linux 
 udevadm info --export-db 
