@@ -140,6 +140,7 @@ jail -u $USER
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall plugin-container 
+komodo & 
 l 
 l ~ 
 la 
@@ -358,6 +359,7 @@ source ~/.bashrc
 ssh-copy-id example.org 
 ssh example.org 
 ssh -p 2222 example.org 
+ssh -R 9000:localhost:9000 example.org 
 ssh -Y example.org 
 strings /usr/bin/strings 
 sudo apt-get install bash 
