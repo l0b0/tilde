@@ -119,7 +119,9 @@ help local
 help read 
 help shopt 
 help typeset 
+host example.org 
 hostname 
+hostname -s 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
 id -u 
