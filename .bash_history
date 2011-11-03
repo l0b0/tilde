@@ -90,6 +90,7 @@ git help init
 git help remote 
 git init 
 git log 
+git log Makefile 
 git log --oneline --decorate 
 git log --patch-with-stat 
 git mergetool 
@@ -98,6 +99,7 @@ git pull origin master
 git push 
 git push --force 
 git push -u origin master 
+git rebase --interactive HEAD~20 
 git reset HEAD * 
 git st 
 git stash 
