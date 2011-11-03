@@ -339,6 +339,7 @@ rvm usage
 rvm use 
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
+scp -r file example.org:~ 
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
 sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
@@ -358,8 +359,10 @@ source ~/.bash_aliases_local
 source ~/.bashrc 
 ssh-copy-id example.org 
 ssh example.org 
+ssh example.org uptime 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
+ssh -vvv example.org 
 ssh -Y example.org 
 strings /usr/bin/strings 
 sudo apt-get install bash 
