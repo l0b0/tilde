@@ -388,12 +388,14 @@ svn blame -x -w Makefile
 svn cat -r 1 Makefile | less 
 svn ci -m "Test" 
 svn ci --non-recursive doc 
+svn co http://svn/repo 
 svn diff 
 svn diff -c 1 
 svn diff -c 1 -x -w 
 svn diff --diff-cmd diff > patch.diff 
 svn diff | less 
 svn diff -r 1:HEAD 
+svn diff -r PREV 
 svn diff -u 
 svn diff -x -b 
 svn diff -x -u 
@@ -418,6 +420,7 @@ svn propset svn:executable 1 test.sh
 svn propset svn:keywords 'Id HeadURL' test.sh 
 svn revert Makefile 
 svn revert --recursive . 
+svn rm --keep-local file 
 svn st 
 svn up 
 tail -F /var/log/messages 
