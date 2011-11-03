@@ -335,6 +335,8 @@ rvm usage
 rvm use 
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
+sed -e '/^$/d' file 
+sed -e '/^[[:space:]]*$/d' file 
 sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
 set -o nounset 
 set +o nounset 
