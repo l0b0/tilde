@@ -3,6 +3,7 @@ apt-cache search bash
 apt-cache show bash 
 apt-cache showsrc bash 
 apt-cache stats bash 
+apt-get source apt 
 bash 
 bash -x 
 bg 
@@ -49,6 +50,7 @@ dot -O -Tsvg *.dot
 dot -Tsvg graph.dot 
 dotty graph.dot 
 dpkg -s bash 
+dpkg -S "$(which apt-get)" 
 echo $? 
 echo $COLUMNS 
 echo $LINES 
