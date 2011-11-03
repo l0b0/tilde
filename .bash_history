@@ -117,6 +117,8 @@ gunzip example.gz
 gzip example.txt 
 help local 
 help read 
+help shopt 
+help typeset 
 hostname 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
@@ -193,6 +195,8 @@ man grep
 man head 
 man hostname 
 man id 
+man inotify 
+man inotifywait 
 man interfaces 
 man iostat 
 man iotop 
@@ -220,13 +224,16 @@ man sort
 man ssh 
 man ssh_config 
 man ssh-copy-id 
+man sshd 
 man strfile 
 man su 
 man sudo 
 man tail 
+man tar 
 man tee 
 man tput 
 man tr 
+man trash 
 man ubuntu-bug 
 man udevadm 
 man uniq 
