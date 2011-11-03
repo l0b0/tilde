@@ -16,8 +16,10 @@ cd ../
 cd ~/contacts/ 
 cd ~/dev/bm 
 cd ~/dev/count/ 
+cd ~/dev/difff/ 
 cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
+cd ~/dev/indentect/ 
 cd ~/dev/jail/ 
 cd ~/dev/mian/ 
 cd ~/dev/minecraft-scripts/ 
