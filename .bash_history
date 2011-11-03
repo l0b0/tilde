@@ -341,12 +341,15 @@ scp -P 2222 example.org:/home/jdoe/example.txt .
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
 sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+set +o noclobber 
 set -o nounset 
 set +o nounset 
 ./setup.py test 
 set -x 
 set +x 
 shopt -s extglob 
+shopt -s nullglob 
+shopt -u nullglob 
 sloccount . 
 sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
