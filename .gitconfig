@@ -5,6 +5,7 @@
 	st = status
 	history = !qgit --all &
 	git = !git
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [color]
 	diff = auto
 	status = auto
