@@ -68,7 +68,7 @@ elif [ -r /etc/jail ]
 then
     debian_chroot="$(cat /etc/jail)"
 else
-    root_inode=$(stat -c %i /)
+    root_inode=$(ls -di / | cut -d ' ' -f 1)
     if [ $root_inode -ne 2 -a $root_inode -ne 128 ]
     then
         # Non-standard root inode
