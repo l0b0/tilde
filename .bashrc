@@ -50,15 +50,15 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
 exit_code_prompt()
 {
-    local -ir exit_code=$?
-    if [ $exit_code -ne 0 ]
+    local exit_code=$?
+    if [[ $exit_code -ne 0 ]]
     then
-        printf '%s ' $exit_code
+        printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT ' '
     fi
 }
 
 # Exit code
-PS1='\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]$(exit_code_prompt)\[$RESET_FORMAT\]'
+PS1='$(exit_code_prompt)'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
