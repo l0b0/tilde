@@ -48,7 +48,7 @@ WARNING_FORMAT="${WARNING_FORMAT-$(color_enabled && tput setaf 3)}"
 INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
 RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
-exit_code()
+exit_code_prompt()
 {
     local -ir exit_code=$?
     if [ $exit_code -ne 0 ]
@@ -58,7 +58,7 @@ exit_code()
 }
 
 # Exit code
-PS1='\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]$(exit_code)\[$RESET_FORMAT\]'
+PS1='\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]$(exit_code_prompt)\[$RESET_FORMAT\]'
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
