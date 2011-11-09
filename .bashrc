@@ -78,7 +78,7 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]${debian_chroot+($debian_chroot) }\[$RESET_FORMAT\]'
+PS1="${PS1}"'${debian_chroot+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
 
 if [ "$USER" == 'root' ]
 then
