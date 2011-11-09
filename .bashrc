@@ -102,29 +102,30 @@ PS1="$PS1":'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
 then
-    ps1_command="__git_ps1 ' (%s)'"
+    PS1="$PS1"'$(__git_ps1 " (%s)")'
     export GIT_PS1_SHOWDIRTYSTATE=1
     export GIT_PS1_SHOWSTASHSTATE=1
     export GIT_PS1_SHOWUPSTREAM="auto"
 fi
 
 # Subversion branch
-if type -t __svn_ps1 >/dev/null
-then
+svn_prompt()
+{
+    if ! type -t __svn_ps1 >/dev/null
+    then
+        return
+    fi
+
     # Warn if you're not in the top directory of the checkout
-    ps1_command="if [ -d ../.svn ]
-then
-    __svn_ps1 ' (\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]%s\[$RESET_FORMAT\])'
-else
-    __svn_ps1 ' (%s)'
-fi
-    ${ps1_command:-}"
-fi
+    if [ -d ../.svn ]
+    then
+        __svn_ps1 ' ('${BOLD_FORMAT}${WARNING_FORMAT}%s${RESET_FORMAT}')'
+    else
+        __svn_ps1 ' (%s)'
+    fi
+}
 
-PS1="${PS1}\$(${ps1_command})\n\\\$ "
-
-# Clean up
-unset ps1_command
+PS1="$PS1"'$(svn_prompt)\n\$ '
 
 # Default editor
 export GIT_EDITOR='vim'
