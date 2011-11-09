@@ -50,7 +50,7 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
 exit_code()
 {
-    exit_code=$?
+    local -ir exit_code=$?
     if [ $exit_code -ne 0 ]
     then
         printf "$exit_code "
