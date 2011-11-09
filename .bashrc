@@ -78,26 +78,26 @@ else
 fi
 
 # set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="${PS1}"'${debian_chroot+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
+PS1="$PS1"'${debian_chroot+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
 
 if [ "$USER" == 'root' ]
 then
-    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]\u\[$RESET_FORMAT\]'
+    PS1="$PS1"'\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]\u\[$RESET_FORMAT\]'
 elif [ -n "${SUDO_USER:-}" ]
 then
-    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\u\[$RESET_FORMAT\]'
+    PS1="$PS1"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\u\[$RESET_FORMAT\]'
 else
-    PS1="${PS1}"'\u'
+    PS1="$PS1"'\u'
 fi
 PS1="${PS1}@"
 
 if [ -n "${SSH_CONNECTION:-}" ]
 then
-    PS1="${PS1}"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\h\[$RESET_FORMAT\]'
+    PS1="$PS1"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]\h\[$RESET_FORMAT\]'
 else
-    PS1="${PS1}"'\h'
+    PS1="$PS1"'\h'
 fi
-PS1="${PS1}:"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
+PS1="$PS1":'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
 
 # Git branch
 if [ -f /etc/bash_completion.d/git ]
