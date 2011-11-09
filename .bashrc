@@ -39,7 +39,8 @@ then
 fi
 
 color_enabled() {
-    test -x /usr/bin/tput
+    local -i colors=$(tput colors 2>/dev/null)
+    [[ $? = 0 && $colors -gt 2 ]]
 }
 
 BOLD_FORMAT="${BOLD_FORMAT-$(color_enabled && tput bold)}"
