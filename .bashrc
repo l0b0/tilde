@@ -53,7 +53,7 @@ exit_code_prompt()
     local -ir exit_code=$?
     if [ $exit_code -ne 0 ]
     then
-        printf "$exit_code "
+        printf '%s ' $exit_code
     fi
 }
 
