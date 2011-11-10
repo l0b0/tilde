@@ -174,6 +174,7 @@ compare_dirs()
 bash_timeout()
 {
     # Set the idle timeout before the shell will be closed automatically
+    # @param $1: Timeout in <N>d<N>h<N>m<N>[s] format
     local timeout=$1
     timeout=${timeout//d/*24h}
     timeout=${timeout//h/*60m}
