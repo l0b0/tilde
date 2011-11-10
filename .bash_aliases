@@ -24,15 +24,6 @@ upgrade()
     sudo sh -c "apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get autoclean"
 }
 
-# Play ISO file of DVD
-alias play-iso-dir='mplayer -dvd-device dvd:// -slang en' # dir
-
-# Subversion
-svndiff()
-{
-    svn diff ${1+"$@"} | colordiff
-}
-
 # Diff
 wdiffc()
 {
@@ -41,20 +32,6 @@ wdiffc()
         return 2
     fi
     wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" "$@"
-}
-
-# Git
-gitar()
-{
-    # @param $1: Commit-like
-    git archive --format=tar --prefix="${2}/" "$1" | gzip
-}
-
-git_send_commits()
-{
-    # Send all commits ahead of origin
-    git format-patch -C -M origin
-    git send-email --confirm=always [0-9][0-9][0-9][0-9]-*.patch
 }
 
 # Find
