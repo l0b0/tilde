@@ -40,7 +40,7 @@ fi
 
 color_enabled() {
     local -i colors=$(tput colors 2>/dev/null)
-    [[ $? = 0 && $colors -gt 2 ]]
+    [ $? = 0 -a $colors -gt 2 ]
 }
 
 BOLD_FORMAT="${BOLD_FORMAT-$(color_enabled && tput bold)}"
@@ -52,7 +52,7 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 exit_code_prompt()
 {
     local exit_code=$?
-    if [[ $exit_code -ne 0 ]]
+    if [ $exit_code -ne 0 ]
     then
         printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT ' '
     fi
@@ -153,5 +153,5 @@ _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 true
