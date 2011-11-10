@@ -108,16 +108,6 @@ substring()
     printf %s "${1:$start:$length}"
 }
 
-charray()
-{
-    # Split string into NUL-separated characters
-    while read -N 1
-    do
-        printf %s "$REPLY"
-        printf '\0'
-    done
-}
-
 find_grouped()
 {
     # Outputs files (not directories) recursively, with an empty line between
