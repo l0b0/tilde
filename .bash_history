@@ -52,6 +52,7 @@ date +%Y-%m-%d
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
 df -h 
+df -h . 
 dmesg 
 dos2unix file 
 dot -O -Tsvg *.dot 
