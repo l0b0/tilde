@@ -39,6 +39,7 @@ cd ~/settings/
 ./configure 
 ./configure --help | less 
 count . 
+crontab -e 
 cucumber 
 cucumber --dry-run 
 curl --version 
