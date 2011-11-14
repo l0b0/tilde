@@ -184,6 +184,7 @@ less /var/log/Xorg.0.log
 ll 
 locale 
 locale -a 
+lpstat -v 
 ls 
 ls -1 
 ls -la 
