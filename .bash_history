@@ -480,6 +480,8 @@ sudo apt-get install openssh-server
 sudo apt-get install openssl 
 sudo apt-get install pdftk 
 sudo apt-get install pep8 
+sudo apt-get install pidgin 
+sudo apt-get install playonlinux 
 sudo apt-get install pngcrush 
 sudo apt-get install pychecker 
 sudo apt-get install pyflakes 
@@ -495,6 +497,7 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
+sudo apt-get install rdesktop 
 sudo apt-get install rsync 
 sudo apt-get install ruby-dev 
 sudo apt-get install sbcl 
@@ -507,8 +510,11 @@ sudo apt-get install sun-java6-fonts
 sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
+sudo apt-get install ubuntu-restricted-extras 
+sudo apt-get install unrar-free 
 sudo apt-get install vim 
 sudo apt-get install vlc 
+sudo apt-get install wget 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
 sudo apt-get install xournal 
