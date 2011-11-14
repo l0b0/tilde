@@ -26,7 +26,7 @@
 #
 ################################################################################
 
-set -o errexit -o nounset -o pipefail
+set -o errexit -o noclobber -o nounset -o pipefail
 shopt -s globstar
 
 directory="$(dirname -- "$0")"
@@ -51,7 +51,9 @@ done
 if [ -e ~/.gnupg/trustdb.gpg ]
 then
     verbose_echo "Backup GPG trust values"
+    set +o noclobber
     gpg --export-ownertrust > ~/.gnupg/ownertrust.txt
+    set -o noclobber
 fi
 
 verbose_echo "Remove comments from text files"
