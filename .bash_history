@@ -53,6 +53,7 @@ date +%Y-%m-%d
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
 df -h 
 dmesg 
+dos2unix file 
 dot -O -Tsvg *.dot 
 dot -Tsvg graph.dot 
 dotty graph.dot 
@@ -392,6 +393,7 @@ ssh -vvv example.org
 ssh -Y example.org 
 strings /usr/bin/strings 
 sudo apt-get install bash 
+sudo apt-get install dos2unix 
 sudo apt-get purge bash 
 sudo apt-get update 
 sudo ~/dev/tilde/scripts/install-all.sh 
@@ -464,6 +466,7 @@ ubuntu-bug linux
 udevadm info --export-db 
 uname -a 
 unetbootin 
+unix2dos file 
 unset -a array 
 unset -f function 
 unset var 
