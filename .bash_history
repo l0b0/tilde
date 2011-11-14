@@ -1,3 +1,4 @@
+apropos bash 
 apt-cache depends bash 
 apt-cache search bash 
 apt-cache show bash 
@@ -5,6 +6,7 @@ apt-cache showsrc bash
 apt-cache stats bash 
 apt-get source apt 
 bash 
+bash --version 
 bash -x 
 bg 
 builtin 
@@ -37,6 +39,7 @@ cd ~/settings/
 count . 
 cucumber 
 cucumber --dry-run 
+curl --version 
 date +%Y-%m-%d 
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
@@ -89,6 +92,7 @@ git diff --word-diff
 git gui& 
 git help config 
 git help init 
+git help log 
 git help remote 
 git init 
 git log 
@@ -117,7 +121,9 @@ grep $USER /etc/passwd
 groups $USER 
 gunzip example.gz 
 gzip example.txt 
+help echo 
 help local 
+help printf 
 help read 
 help shopt 
 help typeset 
@@ -184,6 +190,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
+man addgroup 
 man bash 
 man chmod 
 man chroot 
@@ -200,7 +207,9 @@ man fortune
 man getopt 
 man gksu 
 man gnome-terminal 
+man gpg 
 man grep 
+man groupadd 
 man head 
 man hostname 
 man id 
@@ -213,8 +222,10 @@ man join
 man kill 
 man less 
 man locate 
+man ls 
 man markdown 
 man mktemp 
+man mv 
 man nautilus 
 man netstat 
 man patch 
@@ -234,6 +245,7 @@ man ssh
 man ssh_config 
 man ssh-copy-id 
 man sshd 
+man stat 
 man strfile 
 man su 
 man sudo 
