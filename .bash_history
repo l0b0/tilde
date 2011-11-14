@@ -37,6 +37,7 @@ cd ~/.minecraft/
 cd ~/personal/ 
 cd ~/settings/ 
 ./configure 
+./configure --help | less 
 count . 
 cucumber 
 cucumber --dry-run 
@@ -452,6 +453,7 @@ tail -F /var/log/messages
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+thunderbird -profilemanager 
 time make test 
 top 
 tput colors 
@@ -483,10 +485,14 @@ vim Makefile
 vim ~/.mkgithub 
 vim ~/.muttrc_local 
 vim README.markdown 
+vim ~/.rvmrc 
 vim ~/.ssh/config 
 vim ~/.subversion/config 
 vim ~/.subversion/servers 
 vim ~/.vimrc 
+vim ~/.wine/system.reg 
+vim ~/.wine/user.reg 
+vim ~/.xinitrc 
 visudo 
 vmware 
 watch 'svn diff' 
