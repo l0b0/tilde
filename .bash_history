@@ -378,6 +378,7 @@ set +o nounset
 ./setup.py test 
 set -x 
 set +x 
+sha1sum file 
 shopt -s extglob 
 shopt -s nullglob 
 shopt -u nullglob 
