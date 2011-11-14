@@ -1,5 +1,8 @@
 # Reference: <http://www.mutt.org/doc/manual/manual-6.html>
 
+# Settings relevant only to me or this machine
+source ~/.muttrc_local
+
 # Mailboxes
 set sort_browser = alpha
 set postponed = =postponed
@@ -28,7 +31,6 @@ set use_from = yes
 
 ## Recipients
 set alias_file = ~/.mutt_aliases
-source ~/.mutt_aliases
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
 
 # Body
@@ -45,6 +47,3 @@ set sendmail = /usr/bin/esmtp
 
 # Printing
 set print_command = /usr/bin/enscript
-
-# Settings relevant only to me or this machine
-source ~/.muttrc_local
