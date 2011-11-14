@@ -19,6 +19,7 @@ cd ../
 cd ~/contacts/ 
 cd ~/dev/bm 
 cd ~/dev/count/ 
+cd ~/dev/csv2zarafa-contacts/ 
 cd ~/dev/difff/ 
 cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
@@ -287,6 +288,7 @@ mkgithub ~/dev/cds-invenio-vengmark
 mkgithub ~/dev/CERN-Central-Library-bookmark 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
+mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
 mkgithub ~/dev/difff 
 mkgithub ~/dev/diff-ignore-moved-lines 
