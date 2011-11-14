@@ -402,6 +402,7 @@ ssh -vvv example.org
 ssh -Y example.org 
 strings /usr/bin/strings 
 sudo addgroup $USER group 
+sudo apt-get dist-upgrade 
 sudo apt-get install autoconf 
 sudo apt-get install automake 
 sudo apt-get install bash 
