@@ -48,9 +48,6 @@ do
     esac
 done
 
-verbose_echo "Reset GNOME configuration modification times"
-sed -i -e 's/ mtime="[0-9]*"/ mtime="0"/g' -- ~/.gconf/**/%gconf.xml
-
 if [ -e ~/.gnupg/trustdb.gpg ]
 then
     verbose_echo "Backup GPG trust values"
