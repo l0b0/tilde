@@ -123,6 +123,7 @@ git stash && git rebase --interactive HEAD~20
 git stash list 
 git status 
 glxinfo 
+gnome-screensaver-command -l 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
