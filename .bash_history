@@ -53,6 +53,7 @@ date +%Y-%m-%d
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
 df -h 
 df -h . 
+dirname $PWD 
 dmesg 
 dos2unix file 
 dot -O -Tsvg *.dot 
@@ -65,6 +66,8 @@ echo $COLUMNS
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
 echo "$PATH" 
+echo $TERM 
+echo $WINEPREFIX 
 empty_line_before_eof -i * 
 env 
 exit 
@@ -382,6 +385,7 @@ set -x
 set +x 
 sha1sum file 
 shopt -s extglob 
+shopt -s globstar 
 shopt -s nullglob 
 shopt -u nullglob 
 sloccount . 
