@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [ -z "${PS1:-}" ] && return
 
+set -o errexit -o noclobber -o nounset -o pipefail
+shopt -s nullglob
+
 # Make sure all terminals save history
 [ -z "${PROMPT_COMMAND:-}" ] && PROMPT_COMMAND="history -a;"
 
@@ -32,7 +35,9 @@ LESS="--RAW-CONTROL-CHARS"
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
+    set +o nounset +o errexit
     source /etc/bash_completion
+    set -o nounset -o errexit
 fi
 if [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
 then
@@ -101,7 +106,7 @@ fi
 PS1="$PS1":'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
 
 # Git branch
-if [ -f /etc/bash_completion.d/git ]
+if type -t __git_ps1 &>/dev/null
 then
     PS1="$PS1"'$(__git_ps1 " (%s)")'
     export GIT_PS1_SHOWDIRTYSTATE=1
@@ -154,5 +159,11 @@ _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
 # Load RVM into a shell session *as a function*
+set +o nounset +o errexit
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+set -o nounset -o errexit
+
+set +o errexit +o noclobber +o nounset +o pipefail
+shopt -u nullglob
+
 true
