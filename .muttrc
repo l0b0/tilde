@@ -41,7 +41,6 @@ set signature = ~/.signature
 
 # Sending
 set copy = yes
-set record = "=sent"
 set sendmail = /usr/bin/esmtp
 
 # Printing
