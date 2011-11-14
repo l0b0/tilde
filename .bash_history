@@ -505,6 +505,7 @@ sudo apt-get install subversion
 sudo apt-get install sun-java6-fonts 
 sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
+sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
 sudo apt-get install vim 
 sudo apt-get install vlc 
 sudo apt-get install wine 
