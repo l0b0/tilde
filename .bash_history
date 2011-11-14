@@ -417,7 +417,9 @@ sudo apt-get install curl
 sudo apt-get install cvs 
 sudo apt-get install default-jre 
 sudo apt-get install dos2unix 
+sudo apt-get install enigmail 
 sudo apt-get install enscript 
+sudo apt-get install esmtp 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
 sudo apt-get install fortune fortune-mod 
@@ -472,6 +474,7 @@ sudo apt-get install ncurses-dev
 sudo apt-get install nfs-common 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
+sudo apt-get install offlineimap 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
 sudo apt-get install pdftk 
