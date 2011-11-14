@@ -449,7 +449,7 @@ svn propset svn:executable 1 test.sh
 svn propset svn:keywords 'Id HeadURL' test.sh 
 svn revert Makefile 
 svn revert --recursive . 
-svn rm --force file
+svn rm --force file 
 svn rm --keep-local file 
 svn st 
 svn up 
