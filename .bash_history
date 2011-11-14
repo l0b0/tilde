@@ -142,6 +142,7 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
 info sed 
