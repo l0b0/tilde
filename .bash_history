@@ -418,6 +418,7 @@ sudo make topclean 2>&1 | tee make_topclean.out~
 sudo mount -a 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
+sudo service cups restart 
 sudo shutdown -r now 
 sudo update-alternatives --config editor 
 sudo updatedb 
