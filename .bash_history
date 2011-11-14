@@ -40,6 +40,7 @@ count .
 cucumber 
 cucumber --dry-run 
 curl --version 
+cvs log 
 date +%Y-%m-%d 
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
@@ -85,6 +86,7 @@ git clone git@github.com:l0b0/tilde.git
 git commit 
 git commit -am "Example" 
 git diff 
+git diff --ignore-all-space 
 git diff --ignore-space-change 
 git diff --raw 
 git diff --staged 
@@ -112,6 +114,7 @@ git stash
 git stash apply 
 git stash clear 
 git stash && git pull && git stash apply 
+git stash && git rebase --interactive HEAD~20 
 git stash list 
 git status 
 glxinfo 
@@ -439,6 +442,7 @@ svn propset svn:executable 1 test.sh
 svn propset svn:keywords 'Id HeadURL' test.sh 
 svn revert Makefile 
 svn revert --recursive . 
+svn rm --force file
 svn rm --keep-local file 
 svn st 
 svn up 
