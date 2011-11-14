@@ -62,6 +62,7 @@ dpkg -s bash
 dpkg -S "$(which apt-get)" 
 echo $? 
 echo $COLUMNS 
+echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
 echo "$PATH" 
 empty_line_before_eof -i * 
