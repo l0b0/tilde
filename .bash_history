@@ -392,12 +392,14 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 strings /usr/bin/strings 
+sudo addgroup $USER group 
 sudo apt-get install bash 
 sudo apt-get install dos2unix 
 sudo apt-get purge bash 
 sudo apt-get update 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
+sudo dpkg-reconfigure ca-certificates 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 
@@ -407,10 +409,13 @@ sudo make topclean 2>&1 | tee make_topclean.out~
 sudo mount -a 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
+sudo update-alternatives --config editor 
 sudo updatedb 
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo vim /etc/fstab 
+sudo vim /etc/hosts 
+sudo visudo 
 sudo Xorg :1 -configure 
 svn add . 
 svn blame -x -w Makefile 
