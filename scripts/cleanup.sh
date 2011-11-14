@@ -27,7 +27,7 @@
 ################################################################################
 
 set -o errexit -o noclobber -o nounset -o pipefail
-shopt -s globstar
+shopt -s nullglob
 
 directory="$(dirname -- "$0")"
 PATH='/usr/bin:/bin'
@@ -57,7 +57,7 @@ then
 fi
 
 verbose_echo "Remove comments from text files"
-for path in ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/cert_override.txt
+for path in ~/.config/vlc/vlcrc ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/*/*/cert_override.txt
 do
     if [ -e "$path" ]
     then
@@ -75,7 +75,7 @@ verbose_echo "Fix .bash_history line endings"
 sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
 
 verbose_echo "Sort text files"
-for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/**/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
+for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/*/*/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
 do
     if [ -e "$path" ]
     then
@@ -94,7 +94,7 @@ do
 done
 
 verbose_echo "Vacuum SQLite databases"
-for db_file in ~/.mozilla/**/*.sqlite
+for db_file in ~/.mozilla/*/*/*.sqlite
 do
     if [ -e "$path" ]
     then
