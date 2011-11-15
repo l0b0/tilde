@@ -164,6 +164,14 @@ set +o nounset
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
 set -o nounset
 
+# Load perlbrew if present
+if [ -r "${HOME}/perl5/perlbrew/etc/bashrc" ]
+then
+    set +o nounset
+    source "${HOME}/perl5/perlbrew/etc/bashrc"
+    set -o nounset
+fi
+
 set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
 
