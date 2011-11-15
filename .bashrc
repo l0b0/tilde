@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [ -z "${PS1:-}" ] && return
 
-set -o errexit -o noclobber -o nounset -o pipefail
+#set -o xtrace -o errexit # Debug
+set -o noclobber -o nounset -o pipefail
 shopt -s nullglob
 
 # Make sure all terminals save history
@@ -35,9 +36,9 @@ LESS="--RAW-CONTROL-CHARS"
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
-    set +o nounset +o errexit
+    set +o nounset
     source /etc/bash_completion
-    set -o nounset -o errexit
+    set -o nounset
 fi
 if [ -r ~/dev/tilde/scripts/__svn_ps1.sh ]
 then
@@ -159,11 +160,11 @@ _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
 # Load RVM into a shell session *as a function*
-set +o nounset +o errexit
+set +o nounset
 [ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
-set -o nounset -o errexit
+set -o nounset
 
-set +o errexit +o noclobber +o nounset +o pipefail
+set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
 
 true
