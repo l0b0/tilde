@@ -620,6 +620,7 @@ vim ~/.bash_aliases
 vim ~/.bash_aliases_local 
 vim ~/.bash_history 
 vim ~/.bashrc 
+vim ~/.bashrc_local 
 vim -c "setfiletype sh" test 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
