@@ -395,6 +395,7 @@ set +o nounset
 ./setup.py test 
 set -x 
 set +x 
+sh 
 sha1sum file 
 shopt -s extglob 
 shopt -s globstar 
