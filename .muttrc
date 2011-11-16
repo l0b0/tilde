@@ -31,6 +31,7 @@ set use_from = yes
 
 ## Recipients
 set alias_file = ~/.mutt_aliases
+source $alias_file
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
 
 # Body
