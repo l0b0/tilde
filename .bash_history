@@ -241,6 +241,7 @@ man locate
 man ls 
 man markdown 
 man mktemp 
+man mutt 
 man mv 
 man nautilus 
 man netstat 
@@ -350,6 +351,9 @@ mkgithub -h
 mkgithub --help 
 mount 
 mutt 
+mutt -d 5 
+mutt -v 
+mutt -vv 
 neato -O -Tsvg *.dot 
 netstat 
 netstat -a 
@@ -623,6 +627,7 @@ vim .gitignore
 vim /lib/udev/rules.d/95-keymap.rules 
 vim Makefile 
 vim ~/.mkgithub 
+vim ~/.muttrc 
 vim ~/.muttrc_local 
 vim README.markdown 
 vim ~/.rvmrc 
