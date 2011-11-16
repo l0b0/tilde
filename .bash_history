@@ -42,6 +42,7 @@ count .
 crontab -e 
 cucumber 
 cucumber --dry-run 
+curl -kL http://xrl.us/perlbrewinstall | bash 
 curl --version 
 cvs log 
 date +%Y-%m-%d 
@@ -244,6 +245,7 @@ man mv
 man nautilus 
 man netstat 
 man patch 
+man perl 
 man ping 
 man pod2man 
 man puppet 
@@ -352,8 +354,10 @@ neato -O -Tsvg *.dot
 netstat 
 netstat -a 
 patch -p0 < patch.diff 
+perlbrew switch 
 perl_modules 
 perl_module_version URI 
+perl --version 
 ping -c 4 example.org 
 ping example.org 
 PREFIX=~ sudo make install 
