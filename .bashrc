@@ -96,6 +96,17 @@ then
 else
     PS1="$PS1"'\u'
 fi
+
+shell_level_prompt()
+{
+    if [ ${SHLVL-0} -ne 1 ]
+    then
+        printf %s $BOLD_FORMAT $WARNING_FORMAT ^ $SHLVL $RESET_FORMAT
+    fi
+}
+
+PS1="${PS1}$(shell_level_prompt)"
+
 PS1="${PS1}@"
 
 if [ -n "${SSH_CONNECTION:-}" ]
