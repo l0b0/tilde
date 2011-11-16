@@ -83,6 +83,7 @@ find . -name '*.orig'
 find . -name '*.orig' -delete 
 firefox -profilemanager 
 fortune 
+gcc --version 
 git 
 git add . 
 git add .gitignore 
@@ -139,7 +140,9 @@ help echo
 help local 
 help printf 
 help read 
+help set 
 help shopt 
+help type 
 help typeset 
 host example.org 
 hostname 
