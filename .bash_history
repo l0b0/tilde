@@ -382,6 +382,7 @@ rvm list known
 rvm notes 
 rvm usage 
 rvm use 
+sandbox="$(mktemp -d)" 
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
@@ -532,6 +533,7 @@ sudo apt-get install xournal
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get update 
+sudo chown nobody "$sandbox" 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
 sudo dpkg-reconfigure ca-certificates 
