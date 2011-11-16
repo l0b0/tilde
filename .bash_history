@@ -622,6 +622,10 @@ vim ~/.bash_history
 vim ~/.bashrc 
 vim ~/.bashrc_local 
 vim -c "setfiletype sh" test 
+vim ~/dev/fgit/fgit.sh 
+vim ~/dev/indentect/indentect.sh 
+vim ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
+vim ~/dev/mkgithub/mkgithub.sh 
 vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/cleanup.sh 
