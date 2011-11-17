@@ -4,4 +4,4 @@ Install
 -------
 
     make test # Optional
-    make install
+    make install # NOT as root
