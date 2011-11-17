@@ -89,6 +89,7 @@ git add .
 git add .gitignore 
 git add LICENSE 
 git add Makefile 
+git add -p 
 git add README.markdown 
 git add tools.mk 
 git checkout . 
@@ -103,6 +104,7 @@ git diff --raw
 git diff --staged 
 git diff --word-diff 
 git gui& 
+git help add 
 git help config 
 git help init 
 git help log 
