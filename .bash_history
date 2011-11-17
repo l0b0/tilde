@@ -169,6 +169,7 @@ killall awesome
 killall firefox 
 killall gdm 
 killall keepassx 
+killall npviewer.bin 
 killall plugin-container 
 komodo & 
 l 
