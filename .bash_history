@@ -375,6 +375,7 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 ps wafux 
+pulseaudio --kill && pulseaudio --start 
 pwd 
 read -r var 
 rmdir * 
