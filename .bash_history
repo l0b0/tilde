@@ -180,6 +180,7 @@ l ~
 la 
 la ~ 
 ldconfig 
+ldd $(which bash) 
 less /etc/issue 
 less /etc/passwd 
 less Makefile 
@@ -243,6 +244,7 @@ man iostat
 man iotop 
 man join 
 man kill 
+man ldd 
 man less 
 man locate 
 man ls 
