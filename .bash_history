@@ -648,6 +648,7 @@ vim .gitignore
 vim /lib/udev/rules.d/95-keymap.rules 
 vim Makefile 
 vim ~/.mkgithub 
+vim ~/.mozilla/firefox/*/chrome/userContent.css 
 vim ~/.muttrc 
 vim ~/.muttrc_local 
 vim README.markdown 
