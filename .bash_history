@@ -40,6 +40,7 @@ cd ~/settings/
 ./configure 
 ./configure --help | less 
 count . 
+cp file{,.orig} 
 crontab -e 
 cucumber 
 cucumber --dry-run 
