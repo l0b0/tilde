@@ -6,6 +6,7 @@ apt-cache showsrc bash
 apt-cache stats bash 
 apt-get source apt 
 bash 
+bash test.sh 
 bash --version 
 bash -x 
 bg 
