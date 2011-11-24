@@ -56,6 +56,7 @@ date +%Y-%m-%d
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
 df -h 
 df -h . 
+diff -u file{.orig,} 
 dirname $PWD 
 dmesg 
 dos2unix file 
@@ -81,8 +82,9 @@ fgit status -- ~/* ~/dev/*
 fgit st -- ~/* ~/dev/* 
 fgit st -sb -- ~/* ~/dev/* 
 find . -empty 
-find . -name '*.orig' 
+find . -empty -delete 
 find . -name '*.orig' -delete 
+find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 fortune 
 gcc --version 
@@ -197,6 +199,7 @@ less /var/log/Xorg.0.log
 ll 
 locale 
 locale -a 
+locate file 
 lpstat -v 
 ls 
 ls -1 
@@ -366,6 +369,7 @@ mutt
 mutt -d 5 
 mutt -v 
 mutt -vv 
+mv file{.orig,} 
 neato -O -Tsvg *.dot 
 netstat 
 netstat -a 
@@ -385,6 +389,7 @@ pulseaudio --kill && pulseaudio --start
 pwd 
 read -r var 
 rmdir * 
+rm file 
 rvm 
 rvm gem install cucumber 
 rvm install 1.9.2 
@@ -667,8 +672,10 @@ vim ~/.xinitrc
 visudo 
 vmware 
 watch 'svn diff' 
+which make 
 while inotifywait -e close_write *.dot; do dot -O -T svg *.dot; done 
 while inotifywait -e close_write *.markdown; do for path in *.markdown; do markdown_page "$path" > "${path%.markdown}.xhtml"; done; done; 
+wine --version 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xev 
 xinput --list 
