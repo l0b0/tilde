@@ -475,6 +475,7 @@ sudo apt-get install jhead
 sudo apt-get install kernel-package 
 sudo apt-get install libc6-dev 
 sudo apt-get install libglade2-dev 
+sudo apt-get install libmysql-java 
 sudo apt-get install libncurses5-dev 
 sudo apt-get install libreadline6 
 sudo apt-get install libreadline6-dev 
