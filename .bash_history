@@ -151,6 +151,7 @@ help set
 help shopt 
 help type 
 help typeset 
+help wait 
 host example.org 
 hostname 
 hostname -s 
@@ -249,12 +250,14 @@ man iostat
 man iotop 
 man join 
 man kill 
+man ld 
 man ldd 
 man less 
 man locate 
 man ls 
 man markdown 
 man mktemp 
+man mount 
 man mutt 
 man mv 
 man nautilus 
@@ -381,6 +384,7 @@ perl_module_version URI
 perl --version 
 ping -c 4 example.org 
 ping example.org 
+pip help 
 PREFIX=~ sudo make install 
 printf %s "${IFS:0:1}" 
 prove 
