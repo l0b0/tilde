@@ -123,6 +123,7 @@ git log Makefile
 git log --oneline --decorate 
 git log --patch-with-stat 
 git mergetool 
+git mv README{,.markdown} 
 git pull 
 git pull origin master 
 git push 
@@ -308,6 +309,7 @@ man wdiff
 man wget 
 man xdg-desktop-menu 
 man xinput 
+markdown_page README.markdown > README.xhtml 
 markdown README.markdown 
 markdown README.markdown > README.html 
 meld . & 
