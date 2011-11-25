@@ -570,6 +570,7 @@ sudo apt-get install xournal
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get update 
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo chown nobody "$sandbox" 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
