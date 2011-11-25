@@ -250,6 +250,7 @@ man hostname
 man id 
 man inotify 
 man inotifywait 
+man install 
 man interfaces 
 man iostat 
 man iotop 
@@ -387,6 +388,7 @@ perlbrew switch
 perl_modules 
 perl_module_version URI 
 perl --version 
+php --version 
 ping -c 4 example.org 
 ping example.org 
 pip help 
