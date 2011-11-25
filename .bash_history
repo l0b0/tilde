@@ -34,6 +34,7 @@ cd ~/dev/schemaspy2svg
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
+cd ~/dev/worktime/ 
 cd /home/$USER/ 
 cd ~/.minecraft/ 
 cd ~/personal/ 
