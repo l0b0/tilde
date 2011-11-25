@@ -30,6 +30,7 @@ cd ~/dev/mian/
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
 cd ~/dev/mount-image/ 
+cd ~/dev/schemaspy2svg 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
@@ -51,6 +52,7 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/backup.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
+~/dev/schemaspy2svg/schemaspy2svg.sh ~/db 
 ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
@@ -406,6 +408,8 @@ rvm notes
 rvm usage 
 rvm use 
 sandbox="$(mktemp -d)" 
+schemaspy2svg ~/db 
+schemaspy2svg --help 
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
@@ -571,6 +575,7 @@ sudo make install
 sudo make install 2>&1 | tee make_install.out~ 
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
+sudo make uninstall 
 sudo mount -a 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
