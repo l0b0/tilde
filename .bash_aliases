@@ -262,22 +262,22 @@ longer()
 
 exclude_cvs()
 {
-    grep -Fv '/CVS/'
+    grep "$@" -Fve '/CVS/'
 }
 
 exclude_svn()
 {
-    grep -Fv '/.svn/'
+    grep "$@" -Fve '/.svn/'
 }
 
 exclude_git()
 {
-    grep -Fv '/.git/'
+    grep "$@" -Fve '/.git/'
 }
 
 exclude_vcs()
 {
-    exclude_cvs | exclude_svn | exclude_git
+    exclude_cvs "$@" | exclude_svn "$@" | exclude_git "$@"
 }
 
 # GNU Make

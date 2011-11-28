@@ -142,6 +142,7 @@ git stash list
 git status 
 glxinfo 
 gnome-screensaver-command -l 
+grep --color=always "string" . | exclude_vcs 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
