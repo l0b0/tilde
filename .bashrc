@@ -10,7 +10,11 @@ set -o noclobber -o nounset -o pipefail
 shopt -s nullglob
 
 # Make sure all terminals save history
-[ -z "${PROMPT_COMMAND:-}" ] && PROMPT_COMMAND="history -a;"
+# Checks that PROMPT_COMMAND is not read-only
+if (unset PROMPT_COMMAND 2> /dev/null)
+then
+    PROMPT_COMMAND='history -a; history -c; history -r;'
+fi
 
 # don't put duplicate lines in the history
 # don't save commands which start with a space
