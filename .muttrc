@@ -17,6 +17,8 @@ bind index,pager \Cv next-unread-mailbox
 macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
 unset mark_old
 set delete = yes
+set pager_context = 2 # Context when going up/down pages
+set pager_index_lines = 8
 
 # Delete via trash
 unset confirmappend
