@@ -90,6 +90,7 @@ find . -empty -delete
 find . -name '*.orig' -delete 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
+firefox -safe-mode 
 fortune 
 gcc --version 
 git 
