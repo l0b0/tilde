@@ -180,6 +180,7 @@ jail
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
 jail -u $USER 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db -I 'null\..*' 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall awesome 
