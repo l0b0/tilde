@@ -127,7 +127,8 @@ fi
 
 # Own developments and requirements
 apt-get install -y libfreetype6-dev libpng12-dev python-docutils
-curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+apt-get install python-pip
+pip install pip --upgrade
 pip install -U isodate
 pip install -Uf http://garr.dl.sourceforge.net/project/matplotlib/matplotlib/matplotlib-1.0.1/matplotlib-1.0.1.tar.gz matplotlib
 
