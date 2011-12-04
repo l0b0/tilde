@@ -46,6 +46,7 @@ curl -kL http://xrl.us/perlbrewinstall | bash
 curl --version 
 cvs log 
 date +%Y-%m-%d 
+~/dev/minecraft-scripts/backup.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/tilde/scripts/cleanup.sh -v 
