@@ -324,6 +324,7 @@ mkgithub ~/dev/img2vcard
 mkgithub ~/dev/indentect 
 mkgithub ~/dev/jail 
 mkgithub ~/dev/job-board 
+mkgithub ~/dev/lines 
 mkgithub ~/dev/lwpb 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
@@ -343,6 +344,7 @@ mkgithub ~/dev/screensaver-info
 mkgithub ~/dev/see-colon 
 mkgithub ~/dev/shunit-ng 
 mkgithub ~/dev/SICP 
+mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
 mkgithub ~/dev/tilde 
 mkgithub ~/dev/txt2cloud 
