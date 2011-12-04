@@ -454,6 +454,7 @@ sudo apt-get install gitk
 sudo apt-get install git-svn 
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
+sudo apt-get install gtk-recordmydesktop 
 sudo apt-get install hugin 
 sudo apt-get install hunspell 
 sudo apt-get install hunspell-de-ch 
@@ -491,6 +492,7 @@ sudo apt-get install linux-source
 sudo apt-get install lynx-cur 
 sudo apt-get install markdown 
 sudo apt-get install meld 
+sudo apt-get install mencoder 
 sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
 sudo apt-get install ncurses-dev 
