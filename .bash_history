@@ -94,7 +94,7 @@ git add README.markdown
 git add tools.mk 
 git checkout . 
 git checkout master 
-git clone git@github.com:l0b0/tilde.git 
+git clone git@github.com:l0b0/mkgithub.git 
 git commit 
 git commit -am "Example" 
 git diff 
