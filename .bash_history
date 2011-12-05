@@ -149,6 +149,7 @@ git stash clear
 git stash && git pull && git stash apply 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
+git stash pop 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn rebase 
