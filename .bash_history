@@ -485,6 +485,7 @@ sudo apt-get install clisp
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
 sudo apt-get install cloc sloccount 
+sudo apt-get install colordiff 
 sudo apt-get install curl 
 sudo apt-get install cvs 
 sudo apt-get install default-jre 
