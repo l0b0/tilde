@@ -85,6 +85,7 @@ echo $TERM
 echo $WINEPREFIX 
 empty_line_before_eof -i * 
 env 
+eval `resize -s 24 80` 
 exit 
 fg 
 fgit pull -- ~/* ~/dev/* 
