@@ -238,6 +238,7 @@ ls -lt
 ls -lt /var/log/ 
 lsmod 
 lsof 
+lsof +c 0 | grep gnome-terminal | wc -l 
 m4 --version 
 make 
 make 2>&1 | tee > make_compile.out~ 
