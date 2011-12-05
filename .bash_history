@@ -190,12 +190,13 @@ info sed
 iostat 
 iotop 
 iotop -bn 1 
+ipython 
 jail 
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
 jail -u $USER 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db -I 'null\..*' 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db -I 'null\..*' 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall awesome 
 killall firefox 
@@ -577,6 +578,7 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
+sudo apt-get install qgit 
 sudo apt-get install rdesktop 
 sudo apt-get install rsync 
 sudo apt-get install ruby-dev 
@@ -609,6 +611,7 @@ sudo dmidecode
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo dpkg-reconfigure ca-certificates 
+sudo iotop 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 
@@ -686,6 +689,7 @@ unetbootin
 unix2dos file 
 unset -a array 
 unset -f function 
+unset REPLY 
 unset var 
 upgrade 
 vcard ~/contacts/*.vcf 
