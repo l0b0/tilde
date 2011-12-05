@@ -12,6 +12,7 @@
 	status = auto
 [merge]
 	conflictstyle = diff3
+	tool = meld
 [gui]
 	diffcontext = 3
 [core]
