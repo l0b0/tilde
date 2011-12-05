@@ -226,6 +226,7 @@ ll
 locale 
 locale -a 
 locate file 
+longest < ~/.bash_history 
 lpstat -v 
 ls 
 ls -1 
