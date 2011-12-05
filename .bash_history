@@ -127,6 +127,7 @@ git help config
 git help init 
 git help log 
 git help remote 
+git help stash 
 git init 
 git log 
 git log Makefile 
@@ -159,6 +160,7 @@ groups $USER
 gunzip example.gz 
 gzip example.txt 
 help echo 
+help history 
 help local 
 help printf 
 help read 
@@ -166,6 +168,7 @@ help set
 help shopt 
 help type 
 help typeset 
+help umask 
 help wait 
 host example.org 
 hostname 
@@ -229,6 +232,7 @@ ls -lt
 ls -lt /var/log/ 
 lsmod 
 lsof 
+m4 --version 
 make 
 make 2>&1 | tee > make_compile.out~ 
 make clean 
@@ -239,15 +243,18 @@ make test
 make test 2>&1 | tee > make_test.out~ 
 make variables 
 man addgroup 
+man apropos 
 man bash 
 man chmod 
 man chroot 
 man comm 
 man cp 
 man curl 
+man cut 
 man diff 
 man dot 
 man dotty 
+man expr 
 man file 
 man find 
 man fmt 
@@ -272,8 +279,10 @@ man kill
 man ld 
 man ldd 
 man less 
+man line 
 man locate 
 man ls 
+man lsof 
 man markdown 
 man mktemp 
 man mount 
@@ -287,6 +296,7 @@ man ping
 man pod2man 
 man puppet 
 man rename 
+man resize 
 man rm 
 man scp 
 man sed 
@@ -306,6 +316,7 @@ man sudo
 man tail 
 man tar 
 man tee 
+man time 
 man tput 
 man tr 
 man trash 
