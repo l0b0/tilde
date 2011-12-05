@@ -229,6 +229,7 @@ locate file
 lpstat -v 
 ls 
 ls -1 
+lshw 
 ls -la 
 ls -lr 
 ls -lt 
@@ -516,6 +517,7 @@ sudo apt-get install imapfilter
 sudo apt-get install inkscape 
 sudo apt-get install inotify-tools 
 sudo apt-get install install 
+sudo apt-get install iotop 
 sudo apt-get install ipython 
 sudo apt-get install jedit 
 sudo apt-get install jhead 
@@ -599,6 +601,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFF
 sudo chown nobody "$sandbox" 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
+sudo dmidecode --type 1 
+sudo dmidecode --type system 
 sudo dpkg-reconfigure ca-certificates 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
