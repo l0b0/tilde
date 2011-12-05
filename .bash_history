@@ -150,6 +150,8 @@ git stash && git pull && git stash apply
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git status 
+git svn clone -s -r 1:HEAD http://svn/repo 
+git svn rebase 
 glxinfo 
 gnome-screensaver-command -l 
 grep --color=always "string" . | exclude_vcs 
