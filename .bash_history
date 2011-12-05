@@ -45,6 +45,7 @@ cd /home/$USER/
 cd ~/.minecraft/ 
 cd ~/personal/ 
 cd ~/settings/ 
+chmod u+x test.sh 
 ./configure 
 ./configure --help | less 
 count . 
