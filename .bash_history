@@ -13,6 +13,12 @@ bg
 builtin 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/*release 
+cat /proc/cpuinfo 
+cat /proc/devices 
+cat /proc/filesystems 
+cat /proc/misc 
+cat /proc/stat 
+cat /proc/vmstat 
 cd 
 cd - 
 cd ./ 
