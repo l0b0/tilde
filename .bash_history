@@ -144,9 +144,8 @@ git rebase --interactive HEAD~20
 git reset HEAD * 
 git st 
 git stash 
-git stash apply 
 git stash clear 
-git stash && git pull && git stash apply 
+git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash pop 
