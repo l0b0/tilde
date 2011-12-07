@@ -114,6 +114,7 @@ git checkout master
 git clone git@github.com:l0b0/mkgithub.git 
 git commit 
 git commit -am "Example" 
+git config --get-all 
 git config -l 
 git diff 
 git diff --ignore-all-space 
