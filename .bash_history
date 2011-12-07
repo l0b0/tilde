@@ -47,6 +47,7 @@ cd ~/.minecraft/
 cd ~/personal/ 
 cd ~/settings/ 
 chmod u+x test.sh 
+cmp -b $(which arch) $(which uname) 
 ./configure 
 ./configure --help | less 
 count . 
@@ -69,6 +70,7 @@ date +%Y-%m-%d
 df -h 
 df -h . 
 diff -u file{.orig,} 
+diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 dirname $PWD 
 dmesg 
 dos2unix file 
@@ -253,9 +255,11 @@ make test 2>&1 | tee > make_test.out~
 make variables 
 man addgroup 
 man apropos 
+man arch 
 man bash 
 man chmod 
 man chroot 
+man cmp 
 man comm 
 man cp 
 man curl 
@@ -332,6 +336,7 @@ man tr
 man trash 
 man ubuntu-bug 
 man udevadm 
+man uname 
 man uniq 
 man updatedb 
 man useradd 
