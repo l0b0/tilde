@@ -350,6 +350,7 @@ man xdg-desktop-menu
 man xinput 
 markdown_page README.markdown > README.xhtml 
 markdown README.markdown 
+markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
 meld . & 
 meld old new& 
