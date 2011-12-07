@@ -294,6 +294,7 @@ man ldd
 man less 
 man line 
 man locate 
+man logger 
 man ls 
 man lsof 
 man lynx 
