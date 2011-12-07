@@ -224,6 +224,7 @@ less /sys/class/dmi/id/sys_vendor
 less /var/log/auth.log 
 less /var/log/dmesg 
 less /var/log/kern.log 
+less /var/log/messages 
 less /var/log/syslog 
 less /var/log/Xorg.0.log 
 /lib/udev/findkeyboards 
