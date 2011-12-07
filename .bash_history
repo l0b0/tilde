@@ -129,6 +129,7 @@ git help init
 git help log 
 git help remote 
 git help stash 
+git help svn 
 git init 
 git log 
 git log Makefile 
@@ -290,6 +291,7 @@ man line
 man locate 
 man ls 
 man lsof 
+man lynx 
 man markdown 
 man mktemp 
 man mount 
