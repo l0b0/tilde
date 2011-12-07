@@ -5,6 +5,7 @@ apt-cache show bash
 apt-cache showsrc bash 
 apt-cache stats bash 
 apt-get source apt 
+arch 
 bash 
 bash test.sh 
 bash --version 
@@ -688,6 +689,7 @@ traceroute
 ubuntu-bug linux 
 udevadm info --export-db 
 uname -a 
+uname -m 
 unetbootin 
 unix2dos file 
 unset -a array 
