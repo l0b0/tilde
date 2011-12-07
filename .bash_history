@@ -58,6 +58,8 @@ cucumber --dry-run
 curl -kL http://xrl.us/perlbrewinstall | bash 
 curl --version 
 cvs log 
+date --date="2001-09-09 03:46:40+02:00" +%s 
+date --rfc-3339=seconds --date="@1000000000" 
 date +%Y-%m-%d 
 ~/dev/minecraft-scripts/backup.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh 
@@ -265,6 +267,7 @@ man comm
 man cp 
 man curl 
 man cut 
+man date 
 man diff 
 man dot 
 man dotty 
