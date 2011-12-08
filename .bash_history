@@ -452,6 +452,7 @@ pry
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 pwd 
+qgit .& 
 read -r var 
 rmdir * 
 rm file 
