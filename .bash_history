@@ -443,19 +443,23 @@ PREFIX=~ sudo make install
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
+pry 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 pwd 
 read -r var 
 rmdir * 
 rm file 
+ruby -v 
 rvm 
 rvm gem install cucumber 
+rvm info 
 rvm install 1.9.2 
 rvm list known 
 rvm notes 
 rvm usage 
 rvm use 
+rvm use 1.9.3-p0 
 sandbox="$(mktemp -d)" 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
