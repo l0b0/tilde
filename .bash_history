@@ -117,6 +117,7 @@ git add tools.mk
 git checkout . 
 git checkout master 
 git clone git@github.com:l0b0/mkgithub.git 
+git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
 git config --get-all 
