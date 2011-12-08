@@ -151,6 +151,7 @@ git push --force
 git push -u origin master 
 git rebase --continue 
 git rebase --interactive HEAD~20 
+git remote -v show 
 git reset HEAD * 
 git reset --soft HEAD~1 
 git st 
