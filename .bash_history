@@ -202,6 +202,7 @@ info sed
 iostat 
 iotop 
 iotop -bn 1 
+ip r 
 ipython 
 jail 
 jail -d /var/jail/ 
@@ -297,6 +298,7 @@ man install
 man interfaces 
 man iostat 
 man iotop 
+man ip 
 man join 
 man kill 
 man ld 
@@ -323,6 +325,7 @@ man puppet
 man rename 
 man resize 
 man rm 
+man route 
 man scp 
 man sed 
 man seq 
@@ -458,6 +461,7 @@ qgit .&
 read -r var 
 rmdir * 
 rm file 
+route 
 ruby -v 
 rvm 
 rvm gem install cucumber 
