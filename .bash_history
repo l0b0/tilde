@@ -149,8 +149,10 @@ git pull origin master
 git push 
 git push --force 
 git push -u origin master 
+git rebase --continue 
 git rebase --interactive HEAD~20 
 git reset HEAD * 
+git reset --soft HEAD~1 
 git st 
 git stash 
 git stash clear 
