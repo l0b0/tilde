@@ -385,6 +385,7 @@ mkgithub ~/dev/digbuild
 mkgithub ~/dev/export 
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
+mkgithub ~/dev/generate-password 
 mkgithub ~/dev/highlight 
 mkgithub ~/dev/https-everywhere 
 mkgithub ~/dev/Hypervolume 
