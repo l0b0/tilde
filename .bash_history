@@ -130,6 +130,7 @@ git diff --staged
 git diff --word-diff 
 git gui& 
 git help add 
+git help clone 
 git help config 
 git help init 
 git help log 
@@ -160,6 +161,7 @@ git stash pop
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn rebase 
+git --version 
 glxinfo 
 gnome-screensaver-command -l 
 grep --color=always "string" . | exclude_vcs 
