@@ -1,3 +1,4 @@
+aplay -L 
 apropos bash 
 apt-cache depends bash 
 apt-cache search bash 
