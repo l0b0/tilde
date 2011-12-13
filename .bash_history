@@ -121,6 +121,7 @@ git clone https://github.com/terreActive/redmine.git
 git commit 
 git commit -am "Example" 
 git config --get-all 
+git config --global github.user l0b0 
 git config -l 
 git diff 
 git diff --ignore-all-space 
