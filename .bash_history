@@ -324,6 +324,7 @@ man perl
 man ping 
 man pod2man 
 man puppet 
+man recordmydesktop 
 man rename 
 man resize 
 man rm 
@@ -463,6 +464,7 @@ pulseaudio --kill && pulseaudio --start
 pwd 
 qgit .& 
 read -r var 
+recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rmdir * 
 rm file 
 route 
