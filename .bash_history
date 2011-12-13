@@ -362,7 +362,9 @@ man wc
 man wdiff 
 man wget 
 man xdg-desktop-menu 
+man xdotool 
 man xinput 
+man xwininfo 
 markdown_page README.markdown > README.xhtml 
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
@@ -774,3 +776,4 @@ xinput --list 10
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xwininfo -id $(xdotool selectwindow) 
