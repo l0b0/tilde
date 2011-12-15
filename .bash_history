@@ -383,6 +383,7 @@ sudo reboot
 sudo rm -rf ~/build ~/src 
 sudo updatedb 
 sudo update-grub 
+sudo update-java-alternatives --jre -s java-6-sun 
 sudo vim /etc/fstab 
 sudo Xorg :1 -configure 
 svn add . 
