@@ -281,6 +281,7 @@ man date
 man diff 
 man dot 
 man dotty 
+man errno 
 man expr 
 man file 
 man find 
