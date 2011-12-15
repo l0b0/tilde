@@ -473,7 +473,7 @@ rm file
 route 
 ruby -v 
 rvm 
-rvm gem install cucumber 
+rvm all do gem install cucumber 
 rvm info 
 rvm install 1.9.2 
 rvm list known 
