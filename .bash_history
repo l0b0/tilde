@@ -475,6 +475,8 @@ ruby -v
 rvm 
 rvm all do gem install cucumber 
 rvm all do gem install pry pry-doc 
+rvm help do 
+rvm help install 
 rvm info 
 rvm install 1.9.2 
 rvm list known 
