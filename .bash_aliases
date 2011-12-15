@@ -497,7 +497,7 @@ markdown_page()
 {
     # Add stuff to markdown output to make it valid XHTML 1.0 Strict with
     # unambiguous encoding.
-    # @param $1...: markdown options and/or input files
+    # @param $1...: markdown input files
 
     echo '<?xml version="1.0" encoding="utf-8"?>'
     echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"'
@@ -507,9 +507,12 @@ markdown_page()
     echo '<title>Markdown</title>'
     echo '</head>'
     echo '<body>'
-    markdown "$@"
     echo '</body>'
     echo '</html>'
+    for path
+    do
+        markdown "$path"
+    done
 }
 
 valid_ipv4()
