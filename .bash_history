@@ -320,6 +320,7 @@ man mutt
 man mv 
 man nautilus 
 man netstat 
+man nl 
 man patch 
 man perl 
 man ping 
@@ -445,6 +446,7 @@ mv file{.orig,}
 neato -O -Tsvg *.dot 
 netstat 
 netstat -a 
+nl ~/.bashrc 
 patch -p0 < patch.diff 
 perlbrew switch 
 perl_modules 
