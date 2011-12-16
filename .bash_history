@@ -87,6 +87,8 @@ echo $COLUMNS
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
 echo "$PATH" 
+echo $PROMPT_COMMAND 
+echo $REPLY 
 echo $TERM 
 echo $WINEPREFIX 
 empty_line_before_eof -i * 
