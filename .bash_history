@@ -470,7 +470,9 @@ ps wafux
 pulseaudio --kill && pulseaudio --start 
 pwd 
 qgit .& 
+read <<< "$text" 
 read -r var 
+read < "/path"
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rmdir * 
 rm file 
