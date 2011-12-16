@@ -351,6 +351,7 @@ man tail
 man tar 
 man tee 
 man time 
+man timeout 
 man tput 
 man tr 
 man trash 
@@ -723,6 +724,7 @@ tail -F /var/log/messages
 ./test.sh "first argument" "second argument" 
 thunderbird -profilemanager 
 time make test 
+timeout 1 sleep 2 
 top 
 tput colors 
 traceroute 
