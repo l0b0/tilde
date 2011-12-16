@@ -206,6 +206,8 @@ info sed
 iostat 
 iotop 
 iotop -bn 1 
+ip link show 
+ip link show up 
 ip r 
 ipython 
 jail 
