@@ -29,6 +29,8 @@ cd ~/contacts/
 cd ~/dev/bm 
 cd ~/dev/count/ 
 cd ~/dev/csv2zarafa-contacts/ 
+cd ~/dev/dialogue/ 
+cd ~/dev/dialogue.wiki/ 
 cd ~/dev/difff/ 
 cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
@@ -395,6 +397,8 @@ mkgithub ~/dev/coin-sorter
 mkgithub ~/dev/count 
 mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
+mkgithub ~/dev/dialogue 
+mkgithub ~/dev/dialogue.wiki 
 mkgithub ~/dev/difff 
 mkgithub ~/dev/diff-ignore-moved-lines 
 mkgithub ~/dev/digbuild 
