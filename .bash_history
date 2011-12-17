@@ -783,8 +783,7 @@ visudo
 vmware 
 watch 'svn diff' 
 which make 
-while IFS= read -r -u 9; do dot -O -T svg "$REPLY"; done 9< <(inotifywait -e close_write --format %w -m *.dot) 
-while IFS= read -r -u 9; do markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; done 9< <(inotifywait -e close_write --format %w -m *.markdown) 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 wine --version 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xev 
