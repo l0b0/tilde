@@ -26,7 +26,7 @@ cd -
 cd ./ 
 cd ../ 
 cd ~/contacts/ 
-cd ~/dev/bm 
+cd ~/dev/bm/ 
 cd ~/dev/count/ 
 cd ~/dev/csv2zarafa-contacts/ 
 cd ~/dev/dialogue/ 
@@ -40,7 +40,8 @@ cd ~/dev/mian/
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
 cd ~/dev/mount-image/ 
-cd ~/dev/schemaspy2svg 
+cd ~/dev/schemaspy2svg/ 
+cd ~/dev/shunit-ng/ 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
