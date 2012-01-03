@@ -90,6 +90,9 @@ echo $COLUMNS
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
 echo "$PATH" 
+echo "${paths[@]}" 
+echo "${paths[0]}" 
+echo "${paths[@]: -1}" 
 echo $PROMPT_COMMAND 
 echo $REPLY 
 echo $TERM 
