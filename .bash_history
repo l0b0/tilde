@@ -486,6 +486,7 @@ pulseaudio --kill && pulseaudio --start
 pwd 
 qgit .& 
 read <<< "$text" 
+rails server 
 rails -v 
 read -r var 
 read < "/path"
