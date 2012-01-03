@@ -500,6 +500,7 @@ rvm all do gem install rails
 rvm all do gem install sqlite3 
 rvm help do 
 rvm help install 
+rvm help use 
 rvm info 
 rvm install 1.9.2 
 rvm list known 
@@ -509,6 +510,7 @@ rvm use
 rvm use 1.9.3-p0 
 rvm use system 
 rvm use system --default 
+rvm version 
 sandbox="$(mktemp -d)" 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
