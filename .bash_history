@@ -203,6 +203,7 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+IFS=':' read -a paths <<< "$PATH" 
 imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
