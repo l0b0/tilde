@@ -107,6 +107,7 @@ fgit st -sb -- ~/* ~/dev/*
 find . -empty 
 find . -empty -delete 
 find . -name '*.orig' -delete 
+find . -printf x | wc -c 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 firefox -safe-mode 
