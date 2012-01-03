@@ -14,12 +14,10 @@ set background=dark
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
-
-    " Uncomment the following to have Vim load indentation rules according to the
-    " detected filetype. Per default Debian Vim only load filetype specific
-    " plugins.
-    filetype indent on
 endif
+
+" Load indentation rules according to the detected filetype
+filetype plugin indent on
 
 " Show (partial) command in status line
 set showcmd
