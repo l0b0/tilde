@@ -13,6 +13,8 @@ bash --version
 bash -x 
 bg 
 builtin 
+bundle install 
+bundle update 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/*release 
 cat /proc/cpuinfo 
