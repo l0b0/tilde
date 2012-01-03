@@ -464,6 +464,7 @@ netstat
 netstat -a 
 nl ~/.bashrc 
 patch -p0 < patch.diff 
+PATH=$(IFS=':'; echo "${paths[*]}") 
 perlbrew switch 
 perl_modules 
 perl_module_version URI 
