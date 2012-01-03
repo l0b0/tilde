@@ -50,7 +50,9 @@ set backspace=indent,eol,start
 set pastetoggle=<F2>
 
 " Indentation/tabs
-autocmd FileType * set tabstop=4|set shiftwidth=4|set expandtab
+set tabstop=4
+set shiftwidth=4
+set expandtab
 nmap <silent> ]] :let &tabstop += 1 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0 <CR> :echo 'tabstop =' &tabstop <CR>
 
