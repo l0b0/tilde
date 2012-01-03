@@ -53,6 +53,7 @@ set pastetoggle=<F2>
 set tabstop=4
 set shiftwidth=4
 set expandtab
+autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
 nmap <silent> ]] :let &tabstop += 1 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0 <CR> :echo 'tabstop =' &tabstop <CR>
 
