@@ -493,6 +493,7 @@ rails -v
 rake db:migrate 
 rake db:rollback 
 rake db:seed 
+rake test 
 read -r var 
 read < "/path"
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
