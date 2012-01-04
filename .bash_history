@@ -668,6 +668,7 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install unrar-free 
 sudo apt-get install vim 
+sudo apt-get install vim-rails 
 sudo apt-get install vlc 
 sudo apt-get install wget 
 sudo apt-get install wine 
