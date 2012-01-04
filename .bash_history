@@ -489,6 +489,8 @@ rails generate scaffold Thing name:string description:text valid_until:datetime 
 rails new project-name 
 read <<< "$text" 
 rails server 
+rails server -e production -p 3002 
+rails server -e test -p 3001 
 rails -v 
 rake db:migrate 
 rake db:rollback 
