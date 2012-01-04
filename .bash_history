@@ -485,6 +485,7 @@ ps wafux
 pulseaudio --kill && pulseaudio --start 
 pwd 
 qgit .& 
+rails new project-name 
 read <<< "$text" 
 rails server 
 rails -v 
