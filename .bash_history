@@ -13,6 +13,8 @@ bash --version
 bash -x 
 bg 
 builtin 
+bundle install 
+bundle update 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/*release 
 cat /proc/cpuinfo 
@@ -90,6 +92,9 @@ echo $COLUMNS
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
 echo "$PATH" 
+echo "${paths[@]}" 
+echo "${paths[0]}" 
+echo "${paths[@]: -1}" 
 echo $PROMPT_COMMAND 
 echo $REPLY 
 echo $TERM 
@@ -107,11 +112,14 @@ fgit st -sb -- ~/* ~/dev/*
 find . -empty 
 find . -empty -delete 
 find . -name '*.orig' -delete 
+find . -printf x | wc -c 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 firefox -safe-mode 
 fortune 
 gcc --version 
+gem list --help 
+gem list --local 
 git 
 git add . 
 git add .gitignore 
@@ -202,6 +210,7 @@ id $USER
 ifconfig 
 ifconfig -a 
 ifconfig -a eth0 
+IFS=':' read -a paths <<< "$PATH" 
 imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -459,6 +468,7 @@ netstat
 netstat -a 
 nl ~/.bashrc 
 patch -p0 < patch.diff 
+PATH=$(IFS=':'; echo "${paths[*]}") 
 perlbrew switch 
 perl_modules 
 perl_module_version URI 
@@ -477,7 +487,17 @@ ps wafux
 pulseaudio --kill && pulseaudio --start 
 pwd 
 qgit .& 
+rails generate scaffold Thing name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
+rails new project-name 
 read <<< "$text" 
+rails server 
+rails server -e production -p 3002 
+rails server -e test -p 3001 
+rails -v 
+rake db:migrate 
+rake db:rollback 
+rake db:seed 
+rake test 
 read -r var 
 read < "/path"
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
@@ -488,15 +508,21 @@ ruby -v
 rvm 
 rvm all do gem install cucumber 
 rvm all do gem install pry pry-doc 
+rvm all do gem install rails 
+rvm all do gem install sqlite3 
 rvm help do 
 rvm help install 
+rvm help use 
 rvm info 
 rvm install 1.9.2 
 rvm list known 
 rvm notes 
+rvm --rvmrc --create ruby-1.9.3-p0@project-name 
 rvm usage 
-rvm use 
 rvm use 1.9.3-p0 
+rvm use system 
+rvm use system --default 
+rvm version 
 sandbox="$(mktemp -d)" 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
@@ -512,6 +538,7 @@ set +o nounset
 ./setup.py test 
 set -x 
 set +x 
+setxkbmap -v | awk -F "+" '/symbols/ {print $2}' 
 sh 
 sha1sum file 
 shopt -s extglob 
@@ -652,6 +679,7 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install unrar-free 
 sudo apt-get install vim 
+sudo apt-get install vim-rails 
 sudo apt-get install vlc 
 sudo apt-get install wget 
 sudo apt-get install wine 
@@ -789,6 +817,7 @@ vmware
 watch 'svn diff' 
 which make 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
 wine --version 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xev 

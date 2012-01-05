@@ -1,36 +1,47 @@
+" Not running Vi
 set nocompatible
 
-" Vim5 and later versions support syntax highlighting. Uncommenting the next
-" line enables syntax highlighting by default.
+" Syntax highlighting
 syntax on
 
+" Command history
 set history=1000
 
 " If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
 set background=dark
 
+" Jump to the last position when reopening a file
 if has("autocmd")
-    " Jump to the last position when reopening a file
     au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
-
-    " Uncomment the following to have Vim load indentation rules according to the
-    " detected filetype. Per default Debian Vim only load filetype specific
-    " plugins.
-    filetype indent on
 endif
 
-" The following are commented out as they cause vim to behave a lot
-" differently from regular Vi. They are highly recommended though.
-set showcmd     " Show (partial) command in status line.
-set showmatch   " Show matching brackets.
-set ignorecase  " Do case insensitive matching
-set smartcase   " Do smart case matching
-set incsearch   " Incremental search
-set autowrite   " Automatically save before commands like :next and :make
-set hidden      " Hide buffers when they are abandoned
-"set mouse=a     " Enable mouse usage (all modes) in terminals
+" Load indentation rules according to the detected filetype
+filetype plugin indent on
+
+" Show (partial) command in status line
+set showcmd
+
+" Show matching brackets.
+set showmatch
+
+" Do case insensitive matching
+set ignorecase
+
+" Do smart case matching
+set smartcase
+
+" Incremental search
+set incsearch
+
+" Automatically save before commands like :next and :make
+set autowrite
+
+" Hide buffers when they are abandoned
+set hidden
+
+" Enable mouse usage (all modes) in terminals
+"set mouse=a
 
 " Backspace behaving as in other editors
 set backspace=indent,eol,start
@@ -39,10 +50,14 @@ set backspace=indent,eol,start
 set pastetoggle=<F2>
 
 " Indentation/tabs
-autocmd FileType * set tabstop=4|set shiftwidth=4|set expandtab
-autocmd FileType make set tabstop=8|set shiftwidth=8|set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set expandtab
+autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
 nmap <silent> ]] :let &tabstop += 1 <CR> :echo 'tabstop =' &tabstop <CR>
 nmap <silent> [[ :let &tabstop -= &tabstop > 1 ? 1 : 0 <CR> :echo 'tabstop =' &tabstop <CR>
+
+" Switch between tabs and spaces for indentation
 nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
 
 " Replace CR with LF
