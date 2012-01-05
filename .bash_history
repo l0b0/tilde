@@ -118,6 +118,8 @@ firefox -profilemanager
 firefox -safe-mode 
 fortune 
 gcc --version 
+gem list --help 
+gem list --local 
 git 
 git add . 
 git add .gitignore 
