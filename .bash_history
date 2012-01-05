@@ -538,6 +538,7 @@ set +o nounset
 ./setup.py test 
 set -x 
 set +x 
+setxkbmap -v | awk -F "+" '/symbols/ {print $2}' 
 sh 
 sha1sum file 
 shopt -s extglob 
