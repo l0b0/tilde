@@ -518,7 +518,6 @@ rvm install 1.9.2
 rvm list known 
 rvm notes 
 rvm usage 
-rvm use 
 rvm use 1.9.3-p0 
 rvm use system 
 rvm use system --default 
