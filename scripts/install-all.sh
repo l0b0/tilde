@@ -1,36 +1,25 @@
-#!/bin/sh
-# Last updated to Ubuntu 11.10
+!/bin/sh
+# Last updated to Linux Mint 12
 
 apt-get update
-
-# Remove junk
-apt-get remove -y ubuntuone-client
 
 # Misc
 apt-get install cloc sloccount
 apt-get install compizconfig-settings-manager
 apt-get install curl
-apt-get install default-jre
 apt-get install -y keepassx # keepass2 is not ready for production
 apt-get install markdown
 apt-get install openssh-server
-apt-get install -y sun-java6-jre
-update-java-alternatives --jre -s java-6-sun
-apt-get install sun-java6-fonts
-apt-get install -y unrar-free
 apt-get install wine
 
 # Email clients
 apt-get install mutt
-apt-get install thunderbird
 
 # Email handling
 apt-get install enscript
 apt-get install imapfilter
 
 # Editors
-apt-get install gedit
-apt-get install gedit-developer-plugins
 apt-get install -y jedit
 apt-get install -y vim
 
@@ -42,17 +31,14 @@ apt-get install subversion
 
 # Graphics
 apt-get install feh
-apt-get install -y gimp
 apt-get install gimp-help-en
 apt-get install hugin
-apt-get install imagemagick
 apt-get install imagemagick-doc
 apt-get install inkscape
 apt-get install jhead
 apt-get install graphviz
 apt-get install graphviz-doc
 apt-get install -y pngcrush
-apt-get install python-pydot
 
 # Database
 apt-get install -y sqlite3
@@ -70,26 +56,9 @@ apt-get install python2.6-dev
 apt-get install python2.6-doc
 apt-get install python-dev
 apt-get install python-doc
-apt-get install python-lxml
-apt-get install python-profiler
-apt-get install python-setuptools
-
-# LISP
-apt-get install bison-doc
-apt-get install clisp
-apt-get install clisp-dev
-apt-get install clisp-doc
-apt-get install sbcl
 
 # Compiling
 apt-get install build-essential
-
-# Spell checking
-apt-get install hunspell
-apt-get install hunspell-de-ch
-apt-get install hunspell-de-de
-apt-get install hunspell-en-us
-apt-get install hunspell-fr
 
 # PDF
 apt-get install pdftk
@@ -97,11 +66,9 @@ apt-get install xournal
 
 # Entertainment
 apt-get install comix
-apt-get install adobe-flashplugin ttf-bitstream-vera ttf-dejavu ttf-xfree86-nonfree
-apt-get install gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-bad gstreamer0.10-plugins-base gstreamer0.10-plugins-ugly
+apt-get install ttf-bitstream-vera ttf-xfree86-nonfree
 apt-get install smplayer
 apt-get install mplayer-doc
-apt-get install vlc
 
 # Games
 apt-get install beneath-a-steel-sky
@@ -126,7 +93,7 @@ then
 fi
 
 # Own developments and requirements
-apt-get install -y libfreetype6-dev libpng12-dev python-docutils
+apt-get install -y python-docutils
 apt-get install python-pip
 pip install pip --upgrade
 pip install -U isodate
