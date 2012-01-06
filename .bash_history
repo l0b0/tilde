@@ -71,7 +71,7 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db 
-~/dev/tilde/scripts/cleanup.sh -v 
+ ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
@@ -535,7 +535,7 @@ scp -P 2222 example.org:/home/jdoe/example.txt .
 scp -r file example.org:~ 
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
-sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+ sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
 set +o noclobber 
 set -o nounset 
 set +o nounset 
@@ -550,7 +550,7 @@ shopt -s globstar
 shopt -s nullglob 
 shopt -u nullglob 
 sloccount . 
-sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
+ sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
@@ -785,7 +785,7 @@ upgrade
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
 vim ~/.bash_aliases_local 
-vim ~/.bash_history 
+ vim ~/.bash_history 
 vim ~/.bashrc 
 vim ~/.bashrc_local 
 vim -c "setfiletype sh" test 
@@ -793,7 +793,6 @@ vim ~/dev/fgit/fgit.sh
 vim ~/dev/indentect/indentect.sh 
 vim ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
 vim ~/dev/mkgithub/mkgithub.sh 
-vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/cleanup.sh 
 vim ~/dev/tilde/scripts/install-all.sh 
