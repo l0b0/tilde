@@ -490,6 +490,7 @@ pulseaudio --kill && pulseaudio --start
 pwd 
 qgit .& 
 rails destroy scaffold Thing 
+rails generate migration add_attributes_to_thing username:string price:decimal 
 rails generate scaffold Thing name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
 rails new project-name 
 read <<< "$text" 
