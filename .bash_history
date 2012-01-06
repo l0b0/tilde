@@ -147,6 +147,7 @@ git gui&
 git help add 
 git help clone 
 git help config 
+git help diff 
 git help init 
 git help log 
 git help remote 
