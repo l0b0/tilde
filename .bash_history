@@ -493,7 +493,6 @@ rails destroy scaffold Thing
 rails generate migration add_attributes_to_thing username:string price:decimal 
 rails generate scaffold Thing name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
 rails new project-name 
-read <<< "$text" 
 rails server 
 rails server -e production -p 3002 
 rails server -e test -p 3001 
@@ -502,8 +501,9 @@ rake db:migrate
 rake db:rollback 
 rake db:seed 
 rake test 
+read < "/path" 
 read -r var 
-read < "/path"
+read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rmdir * 
 rm file 
