@@ -480,6 +480,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 PREFIX=~ sudo make install 
+printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
