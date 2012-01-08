@@ -291,6 +291,7 @@ man chroot
 man cmp 
 man comm 
 man cp 
+man crontab 
 man curl 
 man cut 
 man date 
@@ -305,6 +306,7 @@ man fmt
 man fortune 
 man getopt 
 man gksu 
+man gnome-shell 
 man gnome-terminal 
 man gpg 
 man grep 
