@@ -622,6 +622,7 @@ sudo apt-get install libssl-dev
 sudo apt-get install libtiff-tools 
 sudo apt-get install libtool 
 sudo apt-get install libxml2-dev 
+sudo apt-get install libxml-simple-perl 
 sudo apt-get install libxslt1-dev 
 sudo apt-get install libxslt-dev 
 sudo apt-get install libyaml-dev 
