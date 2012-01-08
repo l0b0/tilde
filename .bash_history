@@ -60,6 +60,7 @@ cmp -b $(which arch) $(which uname)
 count . 
 cp file{,.orig} 
 crontab -e 
+crontab -l 
 cucumber 
 cucumber --dry-run 
 curl -kL http://xrl.us/perlbrewinstall | bash 
