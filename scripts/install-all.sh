@@ -39,6 +39,7 @@ apt-get install jhead
 apt-get install graphviz
 apt-get install graphviz-doc
 apt-get install -y pngcrush
+apt-get install shotwell
 
 # Database
 apt-get install -y sqlite3
