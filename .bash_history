@@ -34,6 +34,7 @@ cd ~/dev/csv2zarafa-contacts/
 cd ~/dev/dialogue/ 
 cd ~/dev/dialogue.wiki/ 
 cd ~/dev/difff/ 
+cd ~/dev/export/ 
 cd ~/dev/fgit/ 
 cd ~/dev/https-everywhere/ 
 cd ~/dev/indentect/ 
