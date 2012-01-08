@@ -71,7 +71,7 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/install-Minecraft.sh 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db 
-~/dev/tilde/scripts/cleanup.sh -v 
+ ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
@@ -147,6 +147,7 @@ git gui&
 git help add 
 git help clone 
 git help config 
+git help diff 
 git help init 
 git help log 
 git help remote 
@@ -481,6 +482,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 PREFIX=~ sudo make install 
+printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
@@ -489,9 +491,10 @@ ps wafux
 pulseaudio --kill && pulseaudio --start 
 pwd 
 qgit .& 
+rails destroy scaffold Thing 
+rails generate migration add_attributes_to_thing username:string price:decimal 
 rails generate scaffold Thing name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
 rails new project-name 
-read <<< "$text" 
 rails server 
 rails server -e production -p 3002 
 rails server -e test -p 3001 
@@ -500,8 +503,9 @@ rake db:migrate
 rake db:rollback 
 rake db:seed 
 rake test 
+read < "/path" 
 read -r var 
-read < "/path"
+read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rmdir * 
 rm file 
@@ -533,7 +537,7 @@ scp -P 2222 example.org:/home/jdoe/example.txt .
 scp -r file example.org:~ 
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
-sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+ sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
 set +o noclobber 
 set -o nounset 
 set +o nounset 
@@ -548,7 +552,7 @@ shopt -s globstar
 shopt -s nullglob 
 shopt -u nullglob 
 sloccount . 
-sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
+ sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
@@ -784,7 +788,7 @@ upgrade
 vcard ~/contacts/*.vcf 
 vim ~/.bash_aliases 
 vim ~/.bash_aliases_local 
-vim ~/.bash_history 
+ vim ~/.bash_history 
 vim ~/.bashrc 
 vim ~/.bashrc_local 
 vim -c "setfiletype sh" test 
@@ -792,7 +796,6 @@ vim ~/dev/fgit/fgit.sh
 vim ~/dev/indentect/indentect.sh 
 vim ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
 vim ~/dev/mkgithub/mkgithub.sh 
-vim ~/dev/tilde/.bash_history 
 vim ~/dev/tilde/.muttrc 
 vim ~/dev/tilde/scripts/cleanup.sh 
 vim ~/dev/tilde/scripts/install-all.sh 
