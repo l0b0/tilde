@@ -493,10 +493,10 @@ ps wafux
 pulseaudio --kill && pulseaudio --start 
 pwd 
 qgit .& 
-rails destroy scaffold Thing 
+rails destroy scaffold model_name 
 rails generate migration add_attributes_to_thing username:string price:decimal 
-rails generate scaffold Thing name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
-rails new project-name 
+rails generate scaffold model_name name:string description:text valid_until:datetime next_check:date counter:integer image:binary valid:boolean curvature:float value:decimal run:time server_time:timestamp 
+rails new project_name 
 rails server 
 rails server -e production -p 3002 
 rails server -e test -p 3001 
