@@ -558,6 +558,7 @@ sloccount .
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
+sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
 ssh example.org 
 ssh example.org uptime 
