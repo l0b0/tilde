@@ -548,6 +548,8 @@ sed -e '/^[[:space:]]*$/d' file
 set +o noclobber 
 set -o nounset 
 set +o nounset 
+set -o pipefail 
+set +o pipefail 
 ./setup.py test 
 set -x 
 set +x 
