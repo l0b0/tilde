@@ -66,6 +66,7 @@ cmp -b $(which arch) $(which uname)
 ./configure --help | less 
 count . 
 cp file{,.orig} 
+createdb -T template0 -U username test 
 crontab -e 
 crontab -l 
 cucumber 
@@ -94,6 +95,7 @@ dot -Tsvg graph.dot
 dotty graph.dot 
 dpkg -s bash 
 dpkg -S "$(which apt-get)" 
+dropdb -U username test 
 echo $? 
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
@@ -300,6 +302,7 @@ man chroot
 man cmp 
 man comm 
 man cp 
+man createdb 
 man crontab 
 man curl 
 man cut 
