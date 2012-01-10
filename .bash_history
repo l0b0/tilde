@@ -359,6 +359,7 @@ man seq
 man sh 
 man shunit2 
 man signal 
+man sleep 
 man sort 
 man ssh 
 man ssh_config 
@@ -555,6 +556,7 @@ shopt -s extglob
 shopt -s globstar 
 shopt -s nullglob 
 shopt -u nullglob 
+sleep 1m 
 sloccount . 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
