@@ -113,6 +113,7 @@ env
 eval `resize -s 24 80` 
 exit 
 fg 
+fgit gc --aggressive -- ~/dev/*/ ~/.*/ 
 fgit pull -- ~/* ~/dev/* 
 fgit push -- ~/* ~/dev/* 
 fgit status -- ~/* ~/dev/* 
