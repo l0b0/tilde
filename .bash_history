@@ -118,6 +118,7 @@ fgit status -- ~/*/ ~/.*/ ~/dev/*/
 fgit status -sb -- ~/*/ ~/.*/ ~/dev/*/ 
 find . -empty 
 find . -empty -delete 
+find . -name '*.marks' -delete 
 find . -name '*.orig' -delete 
 find . -printf x | wc -c 
 find . -type f -name file | exclude_vcs 
