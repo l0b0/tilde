@@ -664,6 +664,7 @@ sudo apt-get install openssh-server
 sudo apt-get install openssl 
 sudo apt-get install pdftk 
 sudo apt-get install pep8 
+sudo apt-get install pgadmin3 
 sudo apt-get install php5-cli 
 sudo apt-get install php5-dev php-pear 
 sudo apt-get install pidgin 
