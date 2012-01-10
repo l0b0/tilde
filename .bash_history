@@ -186,6 +186,7 @@ git --version
 glxinfo 
 gnome-screensaver-command -l 
 grep --color=always "string" . | exclude_vcs 
+grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c 
 grep -r --exclude-dir .svn '' . 
 grep -r '' . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
