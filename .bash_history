@@ -15,6 +15,12 @@ bg
 builtin 
 bundle install 
 bundle update 
+cap 
+cap deploy 
+cap deploy:check 
+cap deploy:migrations 
+cap deploy:rollback 
+cap deploy:setup 
 capify . 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/*release 
