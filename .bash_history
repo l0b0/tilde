@@ -177,7 +177,6 @@ git rebase --continue
 git rebase --interactive HEAD~20 
 git remote -v show 
 git reset HEAD^ 
-git st 
 git stash 
 git stash clear 
 git stash && git pull && git stash pop 
