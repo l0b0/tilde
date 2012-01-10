@@ -15,6 +15,7 @@ bg
 builtin 
 bundle install 
 bundle update 
+capify . 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/*release 
 cat /proc/cpuinfo 
