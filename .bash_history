@@ -356,6 +356,7 @@ man patch
 man perl 
 man ping 
 man pod2man 
+man psql 
 man puppet 
 man recordmydesktop 
 man rename 
@@ -499,6 +500,7 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 pry 
+psql test username < dump.sql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 pwd 
