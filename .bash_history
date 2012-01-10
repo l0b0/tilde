@@ -237,6 +237,7 @@ jail -d /var/jail/ -u $USER
 jail -u $USER 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -s schema -u user -p password -o ~/db -I 'null\..*' 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 killall awesome 
 killall firefox 
@@ -634,6 +635,7 @@ sudo apt-get install libc6-dev
 sudo apt-get install libglade2-dev 
 sudo apt-get install libmysql-java 
 sudo apt-get install libncurses5-dev 
+sudo apt-get install libpg-java 
 sudo apt-get install libreadline6 
 sudo apt-get install libreadline6-dev 
 sudo apt-get install libsqlite3-dev 
