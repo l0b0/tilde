@@ -81,9 +81,7 @@ date +%Y-%m-%d
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db 
  ~/dev/tilde/scripts/cleanup.sh -v 
-~/dev/tilde/scripts/make-links.sh -v ~/dev/tilde/.* ~/ 
-~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~ 
-~/dev/tilde/scripts/make-links.sh -v -d meld ~/dev/tilde/.* ~/settings/.* ~ 
+~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ 
 df -h 
 df -h . 
 diff -u file{.orig,} 
