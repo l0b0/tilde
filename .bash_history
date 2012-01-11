@@ -187,7 +187,11 @@ git stash list
 git stash pop 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
+git svn dcommit 
+git svn dcommit --dry-run 
+git svn fetch 
 git svn rebase 
+git svn status 
 git --version 
 glxinfo 
 gnome-screensaver-command -l 
