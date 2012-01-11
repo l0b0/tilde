@@ -66,7 +66,7 @@ cmp -b $(which arch) $(which uname)
 ./configure --help | less 
 count . 
 cp file{,.orig} 
-createdb -T template0 -U username test 
+createdb -T template0 -U username dbname 
 crontab -e 
 crontab -l 
 cucumber 
@@ -95,7 +95,7 @@ dot -Tsvg graph.dot
 dotty graph.dot 
 dpkg -s bash 
 dpkg -S "$(which apt-get)" 
-dropdb -U username test 
+dropdb -U username dbname 
 echo $? 
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
@@ -504,7 +504,7 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 pry 
-psql test username < dump.sql 
+psql dbname username < dump.sql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 pwd 
