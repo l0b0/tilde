@@ -43,6 +43,7 @@ cd ~/dev/dialogue.wiki/
 cd ~/dev/difff/ 
 cd ~/dev/export/ 
 cd ~/dev/fgit/ 
+cd ~/dev/graphics/ 
 cd ~/dev/https-everywhere/ 
 cd ~/dev/indentect/ 
 cd ~/dev/jail/ 
@@ -436,6 +437,7 @@ mkgithub ~/dev/export
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
 mkgithub ~/dev/generate-password 
+mkgithub ~/dev/graphics 
 mkgithub ~/dev/highlight 
 mkgithub ~/dev/https-everywhere 
 mkgithub ~/dev/Hypervolume 
