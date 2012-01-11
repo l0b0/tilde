@@ -169,6 +169,7 @@ git log
 git log Makefile 
 git log --oneline --decorate 
 git log --patch-with-stat 
+git log --stat 
 git mergetool 
 git mv README{,.markdown} 
 git pull 
