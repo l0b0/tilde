@@ -773,6 +773,7 @@ svn help ci
 svn help co 
 svn help diff 
 svn help log 
+svn help merge 
 svn info 
 svn list http://svn/repo 
 svn log | less 
@@ -780,6 +781,7 @@ svn log -r 1
 svn log --stop-on-copy | less 
 svn log --verbose | less 
 svn merge http://svn/repo/branches/name 
+svn merge -r 99:HEAD http://svn/repo/branches/name 
 svn propdel svn:ignore . 
 svn propedit svn:ignore . 
 svn propset svn:executable 1 test.sh 
