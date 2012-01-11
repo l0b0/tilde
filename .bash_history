@@ -779,7 +779,7 @@ svn log | less
 svn log -r 1 
 svn log --stop-on-copy | less 
 svn log --verbose | less 
-svn merge http://svn/repo 
+svn merge http://svn/repo/branches/name 
 svn propdel svn:ignore . 
 svn propedit svn:ignore . 
 svn propset svn:executable 1 test.sh 
