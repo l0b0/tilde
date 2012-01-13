@@ -98,6 +98,7 @@ dpkg -s bash
 dpkg -S "$(which apt-get)" 
 dropdb -U username dbname 
 echo $? 
+echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
@@ -417,6 +418,7 @@ meld old new&
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 minecraft & 
+mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 mkdir test 
 mkgithub -chvu l0b0 
 mkgithub -csvu l0b0 
@@ -502,6 +504,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 PREFIX=~ sudo make install 
+printf %q "$(echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n')" 
 printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
@@ -530,7 +533,9 @@ read < "/path"
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
+rm -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rmdir * 
+rmdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rm file 
 route 
 ruby -v 
@@ -804,6 +809,7 @@ thunderbird -profilemanager
 time make test 
 timeout 1 sleep 2 
 top 
+touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 tput colors 
 traceroute 
 ubuntu-bug linux 
