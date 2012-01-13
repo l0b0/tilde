@@ -528,6 +528,7 @@ rails -v
 rake db:migrate 
 rake db:rollback 
 rake db:seed 
+rake routes 
 rake -T 
 rake test 
 read < "/path" 
