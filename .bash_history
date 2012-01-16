@@ -23,6 +23,7 @@ cap deploy:rollback
 cap deploy:setup 
 capify . 
 cat ~/contacts/*.vcf > ~/all.vcf 
+cat /etc/papersize 
 cat /etc/*release 
 cat /proc/cpuinfo 
 cat /proc/devices 
@@ -98,6 +99,7 @@ dpkg -s bash
 dpkg -S "$(which apt-get)" 
 dropdb -U username dbname 
 echo $? 
+echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
@@ -358,6 +360,7 @@ man mv
 man nautilus 
 man netstat 
 man nl 
+man paperconfig 
 man patch 
 man perl 
 man ping 
@@ -418,6 +421,7 @@ meld old new&
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 minecraft & 
+mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 mkdir test 
 mkgithub -chvu l0b0 
 mkgithub -csvu l0b0 
@@ -503,6 +507,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 PREFIX=~ sudo make install 
+printf %q "$(echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n')" 
 printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
@@ -526,12 +531,16 @@ rails -v
 rake db:migrate 
 rake db:rollback 
 rake db:seed 
+rake routes 
+rake -T 
 rake test 
 read < "/path" 
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
+rm -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rmdir * 
+rmdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rm file 
 route 
 ruby -v 
@@ -742,6 +751,7 @@ sudo make pkginstall 2>&1 | tee make_pkginstall.out~
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
 sudo mount -a 
+sudo paperconfig -p a4 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo service cups restart 
@@ -805,6 +815,7 @@ thunderbird -profilemanager
 time make test 
 timeout 1 sleep 2 
 top 
+touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 tput colors 
 traceroute 
 ubuntu-bug linux 
