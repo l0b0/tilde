@@ -23,6 +23,7 @@ cap deploy:rollback
 cap deploy:setup 
 capify . 
 cat ~/contacts/*.vcf > ~/all.vcf 
+cat /etc/papersize 
 cat /etc/*release 
 cat /proc/cpuinfo 
 cat /proc/devices 
@@ -359,6 +360,7 @@ man mv
 man nautilus 
 man netstat 
 man nl 
+man paperconfig 
 man patch 
 man perl 
 man ping 
@@ -748,6 +750,7 @@ sudo make pkginstall 2>&1 | tee make_pkginstall.out~
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
 sudo mount -a 
+sudo paperconfig -p a4 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo service cups restart 
