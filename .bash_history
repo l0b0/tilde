@@ -404,6 +404,7 @@ man uniq
 man updatedb 
 man useradd 
 man vim 
+man w 
 man watch 
 man wc 
 man wdiff 
@@ -865,6 +866,7 @@ vim ~/.wine/user.reg
 vim ~/.xinitrc 
 visudo 
 vmware 
+w 
 watch 'svn diff' 
 which make 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
