@@ -89,6 +89,7 @@ df -h
 df -h . 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
+diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 dmesg 
 dos2unix file 
@@ -419,6 +420,7 @@ meld . &
 meld old new& 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
+meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 minecraft & 
 mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 mkdir test 
