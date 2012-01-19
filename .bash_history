@@ -888,4 +888,3 @@ xinput --list-props 10
 xkill 
 xmodmap -pp >~/xmodmap 
 xwininfo -id $(xdotool selectwindow) 
-man rename
