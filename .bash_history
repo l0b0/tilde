@@ -164,8 +164,10 @@ git help config
 git help diff 
 git help init 
 git help log 
+git help pull 
 git help remote 
 git help stash 
+git help submodule 
 git help svn 
 git init 
 git log 
@@ -326,6 +328,7 @@ man find
 man fmt 
 man fortune 
 man getopt 
+man git 
 man gksu 
 man gnome-shell 
 man gnome-terminal 
