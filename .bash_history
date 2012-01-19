@@ -545,6 +545,7 @@ read < "/path"
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
+rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' *.xml 
 rm -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rmdir * 
 rmdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
