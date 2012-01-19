@@ -367,6 +367,7 @@ man nl
 man paperconfig 
 man patch 
 man perl 
+man pgrep 
 man ping 
 man pod2man 
 man psql 
@@ -506,6 +507,7 @@ perlbrew switch
 perl_modules 
 perl_module_version URI 
 perl --version 
+pgrep -u root cron 
 php -a 
 php --version 
 ping -c 4 example.org 
