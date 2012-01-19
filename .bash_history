@@ -420,7 +420,7 @@ markdown_page README.markdown > README.xhtml
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
-meld . & 
+meld .& 
 meld old new& 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
