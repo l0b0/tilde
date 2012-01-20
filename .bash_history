@@ -774,6 +774,7 @@ sudo update-grub
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo vim /etc/fstab 
 sudo vim /etc/hosts 
+sudo vim /etc/X11/xorg.conf 
 sudo visudo 
 sudo Xorg :1 -configure 
 svn add . 
