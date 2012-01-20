@@ -761,6 +761,7 @@ sudo make pkginstall 2>&1 | tee make_pkginstall.out~
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
 sudo mount -a 
+sudo nvidia-settings 
 sudo paperconfig -p a4 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
