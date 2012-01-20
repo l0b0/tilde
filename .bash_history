@@ -611,6 +611,7 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 strings /usr/bin/strings 
+sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup $USER group 
 sudo apt-get dist-upgrade 
 sudo apt-get install autoconf 
