@@ -505,6 +505,7 @@ neato -O -Tsvg *.dot
 netstat 
 netstat -a 
 nl ~/.bashrc 
+nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
