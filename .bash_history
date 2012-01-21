@@ -57,6 +57,7 @@ cd ~/dev/shunit-ng/
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/vcard2mutt/ 
+cd ~/dev/vCard-module/ 
 cd ~/dev/worktime/ 
 cd /home/$USER/ 
 cd ~/.minecraft/ 
@@ -462,6 +463,7 @@ mkgithub ~/dev/jail
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/lwpb 
+mkgithub ~/dev/make-links 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
 mkgithub ~/dev/minecraft-scripts 
