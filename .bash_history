@@ -496,6 +496,7 @@ mkgithub ~/dev/xFormsCal
 mkgithub -h 
 mkgithub --help 
 mount 
+mount -n -o remount,defaults /dev/sda1 / 
 mutt 
 mutt -d 5 
 mutt -v 
