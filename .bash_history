@@ -11,6 +11,7 @@ bash
 bash test.sh 
 bash --version 
 bash -x 
+bchunk image.bin image.cue image.iso 
 bg 
 builtin 
 bundle install 
