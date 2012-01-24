@@ -193,6 +193,7 @@ git stash && git pull && git stash pop
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash pop 
+git stash show -u 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
