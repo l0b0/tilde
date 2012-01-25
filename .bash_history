@@ -127,7 +127,6 @@ fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit status -sb -- ~/*/ ~/.*/ ~/dev/*/ 
 find . -empty 
 find . -empty -delete 
 find . -name '*.marks' -delete 
