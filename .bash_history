@@ -124,9 +124,9 @@ facter --help
 facter id 
 fg 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit pull -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit status -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 find . -empty 
 find . -empty -delete 
 find . -name '*.marks' -delete 
