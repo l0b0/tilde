@@ -716,6 +716,7 @@ sudo apt-get install php5-dev php-pear
 sudo apt-get install pidgin 
 sudo apt-get install playonlinux 
 sudo apt-get install pngcrush 
+sudo apt-get install puppetmaster 
 sudo apt-get install pychecker 
 sudo apt-get install pyflakes 
 sudo apt-get install pylint 
@@ -748,6 +749,7 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install unrar-free 
 sudo apt-get install vim 
+sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
 sudo apt-get install vlc 
 sudo apt-get install wget 
