@@ -118,6 +118,9 @@ empty_line_before_eof -i *
 env 
 eval `resize -s 24 80` 
 exit 
+facter 
+facter --help 
+facter id 
 fg 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ 
