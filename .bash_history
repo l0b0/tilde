@@ -536,6 +536,11 @@ pry
 psql dbname username < dump.sql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
+puppet describe -s user 
+puppet resource --help 
+puppet resource --types 
+puppet resource user 
+puppet resource user root 
 pwd 
 qgit .& 
 rails destroy controller session 
