@@ -315,7 +315,9 @@ man addgroup
 man apropos 
 man arch 
 man bash 
+man chgrp 
 man chmod 
+man chown 
 man chroot 
 man cmp 
 man comm 
