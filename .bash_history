@@ -582,7 +582,7 @@ rvm info
 rvm install 1.9.2 
 rvm list known 
 rvm notes 
-rvm --rvmrc --create ruby-1.9.3-p0@project_name 
+rvm --rvmrc --create use ruby-version@project_name 
 rvm usage 
 rvm use 1.9.3-p0 
 rvm use system 
