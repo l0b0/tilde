@@ -159,16 +159,20 @@ git config -l
 git diff 
 git diff --ignore-all-space 
 git diff --ignore-space-change 
+git diff master origin/master 
 git diff --raw 
 git diff --staged 
 git diff --word-diff 
+git fetch 
 git gui& 
 git help add 
 git help clone 
 git help config 
 git help diff 
+git help fetch 
 git help init 
 git help log 
+git help merge 
 git help pull 
 git help remote 
 git help stash 
@@ -180,6 +184,7 @@ git log Makefile
 git log --oneline --decorate 
 git log --patch-with-stat 
 git log --stat 
+git merge origin/master 
 git mergetool 
 git mv README{,.markdown} 
 git pull 
@@ -193,7 +198,7 @@ git remote -v show
 git reset HEAD^ 
 git stash 
 git stash clear 
-git stash && git pull && git stash pop 
+git stash && git merge origin/master && git stash pop 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash pop 
