@@ -222,6 +222,7 @@ grep -r --exclude-dir .svn "pattern" .
 grep -r "pattern" . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
 groups $USER 
+guard 
 gunzip example.gz 
 gzip example.txt 
 help echo 
