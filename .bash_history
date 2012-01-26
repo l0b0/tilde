@@ -555,6 +555,7 @@ rails server -e production -p 3002
 rails server -e test -p 3001 
 rails -v 
 rake db:migrate 
+rake db:reset 
 rake db:rollback 
 rake db:seed 
 rake routes 
@@ -772,6 +773,7 @@ sudo dmidecode
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo dpkg-reconfigure ca-certificates 
+sudo /etc/init.d/postgresql reload 
 sudo iotop 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
@@ -794,6 +796,7 @@ sudo update-java-alternatives --jre -s java-6-sun
 sudo -u postgres createuser -s username 
 sudo vim /etc/fstab 
 sudo vim /etc/hosts 
+sudo vim /etc/postgresql/*/main/pg_hba.conf 
 sudo vim /etc/X11/xorg.conf 
 sudo visudo 
 sudo Xorg :1 -configure 
