@@ -93,6 +93,7 @@ diff -u file{.orig,}
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
+DISPLAY=:0 compiz --replace 
 dmesg 
 dos2unix file 
 dot -O -Tsvg *.dot 
@@ -123,10 +124,9 @@ facter --help
 facter id 
 fg 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit pull -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit status -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit status -sb -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 find . -empty 
 find . -empty -delete 
 find . -name '*.marks' -delete 
