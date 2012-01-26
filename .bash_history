@@ -590,6 +590,8 @@ rvm help install
 rvm help use 
 rvm info 
 rvm install 1.9.2 
+rvm install 1.9.3-p0 
+rvm list 
 rvm list known 
 rvm notes 
 rvm --rvmrc --create use ruby-version@project_name 
