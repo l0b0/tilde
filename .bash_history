@@ -385,6 +385,7 @@ man patch
 man perl 
 man pgrep 
 man ping 
+man pngcrush 
 man pod2man 
 man psql 
 man puppet 
@@ -533,6 +534,7 @@ php --version
 ping -c 4 example.org 
 ping example.org 
 pip help 
+pngcrush -brute -d /target *.png 
 PREFIX=~ sudo make install 
 printf %q "$(echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n')" 
 printf %q "$IFS" 
