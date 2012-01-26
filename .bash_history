@@ -323,6 +323,7 @@ man cmp
 man comm 
 man cp 
 man createdb 
+man createuser 
 man crontab 
 man curl 
 man cut 
@@ -790,6 +791,7 @@ sudo update-alternatives --config editor
 sudo updatedb 
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
+sudo -u postgres createuser -s username 
 sudo vim /etc/fstab 
 sudo vim /etc/hosts 
 sudo vim /etc/X11/xorg.conf 
