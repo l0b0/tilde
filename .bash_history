@@ -137,6 +137,7 @@ firefox -profilemanager
 firefox -safe-mode 
 fortune 
 gcc --version 
+gem install bundler 
 gem list --help 
 gem list --local 
 git 
