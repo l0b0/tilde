@@ -8,6 +8,7 @@ apt-cache stats bash
 apt-get source apt 
 arch 
 bash 
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
 bash test.sh 
 bash --version 
 bash -x 
@@ -247,6 +248,7 @@ ifconfig
 ifconfig -a 
 ifconfig -a eth0 
 IFS=':' read -a paths <<< "$PATH" 
+if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi 
 imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -597,6 +599,7 @@ rvm install 1.9.3-p0
 rvm list 
 rvm list known 
 rvm notes 
+rvm requirements 
 rvm --rvmrc --create use ruby-version@project_name 
 rvm usage 
 rvm use 1.9.3-p0 
