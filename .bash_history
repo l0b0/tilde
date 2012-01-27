@@ -354,6 +354,7 @@ man grep
 man groupadd 
 man head 
 man hostname 
+man hosts 
 man id 
 man inotify 
 man inotifywait 
@@ -390,6 +391,7 @@ man pngcrush
 man pod2man 
 man psql 
 man puppet 
+man rake 
 man recordmydesktop 
 man rename 
 man resize 
