@@ -128,6 +128,7 @@ fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
+file README.markdown 
 find . -empty 
 find . -empty -delete 
 find . -name '*.marks' -delete 
