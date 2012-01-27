@@ -159,6 +159,7 @@ git config --get-all
 git config --global github.user l0b0 
 git config -l 
 git diff 
+git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
 git diff --ignore-space-change 
 git diff master origin/master 
