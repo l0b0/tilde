@@ -518,6 +518,7 @@ mkgithub ~/dev/xbug
 mkgithub ~/dev/xFormsCal 
 mkgithub -h 
 mkgithub --help 
+mogrify -crop 2316x1303+0+0 *.jpg 
 mount 
 mount -n -o remount,defaults /dev/sda1 / 
 mutt 
