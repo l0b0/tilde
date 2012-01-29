@@ -138,6 +138,7 @@ find . -printf x | wc -c
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 firefox -safe-mode 
+for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 fortune 
 gcc --version 
 gem install bundler 
