@@ -123,6 +123,7 @@ exit
 facter 
 facter --help 
 facter id 
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 
 fg 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
@@ -344,6 +345,7 @@ man dot
 man dotty 
 man errno 
 man expr 
+man ffmpeg 
 man file 
 man find 
 man fmt 
@@ -672,6 +674,7 @@ sudo apt-get install enscript
 sudo apt-get install esmtp 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
+sudo apt-get install ffmpeg 
 sudo apt-get install fortune fortune-mod 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
@@ -780,6 +783,7 @@ sudo apt-get install vlc
 sudo apt-get install wget 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
+sudo apt-get install x264 
 sudo apt-get install xournal 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
