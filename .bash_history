@@ -564,6 +564,7 @@ puppet resource user
 puppet resource user root 
 pwd 
 qgit .& 
+rails console 
 rails destroy controller session 
 rails destroy scaffold user 
 rails generate controller session new create destroy 
