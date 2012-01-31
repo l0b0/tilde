@@ -428,6 +428,7 @@ man time
 man timeout 
 man tput 
 man tr 
+man traceroute 
 man trash 
 man ubuntu-bug 
 man udevadm 
@@ -882,7 +883,7 @@ timeout 1 sleep 2
 top 
 touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 tput colors 
-traceroute 
+traceroute example.org 
 ubuntu-bug linux 
 udevadm info --export-db 
 uname -a 
