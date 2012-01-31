@@ -17,3 +17,5 @@
 	diffcontext = 3
 [core]
 	quotepath = false
+[github]
+	user = l0b0
