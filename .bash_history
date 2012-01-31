@@ -581,6 +581,7 @@ rake db:rollback
 rake db:seed 
 rake routes 
 rake -T 
+rake --tasks 
 rake test 
 read < "/path" 
 read -r var 
