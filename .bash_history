@@ -95,6 +95,7 @@ diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 DISPLAY=:0 compiz --replace 
+DISPLAY=:0 gnome-shell --replace 
 dmesg 
 dos2unix file 
 dot -O -Tsvg *.dot 
