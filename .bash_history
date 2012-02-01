@@ -262,7 +262,7 @@ iotop
 iotop -bn 1 
 ip link show 
 ip link show up 
-ip r 
+ip route 
 ipython 
 jail 
 jail -d /var/jail/ 
@@ -576,7 +576,7 @@ rails new project_name
 rails server 
 rails server -e production -p 3002 
 rails server -e test -p 3001 
-rails -v 
+rails --version 
 rake db:migrate 
 rake db:reset 
 rake db:rollback 
