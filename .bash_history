@@ -931,6 +931,8 @@ vim ~/.wine/system.reg
 vim ~/.wine/user.reg 
 vim ~/.xinitrc 
 visudo 
+vlc -H 
+vlc --spdif --fullscreen --filter-deinterlace-mode blend --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vmware 
 w 
 watch 'svn diff' 
