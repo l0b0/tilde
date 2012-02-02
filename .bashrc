@@ -160,6 +160,8 @@ export JAVA_HOME='/usr/'
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
+export TODOS=(~/todo/*.markdown)
+
 if [ -r "$HOME/.bash_aliases" ]
 then
     source "$HOME/.bash_aliases"
