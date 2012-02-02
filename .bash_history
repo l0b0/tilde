@@ -135,6 +135,7 @@ find . -empty
 find . -empty -delete 
 find . -name '*.marks' -delete 
 find . -name '*.orig' -delete 
+find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
