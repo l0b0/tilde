@@ -95,6 +95,7 @@ diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 DISPLAY=:0 compiz --replace 
+DISPLAY=:0 gnome-shell --replace 
 dmesg 
 dos2unix file 
 dot -O -Tsvg *.dot 
@@ -134,11 +135,13 @@ find . -empty
 find . -empty -delete 
 find . -name '*.marks' -delete 
 find . -name '*.orig' -delete 
+find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
+for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 fortune 
 gcc --version 
 gem install bundler 
@@ -262,7 +265,7 @@ iotop
 iotop -bn 1 
 ip link show 
 ip link show up 
-ip r 
+ip route 
 ipython 
 jail 
 jail -d /var/jail/ 
@@ -328,6 +331,7 @@ man addgroup
 man apropos 
 man arch 
 man bash 
+man blkid 
 man chgrp 
 man chmod 
 man chown 
@@ -427,6 +431,7 @@ man time
 man timeout 
 man tput 
 man tr 
+man traceroute 
 man trash 
 man ubuntu-bug 
 man udevadm 
@@ -565,22 +570,24 @@ puppet resource user
 puppet resource user root 
 pwd 
 qgit .& 
-rails destroy controller session 
+rails console 
+rails destroy controller sessions 
 rails destroy scaffold user 
-rails generate controller session new create destroy 
+rails generate controller sessions new create destroy 
 rails generate migration add_email_to_user email:string email_plain_text_only:boolean 
 rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp 
 rails new project_name 
 rails server 
 rails server -e production -p 3002 
 rails server -e test -p 3001 
-rails -v 
+rails --version 
 rake db:migrate 
 rake db:reset 
 rake db:rollback 
 rake db:seed 
 rake routes 
 rake -T 
+rake --tasks 
 rake test 
 read < "/path" 
 read -r var 
@@ -793,6 +800,7 @@ sudo apt-get install zlib1g-dev
 sudo apt-get purge bash 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
+sudo blkid -o list 
 sudo chown nobody "$sandbox" 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
@@ -879,7 +887,7 @@ timeout 1 sleep 2
 top 
 touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 tput colors 
-traceroute 
+traceroute example.org 
 ubuntu-bug linux 
 udevadm info --export-db 
 uname -a 
@@ -925,6 +933,8 @@ vim ~/.wine/system.reg
 vim ~/.wine/user.reg 
 vim ~/.xinitrc 
 visudo 
+vlc -H 
+vlc --spdif --fullscreen --filter-deinterlace-mode blend --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vmware 
 w 
 watch 'svn diff' 
