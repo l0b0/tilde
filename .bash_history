@@ -561,6 +561,7 @@ prove
 prove -r 
 pry 
 psql dbname username < dump.sql 
+psql -U db_user db_name 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe -s user 
