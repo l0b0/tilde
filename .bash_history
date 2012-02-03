@@ -60,6 +60,7 @@ cd ~/dev/schemaspy2svg/
 cd ~/dev/shunit-ng/ 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
+cd ~/dev/txt2cloud/ 
 cd ~/dev/vcard2mutt/ 
 cd ~/dev/vCard-module/ 
 cd ~/dev/worktime/ 
