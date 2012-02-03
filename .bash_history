@@ -146,6 +146,10 @@ for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting
 fortune 
 gcc --version 
 gem install bundler 
+gem install cucumber 
+gem install pry pry-doc 
+gem install rails 
+gem install sqlite3 
 gem list --help 
 gem list --local 
 git 
@@ -603,10 +607,6 @@ rm file
 route 
 ruby -v 
 rvm 
-rvm all do gem install cucumber 
-rvm all do gem install pry pry-doc 
-rvm all do gem install rails 
-rvm all do gem install sqlite3 
 rvm help do 
 rvm help install 
 rvm help use 
