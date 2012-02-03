@@ -822,6 +822,7 @@ sudo paperconfig -p a4
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo service cups restart 
+sudo service postgresql reload 
 sudo shutdown -r now 
 sudo update-alternatives --config editor 
 sudo updatedb 
