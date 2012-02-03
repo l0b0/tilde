@@ -449,8 +449,8 @@ man xdg-desktop-menu
 man xdotool 
 man xinput 
 man xwininfo 
-markdown_page "${TODOS[@]}" > ~/todo.xhtml 
 markdown_page README.markdown > README.xhtml 
+markdown_page "${TODOS[@]}" > ~/todo.xhtml 
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
