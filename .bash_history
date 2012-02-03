@@ -15,6 +15,7 @@ bash -x
 bchunk image.bin image.cue image.iso 
 bg 
 builtin 
+bundle init 
 bundle install 
 bundle update 
 cap 
