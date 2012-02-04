@@ -939,7 +939,7 @@ vim ~/.wine/user.reg
 vim ~/.xinitrc 
 visudo 
 vlc -H 
-vlc --spdif --fullscreen --filter-deinterlace-mode blend --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vmware 
 w 
 watch 'svn diff' 
