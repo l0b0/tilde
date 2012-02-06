@@ -48,6 +48,7 @@ cd ~/dev/dialogue.wiki/
 cd ~/dev/difff/ 
 cd ~/dev/export/ 
 cd ~/dev/fgit/ 
+cd ~/dev/filterous/ 
 cd ~/dev/graphics/ 
 cd ~/dev/https-everywhere/ 
 cd ~/dev/indentect/ 
@@ -56,6 +57,8 @@ cd ~/dev/mian/
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
 cd ~/dev/mount-image/ 
+cd ~/dev/paperless/ 
+cd ~/dev/paperless.wiki/ 
 cd ~/dev/schemaspy2svg/ 
 cd ~/dev/shunit-ng/ 
 cd ~/dev/tilde/ 
@@ -508,6 +511,8 @@ mkgithub ~/dev/mkgithub
 mkgithub ~/dev/mount-image 
 mkgithub ~/dev/offlickr 
 mkgithub ~/dev/OpenSCAD-Minimizer 
+mkgithub ~/dev/paperless 
+mkgithub ~/dev/paperless.wiki 
 mkgithub ~/dev/parametric-box 
 mkgithub ~/dev/progit 
 mkgithub ~/dev/Project-Euler 
