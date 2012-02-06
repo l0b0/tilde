@@ -137,6 +137,7 @@ fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 file README.markdown 
+filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find . -empty 
 find . -empty -delete 
 find . -name '*.marks' -delete 
