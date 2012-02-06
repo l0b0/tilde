@@ -155,6 +155,7 @@ gem install sqlite3
 gem list --help 
 gem list --local 
 gem rdoc --all 
+gem server 
 git 
 git add . 
 git add .gitignore 
