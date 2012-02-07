@@ -378,6 +378,7 @@ man gpg
 man grep 
 man groupadd 
 man head 
+man hier 
 man hostname 
 man hosts 
 man id 
