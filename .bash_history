@@ -73,6 +73,7 @@ cd ~/personal/
 cd ~/settings/ 
 chmod u+x test.sh 
 cmp -b $(which arch) $(which uname) 
+completions git config '' | grep user 
 ./configure 
 ./configure --help | less 
 count . 

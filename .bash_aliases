@@ -541,6 +541,35 @@ valid_ipv4()
 
 }
 
+completions()
+{
+    # Print autocompletions
+    # Examples:
+    #
+    #   List all user-related Git configuration settings:
+    #     completions git config '' | grep user
+    #
+    #   List all available commands:
+    #     completions
+    if [ $# -eq 0 ]
+    then
+        set -- ''
+    fi
+    local COMP_LINE="$*"
+    local COMP_WORDS=("$@")
+    local COMP_CWORD=${#COMP_WORDS[@]}
+    ((COMP_CWORD--))
+    local COMP_POINT=${#COMP_LINE}
+    local COMP_TYPE=9
+    local COMP_KEY=9
+    local COMP_WORDBREAKS='"'"'><=;|&(:"
+    _command_offset 0
+    for result in "${COMPREPLY[@]}"
+    do
+        echo "$result"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
