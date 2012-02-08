@@ -649,6 +649,8 @@ set -o nounset
 set +o nounset 
 set -o pipefail 
 set +o pipefail 
+(set -o posix; set) 
+(set -o posix; set) | grep -o ^COMP[^=]* 
 ./setup.py test 
 set -x 
 set +x 
