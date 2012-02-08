@@ -563,6 +563,7 @@ completions()
     local COMP_TYPE=9
     local COMP_KEY=9
     local COMP_WORDBREAKS='"'"'><=;|&(:"
+    local COMPREPLY
     _command_offset 0
     for result in "${COMPREPLY[@]}"
     do
