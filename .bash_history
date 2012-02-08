@@ -256,6 +256,7 @@ help set
 help shopt 
 help type 
 help typeset 
+help ulimit 
 help umask 
 help wait 
 host example.org 
@@ -907,6 +908,7 @@ tput colors
 traceroute example.org 
 ubuntu-bug linux 
 udevadm info --export-db 
+ulimit -a 
 uname -a 
 uname -m 
 unetbootin 
