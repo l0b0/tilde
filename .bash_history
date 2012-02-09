@@ -141,7 +141,7 @@ file README.markdown
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find . -empty 
 find . -empty -delete 
-find . -name '*.marks' -delete 
+find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
