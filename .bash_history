@@ -248,6 +248,9 @@ grep -r "pattern" . | grep -v '/\.svn/'
 grep $USER /etc/passwd 
 groups $USER 
 guard 
+guard help 
+guard list 
+guard show 
 gunzip example.gz 
 gzip example.txt 
 help echo 
