@@ -189,6 +189,15 @@ then
     set -o nounset
 fi
 
+# Custom-built libraries
+for dir in /usr/lib64 /usr/lib32
+do
+    if [ -d "$dir" ]
+    then
+        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}$dir"
+    fi
+done
+
 set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
 

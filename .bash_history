@@ -238,6 +238,10 @@ git svn help
 git svn rebase 
 git svn status 
 git --version 
+glc-capture -o recording.glc minecraft 
+glc-play recording.glc 
+glc-play recording.glc -a 1 -o recording.wav # audio 
+glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding MP4 MPEG4 
 glxinfo 
 gnome-screensaver-command -l 
 grep --color=always "pattern" . | exclude_vcs 
