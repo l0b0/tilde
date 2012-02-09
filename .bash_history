@@ -901,6 +901,7 @@ svn rm --force file
 svn rm --keep-local file 
 svn st 
 svn up 
+TAGS=$USER guard 
 tail -F /var/log/messages 
 ./test.sh 
 ./test.sh "first argument" "second argument 
