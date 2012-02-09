@@ -177,6 +177,7 @@ git commit
 git commit -am "Example" 
 git config --get-all 
 git config --global github.user l0b0 
+git config --global mergetool.prompt false 
 git config -l 
 git diff 
 git diff HEAD^ -- README.markdown 
@@ -197,6 +198,7 @@ git help init
 git help log 
 git help merge 
 git help pull 
+git help rebase 
 git help remote 
 git help stash 
 git help submodule 

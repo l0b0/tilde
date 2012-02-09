@@ -19,3 +19,5 @@
 	quotepath = false
 [github]
 	user = l0b0
+[mergetool]
+	prompt = false
