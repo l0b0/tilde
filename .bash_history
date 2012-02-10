@@ -219,6 +219,7 @@ git push --force
 git push -u origin master 
 git rebase --continue 
 git rebase --interactive HEAD~20 
+git remote add --tags -f origin ssh://user@example.org/home/user/repo 
 git remote -v show 
 git reset HEAD^ 
 git stash 
