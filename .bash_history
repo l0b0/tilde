@@ -68,7 +68,7 @@ cd ~/dev/tilde/
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/txt2cloud/ 
 cd ~/dev/vcard2mutt/ 
-cd ~/dev/vCard-module/ 
+cd ~/dev/vcard-module/ 
 cd ~/dev/worktime/ 
 cd /home/$USER/ 
 cd ~/.minecraft/ 
@@ -551,7 +551,7 @@ mkgithub ~/dev/txt2cloud
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr 
 mkgithub ~/dev/vcard2mutt 
-mkgithub ~/dev/vCard-module 
+mkgithub ~/dev/vcard-module 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
