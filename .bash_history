@@ -495,7 +495,6 @@ mkgithub -csvu l0b0
 mkgithub ~/dev/bm 
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
-mkgithub ~/dev/cds-invenio-vengmark 
 mkgithub ~/dev/CERN-Central-Library-bookmark 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
