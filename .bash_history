@@ -59,6 +59,7 @@ cd ~/dev/mian/
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
 cd ~/dev/mount-image/ 
+cd ~/dev/msort/ 
 cd ~/dev/paperless/ 
 cd ~/dev/paperless.wiki/ 
 cd ~/dev/schemaspy2svg/ 
@@ -153,6 +154,7 @@ firefox -safe-mode
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 fortune 
+for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 gcc --version 
 gem install bundler 
 gem install cucumber 
@@ -526,6 +528,7 @@ mkgithub ~/dev/mian
 mkgithub ~/dev/minecraft-scripts 
 mkgithub ~/dev/mkgithub 
 mkgithub ~/dev/mount-image 
+mkgithub ~/dev/msort 
 mkgithub ~/dev/offlickr 
 mkgithub ~/dev/OpenSCAD-Minimizer 
 mkgithub ~/dev/paperless 
