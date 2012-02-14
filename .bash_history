@@ -68,7 +68,7 @@ cd ~/dev/tilde/
 cd ~/dev/tilde/scripts/ 
 cd ~/dev/txt2cloud/ 
 cd ~/dev/vcard2mutt/ 
-cd ~/dev/vCard-module/ 
+cd ~/dev/vcard-module/ 
 cd ~/dev/worktime/ 
 cd /home/$USER/ 
 cd ~/.minecraft/ 
@@ -551,7 +551,7 @@ mkgithub ~/dev/txt2cloud
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr 
 mkgithub ~/dev/vcard2mutt 
-mkgithub ~/dev/vCard-module 
+mkgithub ~/dev/vcard-module 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
@@ -973,6 +973,7 @@ vmware
 w 
 watch 'svn diff' 
 which make 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
 wine --version 
