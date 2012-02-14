@@ -53,6 +53,8 @@ cd ~/dev/graphics/
 cd ~/dev/https-everywhere/ 
 cd ~/dev/indentect/ 
 cd ~/dev/jail/ 
+cd ~/dev/lines/ 
+cd ~/dev/make-links/ 
 cd ~/dev/mian/ 
 cd ~/dev/minecraft-scripts/ 
 cd ~/dev/mkgithub/ 
