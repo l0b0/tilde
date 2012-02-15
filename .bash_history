@@ -601,25 +601,24 @@ puppet resource --help
 puppet resource --types 
 puppet resource user 
 puppet resource user root 
-pwd 
-qgit .& 
+pwd # current directory 
+qgit .& # GUI 
 rails console 
-rails destroy controller sessions 
-rails destroy scaffold user 
-rails generate controller sessions new create destroy 
-rails generate migration add_email_to_user email:string email_plain_text_only:boolean 
-rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp 
-rails new project_name 
-rails server 
-rails server -e production -p 3002 
-rails server -e test -p 3001 
+rails destroy controller sessions # delete 
+rails destroy scaffold user # delete 
+rails generate controller sessions new create destroy # create 
+rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create 
+rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create 
+rails new project_name # create 
+rails server -e production -p 3002 # start 
+rails server -e test -p 3001 # start 
+rails server # start 
 rails --version 
-rake db:migrate 
-rake db:reset 
-rake db:rollback 
-rake db:seed 
-rake routes 
-rake -T 
+rake db:migrate # rails database 
+rake db:reset # rails database 
+rake db:rollback # rails database 
+rake db:seed # rails database 
+rake routes # rails web 
 rake --tasks 
 rake test 
 read < "/path" 
