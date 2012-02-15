@@ -18,6 +18,7 @@ builtin
 bundle help 
 bundle init 
 bundle install 
+bundle install --binstubs=./bundler_stubs 
 bundle update 
 cap 
 cap deploy 
@@ -75,6 +76,7 @@ cd ~/.minecraft/
 cd ~/personal/ 
 cd ~/settings/ 
 chmod u+x test.sh 
+chmod +x $rvm_path/hooks/after_cd_bundler 
 cmp -b $(which arch) $(which uname) 
 completions git config '' | grep user 
 ./configure 
