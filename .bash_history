@@ -922,6 +922,8 @@ top
 touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 tput colors 
 traceroute example.org 
+txt2cloud 
+txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
 ubuntu-bug linux 
 udevadm info --export-db 
 ulimit -a 
