@@ -361,8 +361,10 @@ make variables
 man addgroup 
 man apropos 
 man arch 
+man ascii 
 man bash 
 man blkid 
+man charsets 
 man chgrp 
 man chmod 
 man chown 
@@ -468,9 +470,11 @@ man trash
 man ubuntu-bug 
 man udevadm 
 man uname 
+man unicode 
 man uniq 
 man updatedb 
 man useradd 
+man utf8 
 man vim 
 man w 
 man watch 
