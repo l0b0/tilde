@@ -250,6 +250,7 @@ glc-play recording.glc
 glc-play recording.glc -a 1 -o recording.wav # audio 
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding MP4 MPEG4 
 glxinfo 
+gnome-control-center sound 
 gnome-screensaver-command -l 
 grep --color=always "pattern" . | exclude_vcs 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c 
@@ -347,6 +348,7 @@ ls -lt /var/log/
 lsmod 
 lsof 
 lsof +c 0 | grep gnome-terminal | wc -l 
+lspci | grep -i audio 
 lsusb | grep -i cam 
 m4 --version 
 make 
@@ -496,6 +498,7 @@ meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts)
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 minecraft & 
+mintwelcome 
 mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 mkdir test 
 mkgithub -chvu l0b0 
@@ -845,6 +848,7 @@ sudo dmidecode --type system
 sudo dpkg-reconfigure ca-certificates 
 sudo /etc/init.d/postgresql reload 
 sudo iotop 
+sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 
@@ -976,6 +980,7 @@ vim ~/.xinitrc
 visudo 
 vlc -H 
 vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 
 vmware 
 w 
 watch 'svn diff' 
