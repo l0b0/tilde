@@ -146,6 +146,7 @@ file README.markdown
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find . -empty 
 find . -empty -delete 
+find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
 find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
