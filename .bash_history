@@ -67,6 +67,7 @@ cd ~/dev/schemaspy2svg/
 cd ~/dev/shunit-ng/ 
 cd ~/dev/tilde/ 
 cd ~/dev/tilde/scripts/ 
+cd ~/dev/trim/ 
 cd ~/dev/txt2cloud/ 
 cd ~/dev/vcard2mutt/ 
 cd ~/dev/vcard-module/ 
@@ -560,6 +561,7 @@ mkgithub ~/dev/SICP
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
 mkgithub ~/dev/tilde 
+mkgithub ~/dev/trim 
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr 
