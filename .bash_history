@@ -281,6 +281,7 @@ hostname
 hostname -s 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
+id -g 
 id -u 
 id $USER 
 ifconfig 
@@ -472,6 +473,7 @@ man uname
 man uniq 
 man updatedb 
 man useradd 
+man usermod 
 man vim 
 man w 
 man watch 
@@ -863,6 +865,7 @@ sudo updatedb
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo -u postgres createuser -s username 
+sudo usermod -a -g users -G $(id -g) $USER # change default group 
 sudo vim /etc/fstab 
 sudo vim /etc/hosts 
 sudo vim /etc/postgresql/*/main/pg_hba.conf 
