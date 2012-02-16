@@ -155,6 +155,7 @@ firefox -profilemanager
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
+for path in *.sass; do sass-convert $path ${path%.*}.scss; done 
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 gcc --version 
@@ -652,6 +653,7 @@ rvm use system
 rvm use system --default 
 rvm version 
 sandbox="$(mktemp -d)" 
+sass-convert all.s{a,c}ss 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
 scp example.org:/home/jdoe/example.txt . 
