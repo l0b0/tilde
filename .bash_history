@@ -195,6 +195,7 @@ git diff --ignore-space-change
 git diff master origin/master 
 git diff --raw 
 git diff --staged 
+git diff -w --no-color | git apply --cached 
 git diff --word-diff 
 git fetch 
 git gui& 
