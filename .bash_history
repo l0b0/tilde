@@ -122,6 +122,7 @@ echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n'
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
 echo $LINES 
+echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[@]}" 
 echo "${paths[0]}" 
