@@ -118,6 +118,7 @@ dpkg -s bash
 dpkg -S "$(which apt-get)" 
 dropdb -U username dbname 
 echo $? 
+echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
 echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 echo $COLUMNS 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
@@ -435,6 +436,7 @@ man mv
 man nautilus 
 man netstat 
 man nl 
+man od 
 man paperconfig 
 man patch 
 man perl 
@@ -494,6 +496,7 @@ man xdg-desktop-menu
 man xdotool 
 man xinput 
 man xwininfo 
+man xxd 
 markdown_page README.markdown > README.xhtml 
 markdown_page "${TODOS[@]}" > ~/todo.xhtml 
 markdown README.markdown 
@@ -603,6 +606,8 @@ ping example.org
 pip help 
 pngcrush -brute -d /target *.png 
 PREFIX=~ sudo make install 
+printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX 
+printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q "$(echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n')" 
 printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
@@ -1007,3 +1012,4 @@ xinput --list-props 10
 xkill 
 xmodmap -pp >~/xmodmap 
 xwininfo -id $(xdotool selectwindow) 
+xxd $(which xxd) | head -1 
