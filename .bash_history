@@ -1,4 +1,5 @@
 aplay -L 
+apport-bug package # report 
 apropos bash 
 apt-cache depends bash 
 apt-cache search bash 
