@@ -490,7 +490,7 @@ empty_line_before_eof()
     # In other words, if the last line contains a character that is not newline,
     # append a newline.
 
-    sed -e '/.$/a\' "$@"
+    sed -e '$a\' "$@"
 }
 
 markdown_page()
