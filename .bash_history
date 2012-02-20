@@ -1,4 +1,5 @@
 aplay -L 
+apport-bug package # report 
 apropos bash 
 apt-cache depends bash 
 apt-cache search bash 
@@ -876,6 +877,7 @@ sudo nvidia-settings
 sudo paperconfig -p a4 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
+sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo service cups restart 
 sudo service postgresql reload 
 sudo shutdown -r now 
