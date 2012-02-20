@@ -58,6 +58,8 @@ test_multiline() {
 test_complex() {
     string=$'--$`\! *@ \a\b\e\f\r\t\v\\\"\' \n'
     assertEquals unchanged "$string"x "$(printf %s "$string" | empty_line_before_eof; printf x)"
+    string=$'--$`\! *@ \a\b\e\f\r\t\v\\\"\' '
+    assertEquals modified "$string"$'\n'x "$(printf %s "$string" | empty_line_before_eof; printf x)"
 }
 
 # load and run shUnit2
