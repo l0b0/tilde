@@ -263,7 +263,7 @@ glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts v
 glxinfo 
 gnome-control-center sound 
 gnome-screensaver-command -l 
-grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c 
+grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
 groups $USER 
 guard 
