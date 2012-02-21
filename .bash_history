@@ -264,8 +264,6 @@ gnome-control-center sound
 gnome-screensaver-command -l 
 grep --color=always "pattern" . | exclude_vcs 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c 
-grep -r --exclude-dir .svn "pattern" . 
-grep -r "pattern" . | grep -v '/\.svn/' 
 grep $USER /etc/passwd 
 groups $USER 
 guard 
