@@ -1,3 +1,4 @@
+ack-grep "pattern" . 
 aplay -L 
 apport-bug package # report 
 apropos bash 
@@ -262,7 +263,6 @@ glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts v
 glxinfo 
 gnome-control-center sound 
 gnome-screensaver-command -l 
-grep --color=always "pattern" . | exclude_vcs 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c 
 grep $USER /etc/passwd 
 groups $USER 
@@ -369,6 +369,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
+man ack-grep 
 man addgroup 
 man apropos 
 man arch 
@@ -718,6 +719,7 @@ strings /usr/bin/strings
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup $USER group 
 sudo apt-get dist-upgrade 
+sudo apt-get install ack-grep 
 sudo apt-get install autoconf 
 sudo apt-get install automake 
 sudo apt-get install bash 
