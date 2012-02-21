@@ -75,6 +75,7 @@ cd ~/dev/vcard-module/
 cd ~/dev/worktime/ 
 cd /home/$USER/ 
 cd ~/.minecraft/ 
+cd -- "$(mktemp -d)" 
 cd ~/personal/ 
 cd ~/settings/ 
 chmod u+x test.sh 
