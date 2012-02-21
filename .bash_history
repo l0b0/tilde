@@ -37,6 +37,7 @@ cat /proc/filesystems
 cat /proc/misc 
 cat /proc/stat 
 cat /proc/vmstat 
+cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 cd 
 cd - 
 cd ./ 
@@ -858,6 +859,7 @@ sudo apt-get update
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo blkid -o list 
 sudo chown nobody "$sandbox" 
+sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
 sudo dmidecode --type 1 
@@ -882,6 +884,7 @@ sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_or
 sudo service cups restart 
 sudo service postgresql reload 
 sudo shutdown -r now 
+sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware MacMini4,1 speed 
 sudo update-alternatives --config editor 
 sudo updatedb 
 sudo update-grub 
