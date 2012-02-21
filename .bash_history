@@ -136,6 +136,37 @@ echo $PROMPT_COMMAND
 echo $REPLY 
 echo $TERM 
 echo $WINEPREFIX 
+editor ~/.bash_aliases 
+editor ~/.bash_aliases_local 
+ editor ~/.bash_history 
+editor ~/.bashrc 
+editor ~/.bashrc_local 
+editor ~/dev/fgit/fgit.sh 
+editor ~/dev/indentect/indentect.sh 
+editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
+editor ~/dev/mkgithub/mkgithub.sh 
+editor ~/dev/tilde/.muttrc 
+editor ~/dev/tilde/scripts/cleanup.sh 
+editor ~/dev/tilde/scripts/install-all.sh 
+editor ~/dev/tilde/scripts/make-links.sh 
+editor ~/.gitconfig 
+editor .git/config 
+editor .gitignore 
+editor /lib/udev/rules.d/95-keymap.rules 
+editor Makefile 
+editor ~/.mkgithub 
+editor ~/.mozilla/firefox/*/chrome/userContent.css 
+editor ~/.muttrc 
+editor ~/.muttrc_local 
+editor README.markdown 
+editor ~/.rvmrc 
+editor ~/.ssh/config 
+editor ~/.subversion/config 
+editor ~/.subversion/servers 
+editor ~/.vimrc 
+editor ~/.wine/system.reg 
+editor ~/.wine/user.reg 
+editor ~/.xinitrc 
 empty_line_before_eof -i * 
 env 
 eval `resize -s 24 80` 
@@ -865,6 +896,10 @@ sudo dmidecode
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo dpkg-reconfigure ca-certificates 
+sudo editor /etc/fstab 
+sudo editor /etc/hosts 
+sudo editor /etc/postgresql/*/main/pg_hba.conf 
+sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo iotop 
 sudo lshw | less 
@@ -891,10 +926,6 @@ sudo update-grub
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo -u postgres createuser -s username 
 sudo usermod -a -g users -G $(id -g) $USER # change default group 
-sudo vim /etc/fstab 
-sudo vim /etc/hosts 
-sudo vim /etc/postgresql/*/main/pg_hba.conf 
-sudo vim /etc/X11/xorg.conf 
 sudo visudo 
 sudo Xorg :1 -configure 
 svn add . 
@@ -967,38 +998,7 @@ unset REPLY
 unset var 
 upgrade 
 vcard ~/contacts/*.vcf 
-vim ~/.bash_aliases 
-vim ~/.bash_aliases_local 
- vim ~/.bash_history 
-vim ~/.bashrc 
-vim ~/.bashrc_local 
 vim -c "setfiletype sh" test 
-vim ~/dev/fgit/fgit.sh 
-vim ~/dev/indentect/indentect.sh 
-vim ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
-vim ~/dev/mkgithub/mkgithub.sh 
-vim ~/dev/tilde/.muttrc 
-vim ~/dev/tilde/scripts/cleanup.sh 
-vim ~/dev/tilde/scripts/install-all.sh 
-vim ~/dev/tilde/scripts/make-links.sh 
-vim ~/.gitconfig 
-vim .git/config 
-vim .gitignore 
-vim /lib/udev/rules.d/95-keymap.rules 
-vim Makefile 
-vim ~/.mkgithub 
-vim ~/.mozilla/firefox/*/chrome/userContent.css 
-vim ~/.muttrc 
-vim ~/.muttrc_local 
-vim README.markdown 
-vim ~/.rvmrc 
-vim ~/.ssh/config 
-vim ~/.subversion/config 
-vim ~/.subversion/servers 
-vim ~/.vimrc 
-vim ~/.wine/system.reg 
-vim ~/.wine/user.reg 
-vim ~/.xinitrc 
 visudo 
 vlc -H 
 vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
