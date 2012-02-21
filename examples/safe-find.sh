@@ -42,7 +42,7 @@ set -o errexit
 set -o nounset
 set -o noclobber
 
-test_file_name=$'--$`\! *@ \a\b\e\E\f\r\t\v\\\"\' \n'
+test_file_name=$'--$`\! *@ \a\b\E\f\r\t\v\\\"\' \n'
 test_dir_path="$test_file_name"
 test_file_path="${test_dir_path}/${test_file_name}"
 
