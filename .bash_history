@@ -673,6 +673,7 @@ rails server # start
 rails --version 
 rake db:migrate # rails database 
 rake db:reset # rails database 
+rake db:reset && rails server # database 
 rake db:rollback # rails database 
 rake db:seed # rails database 
 rake routes # rails web 
