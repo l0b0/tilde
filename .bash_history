@@ -1,181 +1,181 @@
-ack-grep "pattern" . 
-aplay -L 
+ack-grep "pattern" . # search 
+aplay -L # audio 
 apport-bug package # report 
-apropos bash 
+apropos bash # help 
 apt-cache depends bash 
 apt-cache search bash 
 apt-cache show bash 
-apt-cache showsrc bash 
+apt-cache showsrc bash # source 
 apt-cache stats bash 
 apt-get source apt 
-arch 
-bash 
+arch # hardware 
+bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
 bash test.sh 
 bash --version 
-bash -x 
+bash -x # debug 
 bchunk image.bin image.cue image.iso 
-bg 
-builtin 
-bundle help 
-bundle init 
-bundle install 
-bundle install --binstubs=./bundler_stubs 
-bundle update 
-cap 
-cap deploy 
-cap deploy:check 
-cap deploy:migrations 
-cap deploy:rollback 
-cap deploy:setup 
-capify . 
+bg # background 
+builtin # bash 
+bundle help # rails 
+bundle init # rails 
+bundle install --binstubs=./bundler_stubs # rails 
+bundle install # rails 
+bundle update # rails 
+cap deploy:check # rails 
+cap deploy:migrations # rails 
+cap deploy # rails 
+cap deploy:rollback # rails 
+cap deploy:setup # rails 
+capify . # rails 
+cap # rails 
 cat ~/contacts/*.vcf > ~/all.vcf 
-cat /etc/papersize 
-cat /etc/*release 
-cat /proc/cpuinfo 
-cat /proc/devices 
-cat /proc/filesystems 
-cat /proc/misc 
-cat /proc/stat 
-cat /proc/vmstat 
+cat /etc/papersize # print 
+cat /etc/*release # OS 
+cat /proc/cpuinfo # hardware 
+cat /proc/devices # hardware 
+cat /proc/filesystems # hardware 
+cat /proc/misc # hardware 
+cat /proc/stat # hardware 
+cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 cd 
 cd - 
 cd ./ 
 cd ../ 
 cd ~/contacts/ 
-cd ~/dev/bm/ 
-cd ~/dev/count/ 
-cd ~/dev/csv2zarafa-contacts/ 
-cd ~/dev/dialogue/ 
-cd ~/dev/dialogue.wiki/ 
-cd ~/dev/difff/ 
-cd ~/dev/export/ 
-cd ~/dev/fgit/ 
-cd ~/dev/filterous/ 
-cd ~/dev/graphics/ 
-cd ~/dev/https-everywhere/ 
-cd ~/dev/indentect/ 
-cd ~/dev/jail/ 
-cd ~/dev/lines/ 
-cd ~/dev/make-links/ 
-cd ~/dev/mian/ 
-cd ~/dev/minecraft-scripts/ 
-cd ~/dev/mkgithub/ 
-cd ~/dev/mount-image/ 
-cd ~/dev/msort/ 
-cd ~/dev/paperless/ 
-cd ~/dev/paperless.wiki/ 
-cd ~/dev/schemaspy2svg/ 
-cd ~/dev/shunit-ng/ 
-cd ~/dev/tilde/ 
-cd ~/dev/tilde/scripts/ 
-cd ~/dev/trim/ 
-cd ~/dev/txt2cloud/ 
-cd ~/dev/vcard2mutt/ 
-cd ~/dev/vcard-module/ 
-cd ~/dev/worktime/ 
+cd ~/dev/bm/ # project 
+cd ~/dev/count/ # project 
+cd ~/dev/csv2zarafa-contacts/ # project 
+cd ~/dev/dialogue/ # project 
+cd ~/dev/dialogue.wiki/ # project 
+cd ~/dev/difff/ # project 
+cd ~/dev/export/ # project 
+cd ~/dev/fgit/ # project 
+cd ~/dev/filterous/ # project 
+cd ~/dev/graphics/ # project 
+cd ~/dev/https-everywhere/ # project 
+cd ~/dev/indentect/ # project 
+cd ~/dev/jail/ # project 
+cd ~/dev/lines/ # project 
+cd ~/dev/make-links/ # project 
+cd ~/dev/mian/ # project 
+cd ~/dev/minecraft-scripts/ # project 
+cd ~/dev/mkgithub/ # project 
+cd ~/dev/mount-image/ # project 
+cd ~/dev/msort/ # project 
+cd ~/dev/paperless/ # project 
+cd ~/dev/paperless.wiki/ # project 
+cd ~/dev/schemaspy2svg/ # project 
+cd ~/dev/shunit-ng/ # project 
+cd ~/dev/tilde/ # project 
+cd ~/dev/tilde/scripts/ # project 
+cd ~/dev/trim/ # project 
+cd ~/dev/txt2cloud/ # project 
+cd ~/dev/vcard2mutt/ # project 
+cd ~/dev/vcard-module/ # project 
+cd ~/dev/worktime/ # project 
 cd /home/$USER/ 
-cd ~/.minecraft/ 
+cd ~/.minecraft/ # game 
 cd -- "$(mktemp -d)" 
 cd ~/personal/ 
 cd ~/settings/ 
 chmod u+x test.sh 
-chmod +x $rvm_path/hooks/after_cd_bundler 
-cmp -b $(which arch) $(which uname) 
-completions git config '' | grep user 
-./configure 
-./configure --help | less 
-count . 
-cp file{,.orig} 
-createdb -T template0 -U username dbname 
-crontab -e 
+chmod +x $rvm_path/hooks/after_cd_bundler # development plugin 
+cmp -b $(which arch) $(which uname) # binary diff 
+completions git config '' | grep user # autocomplete 
+./configure --help | less # packaging 
+./configure # packaging 
+count . # filesystem 
+cp file{,.orig} # filesystem 
+createdb -T template0 -U username dbname # PostgreSQL 
+crontab -e # edit 
 crontab -l 
-cucumber 
-cucumber --dry-run 
-curl -kL http://xrl.us/perlbrewinstall | bash 
+cucumber --dry-run # rails 
+cucumber # rails 
+curl -kL http://xrl.us/perlbrewinstall | bash # development 
 curl --version 
 cvs log 
-date --date="2001-09-09 03:46:40+02:00" +%s 
-date --rfc-3339=seconds --date="@1000000000" 
+date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
+date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
-~/dev/minecraft-scripts/backup.sh 
-~/dev/minecraft-scripts/install-Minecraft.sh 
-~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh 
-~/dev/schemaspy2svg/schemaspy2svg.sh ~/db 
+~/dev/minecraft-scripts/backup.sh # game 
+~/dev/minecraft-scripts/install-Minecraft.sh # game 
+~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
+~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
  ~/dev/tilde/scripts/cleanup.sh -v 
-~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ 
-df -h 
-df -h . 
+~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
+df -h . # filesystem 
+df -h # filesystem 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
-DISPLAY=:0 compiz --replace 
-DISPLAY=:0 gnome-shell --replace 
-dmesg 
-dos2unix file 
-dot -O -Tsvg *.dot 
-dot -Tsvg graph.dot 
-dotty graph.dot 
-dpkg -s bash 
-dpkg -S "$(which apt-get)" 
-dropdb -U username dbname 
-echo $? 
+DISPLAY=:0 compiz --replace # debug WM 
+DISPLAY=:0 gnome-shell --replace # debug WM 
+dmesg # debug OS startup 
+dos2unix file # convert newline 
+dot -O -Tsvg *.dot # graphics 
+dot -Tsvg graph.dot # graphics 
+dotty graph.dot # graphics 
+dpkg -s bash # package 
+dpkg -S "$(which apt-get)" # package 
+dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
-echo $COLUMNS 
-echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment 
-echo $LINES 
+echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' # test
+echo $COLUMNS # terminal
+echo $? # exit code 
+echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print
+echo $LINES # terminal
 echo $OSTYPE 
 echo "$PATH" 
-echo "${paths[@]}" 
-echo "${paths[0]}" 
-echo "${paths[@]: -1}" 
-echo $PROMPT_COMMAND 
-echo $REPLY 
-echo $TERM 
+echo "${paths[@]}" # array
+echo "${paths[0]}" # array
+echo "${paths[@]: -1}" # array
+echo $PROMPT_COMMAND # shell
+echo $REPLY # read
+echo $TERM # shell
 echo $WINEPREFIX 
-editor ~/.bash_aliases 
-editor ~/.bash_aliases_local 
- editor ~/.bash_history 
-editor ~/.bashrc 
-editor ~/.bashrc_local 
-editor ~/dev/fgit/fgit.sh 
-editor ~/dev/indentect/indentect.sh 
-editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh 
-editor ~/dev/mkgithub/mkgithub.sh 
-editor ~/dev/tilde/.muttrc 
+editor ~/.bash_aliases # shell
+editor ~/.bash_aliases_local # shell
+ editor ~/.bash_history # shell
+editor ~/.bashrc # shell
+editor ~/.bashrc_local # shell
+editor ~/dev/fgit/fgit.sh # dev 
+editor ~/dev/indentect/indentect.sh # dev 
+editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
+editor ~/dev/mkgithub/mkgithub.sh # dev 
+editor ~/dev/tilde/.muttrc # email
 editor ~/dev/tilde/scripts/cleanup.sh 
 editor ~/dev/tilde/scripts/install-all.sh 
 editor ~/dev/tilde/scripts/make-links.sh 
-editor ~/.gitconfig 
-editor .git/config 
-editor .gitignore 
-editor /lib/udev/rules.d/95-keymap.rules 
-editor Makefile 
-editor ~/.mkgithub 
+editor ~/.gitconfig # dev 
+editor .git/config # dev 
+editor .gitignore # dev 
+editor /lib/udev/rules.d/95-keymap.rules # keyboard
+editor Makefile # dev 
+editor ~/.mkgithub # dev 
 editor ~/.mozilla/firefox/*/chrome/userContent.css 
-editor ~/.muttrc 
-editor ~/.muttrc_local 
-editor README.markdown 
-editor ~/.rvmrc 
+editor ~/.muttrc # email 
+editor ~/.muttrc_local # email 
+editor README.markdown # dev 
+editor ~/.rvmrc # dev 
 editor ~/.ssh/config 
-editor ~/.subversion/config 
-editor ~/.subversion/servers 
+editor ~/.subversion/config # dev 
+editor ~/.subversion/servers # dev 
 editor ~/.vimrc 
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
-empty_line_before_eof -i * 
-env 
-eval `resize -s 24 80` 
+empty_line_before_eof -i * # newline
+env # variable
+eval `resize -s 24 80` # terminal
 exit 
-facter 
+facter # hardware OS
 facter --help 
-facter id 
-ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 
-fg 
+facter id # user
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert
+fg # foreground
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -183,7 +183,7 @@ fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/
 file README.markdown 
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find . -empty 
-find . -empty -delete 
+find . -empty -delete # remove files
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
 find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
@@ -401,137 +401,137 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
-man ack-grep 
-man addgroup 
-man apropos 
-man arch 
-man ascii 
-man bash 
-man blkid 
-man charsets 
-man chgrp 
-man chmod 
-man chown 
-man chroot 
-man cmp 
-man comm 
-man cp 
-man createdb 
-man createuser 
-man crontab 
-man curl 
-man cut 
-man date 
-man diff 
-man dot 
-man dotty 
-man errno 
-man expr 
-man ffmpeg 
-man file 
-man find 
-man fmt 
-man fortune 
-man getopt 
-man git 
-man gksu 
-man gnome-shell 
-man gnome-terminal 
-man gpg 
-man grep 
-man groupadd 
-man head 
-man hier 
-man hostname 
-man hosts 
-man id 
-man inotify 
-man inotifywait 
-man install 
-man interfaces 
-man iostat 
-man iotop 
-man ip 
-man join 
-man kill 
-man ld 
-man ldd 
-man less 
-man line 
-man locate 
-man logger 
-man ls 
-man lsof 
-man lynx 
-man markdown 
-man mktemp 
-man mount 
-man mutt 
-man mv 
-man nautilus 
-man netstat 
-man nl 
-man od 
-man paperconfig 
-man patch 
-man perl 
-man pgrep 
-man ping 
-man pngcrush 
-man pod2man 
-man psql 
-man puppet 
-man rake 
-man recordmydesktop 
-man rename 
-man resize 
-man rm 
-man route 
-man scp 
-man sed 
-man seq 
-man sh 
-man shunit2 
-man signal 
-man sleep 
-man sort 
-man ssh 
-man ssh_config 
-man ssh-copy-id 
-man sshd 
-man stat 
-man strfile 
-man su 
-man sudo 
-man tail 
-man tar 
-man tee 
-man time 
-man timeout 
-man tput 
-man tr 
-man traceroute 
-man trash 
-man ubuntu-bug 
-man udevadm 
-man uname 
-man unicode 
-man uniq 
-man updatedb 
-man useradd 
-man usermod 
-man utf8 
-man vim 
-man w 
-man watch 
-man wc 
-man wdiff 
-man wget 
-man xdg-desktop-menu 
-man xdotool 
-man xinput 
-man xwininfo 
-man xxd 
+man ack-grep # help 
+man addgroup # help 
+man apropos # help 
+man arch # help 
+man ascii # help 
+man bash # help 
+man blkid # help 
+man charsets # help 
+man chgrp # help 
+man chmod # help 
+man chown # help 
+man chroot # help 
+man cmp # help 
+man comm # help 
+man cp # help 
+man createdb # help 
+man createuser # help 
+man crontab # help 
+man curl # help 
+man cut # help 
+man date # help 
+man diff # help 
+man dot # help 
+man dotty # help 
+man errno # help 
+man expr # help 
+man ffmpeg # help 
+man file # help 
+man find # help 
+man fmt # help 
+man fortune # help 
+man getopt # help 
+man git # help 
+man gksu # help 
+man gnome-shell # help 
+man gnome-terminal # help 
+man gpg # help 
+man grep # help 
+man groupadd # help 
+man head # help 
+man hier # help 
+man hostname # help 
+man hosts # help 
+man id # help 
+man inotify # help 
+man inotifywait # help 
+man install # help 
+man interfaces # help 
+man iostat # help 
+man iotop # help 
+man ip # help 
+man join # help 
+man kill # help 
+man ldd # help 
+man ld # help 
+man less # help 
+man line # help 
+man locate # help 
+man logger # help 
+man ls # help 
+man lsof # help 
+man lynx # help 
+man markdown # help 
+man mktemp # help 
+man mount # help 
+man mutt # help 
+man mv # help 
+man nautilus # help 
+man netstat # help 
+man nl # help 
+man od # help 
+man paperconfig # help 
+man patch # help 
+man perl # help 
+man pgrep # help 
+man ping # help 
+man pngcrush # help 
+man pod2man # help 
+man psql # help 
+man puppet # help 
+man rake # help 
+man recordmydesktop # help 
+man rename # help 
+man resize # help 
+man rm # help 
+man route # help 
+man scp # help 
+man sed # help 
+man seq # help 
+man sh # help 
+man shunit2 # help 
+man signal # help 
+man sleep # help 
+man sort # help 
+man ssh_config # help 
+man ssh-copy-id # help 
+man sshd # help 
+man ssh # help 
+man stat # help 
+man strfile # help 
+man sudo # help 
+man su # help 
+man tail # help 
+man tar # help 
+man tee # help 
+man time # help 
+man timeout # help 
+man tput # help 
+man traceroute # help 
+man trash # help 
+man tr # help 
+man ubuntu-bug # help 
+man udevadm # help 
+man uname # help 
+man unicode # help 
+man uniq # help 
+man updatedb # help 
+man useradd # help 
+man usermod # help 
+man utf8 # help 
+man vim # help 
+man watch # help 
+man wc # help 
+man wdiff # help 
+man wget # help 
+man w # help 
+man xdg-desktop-menu # help 
+man xdotool # help 
+man xinput # help 
+man xwininfo # help 
+man xxd # help 
 markdown_page README.markdown > README.xhtml 
 markdown_page "${TODOS[@]}" > ~/todo.xhtml 
 markdown README.markdown 
@@ -661,15 +661,15 @@ puppet resource user root
 pwd # current directory 
 qgit .& # GUI 
 rails console 
-rails destroy controller sessions # delete 
-rails destroy scaffold user # delete 
-rails generate controller sessions new create destroy # create 
-rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create 
-rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create 
+rails destroy controller sessions # delete database 
+rails destroy scaffold user # delete database 
+rails generate controller sessions new create destroy # create database 
+rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
+rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails new project_name # create 
-rails server -e production -p 3002 # start 
-rails server -e test -p 3001 # start 
-rails server # start 
+rails server -e production -p 3002 # start service web 
+rails server -e test -p 3001 # start service web 
+rails server # start service web 
 rails --version 
 rake db:migrate # rails database 
 rake db:reset # rails database 
@@ -677,8 +677,8 @@ rake db:reset && rails server # database
 rake db:rollback # rails database 
 rake db:seed # rails database 
 rake routes # rails web 
-rake --tasks 
-rake test 
+rake --tasks # rails 
+rake test # rails 
 read < "/path" 
 read -r var 
 read <<< "$text" 
