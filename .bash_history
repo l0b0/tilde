@@ -174,6 +174,7 @@ exit
 facter 
 facter --help 
 facter id 
+feh --fullscreen --hide-pointer * # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 
 fg 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -427,6 +428,7 @@ man dot
 man dotty 
 man errno 
 man expr 
+man feh 
 man ffmpeg 
 man file 
 man find 
