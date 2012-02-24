@@ -1032,5 +1032,6 @@ xinput --list 10
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
