@@ -122,37 +122,37 @@ dpkg -s bash # package
 dpkg -S "$(which apt-get)" # package 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' # test
-echo $COLUMNS # terminal
+echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' # test 
+echo $COLUMNS # terminal 
 echo $? # exit code 
-echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print
-echo $LINES # terminal
+echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
+echo $LINES # terminal 
 echo $OSTYPE 
 echo "$PATH" 
-echo "${paths[@]}" # array
-echo "${paths[0]}" # array
-echo "${paths[@]: -1}" # array
-echo $PROMPT_COMMAND # shell
-echo $REPLY # read
-echo $TERM # shell
+echo "${paths[@]}" # array 
+echo "${paths[0]}" # array 
+echo "${paths[@]: -1}" # array 
+echo $PROMPT_COMMAND # shell 
+echo $REPLY # read 
+echo $TERM # shell 
 echo $WINEPREFIX 
-editor ~/.bash_aliases # shell
-editor ~/.bash_aliases_local # shell
- editor ~/.bash_history # shell
-editor ~/.bashrc # shell
-editor ~/.bashrc_local # shell
+editor ~/.bash_aliases # shell 
+editor ~/.bash_aliases_local # shell 
+ editor ~/.bash_history # shell 
+editor ~/.bashrc # shell 
+editor ~/.bashrc_local # shell 
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
 editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
 editor ~/dev/mkgithub/mkgithub.sh # dev 
-editor ~/dev/tilde/.muttrc # email
+editor ~/dev/tilde/.muttrc # email 
 editor ~/dev/tilde/scripts/cleanup.sh 
 editor ~/dev/tilde/scripts/install-all.sh 
 editor ~/dev/tilde/scripts/make-links.sh 
 editor ~/.gitconfig # dev 
 editor .git/config # dev 
 editor .gitignore # dev 
-editor /lib/udev/rules.d/95-keymap.rules # keyboard
+editor /lib/udev/rules.d/95-keymap.rules # keyboard 
 editor Makefile # dev 
 editor ~/.mkgithub # dev 
 editor ~/.mozilla/firefox/*/chrome/userContent.css 
@@ -167,16 +167,16 @@ editor ~/.vimrc
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
-empty_line_before_eof -i * # newline
-env # variable
-eval `resize -s 24 80` # terminal
+empty_line_before_eof -i * # newline 
+env # variable 
+eval `resize -s 24 80` # terminal 
 exit 
-facter # hardware OS
+facter # hardware OS 
 facter --help 
-facter id # user
+facter id # user 
 feh --fullscreen --hide-pointer * # images viewer 
-ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert
-fg # foreground
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert 
+fg # foreground 
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -184,7 +184,7 @@ fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/
 file README.markdown 
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find . -empty 
-find . -empty -delete # remove files
+find . -empty -delete # remove files 
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
 find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
