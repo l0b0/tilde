@@ -435,6 +435,7 @@ man dot # help
 man dotty # help 
 man errno # help 
 man expr # help 
+man fdisk 
 man feh 
 man ffmpeg # help 
 man file # help 
@@ -914,6 +915,7 @@ sudo editor /etc/hosts
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
+sudo fdisk -l 
 sudo iotop 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
