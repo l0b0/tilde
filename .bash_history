@@ -75,6 +75,7 @@ cd ~/dev/txt2cloud/ # project
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard-module/ # project 
 cd ~/dev/worktime/ # project 
+cd ~/dev/xterm-color-count/ # project 
 cd /home/$USER/ 
 cd ~/.minecraft/ # game 
 cd -- "$(mktemp -d)" 
@@ -105,6 +106,7 @@ date +%Y-%m-%d
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
  ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
+~/dev/xterm-color-count/xterm-color-count.sh 
 df -h . # filesystem 
 df -h # filesystem 
 diff -u file{.orig,} 
@@ -613,6 +615,7 @@ mkgithub ~/dev/vcard-module
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
+mkgithub ~/dev/xterm-color-count 
 mkgithub -h 
 mkgithub --help 
 mogrify -crop 2316x1303+0+0 *.jpg 
