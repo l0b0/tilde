@@ -926,6 +926,7 @@ sudo service postgresql reload
 sudo shutdown -r now 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware MacMini4,1 speed 
 sudo update-alternatives --config editor 
+sudo update-alternatives --config x-www-browser 
 sudo updatedb 
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
