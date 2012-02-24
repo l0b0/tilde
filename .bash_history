@@ -174,6 +174,7 @@ exit
 facter # hardware OS
 facter --help 
 facter id # user
+feh --fullscreen --hide-pointer * # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert
 fg # foreground
 fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -427,6 +428,7 @@ man dot # help
 man dotty # help 
 man errno # help 
 man expr # help 
+man feh 
 man ffmpeg # help 
 man file # help 
 man find # help 
