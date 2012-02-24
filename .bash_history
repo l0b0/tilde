@@ -230,6 +230,7 @@ git config --get-all
 git config --global github.user l0b0 
 git config --global mergetool.prompt false 
 git config -l 
+GIT_CURL_VERBOSE=1 git pull # debug 
 git diff 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
