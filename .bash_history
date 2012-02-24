@@ -993,6 +993,7 @@ txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml
 ubuntu-bug linux 
 udevadm info --export-db 
 ulimit -a 
+ulimit -c unlimited 
 uname -a 
 uname -m 
 unetbootin 
