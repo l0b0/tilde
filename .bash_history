@@ -203,6 +203,7 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 gcc --version 
+gconf-editor # GNOME config 
 gem install bundler 
 gem install cucumber 
 gem install pry pry-doc 
