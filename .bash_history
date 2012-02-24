@@ -141,6 +141,7 @@ editor ~/.bash_aliases_local # shell
  editor ~/.bash_history # shell 
 editor ~/.bashrc # shell 
 editor ~/.bashrc_local # shell 
+editor ~/.config/openbox/lxde-rc.xml # config LXDE keyboard shortcuts
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
 editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
