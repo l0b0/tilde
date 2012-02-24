@@ -132,18 +132,18 @@ echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print
 echo $LINES # terminal 
 echo $OSTYPE 
 echo "$PATH" 
-echo "${paths[@]}" # array 
 echo "${paths[0]}" # array 
 echo "${paths[@]: -1}" # array 
+echo "${paths[@]}" # array 
 echo $PROMPT_COMMAND # shell 
 echo $REPLY # read 
 echo $TERM # shell 
 echo $WINEPREFIX 
-editor ~/.bash_aliases # shell 
 editor ~/.bash_aliases_local # shell 
+editor ~/.bash_aliases # shell 
  editor ~/.bash_history # shell 
-editor ~/.bashrc # shell 
 editor ~/.bashrc_local # shell 
+editor ~/.bashrc # shell 
 editor ~/.config/openbox/lxde-rc.xml # config LXDE keyboard shortcuts 
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
