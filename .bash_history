@@ -83,6 +83,7 @@ cd ~/personal/
 cd ~/settings/ 
 chmod u+x test.sh 
 chmod +x $rvm_path/hooks/after_cd_bundler # development plugin 
+chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
