@@ -273,6 +273,7 @@ git pull origin master
 git push 
 git push --force 
 git push -u origin master 
+git rebase --abort 
 git rebase --continue 
 git rebase --interactive HEAD~20 
 git remote add --tags -f origin ssh://user@example.org/home/user/repo 
