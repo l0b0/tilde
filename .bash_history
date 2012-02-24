@@ -618,6 +618,7 @@ mogrify -crop 2316x1303+0+0 *.jpg
 mogrify -format jpg *.CR2 
 mount 
 mount -n -o remount,defaults /dev/sda1 / 
+mountpoint /home 
 mutt 
 mutt -d 5 
 mutt -v 
