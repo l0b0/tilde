@@ -303,6 +303,7 @@ glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts v
 glxinfo 
 gnome-control-center sound 
 gnome-screensaver-command -l 
+gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
 groups $USER 
@@ -498,6 +499,7 @@ man resize # help
 man rm # help 
 man route # help 
 man scp # help 
+man script # help 
 man sed # help 
 man seq # help 
 man sh # help 
