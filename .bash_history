@@ -435,8 +435,8 @@ man dot # help
 man dotty # help 
 man errno # help 
 man expr # help 
-man fdisk 
-man feh 
+man fdisk # help 
+man feh # help 
 man ffmpeg # help 
 man file # help 
 man find # help 
