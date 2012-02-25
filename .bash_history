@@ -14,6 +14,7 @@ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscr
 bash test.sh 
 bash --version 
 bash -x # debug 
+bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
 builtin # bash 
@@ -414,6 +415,7 @@ man apropos # help
 man arch # help 
 man ascii # help 
 man bash # help 
+man bc 
 man blkid # help 
 man charsets # help 
 man chgrp # help 
