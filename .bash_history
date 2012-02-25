@@ -114,8 +114,6 @@ diff -u file{.orig,}
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
-DISPLAY=:0 compiz --replace # debug WM 
-DISPLAY=:0 gnome-shell --replace # debug WM 
 dmesg # debug OS startup 
 dos2unix file # convert newline 
 dot -O -Tsvg *.dot # graphics 
@@ -1029,6 +1027,8 @@ which make
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
+while true; do DISPLAY=:0 compiz --replace; done & # debug WM 
+while true; do DISPLAY=:0 gnome-shell --replace; done & # debug WM 
 wine --version 
 worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
 xev 
