@@ -1031,7 +1031,7 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; f
 while true; do DISPLAY=:0 compiz --replace; done & # debug WM 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug WM 
 wine --version 
-worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
+worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
 xev 
 xinput --list 
 xinput --list 10 
