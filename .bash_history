@@ -847,6 +847,7 @@ sudo apt-get install ncurses-dev
 sudo apt-get install nfs-common 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
+sudo apt-get install nvidia-current 
 sudo apt-get install offlineimap 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
