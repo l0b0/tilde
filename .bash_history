@@ -900,6 +900,7 @@ sudo apt-get install wine
 sudo apt-get install winetricks 
 sudo apt-get install x264 
 sudo apt-get install xournal 
+sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get update 
@@ -1039,6 +1040,7 @@ xinput --list 10
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xscreensaver-command -lock 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
