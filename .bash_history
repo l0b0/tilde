@@ -3,6 +3,7 @@ aplay -L # audio
 apport-bug package # report 
 apropos bash # help 
 apt-cache depends bash 
+apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
 apt-cache show bash 
 apt-cache showsrc bash # source 
