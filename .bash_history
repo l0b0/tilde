@@ -108,6 +108,7 @@ date +%Y-%m-%d
  ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/xterm-color-count/xterm-color-count.sh 
+~/dev/xterm-color-count/xterm-color-count.sh -v 
 df -h . # filesystem 
 df -h # filesystem 
 diff -u file{.orig,} 
