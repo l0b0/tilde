@@ -1,8 +1,10 @@
+ack-grep --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir tmp "pattern" . # search Rails
 ack-grep "pattern" . # search 
 aplay -L # audio 
 apport-bug package # report 
 apropos bash # help 
 apt-cache depends bash 
+apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
 apt-cache show bash 
 apt-cache showsrc bash # source 
@@ -33,11 +35,13 @@ cap # rails
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/papersize # print 
 cat /etc/*release # OS 
+cat /proc/1/stat | awk '{ print $22 }' # process start time jiffies since boot 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
 cat /proc/filesystems # hardware 
 cat /proc/misc # hardware 
 cat /proc/stat # hardware 
+cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 cd 
@@ -109,6 +113,7 @@ date +%Y-%m-%d
  ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/xterm-color-count/xterm-color-count.sh 
+~/dev/xterm-color-count/xterm-color-count.sh -v 
 df -h . # filesystem 
 df -h # filesystem 
 diff -u file{.orig,} 
@@ -284,6 +289,7 @@ git stash && git merge origin/master && git stash pop
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash pop 
+git stash save stashname 
 git stash show -u 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
@@ -425,8 +431,8 @@ man chroot # help
 man cmp # help 
 man comm # help 
 man cp # help 
-man createdb # help 
-man createuser # help 
+man createdb # help PostgreSQL 
+man createuser # help PostgreSQL 
 man crontab # help 
 man curl # help 
 man cut # help 
@@ -490,7 +496,8 @@ man pgrep # help
 man ping # help 
 man pngcrush # help 
 man pod2man # help 
-man psql # help 
+man proc # help 
+man psql # help PostgreSQL 
 man puppet # help 
 man rake # help 
 man recordmydesktop # help 
@@ -663,8 +670,9 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 pry 
-psql dbname username < dump.sql 
-psql -U db_user db_name 
+psql dbname username < dump.sql # PostgreSQL 
+psql -U db_user db_name # PostgreSQL 
+psql --version # PostgreSQL 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe -s user 
@@ -848,6 +856,7 @@ sudo apt-get install ncurses-dev
 sudo apt-get install nfs-common 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
+sudo apt-get install nvidia-current 
 sudo apt-get install offlineimap 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
@@ -900,6 +909,7 @@ sudo apt-get install wine
 sudo apt-get install winetricks 
 sudo apt-get install x264 
 sudo apt-get install xournal 
+sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get update 
@@ -1032,13 +1042,14 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; f
 while true; do DISPLAY=:0 compiz --replace; done & # debug WM 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug WM 
 wine --version 
-worktime --end=$(date --date=Friday +%Y-%m-%d) > ~/week.xhtml 
+worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
 xev 
 xinput --list 
 xinput --list 10 
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xscreensaver-command -lock 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
