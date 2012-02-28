@@ -33,6 +33,7 @@ cap # rails
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/papersize # print 
 cat /etc/*release # OS 
+cat /proc/1/stat | awk '{ print $22 }' # process start time jiffies since boot 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
 cat /proc/filesystems # hardware 
@@ -490,6 +491,7 @@ man pgrep # help
 man ping # help 
 man pngcrush # help 
 man pod2man # help 
+man proc # help 
 man psql # help 
 man puppet # help 
 man rake # help 
