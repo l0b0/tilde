@@ -428,8 +428,8 @@ man chroot # help
 man cmp # help 
 man comm # help 
 man cp # help 
-man createdb # help 
-man createuser # help 
+man createdb # help PostgreSQL 
+man createuser # help PostgreSQL 
 man crontab # help 
 man curl # help 
 man cut # help 
@@ -494,7 +494,7 @@ man ping # help
 man pngcrush # help 
 man pod2man # help 
 man proc # help 
-man psql # help 
+man psql # help PostgreSQL 
 man puppet # help 
 man rake # help 
 man recordmydesktop # help 
@@ -667,8 +667,8 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 pry 
-psql dbname username < dump.sql 
-psql -U db_user db_name 
+psql dbname username < dump.sql # PostgreSQL 
+psql -U db_user db_name # PostgreSQL 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe -s user 
