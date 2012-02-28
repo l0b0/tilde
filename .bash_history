@@ -442,6 +442,7 @@ man dot # help
 man dotty # help 
 man errno # help 
 man expr # help 
+man extundelete # help 
 man fdisk # help 
 man feh # help 
 man ffmpeg # help 
@@ -795,6 +796,7 @@ sudo apt-get install dos2unix
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
 sudo apt-get install esmtp 
+sudo apt-get install extundelete 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
 sudo apt-get install ffmpeg 
@@ -916,6 +918,7 @@ sudo apt-get update
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo blkid -o list 
 sudo chown nobody "$sandbox" 
+sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
@@ -927,6 +930,7 @@ sudo editor /etc/hosts
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
+sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
 sudo lshw | less 
@@ -938,6 +942,8 @@ sudo make pkginstall 2>&1 | tee make_pkginstall.out~
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
 sudo mount -a 
+sudo mount -o remount,ro /dev/sda1 # readonly restore 
+sudo mount -o remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
 sudo paperconfig -p a4 
 sudo reboot 
