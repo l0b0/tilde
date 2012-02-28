@@ -287,6 +287,7 @@ git stash && git merge origin/master && git stash pop
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash pop 
+git stash save stashname 
 git stash show -u 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
