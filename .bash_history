@@ -669,6 +669,7 @@ prove -r
 pry 
 psql dbname username < dump.sql # PostgreSQL 
 psql -U db_user db_name # PostgreSQL 
+psql --version # PostgreSQL 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe -s user 
