@@ -697,6 +697,7 @@ rails server -e production -p 3002 # start service web
 rails server -e test -p 3001 # start service web 
 rails server # start service web 
 rails --version 
+rake assets:clean 
 rake db:migrate # rails database 
 rake db:reset # rails database 
 rake db:reset && rails server # database 
