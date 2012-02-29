@@ -232,7 +232,6 @@ git clone git@github.com:l0b0/mkgithub.git
 git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
-git config --get-all 
 git config --global github.user l0b0 
 git config --global mergetool.prompt false 
 git config -l 
