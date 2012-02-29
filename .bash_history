@@ -380,6 +380,7 @@ less /etc/issue
 less /etc/passwd 
 less Makefile 
 less /proc/bus/input/devices 
+less -R filename # color 
 less /sys/class/dmi/id/product_name 
 less /sys/class/dmi/id/sys_vendor 
 less /var/log/auth.log 
