@@ -225,6 +225,7 @@ git add Makefile
 git add -p 
 git add README.markdown 
 git add tools.mk 
+git blame filename 
 git checkout . 
 git checkout master 
 git clone git@github.com:l0b0/mkgithub.git 
@@ -250,6 +251,7 @@ git diff --word-diff
 git fetch 
 git gui& 
 git help add 
+git help blame 
 git help clone 
 git help config 
 git help diff 
