@@ -285,14 +285,20 @@ git rebase --interactive HEAD~20
 git remote add --tags -f origin ssh://user@example.org/home/user/repo 
 git remote -v show 
 git reset HEAD^ 
-git stash 
-git stash clear 
+git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
+git stash list --patch # diff 
+git stash --patch # diff create 
 git stash pop 
+git stash pop stash@{1} 
+git stash save --keep-index "message" 
 git stash save "message" 
-git stash show -u 
+git stash save --patch "message" 
+git stash show 
+git stash show --patch # diff 
+git stash show --patch stash@{1} # diff 
 git status 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
