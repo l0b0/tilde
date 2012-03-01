@@ -185,7 +185,7 @@ facter id # user
 feh --fullscreen --hide-pointer * # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert 
 fg # foreground 
-fgit gc --aggressive -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
