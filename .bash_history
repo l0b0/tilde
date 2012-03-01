@@ -712,6 +712,7 @@ rake db:reset && rails server # database
 rake db:rollback # rails database 
 rake db:seed # rails database 
 rake routes # rails web 
+rake spec # rails test 
 rake --tasks # rails 
 rake test # rails 
 read < "/path" 
