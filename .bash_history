@@ -229,6 +229,7 @@ git add tools.mk
 git blame filename 
 git checkout . 
 git checkout master 
+git clean -n 
 git clone git@github.com:l0b0/mkgithub.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
