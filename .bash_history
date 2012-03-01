@@ -197,6 +197,7 @@ find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions
 find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
+find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
@@ -397,6 +398,7 @@ longest < ~/.bash_history
 lpstat -v 
 ls 
 ls -1 
+ls -d /proc/[^0-9]* 
 lshw 
 ls -la 
 ls -lr 
