@@ -701,14 +701,14 @@ rails generate controller sessions new create destroy # create database
 rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
 rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails new project_name # create 
-rails server -e production -p 3002 # start service web 
-rails server -e test -p 3001 # start service web 
-rails server # start service web 
+rails s -e production -p 3002 # start service web 
+rails s -e test -p 3001 # start service web 
+rails s # start service web 
 rails --version 
 rake assets:clean 
 rake db:migrate # rails database 
 rake db:reset # rails database 
-rake db:reset && rails server # database 
+rake db:reset && rails s # database 
 rake db:rollback # rails database 
 rake db:seed # rails database 
 rake routes # rails web 
