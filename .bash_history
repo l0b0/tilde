@@ -711,6 +711,7 @@ rake db:reset # rails database
 rake db:reset && rails s # database 
 rake db:rollback # rails database 
 rake db:seed # rails database 
+rake db:test:prepare # rails database
 rake routes # rails web 
 rake spec # rails test 
 rake --tasks # rails 
