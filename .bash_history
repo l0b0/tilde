@@ -430,6 +430,7 @@ make variables
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
+man apt-listchanges 
 man arch # help 
 man ascii # help 
 man bash # help 
@@ -791,6 +792,7 @@ sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
 sudo addgroup $USER group 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep 
+sudo apt-get install apt-listchanges 
 sudo apt-get install autoconf 
 sudo apt-get install automake 
 sudo apt-get install bash 
