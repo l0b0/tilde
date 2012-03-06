@@ -20,6 +20,9 @@ merge=.orig,.BACKUP,.BASE,.LOCAL,.REMOTE
 --type-set
 haml=.haml
 
+--type-set
+makefile=.mk
+
 --type-add
 ruby=.gemspec
 
