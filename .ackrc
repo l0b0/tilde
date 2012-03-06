@@ -24,3 +24,8 @@ shell=.rvmrc
 
 --type-set
 svg=.svg
+
+# Rails generated files
+--ignore-dir=.jhw-cache
+--ignore-dir=.sass-cache
+--ignore-dir=tmp
