@@ -322,6 +322,7 @@ grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pat
 grep $USER /etc/passwd 
 groups $USER 
 guard 
+guard -g functional:controller # test 
 guard help 
 guard list 
 guard show 
