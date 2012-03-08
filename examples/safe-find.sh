@@ -47,7 +47,8 @@
 # This can be very useful to see what a variable *really* contains, including
 # special characters like backspace.
 #
-# Use process substitution with `<(` instead of pipes to avoid broken pipes.
+# Using process substitution with `<(` instead of pipes avoids a broken pipe in
+# case a process inside the loop exits.
 #
 # `find`'s `-print0` argument separates the output by null characters.
 #
