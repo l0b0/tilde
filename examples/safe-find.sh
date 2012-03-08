@@ -53,9 +53,7 @@
 # If you find some way to break this code as described after the jump, please
 # report it at <https://github.com/l0b0/tilde/issues>.
 
-set -o errexit
-set -o nounset
-set -o noclobber
+set -o errexit -o noclobber -o nounset -o pipefail
 
 test_file_name=$'--$`\! *@ \a\b\E\f\r\t\v\\\"\' \n'
 test_dir_path="$test_file_name"
