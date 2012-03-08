@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Filenames can contain *any* character except only null (\0) and slash (/);
 # here's some general rules to handle them:
 #
