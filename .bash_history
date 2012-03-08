@@ -375,6 +375,7 @@ killall awesome
 killall firefox 
 killall gdm 
 killall keepassx 
+killall lxpanel # LXDE 
 killall npviewer.bin 
 killall plugin-container 
 komodo & 
@@ -417,6 +418,7 @@ lsof
 lsof +c 0 | grep gnome-terminal | wc -l 
 lspci | grep -i audio 
 lsusb | grep -i cam 
+lxpanel & # LXDE
 m4 --version 
 make 
 make 2>&1 | tee > make_compile.out~ 
