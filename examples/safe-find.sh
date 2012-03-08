@@ -39,6 +39,14 @@
 # adding a single printable character after the last command and then remove it
 # on the next line without using another `$()`.
 #
+# `basename` adds a newline to its output, so it has to be stripped in addition
+# to the trailing character.
+#
+# `printf %q` is a way to print a string so that the result can be copied and
+# pasted into a script, giving the same meaning as the original input string.
+# This can be very useful to see what a variable *really* contains, including
+# special characters like backspace.
+#
 # Use process substitution with `<(` instead of pipes to avoid broken pipes.
 #
 # `find`'s `-print0` argument separates the output by null characters.
@@ -62,12 +70,22 @@ test_file_path="${test_dir_path}/${test_file_name}"
 mkdir -- "$test_dir_path"
 touch -- "$test_file_path"
 
-
 while IFS= read -r -d '' -u 9
 do
-    file_path="$(readlink -fn -- "$REPLY"; echo x)"
-    file_path="${file_path%x}"
-    echo "START${file_path}END"
+    file_namex="$(basename -- "$REPLY"; echo x)"
+    file_name="${file_namex%$'\nx'}"
+    if [ "$file_name" = "$test_file_name" ]
+    then
+        echo 'Success'
+    else
+        echo 'Failure'
+        printf %s "Test file name:  "
+        printf %q "$test_file_name"
+        printf '\n'
+        printf %s "Found file name: "
+        printf %q "$file_name"
+        printf '\n'
+    fi
 done 9< <( find "$test_dir_path" -type f -print0 )
 
 rm -- "$test_file_path"
