@@ -56,21 +56,19 @@
 set -o errexit -o noclobber -o nounset -o pipefail
 
 test_file_name=$'--$`\! *@ \a\b\E\f\r\t\v\\\"\' \n'
-test_dir_path="$test_file_name"
+test_dir_path="./$test_file_name"
 test_file_path="${test_dir_path}/${test_file_name}"
 
 mkdir -- "$test_dir_path"
 touch -- "$test_file_path"
 
-absolute_dir_path_x="$(readlink -fn -- "$test_dir_path"; echo x)"
-absolute_dir_path="${absolute_dir_path_x%x}"
 
 while IFS= read -r -d '' -u 9
 do
     file_path="$(readlink -fn -- "$REPLY"; echo x)"
     file_path="${file_path%x}"
     echo "START${file_path}END"
-done 9< <( find "$absolute_dir_path" -type f -print0 )
+done 9< <( find "$test_dir_path" -type f -print0 )
 
 rm -- "$test_file_path"
 rmdir -- "$test_dir_path"
