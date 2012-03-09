@@ -793,6 +793,7 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 strings /usr/bin/strings 
+sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup $USER group 
 sudo apt-get dist-upgrade 
@@ -882,6 +883,7 @@ sudo apt-get install ntp
 sudo apt-get install ntp-doc 
 sudo apt-get install nvidia-current 
 sudo apt-get install offlineimap 
+sudo apt-get install openscad 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
 sudo apt-get install pdftk 
