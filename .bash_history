@@ -874,6 +874,7 @@ sudo apt-get install mencoder
 sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
 sudo apt-get install ncurses-dev 
+sudo apt-get install nethack-qt 
 sudo apt-get install nfs-common 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
