@@ -51,6 +51,7 @@ cd ../
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
 cd ~/dev/count/ # project 
+cd ~/dev/crumbling-beaker/ 
 cd ~/dev/csv2zarafa-contacts/ # project 
 cd ~/dev/dialogue/ # project 
 cd ~/dev/dialogue.wiki/ # project 
@@ -589,6 +590,7 @@ mkgithub ~/dev/bookmarklets-janmoesen
 mkgithub ~/dev/CERN-Central-Library-bookmark 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
+mkgithub ~/dev/crumbling-beaker 
 mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
 mkgithub ~/dev/dialogue 
@@ -664,6 +666,7 @@ netstat -a # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+openscad ~/dev/crumbling-beaker/beaker.scad & 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 perlbrew switch 
