@@ -418,7 +418,7 @@ lsof
 lsof +c 0 | grep gnome-terminal | wc -l 
 lspci | grep -i audio 
 lsusb | grep -i cam 
-lxpanel & # LXDE
+lxpanel & # LXDE 
 m4 --version 
 make 
 make 2>&1 | tee > make_compile.out~ 
