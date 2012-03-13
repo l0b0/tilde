@@ -690,7 +690,7 @@ pngcrush -brute -d /target *.png
 PREFIX=~ sudo make install 
 printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
-printf %q "$(echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n')" 
+printf %q $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
