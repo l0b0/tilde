@@ -552,6 +552,7 @@ man trash # help
 man tr # help 
 man ubuntu-bug # help 
 man udevadm # help 
+man umask # help 
 man uname # help 
 man unicode # help 
 man uniq # help 
@@ -1051,6 +1052,7 @@ ubuntu-bug linux
 udevadm info --export-db 
 ulimit -a 
 ulimit -c unlimited 
+umask 
 uname -a 
 uname -m 
 unetbootin 
