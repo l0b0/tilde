@@ -48,6 +48,7 @@ cd
 cd - 
 cd ./ 
 cd ../ 
+cd -- $'--$`\\! *@ \a\b\E\f\r\t\v"\' \n' 
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
 cd ~/dev/count/ # project 
