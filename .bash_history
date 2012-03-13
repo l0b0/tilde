@@ -101,6 +101,7 @@ crontab -e # edit
 crontab -l 
 cucumber --dry-run # rails 
 cucumber # rails 
+cucumber --version # rails 
 curl -kL http://xrl.us/perlbrewinstall | bash # development 
 curl --version 
 cvs log 
@@ -210,6 +211,7 @@ fortune
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 gcc --version 
 gconf-editor # GNOME config 
+gem help rdoc # Ruby 
 gem install bundler 
 gem install cucumber 
 gem install pry pry-doc 
