@@ -178,6 +178,7 @@ editor ~/.wine/system.reg
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
 empty_line_before_eof -i * # newline 
+env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` 
@@ -459,6 +460,7 @@ man date # help
 man diff # help 
 man dot # help 
 man dotty # help 
+man env # help 
 man errno # help 
 man expr # help 
 man extundelete # help 
