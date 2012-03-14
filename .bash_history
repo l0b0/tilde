@@ -182,7 +182,7 @@ empty_line_before_eof -i * # newline
 env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 eval `resize -s 24 80` # terminal 
-eval `ssh-agent` 
+eval `ssh-agent` && ssh-add 
 exit 
 facter # hardware OS 
 facter --help 
@@ -794,7 +794,6 @@ source ~/.bash_aliases
 source ~/.bash_aliases_local 
 source ~/.bashrc 
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
-ssh-add 
 ssh-copy-id example.org 
 ssh example.org 
 ssh example.org uptime 
