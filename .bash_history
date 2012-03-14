@@ -188,8 +188,8 @@ facter # hardware OS
 facter --help 
 facter id # user 
 feh --fullscreen --hide-pointer * # images viewer 
-ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert 
-ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 -vf "transpose=2" timelapse.mp4 # audio video convert rotate 
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd720 timelapse.mp4 # audio video convert 
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd720 -vf "transpose=2" timelapse.mp4 # audio video convert rotate 
 fg # foreground 
 fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
@@ -587,6 +587,7 @@ meld old new&
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
+mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 
 minecraft & 
 mintwelcome 
 mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
