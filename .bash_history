@@ -736,6 +736,7 @@ read -r var
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' *.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
+rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' *.jpg # video 
 reset # clear log remove terminal text 
 rm -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
 rmdir * 
