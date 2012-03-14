@@ -189,6 +189,7 @@ facter --help
 facter id # user 
 feh --fullscreen --hide-pointer * # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 timelapse.mp4 # audio video convert 
+ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 16 -s hd720 -vf "transpose=2" timelapse.mp4 # audio video convert rotate 
 fg # foreground 
 fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
