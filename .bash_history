@@ -137,6 +137,7 @@ echo $COLUMNS # terminal
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
+echo -n $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -p # unicode 
 echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[0]}" # array 
@@ -560,6 +561,7 @@ man udevadm # help
 man umask # help 
 man uname # help 
 man unicode # help 
+man uniname # help 
 man uniq # help 
 man updatedb # help 
 man useradd # help 
@@ -936,6 +938,7 @@ sudo apt-get install sun-java6-jre
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
 sudo apt-get install ubuntu-restricted-extras 
+sudo apt-get install uniutils 
 sudo apt-get install unrar-free 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
