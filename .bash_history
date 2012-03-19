@@ -48,7 +48,7 @@ cd
 cd - 
 cd ./ 
 cd ../ 
-cd -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
 cd ~/dev/count/ # project 
@@ -132,7 +132,7 @@ dpkg -s bash # package
 dpkg -S "$(which apt-get)" # package 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' > $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' # test 
+echo $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'> $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 echo $COLUMNS # terminal 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
@@ -590,7 +590,7 @@ meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e0
 meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 minecraft & 
 mintwelcome 
-mkdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 mkdir test 
 mkgithub -chvu l0b0 
 mkgithub -csvu l0b0 
@@ -693,7 +693,7 @@ pngcrush -brute -d /target *.png
 PREFIX=~ sudo make install 
 printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
-printf %q $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 printf %q "$IFS" 
 printf %s "${IFS:0:1}" 
 prove 
@@ -739,9 +739,9 @@ read <<< "$text"
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' *.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
 reset # clear log remove terminal text 
-rm -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 rmdir * 
-rmdir -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 rm file 
 route 
 ruby -v 
@@ -1052,7 +1052,7 @@ thunderbird -profilemanager
 time make test 
 timeout 1 sleep 2 
 top 
-touch -- $'--$`\\! *@ \a\b\E\f\r\t\v\"\' \n' 
+touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 tput colors 
 traceroute example.org 
 txt2cloud 
