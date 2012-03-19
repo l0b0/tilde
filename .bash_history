@@ -535,6 +535,7 @@ man script # help
 man sed # help 
 man seq # help 
 man sh # help 
+man showkey # help 
 man shunit2 # help 
 man signal # help 
 man sleep # help 
@@ -792,6 +793,7 @@ shopt -s extglob
 shopt -s globstar 
 shopt -s nullglob 
 shopt -u nullglob 
+showkey -a # ASCII keyboard scancode 
 sleep 1m 
 sloccount . 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
