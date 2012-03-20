@@ -1049,6 +1049,7 @@ svn rm --force file
 svn rm --keep-local file 
 svn st 
 svn up 
+TAGS=all guard 
 TAGS=$USER guard 
 tail -F /var/log/messages 
 ./test.sh 
