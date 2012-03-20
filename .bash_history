@@ -19,6 +19,7 @@ bash -x # debug
 bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
+bind -P | grep -F ' can be found on ' # keyboard shortcuts 
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
