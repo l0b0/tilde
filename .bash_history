@@ -484,6 +484,7 @@ man gpg # help
 man grep # help 
 man groupadd # help 
 man head # help 
+man <(help2man help2man) # help 
 man hier # help 
 man hostname # help 
 man hosts # help 
@@ -506,6 +507,7 @@ man logger # help
 man ls # help 
 man lsof # help 
 man lynx # help 
+man man # help 
 man markdown # help 
 man mktemp # help 
 man mount # help 
@@ -850,6 +852,7 @@ sudo apt-get install git-svn
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
+sudo apt-get install help2man 
 sudo apt-get install hugin 
 sudo apt-get install hunspell 
 sudo apt-get install hunspell-de-ch 
