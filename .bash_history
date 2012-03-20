@@ -957,6 +957,7 @@ sudo apt-get install xournal
 sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
+sudo apt-get purge overlay-scrollbar 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo blkid -o list 
