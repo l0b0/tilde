@@ -441,11 +441,11 @@ make variables
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
-man apt-listchanges 
+man apt-listchanges # help 
 man arch # help 
 man ascii # help 
 man bash # help 
-man bc 
+man bc # help 
 man blkid # help 
 man charsets # help 
 man chgrp # help 
