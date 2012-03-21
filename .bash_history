@@ -19,6 +19,7 @@ bash -x # debug
 bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
+bind -P | grep -F ' can be found on ' # keyboard shortcuts 
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
@@ -440,11 +441,11 @@ make variables
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
-man apt-listchanges 
+man apt-listchanges # help 
 man arch # help 
 man ascii # help 
 man bash # help 
-man bc 
+man bc # help 
 man blkid # help 
 man charsets # help 
 man chgrp # help 
@@ -483,6 +484,7 @@ man gpg # help
 man grep # help 
 man groupadd # help 
 man head # help 
+man <(help2man help2man) # help 
 man hier # help 
 man hostname # help 
 man hosts # help 
@@ -505,6 +507,7 @@ man logger # help
 man ls # help 
 man lsof # help 
 man lynx # help 
+man man # help 
 man markdown # help 
 man mktemp # help 
 man mount # help 
@@ -850,6 +853,7 @@ sudo apt-get install git-svn
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
+sudo apt-get install help2man 
 sudo apt-get install hugin 
 sudo apt-get install hunspell 
 sudo apt-get install hunspell-de-ch 
@@ -957,6 +961,7 @@ sudo apt-get install xournal
 sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
+sudo apt-get purge overlay-scrollbar 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo blkid -o list 
@@ -1048,6 +1053,7 @@ svn rm --force file
 svn rm --keep-local file 
 svn st 
 svn up 
+TAGS=all guard 
 TAGS=$USER guard 
 tail -F /var/log/messages 
 ./test.sh 
