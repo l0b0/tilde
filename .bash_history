@@ -871,6 +871,7 @@ sudo apt-get install ipython
 sudo apt-get install jedit 
 sudo apt-get install jhead 
 sudo apt-get install kernel-package 
+sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
 sudo apt-get install libglade2-dev 
 sudo apt-get install libmysql-java 
