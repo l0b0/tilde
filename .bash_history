@@ -789,6 +789,7 @@ set +x
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' 
 sh 
 sha1sum file 
+shopt -s dotglob 
 shopt -s extglob 
 shopt -s globstar 
 shopt -s nullglob 
