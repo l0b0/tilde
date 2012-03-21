@@ -330,6 +330,7 @@ gnome-screensaver-command -l
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
+grep --version 
 groups $USER 
 guard 
 guard -g functional:controller # test 
