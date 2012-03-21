@@ -297,6 +297,7 @@ git remote -v show
 git reset HEAD^ 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
+git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash list --patch # diff 
