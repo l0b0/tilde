@@ -341,6 +341,7 @@ gunzip example.gz
 gzip example.txt 
 help echo 
 help history 
+help kill 
 help local 
 help printf 
 help read 
@@ -382,6 +383,7 @@ jail -u $USER
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
+kill -0 $! # check process PID 
 killall awesome 
 killall firefox 
 killall gdm 
@@ -389,6 +391,7 @@ killall keepassx
 killall lxpanel # LXDE 
 killall npviewer.bin 
 killall plugin-container 
+kill -l # list signals 
 komodo & 
 l 
 l ~ 
@@ -694,6 +697,7 @@ perl --version
 pgrep -u root cron 
 php -a 
 php --version 
+pid=$! # process PID 
 ping -c 4 example.org 
 ping example.org 
 pip help 
@@ -1092,6 +1096,7 @@ vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-fil
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 
 vmware 
 w 
+wait # process PID 
 watch 'svn diff' 
 which make 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
