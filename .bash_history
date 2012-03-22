@@ -1074,6 +1074,7 @@ tput colors
 traceroute example.org 
 txt2cloud 
 txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
+type -a true 
 ubuntu-bug linux 
 udevadm info --export-db 
 ulimit -a 
