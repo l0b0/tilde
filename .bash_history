@@ -133,12 +133,10 @@ dpkg -s bash # package
 dpkg -S "$(which apt-get)" # package 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'> $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 echo $COLUMNS # terminal 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
-echo -n $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -p # unicode 
 echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[0]}" # array 
@@ -707,6 +705,8 @@ printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 printf %q "$IFS" 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # unicode 
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
