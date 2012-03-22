@@ -123,6 +123,7 @@ df -h . # filesystem
 df -h # filesystem 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
+diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 dmesg # debug OS startup 
@@ -1076,7 +1077,7 @@ top
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 tput colors 
 traceroute example.org 
-trap -- $'printf %s --\$\`!*@^\		\\\\\\\'\\"ð \ $\'\\n\'' INT # signal 
+trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
 trap # signal 
 traps="$(trap)" # signal 
 txt2cloud 
