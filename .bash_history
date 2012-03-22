@@ -11,6 +11,7 @@ apt-cache showsrc bash # source
 apt-cache stats bash 
 apt-get source apt 
 arch # hardware 
+bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
 bash test.sh 
@@ -183,6 +184,7 @@ env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "$
 env # variable 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
+eval "$traps" # signal
 exit 
 facter # hardware OS 
 facter --help 
@@ -345,6 +347,7 @@ help printf
 help read 
 help set 
 help shopt 
+help trap # signal
 help type 
 help typeset 
 help ulimit 
@@ -389,6 +392,7 @@ killall keepassx
 killall lxpanel # LXDE 
 killall npviewer.bin 
 killall plugin-container 
+kill -INT $$ # signal 
 kill -l # list signals 
 komodo & 
 l 
@@ -1072,6 +1076,9 @@ top
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 tput colors 
 traceroute example.org 
+trap -- $'printf %s --\$\`!*@^\		\\\\\\\'\\"ð \ $\'\\n\'' INT # signal
+trap # signal 
+traps="$(trap)" # signal
 txt2cloud 
 txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
 type -a true 
