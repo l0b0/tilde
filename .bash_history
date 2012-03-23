@@ -11,6 +11,7 @@ apt-cache showsrc bash # source
 apt-cache stats bash 
 apt-get source apt 
 arch # hardware 
+bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
 bash test.sh 
@@ -122,6 +123,7 @@ df -h . # filesystem
 df -h # filesystem 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
+diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 dmesg # debug OS startup 
@@ -133,12 +135,10 @@ dpkg -s bash # package
 dpkg -S "$(which apt-get)" # package 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'> $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 echo $COLUMNS # terminal 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
-echo -n $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -p # unicode 
 echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[0]}" # array 
@@ -185,6 +185,7 @@ env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "$
 env # variable 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
+eval "$traps" # signal 
 exit 
 facter # hardware OS 
 facter --help 
@@ -297,6 +298,7 @@ git remote -v show
 git reset HEAD^ 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
+git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
 git stash list 
 git stash list --patch # diff 
@@ -329,6 +331,7 @@ gnome-screensaver-command -l
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
+grep --version 
 groups $USER 
 guard 
 guard -g functional:controller # test 
@@ -339,11 +342,13 @@ gunzip example.gz
 gzip example.txt 
 help echo 
 help history 
+help kill 
 help local 
 help printf 
 help read 
 help set 
 help shopt 
+help trap # signal 
 help type 
 help typeset 
 help ulimit 
@@ -380,6 +385,7 @@ jail -u $USER
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
+kill -0 $! # check process PID 
 killall awesome 
 killall firefox 
 killall gdm 
@@ -387,6 +393,8 @@ killall keepassx
 killall lxpanel # LXDE 
 killall npviewer.bin 
 killall plugin-container 
+kill -INT $$ # signal 
+kill -l # list signals 
 komodo & 
 l 
 l ~ 
@@ -692,6 +700,7 @@ perl --version
 pgrep -u root cron 
 php -a 
 php --version 
+pid=$! # process PID 
 ping -c 4 example.org 
 ping example.org 
 pip help 
@@ -701,6 +710,8 @@ printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 printf %q "$IFS" 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # unicode 
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
@@ -872,6 +883,7 @@ sudo apt-get install ipython
 sudo apt-get install jedit 
 sudo apt-get install jhead 
 sudo apt-get install kernel-package 
+sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
 sudo apt-get install libglade2-dev 
 sudo apt-get install libmysql-java 
@@ -1066,8 +1078,12 @@ top
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 tput colors 
 traceroute example.org 
+trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
+trap # signal 
+traps="$(trap)" # signal 
 txt2cloud 
 txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
+type -a true 
 ubuntu-bug linux 
 udevadm info --export-db 
 ulimit -a 
@@ -1090,6 +1106,7 @@ vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-fil
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 
 vmware 
 w 
+wait # process PID 
 watch 'svn diff' 
 which make 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
