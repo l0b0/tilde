@@ -56,9 +56,9 @@ test_multiline() {
 }
 
 test_complex() {
-    string=$'--$`\! *@ \a\b\e\f\r\t\v\\\"\' \n'
+    string=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
     assertEquals unchanged "$string"x "$(printf %s "$string" | empty_line_before_eof; printf x)"
-    string=$'--$`\! *@ \a\b\e\f\r\t\v\\\"\' '
+    string=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 '
     assertEquals modified "$string"$'\n'x "$(printf %s "$string" | empty_line_before_eof; printf x)"
 }
 
