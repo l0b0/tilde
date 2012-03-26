@@ -511,6 +511,7 @@ man ldd # help
 man ld # help 
 man less # help 
 man line # help 
+man ln # help 
 man locate # help 
 man logger # help 
 man ls # help 
