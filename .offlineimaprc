@@ -189,7 +189,7 @@ remoterepository = RemoteExample
 # in this case a call to imapfilter to filter mail before the sync process
 # starts and a custom shell script after the sync completes.
 # The pre sync script has to complete before a sync to the account will
-# start. 
+# start.
 
 # presynchook = imapfilter
 # postsynchook = notifysync.sh
@@ -217,7 +217,7 @@ remoterepository = RemoteExample
 # not be changed, they will not be deleted etc.  For offlineimap it will be like these
 # messages do not exist.  This will perform an IMAP search in the case of IMAP or Gmail
 # and therefor requires that the server support server side searching.  This will
-# calculate the earliest day that would be included in the search and include all 
+# calculate the earliest day that would be included in the search and include all
 # messages from that day until today.   e.g. maxage = 3 to sync only the last 3 days mail
 
 # maxage = 3
