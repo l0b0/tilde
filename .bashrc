@@ -178,8 +178,10 @@ __expand_tilde_by_ref(){ true; }
 
 # Load RVM into a shell session *as a function*
 set +o nounset
-[ -s "$HOME/.rvm/scripts/rvm" ] && source "$HOME/.rvm/scripts/rvm"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 set -o nounset
+# Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
 
 # Load perlbrew if present
 if [ -r "${HOME}/perl5/perlbrew/etc/bashrc" ]

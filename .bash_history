@@ -769,6 +769,7 @@ rm file
 route 
 ruby -v 
 rvm 
+rvm get stable 
 rvm help do 
 rvm help install 
 rvm help use 
