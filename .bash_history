@@ -111,6 +111,7 @@ cvs log
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
+declare -f schroedinger 
 ~/dev/minecraft-scripts/backup.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
@@ -203,11 +204,13 @@ filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less
 find . -empty 
 find . -empty -delete # remove files 
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
+find -L . -type l # broken symlinks 
 find . -name '*.marks' -delete # remove jEdit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
+find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/ \+$//;$a\' {} \; # whitespace EOL EOF 
 find . -type f -name file | exclude_vcs 
 firefox -profilemanager 
 firefox -safe-mode 
@@ -340,6 +343,7 @@ guard list
 guard show 
 gunzip example.gz 
 gzip example.txt 
+help declare 
 help echo 
 help history 
 help kill 
@@ -510,6 +514,7 @@ man ldd # help
 man ld # help 
 man less # help 
 man line # help 
+man ln # help 
 man locate # help 
 man logger # help 
 man ls # help 
@@ -728,12 +733,12 @@ puppet resource user
 puppet resource user root 
 pwd # current directory 
 qgit .& # GUI 
-rails console 
-rails destroy controller sessions # delete database 
-rails destroy scaffold user # delete database 
-rails generate controller sessions new create destroy # create database 
-rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
-rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
+rails c # console 
+rails d controller sessions # delete database 
+rails d scaffold user # delete database 
+rails g controller sessions new create destroy # create database 
+rails g migration add_email_to_user email:string email_plain_text_only:boolean # create database 
+rails g scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails new project_name # create 
 rails s -e production -p 3002 # start service web 
 rails s -e test -p 3001 # start service web 
@@ -764,6 +769,7 @@ rm file
 route 
 ruby -v 
 rvm 
+rvm get stable 
 rvm help do 
 rvm help install 
 rvm help use 
