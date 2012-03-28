@@ -111,6 +111,7 @@ cvs log
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
+declare -f schroedinger 
 ~/dev/minecraft-scripts/backup.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
@@ -342,6 +343,7 @@ guard list
 guard show 
 gunzip example.gz 
 gzip example.txt 
+help declare 
 help echo 
 help history 
 help kill 
