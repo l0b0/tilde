@@ -21,6 +21,9 @@ bc <<<'2+2' # calculator math
 bchunk image.bin image.cue image.iso 
 bg # background 
 bind -P | grep -F ' can be found on ' # keyboard shortcuts 
+~/bin/git diff --check 
+~/bin/git diff --minimal 
+~/bin/git diff --staged --minimal 
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
@@ -62,6 +65,7 @@ cd ~/dev/difff/ # project
 cd ~/dev/export/ # project 
 cd ~/dev/fgit/ # project 
 cd ~/dev/filterous/ # project 
+cd ~/dev/git/ # project 
 cd ~/dev/graphics/ # project 
 cd ~/dev/https-everywhere/ # project 
 cd ~/dev/indentect/ # project 
@@ -122,6 +126,8 @@ declare -f schroedinger
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df -h . # filesystem 
 df -h # filesystem 
+diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
+diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) 
@@ -247,6 +253,10 @@ git clone git@github.com:l0b0/mkgithub.git
 git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
+git config diff.minimal 
+git config diff.minimal false 
+git config diff.minimal invalid 
+git config diff.minimal true 
 git config --global github.user l0b0 
 git config --global mergetool.prompt false 
 git config -l 
@@ -263,6 +273,7 @@ git diff --staged --stat
 git diff -w --no-color | git apply --cached 
 git diff --word-diff 
 git fetch 
+git format-patch -M HEAD^ 
 git gui& 
 git help add 
 git help blame 
@@ -270,6 +281,7 @@ git help clone
 git help config 
 git help diff 
 git help fetch 
+git help format-patch 
 git help init 
 git help log 
 git help merge 
@@ -444,6 +456,7 @@ m4 --version
 make 
 make 2>&1 | tee > make_compile.out~ 
 make clean 
+make configure 
 make explain 2>&1 | grep MAKE 
 make explain-MAKE 
 make install 
@@ -631,6 +644,7 @@ mkgithub ~/dev/export
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
 mkgithub ~/dev/generate-password 
+mkgithub ~/dev/git 
 mkgithub ~/dev/graphics 
 mkgithub ~/dev/highlight 
 mkgithub ~/dev/https-everywhere 
@@ -686,6 +700,7 @@ mount -n -o remount,defaults /dev/sda1 /
 mountpoint /home 
 mutt 
 mutt -d 5 
+mutt -H 0001-Add-diff.minimal-configuration-setting.patch 
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
