@@ -983,6 +983,7 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install uniutils 
 sudo apt-get install unrar-free 
+sudo apt-get install urlview muttprint 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
