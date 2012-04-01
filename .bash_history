@@ -960,6 +960,7 @@ sudo apt-get install python2.7
 sudo apt-get install python-dev 
 sudo apt-get install python-doc 
 sudo apt-get install python-lxml 
+sudo apt-get install python-matplotlib 
 sudo apt-get install python-pip 
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
@@ -999,6 +1000,7 @@ sudo apt-get update
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys FFFFFFFFFFFFFFFF 
 sudo blkid -o list 
 sudo chown nobody "$sandbox" 
+sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
 sudo ~/dev/tilde/scripts/install-all.sh 
