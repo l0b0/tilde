@@ -32,7 +32,7 @@ set -o nounset
 set -o noclobber
 shopt -s extglob
 
-directory="$(dirname -- "$(readlink -fn -- "$0")")"
+directory="$(dirname -- "$0")"
 
 . "$directory/../scripts/functions.sh"
 
