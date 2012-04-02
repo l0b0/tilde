@@ -10,7 +10,7 @@
 #        https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT
-#        Copyright (C) 2011 Victor Engmark
+#        Copyright (C) 2011-2012 Victor Engmark
 #
 #        This program is free software: you can redistribute it and/or modify
 #        it under the terms of the GNU General Public License as published by
@@ -39,6 +39,7 @@ directory="$(dirname -- "$(readlink -fn -- "$0")")"
 cd -- "$directory"
 for path in !(tests.sh)
 do
+    echo "$(basename -- "$path")"
     ./"$path"
 done
 cd - >/dev/null
