@@ -311,6 +311,7 @@ git rebase --interactive HEAD~20
 git remote add --tags -f origin ssh://user@example.org/home/user/repo 
 git remote -v show 
 git reset HEAD^ 
+git reset --soft HEAD~1 # commit undo 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
