@@ -18,6 +18,11 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
+sum()
+{
+    echo $(cat "${@--}") | tr -s ' ' '+' | bc
+}
+
 # Update everything
 upgrade()
 {
