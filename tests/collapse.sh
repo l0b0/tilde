@@ -7,7 +7,7 @@
 #    https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT AND LICENSE
-#    Copyright (C) 2011 Victor Engmark
+#    Copyright (C) 2011-2012 Victor Engmark
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -23,8 +23,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ################################################################################
-
-declare -r directory=$(dirname $(readlink -f "$0"))
 
 oneTimeSetUp() {
     . "${HOME}/.bash_aliases" >/dev/null
