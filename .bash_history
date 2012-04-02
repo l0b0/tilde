@@ -10,6 +10,7 @@ apt-cache show bash
 apt-cache showsrc bash # source 
 apt-cache stats bash 
 apt-get source apt 
+apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
@@ -468,6 +469,7 @@ man ack-grep # help
 man addgroup # help 
 man apropos # help 
 man apt-listchanges # help 
+man apt-rdepends 
 man arch # help 
 man ascii # help 
 man bash # help 
@@ -852,6 +854,7 @@ sudo addgroup $USER group
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep 
 sudo apt-get install apt-listchanges 
+sudo apt-get install apt-rdepends 
 sudo apt-get install autoconf 
 sudo apt-get install automake 
 sudo apt-get install bash 
