@@ -78,9 +78,9 @@ test_substring() {
 test_complex() {
     assertEquals \
         'Complicated path' \
-        "$(path_common $'--$`\! *@ \a\b\e\E\f\r\t\v\\\"\' \n' \
-            $'--$`\! *@ \a\b\e\E\f\r\t\v\\\"\' \n'; echo x)" \
-        $'--$`\! *@ \a\b\e\E\f\r\t\v\\\"\' \n'x
+        "$(path_common $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n' \
+            $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n'; echo x)" \
+        $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x
 }
 
 # load and run shUnit2

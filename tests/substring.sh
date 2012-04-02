@@ -77,9 +77,9 @@ test_missing_params() {
 }
 
 test_complex() {
-    string=$'--$`\! *@ \a\b\e\f\r\t\v\\\"\' \n'
+    string=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
     assertEquals substring "${string}"x "$(substring "$string"; printf x)"
-    assertEquals substring $'`\!'x "$(substring "$string" 3 3; printf x)"
+    assertEquals substring $'`!*'x "$(substring "$string" 3 3; printf x)"
 }
 
 # load and run shUnit2
