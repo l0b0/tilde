@@ -763,12 +763,12 @@ rails s -e test -p 3001 # start service web
 rails s # start service web 
 rails --version 
 rake assets:clean 
-rake db:migrate # rails database 
-rake db:reset # rails database 
-rake db:reset && rails s # database 
-rake db:rollback # rails database 
-rake db:seed # rails database 
-rake db:test:prepare # rails database 
+rake db:migrate --trace # rails database 
+rake db:reset --trace # rails database 
+rake db:reset --trace && rails s # database 
+rake db:rollback --trace # rails database 
+rake db:seed --trace # rails database 
+rake db:test:prepare --trace # rails database 
 rake routes # rails web 
 rake spec # rails test 
 rake --tasks # rails 
