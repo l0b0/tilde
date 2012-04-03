@@ -1001,6 +1001,7 @@ sudo apt-get install wget
 sudo apt-get install wine 
 sudo apt-get install winetricks 
 sudo apt-get install x264 
+sudo apt-get install xdotool 
 sudo apt-get install xournal 
 sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
@@ -1147,6 +1148,7 @@ which make
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
+while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while true; do DISPLAY=:0 compiz --replace; done & # debug WM 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug WM 
 wine --version 
