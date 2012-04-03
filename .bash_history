@@ -252,6 +252,8 @@ git add -p
 git add README.markdown 
 git add tools.mk 
 git blame filename 
+git branch 
+git branch topic 
 git checkout . 
 git checkout master 
 git clean -n 
@@ -283,6 +285,7 @@ git format-patch -M HEAD^
 git gui& 
 git help add 
 git help blame 
+git help branch 
 git help clone 
 git help config 
 git help diff 
