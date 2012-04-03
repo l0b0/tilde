@@ -882,6 +882,7 @@ sudo apt-get install curl
 sudo apt-get install cvs 
 sudo apt-get install default-jre 
 sudo apt-get install deluge 
+sudo apt-get install dfo 
 sudo apt-get install dos2unix 
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
