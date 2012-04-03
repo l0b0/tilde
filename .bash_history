@@ -256,6 +256,7 @@ git branch
 git branch topic 
 git checkout . 
 git checkout master 
+git cherry-pick master:HEAD 
 git clean -n 
 git clone git@github.com:l0b0/mkgithub.git 
 git clone https://github.com/terreActive/redmine.git 
@@ -286,6 +287,7 @@ git gui&
 git help add 
 git help blame 
 git help branch 
+git help cherry-pick 
 git help clone 
 git help config 
 git help diff 
