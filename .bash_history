@@ -631,6 +631,7 @@ meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts)
 meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
 meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 
+mian ~/.minecraft/saves/New\ World 
 minecraft & 
 mintwelcome 
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
