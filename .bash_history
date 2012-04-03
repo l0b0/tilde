@@ -1050,6 +1050,7 @@ sudo -u postgres createuser -s username
 sudo usermod -a -g users -G $(id -g) $USER # change default group 
 sudo visudo 
 sudo Xorg :1 -configure 
+sum <<< '2 2' 
 svn add . 
 svn blame -x -w Makefile 
 svn cat -r 1 Makefile | less 
