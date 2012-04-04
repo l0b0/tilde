@@ -32,6 +32,7 @@ bundle install --binstubs=./bundler_stubs # rails
 bundle install # rails 
 bundle update # rails 
 cap deploy:check # rails 
+cap deploy:login 
 cap deploy:migrations # rails 
 cap deploy # rails 
 cap deploy:rollback # rails 
