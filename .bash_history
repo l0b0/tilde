@@ -114,6 +114,17 @@ curl -kL http://xrl.us/perlbrewinstall | bash # development
 curl --version 
 cvs log 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
+date --date="6 months ago" # past time 
+date --date="6 months" # future time 
+date --date="Friday" # today future midnight 
+date --date="Monday" # today future midnight 
+date --date="now" # time 
+date --date="Saturday" # today future midnight 
+date --date="Sunday" # today future midnight 
+date --date="Thursday" # today future midnight 
+date --date="Tuesday" # today future midnight 
+date --date="Wednesday" # today future midnight 
+date --date="yesterday" # time 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
 declare -f schroedinger 
