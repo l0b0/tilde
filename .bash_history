@@ -369,6 +369,8 @@ grep --version
 groups $USER 
 guard 
 guard -g functional:controller # test 
+guard -g unit:decorator 
+guard -g unit:model 
 guard help 
 guard list 
 guard show 
