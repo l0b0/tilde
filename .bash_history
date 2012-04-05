@@ -225,6 +225,8 @@ fgit push -- ~/*/ ~/.*/ ~/dev/*/
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 file README.markdown 
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
+find_date_sorted . -mindepth 1 # files 
+find_date_sorted . -mindepth 1 | sort -rz | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
 find . -empty 
 find . -empty -delete # remove files 
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 

@@ -42,11 +42,14 @@ wdiffc()
 # Find
 find_date_sorted()
 {
-    # Ascending, by ISO date
+    # Sorted by ISO date, ascending
+    # Separated by NUL to be able to reuse in other loops
     while IFS= read -r -d '' -u 9
     do
-        cut -d ' ' -f 3- <<< "$REPLY"
-    done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%Td %TH:%TM:%TS %p\0' | sort -z)
+        path="${REPLY#* }"
+        printf %s "$path"
+        printf '\0'
+    done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%TdT%TH:%TM:%TS %p\0' | sort -z)
 }
 
 quote_shell()
