@@ -1149,6 +1149,7 @@ unset -f function
 unset REPLY 
 unset var 
 upgrade 
+uptime 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
