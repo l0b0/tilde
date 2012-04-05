@@ -1129,6 +1129,7 @@ time make test
 timeout 1 sleep 2 
 top 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+touch -d '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
 traceroute example.org 
 trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
