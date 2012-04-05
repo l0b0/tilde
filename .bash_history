@@ -608,6 +608,7 @@ man tar # help
 man tee # help 
 man time # help 
 man timeout # help 
+man touch # help 
 man tput # help 
 man traceroute # help 
 man trash # help 
