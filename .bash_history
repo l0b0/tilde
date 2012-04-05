@@ -437,6 +437,7 @@ l
 l ~ 
 la 
 la ~ 
+lastlog # login users 
 ldconfig 
 ldd $(which bash) 
 less /etc/issue 
