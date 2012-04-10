@@ -236,7 +236,7 @@ find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done
 find . -printf x | wc -c 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
-find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/ \+$//;$a\' {} \; # whitespace EOL EOF 
+find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/[ \t]\+$//;$a\' {} \; # whitespace EOL EOF 
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
