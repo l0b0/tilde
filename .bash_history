@@ -238,6 +238,7 @@ find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/ \+$//;$a\' {} \; # whitespace EOL EOF 
 find . -type f -name file | exclude_vcs 
+find -version 
 firefox -profilemanager 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
