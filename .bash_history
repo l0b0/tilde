@@ -499,6 +499,7 @@ man ascii # help
 man bash # help 
 man bc # help 
 man blkid # help 
+man cal # help 
 man charsets # help 
 man chgrp # help 
 man chmod # help 
@@ -567,6 +568,7 @@ man mount # help
 man mutt # help 
 man mv # help 
 man nautilus # help 
+man ncal # help 
 man netstat # help 
 man nl # help 
 man od # help 
@@ -732,6 +734,7 @@ mutt -H 0001-Add-diff.minimal-configuration-setting.patch
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
+ncal -3bM 
 neato -O -Tsvg *.dot 
 netstat 
 netstat -a # internet connections sockets 
