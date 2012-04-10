@@ -643,6 +643,7 @@ man w # help
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xinput # help 
+man xscreensaver-command # help 
 man xwininfo # help 
 man xxd # help 
 markdown_page README.markdown > README.xhtml 
@@ -1191,6 +1192,7 @@ xinput --list-props 10
 xkill 
 xmodmap -pp >~/xmodmap 
 xscreensaver-command -lock 
+xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
