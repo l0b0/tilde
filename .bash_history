@@ -364,7 +364,11 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding MP4 MPEG4 
 glxinfo 
 gnome-control-center sound 
+gnome-screensaver & 
+gnome-screensaver-command --exit 
 gnome-screensaver-command --lock 
+gnome-screensaver-command --version 
+gnome-screensaver --version 
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
@@ -531,6 +535,8 @@ man fortune # help
 man getopt # help 
 man git # help 
 man gksu # help 
+man gnome-screensaver-command # help 
+man gnome-screensaver # help 
 man gnome-shell # help 
 man gnome-terminal # help 
 man gpg # help 
