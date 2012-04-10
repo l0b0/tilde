@@ -487,6 +487,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
+man 5 crontab # help 
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
