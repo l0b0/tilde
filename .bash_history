@@ -32,6 +32,7 @@ bundle install --binstubs=./bundler_stubs # rails
 bundle install # rails 
 bundle update # rails 
 cap deploy:check # rails 
+cap deploy:login 
 cap deploy:migrations # rails 
 cap deploy # rails 
 cap deploy:rollback # rails 
@@ -114,6 +115,17 @@ curl -kL http://xrl.us/perlbrewinstall | bash # development
 curl --version 
 cvs log 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
+date --date="6 months ago" # past time 
+date --date="6 months" # future time 
+date --date="Friday" # today future midnight 
+date --date="Monday" # today future midnight 
+date --date="now" # time 
+date --date="Saturday" # today future midnight 
+date --date="Sunday" # today future midnight 
+date --date="Thursday" # today future midnight 
+date --date="Tuesday" # today future midnight 
+date --date="Wednesday" # today future midnight 
+date --date="yesterday" # time 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
 declare -f schroedinger 
@@ -213,6 +225,8 @@ fgit push -- ~/*/ ~/.*/ ~/dev/*/
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 file README.markdown 
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
+find_date_sorted . -mindepth 1 # files 
+find_date_sorted . -mindepth 1 | sort -rz | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
 find . -empty 
 find . -empty -delete # remove files 
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
@@ -222,8 +236,8 @@ find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done
 find . -printf x | wc -c 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
-find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/ \+$//;$a\' {} \; # whitespace EOL EOF 
 find . -type f -name file | exclude_vcs 
+find -version 
 firefox -profilemanager 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
@@ -283,6 +297,7 @@ git diff -w --no-color | git apply --cached
 git diff --word-diff 
 git fetch 
 git format-patch -M HEAD^ 
+git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace EOL EOF 
 git gui& 
 git help add 
 git help blame 
@@ -293,6 +308,7 @@ git help config
 git help diff 
 git help fetch 
 git help format-patch 
+git help grep 
 git help init 
 git help log 
 git help merge 
@@ -354,7 +370,11 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding MP4 MPEG4 
 glxinfo 
 gnome-control-center sound 
-gnome-screensaver-command -l 
+gnome-screensaver & 
+gnome-screensaver-command --exit 
+gnome-screensaver-command --lock 
+gnome-screensaver-command --version 
+gnome-screensaver --version 
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd 
@@ -362,6 +382,8 @@ grep --version
 groups $USER 
 guard 
 guard -g functional:controller # test 
+guard -g unit:decorator 
+guard -g unit:model 
 guard help 
 guard list 
 guard show 
@@ -428,6 +450,7 @@ l
 l ~ 
 la 
 la ~ 
+lastlog # login users 
 ldconfig 
 ldd $(which bash) 
 less /etc/issue 
@@ -475,6 +498,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
+man 5 crontab # help 
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
@@ -485,6 +509,7 @@ man ascii # help
 man bash # help 
 man bc # help 
 man blkid # help 
+man cal # help 
 man charsets # help 
 man chgrp # help 
 man chmod # help 
@@ -516,6 +541,8 @@ man fortune # help
 man getopt # help 
 man git # help 
 man gksu # help 
+man gnome-screensaver-command # help 
+man gnome-screensaver # help 
 man gnome-shell # help 
 man gnome-terminal # help 
 man gpg # help 
@@ -553,6 +580,7 @@ man mount # help
 man mutt # help 
 man mv # help 
 man nautilus # help 
+man ncal # help 
 man netstat # help 
 man nl # help 
 man od # help 
@@ -596,6 +624,7 @@ man tar # help
 man tee # help 
 man time # help 
 man timeout # help 
+man touch # help 
 man tput # help 
 man traceroute # help 
 man trash # help 
@@ -617,9 +646,11 @@ man wc # help
 man wdiff # help 
 man wget # help 
 man w # help 
+man xargs # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xinput # help 
+man xscreensaver-command # help 
 man xwininfo # help 
 man xxd # help 
 markdown_page README.markdown > README.xhtml 
@@ -718,6 +749,7 @@ mutt -H 0001-Add-diff.minimal-configuration-setting.patch
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
+ncal -3bM 
 neato -O -Tsvg *.dot 
 netstat 
 netstat -a # internet connections sockets 
@@ -1119,6 +1151,7 @@ time make test
 timeout 1 sleep 2 
 top 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+touch -d '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
 traceroute example.org 
 trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
@@ -1141,6 +1174,7 @@ unset -f function
 unset REPLY 
 unset var 
 upgrade 
+uptime 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
@@ -1152,6 +1186,7 @@ w
 wait # process PID 
 watch 'svn diff' 
 which make 
+while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace EOL EOF 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
@@ -1167,6 +1202,7 @@ xinput --list-props 10
 xkill 
 xmodmap -pp >~/xmodmap 
 xscreensaver-command -lock 
+xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
