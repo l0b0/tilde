@@ -577,6 +577,7 @@ man man # help
 man markdown # help 
 man mktemp # help 
 man mount # help 
+man mp3fs # help 
 man mutt # help 
 man mv # help 
 man nautilus # help 
@@ -668,6 +669,7 @@ mian ~/.minecraft/saves/New\ World
 minecraft & 
 mintwelcome 
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+mkdir mp3 
 mkdir test 
 mkgithub -chvu l0b0 
 mkgithub -csvu l0b0 
@@ -743,6 +745,7 @@ mogrify -format jpg *.CR2
 mount 
 mount -n -o remount,defaults /dev/sda1 / 
 mountpoint /home 
+mp3fs -b 256 music mp3 
 mutt 
 mutt -d 5 
 mutt -H 0001-Add-diff.minimal-configuration-setting.patch 
@@ -979,6 +982,7 @@ sudo apt-get install meld
 sudo apt-get install mencoder 
 sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
+sudo apt-get install mp3fs 
 sudo apt-get install ncurses-dev 
 sudo apt-get install nethack-qt 
 sudo apt-get install nfs-common 
@@ -1086,6 +1090,7 @@ sudo service cups restart
 sudo service postgresql reload 
 sudo shutdown -r now 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware MacMini4,1 speed 
+sudo umount mp3 
 sudo update-alternatives --config editor 
 sudo update-alternatives --config x-www-browser 
 sudo updatedb 
