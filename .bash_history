@@ -236,7 +236,6 @@ find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done
 find . -printf x | wc -c 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
-find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' {} \+ # whitespace EOL EOF 
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
@@ -1177,6 +1176,7 @@ w
 wait # process PID 
 watch 'svn diff' 
 which make 
+while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" =~ text ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace EOL EOF 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
