@@ -294,6 +294,7 @@ git diff -w --no-color | git apply --cached
 git diff --word-diff 
 git fetch 
 git format-patch -M HEAD^ 
+git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace EOL EOF 
 git gui& 
 git help add 
 git help blame 
@@ -302,6 +303,7 @@ git help config
 git help diff 
 git help fetch 
 git help format-patch 
+git help grep 
 git help init 
 git help log 
 git help merge 
@@ -639,6 +641,7 @@ man wc # help
 man wdiff # help 
 man wget # help 
 man w # help 
+man xargs # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xinput # help 
