@@ -891,6 +891,7 @@ source ~/.bashrc
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
 ssh example.org 
+ssh example.org < test.sh 
 ssh example.org uptime 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
