@@ -880,6 +880,7 @@ shopt -s extglob
 shopt -s globstar 
 shopt -s nullglob 
 shopt -u nullglob 
+shortest < ~/.bash_history 
 showkey -a # ASCII keyboard scancode 
 sleep 1m 
 sloccount . 
