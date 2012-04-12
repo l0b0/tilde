@@ -378,7 +378,7 @@ gnome-screensaver-command --version
 gnome-screensaver --version 
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
-grep $USER /etc/passwd 
+grep $USER /etc/passwd # password 
 grep --version 
 groups $USER 
 guard 
@@ -455,7 +455,7 @@ lastlog # login users
 ldconfig 
 ldd $(which bash) 
 less /etc/issue 
-less /etc/passwd 
+less /etc/passwd # password 
 less Makefile 
 less /proc/bus/input/devices 
 less -R filename # color 
