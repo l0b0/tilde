@@ -499,6 +499,7 @@ make test
 make test 2>&1 | tee > make_test.out~ 
 make variables 
 man 5 crontab # help 
+man 5 passwd # help password 
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
