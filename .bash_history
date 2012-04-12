@@ -1060,6 +1060,7 @@ sudo chown nobody "$sandbox"
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
+sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
 sudo dmidecode --type 1 
