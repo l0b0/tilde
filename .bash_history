@@ -172,6 +172,7 @@ echo "${paths[@]}" # array
 echo $PROMPT_COMMAND # shell 
 echo $REPLY # read 
 echo $TERM # shell 
+echo 'test foo test bar test' | grep -o test | wc -l # count 
 echo $WINEPREFIX 
 editor ~/.bash_aliases_local # shell 
 editor ~/.bash_aliases # shell 
