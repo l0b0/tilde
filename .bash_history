@@ -881,7 +881,7 @@ set +o pipefail
 ./setup.py test 
 set -x 
 set +x 
-setxkbmap -v | awk -F "+" '/symbols/ {print $2}' 
+setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
 sha1sum file 
 shopt -s dotglob 
