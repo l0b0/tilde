@@ -59,6 +59,7 @@ cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
 cd ~/dev/count/ # project 
+cd ~/dev/cronlist/ # project 
 cd ~/dev/crumbling-beaker/ 
 cd ~/dev/csv2zarafa-contacts/ # project 
 cd ~/dev/dialogue/ # project 
@@ -106,6 +107,10 @@ completions git config '' | grep user # autocomplete
 count . # filesystem 
 cp file{,.orig} # filesystem 
 createdb -T template0 -U username dbname # PostgreSQL 
+cronlist 
+cronlist --help 
+cronlist -s 
+cronlist -t '23:59:59' 
 crontab -e # edit 
 crontab -l 
 cucumber --dry-run # rails 
@@ -274,6 +279,7 @@ git checkout master
 git cherry-pick master:HEAD 
 git clean -n 
 git clone git@github.com:l0b0/mkgithub.git 
+git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
@@ -681,6 +687,7 @@ mkgithub ~/dev/bookmarklets-janmoesen
 mkgithub ~/dev/CERN-Central-Library-bookmark 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
+mkgithub ~/dev/cronlist 
 mkgithub ~/dev/crumbling-beaker 
 mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
