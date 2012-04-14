@@ -570,6 +570,7 @@ man interfaces # help
 man iostat # help 
 man iotop # help 
 man ip # help 
+man jhead # help 
 man join # help 
 man kill # help 
 man ldd # help 
