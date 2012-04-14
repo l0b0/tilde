@@ -60,7 +60,7 @@ cd ~/contacts/
 cd ~/dev/bm/ # project 
 cd ~/dev/count/ # project 
 cd ~/dev/cronlist/ # project 
-cd ~/dev/crumbling-beaker/ 
+cd ~/dev/crumbling-beaker/ # project 
 cd ~/dev/csv2zarafa-contacts/ # project 
 cd ~/dev/dialogue/ # project 
 cd ~/dev/dialogue.wiki/ # project 
