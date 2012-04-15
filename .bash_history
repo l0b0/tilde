@@ -101,6 +101,7 @@ chmod u+x test.sh
 chmod +x $rvm_path/hooks/after_cd_bundler # development plugin 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
+comm -23 <(grep -h ^FN: ~/contacts.vcf | sort -u) <(grep -h ^FN: ~/contacts/*.vcf | sort -u) 
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
 ./configure # packaging 
