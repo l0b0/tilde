@@ -617,6 +617,7 @@ man scp # help
 man script # help 
 man sed # help 
 man seq # help 
+man setxkbmap # help 
 man sh # help 
 man showkey # help 
 man shunit2 # help 
