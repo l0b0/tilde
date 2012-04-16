@@ -883,6 +883,7 @@ set +o pipefail
 ./setup.py test 
 set -x 
 set +x 
+setxkbmap -option compose:caps # keyboard 
 setxkbmap -print # keyboard settings 
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
