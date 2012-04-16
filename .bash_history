@@ -852,6 +852,7 @@ rm file
 route 
 ruby -v 
 rvm 
+rvm gemset empty project_name # gems delete uninstall 
 rvm get stable 
 rvm help do 
 rvm help install 
