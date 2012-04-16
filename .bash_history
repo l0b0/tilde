@@ -185,6 +185,7 @@ editor ~/.bash_aliases # shell
  editor ~/.bash_history # shell 
 editor ~/.bashrc_local # shell 
 editor ~/.bashrc # shell 
+editor ~/.config/lxsession/LXDE/autostart 
 editor ~/.config/openbox/lxde-rc.xml # config LXDE keyboard shortcuts 
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
