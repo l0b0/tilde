@@ -517,6 +517,7 @@ man 5 passwd # help password
 man ack-grep # help 
 man addgroup # help 
 man apropos # help 
+man apt-get # help 
 man apt-listchanges # help 
 man apt-rdepends 
 man arch # help 
@@ -1041,6 +1042,7 @@ sudo apt-get install python-pydot
 sudo apt-get install python-setuptools 
 sudo apt-get install qgit 
 sudo apt-get install rdesktop 
+sudo apt-get install --reinstall package 
 sudo apt-get install rsync 
 sudo apt-get install ruby-dev 
 sudo apt-get install sbcl 
