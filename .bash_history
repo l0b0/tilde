@@ -1127,6 +1127,7 @@ svn cat -r 1 Makefile | less
 svn ci -m "Test" 
 svn ci --non-recursive doc 
 svn co http://svn/repo ~/dir 
+svn cp http://svn/repo/trunk http://svn/repo/branches/branch-name 
 svn diff 
 svn diff -c 1 
 svn diff -c 1 -x -w 
