@@ -496,6 +496,7 @@ lsof
 lsof +c 0 | grep gnome-terminal | wc -l 
 lspci | grep -i audio 
 lsusb | grep -i cam 
+lxkeymap # keyboard layout 
 lxpanel & # LXDE 
 m4 --version 
 make 
