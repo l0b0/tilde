@@ -157,8 +157,8 @@ dos2unix file # convert newline
 dot -O -Tsvg *.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
-dpkg -s bash # package 
-dpkg -S "$(which apt-get)" # package 
+dpkg -s bash # package status 
+dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
 echo $COLUMNS # terminal 
