@@ -275,8 +275,10 @@ git add README.markdown
 git add tools.mk 
 git blame filename 
 git branch 
+git branch -r # remote 
 git branch topic 
 git checkout . 
+git checkout -b topic-svn remotes/topic # branch svn 
 git checkout master 
 git cherry-pick master:HEAD 
 git clean -n 
@@ -371,6 +373,7 @@ git svn dcommit --dry-run
 git svn fetch 
 git svn help 
 git svn rebase 
+git svn show-ignore >> .git/info/exclude 
 git svn status 
 git --version 
 glc-capture -o recording.glc minecraft 
