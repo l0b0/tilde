@@ -21,7 +21,7 @@ bash -x # debug
 bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
-bind -P | grep -F ' can be found on ' # keyboard shortcuts 
+bind -P | grep -F ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' 
 ~/bin/git diff --check 
 ~/bin/git diff --minimal 
 ~/bin/git diff --staged --minimal 
