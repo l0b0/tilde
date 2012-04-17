@@ -605,6 +605,7 @@ man od # help
 man paperconfig # help 
 man patch # help 
 man perl # help 
+man perlrun # help 
 man pgrep # help 
 man ping # help 
 man pngcrush # help 
