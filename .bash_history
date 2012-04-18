@@ -653,6 +653,7 @@ man ssh-copy-id # help
 man sshd # help 
 man ssh # help 
 man stat # help 
+man strace # help 
 man strfile # help 
 man sudo # help 
 man su # help 
@@ -935,6 +936,7 @@ ssh -p 2222 example.org
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
 ssh -Y example.org 
+strace -p 123 # process 
 strings /usr/bin/strings 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
