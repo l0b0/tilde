@@ -158,6 +158,7 @@ dos2unix file # convert newline
 dot -O -Tsvg *.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
+dot -V 
 dpkg -s bash # package status 
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # PostgreSQL 
