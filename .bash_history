@@ -224,6 +224,8 @@ editor ~/.wine/system.reg
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
 empty_line_before_eof -i * # newline 
+enable -a # builtins 
+enable -n # disabled builtins 
 env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 eval `resize -s 24 80` # terminal 
@@ -418,6 +420,7 @@ help builtin
 help command 
 help declare 
 help echo 
+help enable 
 help help 
 help history 
 help kill 
