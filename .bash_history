@@ -167,6 +167,7 @@ dpkg -s bash # package status
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # PostgreSQL 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
+echo $BASHPID # shell subshell PID 
 echo $COLUMNS # terminal 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
@@ -184,6 +185,7 @@ echo "${paths[@]: -1}" # array
 echo "${paths[@]}" # array 
 echo $PROMPT_COMMAND # shell 
 echo $REPLY # read 
+echo $$ # shell PID 
 echo $TERM # shell 
 echo 'test foo test bar test' | grep -o test | wc -l # count 
 echo $WINEPREFIX 
