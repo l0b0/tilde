@@ -373,7 +373,7 @@ git stash pop
 git stash pop stash@{1} 
 git stash save --keep-index "message" 
 git stash save "message" 
-git stash save --patch "message" 
+git stash save --patch "message" # diff create 
 git stash show 
 git stash show --patch # diff 
 git stash show --patch stash@{1} # diff 
