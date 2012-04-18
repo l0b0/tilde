@@ -169,6 +169,7 @@ dropdb -U username dbname # PostgreSQL
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
 echo $BASHPID # shell subshell PID 
 echo $COLUMNS # terminal 
+echo -e \\0 | sed 's/\x00/nul/' 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
