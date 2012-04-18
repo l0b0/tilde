@@ -407,6 +407,7 @@ gzip example.txt
 help alias 
 help declare 
 help echo 
+help help 
 help history 
 help kill 
 help local 
@@ -414,6 +415,7 @@ help printf
 help read 
 help set 
 help shopt 
+help test 
 help trap # signal 
 help type 
 help typeset 
