@@ -136,7 +136,10 @@ date --date="Wednesday" # today future midnight
 date --date="yesterday" # time 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%d 
+declare -F # functions 
 declare -f schroedinger # function definition 
+declare -p # color variables functions 
+declare # variables functions 
 ~/dev/minecraft-scripts/backup.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
