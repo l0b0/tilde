@@ -291,7 +291,8 @@ git checkout .
 git checkout -b topic-svn remotes/topic # branch svn 
 git checkout master 
 git cherry-pick master:HEAD 
-git clean -n 
+git clean -nd # dry-run directories 
+git clean -ndx # dry-run directories 
 git clone git@github.com:l0b0/mkgithub.git 
 git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/terreActive/redmine.git 
@@ -324,6 +325,7 @@ git help add
 git help blame 
 git help branch 
 git help cherry-pick 
+git help clean 
 git help clone 
 git help config 
 git help diff 
