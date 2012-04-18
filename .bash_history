@@ -168,11 +168,12 @@ echo $COLUMNS # terminal
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
-echo -ne $'\0' | wc -c # 0 nul 
-echo -ne '\0' | wc -c # 1 nul 
-echo -ne "\0" | wc -c # 1 nul 
-echo -ne $"\0" | wc -c # 1 nul 
-echo -ne \0 | wc -c # 1 nul 
+echo -ne '\0' | uniname -bcepu # 1 nul 
+echo -ne "\0" | uniname -bcepu # 1 nul 
+echo -ne $"\0" | uniname -bcepu # 1 nul 
+echo -ne \\0 | uniname -bcepu # 1 nul 
+echo -ne \0 | uniname -bcepu # 1 zero 
+echo -ne $'\0' | wc -c # 0 
 echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[0]}" # array 
