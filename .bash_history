@@ -12,6 +12,7 @@ apt-cache stats bash
 apt-get source apt 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
+autoconf 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
