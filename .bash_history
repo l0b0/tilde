@@ -414,6 +414,8 @@ guard show
 gunzip example.gz 
 gzip example.txt 
 help alias 
+help builtin 
+help command 
 help declare 
 help echo 
 help help 
