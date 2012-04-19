@@ -2,7 +2,7 @@ ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --
 ack-grep "pattern" . # search 
 aplay -L # audio 
 apport-bug package # report 
-apropos bash # help 
+apropos bash # help man 
 apt-cache depends bash 
 apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
