@@ -2,7 +2,9 @@ ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --
 ack-grep "pattern" . # search 
 aplay -L # audio 
 apport-bug package # report 
+apropos . # all help man 
 apropos bash # help man 
+apropos -e mv # exact help man 
 apt-cache depends bash 
 apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
@@ -687,6 +689,7 @@ man watch # help
 man wc # help 
 man wdiff # help 
 man wget # help 
+man whatis # help 
 man w # help 
 man xargs # help 
 man xdg-desktop-menu # help 
@@ -1242,6 +1245,7 @@ vmware
 w 
 wait # process PID 
 watch 'svn diff' 
+whatis mv # exact help man 
 which make 
 while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace EOL EOF 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
