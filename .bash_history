@@ -849,6 +849,7 @@ rails g controller sessions new create destroy # create database
 rails g --help # generators 
 rails g migration add_email_to_user email:string email_plain_text_only:boolean # create database 
 rails g scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
+rails g spine:scaffold user name # create javascript 
 rails new project_name # create 
 rails s -e production -p 3002 # start service web 
 rails s -e test -p 3001 # start service web 
