@@ -692,6 +692,7 @@ man wget # help
 man whatis # help 
 man w # help 
 man xargs # help 
+man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xinput # help 
@@ -826,6 +827,7 @@ printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
 printf %q "$IFS" 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # unicode 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp -l <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -o) # clipboard test 
 printf %s "${IFS:0:1}" 
 prove 
 prove -r 
@@ -1099,6 +1101,7 @@ sudo apt-get install wget
 sudo apt-get install wine 
 sudo apt-get install winetricks 
 sudo apt-get install x264 
+sudo apt-get install xclip 
 sudo apt-get install xdotool 
 sudo apt-get install xournal 
 sudo apt-get install xscreensaver 
