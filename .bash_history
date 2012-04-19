@@ -532,6 +532,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
+man 1p mv # POSIX help 
 man 5 crontab # help 
 man 5 passwd # help password 
 man ack-grep # help 
@@ -1024,6 +1025,7 @@ sudo apt-get install linux-headers-generic
 sudo apt-get install linux-image-generic 
 sudo apt-get install linux-source 
 sudo apt-get install lynx-cur 
+sudo apt-get install manpages-posix-dev # help POSIX 
 sudo apt-get install markdown 
 sudo apt-get install meld 
 sudo apt-get install mencoder 
