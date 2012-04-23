@@ -193,6 +193,7 @@ fi
 
 # node.js and npm
 export PATH="$HOME/local/bin:$PATH"
+export NODE_PATH=~/local/lib/node_modules
 
 # Custom-built libraries
 for dir in /usr/lib64 /usr/lib32
