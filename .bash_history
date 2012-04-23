@@ -625,6 +625,7 @@ man nautilus # help
 man ncal # help 
 man netstat # help 
 man nl # help 
+man node # help 
 man od # help 
 man paperconfig # help 
 man patch # help 
@@ -806,6 +807,7 @@ netstat -a # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+node # javascript 
 node -v 
 npm config set registry http://registry.npmjs.org/ 
 npm install -g coffee-script # coffeescript 
