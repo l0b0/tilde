@@ -353,6 +353,7 @@ git help stash
 git help submodule 
 git help svn 
 git init 
+gitk . & 
 git log 
 git log Makefile 
 git log --oneline --decorate 
