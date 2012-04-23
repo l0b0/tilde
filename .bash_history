@@ -809,6 +809,7 @@ nmap -v -sP 192.168.0.0/24
 node -v 
 npm config set registry http://registry.npmjs.org/ 
 npm install -g coffee-script # coffeescript 
+npm ls -g 
 npm -v 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 patch -p0 < patch.diff 
