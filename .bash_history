@@ -61,6 +61,7 @@ cd ../
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
+cd ~/dev/coffeescript-jedit # project 
 cd ~/dev/count/ # project 
 cd ~/dev/cronlist/ # project 
 cd ~/dev/crumbling-beaker/ # project 
@@ -724,6 +725,7 @@ mkgithub ~/dev/bm
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
 mkgithub ~/dev/CERN-Central-Library-bookmark 
+mkgithub ~/dev/coffeescript-jedit 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
 mkgithub ~/dev/cronlist 
