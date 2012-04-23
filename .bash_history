@@ -1,11 +1,11 @@
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search Rails 
 ack-grep "pattern" . # search 
+add-apt-repository --help 
 aplay -L # audio 
 apport-bug package # report 
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
-apt-add-repository --help 
 apt-cache depends bash 
 apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
@@ -542,6 +542,7 @@ man 1p mv # POSIX help
 man 5 crontab # help 
 man 5 passwd # help password 
 man ack-grep # help 
+man add-apt-repository # help 
 man addgroup # help 
 man apropos # help 
 man apt-get # help 
