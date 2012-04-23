@@ -17,6 +17,7 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
 autoconf 
+autoreconf --install 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
@@ -90,6 +91,7 @@ cd ~/dev/paperless/ # project
 cd ~/dev/paperless.wiki/ # project 
 cd ~/dev/schemaspy2svg/ # project 
 cd ~/dev/shunit-ng/ # project 
+cd ~/dev/subsurface # project 
 cd ~/dev/tilde/ # project 
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
@@ -302,6 +304,7 @@ git cherry-pick master:HEAD
 git clean -nd # dry-run directories 
 git clean -ndx # dry-run directories 
 git clone git@github.com:l0b0/mkgithub.git 
+git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
@@ -781,6 +784,7 @@ mkgithub ~/dev/shunit-ng
 mkgithub ~/dev/SICP 
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
+mkgithub ~/dev/subsurface 
 mkgithub ~/dev/tilde 
 mkgithub ~/dev/trim 
 mkgithub ~/dev/txt2cloud 
@@ -1026,6 +1030,7 @@ sudo apt-get install jhead
 sudo apt-get install kernel-package 
 sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
+sudo apt-get install libgconf2-dev 
 sudo apt-get install libglade2-dev 
 sudo apt-get install libmysql-java 
 sudo apt-get install libncurses5-dev 
