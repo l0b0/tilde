@@ -104,6 +104,7 @@ chmod u+x test.sh
 chmod +x $rvm_path/hooks/after_cd_bundler # development plugin 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
+coffee -v # coffeescript 
 comm -23 <(grep -h ^FN: ~/contacts.vcf | sort -u) <(grep -h ^FN: ~/contacts/*.vcf | sort -u) 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') 
 completions git config '' | grep user # autocomplete 
@@ -806,6 +807,8 @@ nl ~/.bashrc
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
 node -v 
+npm config set registry http://registry.npmjs.org/ 
+npm install -g coffee-script # coffeescript 
 npm -v 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 patch -p0 < patch.diff 
