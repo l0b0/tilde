@@ -13,6 +13,7 @@ apt-cache show bash
 apt-cache showsrc bash # source 
 apt-cache stats bash 
 apt-get source apt 
+apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
 autoconf 
@@ -544,6 +545,7 @@ man ack-grep # help
 man addgroup # help 
 man apropos # help 
 man apt-get # help 
+man apt-key # help 
 man apt-listchanges # help 
 man apt-rdepends 
 man arch # help 
