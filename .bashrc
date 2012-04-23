@@ -191,6 +191,9 @@ then
     set -o nounset
 fi
 
+# node.js and npm
+PATH="$HOME/local/bin:$PATH"
+
 # Custom-built libraries
 for dir in /usr/lib64 /usr/lib32
 do

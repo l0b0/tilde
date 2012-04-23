@@ -805,6 +805,8 @@ netstat -a # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+node -v 
+npm -v 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
