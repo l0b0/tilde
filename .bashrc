@@ -200,6 +200,8 @@ do
     fi
 done
 
+export PATH
+
 set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
 
