@@ -5,6 +5,7 @@ apport-bug package # report
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
+apt-add-repository --help 
 apt-cache depends bash 
 apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
