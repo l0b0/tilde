@@ -181,7 +181,7 @@ set +o nounset
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 set -o nounset
 # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/.rvm/bin
 
 # Load perlbrew if present
 if [ -r "${HOME}/perl5/perlbrew/etc/bashrc" ]
@@ -192,7 +192,7 @@ then
 fi
 
 # node.js and npm
-PATH="$HOME/local/bin:$PATH"
+export PATH="$HOME/local/bin:$PATH"
 
 # Custom-built libraries
 for dir in /usr/lib64 /usr/lib32
@@ -202,8 +202,6 @@ do
         export LD_LIBRARY_PATH="${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}$dir"
     fi
 done
-
-export PATH
 
 set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
