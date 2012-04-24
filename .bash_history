@@ -90,6 +90,7 @@ cd ~/dev/paperless/ # project
 cd ~/dev/paperless.wiki/ # project 
 cd ~/dev/schemaspy2svg/ # project 
 cd ~/dev/shunit-ng/ # project 
+cd ~/dev/Smooth-CoffeeScript/ # project 
 cd ~/dev/tilde/ # project 
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
@@ -527,6 +528,7 @@ lspci | grep -i audio
 lsusb | grep -i cam 
 lxkeymap # keyboard layout 
 lxpanel & # LXDE 
+lyx file.lyx 
 m4 --version 
 make 
 make 2>&1 | tee > make_compile.out~ 
@@ -778,6 +780,7 @@ mkgithub ~/dev/screensaver-info
 mkgithub ~/dev/see-colon 
 mkgithub ~/dev/shunit-ng 
 mkgithub ~/dev/SICP 
+mkgithub ~/dev/Smooth-CoffeeScript 
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
 mkgithub ~/dev/tilde 
@@ -1045,6 +1048,7 @@ sudo apt-get install linux-headers-generic
 sudo apt-get install linux-image-generic 
 sudo apt-get install linux-source 
 sudo apt-get install lynx-cur 
+sudo apt-get install lyx 
 sudo apt-get install manpages-posix-dev # help POSIX 
 sudo apt-get install markdown 
 sudo apt-get install meld 
