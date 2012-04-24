@@ -860,7 +860,7 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
-qgit .& # GUI 
+qgit --all .& # gui 
 rails c # console 
 rails d controller sessions # delete database 
 rails d scaffold user # delete database 
