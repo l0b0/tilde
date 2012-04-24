@@ -1139,6 +1139,7 @@ sudo dmidecode --type 1
 sudo dmidecode --type system 
 sudo dpkg-reconfigure ca-certificates 
 sudo editor /etc/apt/sources.list 
+sudo editor /etc/default/keyboard 
 sudo editor /etc/fstab 
 sudo editor /etc/hosts 
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
