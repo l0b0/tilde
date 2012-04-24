@@ -345,6 +345,7 @@ git help init
 git help log 
 git help merge 
 git help pull 
+git help push 
 git help rebase 
 git help remote 
 git help stash 
