@@ -92,7 +92,7 @@ cd ~/dev/paperless.wiki/ # project
 cd ~/dev/schemaspy2svg/ # project 
 cd ~/dev/shunit-ng/ # project 
 cd ~/dev/Smooth-CoffeeScript/ # project 
-cd ~/dev/subsurface # project 
+cd ~/dev/subsurface/ # project 
 cd ~/dev/tilde/ # project 
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
