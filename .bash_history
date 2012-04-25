@@ -319,6 +319,7 @@ git config --global mergetool.prompt false
 git config -l 
 GIT_CURL_VERBOSE=1 git pull # debug 
 git diff 
+git diff --color-words 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
 git diff --ignore-space-change 
