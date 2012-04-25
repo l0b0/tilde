@@ -1,4 +1,4 @@
-ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search Rails 
+ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
 aplay -L # audio 
@@ -7,7 +7,7 @@ apropos . # all help man
 apropos bash # help man 
 apropos -e mv # exact help man 
 apt-cache depends bash 
-apt-cache policy nvidia-current # PPA source 
+apt-cache policy nvidia-current # ppa source 
 apt-cache search bash 
 apt-cache show bash 
 apt-cache showsrc bash # source 
@@ -47,7 +47,7 @@ capify . # rails
 cap # rails 
 cat ~/contacts/*.vcf > ~/all.vcf 
 cat /etc/papersize # print 
-cat /etc/*release # OS 
+cat /etc/*release # os 
 cat /proc/1/stat | awk '{ print $22 }' # process start time jiffies since boot 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
@@ -56,7 +56,7 @@ cat /proc/misc # hardware
 cat /proc/stat # hardware 
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
-cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
+cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 cd 
 cd - 
 cd ./ 
@@ -118,7 +118,7 @@ completions git config '' | grep user # autocomplete
 ./configure # packaging 
 count . # filesystem 
 cp file{,.orig} # filesystem 
-createdb -T template0 -U username dbname # PostgreSQL 
+createdb -T template0 -U username dbname # postgresql 
 cronlist 
 cronlist --help 
 cronlist -s 
@@ -166,7 +166,7 @@ diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
-dmesg # debug OS startup 
+dmesg # debug os startup 
 dos2unix file # convert newline 
 dot -O -Tsvg *.dot # graphics 
 dot -Tsvg graph.dot # graphics 
@@ -174,9 +174,9 @@ dotty graph.dot # graphics
 dot -V 
 dpkg -s bash # package status 
 dpkg -S "$(which apt-get)" # package file owner search 
-dropdb -U username dbname # PostgreSQL 
+dropdb -U username dbname # postgresql 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
-echo $BASHPID # shell subshell PID 
+echo $BASHPID # shell subshell pid 
 echo $COLUMNS # terminal 
 echo -e \\0 | sed 's/\x00/nul/' 
 echo $? # exit code 
@@ -195,7 +195,7 @@ echo "${paths[@]: -1}" # array
 echo "${paths[@]}" # array 
 echo $PROMPT_COMMAND # shell 
 echo $REPLY # read 
-echo $$ # shell PID 
+echo $$ # shell pid 
 echo $TERM # shell 
 echo 'test foo test bar test' | grep -o test | wc -l # count 
 echo $WINEPREFIX 
@@ -205,7 +205,7 @@ editor ~/.bash_aliases # shell
 editor ~/.bashrc_local # shell 
 editor ~/.bashrc # shell 
 editor ~/.config/lxsession/LXDE/autostart 
-editor ~/.config/openbox/lxde-rc.xml # config LXDE keyboard shortcuts 
+editor ~/.config/openbox/lxde-rc.xml # config lxde keyboard shortcuts 
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
 editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
@@ -241,7 +241,7 @@ eval `resize -s 24 80` # terminal
 eval `ssh-agent` && ssh-add 
 eval "$traps" # signal 
 exit 
-facter # hardware OS 
+facter # hardware os 
 facter --help 
 facter id # user 
 feh --fullscreen --hide-pointer * # images viewer 
@@ -260,7 +260,7 @@ find . -empty
 find . -empty -delete # remove files 
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
 find -L . -type l # broken symlinks 
-find . -name '*.marks' -delete # remove jEdit temp files 
+find . -name '*.marks' -delete # remove jedit temp files 
 find . -print0 | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -printf x | wc -c 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
@@ -275,8 +275,8 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 gcc --version 
-gconf-editor # GNOME config 
-gem help rdoc # Ruby 
+gconf-editor # gnome config 
+gem help rdoc # ruby 
 gem install bundler 
 gem install cucumber 
 gem install pry pry-doc 
@@ -331,7 +331,7 @@ git diff -w --no-color | git apply --cached
 git diff --word-diff 
 git fetch 
 git format-patch -M HEAD^ 
-git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace EOL EOF 
+git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui& 
 git help add 
 git help blame 
@@ -405,7 +405,7 @@ git --version
 glc-capture -o recording.glc minecraft 
 glc-play recording.glc 
 glc-play recording.glc -a 1 -o recording.wav # audio 
-glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding MP4 MPEG4 
+glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
 glxinfo 
 gnome-control-center sound 
 gnome-screensaver & 
@@ -480,12 +480,12 @@ java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host local
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jhead -da2010:11:12/13:14:15-2005:01:01 *.jpg # adjust date time image 
-kill -0 $! # check process PID 
+kill -0 $! # check process pid 
 killall awesome 
 killall firefox 
 killall gdm 
 killall keepassx 
-killall lxpanel # LXDE 
+killall lxpanel # lxde 
 killall npviewer.bin 
 killall plugin-container 
 kill -INT $$ # signal 
@@ -532,7 +532,7 @@ lsof +c 0 | grep gnome-terminal | wc -l
 lspci | grep -i audio 
 lsusb | grep -i cam 
 lxkeymap # keyboard layout 
-lxpanel & # LXDE 
+lxpanel & # lxde 
 lyx file.lyx 
 m4 --version 
 make 
@@ -545,7 +545,7 @@ make install
 make test 
 make test 2>&1 | tee > make_test.out~ 
 make variables 
-man 1p mv # POSIX help 
+man 1p mv # posix help 
 man 5 crontab # help 
 man 5 passwd # help password 
 man ack-grep # help 
@@ -570,8 +570,8 @@ man chroot # help
 man cmp # help 
 man comm # help 
 man cp # help 
-man createdb # help PostgreSQL 
-man createuser # help PostgreSQL 
+man createdb # help postgresql 
+man createuser # help postgresql 
 man crontab # help 
 man curl # help 
 man cut # help 
@@ -649,7 +649,7 @@ man ping # help
 man pngcrush # help 
 man pod2man # help 
 man proc # help 
-man psql # help PostgreSQL 
+man psql # help postgresql 
 man puppet # help 
 man rake # help 
 man recordmydesktop # help 
@@ -839,13 +839,13 @@ perl --version
 pgrep -u root cron 
 php -a 
 php --version 
-pid=$! # process PID 
+pid=$! # process pid 
 ping -c 4 example.org 
 ping example.org 
 pip help 
 pngcrush -brute -d /target *.png 
 PREFIX=~ sudo make install 
-printf "$IFS" | od -t x1 # string character byte convert hex dump POSIX 
+printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 printf %q "$IFS" 
@@ -856,9 +856,9 @@ printf %s "${IFS:0:1}"
 prove 
 prove -r 
 pry 
-psql dbname username < dump.sql # PostgreSQL 
-psql -U db_user db_name # PostgreSQL 
-psql --version # PostgreSQL 
+psql dbname username < dump.sql # postgresql 
+psql -U db_user db_name # postgresql 
+psql --version # postgresql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe -s user 
@@ -955,7 +955,7 @@ shopt -s globstar
 shopt -s nullglob 
 shopt -u nullglob 
 shortest < ~/.bash_history 
-showkey -a # ASCII keyboard scancode 
+showkey -a # ascii keyboard scancode 
 sleep 1m 
 sloccount . 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
@@ -1058,7 +1058,7 @@ sudo apt-get install linux-image-generic
 sudo apt-get install linux-source 
 sudo apt-get install lynx-cur 
 sudo apt-get install lyx 
-sudo apt-get install manpages-posix-dev # help POSIX 
+sudo apt-get install manpages-posix-dev # help posix 
 sudo apt-get install markdown 
 sudo apt-get install meld 
 sudo apt-get install mencoder 
@@ -1140,7 +1140,7 @@ sudo blkid -o list
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
-sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware MacMini4,1 speed 
+sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
@@ -1176,7 +1176,7 @@ sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_or
 sudo service cups restart 
 sudo service postgresql reload 
 sudo shutdown -r now 
-sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware MacMini4,1 speed 
+sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo umount mp3 
 sudo update-alternatives --config editor 
 sudo update-alternatives --config x-www-browser 
@@ -1276,17 +1276,17 @@ vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-fil
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 
 vmware 
 w 
-wait # process PID 
+wait # process pid 
 watch 'svn diff' 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace EOL EOF 
+while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace eol eof 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
-while true; do DISPLAY=:0 compiz --replace; done & # debug WM 
-while true; do DISPLAY=:0 gnome-shell --replace; done & # debug WM 
+while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
+while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
 wine --version 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
 xev 
