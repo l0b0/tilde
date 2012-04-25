@@ -355,7 +355,7 @@ git help stash
 git help submodule 
 git help svn 
 git init 
-gitk . & 
+gitk --all .& # gui 
 git log 
 git log Makefile 
 git log --oneline --decorate 
@@ -592,6 +592,7 @@ man fmt # help
 man fortune # help 
 man getopt # help 
 man git # help 
+man gitk # help 
 man gksu # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
