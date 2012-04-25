@@ -1,11 +1,11 @@
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search Rails 
 ack-grep "pattern" . # search 
+add-apt-repository --help 
 aplay -L # audio 
 apport-bug package # report 
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
-apt-add-repository --help 
 apt-cache depends bash 
 apt-cache policy nvidia-current # PPA source 
 apt-cache search bash 
@@ -17,6 +17,7 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
 autoconf 
+autoreconf --install 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
@@ -91,6 +92,7 @@ cd ~/dev/paperless.wiki/ # project
 cd ~/dev/schemaspy2svg/ # project 
 cd ~/dev/shunit-ng/ # project 
 cd ~/dev/Smooth-CoffeeScript/ # project 
+cd ~/dev/subsurface # project 
 cd ~/dev/tilde/ # project 
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
@@ -303,6 +305,7 @@ git cherry-pick master:HEAD
 git clean -nd # dry-run directories 
 git clean -ndx # dry-run directories 
 git clone git@github.com:l0b0/mkgithub.git 
+git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
@@ -352,6 +355,7 @@ git help stash
 git help submodule 
 git help svn 
 git init 
+gitk . & 
 git log 
 git log Makefile 
 git log --oneline --decorate 
@@ -545,6 +549,7 @@ man 1p mv # POSIX help
 man 5 crontab # help 
 man 5 passwd # help password 
 man ack-grep # help 
+man add-apt-repository # help 
 man addgroup # help 
 man apropos # help 
 man apt-get # help 
@@ -784,6 +789,7 @@ mkgithub ~/dev/SICP
 mkgithub ~/dev/Smooth-CoffeeScript 
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
+mkgithub ~/dev/subsurface 
 mkgithub ~/dev/tilde 
 mkgithub ~/dev/trim 
 mkgithub ~/dev/txt2cloud 
@@ -1029,6 +1035,7 @@ sudo apt-get install jhead
 sudo apt-get install kernel-package 
 sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
+sudo apt-get install libgconf2-dev 
 sudo apt-get install libglade2-dev 
 sudo apt-get install libmysql-java 
 sudo apt-get install libncurses5-dev 
