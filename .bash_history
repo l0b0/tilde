@@ -17,6 +17,7 @@ apt-get source apt
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
+aticonfig --initial=check 
 autoconf 
 autoreconf --install 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
@@ -254,6 +255,7 @@ fgit gc -- ~/*/ ~/.*/ ~/dev/*/
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
+fglrxinfo 
 file README.markdown 
 filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find_date_sorted . -mindepth 1 # files 
@@ -1272,6 +1274,7 @@ unset REPLY
 unset var 
 upgrade 
 uptime 
+vainfo 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
