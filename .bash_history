@@ -1054,6 +1054,7 @@ sudo apt-get install libsqlite3-dev
 sudo apt-get install libssl-dev 
 sudo apt-get install libtiff-tools 
 sudo apt-get install libtool 
+sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
 sudo apt-get install libxml2-dev 
 sudo apt-get install libxml-simple-perl 
 sudo apt-get install libxslt1-dev 
@@ -1279,6 +1280,7 @@ vcard ~/contacts/*.vcf
 vim -c "setfiletype sh" test 
 visudo 
 vlc -H 
+vlc --spdif --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vmware 
