@@ -690,7 +690,6 @@ man tput # help
 man traceroute # help 
 man trash # help 
 man tr # help 
-man ubuntu-bug # help 
 man udevadm # help 
 man umask # help 
 man uname # help 
@@ -1255,7 +1254,6 @@ traps="$(trap)" # signal
 txt2cloud 
 txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
 type -a true 
-ubuntu-bug linux 
 udevadm info --export-db 
 ulimit -a 
 ulimit -c unlimited 
