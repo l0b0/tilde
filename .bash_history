@@ -980,6 +980,7 @@ strings /usr/bin/strings
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup $USER group 
+sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep 
 sudo apt-get install apt-listchanges 
