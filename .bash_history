@@ -3,6 +3,7 @@ ack-grep "pattern" . # search
 add-apt-repository --help 
 aplay -L # audio 
 apport-bug package # report 
+apport-bug -w # report window 
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
