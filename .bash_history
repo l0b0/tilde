@@ -599,6 +599,7 @@ man fortune # help
 man getopt # help 
 man git # help 
 man gitk # help 
+man git-svn # help 
 man gksu # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
