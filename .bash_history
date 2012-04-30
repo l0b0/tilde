@@ -560,6 +560,7 @@ man ack-grep # help
 man add-apt-repository # help 
 man addgroup # help 
 man apropos # help 
+man apt-cache # help 
 man apt-get # help 
 man apt-key # help 
 man apt-listchanges # help 
@@ -587,6 +588,7 @@ man date # help
 man diff # help 
 man dot # help 
 man dotty # help 
+man dpkg # help 
 man env # help 
 man errno # help 
 man expr # help 
