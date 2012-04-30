@@ -7,12 +7,14 @@ apport-bug -w # report window
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
-apt-cache depends bash 
+apt-cache depends bash # package dependencies 
 apt-cache policy nvidia-current # ppa source 
-apt-cache search bash 
-apt-cache show bash 
-apt-cache showsrc bash # source 
-apt-cache stats bash 
+apt-cache rdepends bash # package reverse dependencies 
+apt-cache search bash # package 
+apt-cache show bash # package 
+apt-cache showpkg bash # package 
+apt-cache showsrc bash # package source 
+apt-cache stats bash # package statistics 
 apt-get source apt 
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
@@ -170,7 +172,6 @@ diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 dmesg # debug os startup 
-dos2unix file # convert newline 
 dot -O -Tsvg *.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
@@ -278,6 +279,7 @@ for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting
 for path in *.sass; do sass-convert $path ${path%.*}.scss; done 
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+fromdos -- file # convert newline 
 gcc --version 
 gconf-editor # gnome config 
 gem help rdoc # ruby 
@@ -470,6 +472,7 @@ if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation
 imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
+info find # help 
 info sed 
 iostat 
 iotop 
@@ -558,6 +561,7 @@ man ack-grep # help
 man add-apt-repository # help 
 man addgroup # help 
 man apropos # help 
+man apt-cache # help 
 man apt-get # help 
 man apt-key # help 
 man apt-listchanges # help 
@@ -585,6 +589,7 @@ man date # help
 man diff # help 
 man dot # help 
 man dotty # help 
+man dpkg # help 
 man env # help 
 man errno # help 
 man expr # help 
@@ -593,12 +598,12 @@ man fdisk # help
 man feh # help 
 man ffmpeg # help 
 man file # help 
-man find # help 
 man fmt # help 
 man fortune # help 
 man getopt # help 
 man git # help 
 man gitk # help 
+man git-svn # help 
 man gksu # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
@@ -689,6 +694,7 @@ man tar # help
 man tee # help 
 man time # help 
 man timeout # help 
+man tofrodos # help 
 man touch # help 
 man tput # help 
 man traceroute # help 
@@ -1006,7 +1012,6 @@ sudo apt-get install cvs
 sudo apt-get install default-jre 
 sudo apt-get install deluge 
 sudo apt-get install dfo 
-sudo apt-get install dos2unix 
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
 sudo apt-get install esmtp 
@@ -1120,6 +1125,7 @@ sudo apt-get install subversion
 sudo apt-get install sun-java6-fonts 
 sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
+sudo apt-get install tofrodos 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install uniutils 
@@ -1249,6 +1255,7 @@ tail -F /var/log/messages
 thunderbird -profilemanager 
 time make test 
 timeout 1 sleep 2 
+todos -- file # convert newline 
 top 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 touch -d '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
@@ -1267,7 +1274,6 @@ umask
 uname -a 
 uname -m 
 unetbootin 
-unix2dos file 
 unset -a array 
 unset -f function 
 unset REPLY 
