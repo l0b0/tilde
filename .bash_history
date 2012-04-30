@@ -7,12 +7,12 @@ apport-bug -w # report window
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
-apt-cache depends bash 
+apt-cache depends bash # package dependencies 
 apt-cache policy nvidia-current # ppa source 
-apt-cache search bash 
-apt-cache show bash 
-apt-cache showsrc bash # source 
-apt-cache stats bash 
+apt-cache search bash # package 
+apt-cache show bash # package 
+apt-cache showsrc bash # package source 
+apt-cache stats bash # package statistics 
 apt-get source apt 
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
