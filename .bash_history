@@ -104,6 +104,7 @@ cd ~/dev/tilde/ # project
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
 cd ~/dev/txt2cloud/ # project 
+cd ~/dev/unrarr/ # project 
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard-module/ # project 
 cd ~/dev/worktime/ # project 
