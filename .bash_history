@@ -74,6 +74,7 @@ cd ~/dev/count/ # project
 cd ~/dev/cronlist/ # project 
 cd ~/dev/crumbling-beaker/ # project 
 cd ~/dev/csv2zarafa-contacts/ # project 
+cd ~/dev/cvsignore2svn/ # project 
 cd ~/dev/dialogue/ # project 
 cd ~/dev/dialogue.wiki/ # project 
 cd ~/dev/difff/ # project 
@@ -94,6 +95,7 @@ cd ~/dev/mount-image/ # project
 cd ~/dev/msort/ # project 
 cd ~/dev/paperless/ # project 
 cd ~/dev/paperless.wiki/ # project 
+cd ~/dev/qr2scad/ # project 
 cd ~/dev/schemaspy2svg/ # project 
 cd ~/dev/shunit-ng/ # project 
 cd ~/dev/Smooth-CoffeeScript/ # project 
