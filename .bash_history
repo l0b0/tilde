@@ -994,6 +994,7 @@ sudo apt-get install binutils
 sudo apt-get install bison 
 sudo apt-get install bison-doc 
 sudo apt-get install build-essential 
+sudo apt-get install chromium-browser 
 sudo apt-get install clisp 
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
