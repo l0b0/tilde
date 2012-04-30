@@ -1192,7 +1192,7 @@ sudo shutdown -r now
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo umount mp3 
 sudo update-alternatives --set editor "$(which vim.basic)" 
-sudo update-alternatives --set x-www-browser "$(which firefox)"
+sudo update-alternatives --set x-www-browser "$(which firefox)" 
 sudo updatedb 
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
