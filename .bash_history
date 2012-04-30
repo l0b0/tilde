@@ -1126,7 +1126,7 @@ sudo apt-get install urlview muttprint
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
-sudo apt-get install vlc 
+sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
 sudo apt-get install wget 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
