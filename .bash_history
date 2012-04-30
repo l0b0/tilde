@@ -1088,7 +1088,7 @@ sudo apt-get install openscad
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
 sudo apt-get install pdftk 
-sudo apt-get install pep8 
+sudo apt-get install pep8 pychecker pyflakes pylint 
 sudo apt-get install pgadmin3 
 sudo apt-get install php5-cli 
 sudo apt-get install php5-dev php-pear 
@@ -1096,9 +1096,6 @@ sudo apt-get install pidgin
 sudo apt-get install playonlinux 
 sudo apt-get install pngcrush 
 sudo apt-get install puppetmaster 
-sudo apt-get install pychecker 
-sudo apt-get install pyflakes 
-sudo apt-get install pylint 
 sudo apt-get install python2.6 
 sudo apt-get install python2.6-dev 
 sudo apt-get install python2.6-doc 
