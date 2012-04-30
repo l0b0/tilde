@@ -1015,10 +1015,7 @@ sudo apt-get install ffmpeg
 sudo apt-get install fortune-mod 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install git-core git-gui 
-sudo apt-get install git-doc 
-sudo apt-get install gitk 
-sudo apt-get install git-svn 
+sudo apt-get install git-core git-doc git-gui gitk git-svn qgit 
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
@@ -1107,7 +1104,6 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
-sudo apt-get install qgit 
 sudo apt-get install rdesktop 
 sudo apt-get install --reinstall package 
 sudo apt-get install rsync 
