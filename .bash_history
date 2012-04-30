@@ -1096,10 +1096,6 @@ sudo apt-get install pidgin
 sudo apt-get install playonlinux 
 sudo apt-get install pngcrush 
 sudo apt-get install puppetmaster 
-sudo apt-get install python2.6 
-sudo apt-get install python2.6-dev 
-sudo apt-get install python2.6-doc 
-sudo apt-get install python2.7 
 sudo apt-get install python-dev 
 sudo apt-get install python-doc 
 sudo apt-get install python-lxml 
