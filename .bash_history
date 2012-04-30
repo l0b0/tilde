@@ -1151,6 +1151,7 @@ sudo ~/dev/tilde/scripts/install-all.sh
 sudo dmidecode 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
+sudo do-release-upgrade # Ubuntu distro 
 sudo dpkg-reconfigure ca-certificates 
 sudo editor /etc/apt/sources.list 
 sudo editor /etc/default/keyboard 
