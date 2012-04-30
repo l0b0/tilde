@@ -1012,7 +1012,7 @@ sudo apt-get install extundelete
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
 sudo apt-get install ffmpeg 
-sudo apt-get install fortune fortune-mod 
+sudo apt-get install fortune-mod 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install git-core git-gui 
