@@ -1117,7 +1117,7 @@ sudo apt-get install rsync
 sudo apt-get install ruby-dev 
 sudo apt-get install sbcl 
 sudo apt-get install screen 
-sudo apt-get install shunit2 
+sudo apt-get install shunit2 # test bash shell 
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
