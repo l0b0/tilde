@@ -472,6 +472,7 @@ if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation
 imapfilter 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
+info find # help 
 info sed 
 iostat 
 iotop 
@@ -597,7 +598,6 @@ man fdisk # help
 man feh # help 
 man ffmpeg # help 
 man file # help 
-man find # help 
 man fmt # help 
 man fortune # help 
 man getopt # help 
