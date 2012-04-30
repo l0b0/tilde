@@ -9,6 +9,7 @@ apropos bash # help man
 apropos -e mv # exact help man 
 apt-cache depends bash # package dependencies 
 apt-cache policy nvidia-current # ppa source 
+apt-cache rdepends bash # package reverse dependencies 
 apt-cache search bash # package 
 apt-cache show bash # package 
 apt-cache showsrc bash # package source 
