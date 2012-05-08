@@ -947,6 +947,7 @@ schemaspy2svg --help
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
+sed -e '9d' file # delete line 
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
  sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
