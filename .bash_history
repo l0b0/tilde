@@ -966,11 +966,11 @@ setxkbmap -print # keyboard settings
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
 sha1sum file 
-shopt -s dotglob 
-shopt -s extglob 
-shopt -s globstar 
-shopt -s nullglob 
-shopt -u nullglob 
+shopt -s dotglob # option set .* 
+shopt -s extglob # option set ?(a|b) *(a|b) +(a|b) @(a|b) !(a|b) 
+shopt -s globstar # option set ** 
+shopt -s nullglob # option set * 
+shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
 showkey -a # ascii keyboard scancode 
 sleep 1m 
