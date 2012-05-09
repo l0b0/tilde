@@ -966,6 +966,7 @@ setxkbmap -print # keyboard settings
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
 sha1sum file 
+shopt # options 
 shopt -s dotglob # option set .* 
 shopt -s extglob # option set ?(a|b) *(a|b) +(a|b) @(a|b) !(a|b) 
 shopt -s globstar # option set ** 
