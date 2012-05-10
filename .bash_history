@@ -686,6 +686,7 @@ man seq # help
 man setxkbmap # help 
 man sh # help 
 man showkey # help 
+man shuf # help 
 man shunit2 # help 
 man signal # help 
 man sleep # help 
@@ -1309,6 +1310,7 @@ wait # process pid
 watch 'svn diff' 
 whatis mv # exact help man 
 which make 
+while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -print0 | shuf -n 10 -z) # random shuffle files 
 while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -print0) # whitespace eol eof 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
