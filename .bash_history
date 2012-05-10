@@ -723,6 +723,7 @@ man wget # help
 man whatis # help 
 man w # help 
 man who # help 
+man whois # help 
 man xargs # help 
 man xclip # help 
 man xdg-desktop-menu # help 
@@ -1303,6 +1304,7 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; f
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
+whois example.org # dns lookup 
 who # logins users 
 wine --version 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
