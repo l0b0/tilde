@@ -666,6 +666,7 @@ man proc # help
 man psql # help postgresql 
 man puppet # help 
 man rake # help 
+man rdesktop # help 
 man recordmydesktop # help 
 man rename # help 
 man resize # help 
@@ -908,6 +909,7 @@ rake routes # rails web
 rake spec # rails test 
 rake --tasks # rails 
 rake test # rails 
+rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
 read < "/path" 
 read -r var 
 read <<< "$text" 
