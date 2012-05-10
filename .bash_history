@@ -427,6 +427,7 @@ gnome-screensaver-command --version
 gnome-screensaver --version 
 gnome-shell --version 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
+grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
 groups 
