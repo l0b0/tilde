@@ -1210,7 +1210,7 @@ sudo updatedb
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo -u postgres createuser -s username 
-sudo usermod -a -g users -G $(id -g) $USER # change default group 
+sudo usermod -g group $USER # change default group 
 sudo visudo 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
