@@ -655,6 +655,7 @@ man nl # help
 man node # help 
 man od # help 
 man paperconfig # help 
+man passwd # help 
 man patch # help 
 man perl # help 
 man perlrun # help 
@@ -850,6 +851,7 @@ npm install -g coffee-script # coffeescript
 npm ls -g 
 npm -v 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
+passwd # password user 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 perlbrew switch 
