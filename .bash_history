@@ -566,6 +566,7 @@ man 5 passwd # help password
 man ack-grep # help 
 man add-apt-repository # help 
 man addgroup # help 
+man adduser # help 
 man apropos # help 
 man apt-cache # help 
 man apt-get # help 
