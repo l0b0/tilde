@@ -428,6 +428,8 @@ gnome-shell --version
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/passwd # password 
 grep --version 
+groups 
+groups nobody 
 groups $USER 
 guard 
 guard -g functional:controller # test 
@@ -615,6 +617,7 @@ man gnome-terminal # help
 man gpg # help 
 man grep # help 
 man groupadd # help 
+man groups # help 
 man head # help 
 man <(help2man help2man) # help 
 man hier # help 
