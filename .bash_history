@@ -698,6 +698,7 @@ man tar # help
 man tee # help 
 man time # help 
 man timeout # help 
+man tkmib # help 
 man tofrodos # help 
 man touch # help 
 man tput # help 
@@ -1128,6 +1129,7 @@ sudo apt-get install subversion
 sudo apt-get install sun-java6-fonts 
 sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
+sudo apt-get install tkmib 
 sudo apt-get install tofrodos 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
 sudo apt-get install ubuntu-restricted-extras 
@@ -1258,6 +1260,7 @@ tail -F /var/log/messages
 thunderbird -profilemanager 
 time make test 
 timeout 1 sleep 2 
+tkmib & 
 todos -- file # convert newline 
 top 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
