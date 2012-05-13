@@ -676,6 +676,7 @@ man proc # help
 man psql # help postgresql 
 man puppet # help 
 man rake # help 
+man rar # help 
 man rdesktop # help 
 man recordmydesktop # help 
 man rename # help 
@@ -1128,6 +1129,7 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
+sudo apt-get install rar 
 sudo apt-get install rdesktop 
 sudo apt-get install --reinstall package 
 sudo apt-get install rsync 
