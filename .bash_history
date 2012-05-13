@@ -466,6 +466,8 @@ help wait
 host example.org 
 hostname 
 hostname -s 
+hp-setup 
+hp-wificonfig 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
 id -g 
@@ -1047,6 +1049,7 @@ sudo apt-get install graphviz
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
 sudo apt-get install help2man 
+sudo apt-get install hplip-gui 
 sudo apt-get install hugin 
 sudo apt-get install hunspell 
 sudo apt-get install hunspell-de-ch 
