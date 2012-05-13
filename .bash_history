@@ -1187,6 +1187,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
+sudo java -jar jdivelog-installer-2.16.jar 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
@@ -1299,6 +1300,7 @@ unset REPLY
 unset var 
 upgrade 
 uptime 
+/usr/local/JDiveLog/bin/jdivelog 
 vainfo 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
