@@ -307,6 +307,7 @@ git add tools.mk
 git blame filename 
 git branch 
 git branch -r # remote 
+git branch --set-upstream master origin/master # track 
 git branch topic 
 git checkout . 
 git checkout -b topic-svn remotes/topic # branch svn 
@@ -320,8 +321,6 @@ git clone git://repo.or.cz/cronlist.git
 git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
-git config branch.master.merge refs/heads/master 
-git config branch.master.remote origin 
 git config diff.minimal 
 git config diff.minimal false 
 git config diff.minimal invalid 
