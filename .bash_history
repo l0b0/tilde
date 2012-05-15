@@ -65,7 +65,7 @@ cd
 cd - 
 cd ./ 
 cd ../ 
-cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd ~/contacts/ 
 cd ~/dev/bm/ # project 
 cd ~/dev/business-card/ # project 
@@ -174,7 +174,7 @@ difff --help
 diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
-diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) 
+diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dirname $PWD 
 dmesg # debug os startup 
@@ -762,7 +762,7 @@ meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) #
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
-mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 mkdir mp3 
 mkdir test 
 mkgithub -chvu l0b0 
@@ -883,10 +883,10 @@ pngcrush -brute -d /target *.png
 PREFIX=~ sudo make install 
 printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
-printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 printf %q "$IFS" 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # unicode 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp -l <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -o) # clipboard test 
 printf %s "${IFS:0:1}" 
 prove 
@@ -936,9 +936,9 @@ recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fp
 rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' *.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
 rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' *.jpg # video 
 reset # clear log remove terminal text 
-rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rmdir * 
-rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rm file 
 route 
 ruby -v 
@@ -1283,7 +1283,7 @@ timeout 1 sleep 2
 tkmib & 
 todos -- file # convert newline 
 top 
-touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
+touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 touch -d '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
 traceroute example.org 
