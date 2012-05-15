@@ -762,7 +762,6 @@ meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) #
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
-mintwelcome 
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' 
 mkdir mp3 
 mkdir test 
