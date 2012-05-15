@@ -20,12 +20,12 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arch # hardware 
 aticonfig --initial=check 
-autoconf 
-autoreconf --install 
+autoconf # compile 
+autoreconf --install # compile 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash # shell 
-bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) 
-bash test.sh 
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
+bash test.sh # run script 
 bash --version 
 bash -x # debug 
 bc <<<'2+2' # calculator math 
@@ -104,7 +104,7 @@ cd ~/dev/tilde/ # project
 cd ~/dev/tilde/scripts/ # project 
 cd ~/dev/trim/ # project 
 cd ~/dev/txt2cloud/ # project 
-cd ~/dev/unrarr/ # project 
+cd ~/dev/unrarr/ # project compress 
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard-module/ # project 
 cd ~/dev/worktime/ # project 
@@ -115,7 +115,7 @@ cd -- "$(mktemp -d)"
 cd ~/personal/ 
 cd ~/settings/ 
 chmod u+x test.sh 
-chmod +x $rvm_path/hooks/after_cd_bundler # development plugin 
+chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version manager 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
@@ -234,7 +234,7 @@ editor ~/.mozilla/firefox/*/chrome/userContent.css
 editor ~/.muttrc # email 
 editor ~/.muttrc_local # email 
 editor README.markdown # dev 
-editor ~/.rvmrc # dev 
+editor ~/.rvmrc # config ruby version manager 
 editor ~/.ssh/config 
 editor ~/.subversion/config # dev 
 editor ~/.subversion/servers # dev 
@@ -445,7 +445,7 @@ guard help
 guard list 
 guard show 
 gunzip example.gz 
-gzip example.txt 
+gzip example.txt # compress 
 help alias 
 help builtin 
 help command 
@@ -467,22 +467,22 @@ help typeset
 help ulimit 
 help umask 
 help wait 
-host example.org 
-hostname 
-hostname -s 
-hp-setup 
-hp-wificonfig 
-iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
-id 
+host example.org  # internet network 
+hostname  # internet network 
+hostname -s  # internet network 
+hp-setup # printer 
+hp-wificonfig # printer 
+iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
 id --group 
+id # group user 
 id --user 
 id $USER 
-ifconfig 
-ifconfig -a 
-ifconfig -a eth0 
-IFS=':' read -a paths <<< "$PATH" 
-if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi 
-imapfilter 
+ifconfig -a eth0 # internet network nic 
+ifconfig -a # internet network 
+ifconfig # internet network 
+IFS=':' read -a paths <<< "$PATH" # tokenize array 
+if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
+imapfilter # email 
 indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -549,25 +549,25 @@ ls -la
 ls -lr 
 ls -lt 
 ls -lt /var/log/ 
-lsmod 
-lsof 
-lsof +c 0 | grep gnome-terminal | wc -l 
+lsmod # kernel modules 
+lsof +c 0 | grep gnome-terminal | wc -l  # count files 
+lsof # files 
 lspci | grep -i audio 
 lsusb | grep -i cam 
 lxkeymap # keyboard layout 
 lxpanel & # lxde 
 lyx file.lyx 
-m4 --version 
-make 
-make 2>&1 | tee > make_compile.out~ 
-make clean 
-make configure 
-make explain 2>&1 | grep MAKE 
-make explain-MAKE 
-make install 
-make test 
-make test 2>&1 | tee > make_test.out~ 
-make variables 
+m4 --version # compile dev 
+make 2>&1 | tee > make_compile.out~ # compile dev 
+make clean # dev 
+make # compile dev 
+make configure # dev 
+make explain 2>&1 | grep MAKE # dev 
+make explain-MAKE # dev 
+make install # dev 
+make test 2>&1 | tee > make_test.out~ # dev 
+make test # dev 
+make variables # dev 
 man 1p mv # posix help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -680,7 +680,7 @@ man proc # help
 man psql # help postgresql 
 man puppet # help 
 man rake # help 
-man rar # help 
+man rar # help compress 
 man rdesktop # help 
 man recordmydesktop # help 
 man rename # help 
@@ -754,12 +754,12 @@ markdown_page "${TODOS[@]}" > ~/todo.xhtml
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
-meld .& 
-meld old new& 
-meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) 
-meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) 
-meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
-mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 
+meld .& # diff 
+meld old new& # diff 
+meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
+meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
+meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) # diff 
+mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
 mintwelcome 
@@ -817,7 +817,7 @@ mkgithub ~/dev/progit
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/qr2scad 
 mkgithub ~/dev/RAYT 
-mkgithub ~/dev/rvm 
+mkgithub ~/dev/rvm # ruby version manager 
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
@@ -831,7 +831,7 @@ mkgithub ~/dev/tilde
 mkgithub ~/dev/trim 
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
-mkgithub ~/dev/unrarr 
+mkgithub ~/dev/unrarr # compress 
 mkgithub ~/dev/vcard2mutt 
 mkgithub ~/dev/vcard-module 
 mkgithub ~/dev/worktime 
@@ -943,9 +943,8 @@ rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
 rm file 
 route 
 ruby -v 
-rvm 
 rvm gemset empty project_name # gems delete uninstall 
-rvm get stable 
+rvm get stable # install ruby version manager 
 rvm help do 
 rvm help install 
 rvm help use 
@@ -956,6 +955,7 @@ rvm list
 rvm list known 
 rvm notes 
 rvm requirements 
+rvm # ruby version manager 
 rvm --rvmrc --create use ruby-version@project_name 
 rvm usage 
 rvm use 1.9.3-p0 
@@ -1055,7 +1055,7 @@ sudo apt-get install graphviz
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
 sudo apt-get install help2man 
-sudo apt-get install hplip-gui 
+sudo apt-get install hplip-gui # printer 
 sudo apt-get install hugin 
 sudo apt-get install hunspell 
 sudo apt-get install hunspell-de-ch 
@@ -1133,7 +1133,7 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
-sudo apt-get install rar 
+sudo apt-get install rar # compress 
 sudo apt-get install rdesktop 
 sudo apt-get install --reinstall package 
 sudo apt-get install rsync 
@@ -1153,7 +1153,7 @@ sudo apt-get install tofrodos
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install uniutils 
-sudo apt-get install unrar-free 
+sudo apt-get install unrar-free # compress 
 sudo apt-get install urlview muttprint 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
