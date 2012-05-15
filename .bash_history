@@ -474,8 +474,8 @@ hp-setup
 hp-wificonfig 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt 
 id 
-id -g 
-id -u 
+id --group 
+id --user 
 id $USER 
 ifconfig 
 ifconfig -a 
