@@ -170,6 +170,7 @@ declare # variables functions
 df -h . # filesystem 
 df -h # filesystem 
 diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
+difff --help 
 diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
 diff -u file{.orig,} 
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
@@ -258,6 +259,7 @@ ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd108
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
 fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit --help 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
@@ -481,6 +483,7 @@ ifconfig -a eth0
 IFS=':' read -a paths <<< "$PATH" 
 if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi 
 imapfilter 
+indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
 info find # help 
