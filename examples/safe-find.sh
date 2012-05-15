@@ -64,7 +64,7 @@
 
 set -o errexit -o noclobber -o nounset -o pipefail
 
-test_file_name=$'--$`\! *@ \a\b\E\f\r\t\v\\\"\' \n'
+test_file_name=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
 test_dir_path="./$test_file_name"
 test_file_path="${test_dir_path}/${test_file_name}"
 
