@@ -1,6 +1,7 @@
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
+alias ls 
 aplay -L # audio 
 apport-bug package # report 
 apport-bug -w # report window 
