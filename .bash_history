@@ -303,6 +303,7 @@ gem server
 git 
 git add . 
 git add .gitignore 
+git add --interactive 
 git add LICENSE 
 git add Makefile 
 git add -p 
