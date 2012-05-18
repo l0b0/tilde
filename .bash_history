@@ -433,6 +433,8 @@ gnome-screensaver-command --lock
 gnome-screensaver-command --version 
 gnome-screensaver --version 
 gnome-shell --version 
+gpg --allow-secret-key-import --import ~/secring.gpg 
+gpg --import ~/pubring.gpg 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
@@ -943,6 +945,7 @@ rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rmdir * 
 rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rm file 
+rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 ruby -v 
 rvm gemset empty project_name # gems delete uninstall 
