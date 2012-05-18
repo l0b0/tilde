@@ -570,6 +570,7 @@ make configure # dev
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
+make release # dev 
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
