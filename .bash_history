@@ -847,6 +847,7 @@ mkgithub --help
 mogrify -crop 2316x1303+0+0 *.jpg 
 mogrify -format jpg *.CR2 
 mount 
+mount-image *.iso 
 mount -n -o remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -b 256 music mp3 
@@ -1303,6 +1304,7 @@ udevadm info --export-db
 ulimit -a 
 ulimit -c unlimited 
 umask 
+umount-image *.iso 
 uname -a 
 uname -m 
 unetbootin 
