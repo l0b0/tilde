@@ -372,6 +372,7 @@ git help remote
 git help stash 
 git help submodule 
 git help svn 
+git help tag 
 git init 
 gitk --all .& # gui 
 git log 
@@ -386,6 +387,7 @@ git pull
 git pull origin master 
 git push 
 git push --force 
+git push --tags 
 git push -u origin master 
 git rebase --abort 
 git rebase --continue 
@@ -420,6 +422,7 @@ git svn help
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
 git svn status 
+git tag --delete name 
 git --version 
 glc-capture -o recording.glc minecraft 
 glc-play recording.glc 
