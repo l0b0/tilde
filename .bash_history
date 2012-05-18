@@ -701,6 +701,7 @@ man script # help
 man sed # help 
 man seq # help 
 man setxkbmap # help 
+man sha1sum # help 
 man sh # help 
 man showkey # help 
 man shuf # help 
@@ -997,6 +998,7 @@ setxkbmap -option compose:caps # keyboard
 setxkbmap -print # keyboard settings 
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
+sha1sum --check sha1sums.txt # verify 
 sha1sum file 
 shopt nullglob # option get 
 shopt # options 
