@@ -5,6 +5,7 @@ alias ls
 aplay -L # audio 
 apport-bug package # report 
 apport-bug -w # report window 
+apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
