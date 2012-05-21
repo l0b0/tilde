@@ -504,6 +504,7 @@ ip link show
 ip link show up 
 ip route 
 ipython 
+irb # interactive ruby shell 
 jail 
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
