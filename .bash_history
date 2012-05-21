@@ -42,6 +42,7 @@ bundle help # rails
 bundle init # rails 
 bundle install --binstubs=./bundler_stubs # rails 
 bundle install # rails 
+bundle package 
 bundle update # rails 
 cap deploy:check # rails 
 cap deploy:login 
