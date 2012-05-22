@@ -712,6 +712,7 @@ man shunit2 # help
 man signal # help 
 man sleep # help 
 man snmpd # help 
+man snmptranslate # help 
 man snmpwalk # help 
 man sort # help 
 man ssh-agent # help 
@@ -1018,6 +1019,8 @@ shortest < ~/.bash_history
 showkey -a # ascii keyboard scancode 
 sleep 1m 
 sloccount . 
+snmptranslate -Of .1.3.6.1.2.1.1 # OID 
+snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
