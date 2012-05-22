@@ -1160,6 +1160,7 @@ sudo apt-get install sbcl
 sudo apt-get install screen 
 sudo apt-get install shunit2 # test bash shell 
 sudo apt-get install snmpd 
+sudo apt-get install snmp-mibs-downloader 
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
@@ -1202,6 +1203,7 @@ sudo dmidecode
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # Ubuntu distro 
+sudo download-mibs 
 sudo dpkg-reconfigure ca-certificates 
 sudo editor /etc/apt/sources.list 
 sudo editor /etc/default/keyboard 
@@ -1232,6 +1234,7 @@ sudo pip uninstall vcard
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
+sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
 sudo shutdown -r now 
