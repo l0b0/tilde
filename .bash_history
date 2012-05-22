@@ -711,6 +711,7 @@ man shuf # help
 man shunit2 # help 
 man signal # help 
 man sleep # help 
+man snmpd # help 
 man sort # help 
 man ssh-agent # help 
 man ssh_config # help 
@@ -988,6 +989,7 @@ sed -e '9d' file # delete line
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
  sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+service snmpd status 
 set +o noclobber 
 set -o nounset 
 set +o nounset 
@@ -1157,6 +1159,7 @@ sudo apt-get install ruby-dev
 sudo apt-get install sbcl 
 sudo apt-get install screen 
 sudo apt-get install shunit2 # test bash shell 
+sudo apt-get install snmpd 
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
