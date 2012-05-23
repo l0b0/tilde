@@ -1,4 +1,5 @@
-Some of these may be generally useful, while some are purely for personal functionality.
+Home directory scripts and configuration
+========================================
 
 Install
 -------
