@@ -1,9 +1,11 @@
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
+alias ls 
 aplay -L # audio 
 apport-bug package # report 
 apport-bug -w # report window 
+apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
 apropos -e mv # exact help man 
@@ -23,6 +25,7 @@ aticonfig --initial=check
 autoconf # compile 
 autoreconf --install # compile 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
+bash -n ~/.bash_history # verify syntax 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
@@ -40,6 +43,7 @@ bundle help # rails
 bundle init # rails 
 bundle install --binstubs=./bundler_stubs # rails 
 bundle install # rails 
+bundle package 
 bundle update # rails 
 cap deploy:check # rails 
 cap deploy:login 
@@ -106,7 +110,7 @@ cd ~/dev/trim/ # project
 cd ~/dev/txt2cloud/ # project 
 cd ~/dev/unrarr/ # project compress 
 cd ~/dev/vcard2mutt/ # project 
-cd ~/dev/vcard-module/ # project 
+cd ~/dev/vcard/ # project 
 cd ~/dev/worktime/ # project 
 cd ~/dev/xterm-color-count/ # project 
 cd /home/$USER/ 
@@ -182,6 +186,7 @@ dot -O -Tsvg *.dot # graphics
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
+dpkg --get-selections | grep -v deinstall | cut -f 1 # installed packages 
 dpkg -s bash # package status 
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # postgresql 
@@ -302,6 +307,7 @@ gem server
 git 
 git add . 
 git add .gitignore 
+git add --interactive 
 git add LICENSE 
 git add Makefile 
 git add -p 
@@ -369,6 +375,7 @@ git help remote
 git help stash 
 git help submodule 
 git help svn 
+git help tag 
 git init 
 gitk --all .& # gui 
 git log 
@@ -383,6 +390,7 @@ git pull
 git pull origin master 
 git push 
 git push --force 
+git push --tags 
 git push -u origin master 
 git rebase --abort 
 git rebase --continue 
@@ -417,6 +425,7 @@ git svn help
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
 git svn status 
+git tag --delete name 
 git --version 
 glc-capture -o recording.glc minecraft 
 glc-play recording.glc 
@@ -430,6 +439,8 @@ gnome-screensaver-command --lock
 gnome-screensaver-command --version 
 gnome-screensaver --version 
 gnome-shell --version 
+gpg --allow-secret-key-import --import ~/secring.gpg 
+gpg --import ~/pubring.gpg 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
@@ -495,6 +506,7 @@ ip link show
 ip link show up 
 ip route 
 ipython 
+irb # interactive ruby shell 
 jail 
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
@@ -565,6 +577,7 @@ make configure # dev
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
+make release # dev 
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
@@ -604,6 +617,7 @@ man date # help
 man diff # help 
 man dot # help 
 man dotty # help 
+man download-mibs # help 
 man dpkg # help 
 man env # help 
 man errno # help 
@@ -692,12 +706,16 @@ man script # help
 man sed # help 
 man seq # help 
 man setxkbmap # help 
+man sha1sum # help 
 man sh # help 
 man showkey # help 
 man shuf # help 
 man shunit2 # help 
 man signal # help 
 man sleep # help 
+man snmpd # help 
+man snmptranslate # help 
+man snmpwalk # help 
 man sort # help 
 man ssh-agent # help 
 man ssh_config # help 
@@ -831,8 +849,8 @@ mkgithub ~/dev/trim
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr # compress 
+mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
-mkgithub ~/dev/vcard-module 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
@@ -842,6 +860,7 @@ mkgithub --help
 mogrify -crop 2316x1303+0+0 *.jpg 
 mogrify -format jpg *.CR2 
 mount 
+mount-image *.iso 
 mount -n -o remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -b 256 music mp3 
@@ -929,6 +948,7 @@ rake spec # rails test
 rake --tasks # rails 
 rake test # rails 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
+rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname # remote keyboard share windows 
 read < "/path" 
 read -r var 
 read <<< "$text" 
@@ -940,6 +960,7 @@ rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rmdir * 
 rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rm file 
+rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 ruby -v 
 rvm gemset empty project_name # gems delete uninstall 
@@ -972,6 +993,7 @@ sed -e '9d' file # delete line
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
  sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+service snmpd status 
 set +o noclobber 
 set -o nounset 
 set +o nounset 
@@ -986,6 +1008,7 @@ setxkbmap -option compose:caps # keyboard
 setxkbmap -print # keyboard settings 
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
+sha1sum --check sha1sums.txt # verify 
 sha1sum file 
 shopt nullglob # option get 
 shopt # options 
@@ -998,6 +1021,10 @@ shortest < ~/.bash_history
 showkey -a # ascii keyboard scancode 
 sleep 1m 
 sloccount . 
+snmptranslate -Of .1.3.6.1.2.1.1 # OID 
+snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
+snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
+snmpwalk -v 2c -c public localhost # all 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
@@ -1140,6 +1167,8 @@ sudo apt-get install ruby-dev
 sudo apt-get install sbcl 
 sudo apt-get install screen 
 sudo apt-get install shunit2 # test bash shell 
+sudo apt-get install snmpd 
+sudo apt-get install snmp-mibs-downloader 
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
@@ -1182,6 +1211,7 @@ sudo dmidecode
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # Ubuntu distro 
+sudo download-mibs 
 sudo dpkg-reconfigure ca-certificates 
 sudo editor /etc/apt/sources.list 
 sudo editor /etc/default/keyboard 
@@ -1207,9 +1237,12 @@ sudo mount -o remount,ro /dev/sda1 # readonly restore
 sudo mount -o remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
 sudo paperconfig -p a4 
+sudo pip install --upgrade vcard 
+sudo pip uninstall vcard 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
 sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
+sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
 sudo shutdown -r now 
@@ -1271,9 +1304,13 @@ svn rm --force file
 svn rm --keep-local file 
 svn st 
 svn up 
+svn --version 
 TAGS=all guard 
 TAGS=$USER guard 
 tail -F /var/log/messages 
+tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
+tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
+tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress flatten gzip 
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
@@ -1297,6 +1334,7 @@ udevadm info --export-db
 ulimit -a 
 ulimit -c unlimited 
 umask 
+umount-image *.iso 
 uname -a 
 uname -m 
 unetbootin 
