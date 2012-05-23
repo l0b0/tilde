@@ -1,3 +1,13 @@
+PREFIX = $(HOME)
+
+DOTFILES = $(wildcard .*rc) \
+           $(wildcard .bash_*) \
+           .gitconfig \
+           .imapfilter \
+           .signatures \
+           .subversion \
+           .Xresources
+
 .PHONY: all
 all: test
 
@@ -7,6 +17,6 @@ test:
 
 .PHONY: install
 install:
-	$(CURDIR)/scripts/make-links.sh -v $(CURDIR)/.* ~
+	$(CURDIR)/scripts/make-links.sh -v $(addprefix $(CURDIR)/, $(DOTFILES)) $(PREFIX)
 
 include tools.mk
