@@ -25,6 +25,7 @@ aticonfig --initial=check
 autoconf # compile 
 autoreconf --install # compile 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
+bash -n ~/.bash_history # verify syntax 
 bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
