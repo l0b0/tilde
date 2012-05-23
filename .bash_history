@@ -616,6 +616,7 @@ man date # help
 man diff # help 
 man dot # help 
 man dotty # help 
+man download-mibs # help 
 man dpkg # help 
 man env # help 
 man errno # help 
