@@ -1008,8 +1008,8 @@ setxkbmap -option compose:caps # keyboard
 setxkbmap -print # keyboard settings 
 setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
-sha1sum --check sha1sums.txt # verify 
-sha1sum file 
+sha1sum --check sha1sums.txt # verify checksum 
+sha1sum file # checksum 
 shopt nullglob # option get 
 shopt # options 
 shopt -s dotglob # option set .* 
