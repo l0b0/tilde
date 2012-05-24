@@ -1335,8 +1335,8 @@ ulimit -a
 ulimit -c unlimited 
 umask 
 umount-image *.iso 
-uname -a 
-uname -m 
+uname --all 
+uname --machine # hardware architecture 
 unetbootin 
 unset -a array 
 unset -f function 
