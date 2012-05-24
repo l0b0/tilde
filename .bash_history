@@ -670,6 +670,7 @@ man lsof # help
 man lynx # help 
 man man # help 
 man markdown # help 
+man md5sum # help 
 man mktemp # help 
 man mount # help 
 man mp3fs # help 
@@ -707,6 +708,7 @@ man sed # help
 man seq # help 
 man setxkbmap # help 
 man sha1sum # help 
+man sha512sum # help 
 man sh # help 
 man showkey # help 
 man shuf # help 
@@ -772,6 +774,8 @@ markdown_page "${TODOS[@]}" > ~/todo.xhtml
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
+md5sum --check md5sums.txt # checksum 
+md5sum file # checksum 
 meld .& # diff 
 meld old new& # diff 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
@@ -1010,6 +1014,8 @@ setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings
 sh 
 sha1sum --check sha1sums.txt # verify checksum 
 sha1sum file # checksum 
+sha512sum --check sha512sums.txt # checksum 
+sha512sum file # checksum 
 shopt nullglob # option get 
 shopt # options 
 shopt -s dotglob # option set .* 
