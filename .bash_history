@@ -1334,6 +1334,7 @@ udevadm info --export-db
 ulimit -a 
 ulimit -c unlimited 
 umask 
+umask -S # symbolic 
 umount-image *.iso 
 uname --all 
 uname --machine # hardware architecture 
