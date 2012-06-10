@@ -82,6 +82,7 @@ cd ~/dev/cvsignore2svn/ # project
 cd ~/dev/dialogue/ # project 
 cd ~/dev/dialogue.wiki/ # project 
 cd ~/dev/difff/ # project 
+cd ~/dev/diff-ignore-moved-lines/ # project 
 cd ~/dev/export/ # project 
 cd ~/dev/fgit/ # project 
 cd ~/dev/filterous/ # project 
