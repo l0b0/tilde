@@ -729,6 +729,7 @@ man strace # help
 man strfile # help 
 man sudo # help 
 man su # help 
+man tac # help 
 man tail # help 
 man tar # help 
 man tee # help 
