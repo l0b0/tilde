@@ -1189,6 +1189,7 @@ sudo apt-get install ubuntu-restricted-extras
 sudo apt-get install uniutils 
 sudo apt-get install unrar-free # compress 
 sudo apt-get install urlview muttprint 
+sudo apt-get install varicad2012-en 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
