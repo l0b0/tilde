@@ -170,6 +170,7 @@ declare # variables functions
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
  ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
+~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df -h . # filesystem 
