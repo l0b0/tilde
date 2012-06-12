@@ -599,6 +599,7 @@ man apt-listchanges # help
 man apt-rdepends 
 man arch # help 
 man ascii # help 
+man awk # help 
 man bash # help 
 man bc # help 
 man blkid # help 
