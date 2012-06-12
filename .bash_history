@@ -614,6 +614,7 @@ man cp # help
 man createdb # help postgresql 
 man createuser # help postgresql 
 man crontab # help 
+man csplit # help 
 man curl # help 
 man cut # help 
 man date # help 
