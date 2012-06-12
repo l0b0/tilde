@@ -182,6 +182,7 @@ diff -u file{.orig,}
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
+dig example.org # dns lookup internet network 
 dirname $PWD 
 dmesg # debug os startup 
 dot -O -Tsvg *.dot # graphics 
@@ -483,9 +484,9 @@ help typeset
 help ulimit 
 help umask 
 help wait 
-host example.org  # internet network 
 hostname  # internet network 
 hostname -s  # internet network 
+host example.org # dns lookup internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
@@ -622,6 +623,7 @@ man curl # help
 man cut # help 
 man date # help 
 man diff # help 
+man dig # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
@@ -652,6 +654,7 @@ man groups # help
 man head # help 
 man <(help2man help2man) # help 
 man hier # help 
+man host # help 
 man hostname # help 
 man hosts # help 
 man id # help 
@@ -689,6 +692,7 @@ man ncal # help
 man netstat # help 
 man nl # help 
 man node # help 
+man nslookup # help 
 man od # help 
 man paperconfig # help 
 man passwd # help 
@@ -896,6 +900,7 @@ npm config set registry http://registry.npmjs.org/
 npm install -g coffee-script # coffeescript 
 npm ls -g 
 npm -v 
+nslookup example.org # dns internet lookup network 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 passwd # password user 
 patch -p0 < patch.diff 
@@ -1387,7 +1392,7 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; f
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
-whois example.org # dns lookup 
+whois example.org # dns lookup internet network 
 who # logins users 
 wine --version 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
