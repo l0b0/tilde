@@ -484,9 +484,9 @@ help typeset
 help ulimit 
 help umask 
 help wait 
-hostname  # internet network 
-hostname -s  # internet network 
 host example.org # dns lookup internet network 
+hostname # internet network 
+hostname -s # internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
@@ -569,7 +569,7 @@ ls -lr
 ls -lt 
 ls -lt /var/log/ 
 lsmod # kernel modules 
-lsof +c 0 | grep gnome-terminal | wc -l  # count files 
+lsof +c 0 | grep gnome-terminal | wc -l # count files 
 lsof # files 
 lspci | grep -i audio 
 lsusb | grep -i cam 
