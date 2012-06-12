@@ -702,6 +702,7 @@ man puppet # help
 man rake # help 
 man rar # help compress 
 man rdesktop # help 
+man readlink # help 
 man recordmydesktop # help 
 man rename # help 
 man resize # help 
@@ -959,6 +960,7 @@ rake --tasks # rails
 rake test # rails 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname # remote keyboard share windows 
+readlink -f -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
 read <<< "$text" 
