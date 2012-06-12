@@ -513,6 +513,7 @@ ip link show up
 ip route 
 ipython 
 irb # interactive ruby shell 
+iwconfig # wireless network configuration 
 jail 
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
@@ -666,6 +667,7 @@ man interfaces # help
 man iostat # help 
 man iotop # help 
 man ip # help 
+man iwconfig # help 
 man jhead # help 
 man join # help 
 man kill # help 
