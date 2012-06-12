@@ -655,6 +655,7 @@ man hier # help
 man hostname # help 
 man hosts # help 
 man id # help 
+man ifconfig # help 
 man inotify # help 
 man inotifywait # help 
 man install # help 
