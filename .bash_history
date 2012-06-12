@@ -700,7 +700,6 @@ man proc # help
 man psql # help postgresql 
 man puppet # help 
 man rake # help 
-man rar # help compress 
 man rdesktop # help 
 man readlink # help 
 man recordmydesktop # help 
@@ -1399,3 +1398,4 @@ xscreensaver-command -version
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
+zless /usr/share/doc/rar/rar.txt.gz # help compress 
