@@ -451,6 +451,7 @@ grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pat
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
+(grep -v '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 groups 
 groups nobody 
 groups $USER 
