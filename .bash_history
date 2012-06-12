@@ -1160,6 +1160,7 @@ sudo apt-get install pep8 pychecker pyflakes pylint
 sudo apt-get install pgadmin3 
 sudo apt-get install php5-cli 
 sudo apt-get install php5-dev php-pear 
+sudo apt-get install picasa 
 sudo apt-get install pidgin 
 sudo apt-get install playonlinux 
 sudo apt-get install pngcrush 
