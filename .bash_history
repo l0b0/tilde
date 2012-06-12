@@ -287,6 +287,7 @@ find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # rem
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
+firefox README.xhtml 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
