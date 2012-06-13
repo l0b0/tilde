@@ -36,8 +36,7 @@ cmdname="$(basename -- "$0")"
 
 help_info="Try \`$cmdname --help\` for more information."
 
-warning()
-{
+warning() {
     # Output warning messages
     # Color the output red if it's an interactive terminal
     # @param $1...: Messages
@@ -50,8 +49,7 @@ warning()
     true
 }
 
-error()
-{
+error() {
     # Output error messages with optional exit code
     # @param $1...: Messages
     # @param $N: Exit code (optional)
@@ -71,8 +69,7 @@ error()
     exit ${exit_code:-$EX_UNKNOWN}
 }
 
-usage()
-{
+usage() {
     # Print documentation until the first empty line
     # @param $1: Exit code (optional)
     while IFS= read line
@@ -89,8 +86,7 @@ usage()
     done < "$0"
 }
 
-verbose_echo()
-{
+verbose_echo() {
     # @param $1: Optionally '-n' for echo to output without newline
     # @param $(1|2)...: Messages
     if [ "${verbose-}" ]
