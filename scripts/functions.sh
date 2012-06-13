@@ -5,10 +5,10 @@
 #    . functions.sh
 #
 # BUGS
-#    Email bugs to victor dot engmark at gmail dot com.
+#    https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT AND LICENSE
-#    Copyright (C) 2010 Victor Engmark
+#    Copyright (C) 2010-2012 Victor Engmark
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
