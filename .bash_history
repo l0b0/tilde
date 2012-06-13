@@ -102,6 +102,7 @@ cd ~/dev/paperless/ # project
 cd ~/dev/paperless.wiki/ # project 
 cd ~/dev/qr2scad/ # project 
 cd ~/dev/schemaspy2svg/ # project 
+cd ~/dev/shell-includes/ # project 
 cd ~/dev/shunit-ng/ # project 
 cd ~/dev/Smooth-CoffeeScript/ # project 
 cd ~/dev/subsurface/ # project 
@@ -421,6 +422,7 @@ git stash show
 git stash show --patch # diff 
 git stash show --patch stash@{1} # diff 
 git status 
+git submodule add git://github.com/l0b0/shell-includes.git 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
 git svn dcommit 
@@ -858,6 +860,7 @@ mkgithub ~/dev/rvm # ruby version manager
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
+mkgithub ~/dev/shell-includes 
 mkgithub ~/dev/shunit-ng 
 mkgithub ~/dev/SICP 
 mkgithub ~/dev/Smooth-CoffeeScript 

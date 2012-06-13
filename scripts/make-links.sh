@@ -62,7 +62,7 @@ default_excludes=('\.' '\.\.' '\.git' '\.svn')
 
 directory="$(dirname -- "$0")"
 
-. "$directory/functions.sh"
+. "$directory/../shell-includes/functions.sh"
 
 # Process parameters
 params="$(getopt -o d:e:fshv \

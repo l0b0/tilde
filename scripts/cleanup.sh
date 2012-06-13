@@ -32,7 +32,7 @@ shopt -s nullglob
 directory="$(dirname -- "$0")"
 PATH='/usr/bin:/bin'
 
-. "$directory/functions.sh"
+. "$directory/../shell-includes/functions.sh"
 
 # Process parameters
 until [ $# -eq 0 ]

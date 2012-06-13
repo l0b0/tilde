@@ -35,7 +35,7 @@
 
 directory="$(dirname -- "$(readlink -fn -- "$0")")"
 
-. "$directory/functions.sh"
+. "$directory/../shell-includes/functions.sh"
 
 start_dir_x="$(readlink -fn -- "$1"; echo x)"
 start_dir="${start_dir_x%x}"
