@@ -423,6 +423,8 @@ git stash show --patch # diff
 git stash show --patch stash@{1} # diff 
 git status 
 git submodule add git://github.com/l0b0/shell-includes.git 
+git submodule init 
+git submodule update 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
 git svn dcommit 
