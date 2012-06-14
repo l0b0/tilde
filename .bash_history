@@ -92,6 +92,7 @@ cd ~/dev/https-everywhere/ # project
 cd ~/dev/indentect/ # project 
 cd ~/dev/jail/ # project 
 cd ~/dev/lines/ # project 
+cd ~/dev/make-includes/ # project 
 cd ~/dev/make-links/ # project 
 cd ~/dev/mian/ # project 
 cd ~/dev/minecraft-scripts/ # project 
@@ -844,6 +845,7 @@ mkgithub ~/dev/jail
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/lwpb 
+mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
