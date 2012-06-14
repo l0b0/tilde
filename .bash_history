@@ -468,12 +468,14 @@ guard list
 guard show 
 gunzip example.gz 
 gzip example.txt # compress 
+help . 
 help alias 
 help builtin 
 help command 
 help declare 
 help echo 
 help enable 
+help exit 
 help help 
 help history 
 help kill 
