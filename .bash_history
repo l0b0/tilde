@@ -1113,11 +1113,6 @@ sudo apt-get install gtk-recordmydesktop
 sudo apt-get install help2man 
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install hugin 
-sudo apt-get install hunspell 
-sudo apt-get install hunspell-de-ch 
-sudo apt-get install hunspell-de-de 
-sudo apt-get install hunspell-en-us 
-sudo apt-get install hunspell-fr 
 sudo apt-get install ia32-libs 
 sudo apt-get install imagemagick 
 sudo apt-get install imagemagick-doc 
