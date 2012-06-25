@@ -1091,7 +1091,6 @@ sudo apt-get install clisp-dev
 sudo apt-get install clisp-doc 
 sudo apt-get install cloc sloccount 
 sudo apt-get install colordiff 
-sudo apt-get install curl 
 sudo apt-get install cvs 
 sudo apt-get install default-jre 
 sudo apt-get install deluge 
@@ -1099,6 +1098,7 @@ sudo apt-get install dfo
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
 sudo apt-get install esmtp 
+sudo apt-get install curl wget # web 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
@@ -1214,7 +1214,6 @@ sudo apt-get install vim
 sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
 sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
-sudo apt-get install wget 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
 sudo apt-get install x264 
