@@ -1083,8 +1083,6 @@ sudo apt-get install apt-listchanges
 sudo apt-get install apt-rdepends 
 sudo apt-get install autoconf 
 sudo apt-get install automake 
-sudo apt-get install bash 
-sudo apt-get install binutils 
 sudo apt-get install bison 
 sudo apt-get install bison-doc 
 sudo apt-get install build-essential 
