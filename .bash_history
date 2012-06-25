@@ -832,7 +832,6 @@ mkgithub ~/dev/digbuild
 mkgithub ~/dev/export 
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
-mkgithub ~/dev/generate-password 
 mkgithub ~/dev/git 
 mkgithub ~/dev/graphics 
 mkgithub ~/dev/highlight 
