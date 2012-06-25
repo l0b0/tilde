@@ -1078,11 +1078,11 @@ sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
 sudo addgroup $USER group 
 sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
-sudo apt-get install ack-grep 
-sudo apt-get install apt-listchanges 
-sudo apt-get install apt-rdepends 
-sudo apt-get install autoconf 
-sudo apt-get install automake 
+sudo apt-get install ack-grep # search 
+sudo apt-get install apt-listchanges # package 
+sudo apt-get install apt-rdepends # package 
+sudo apt-get install autoconf # dev 
+sudo apt-get install automake # dev 
 sudo apt-get install bison 
 sudo apt-get install bison-doc 
 sudo apt-get install build-essential 
@@ -1104,10 +1104,10 @@ sudo apt-get install extundelete
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
 sudo apt-get install ffmpeg 
-sudo apt-get install fortune-mod 
+sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install git-core git-doc git-gui gitk git-svn qgit 
+sudo apt-get install git-core git-doc git-gui gitk git-svn qgit # vcs 
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
