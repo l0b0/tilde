@@ -1085,7 +1085,6 @@ sudo apt-get install automake # dev
 sudo apt-get install bison 
 sudo apt-get install bison-doc 
 sudo apt-get install build-essential 
-sudo apt-get install chromium-browser 
 sudo apt-get install clisp 
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
@@ -1096,6 +1095,7 @@ sudo apt-get install dfo
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
 sudo apt-get install esmtp 
+sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install curl wget # web 
 sudo apt-get install extundelete 
@@ -1146,7 +1146,6 @@ sudo apt-get install linux-doc
 sudo apt-get install linux-headers-generic 
 sudo apt-get install linux-image-generic 
 sudo apt-get install linux-source 
-sudo apt-get install lynx-cur 
 sudo apt-get install lyx 
 sudo apt-get install manpages-posix-dev # help posix 
 sudo apt-get install markdown 
