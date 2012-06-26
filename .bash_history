@@ -597,6 +597,7 @@ make release # dev
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
+make variable-SHELL # dev 
 man 1p mv # posix help 
 man 5 crontab # help 
 man 5 passwd # help password 
