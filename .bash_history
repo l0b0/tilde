@@ -1090,14 +1090,13 @@ sudo apt-get install clisp
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
 sudo apt-get install cloc sloccount 
-sudo apt-get install colordiff 
-sudo apt-get install cvs 
 sudo apt-get install default-jre 
 sudo apt-get install deluge 
 sudo apt-get install dfo 
 sudo apt-get install enigmail 
 sudo apt-get install enscript 
 sudo apt-get install esmtp 
+sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install curl wget # web 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot 
@@ -1106,7 +1105,6 @@ sudo apt-get install ffmpeg
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install git-core git-doc git-gui gitk git-svn qgit # vcs 
 sudo apt-get install graphviz 
 sudo apt-get install graphviz-doc 
 sudo apt-get install gtk-recordmydesktop 
@@ -1152,7 +1150,6 @@ sudo apt-get install lynx-cur
 sudo apt-get install lyx 
 sudo apt-get install manpages-posix-dev # help posix 
 sudo apt-get install markdown 
-sudo apt-get install meld 
 sudo apt-get install mencoder 
 sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
@@ -1198,7 +1195,6 @@ sudo apt-get install snmp-mibs-downloader
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
-sudo apt-get install subversion 
 sudo apt-get install sun-java6-fonts 
 sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
