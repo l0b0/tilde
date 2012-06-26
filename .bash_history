@@ -1103,7 +1103,7 @@ sudo apt-get install help2man # convert
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
-sudo apt-get install ipython 
+sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev
 sudo apt-get install kernel-package 
 sudo apt-get install libreadline6 
 sudo apt-get install jedit # editor 
@@ -1122,14 +1122,6 @@ sudo apt-get install openssh-server
 sudo apt-get install pgadmin3 # dev postgresql 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install openssl 
-sudo apt-get install pep8 pychecker pyflakes pylint 
-sudo apt-get install python-dev 
-sudo apt-get install python-doc 
-sudo apt-get install python-lxml 
-sudo apt-get install python-matplotlib 
-sudo apt-get install python-pip 
-sudo apt-get install python-profiler 
-sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
