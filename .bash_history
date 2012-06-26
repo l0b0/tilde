@@ -1121,8 +1121,6 @@ sudo apt-get install nethack-qt # game
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install mit-scheme 
 sudo apt-get install mp3fs 
-sudo apt-get install ntp 
-sudo apt-get install ntp-doc 
 sudo apt-get install nvidia-current 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
