@@ -1128,7 +1128,6 @@ sudo apt-get install rsync # filesystem
 sudo apt-get install --reinstall package 
 sudo apt-get install strfile 
 sudo apt-get install unrar-free # compress 
-sudo apt-get purge bash 
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
@@ -1143,6 +1142,7 @@ sudo apt-get install vlc vlc-plugin-pulse # video audio
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
 sudo apt-get install xournal # editor pdf 
+sudo apt-get purge package 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
