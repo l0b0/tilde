@@ -1106,7 +1106,6 @@ sudo apt-get install inotify-tools # shell
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev
 sudo apt-get install kernel-package 
-sudo apt-get install libreadline6 
 sudo apt-get install jedit # editor 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
