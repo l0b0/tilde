@@ -1091,13 +1091,12 @@ sudo apt-get install clisp-doc
 sudo apt-get install cloc sloccount 
 sudo apt-get install deluge 
 sudo apt-get install dfo 
-sudo apt-get install enigmail 
 sudo apt-get install enscript 
-sudo apt-get install esmtp 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
+sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
@@ -1111,7 +1110,6 @@ sudo apt-get install help2man
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install hugin 
 sudo apt-get install ia32-libs 
-sudo apt-get install imapfilter 
 sudo apt-get install inotify-tools 
 sudo apt-get install install 
 sudo apt-get install iotop 
@@ -1154,7 +1152,6 @@ sudo apt-get install nfs-common
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
 sudo apt-get install nvidia-current 
-sudo apt-get install offlineimap 
 sudo apt-get install openscad 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
@@ -1193,7 +1190,6 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree
 sudo apt-get install ubuntu-restricted-extras 
 sudo apt-get install uniutils 
 sudo apt-get install unrar-free # compress 
-sudo apt-get install urlview muttprint 
 sudo apt-get install varicad2012-en 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
