@@ -1126,8 +1126,6 @@ sudo apt-get install playonlinux # games
 sudo apt-get install rdesktop # internet 
 sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
-sudo apt-get install sqlite3 
-sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install unrar-free # compress 
@@ -1136,6 +1134,7 @@ sudo apt-get purge bash
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
+sudo apt-get install sqlite3 sqlite3-doc # database 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
