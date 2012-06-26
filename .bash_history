@@ -1106,7 +1106,6 @@ sudo apt-get install hplip-gui # printer
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
 sudo apt-get install hugin 
-sudo apt-get install install 
 sudo apt-get install ipython 
 sudo apt-get install kernel-package 
 sudo apt-get install libreadline6 
