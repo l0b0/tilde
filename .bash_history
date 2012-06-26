@@ -1129,7 +1129,6 @@ sudo apt-get install --reinstall package
 sudo apt-get install strfile 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install unrar-free # compress 
-sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
 sudo apt-get purge bash 
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
@@ -1141,6 +1140,7 @@ sudo apt-get install ubuntu-restricted-extras # audio video codec
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install vim vim-rails # editor 
+sudo apt-get install vlc vlc-plugin-pulse # video audio 
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
 sudo apt-get install xournal # editor pdf 
