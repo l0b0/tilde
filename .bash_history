@@ -1105,7 +1105,6 @@ sudo apt-get install hplip-gui # printer
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
-sudo apt-get install kernel-package 
 sudo apt-get install jedit # editor 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
@@ -1127,7 +1126,6 @@ sudo apt-get install rdesktop # internet
 sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
 sudo apt-get install strfile 
-sudo apt-get install sysv-rc-conf 
 sudo apt-get install unrar-free # compress 
 sudo apt-get purge bash 
 sudo apt-get install screen # virtual terminal 
