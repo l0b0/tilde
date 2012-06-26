@@ -1156,10 +1156,7 @@ sudo apt-get install vim-rails
 sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
-sudo apt-get install xclip 
-sudo apt-get install xscreensaver 
 sudo apt-get purge bash 
-sudo apt-get purge overlay-scrollbar 
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install tofrodos # convert newline 
