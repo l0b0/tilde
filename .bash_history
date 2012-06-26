@@ -1080,14 +1080,10 @@ sudo apt-get dist-upgrade
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
-sudo apt-get install autoconf # dev 
-sudo apt-get install automake # dev 
-sudo apt-get install bison 
-sudo apt-get install bison-doc 
-sudo apt-get install build-essential 
 sudo apt-get install clisp 
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
+sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source make make-doc manpages-posix-dev minicom ncurses-dev xdotool zlib1g-dev # linux dev 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
@@ -1102,7 +1098,6 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install feh # graphics viewer 
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
-sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk picasa pngcrush shotwell # graphics 2d 
 sudo apt-get install gtk-recordmydesktop # video 
@@ -1111,22 +1106,10 @@ sudo apt-get install hplip-gui # printer
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
 sudo apt-get install hugin 
-sudo apt-get install ia32-libs 
 sudo apt-get install install 
 sudo apt-get install ipython 
 sudo apt-get install kernel-package 
-sudo apt-get install libc6-dev 
-sudo apt-get install libgconf2-dev 
-sudo apt-get install libglade2-dev 
-sudo apt-get install libmysql-java 
-sudo apt-get install libncurses5-dev 
-sudo apt-get install libpg-java 
 sudo apt-get install libreadline6 
-sudo apt-get install libreadline6-dev 
-sudo apt-get install libsqlite3-dev 
-sudo apt-get install libssl-dev 
-sudo apt-get install libtiff-tools 
-sudo apt-get install libtool 
 sudo apt-get install jedit # editor 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
@@ -1136,20 +1119,8 @@ sudo apt-get install mencoder # video
 sudo apt-get install mp3fs # convert 
 sudo apt-get install nethack-qt # game 
 sudo apt-get install nfs-common # filesystem 
-sudo apt-get install libxml2-dev 
-sudo apt-get install libxml-simple-perl 
-sudo apt-get install libxslt1-dev 
-sudo apt-get install libxslt-dev 
-sudo apt-get install libyaml-dev 
-sudo apt-get install linux-doc 
-sudo apt-get install linux-headers-generic 
-sudo apt-get install linux-image-generic 
-sudo apt-get install linux-source 
-sudo apt-get install manpages-posix-dev # help posix 
-sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
 sudo apt-get install mp3fs 
-sudo apt-get install ncurses-dev 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
 sudo apt-get install nvidia-current 
@@ -1192,9 +1163,7 @@ sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio
 sudo apt-get install wine 
 sudo apt-get install winetricks 
 sudo apt-get install xclip 
-sudo apt-get install xdotool 
 sudo apt-get install xscreensaver 
-sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get purge overlay-scrollbar 
 sudo apt-get install screen # virtual terminal 
