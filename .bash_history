@@ -1089,7 +1089,6 @@ sudo apt-get install clisp
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
 sudo apt-get install cloc sloccount 
-sudo apt-get install default-jre 
 sudo apt-get install deluge 
 sudo apt-get install dfo 
 sudo apt-get install enigmail 
@@ -1098,6 +1097,7 @@ sudo apt-get install esmtp
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install curl wget # web 
+sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot 
 sudo apt-get install feh 
@@ -1186,8 +1186,6 @@ sudo apt-get install snmp-mibs-downloader
 sudo apt-get install sqlite3 
 sudo apt-get install sqlite3-doc 
 sudo apt-get install strfile 
-sudo apt-get install sun-java6-fonts 
-sudo apt-get install sun-java6-jre 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install tkmib 
 sudo apt-get install tofrodos 
