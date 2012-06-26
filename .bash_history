@@ -1141,7 +1141,6 @@ sudo apt-get install rar # compress
 sudo apt-get install rdesktop # internet 
 sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
-sudo apt-get install ruby-dev 
 sudo apt-get install sbcl 
 sudo apt-get install snmpd 
 sudo apt-get install snmp-mibs-downloader 
