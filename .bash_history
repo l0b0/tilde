@@ -691,6 +691,7 @@ man logger # help
 man ls # help 
 man lsof # help 
 man lynx # help 
+man make # help 
 man man # help 
 man markdown # help 
 man md5sum # help 
