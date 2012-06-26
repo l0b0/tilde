@@ -83,6 +83,7 @@ cd ~/dev/dialogue/ # project
 cd ~/dev/dialogue.wiki/ # project 
 cd ~/dev/difff/ # project 
 cd ~/dev/diff-ignore-moved-lines/ # project 
+cd ~/dev/duplicates/ # project 
 cd ~/dev/export/ # project 
 cd ~/dev/fgit/ # project 
 cd ~/dev/filterous/ # project 
@@ -829,6 +830,7 @@ mkgithub ~/dev/dialogue.wiki
 mkgithub ~/dev/difff 
 mkgithub ~/dev/diff-ignore-moved-lines 
 mkgithub ~/dev/digbuild 
+mkgithub ~/dev/duplicates 
 mkgithub ~/dev/export 
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
