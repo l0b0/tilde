@@ -1088,35 +1088,33 @@ sudo apt-get install build-essential
 sudo apt-get install clisp 
 sudo apt-get install clisp-dev 
 sudo apt-get install clisp-doc 
-sudo apt-get install cloc sloccount 
-sudo apt-get install deluge 
-sudo apt-get install dfo 
-sudo apt-get install enscript 
 sudo apt-get install chromium-browser lynx-cur # web 
+sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
+sudo apt-get install deluge # torrent 
+sudo apt-get install dfo # Flickr 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
+sudo apt-get install enscript # convert postscript 
 sudo apt-get install extundelete 
-sudo apt-get install fakeroot 
-sudo apt-get install feh 
-sudo apt-get install ffmpeg 
+sudo apt-get install fakeroot # chroot 
+sudo apt-get install feh # graphics viewer 
+sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk picasa pngcrush shotwell # graphics 2d 
-sudo apt-get install gtk-recordmydesktop 
-sudo apt-get install help2man 
+sudo apt-get install gtk-recordmydesktop # video 
+sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
+sudo apt-get install inotify-tools # shell 
+sudo apt-get install iotop # storage 
 sudo apt-get install hugin 
 sudo apt-get install ia32-libs 
-sudo apt-get install inotify-tools 
 sudo apt-get install install 
-sudo apt-get install iotop 
 sudo apt-get install ipython 
-sudo apt-get install jedit 
 sudo apt-get install kernel-package 
-sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
 sudo apt-get install libgconf2-dev 
 sudo apt-get install libglade2-dev 
@@ -1129,7 +1127,15 @@ sudo apt-get install libsqlite3-dev
 sudo apt-get install libssl-dev 
 sudo apt-get install libtiff-tools 
 sudo apt-get install libtool 
+sudo apt-get install jedit # editor 
+sudo apt-get install lastfm # music web 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
+sudo apt-get install lyx # latex 
+sudo apt-get install markdown # convert 
+sudo apt-get install mencoder # video 
+sudo apt-get install mp3fs # convert 
+sudo apt-get install nethack-qt # game 
+sudo apt-get install nfs-common # filesystem 
 sudo apt-get install libxml2-dev 
 sudo apt-get install libxml-simple-perl 
 sudo apt-get install libxslt1-dev 
@@ -1139,28 +1145,21 @@ sudo apt-get install linux-doc
 sudo apt-get install linux-headers-generic 
 sudo apt-get install linux-image-generic 
 sudo apt-get install linux-source 
-sudo apt-get install lyx 
 sudo apt-get install manpages-posix-dev # help posix 
-sudo apt-get install markdown 
-sudo apt-get install mencoder 
 sudo apt-get install minicom 
 sudo apt-get install mit-scheme 
 sudo apt-get install mp3fs 
 sudo apt-get install ncurses-dev 
-sudo apt-get install nethack-qt 
-sudo apt-get install nfs-common 
 sudo apt-get install ntp 
 sudo apt-get install ntp-doc 
 sudo apt-get install nvidia-current 
-sudo apt-get install openscad 
+sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
+sudo apt-get install pgadmin3 # dev postgresql 
 sudo apt-get install openssl 
 sudo apt-get install pep8 pychecker pyflakes pylint 
-sudo apt-get install pgadmin3 
 sudo apt-get install php5-cli 
 sudo apt-get install php5-dev php-pear 
-sudo apt-get install pidgin 
-sudo apt-get install playonlinux 
 sudo apt-get install puppetmaster 
 sudo apt-get install python-dev 
 sudo apt-get install python-doc 
@@ -1170,14 +1169,14 @@ sudo apt-get install python-pip
 sudo apt-get install python-profiler 
 sudo apt-get install python-pydot 
 sudo apt-get install python-setuptools 
+sudo apt-get install pidgin # im 
+sudo apt-get install playonlinux # games 
 sudo apt-get install rar # compress 
-sudo apt-get install rdesktop 
+sudo apt-get install rdesktop # internet 
+sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
-sudo apt-get install rsync 
 sudo apt-get install ruby-dev 
 sudo apt-get install sbcl 
-sudo apt-get install screen 
-sudo apt-get install shunit2 # test bash shell 
 sudo apt-get install snmpd 
 sudo apt-get install snmp-mibs-downloader 
 sudo apt-get install sqlite3 
@@ -1185,26 +1184,28 @@ sudo apt-get install sqlite3-doc
 sudo apt-get install strfile 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install tkmib 
-sudo apt-get install tofrodos 
-sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
-sudo apt-get install ubuntu-restricted-extras 
-sudo apt-get install uniutils 
 sudo apt-get install unrar-free # compress 
-sudo apt-get install varicad2012-en 
 sudo apt-get install vim 
 sudo apt-get install vim-puppet 
 sudo apt-get install vim-rails 
 sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
 sudo apt-get install wine 
 sudo apt-get install winetricks 
-sudo apt-get install x264 
 sudo apt-get install xclip 
 sudo apt-get install xdotool 
-sudo apt-get install xournal 
 sudo apt-get install xscreensaver 
 sudo apt-get install zlib1g-dev 
 sudo apt-get purge bash 
 sudo apt-get purge overlay-scrollbar 
+sudo apt-get install screen # virtual terminal 
+sudo apt-get install shunit2 # test bash shell zsh 
+sudo apt-get install tofrodos # convert newline 
+sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
+sudo apt-get install ubuntu-restricted-extras # audio video codec 
+sudo apt-get install uniutils # unicode 
+sudo apt-get install varicad2012-en # cad graphics 3d 
+sudo apt-get install x264 # video codec 
+sudo apt-get install xournal # editor pdf 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
