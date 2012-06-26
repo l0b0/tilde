@@ -1105,23 +1105,18 @@ sudo apt-get install ffmpeg
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gcc 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install graphviz 
-sudo apt-get install graphviz-doc 
+sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk picasa pngcrush shotwell # graphics 2d 
 sudo apt-get install gtk-recordmydesktop 
 sudo apt-get install help2man 
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install hugin 
 sudo apt-get install ia32-libs 
-sudo apt-get install imagemagick 
-sudo apt-get install imagemagick-doc 
 sudo apt-get install imapfilter 
-sudo apt-get install inkscape 
 sudo apt-get install inotify-tools 
 sudo apt-get install install 
 sudo apt-get install iotop 
 sudo apt-get install ipython 
 sudo apt-get install jedit 
-sudo apt-get install jhead 
 sudo apt-get install kernel-package 
 sudo apt-get install lastfm 
 sudo apt-get install libc6-dev 
@@ -1163,15 +1158,12 @@ sudo apt-get install offlineimap
 sudo apt-get install openscad 
 sudo apt-get install openssh-server 
 sudo apt-get install openssl 
-sudo apt-get install pdftk 
 sudo apt-get install pep8 pychecker pyflakes pylint 
 sudo apt-get install pgadmin3 
 sudo apt-get install php5-cli 
 sudo apt-get install php5-dev php-pear 
-sudo apt-get install picasa 
 sudo apt-get install pidgin 
 sudo apt-get install playonlinux 
-sudo apt-get install pngcrush 
 sudo apt-get install puppetmaster 
 sudo apt-get install python-dev 
 sudo apt-get install python-doc 
