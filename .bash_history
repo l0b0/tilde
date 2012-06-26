@@ -1125,10 +1125,9 @@ sudo apt-get install nvidia-current
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install pgadmin3 # dev postgresql 
+sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install openssl 
 sudo apt-get install pep8 pychecker pyflakes pylint 
-sudo apt-get install php5-cli 
-sudo apt-get install php5-dev php-pear 
 sudo apt-get install puppetmaster 
 sudo apt-get install python-dev 
 sudo apt-get install python-doc 
