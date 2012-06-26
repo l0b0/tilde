@@ -1131,7 +1131,6 @@ sudo apt-get install sqlite3-doc
 sudo apt-get install strfile 
 sudo apt-get install sysv-rc-conf 
 sudo apt-get install unrar-free # compress 
-sudo apt-get install vim-puppet 
 sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
 sudo apt-get purge bash 
 sudo apt-get install screen # virtual terminal 
