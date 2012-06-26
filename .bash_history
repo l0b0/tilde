@@ -1117,7 +1117,6 @@ sudo apt-get install mp3fs # convert
 sudo apt-get install nethack-qt # game 
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install mp3fs 
-sudo apt-get install nvidia-current 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install pgadmin3 # dev postgresql 
