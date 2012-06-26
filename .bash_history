@@ -1080,7 +1080,7 @@ sudo apt-get dist-upgrade
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
-sudo apt-get install audacity # audio editor
+sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
 sudo apt-get install chromium-browser lynx-cur # web 
@@ -1104,7 +1104,7 @@ sudo apt-get install help2man # convert
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
-sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev
+sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
 sudo apt-get install kernel-package 
 sudo apt-get install jedit # editor 
 sudo apt-get install lastfm # music web 
