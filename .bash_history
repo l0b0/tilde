@@ -1128,7 +1128,6 @@ sudo apt-get install playonlinux # games
 sudo apt-get install rdesktop # internet 
 sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
-sudo apt-get install strfile 
 sudo apt-get install unrar-free # compress 
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
