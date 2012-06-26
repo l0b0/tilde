@@ -1123,7 +1123,6 @@ sudo apt-get install pgadmin3 # dev postgresql
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
-sudo apt-get install rar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install rsync # filesystem 
 sudo apt-get install --reinstall package 
