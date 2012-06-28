@@ -24,6 +24,7 @@ arch # hardware
 aticonfig --initial=check 
 autoconf # compile 
 autoreconf --install # compile 
+avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash -n ~/.bash_history # verify syntax 
 bash # shell 
@@ -1087,6 +1088,7 @@ sudo apt-get install apt-rdepends # package
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
+sudo apt-get install avconv 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
