@@ -1128,6 +1128,7 @@ sudo apt-get install pgadmin3 # dev postgresql
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
+sudo apt-get install rar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
 sudo apt-get install rsync # filesystem 
@@ -1139,7 +1140,6 @@ sudo apt-get install tofrodos # convert newline
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install uniutils # unicode 
-sudo apt-get install unrar-free # compress 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install vlc vlc-plugin-pulse # video audio 
