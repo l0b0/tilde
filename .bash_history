@@ -116,6 +116,7 @@ cd ~/dev/txt2cloud/ # project
 cd ~/dev/unrarr/ # project compress 
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard/ # project 
+cd ~/dev/vcf/ # project 
 cd ~/dev/worktime/ # project 
 cd ~/dev/xterm-color-count/ # project 
 cd /home/$USER/ 
@@ -884,6 +885,7 @@ mkgithub ~/dev/unflickr
 mkgithub ~/dev/unrarr # compress 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
+mkgithub ~/dev/vcf 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
