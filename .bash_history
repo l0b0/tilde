@@ -116,6 +116,7 @@ cd ~/dev/txt2cloud/ # project
 cd ~/dev/unrarr/ # project compress 
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard/ # project 
+cd ~/dev/vcf/ # project 
 cd ~/dev/worktime/ # project 
 cd ~/dev/xterm-color-count/ # project 
 cd /home/$USER/ 
@@ -425,6 +426,7 @@ git stash show
 git stash show --patch # diff 
 git stash show --patch stash@{1} # diff 
 git status 
+git submodule add git://github.com/l0b0/make-includes.git 
 git submodule add git://github.com/l0b0/shell-includes.git 
 git submodule init 
 git submodule update 
@@ -884,6 +886,7 @@ mkgithub ~/dev/unflickr
 mkgithub ~/dev/unrarr # compress 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
+mkgithub ~/dev/vcf 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
@@ -1126,6 +1129,7 @@ sudo apt-get install pgadmin3 # dev postgresql
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
+sudo apt-get install rar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
 sudo apt-get install rsync # filesystem 
@@ -1137,7 +1141,6 @@ sudo apt-get install tofrodos # convert newline
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install uniutils # unicode 
-sudo apt-get install unrar-free # compress 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install vlc vlc-plugin-pulse # video audio 

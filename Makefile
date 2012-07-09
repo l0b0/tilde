@@ -6,6 +6,7 @@ DOTFILES = $(wildcard .*rc) \
            .imapfilter \
            .signatures \
            .subversion \
+           .vim \
            .Xresources
 
 .PHONY: all
