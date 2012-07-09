@@ -1142,8 +1142,8 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree #
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
+sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
-sudo apt-get install vlc vlc-plugin-pulse # video audio 
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
 sudo apt-get install xournal # editor pdf 
