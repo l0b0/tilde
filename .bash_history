@@ -713,6 +713,7 @@ man od # help
 man paperconfig # help 
 man passwd # help 
 man patch # help 
+man pdftk # help 
 man perl # help 
 man perlrun # help 
 man pgrep # help 
@@ -924,6 +925,7 @@ openscad ~/dev/crumbling-beaker/beaker.scad &
 passwd # password user 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
+pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl_modules 
 perl_module_version URI 
