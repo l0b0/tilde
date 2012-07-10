@@ -731,6 +731,7 @@ man rename # help
 man resize # help 
 man rm # help 
 man route # help 
+man rsync # help 
 man scp # help 
 man script # help 
 man sed # help 
@@ -1003,6 +1004,7 @@ rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rm file 
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
+rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
 ruby -v 
 rvm gemset empty project_name # gems delete uninstall 
 rvm get stable # install ruby version manager 
