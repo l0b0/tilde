@@ -301,6 +301,7 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
+fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
 gem help rdoc # ruby 
@@ -652,6 +653,7 @@ man ffmpeg # help
 man file # help 
 man fmt # help 
 man fortune # help 
+man fusermount # help 
 man getopt # help 
 man git # help 
 man gitk # help 
@@ -698,6 +700,7 @@ man make # help
 man man # help 
 man markdown # help 
 man md5sum # help 
+man mkdir # help 
 man mktemp # help 
 man mount # help 
 man mp3fs # help 
@@ -754,6 +757,7 @@ man ssh-agent # help
 man ssh_config # help 
 man ssh-copy-id # help 
 man sshd # help 
+man sshfs # help 
 man ssh # help 
 man stat # help 
 man strace # help 
@@ -1080,6 +1084,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < test.sh 
 ssh example.org uptime 
+sshfs hostname: /media/mountpoint 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
@@ -1143,6 +1148,7 @@ sudo apt-get install screen # virtual terminal
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
 sudo apt-get install sqlite3 sqlite3-doc # database 
+sudo apt-get install sshfs 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
@@ -1160,6 +1166,7 @@ sudo blkid -o list
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
+sudo chown "$USER":"$USER" /media/mountpoint 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
@@ -1188,6 +1195,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
+sudo mkdir /media/mountpoint 
 sudo mount -a 
 sudo mount -o remount,ro /dev/sda1 # readonly restore 
 sudo mount -o remount,rw /dev/sda1 # writeable 
