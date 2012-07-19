@@ -518,8 +518,6 @@ indentect < "$(which indentect)"
 info find # help 
 info sed 
 iostat 
-iotop 
-iotop -bn 1 
 ip link show 
 ip link show up 
 ip route 
@@ -1184,6 +1182,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
+sudo iotop -bn 1 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
