@@ -1275,7 +1275,6 @@ tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress f
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
-thunderbird -profilemanager 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
