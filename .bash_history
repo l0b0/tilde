@@ -270,7 +270,7 @@ feh --fullscreen --hide-pointer * # images viewer
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
-fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit --help 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
