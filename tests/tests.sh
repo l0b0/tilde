@@ -34,7 +34,7 @@ shopt -s extglob
 
 directory="$(dirname -- "$0")"
 
-. "$directory/../scripts/functions.sh"
+. "$directory/../shell-includes/functions.sh"
 
 cd -- "$directory"
 for path in !(tests.sh)

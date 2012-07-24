@@ -1,0 +1,3 @@
+[submodule "shell-includes"]
+	path = shell-includes
+	url = git://github.com/l0b0/shell-includes.git

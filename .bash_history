@@ -24,6 +24,7 @@ arch # hardware
 aticonfig --initial=check 
 autoconf # compile 
 autoreconf --install # compile 
+avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash -n ~/.bash_history # verify syntax 
 bash # shell 
@@ -82,6 +83,8 @@ cd ~/dev/cvsignore2svn/ # project
 cd ~/dev/dialogue/ # project 
 cd ~/dev/dialogue.wiki/ # project 
 cd ~/dev/difff/ # project 
+cd ~/dev/diff-ignore-moved-lines/ # project 
+cd ~/dev/duplicates/ # project 
 cd ~/dev/export/ # project 
 cd ~/dev/fgit/ # project 
 cd ~/dev/filterous/ # project 
@@ -91,6 +94,7 @@ cd ~/dev/https-everywhere/ # project
 cd ~/dev/indentect/ # project 
 cd ~/dev/jail/ # project 
 cd ~/dev/lines/ # project 
+cd ~/dev/make-includes/ # project 
 cd ~/dev/make-links/ # project 
 cd ~/dev/mian/ # project 
 cd ~/dev/minecraft-scripts/ # project 
@@ -101,6 +105,7 @@ cd ~/dev/paperless/ # project
 cd ~/dev/paperless.wiki/ # project 
 cd ~/dev/qr2scad/ # project 
 cd ~/dev/schemaspy2svg/ # project 
+cd ~/dev/shell-includes/ # project 
 cd ~/dev/shunit-ng/ # project 
 cd ~/dev/Smooth-CoffeeScript/ # project 
 cd ~/dev/subsurface/ # project 
@@ -111,6 +116,7 @@ cd ~/dev/txt2cloud/ # project
 cd ~/dev/unrarr/ # project compress 
 cd ~/dev/vcard2mutt/ # project 
 cd ~/dev/vcard/ # project 
+cd ~/dev/vcf/ # project 
 cd ~/dev/worktime/ # project 
 cd ~/dev/xterm-color-count/ # project 
 cd /home/$USER/ 
@@ -169,6 +175,7 @@ declare # variables functions
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
  ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
+~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df -h . # filesystem 
@@ -180,6 +187,7 @@ diff -u file{.orig,}
 diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
+dig example.org # dns lookup internet network 
 dirname $PWD 
 dmesg # debug os startup 
 dot -O -Tsvg *.dot # graphics 
@@ -263,7 +271,7 @@ feh --fullscreen --hide-pointer * # images viewer
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
-fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit --help 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -285,6 +293,7 @@ find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # rem
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
+firefox README.xhtml 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
@@ -292,6 +301,7 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
+fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
 gem help rdoc # ruby 
@@ -340,6 +350,7 @@ git config -l
 GIT_CURL_VERBOSE=1 git pull # debug 
 git diff 
 git diff --color-words 
+git diff | diff-ignore-moved-lines 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
 git diff --ignore-space-change 
@@ -416,6 +427,10 @@ git stash show
 git stash show --patch # diff 
 git stash show --patch stash@{1} # diff 
 git status 
+git submodule add git://github.com/l0b0/make-includes.git 
+git submodule add git://github.com/l0b0/shell-includes.git 
+git submodule init 
+git submodule update 
 git svn clone -s -r 1:HEAD http://svn/repo 
 git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
 git svn dcommit 
@@ -441,10 +456,12 @@ gnome-screensaver --version
 gnome-shell --version 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
+grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
+(grep -v '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 groups 
 groups nobody 
 groups $USER 
@@ -457,12 +474,14 @@ guard list
 guard show 
 gunzip example.gz 
 gzip example.txt # compress 
+help . 
 help alias 
 help builtin 
 help command 
 help declare 
 help echo 
 help enable 
+help exit 
 help help 
 help history 
 help kill 
@@ -478,9 +497,9 @@ help typeset
 help ulimit 
 help umask 
 help wait 
-host example.org  # internet network 
-hostname  # internet network 
-hostname -s  # internet network 
+host example.org # dns lookup internet network 
+hostname # internet network 
+hostname -s # internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
@@ -500,13 +519,12 @@ indentect < "$(which indentect)"
 info find # help 
 info sed 
 iostat 
-iotop 
-iotop -bn 1 
 ip link show 
 ip link show up 
 ip route 
 ipython 
 irb # interactive ruby shell 
+iwconfig # wireless network configuration 
 jail 
 jail -d /var/jail/ 
 jail -d /var/jail/ -u $USER 
@@ -562,7 +580,7 @@ ls -lr
 ls -lt 
 ls -lt /var/log/ 
 lsmod # kernel modules 
-lsof +c 0 | grep gnome-terminal | wc -l  # count files 
+lsof +c 0 | grep gnome-terminal | wc -l # count files 
 lsof # files 
 lspci | grep -i audio 
 lsusb | grep -i cam 
@@ -581,6 +599,7 @@ make release # dev
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
+make variable-SHELL # dev 
 man 1p mv # posix help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -596,6 +615,7 @@ man apt-listchanges # help
 man apt-rdepends 
 man arch # help 
 man ascii # help 
+man awk # help 
 man bash # help 
 man bc # help 
 man blkid # help 
@@ -611,10 +631,12 @@ man cp # help
 man createdb # help postgresql 
 man createuser # help postgresql 
 man crontab # help 
+man csplit # help 
 man curl # help 
 man cut # help 
 man date # help 
 man diff # help 
+man dig # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
@@ -629,6 +651,7 @@ man ffmpeg # help
 man file # help 
 man fmt # help 
 man fortune # help 
+man fusermount # help 
 man getopt # help 
 man git # help 
 man gitk # help 
@@ -645,9 +668,11 @@ man groups # help
 man head # help 
 man <(help2man help2man) # help 
 man hier # help 
+man host # help 
 man hostname # help 
 man hosts # help 
 man id # help 
+man ifconfig # help 
 man inotify # help 
 man inotifywait # help 
 man install # help 
@@ -655,6 +680,7 @@ man interfaces # help
 man iostat # help 
 man iotop # help 
 man ip # help 
+man iwconfig # help 
 man jhead # help 
 man join # help 
 man kill # help 
@@ -668,9 +694,11 @@ man logger # help
 man ls # help 
 man lsof # help 
 man lynx # help 
+man make # help 
 man man # help 
 man markdown # help 
 man md5sum # help 
+man mkdir # help 
 man mktemp # help 
 man mount # help 
 man mp3fs # help 
@@ -681,10 +709,12 @@ man ncal # help
 man netstat # help 
 man nl # help 
 man node # help 
+man nslookup # help 
 man od # help 
 man paperconfig # help 
 man passwd # help 
 man patch # help 
+man pdftk # help 
 man perl # help 
 man perlrun # help 
 man pgrep # help 
@@ -695,13 +725,14 @@ man proc # help
 man psql # help postgresql 
 man puppet # help 
 man rake # help 
-man rar # help compress 
 man rdesktop # help 
+man readlink # help 
 man recordmydesktop # help 
 man rename # help 
 man resize # help 
 man rm # help 
 man route # help 
+man rsync # help 
 man scp # help 
 man script # help 
 man sed # help 
@@ -718,17 +749,20 @@ man sleep # help
 man snmpd # help 
 man snmptranslate # help 
 man snmpwalk # help 
+man software-properties-gtk # help 
 man sort # help 
 man ssh-agent # help 
 man ssh_config # help 
 man ssh-copy-id # help 
 man sshd # help 
+man sshfs # help 
 man ssh # help 
 man stat # help 
 man strace # help 
 man strfile # help 
 man sudo # help 
 man su # help 
+man tac # help 
 man tail # help 
 man tar # help 
 man tee # help 
@@ -806,10 +840,10 @@ mkgithub ~/dev/dialogue.wiki
 mkgithub ~/dev/difff 
 mkgithub ~/dev/diff-ignore-moved-lines 
 mkgithub ~/dev/digbuild 
+mkgithub ~/dev/duplicates 
 mkgithub ~/dev/export 
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
-mkgithub ~/dev/generate-password 
 mkgithub ~/dev/git 
 mkgithub ~/dev/graphics 
 mkgithub ~/dev/highlight 
@@ -822,6 +856,7 @@ mkgithub ~/dev/jail
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/lwpb 
+mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
@@ -842,6 +877,7 @@ mkgithub ~/dev/rvm # ruby version manager
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
+mkgithub ~/dev/shell-includes 
 mkgithub ~/dev/shunit-ng 
 mkgithub ~/dev/SICP 
 mkgithub ~/dev/Smooth-CoffeeScript 
@@ -855,6 +891,7 @@ mkgithub ~/dev/unflickr
 mkgithub ~/dev/unrarr # compress 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
+mkgithub ~/dev/vcf 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
@@ -887,10 +924,12 @@ npm config set registry http://registry.npmjs.org/
 npm install -g coffee-script # coffeescript 
 npm ls -g 
 npm -v 
+nslookup example.org # dns internet lookup network 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 passwd # password user 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
+pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl_modules 
 perl_module_version URI 
@@ -953,6 +992,7 @@ rake --tasks # rails
 rake test # rails 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname # remote keyboard share windows 
+readlink -f -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
 read <<< "$text" 
@@ -966,6 +1006,7 @@ rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rm file 
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
+rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
 ruby -v 
 rvm gemset empty project_name # gems delete uninstall 
 rvm get stable # install ruby version manager 
@@ -1031,6 +1072,7 @@ snmptranslate -Of .1.3.6.1.2.1.1 # OID
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
+software-properties-gtk # software sources 
  sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
@@ -1040,6 +1082,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < test.sh 
 ssh example.org uptime 
+sshfs hostname: /media/mountpoint 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
@@ -1051,165 +1094,77 @@ sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
 sudo addgroup $USER group 
 sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
-sudo apt-get install ack-grep 
-sudo apt-get install apt-listchanges 
-sudo apt-get install apt-rdepends 
-sudo apt-get install autoconf 
-sudo apt-get install automake 
-sudo apt-get install bash 
-sudo apt-get install binutils 
-sudo apt-get install bison 
-sudo apt-get install bison-doc 
-sudo apt-get install build-essential 
-sudo apt-get install chromium-browser 
-sudo apt-get install clisp 
-sudo apt-get install clisp-dev 
-sudo apt-get install clisp-doc 
-sudo apt-get install cloc sloccount 
-sudo apt-get install colordiff 
-sudo apt-get install curl 
-sudo apt-get install cvs 
-sudo apt-get install default-jre 
-sudo apt-get install deluge 
-sudo apt-get install dfo 
-sudo apt-get install enigmail 
-sudo apt-get install enscript 
-sudo apt-get install esmtp 
+sudo apt-get install ack-grep # search 
+sudo apt-get install apt-listchanges # package 
+sudo apt-get install apt-rdepends # package 
+sudo apt-get install audacity # audio editor 
+sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
+sudo apt-get install autopano-sift hugin # graphics panorama 
+sudo apt-get install chromium-browser lynx-cur # web 
+sudo apt-get install cloc sloccount # dev code 
+sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
+sudo apt-get install curl wget # web 
+sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
+sudo apt-get install deluge # torrent 
+sudo apt-get install dfo # Flickr 
+sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
+sudo apt-get install enscript # convert postscript 
 sudo apt-get install extundelete 
-sudo apt-get install fakeroot 
-sudo apt-get install feh 
-sudo apt-get install ffmpeg 
-sudo apt-get install fortune-mod 
-sudo apt-get install gcc 
+sudo apt-get install fakeroot # chroot 
+sudo apt-get install feh # graphics viewer 
+sudo apt-get install ffmpeg # video 
+sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install git-core git-doc git-gui gitk git-svn qgit 
-sudo apt-get install graphviz 
-sudo apt-get install graphviz-doc 
-sudo apt-get install gtk-recordmydesktop 
-sudo apt-get install help2man 
+sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gtk-recordmydesktop # video 
+sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install hugin 
-sudo apt-get install hunspell 
-sudo apt-get install hunspell-de-ch 
-sudo apt-get install hunspell-de-de 
-sudo apt-get install hunspell-en-us 
-sudo apt-get install hunspell-fr 
-sudo apt-get install ia32-libs 
-sudo apt-get install imagemagick 
-sudo apt-get install imagemagick-doc 
-sudo apt-get install imapfilter 
-sudo apt-get install inkscape 
-sudo apt-get install inotify-tools 
-sudo apt-get install install 
-sudo apt-get install iotop 
-sudo apt-get install ipython 
-sudo apt-get install jedit 
-sudo apt-get install jhead 
-sudo apt-get install kernel-package 
-sudo apt-get install lastfm 
-sudo apt-get install libc6-dev 
-sudo apt-get install libgconf2-dev 
-sudo apt-get install libglade2-dev 
-sudo apt-get install libmysql-java 
-sudo apt-get install libncurses5-dev 
-sudo apt-get install libpg-java 
-sudo apt-get install libreadline6 
-sudo apt-get install libreadline6-dev 
-sudo apt-get install libsqlite3-dev 
-sudo apt-get install libssl-dev 
-sudo apt-get install libtiff-tools 
-sudo apt-get install libtool 
+sudo apt-get install inotify-tools # shell 
+sudo apt-get install iotop # storage 
+sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
+sudo apt-get install jedit # editor 
+sudo apt-get install lastfm # music web 
+sudo apt-get install libav-tools # video 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
-sudo apt-get install libxml2-dev 
-sudo apt-get install libxml-simple-perl 
-sudo apt-get install libxslt1-dev 
-sudo apt-get install libxslt-dev 
-sudo apt-get install libyaml-dev 
-sudo apt-get install linux-doc 
-sudo apt-get install linux-headers-generic 
-sudo apt-get install linux-image-generic 
-sudo apt-get install linux-source 
-sudo apt-get install lynx-cur 
-sudo apt-get install lyx 
-sudo apt-get install manpages-posix-dev # help posix 
-sudo apt-get install markdown 
-sudo apt-get install meld 
-sudo apt-get install mencoder 
-sudo apt-get install minicom 
-sudo apt-get install mit-scheme 
-sudo apt-get install mp3fs 
-sudo apt-get install ncurses-dev 
-sudo apt-get install nethack-qt 
-sudo apt-get install nfs-common 
-sudo apt-get install ntp 
-sudo apt-get install ntp-doc 
-sudo apt-get install nvidia-current 
-sudo apt-get install offlineimap 
-sudo apt-get install openscad 
+sudo apt-get install lyx # latex 
+sudo apt-get install markdown # convert 
+sudo apt-get install mencoder # video 
+sudo apt-get install mp3fs # convert 
+sudo apt-get install nethack-qt # game 
+sudo apt-get install nfs-common # filesystem 
+sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
-sudo apt-get install openssl 
-sudo apt-get install pdftk 
-sudo apt-get install pep8 pychecker pyflakes pylint 
-sudo apt-get install pgadmin3 
-sudo apt-get install php5-cli 
-sudo apt-get install php5-dev php-pear 
-sudo apt-get install pidgin 
-sudo apt-get install playonlinux 
-sudo apt-get install pngcrush 
-sudo apt-get install puppetmaster 
-sudo apt-get install python-dev 
-sudo apt-get install python-doc 
-sudo apt-get install python-lxml 
-sudo apt-get install python-matplotlib 
-sudo apt-get install python-pip 
-sudo apt-get install python-profiler 
-sudo apt-get install python-pydot 
-sudo apt-get install python-setuptools 
+sudo apt-get install pgadmin3 # dev postgresql 
+sudo apt-get install php5-cli php5-dev php5-pear # php 
+sudo apt-get install pidgin # im 
+sudo apt-get install playonlinux # games 
 sudo apt-get install rar # compress 
-sudo apt-get install rdesktop 
+sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
-sudo apt-get install rsync 
-sudo apt-get install ruby-dev 
-sudo apt-get install sbcl 
-sudo apt-get install screen 
-sudo apt-get install shunit2 # test bash shell 
-sudo apt-get install snmpd 
-sudo apt-get install snmp-mibs-downloader 
-sudo apt-get install sqlite3 
-sudo apt-get install sqlite3-doc 
-sudo apt-get install strfile 
-sudo apt-get install subversion 
-sudo apt-get install sun-java6-fonts 
-sudo apt-get install sun-java6-jre 
-sudo apt-get install sysv-rc-conf 
-sudo apt-get install tkmib 
-sudo apt-get install tofrodos 
-sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree 
-sudo apt-get install ubuntu-restricted-extras 
-sudo apt-get install uniutils 
-sudo apt-get install unrar-free # compress 
-sudo apt-get install urlview muttprint 
-sudo apt-get install vim 
-sudo apt-get install vim-puppet 
-sudo apt-get install vim-rails 
-sudo apt-get install vlc vlc-plugin-pulse mozilla-plugin-vlc # video audio 
-sudo apt-get install wget 
-sudo apt-get install wine 
-sudo apt-get install winetricks 
-sudo apt-get install x264 
-sudo apt-get install xclip 
-sudo apt-get install xdotool 
-sudo apt-get install xournal 
-sudo apt-get install xscreensaver 
-sudo apt-get install zlib1g-dev 
-sudo apt-get purge bash 
-sudo apt-get purge overlay-scrollbar 
+sudo apt-get install rsync # filesystem 
+sudo apt-get install screen # virtual terminal 
+sudo apt-get install shunit2 # test bash shell zsh 
+sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
+sudo apt-get install sqlite3 sqlite3-doc # database 
+sudo apt-get install sshfs 
+sudo apt-get install tofrodos # convert newline 
+sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
+sudo apt-get install ubuntu-restricted-extras # audio video codec 
+sudo apt-get install uniutils # unicode 
+sudo apt-get install varicad2012-en # cad graphics 3d 
+sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
+sudo apt-get install vim vim-rails # editor 
+sudo apt-get install wine winetricks # windows 
+sudo apt-get install x264 # video codec 
+sudo apt-get install xournal # editor pdf 
+sudo apt-get purge package 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
+sudo chown "$USER":"$USER" /media/mountpoint 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
@@ -1229,6 +1184,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
+sudo iotop -bn 1 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
@@ -1238,6 +1194,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
+sudo mkdir /media/mountpoint 
 sudo mount -a 
 sudo mount -o remount,ro /dev/sda1 # readonly restore 
 sudo mount -o remount,rw /dev/sda1 # writeable 
@@ -1320,7 +1277,6 @@ tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress f
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
-thunderbird -profilemanager 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
@@ -1364,6 +1320,7 @@ vmware
 w 
 wait # process pid 
 watch 'svn diff' 
+wc -l -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head -1 | cut -d ' ' -f 1 # line count test 
 whatis mv # exact help man 
 which make 
 while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -mindepth 1 -print0 | shuf -n 10 -z) # random shuffle files 
@@ -1374,7 +1331,7 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; f
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
-whois example.org # dns lookup 
+whois example.org # dns lookup internet network 
 who # logins users 
 wine --version 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
@@ -1389,3 +1346,4 @@ xscreensaver-command -version
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xxd $(which xxd) | head -1 
+zless /usr/share/doc/rar/rar.txt.gz # help compress 
