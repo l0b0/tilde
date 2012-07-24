@@ -94,6 +94,7 @@ cd ~/dev/https-everywhere/ # project
 cd ~/dev/indentect/ # project 
 cd ~/dev/jail/ # project 
 cd ~/dev/lines/ # project 
+cd ~/dev/logitech-access-keyboard-bindings/ # project 
 cd ~/dev/make-includes/ # project 
 cd ~/dev/make-links/ # project 
 cd ~/dev/mian/ # project 
@@ -737,6 +738,7 @@ man scp # help
 man script # help 
 man sed # help 
 man seq # help 
+man setkeycodes # help 
 man setxkbmap # help 
 man sha1sum # help 
 man sha512sum # help 
@@ -799,6 +801,7 @@ man xargs # help
 man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
+man xev # help 
 man xinput # help 
 man xscreensaver-command # help 
 man xwininfo # help 
@@ -855,6 +858,7 @@ mkgithub ~/dev/indentect
 mkgithub ~/dev/jail 
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
+mkgithub ~/dev/logitech-access-keyboard-bindings 
 mkgithub ~/dev/lwpb 
 mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
@@ -1065,7 +1069,6 @@ shopt -s globstar # option set **
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
-showkey -a # ascii keyboard scancode 
 sleep 1m 
 sloccount . 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
@@ -1179,6 +1182,7 @@ sudo editor /etc/default/keyboard
 sudo editor /etc/fstab 
 sudo editor /etc/hosts 
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
+sudo editor /etc/rc.local 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
@@ -1208,6 +1212,7 @@ sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_or
 sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
+sudo showkey # keyboard 
 sudo shutdown -r now 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo umount mp3 
