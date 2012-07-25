@@ -93,6 +93,7 @@ cd ~/dev/https-everywhere/ # project
 cd ~/dev/indentect/ # project 
 cd ~/dev/jail/ # project 
 cd ~/dev/lines/ # project 
+cd ~/dev/logitech-access-keyboard-bindings/ # project 
 cd ~/dev/make-includes/ # project 
 cd ~/dev/make-links/ # project 
 cd ~/dev/mian/ # project 
@@ -270,7 +271,7 @@ feh --fullscreen --hide-pointer * # images viewer
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
-fgit gc -- ~/*/ ~/.*/ ~/dev/*/ 
+fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit --help 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
@@ -300,6 +301,7 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
+fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
 gem help rdoc # ruby 
@@ -517,8 +519,6 @@ indentect < "$(which indentect)"
 info find # help 
 info sed 
 iostat 
-iotop 
-iotop -bn 1 
 ip link show 
 ip link show up 
 ip route 
@@ -651,6 +651,7 @@ man ffmpeg # help
 man file # help 
 man fmt # help 
 man fortune # help 
+man fusermount # help 
 man getopt # help 
 man git # help 
 man gitk # help 
@@ -697,6 +698,7 @@ man make # help
 man man # help 
 man markdown # help 
 man md5sum # help 
+man mkdir # help 
 man mktemp # help 
 man mount # help 
 man mp3fs # help 
@@ -735,6 +737,7 @@ man scp # help
 man script # help 
 man sed # help 
 man seq # help 
+man setkeycodes # help 
 man setxkbmap # help 
 man sha1sum # help 
 man sha512sum # help 
@@ -753,6 +756,7 @@ man ssh-agent # help
 man ssh_config # help 
 man ssh-copy-id # help 
 man sshd # help 
+man sshfs # help 
 man ssh # help 
 man stat # help 
 man strace # help 
@@ -796,6 +800,7 @@ man xargs # help
 man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
+man xev # help 
 man xinput # help 
 man xscreensaver-command # help 
 man xwininfo # help 
@@ -851,6 +856,7 @@ mkgithub ~/dev/indentect
 mkgithub ~/dev/jail 
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
+mkgithub ~/dev/logitech-access-keyboard-bindings 
 mkgithub ~/dev/lwpb 
 mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
@@ -1061,7 +1067,6 @@ shopt -s globstar # option set **
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
-showkey -a # ascii keyboard scancode 
 sleep 1m 
 sloccount . 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
@@ -1078,6 +1083,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < test.sh 
 ssh example.org uptime 
+sshfs hostname: /media/mountpoint 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
@@ -1141,6 +1147,7 @@ sudo apt-get install screen # virtual terminal
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
 sudo apt-get install sqlite3 sqlite3-doc # database 
+sudo apt-get install sshfs 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
@@ -1158,6 +1165,7 @@ sudo blkid -o list
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
+sudo chown "$USER":"$USER" /media/mountpoint 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
@@ -1172,11 +1180,13 @@ sudo editor /etc/default/keyboard
 sudo editor /etc/fstab 
 sudo editor /etc/hosts 
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
+sudo editor /etc/rc.local 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
+sudo iotop -bn 1 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
@@ -1186,6 +1196,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
+sudo mkdir /media/mountpoint 
 sudo mount -a 
 sudo mount -o remount,ro /dev/sda1 # readonly restore 
 sudo mount -o remount,rw /dev/sda1 # writeable 
@@ -1199,6 +1210,7 @@ sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_or
 sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
+sudo showkey # keyboard 
 sudo shutdown -r now 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo umount mp3 
@@ -1268,7 +1280,6 @@ tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress f
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
-thunderbird -profilemanager 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
