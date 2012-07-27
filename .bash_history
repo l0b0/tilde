@@ -227,8 +227,6 @@ editor ~/.bash_aliases # shell
  editor ~/.bash_history # shell 
 editor ~/.bashrc_local # shell 
 editor ~/.bashrc # shell 
-editor ~/.config/lxsession/LXDE/autostart 
-editor ~/.config/openbox/lxde-rc.xml # config lxde keyboard shortcuts 
 editor ~/dev/fgit/fgit.sh # dev 
 editor ~/dev/indentect/indentect.sh # dev 
 editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
@@ -578,8 +576,6 @@ lsof +c 0 | grep gnome-terminal | wc -l # count files
 lsof # files 
 lspci | grep -i audio 
 lsusb | grep -i cam 
-lxkeymap # keyboard layout 
-lxpanel & # lxde 
 lyx file.lyx 
 m4 --version # compile dev 
 make 2>&1 | tee > make_compile.out~ # compile dev 
