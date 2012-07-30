@@ -1089,6 +1089,7 @@ ssh example.org
 ssh example.org < test.sh 
 ssh example.org uptime 
 sshfs hostname: /media/mountpoint 
+ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
