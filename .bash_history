@@ -512,7 +512,6 @@ ifconfig -a # internet network
 ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
-imapfilter # email 
 indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
