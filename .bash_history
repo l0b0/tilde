@@ -631,6 +631,7 @@ man date # help
 man df # help 
 man diff # help 
 man dig # help 
+man dmidecode # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
@@ -1174,6 +1175,7 @@ sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/f
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
+sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # Ubuntu distro 
