@@ -312,6 +312,7 @@ gem list --help
 gem list --local 
 gem rdoc --all 
 gem server 
+getconf -a # system configuration 
 git 
 git add . 
 git add .gitignore 
@@ -642,6 +643,7 @@ man file # help
 man fmt # help 
 man fortune # help 
 man fusermount # help 
+man getconf # help 
 man getopt # help 
 man git # help 
 man gitk # help 
