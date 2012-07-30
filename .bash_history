@@ -1118,6 +1118,7 @@ sudo apt-get install ffmpeg # video
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
