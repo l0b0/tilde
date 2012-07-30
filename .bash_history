@@ -198,6 +198,7 @@ dpkg --get-selections | grep -v deinstall | cut -f 1 # installed packages
 dpkg -s bash # package status 
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # postgresql 
+du --si --summarize . # disk size 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
 echo $COLUMNS # terminal 
@@ -642,6 +643,7 @@ man dot # help
 man dotty # help 
 man download-mibs # help 
 man dpkg # help 
+man du # help 
 man env # help 
 man errno # help 
 man expr # help 
