@@ -545,6 +545,7 @@ killall plugin-container
 kill -INT $$ # signal 
 kill -l # list signals 
 komodo & 
+kvm -hda /tmp/my.img -cdrom boot.iso -boot d # vm 
 l 
 l ~ 
 la 
@@ -688,6 +689,7 @@ man iwconfig # help
 man jhead # help 
 man join # help 
 man kill # help 
+man kvm # help 
 man ldd # help 
 man ld # help 
 man less # help 
@@ -729,6 +731,7 @@ man pod2man # help
 man proc # help 
 man psql # help postgresql 
 man puppet # help 
+man qemu # help 
 man rake # help 
 man rdesktop # help 
 man readlink # help 
@@ -972,6 +975,7 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
+qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all .& # gui 
 rails c # console 
 rails d controller sessions # delete database 
@@ -1130,6 +1134,7 @@ sudo apt-get install inotify-tools # shell
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
 sudo apt-get install jedit # editor 
+sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
