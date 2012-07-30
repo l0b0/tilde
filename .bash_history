@@ -564,6 +564,7 @@ longest < ~/.bash_history
 lpstat -v 
 ls 
 ls -1 
+lscpu # hardware architecture processor 
 ls -d /proc/[^0-9]* 
 lshw 
 ls -la 
@@ -680,6 +681,7 @@ man line # help
 man ln # help 
 man locate # help 
 man logger # help 
+man lscpu # help 
 man ls # help 
 man lsof # help 
 man lynx # help 
