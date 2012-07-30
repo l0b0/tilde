@@ -638,6 +638,7 @@ man csplit # help
 man curl # help 
 man cut # help 
 man date # help 
+man df # help 
 man diff # help 
 man dig # help 
 man dot # help 
