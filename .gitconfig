@@ -12,7 +12,9 @@
 	status = auto
 [merge]
 	conflictstyle = diff3
-	tool = meld
+	tool = mymeld
+[mergetool "mymeld"]
+	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
 [gui]
 	diffcontext = 3
 [core]

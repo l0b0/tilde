@@ -91,7 +91,6 @@ cd ~/dev/git/ # project
 cd ~/dev/graphics/ # project 
 cd ~/dev/https-everywhere/ # project 
 cd ~/dev/indentect/ # project 
-cd ~/dev/jail/ # project 
 cd ~/dev/lines/ # project 
 cd ~/dev/logitech-access-keyboard-bindings/ # project 
 cd ~/dev/make-includes/ # project 
@@ -198,6 +197,7 @@ dpkg --get-selections | grep -v deinstall | cut -f 1 # installed packages
 dpkg -s bash # package status 
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # postgresql 
+du --si --summarize . # disk size 
 echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
 echo $COLUMNS # terminal 
@@ -312,6 +312,7 @@ gem list --help
 gem list --local 
 gem rdoc --all 
 gem server 
+getconf -a # system configuration 
 git 
 git add . 
 git add .gitignore 
@@ -332,9 +333,9 @@ git checkout master
 git cherry-pick master:HEAD 
 git clean -nd # dry-run directories 
 git clean -ndx # dry-run directories 
-git clone git@github.com:l0b0/mkgithub.git 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
+git clone https://github.com/l0b0/mkgithub.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit -am "Example" 
@@ -456,6 +457,7 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
+grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
@@ -510,7 +512,6 @@ ifconfig -a # internet network
 ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
-imapfilter # email 
 indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -523,10 +524,6 @@ ip route
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
-jail 
-jail -d /var/jail/ 
-jail -d /var/jail/ -u $USER 
-jail -u $USER 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
@@ -536,6 +533,8 @@ killall process
 kill -INT $$ # signal 
 kill -l # list signals 
 komodo & 
+kvm -boot d -m 512 -cdrom archlinux-*.iso # vm 
+kvm -hda /tmp/my.img -cdrom boot.iso -boot d # vm 
 l 
 l ~ 
 la 
@@ -565,6 +564,7 @@ longest < ~/.bash_history
 lpstat -v 
 ls 
 ls -1 
+lscpu # hardware architecture processor 
 ls -d /proc/[^0-9]* 
 lshw 
 ls -la 
@@ -625,12 +625,15 @@ man csplit # help
 man curl # help 
 man cut # help 
 man date # help 
+man df # help 
 man diff # help 
 man dig # help 
+man dmidecode # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
 man dpkg # help 
+man du # help 
 man env # help 
 man errno # help 
 man expr # help 
@@ -642,6 +645,7 @@ man file # help
 man fmt # help 
 man fortune # help 
 man fusermount # help 
+man getconf # help 
 man getopt # help 
 man git # help 
 man gitk # help 
@@ -674,6 +678,7 @@ man iwconfig # help
 man jhead # help 
 man join # help 
 man kill # help 
+man kvm # help 
 man ldd # help 
 man ld # help 
 man less # help 
@@ -681,6 +686,7 @@ man line # help
 man ln # help 
 man locate # help 
 man logger # help 
+man lscpu # help 
 man ls # help 
 man lsof # help 
 man lynx # help 
@@ -714,6 +720,7 @@ man pod2man # help
 man proc # help 
 man psql # help postgresql 
 man puppet # help 
+man qemu # help 
 man rake # help 
 man rdesktop # help 
 man readlink # help 
@@ -843,7 +850,6 @@ mkgithub ~/dev/Hypervolume
 mkgithub ~/dev/img2scad 
 mkgithub ~/dev/img2vcard 
 mkgithub ~/dev/indentect 
-mkgithub ~/dev/jail 
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/logitech-access-keyboard-bindings 
@@ -957,6 +963,7 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
+qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all .& # gui 
 rails c # console 
 rails d controller sessions # delete database 
@@ -1074,6 +1081,7 @@ ssh example.org
 ssh example.org < test.sh 
 ssh example.org uptime 
 sshfs hostname: /media/mountpoint 
+ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
@@ -1089,7 +1097,7 @@ sudo apt-get install ack-grep # search
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
 sudo apt-get install audacity # audio editor 
-sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
+sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
@@ -1107,6 +1115,7 @@ sudo apt-get install ffmpeg # video
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
@@ -1114,6 +1123,7 @@ sudo apt-get install inotify-tools # shell
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
 sudo apt-get install jedit # editor 
+sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
@@ -1149,6 +1159,7 @@ sudo apt-get install wine winetricks # windows
 sudo apt-get install x264 # video codec 
 sudo apt-get install xournal # editor pdf 
 sudo apt-get purge package 
+sudo apt-get purge ubuntuone-* 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
@@ -1156,10 +1167,12 @@ sudo chown nobody "$sandbox"
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
+sudo chroot /path su -l $USER # jail 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
+sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # Ubuntu distro 
@@ -1193,6 +1206,7 @@ sudo mount -o remount,rw /dev/sda1 # writeable
 sudo nvidia-settings 
 sudo paperconfig -p a4 
 sudo pip install --upgrade vcard 
+sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
 sudo rm -rf ~/build ~/src 
