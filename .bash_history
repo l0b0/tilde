@@ -459,6 +459,7 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
+grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
