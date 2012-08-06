@@ -1208,6 +1208,7 @@ sudo mount -o remount,ro /dev/sda1 # readonly restore
 sudo mount -o remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
 sudo paperconfig -p a4 
+sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
 sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
