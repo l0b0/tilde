@@ -642,6 +642,7 @@ man dpkg # help
 man du # help 
 man env # help 
 man errno # help 
+man etherape # help 
 man expr # help 
 man extundelete # help 
 man fdisk # help 
@@ -1118,6 +1119,7 @@ sudo apt-get install deluge # torrent
 sudo apt-get install dfo # Flickr 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
+sudo apt-get install etherape # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
@@ -1196,6 +1198,7 @@ sudo editor /etc/postgresql/*/main/pg_hba.conf
 sudo editor /etc/rc.local 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
+sudo etherape # network traffic visualization 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
