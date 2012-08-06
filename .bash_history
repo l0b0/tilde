@@ -717,6 +717,7 @@ man perl # help
 man perlrun # help 
 man pgrep # help 
 man ping # help 
+man pip # help 
 man pngcrush # help 
 man pod2man # help 
 man proc # help 
@@ -941,6 +942,7 @@ pid=$! # process pid
 ping -c 4 example.org 
 ping example.org 
 pip help 
+pip help install 
 pngcrush -brute -d /target *.png 
 PREFIX=~ sudo make install 
 printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
