@@ -383,6 +383,7 @@ git help pull
 git help push 
 git help rebase 
 git help remote 
+git help show 
 git help stash 
 git help submodule 
 git help svn 
@@ -411,6 +412,7 @@ git remote add -f origin ssh://user@example.org/home/user/repo
 git remote -v show 
 git reset HEAD^ 
 git reset --soft HEAD~1 # commit undo 
+git show commit:./path > path.old 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
