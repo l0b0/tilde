@@ -1163,6 +1163,7 @@ sudo apt-get purge ubuntuone-*
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
+sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
