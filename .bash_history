@@ -559,6 +559,7 @@ less /var/log/syslog
 less /var/log/Xorg.0.log 
 /lib/udev/findkeyboards 
 ll 
+ln --symbolic -- target source 
 locale 
 locale -a 
 locate file 
