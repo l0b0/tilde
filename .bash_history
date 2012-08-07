@@ -605,7 +605,7 @@ man apt-cache # help
 man apt-get # help 
 man apt-key # help 
 man apt-listchanges # help 
-man apt-rdepends 
+man apt-rdepends # help 
 man arch # help 
 man ascii # help 
 man awk # help 
