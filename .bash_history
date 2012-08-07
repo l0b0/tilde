@@ -458,6 +458,7 @@ gnome-screensaver --version
 gnome-shell --version 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
+grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
@@ -560,6 +561,7 @@ less /var/log/syslog
 less /var/log/Xorg.0.log 
 /lib/udev/findkeyboards 
 ll 
+ln --symbolic -- target source 
 locale 
 locale -a 
 locate file 
@@ -1293,6 +1295,7 @@ tail -F /var/log/messages
 tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress flatten gzip 
+tar --gzip --list --file ~/tilde.tar.gz 
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
