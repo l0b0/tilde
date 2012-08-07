@@ -1289,6 +1289,7 @@ tail -F /var/log/messages
 tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress flatten gzip 
+tar --gzip --list --file ~/tilde.tar.gz 
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
