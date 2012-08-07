@@ -456,6 +456,7 @@ gnome-screensaver --version
 gnome-shell --version 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
+grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
