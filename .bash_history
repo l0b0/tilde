@@ -907,7 +907,7 @@ mkgithub ~/dev/xterm-color-count
 mkgithub -h 
 mkgithub --help 
 mogrify -crop 2316x1303+0+0 *.jpg 
-mogrify -format jpg *.CR2 
+mogrify -format jpg *.CR2 # convert 
 mount 
 mount-image *.iso 
 mount -n -o remount,defaults /dev/sda1 / 
