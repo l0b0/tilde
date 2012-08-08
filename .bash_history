@@ -383,6 +383,7 @@ git help pull
 git help push 
 git help rebase 
 git help remote 
+git help request-pull 
 git help show 
 git help stash 
 git help submodule 
@@ -914,7 +915,7 @@ mountpoint /home
 mp3fs -b 256 music mp3 
 mutt 
 mutt -d 5 
-mutt -H 0001-Add-diff.minimal-configuration-setting.patch 
+mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
