@@ -1171,6 +1171,7 @@ sudo apt-get install vim vim-rails # editor
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
 sudo apt-get install xournal # editor pdf 
+sudo apt-get purge 'overlay-scrollbar*' # unity 
 sudo apt-get purge package 
 sudo apt-get purge ubuntuone-* 
 sudo apt-get update 
