@@ -330,6 +330,7 @@ git bisect run ./bisect.sh
 git bisect start HEAD HEAD~10 
 git blame filename 
 git branch 
+git branch -d topic # delete local 
 git branch -r # remote 
 git branch --set-upstream master origin/master # track 
 git branch --track topic master 
