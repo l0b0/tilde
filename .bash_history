@@ -383,6 +383,7 @@ git help pull
 git help push 
 git help rebase 
 git help remote 
+git help show 
 git help stash 
 git help submodule 
 git help svn 
@@ -411,6 +412,7 @@ git remote add -f origin ssh://user@example.org/home/user/repo
 git remote -v show 
 git reset HEAD^ 
 git reset --soft HEAD~1 # commit undo 
+git show commit:./path > path.old 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
@@ -528,6 +530,7 @@ irb # interactive ruby shell
 iwconfig # wireless network configuration 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
+java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jhead -da2010:11:12/13:14:15-2005:01:01 *.jpg # adjust date time image 
 kill -0 $! # check process pid 
@@ -640,6 +643,7 @@ man dpkg # help
 man du # help 
 man env # help 
 man errno # help 
+man etherape # help 
 man expr # help 
 man extundelete # help 
 man fdisk # help 
@@ -1116,6 +1120,7 @@ sudo apt-get install deluge # torrent
 sudo apt-get install dfo # Flickr 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
+sudo apt-get install etherape # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
@@ -1194,6 +1199,7 @@ sudo editor /etc/postgresql/*/main/pg_hba.conf
 sudo editor /etc/rc.local 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
+sudo etherape # network traffic visualization 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
