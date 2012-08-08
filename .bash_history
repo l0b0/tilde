@@ -327,7 +327,7 @@ git blame filename
 git branch 
 git branch -r # remote 
 git branch --set-upstream master origin/master # track 
-git branch topic 
+git branch --track topic master 
 git checkout . 
 git checkout -b topic-svn remotes/topic # branch svn 
 git checkout master 
