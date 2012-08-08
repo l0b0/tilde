@@ -323,6 +323,11 @@ git add Makefile
 git add -p 
 git add README.markdown 
 git add tools.mk 
+git bisect bad 
+git bisect good 
+git bisect reset 
+git bisect run ./bisect.sh 
+git bisect start HEAD HEAD~10 
 git blame filename 
 git branch 
 git branch -r # remote 
@@ -366,6 +371,7 @@ git format-patch -M HEAD^
 git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui& 
 git help add 
+git help bisect 
 git help blame 
 git help branch 
 git help cherry-pick 
