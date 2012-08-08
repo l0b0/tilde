@@ -749,6 +749,7 @@ man rm # help
 man route # help 
 man rsync # help 
 man scp # help 
+man screen # help 
 man script # help 
 man sed # help 
 man seq # help 
@@ -1052,6 +1053,11 @@ schemaspy2svg --help
 scp example.org:/home/jdoe/example.txt . 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
+screen 
+screen -dRR name # resume 
+screen -dRR # resume 
+screen -ls # list 
+screen -S compile-project 
 sed -e '9d' file # delete line 
 sed -e '/^$/d' file 
 sed -e '/^[[:space:]]*$/d' file 
