@@ -1,2 +1,3 @@
+# Show session name in caption
 screen
 screen $SHELL -c 'screen -X caption always "$STY"'
