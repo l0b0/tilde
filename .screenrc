@@ -1,3 +1,8 @@
 # Show session name in caption
 screen
 screen $SHELL -c 'screen -X caption always "$STY"'
+
+# Scrollback
+# C-a [, Esc to start and stop scrollback
+# Within scrollback mode, Space to start and stop selection, C-a ] to paste
+defscrollback 50000
