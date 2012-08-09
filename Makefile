@@ -5,6 +5,7 @@ DOTFILES = $(wildcard .*rc) \
            .gitconfig \
            .imapfilter \
            .profile \
+           .screenrc \
            .signatures \
            .subversion \
            .vim \
