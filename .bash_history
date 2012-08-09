@@ -313,6 +313,7 @@ gem list --help
 gem list --local 
 gem rdoc --all 
 gem server 
+getconf ARG_MAX # arguments 
 getconf -a # system configuration 
 git 
 git add . 
