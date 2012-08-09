@@ -1,0 +1,2 @@
+screen
+screen $SHELL -c 'screen -X caption always "$STY"'
