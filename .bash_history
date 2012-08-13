@@ -722,6 +722,7 @@ man mv # help
 man nautilus # help 
 man ncal # help 
 man netstat # help 
+man nfs # help 
 man nl # help 
 man node # help 
 man nslookup # help 
