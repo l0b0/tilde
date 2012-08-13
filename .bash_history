@@ -816,6 +816,7 @@ man whatis # help
 man w # help 
 man who # help 
 man whois # help 
+man wnpp-alert # help 
 man xargs # help 
 man xclip # help 
 man xdg-desktop-menu # help 
@@ -1379,6 +1380,7 @@ while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm
 whois example.org # dns lookup internet network 
 who # logins users 
 wine --version 
+wnpp-alert # Debian packaging 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
 xev 
 xinput --list 
