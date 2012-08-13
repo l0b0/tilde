@@ -66,63 +66,9 @@ cat /proc/stat # hardware
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
-cd 
 cd - 
-cd ./ 
-cd ../ 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-cd ~/contacts/ 
-cd ~/dev/bm/ # project 
-cd ~/dev/coffeescript-jedit # project 
-cd ~/dev/count/ # project 
-cd ~/dev/cronlist/ # project 
-cd ~/dev/crumbling-beaker/ # project 
-cd ~/dev/csv2zarafa-contacts/ # project 
-cd ~/dev/cvsignore2svn/ # project 
-cd ~/dev/dialogue/ # project 
-cd ~/dev/dialogue.wiki/ # project 
-cd ~/dev/difff/ # project 
-cd ~/dev/diff-ignore-moved-lines/ # project 
-cd ~/dev/duplicates/ # project 
-cd ~/dev/export/ # project 
-cd ~/dev/fgit/ # project 
-cd ~/dev/filterous/ # project 
-cd ~/dev/git/ # project 
-cd ~/dev/graphics/ # project 
-cd ~/dev/https-everywhere/ # project 
-cd ~/dev/indentect/ # project 
-cd ~/dev/lines/ # project 
-cd ~/dev/logitech-access-keyboard-bindings/ # project 
-cd ~/dev/make-includes/ # project 
-cd ~/dev/make-links/ # project 
-cd ~/dev/mian/ # project 
-cd ~/dev/minecraft-scripts/ # project 
-cd ~/dev/mkgithub/ # project 
-cd ~/dev/mount-image/ # project 
-cd ~/dev/msort/ # project 
-cd ~/dev/paperless/ # project 
-cd ~/dev/paperless.wiki/ # project 
-cd ~/dev/qr2scad/ # project 
-cd ~/dev/schemaspy2svg/ # project 
-cd ~/dev/shell-includes/ # project 
-cd ~/dev/shunit-ng/ # project 
-cd ~/dev/Smooth-CoffeeScript/ # project 
-cd ~/dev/subsurface/ # project 
-cd ~/dev/tilde/ # project 
-cd ~/dev/tilde/scripts/ # project 
-cd ~/dev/trim/ # project 
-cd ~/dev/txt2cloud/ # project 
-cd ~/dev/unrarr/ # project compress 
-cd ~/dev/vcard2mutt/ # project 
-cd ~/dev/vcard/ # project 
-cd ~/dev/vcf/ # project 
-cd ~/dev/worktime/ # project 
-cd ~/dev/xterm-color-count/ # project 
-cd /home/$USER/ 
-cd ~/.minecraft/ # game 
 cd -- "$(mktemp -d)" 
-cd ~/personal/ 
-cd ~/settings/ 
 checkbashisms *.sh 
 chmod u+x test.sh 
 chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version manager 
