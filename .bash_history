@@ -534,7 +534,7 @@ indentect < "$(which indentect)"
 info autoconf # help 
 info automake # help 
 info find # help 
-info sed 
+info sed # help 
 iostat 
 ip link show 
 ip link show up 
