@@ -795,6 +795,7 @@ man tput # help
 man traceroute # help 
 man trash # help 
 man tr # help 
+man tty # help 
 man udevadm # help 
 man umask # help 
 man uname # help 
@@ -1330,6 +1331,7 @@ traceroute example.org
 trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
 trap # signal 
 traps="$(trap)" # signal 
+tty 
 txt2cloud 
 txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
 type -a true 
