@@ -1,4 +1,4 @@
-XTerm*VT100.geometry: 96x66
+XTerm.VT100.geometry: 96x66
 XTerm*metaSendsEscape: true
 XTerm*reverseVideo: true
 XTerm*saveLines: 32767
