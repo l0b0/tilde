@@ -698,6 +698,7 @@ man jhead # help
 man join # help 
 man kill # help 
 man kvm # help 
+man ldconfig # help 
 man ldd # help 
 man ld # help 
 man less # help 
@@ -1225,6 +1226,7 @@ sudo fdisk -l
 sudo iotop 
 sudo iotop -bn 1 
 sudo java -jar jdivelog-installer-2.16.jar 
+sudo ldconfig 
 sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
