@@ -291,9 +291,7 @@ find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -name file | exclude_vcs 
 find -version 
-firefox -new-tab ~/week.xhtml 
 firefox -profilemanager 
-firefox README.xhtml 
 firefox -safe-mode 
 for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
@@ -1391,5 +1389,6 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
+x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
 zless /usr/share/doc/rar/rar.txt.gz # help compress 
