@@ -291,6 +291,7 @@ find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -name file | exclude_vcs 
 find -version 
+firefox -new-tab ~/week.xhtml 
 firefox -profilemanager 
 firefox README.xhtml 
 firefox -safe-mode 
