@@ -1390,7 +1390,7 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
-x-www-browser /usr/share/doc/debian-policy/policy.html/index.html 
+x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
 zless /usr/share/doc/rar/rar.txt.gz # help compress 
