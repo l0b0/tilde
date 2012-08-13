@@ -262,6 +262,9 @@ env # variable
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
 eval "$traps" # signal 
+evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance 
+evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
+evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exit 
 facter # hardware os 
 facter --help 
@@ -528,6 +531,8 @@ if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation
 indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
+info autoconf # help 
+info automake # help 
 info find # help 
 info sed 
 iostat 
@@ -605,9 +610,26 @@ make test 2>&1 | tee > make_test.out~ # dev
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
+man 1 fakeroot # help 
+man 1 file # help 
+man 1 gfortran # help 
+man 1 git # help 
+man 1 gpg # help 
+man 1 imake # help 
+man 1 lintian # help 
+man 1 patch # help 
+man 1 pdebuild # help 
+man 1 perl # help 
 man 1p mv # posix help 
+man 1 ppc386 # help 
+man 1 python # help 
+man 1 quilt # help 
+man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
+man 7 debhelper # help 
+man 8 dh_make # help 
+man 8 pbuilder # help 
 man ack-grep # help 
 man add-apt-repository # help 
 man addgroup # help 
@@ -658,13 +680,11 @@ man extundelete # help
 man fdisk # help 
 man feh # help 
 man ffmpeg # help 
-man file # help 
 man fmt # help 
 man fortune # help 
 man fusermount # help 
 man getconf # help 
 man getopt # help 
-man git # help 
 man gitk # help 
 man git-svn # help 
 man gksu # help 
@@ -672,7 +692,6 @@ man gnome-screensaver-command # help
 man gnome-screensaver # help 
 man gnome-shell # help 
 man gnome-terminal # help 
-man gpg # help 
 man grep # help 
 man groupadd # help 
 man groups # help 
@@ -728,9 +747,7 @@ man nslookup # help
 man od # help 
 man paperconfig # help 
 man passwd # help 
-man patch # help 
 man pdftk # help 
-man perl # help 
 man perlrun # help 
 man pgrep # help 
 man ping # help 
@@ -1127,15 +1144,15 @@ sudo apt-get install ack-grep # search
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
 sudo apt-get install audacity # audio editor 
-sudo apt-get install autoconf autoconf-doc automake automake1.9-doc bison bison-doc build-essential devscripts gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
+sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds wormux xmoto 
+sudo apt-get install bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install curl wget # web 
-sudo apt-get install debian-policy developers-reference maint-guide # linux dev packaging 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
 sudo apt-get install dfo # Flickr 
@@ -1394,7 +1411,10 @@ xterm -version
 xwininfo -id $(xdotool selectwindow) 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
+x-www-browser /usr/share/doc/git-doc/index.html # help 
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
+zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
+zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress 
