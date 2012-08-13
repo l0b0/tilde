@@ -369,8 +369,8 @@ git rebase --interactive HEAD~20
 git rebase master 
 git remote add -f origin ssh://user@example.org/home/user/repo 
 git remote -v show # list 
-git reset HEAD^ 
 git reset --soft HEAD~1 # commit undo 
+git reset v0.1 
 git show commit:./path > path.old 
 git stash drop # delete 
 git stash && git merge origin/master && git stash pop 
