@@ -1134,7 +1134,7 @@ sudo apt-get install cloc sloccount # dev code
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install curl wget # web 
-sudo apt-get install debian-policy # linux dev packaging 
+sudo apt-get install debian-policy developers-reference maint-guide # linux dev packaging 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
 sudo apt-get install dfo # Flickr 
@@ -1391,6 +1391,8 @@ xscreensaver-command -version
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
+x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
+x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
 zless /usr/share/doc/rar/rar.txt.gz # help compress 
