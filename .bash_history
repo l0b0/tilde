@@ -804,6 +804,7 @@ man uniname # help
 man uniq # help 
 man update-alternatives # help 
 man updatedb # help 
+man uptime # help 
 man useradd # help 
 man usermod # help 
 man utf8 # help 
