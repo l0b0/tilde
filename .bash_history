@@ -360,6 +360,7 @@ git pull
 git pull origin master 
 git push 
 git push --force 
+git push origin :refs/tags/name # delete remote 
 git push --tags 
 git push -u origin master 
 git rebase --abort 
