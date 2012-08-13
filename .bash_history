@@ -455,6 +455,7 @@ git svn rebase
 git svn show-ignore >> .git/info/exclude 
 git svn status 
 git tag --delete name 
+git tag v0.1 
 git --version 
 glc-capture -o recording.glc minecraft 
 glc-play recording.glc 
