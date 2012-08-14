@@ -18,20 +18,17 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
-sum()
-{
+sum() {
     echo $(cat "${@--}") | tr -s ' ' '+' | bc
 }
 
 # Update everything
-upgrade()
-{
+upgrade() {
     sudo sh -c "apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get autoclean"
 }
 
 # Diff
-wdiffc()
-{
+wdiffc() {
     if [ -z "${2-}" ]
     then
         return 2
@@ -40,8 +37,7 @@ wdiffc()
 }
 
 # Find
-find_date_sorted()
-{
+find_date_sorted() {
     # Sorted by ISO date, ascending
     # Separated by NUL to be able to reuse in other loops
     while IFS= read -r -d '' -u 9
@@ -52,8 +48,7 @@ find_date_sorted()
     done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%TdT%TH:%TM:%TS %p\0' | sort -z)
 }
 
-quote_shell()
-{
+quote_shell() {
     # Ensure that the output is escaped so that each line corresponds to a NUL-
     # separated entry
     while IFS= read -r -d ''
@@ -63,8 +58,7 @@ quote_shell()
     done
 }
 
-substring()
-{
+substring() {
     # Extract substring with positive or negative indexes
     # @param $1: String
     # @param $2: Start (default start of string)
@@ -93,8 +87,7 @@ substring()
     printf %s "${1:$start:$length}"
 }
 
-find_grouped()
-{
+find_grouped() {
     # Outputs files (not directories) recursively, with an empty line between
     # directories.
     while [ -n "${1-}" ]
@@ -125,8 +118,7 @@ find_grouped()
     done
 }
 
-path_common()
-{
+path_common() {
     if [ -z "${2-}" ]
     then
         return 2
@@ -157,8 +149,7 @@ path_common()
     printf %s "$common_path"
 }
 
-compare_dirs()
-{
+compare_dirs() {
     # Shows which files and directories exist in one directory but not both
     if [ $# -ne 2 ]
     then
@@ -179,8 +170,7 @@ compare_dirs()
 }
 
 # Bash
-bash_timeout()
-{
+bash_timeout() {
     # Set the idle timeout before the shell will be closed automatically
     # @param $1: Timeout in <N>d<N>h<N>m<N>[s] format
     local timeout=$1
@@ -192,8 +182,7 @@ bash_timeout()
 }
 
 # Perl
-perl_module_version()
-{
+perl_module_version() {
     local version
     for module
     do
@@ -208,18 +197,15 @@ perl_module_version()
     done
 }
 
-perl_module_files()
-{
+perl_module_files() {
     perl -MFile::Find=find -MFile::Spec::Functions -Tlwe 'find { wanted => sub { print canonpath $_ if /\.pm\z/ }, no_chdir => 1 }, @INC'
 }
 
-perl_modules()
-{
+perl_modules() {
     perl -MExtUtils::Installed -e'my $inst = ExtUtils::Installed->new();print $_, $/ for $inst->modules'
 }
 
-perl_modules_test()
-{
+perl_modules_test() {
     local -i error=0
     while IFS= read -r -u 9
     do
@@ -229,20 +215,17 @@ perl_modules_test()
 }
 
 # String handling
-shortest()
-{
+shortest() {
     # Print only the (first) shortest line
     awk '(NR == 1 || length < length(line)) { line = $0 } END { print line }'
 }
 
-longest()
-{
+longest() {
     # Print only the (first) longest line
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
 
-longer()
-{
+longer() {
     # Print any lines in $2... which are more characters than $1.
     if [ $# -lt 2 ]
     then
@@ -268,37 +251,31 @@ longer()
     done
 }
 
-exclude_cvs()
-{
+exclude_cvs() {
     grep "$@" -Fve '/CVS/'
 }
 
-exclude_svn()
-{
+exclude_svn() {
     grep "$@" -Fve '/.svn/'
 }
 
-exclude_git()
-{
+exclude_git() {
     grep "$@" -Fve '/.git/'
 }
 
-exclude_vcs()
-{
+exclude_vcs() {
     exclude_cvs "$@" | exclude_svn "$@" | exclude_git "$@"
 }
 
 # GNU Make
-make_targets()
-{
+make_targets() {
     targets="$(make --print-data-base --question | grep '^[^.%][-A-Za-z0-9_]*:' | cut -d : -f 1 | sort -u)"
     longest_line="$(longest <<< "$targets")"
     columns=$(bc <<< "${COLUMNS-80} / (${#longest_line} + 1)")
     pr --omit-pagination --width=${COLUMNS-80} --columns=$columns <<< "$targets"
 }
 
-locale_value()
-{
+locale_value() {
     # Return the highest priority language variable available
     # Based on http://mywiki.wooledge.org/BashFAQ/098
     # To print which variable was used, uncomment the `echo` line
@@ -325,14 +302,12 @@ locale_value()
     printf "${!varname}"
 }
 
-schroedinger()
-{
+schroedinger() {
     # Succeed or fail randomly
     return $((RANDOM%2))
 }
 
-ltrim()
-{
+ltrim() {
     # Left-trim $IFS from stdin as a single line
     # $1: Line separator (default NUL)
     local trimmed
@@ -360,8 +335,7 @@ ltrim()
     fi
 }
 
-rtrim()
-{
+rtrim() {
     # Right-trim $IFS from stdin as a single line
     # $1: Line separator (default NUL)
     local previous last
@@ -392,15 +366,13 @@ rtrim()
     printf %s "${last%$right_whitespace}"
 }
 
-trim()
-{
+trim() {
     # Trim $IFS from individual lines
     # $1: Line separator (default NUL)
     ltrim ${1+"$@"} | rtrim ${1+"$@"}
 }
 
-trs()
-{
+trs() {
     # Translate strings
     # $1: Original string
     # $2, $4, ...: Search strings
@@ -417,8 +389,7 @@ trs()
     printf "$string"
 }
 
-zsed()
-{
+zsed() {
     # Replace within tarballs
     # $1: Replacement string
     # $2...: tar gzip files
@@ -454,8 +425,7 @@ zsed()
     return ${exit_code-0}
 }
 
-collapse()
-{
+collapse() {
     # Collapse lines based on first column
     local name old_name value
     local first=1
@@ -479,8 +449,7 @@ collapse()
     fi
 }
 
-empty_line_before_eof()
-{
+empty_line_before_eof() {
     # Insert a newline after the last line if it's not empty.
     # Note that this means that the empty file will *not* be changed (it
     # already ends with an empty line).
@@ -501,8 +470,7 @@ empty_line_before_eof()
     sed -e '$a\' "$@"
 }
 
-markdown_page()
-{
+markdown_page() {
     # Add stuff to markdown output to make it valid XHTML 1.0 Strict with
     # unambiguous encoding.
     # @param $1...: markdown input files
@@ -527,8 +495,7 @@ EOF
 EOF
 }
 
-valid_ipv4()
-{
+valid_ipv4() {
     declare -i quads=0
     while IFS= read -r quad
     do
@@ -549,8 +516,7 @@ valid_ipv4()
 
 }
 
-completions()
-{
+completions() {
     # Print autocompletions
     # Examples:
     #

@@ -60,8 +60,7 @@ WARNING_FORMAT="${WARNING_FORMAT-$(color_enabled && tput setaf 3)}"
 INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
 RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
-exit_code_prompt()
-{
+exit_code_prompt() {
     local exit_code=$?
     if [ $exit_code -ne 0 ]
     then
@@ -101,8 +100,7 @@ else
     PS1="$PS1"'\u'
 fi
 
-shell_level_prompt()
-{
+shell_level_prompt() {
     if [ ${SHLVL-0} -ne 1 ]
     then
         printf %s $BOLD_FORMAT $WARNING_FORMAT ^ $SHLVL $RESET_FORMAT
@@ -131,8 +129,7 @@ then
 fi
 
 # Subversion branch
-svn_prompt()
-{
+svn_prompt() {
     if ! type -t __svn_ps1 >/dev/null
     then
         return
