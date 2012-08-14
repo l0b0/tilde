@@ -542,6 +542,8 @@ ls -lt /var/log/
 lsmod # kernel modules 
 lsof +c 0 | grep gnome-terminal | wc -l # count files 
 lsof # files 
+lsof -i :22 # internet port network 
+lsof -i tcp # internet network 
 lspci | grep -i audio 
 lsusb | grep -i cam 
 lyx file.lyx 
