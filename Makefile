@@ -5,6 +5,7 @@ DOTFILES = $(wildcard .*rc) \
            .gitconfig \
            .imapfilter \
            .profile \
+           .quiltrc-dpkg \
            .screenrc \
            .signatures \
            .subversion \
