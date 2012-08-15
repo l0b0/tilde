@@ -248,6 +248,8 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
+fullname 
+fullname root 
 fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
@@ -636,6 +638,7 @@ man fmt # help
 man fortune # help 
 man fusermount # help 
 man getconf # help 
+man getent # help 
 man getopt # help 
 man gitk # help 
 man git-svn # help 

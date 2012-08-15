@@ -549,6 +549,12 @@ dpkg-quilt() {
     quilt --quiltrc="${HOME}/.quiltrc-dpkg" ${@+"$@"}
 }
 
+fullname() {
+    # The fifth field contains the name
+    # The first subfield contains the full name
+    getent passwd -- "${@-$USER}" | cut -d ':' -f 5 | cut -d ',' -f 1
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
