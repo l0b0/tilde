@@ -142,6 +142,7 @@ dotty graph.dot # graphics
 dot -V 
 dpkg --get-selections | grep -v deinstall | cut -f 1 # installed packages 
 dpkg -s bash # package status 
+dpkg-shlibdeps $(which bash) # binary dependency packaging 
 dpkg -S "$(which apt-get)" # package file owner search 
 dropdb -U username dbname # postgresql 
 du --si --summarize . # disk size 
@@ -625,6 +626,7 @@ man dot # help
 man dotty # help 
 man download-mibs # help 
 man dpkg # help 
+man dpkg-shlibdeps # help 
 man du # help 
 man env # help 
 man errno # help 
