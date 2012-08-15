@@ -460,6 +460,7 @@ help type
 help typeset 
 help ulimit 
 help umask 
+help until 
 help wait 
 host example.org # dns lookup internet network 
 hostname # internet network 
