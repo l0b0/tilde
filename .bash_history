@@ -600,6 +600,7 @@ man blkid # help
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
+man chfn # help 
 man chgrp # help 
 man chmod # help 
 man chown # help 
@@ -1165,6 +1166,7 @@ sudo apt-get purge 'ubuntuone-*'
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
+sudo chfn -f "My Name" $USER # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
