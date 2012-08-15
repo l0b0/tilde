@@ -1,3 +1,4 @@
+
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
@@ -248,6 +249,8 @@ for path in *.sass; do sass-convert $path ${path%.*}.scss; done
 fortune 
 for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
+fullname 
+fullname root 
 fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
@@ -460,6 +463,7 @@ help type
 help typeset 
 help ulimit 
 help umask 
+help until 
 help wait 
 host example.org # dns lookup internet network 
 hostname # internet network 
@@ -542,6 +546,8 @@ ls -lt /var/log/
 lsmod # kernel modules 
 lsof +c 0 | grep gnome-terminal | wc -l # count files 
 lsof # files 
+lsof -i :22 # internet port network 
+lsof -i tcp # internet network 
 lspci | grep -i audio 
 lsusb | grep -i cam 
 lyx file.lyx 
@@ -597,6 +603,7 @@ man blkid # help
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
+man chfn # help 
 man chgrp # help 
 man chmod # help 
 man chown # help 
@@ -632,6 +639,7 @@ man fmt # help
 man fortune # help 
 man fusermount # help 
 man getconf # help 
+man getent # help 
 man getopt # help 
 man gitk # help 
 man git-svn # help 
@@ -1162,6 +1170,7 @@ sudo apt-get purge 'ubuntuone-*'
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
+sudo chfn -f "My Name" $USER # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
@@ -1366,4 +1375,4 @@ x-www-browser ~/week.xhtml
 xxd $(which xxd) | head -1 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
-zless /usr/share/doc/rar/rar.txt.gz # help compress 
+zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
