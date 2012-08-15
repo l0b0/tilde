@@ -699,6 +699,7 @@ man nfs # help
 man nl # help 
 man node # help 
 man nslookup # help 
+man objdump # help 
 man od # help 
 man paperconfig # help 
 man passwd # help 
@@ -920,6 +921,7 @@ npm install -g coffee-script # coffeescript
 npm ls -g 
 npm -v 
 nslookup example.org # dns internet lookup network 
+objdump -p $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg -S | cut -d ':' -f 1 | sort -u # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 passwd # password user 
 patch -p0 < patch.diff 
