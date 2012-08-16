@@ -829,7 +829,6 @@ mkgithub ~/dev/coffeescript-jedit
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/count 
 mkgithub ~/dev/cronlist 
-mkgithub ~/dev/cronlist.deb 
 mkgithub ~/dev/crumbling-beaker 
 mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
