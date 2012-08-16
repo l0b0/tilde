@@ -1379,7 +1379,7 @@ x-www-browser /usr/share/doc/git-doc/index.html # help
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
-yes | dh_make -s && git add debian/!(*.ex) && echo '*.ex' > debian/.gitignore && git add debian/.gitignore 
+yes | dh_make -s && echo $'*.EX\n*.ex' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
