@@ -295,6 +295,7 @@ git clean -nd # dry-run directories
 git clean -ndx # dry-run directories 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
+git clone https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget -O ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
 git clone https://github.com/l0b0/mkgithub.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
@@ -1125,6 +1126,7 @@ sudo apt-get install ffmpeg # video
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
