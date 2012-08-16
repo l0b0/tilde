@@ -1,3 +1,4 @@
+
 ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
@@ -1381,4 +1382,4 @@ xxd $(which xxd) | head -1
 yes | dh_make -s && git add debian/!(*.ex) && echo '*.ex' > debian/.gitignore && git add debian/.gitignore 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
-zless /usr/share/doc/rar/rar.txt.gz # help compress 
+zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
