@@ -72,23 +72,10 @@ exit_code_prompt() {
 PS1='$(exit_code_prompt)'
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" -a -r /etc/debian_chroot ]
-then
-    debian_chroot="$(cat /etc/debian_chroot)"
-elif [ -r /etc/jail ]
-then
-    debian_chroot="$(cat /etc/jail)"
-else
-    root_inode=$(ls -di / | cut -d ' ' -f 1)
-    if [ $root_inode -ne 2 -a $root_inode -ne 128 ]
-    then
-        # Non-standard root inode
-        debian_chroot="unknown chroot"
-    fi
-fi
+debian_chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
+debian_chroot="${debian_chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
 
-# set a fancy prompt (non-color, overwrite the one in /etc/profile)
-PS1="$PS1"'${debian_chroot+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
+PS1="$PS1"'${debian_chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
 
 if [ "$USER" == 'root' ]
 then
