@@ -69,7 +69,7 @@ cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
 cd -- "$(mktemp -d)" 
-checkbashisms *.sh 
+checkbashisms ./*.sh 
 chmod u+x test.sh 
 chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version manager 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
@@ -136,7 +136,7 @@ diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2)
 dig example.org # dns lookup internet network 
 dirname $PWD 
 dmesg # debug os startup 
-dot -O -Tsvg *.dot # graphics 
+dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
@@ -201,7 +201,7 @@ editor ~/.vimrc
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
-empty_line_before_eof -i * # newline 
+empty_line_before_eof -i ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
 env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
@@ -216,7 +216,7 @@ exit
 facter # hardware os 
 facter --help 
 facter id # user 
-feh --fullscreen --hide-pointer * # images viewer 
+feh --fullscreen --hide-pointer ./* # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
@@ -243,11 +243,11 @@ find . -type f -name file | exclude_vcs
 find -version 
 firefox -profilemanager 
 firefox -safe-mode 
-for path in *.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
+for path in ./*.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
-for path in *.sass; do sass-convert $path ${path%.*}.scss; done 
+for path in ./*.sass; do sass-convert $path ${path%.*}.scss; done 
 fortune 
-for vcard in *.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+for vcard in ./*.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
 fullname 
 fullname root 
@@ -425,7 +425,7 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
-grep -lZ "pattern" * 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
+grep -lZ "pattern" ./* 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
 grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
@@ -500,7 +500,7 @@ java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host local
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
-jhead -da2010:11:12/13:14:15-2005:01:01 *.jpg # adjust date time image 
+jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 kill -0 $! # check process pid 
 killall process 
 kill -INT $$ # signal 
@@ -899,10 +899,10 @@ mkgithub ~/dev/xFormsCal
 mkgithub ~/dev/xterm-color-count 
 mkgithub -h 
 mkgithub --help 
-mogrify -crop 2316x1303+0+0 *.jpg 
-mogrify -format jpg *.CR2 # convert 
+mogrify -crop 2316x1303+0+0 ./*.jpg 
+mogrify -format jpg ./*.CR2 # convert 
 mount 
-mount-image *.iso 
+mount-image ./*.iso 
 mount -n -o remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -b 256 music mp3 
@@ -913,7 +913,7 @@ mutt -v
 mutt -vv 
 mv file{.orig,} 
 ncal -3bM 
-neato -O -Tsvg *.dot 
+neato -O -Tsvg ./*.dot 
 netstat 
 netstat -a # internet connections sockets 
 nl ~/.bashrc 
@@ -945,7 +945,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 pip help install 
-pngcrush -brute -d /target *.png 
+pngcrush -brute -d /target ./*.png 
 PREFIX=~ sudo make install 
 printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
@@ -1002,11 +1002,11 @@ read < "/path"
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
-rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' *.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
-rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' *.jpg # video 
+rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
+rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
 reset # clear log remove terminal text 
 rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-rmdir * 
+rmdir ./* 
 rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rm file 
 rm -- ~/pubring.gpg ~/secring.gpg 
@@ -1326,7 +1326,7 @@ ulimit -a
 ulimit -c unlimited 
 umask 
 umask -S # symbolic 
-umount-image *.iso 
+umount-image ./*.iso 
 uname --all 
 uname --machine # hardware architecture 
 unetbootin 

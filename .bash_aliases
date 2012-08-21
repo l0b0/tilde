@@ -457,7 +457,7 @@ empty_line_before_eof() {
     # @param $1...: Sed options and/or input files
     #
     # Example:
-    # $ empty_line_before_eof -i .bak *
+    # $ empty_line_before_eof -i .bak ./*
     #   Save backups to filename.bak, and process each file
     #
     # Command breakdown:
