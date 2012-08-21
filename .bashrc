@@ -63,7 +63,7 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 # Exit code
 PS1='$(exit_code=$?; [ $exit_code -eq 0 ] || printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT " ")'
 
-if [ "$USER" == 'root' ]
+if [ "$USER" = 'root' ]
 then
     PS1="$PS1"'\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]\u\[$RESET_FORMAT\]'
 elif [ -n "${SUDO_USER:-}" ]
