@@ -107,6 +107,15 @@ else
     PS1="$PS1"'$PWD'
 fi
 PS1="$PS1"'\[$RESET_FORMAT\]'
+
+case "$TERM" in
+    xterm*|rxvt*|Eterm|aterm|kterm|gnome*)
+        PS1="$PS1"'\[\033]0;\u@\h:'"${chroot}"'${PWD}\007\]'
+        ;;
+    screen)
+        PS1="$PS1"'\[\033_\u@\h:'"${chroot}"'${PWD}\033\\\'
+        ;;
+esac
 unset chroot
 
 # Git branch
