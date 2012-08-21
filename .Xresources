@@ -1,6 +1,6 @@
 XTerm*metaSendsEscape: true
 XTerm*printAttributes: 2
-XTerm*printerCommand: cat - > "`mktemp --tmpdir xterm-screenshot.bin.XXXXXXXXXX`"
+XTerm*printerCommand: cat - | $HOME/dev/tilde/scripts/ansi2html.sh > "`mktemp --tmpdir xterm-screenshot.html.XXXXXXXXXX`"
 XTerm*reverseVideo: true
 XTerm*saveLines: 32767
 XTerm.VT100.geometry: 96x66
