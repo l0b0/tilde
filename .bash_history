@@ -25,6 +25,7 @@ aticonfig --initial=check
 autoconf # compile 
 autoreconf --install # compile 
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
+avconv -i input.mov -codec copy -ss 15 output.mov # cut 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash -n ~/.bash_history # verify syntax 
 bash # shell 
@@ -591,6 +592,7 @@ man apt-listchanges # help
 man apt-rdepends # help 
 man arch # help 
 man ascii # help 
+man avconv # help 
 man awk # help 
 man bash # help 
 man bc # help 
