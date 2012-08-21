@@ -695,6 +695,7 @@ man netstat # help
 man nfs # help 
 man nl # help 
 man node # help 
+man notify-send # help 
 man nslookup # help 
 man objdump # help 
 man od # help 
@@ -914,6 +915,7 @@ nmap -T Aggressive -A -v 192.168.0.1
 nmap -v -sP 192.168.0.0/24 
 node # javascript 
 node -v 
+notify-send "summary" "body" 
 npm config set registry http://registry.npmjs.org/ 
 npm install -g coffee-script # coffeescript 
 npm ls -g 
