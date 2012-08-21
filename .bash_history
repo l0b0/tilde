@@ -705,6 +705,7 @@ man node # help
 man nslookup # help 
 man objdump # help 
 man od # help 
+man openssl # help 
 man paperconfig # help 
 man passwd # help 
 man pdftk # help 
@@ -926,6 +927,7 @@ npm -v
 nslookup example.org # dns internet lookup network 
 objdump -p $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg -S | cut -d ':' -f 1 | sort -u # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
+openssl x509 -noout -fingerprint -text < my.crt 
 passwd # password user 
 patch -p0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
