@@ -45,12 +45,12 @@ then
     usage
 fi
 
-exec 9< <( find "$start_dir" -type f -print0 )
+exec 9< <( find "$start_dir" -type f -exec printf '%s\0' {} \; )
 while IFS= read -r -d '' -u 9
 do
     file_path="$(readlink -fn -- "$REPLY"; echo x)"
     file_path="${file_path%x}"
-    exec 8< <( find "$start_dir" -type f \( -path "$file_path" -o -print0 \) )
+    exec 8< <( find "$start_dir" -type f \( -path "$file_path" -o -exec printf '%s\0' {} \; \) )
     while IFS= read -r -d '' -u 8 OTHER
     do
         cmp --quiet -- "$REPLY" "$OTHER"

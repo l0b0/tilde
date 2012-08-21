@@ -50,7 +50,7 @@
 # Using process substitution with `<(` instead of pipes avoids a broken pipe in
 # case a process inside the loop exits.
 #
-# `find`'s `-print0` argument separates the output by null characters.
+# `find`'s `-exec printf '%s\0'` argument separates the output by null characters.
 #
 # Use a file descriptor between 3 and 9 for data passing instead of standard
 # input to avoid greedy commands like `cat` or `ssh` slurping all of it.
@@ -87,7 +87,7 @@ do
         printf %q "$file_name"
         printf '\n'
     fi
-done 9< <( find "$test_dir_path" -type f -print0 )
+done 9< <( find "$test_dir_path" -type f -exec printf '%s\0' {} \; )
 
 rm -- "$test_file_path"
 rmdir -- "$test_dir_path"

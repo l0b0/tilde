@@ -106,13 +106,13 @@ find_grouped() {
             do
                 files_found=1
                 ls -- "$path"
-            done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -print0 | sort -z)
+            done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -exec printf '%s\0' {} \; | sort -z)
 
             if [ $files_found -eq 1 ]
             then
                 echo
             fi
-        done < <(find "$target" -mindepth 1 -type d -print0 | sort -z)
+        done < <(find "$target" -mindepth 1 -type d -exec printf '%s\0' {} \; | sort -z)
 
         shift
     done
@@ -418,7 +418,7 @@ zsed() {
         while IFS= read -r -d '' -u 9
         do
             sed -i -e "$replacement" "$REPLY"
-        done 9< <( find . -type f -print0 )
+        done 9< <( find . -type f -exec printf '%s\0' {} \; )
         tar -czf "$full_path" .
         cd - >/dev/null
     done
