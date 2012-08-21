@@ -801,6 +801,7 @@ man xdg-desktop-menu # help
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xrdb # help 
 man xscreensaver-command # help 
 man xwininfo # help 
 man xxd # help 
@@ -1370,6 +1371,8 @@ xinput --list 10
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xrdb -load ~/.Xresources 
+xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
 xterm -version 
