@@ -152,12 +152,6 @@ echo $COLUMNS # terminal
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
-echo -ne '\0' | uniname -bcepu # 1 nul 
-echo -ne "\0" | uniname -bcepu # 1 nul 
-echo -ne $"\0" | uniname -bcepu # 1 nul 
-echo -ne \\0 | uniname -bcepu # 1 nul 
-echo -ne \0 | uniname -bcepu # 1 zero 
-echo -ne $'\0' | wc -c # 0 
 echo $OSTYPE 
 echo "$PATH" 
 echo "${paths[0]}" # array 
@@ -946,6 +940,12 @@ pip help
 pip help install 
 pngcrush -brute -d /target ./*.png 
 PREFIX=~ sudo make install 
+printf '\0' | uniname -bcepu # 1 nul 
+printf "\0" | uniname -bcepu # 1 nul 
+printf $"\0" | uniname -bcepu # 1 nul 
+printf \\0 | uniname -bcepu # 1 nul 
+printf \0 | uniname -bcepu # 1 zero 
+printf $'\0' | wc -c # 0 
 printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1382,7 +1382,7 @@ x-www-browser /usr/share/doc/git-doc/index.html # help
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head -1 
-yes | dh_make -s && echo $'*.EX\n*.ex' > debian/.gitignore && git add debian 
+yes | dh_make -s && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
