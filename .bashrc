@@ -60,16 +60,8 @@ WARNING_FORMAT="${WARNING_FORMAT-$(color_enabled && tput setaf 3)}"
 INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
 RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
-exit_code_prompt() {
-    local exit_code=$?
-    if [ $exit_code -ne 0 ]
-    then
-        printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT ' '
-    fi
-}
-
 # Exit code
-PS1='$(exit_code_prompt)'
+PS1='$(exit_code=$?; [ $exit_code -eq 0 ] || printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT " ")'
 
 if [ "$USER" == 'root' ]
 then
