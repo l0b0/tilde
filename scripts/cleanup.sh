@@ -78,7 +78,7 @@ verbose_echo "Auto-tag .bash_history lines"
 sed -i -e 's/^\(\(man\|info\) [^#]\+\)$/\1# help /' "${directory}/../.bash_history"
 
 verbose_echo "Sort text files"
-for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/*/*/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
+for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.mozilla/*/*/{cert_override.txt,persdict.dat} "${directory}/../.bash_history" "${directory}/../.Xresources"
 do
     if [ -e "$path" ]
     then
