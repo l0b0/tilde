@@ -71,12 +71,6 @@ exit_code_prompt() {
 # Exit code
 PS1='$(exit_code_prompt)'
 
-# set variable identifying the chroot you work in (used in the prompt below)
-debian_chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
-debian_chroot="${debian_chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
-
-PS1="$PS1"'${debian_chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]($debian_chroot)\[$RESET_FORMAT\] }'
-
 if [ "$USER" == 'root' ]
 then
     PS1="$PS1"'\[$BOLD_FORMAT\]\[$ERROR_FORMAT\]\u\[$RESET_FORMAT\]'
@@ -104,7 +98,25 @@ then
 else
     PS1="$PS1"'\h'
 fi
-PS1="$PS1":'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]\w\[$RESET_FORMAT\]'
+
+# Chroot jail path
+debian_chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
+debian_chroot="${debian_chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
+
+# Path separator
+PS1="$PS1":
+
+PS1="$PS1"'${debian_chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]$debian_chroot\[$RESET_FORMAT\]}'
+
+# Working directory, absolute path if we're in a chroot jail
+PS1="$PS1"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]'
+if [ -z "$debian_chroot" ]
+then
+    PS1="$PS1"'\w'
+else
+    PS1="$PS1"'$PWD'
+fi
+PS1="$PS1"'\[$RESET_FORMAT\]'
 
 # Git branch
 if type -t __git_ps1 &>/dev/null
