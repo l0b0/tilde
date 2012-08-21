@@ -99,14 +99,16 @@ else
     PS1="$PS1"'\h'
 fi
 
-# Chroot jail path
-chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
-chroot="${chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
-
 # Path separator
 PS1="$PS1":
 
-PS1="$PS1"'${chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]$chroot\[$RESET_FORMAT\]}'
+# Chroot jail path
+chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
+chroot="${chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
+if [ -n "$chroot" ]
+then
+    PS1="$PS1"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]'"$chroot"'\[$RESET_FORMAT\]'
+fi
 
 # Working directory, absolute path if we're in a chroot jail
 PS1="$PS1"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]'
@@ -117,6 +119,7 @@ else
     PS1="$PS1"'$PWD'
 fi
 PS1="$PS1"'\[$RESET_FORMAT\]'
+unset chroot
 
 # Git branch
 if type -t __git_ps1 &>/dev/null
