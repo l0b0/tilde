@@ -100,17 +100,17 @@ else
 fi
 
 # Chroot jail path
-debian_chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
-debian_chroot="${debian_chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
+chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
+chroot="${chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
 
 # Path separator
 PS1="$PS1":
 
-PS1="$PS1"'${debian_chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]$debian_chroot\[$RESET_FORMAT\]}'
+PS1="$PS1"'${chroot:+\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]$chroot\[$RESET_FORMAT\]}'
 
 # Working directory, absolute path if we're in a chroot jail
 PS1="$PS1"'\[$BOLD_FORMAT\]\[$INFO_FORMAT\]'
-if [ -z "$debian_chroot" ]
+if [ -z "$chroot" ]
 then
     PS1="$PS1"'\w'
 else
