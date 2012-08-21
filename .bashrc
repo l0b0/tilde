@@ -51,7 +51,7 @@ fi
 
 color_enabled() {
     local -i colors=$(tput colors 2>/dev/null)
-    [ $? = 0 -a $colors -gt 2 ]
+    [ $? -eq 0 -a $colors -gt 2 ]
 }
 
 BOLD_FORMAT="${BOLD_FORMAT-$(color_enabled && tput bold)}"
