@@ -1353,6 +1353,7 @@ w
 wait # process pid 
 watch 'svn diff' 
 wc -l -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head -1 | cut -d ' ' -f 1 # line count test 
+wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
 while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -mindepth 1 -exec printf '%s\0' {} \; | shuf -n 10 -z) # random shuffle files 
