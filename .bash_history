@@ -1279,6 +1279,7 @@ svn help diff
 svn help log 
 svn help merge 
 svn info 
+svn info | sed -ne 's/^Revision: //p' # revision 
 svn list http://svn/repo 
 svn log | less 
 svn log -r 1 
