@@ -915,6 +915,7 @@ netstat -a # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+nm libfoo.so | grep '^ *U ' # dev undefined 
 node # javascript 
 node -v 
 notify-send "summary" "body" 
