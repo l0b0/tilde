@@ -135,7 +135,7 @@ diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
-dig mx example.org # dns email lookup internet network 
+dig example.org mx # dns email lookup internet network 
 dirname $PWD 
 dmesg # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
