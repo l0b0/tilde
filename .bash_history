@@ -697,6 +697,7 @@ man ncal # help
 man netstat # help 
 man nfs # help 
 man nl # help 
+man nm # help 
 man node # help 
 man notify-send # help 
 man nslookup # help 
