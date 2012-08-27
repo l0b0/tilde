@@ -91,8 +91,13 @@ fi
 PS1="$PS1":
 
 # Chroot jail path
-chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
-chroot="${chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
+if [ -e "/proc/$$/mountinfo" ]
+then
+    chroot="$(grep ^"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 1) " /proc/1/mountinfo | cut -d ' ' -f 5)"
+    chroot="${chroot%"$(head -1 /proc/$$/mountinfo | cut -d ' ' -f 5)"}"
+else
+    chroot='[unknown chroot]'
+fi
 if [ -n "$chroot" ]
 then
     PS1="$PS1"'\[$BOLD_FORMAT\]\[$WARNING_FORMAT\]'"$chroot"'\[$RESET_FORMAT\]'
