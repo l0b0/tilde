@@ -907,6 +907,7 @@ mp3fs -b 256 music mp3
 mutt 
 mutt -d 5 
 mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
+mutt-ldap.pl name # test 
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
@@ -1122,6 +1123,7 @@ sudo apt-get install chromium-browser lynx-cur # web
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
+sudo apt-get install cpanminus # perl 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
@@ -1191,6 +1193,7 @@ sudo chown -R "$USER":"$USER" ~/.matplotlib
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
 sudo chroot /var/jail/*$USER su -l $USER # jail 
+sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
