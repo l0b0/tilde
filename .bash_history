@@ -419,6 +419,7 @@ gnome-shell --version
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
+gpg --verify *.sig # pgp signature 
 grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
 grep -lZ "pattern" ./* 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
