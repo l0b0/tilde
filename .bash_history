@@ -580,9 +580,11 @@ man 1 quilt # help
 man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
+man 5 sudoers # help 
 man 7 debhelper # help 
 man 8 dh_make # help 
 man 8 pbuilder # help 
+man 8 visudo # help 
 man ack-grep # help 
 man add-apt-repository # help 
 man addgroup # help 
