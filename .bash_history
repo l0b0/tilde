@@ -36,7 +36,7 @@ bash -x # debug
 bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
-bind -P | grep -F ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
+bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 ~/bin/git diff --check 
 ~/bin/git diff --minimal 
 ~/bin/git diff --staged --minimal 
@@ -76,7 +76,7 @@ chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version mana
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
-comm -23 <(grep -h ^FN: ~/contacts.vcf | sort -u) <(grep -h ^FN: ~/contacts/*.vcf | sort -u) 
+comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort -u) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort -u) 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') 
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
@@ -142,7 +142,7 @@ dot -O -Tsvg ./*.dot # graphics
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
-dpkg --get-selections | grep -v deinstall | cut -f 1 # installed packages 
+dpkg --get-selections | grep --invert-match deinstall | cut -f 1 # installed packages 
 dpkg -s bash # package status 
 dpkg-shlibdeps $(which bash) # binary dependency packaging 
 dpkg -S "$(which apt-get)" # package file owner search 
@@ -163,7 +163,7 @@ echo $PROMPT_COMMAND # shell
 echo $REPLY # read 
 echo $$ # shell pid 
 echo $TERM # shell 
-echo 'test foo test bar test' | grep -o test | wc -l # count 
+echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
 echo $WINEPREFIX 
 editor ~/.bash_aliases_local # shell 
 editor ~/.bash_aliases # shell 
@@ -231,7 +231,7 @@ find . -exec printf '%s\0' {} \; | while read -r -d ''; do printf %q "$REPLY"; p
 find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
 find -L . -type l # broken symlinks 
 find . -name '*.marks' -delete # remove jedit temp files 
-find . -printf x | wc -c 
+find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -name file | exclude_vcs 
@@ -301,7 +301,7 @@ git config diff.minimal invalid
 git config diff.minimal true 
 git config --global github.user l0b0 
 git config --global mergetool.prompt false 
-git config -l 
+git config --list 
 GIT_CURL_VERBOSE=1 git pull # debug 
 git diff 
 git diff --color-words 
@@ -318,7 +318,7 @@ git diff -w --no-color | git apply --cached
 git diff --word-diff 
 git fetch 
 git format-patch -M HEAD^ 
-git grep -I --name-only -z -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
+git grep -I --name-only --null -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui& 
 git help add 
 git help bisect 
@@ -420,14 +420,14 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify *.sig # pgp signature 
+grep --files-with-matches --null "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
 grep --fixed-strings --recursive --regexp 'foo' . # search literal 
-grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep -v -e '^ ' 
-grep -lZ "pattern" ./* 2>/dev/null | tr -cd '\000' | wc -c # count occurrences pattern 
-grep -q "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
+grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
+(grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
+grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep $USER /etc/group 
 grep $USER /etc/passwd # password 
 grep --version 
-(grep -v '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 groups 
 groups nobody 
 groups $USER 
@@ -479,7 +479,7 @@ ifconfig -a eth0 # internet network nic
 ifconfig -a # internet network 
 ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
-if [[ "$(type rvm | head -1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
+if [[ "$(type rvm | head --lines=1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
 indentect --help 
 indentect -v < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -535,18 +535,18 @@ locate file
 longest < ~/.bash_history 
 lpstat -v 
 lscpu # hardware architecture processor 
-ls -d /proc/[^0-9]* 
+ls --directory /proc/[^0-9]* # metadata 
 lshw 
-ls -la 
-ls -lr 
-ls -lt /var/log/ 
+ls -l --all # list 
+ls -l --reverse # list 
+ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
-lsof +c 0 | grep gnome-terminal | wc -l # count files 
+lsof +c 0 | grep gnome-terminal | wc --lines # count files 
 lsof # files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
-lspci | grep -i audio 
-lsusb | grep -i cam 
+lspci | grep --ignore-case audio 
+lsusb | grep --ignore-case cam 
 lyx file.lyx 
 m4 --version # compile dev 
 make 2>&1 | tee > make_compile.out~ # compile dev 
@@ -955,7 +955,7 @@ printf "\0" | uniname -bcepu # 1 nul
 printf $"\0" | uniname -bcepu # 1 nul 
 printf \\0 | uniname -bcepu # 1 nul 
 printf \0 | uniname -bcepu # 1 zero 
-printf $'\0' | wc -c # 0 
+printf $'\0' | wc --chars # 0 
 printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -g1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1011,7 +1011,7 @@ read < "/path"
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
-rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep -o ' renamed as .*' | sort | uniq -d # safe 
+rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq -d # safe 
 rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
 reset # clear log remove terminal text 
 rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1064,7 +1064,7 @@ set +o nounset
 set -o pipefail 
 set +o pipefail 
 (set -o posix; set) 
-(set -o posix; set) | grep -o ^COMP[^=]* 
+(set -o posix; set) | grep --only-matching ^COMP[^=]* 
 ./setup.py test 
 set -x 
 set +x 
@@ -1361,7 +1361,7 @@ vmware
 w 
 wait # process pid 
 watch 'svn diff' 
-wc -l -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head -1 | cut -d ' ' -f 1 # line count test 
+wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut -d ' ' -f 1 # line count test 
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
@@ -1395,7 +1395,7 @@ x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux d
 x-www-browser /usr/share/doc/git-doc/index.html # help 
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser ~/week.xhtml 
-xxd $(which xxd) | head -1 
+xxd $(which xxd) | head --lines=1 
 yes | dh_make -s && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
