@@ -533,14 +533,11 @@ locale -a
 locate file 
 longest < ~/.bash_history 
 lpstat -v 
-ls 
-ls -1 
 lscpu # hardware architecture processor 
 ls -d /proc/[^0-9]* 
 lshw 
 ls -la 
 ls -lr 
-ls -lt 
 ls -lt /var/log/ 
 lsmod # kernel modules 
 lsof +c 0 | grep gnome-terminal | wc -l # count files 
