@@ -706,6 +706,7 @@ man nm # help
 man node # help 
 man notify-send # help 
 man nslookup # help 
+man ntpdate # help 
 man ntpq # help 
 man objdump # help 
 man od # help 
@@ -1252,6 +1253,7 @@ sudo rm -rf ~/build ~/src
 sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
+sudo service ntp stop && sudo ntpdate ntp.example.org && sudo service ntp start # force manual synchronize time 
 sudo service postgresql reload 
 sudo showkey # keyboard 
 sudo shutdown -r now 
