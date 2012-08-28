@@ -20,6 +20,7 @@ apt-cache stats bash # package statistics
 apt-get source apt 
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
+arandr & # screen layout graphics hardware 
 arch # hardware 
 aticonfig --initial=check 
 autoconf # compile 
@@ -561,6 +562,7 @@ make test 2>&1 | tee > make_test.out~ # dev
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
+man 1 arandr # help 
 man 1 fakeroot # help 
 man 1 file # help 
 man 1 gfortran # help 
@@ -593,6 +595,7 @@ man apt-get # help
 man apt-key # help 
 man apt-listchanges # help 
 man apt-rdepends # help 
+man arandr # help 
 man arch # help 
 man ascii # help 
 man avconv # help 
@@ -801,6 +804,7 @@ man xdg-desktop-menu # help
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
 man xwininfo # help 
@@ -1116,6 +1120,7 @@ sudo apt-get dist-upgrade
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
+sudo apt-get install arandr # screen layout graphics hardware 
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
