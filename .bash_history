@@ -155,10 +155,10 @@ echo $? # exit code
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
 echo $OSTYPE 
-echo "$PATH" 
 echo "${paths[0]}" # array 
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
+echo "$PATH" | tr ':' $'\n' # user path 
 echo $PROMPT_COMMAND # shell 
 echo $REPLY # read 
 echo $$ # shell pid 
