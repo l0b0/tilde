@@ -706,6 +706,7 @@ man nm # help
 man node # help 
 man notify-send # help 
 man nslookup # help 
+man ntpq # help 
 man objdump # help 
 man od # help 
 man openssl # help 
@@ -933,6 +934,7 @@ npm install -g coffee-script # coffeescript
 npm ls -g 
 npm -v 
 nslookup example.org # dns internet lookup network 
+ntpq -p # query list peers 
 objdump -p $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg -S | cut -d ':' -f 1 | sort -u # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl x509 -noout -fingerprint -text < my.crt 
@@ -1163,6 +1165,7 @@ sudo apt-get install mencoder # video
 sudo apt-get install mp3fs # convert 
 sudo apt-get install nethack-qt # game 
 sudo apt-get install nfs-common # filesystem 
+sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install pgadmin3 # dev postgresql 
@@ -1399,6 +1402,7 @@ x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging li
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html # help 
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
+x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make -s && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
