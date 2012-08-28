@@ -82,6 +82,7 @@ comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p')
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
 ./configure # packaging 
+convert ./*.jpg output.pdf 
 count . # filesystem 
 cp file{,.orig} # filesystem 
 createdb -T template0 -U username dbname # postgresql 
