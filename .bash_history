@@ -442,6 +442,7 @@ gunzip example.gz
 gzip example.txt # compress 
 help . 
 help alias 
+help bind 
 help builtin 
 help command 
 help declare 
