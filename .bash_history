@@ -1284,7 +1284,6 @@ svn diff --diff-cmd diff > patch.diff
 svn diff | less 
 svn diff -r 1:HEAD 
 svn diff -r PREV 
-svn diff -u 
 svn diff -x -b 
 svn diff -x -u 
 svn diff -x -u > patch.diff 
