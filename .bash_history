@@ -73,7 +73,7 @@ cd - # back
 cd -- "$(mktemp -d)" 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
-chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version manager 
+chmod +x "$rvm_path"/hooks/after_cd_bundler # development plugin ruby version manager 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp -b $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
@@ -155,17 +155,17 @@ echo $COLUMNS # terminal
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
 echo $LINES # terminal 
-echo $OSTYPE 
+echo "$OSTYPE" 
 echo "${paths[0]}" # array 
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
 echo "$PATH" | tr ':' $'\n' # user path 
-echo $PROMPT_COMMAND # shell 
-echo $REPLY # read 
+echo "$PROMPT_COMMAND" # shell 
+echo "$REPLY" # read 
 echo $$ # shell pid 
-echo $TERM # shell 
+echo "$TERM" # shell 
 echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
-echo $WINEPREFIX 
+echo "$WINEPREFIX" 
 editor ~/.bash_aliases_local # shell 
 editor ~/.bash_aliases # shell 
  editor ~/.bash_history # shell 
@@ -241,7 +241,7 @@ firefox -profilemanager
 firefox -safe-mode 
 for path in ./*.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
-for path in ./*.sass; do sass-convert $path ${path%.*}.scss; done 
+for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 fortune 
 for vcard in ./*.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
@@ -426,12 +426,12 @@ grep --fixed-strings --recursive --regexp 'foo' . # search literal
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
-grep $USER /etc/group 
-grep $USER /etc/passwd # password 
+grep "$USER" /etc/group 
+grep "$USER" /etc/passwd # password 
 grep --version 
 groups 
 groups nobody 
-groups $USER 
+groups "$USER" 
 guard 
 guard -g functional:controller # test 
 guard -g unit:decorator 
@@ -475,7 +475,7 @@ iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert enc
 id --group 
 id # group user 
 id --user 
-id $USER 
+id "$USER" 
 ifconfig -a eth0 # internet network nic 
 ifconfig -a # internet network 
 ifconfig # internet network 
@@ -1118,7 +1118,7 @@ strace -p 123 # process
 strings $(which strings) 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
-sudo addgroup $USER group 
+sudo addgroup "$USER" group 
 sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
@@ -1198,13 +1198,13 @@ sudo apt-get purge 'ubuntuone-*'
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
-sudo chfn -f "My Name" $USER # full name 
+sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
 sudo chown -R "$USER":"$USER" ~/.matplotlib 
 sudo chown -R "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
-sudo chroot /var/jail/*$USER su -l $USER # jail 
+sudo chroot /var/jail/*"$USER" su -l "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
@@ -1266,8 +1266,8 @@ sudo updatedb
 sudo update-grub 
 sudo update-java-alternatives --jre -s java-6-sun 
 sudo -u postgres createuser -s username 
-sudo usermod -g group $USER # change default group 
-sudo usermod -G "$(id -nG | sed -e 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" $USER # remove group 
+sudo usermod -g group "$USER" # change default group 
+sudo usermod -G "$(id -nG | sed -e 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
 sudo visudo 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
@@ -1319,7 +1319,7 @@ svn st
 svn update 
 svn --version 
 TAGS=all guard 
-TAGS=$USER guard 
+TAGS="$USER" guard 
 tail -F /var/log/messages 
 tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
