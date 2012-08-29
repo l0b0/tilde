@@ -29,7 +29,6 @@ avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.
 avconv -i input.mov -codec copy -ss 15 output.mov # cut 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bash -n ~/.bash_history # verify syntax 
-bash # shell 
 bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
 bash --version 
