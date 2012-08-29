@@ -561,12 +561,16 @@ make test 2>&1 | tee > make_test.out~ # dev
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
+man 1 aplay # help 
+man 1 apport-bug # help 
+man 1 apport-cli # help 
 man 1 arandr # help 
 man 1 fakeroot # help 
 man 1 file # help 
 man 1 gfortran # help 
 man 1 git # help 
 man 1 gpg # help 
+man 1 hexdump # help 
 man 1 imake # help 
 man 1 lintian # help 
 man 1 patch # help 
@@ -576,6 +580,7 @@ man 1p mv # posix help
 man 1 ppc386 # help 
 man 1 python # help 
 man 1 quilt # help 
+man 1 ssh-keygen # help 
 man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -621,6 +626,7 @@ man curl # help
 man cut # help 
 man date # help 
 man df # help 
+man dh_make # help 
 man diff # help 
 man dig # help 
 man dirname # help 
@@ -630,6 +636,7 @@ man dotty # help
 man download-mibs # help 
 man dpkg # help 
 man dpkg-shlibdeps # help 
+man dropdb # help postgresql 
 man du # help 
 man env # help 
 man errno # help 
@@ -671,6 +678,7 @@ man iostat # help
 man iotop # help 
 man ip # help 
 man iwconfig # help 
+man java # help 
 man jhead # help 
 man join # help 
 man kill # help 
@@ -691,6 +699,7 @@ man make # help
 man man # help 
 man markdown # help 
 man md5sum # help 
+man mencoder # help 
 man mkdir # help 
 man mktemp # help 
 man mount # help 
@@ -702,6 +711,7 @@ man ncal # help
 man netstat # help 
 man nfs # help 
 man nl # help 
+man nmap # help 
 man nm # help 
 man node # help 
 man notify-send # help 
@@ -713,6 +723,7 @@ man od # help
 man openssl # help 
 man paperconfig # help 
 man passwd # help 
+man patch # help 
 man pdftk # help 
 man perlrun # help 
 man pgrep # help 
@@ -746,6 +757,7 @@ man sh # help
 man showkey # help 
 man shuf # help 
 man shunit2 # help 
+man shutdown # help 
 man signal # help 
 man sleep # help 
 man snmpd # help 
@@ -779,13 +791,13 @@ man trash # help
 man tr # help 
 man tty # help 
 man udevadm # help 
-man umask # help 
 man uname # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
 man update-alternatives # help 
 man updatedb # help 
+man update-java-alternatives # help 
 man uptime # help 
 man useradd # help 
 man usermod # help 
@@ -806,6 +818,7 @@ man xdg-desktop-menu # help
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xmodmap # help 
 man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
@@ -1290,11 +1303,25 @@ svn diff -x -u > patch.diff
 svn diff -x -w 
 svn diff -x -w --ignore-eol-style 
 svn help 
-svn help ci 
-svn help co 
-svn help diff 
-svn help log 
-svn help merge 
+svn help blame | pager 
+svn help cat | pager 
+svn help checkout | pager 
+svn help commit | pager 
+svn help copy | pager 
+svn help delete | pager 
+svn help diff | pager 
+svn help help | pager 
+svn help info | pager 
+svn help list | pager 
+svn help log | pager 
+svn help merge | pager 
+svn help | pager 
+svn help propdel | pager 
+svn help propedit | pager 
+svn help propset | pager 
+svn help revert | pager 
+svn help status | pager 
+svn help update | pager 
 svn info 
 svn info | sed -ne 's/^Revision: //p' # revision 
 svn list http://svn/repo 
