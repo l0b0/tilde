@@ -221,7 +221,6 @@ fgit push -- ~/*/ ~/.*/ ~/dev/*/
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fglrxinfo 
 file README.markdown 
-filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find_date_sorted . -mindepth 1 # files 
 find_date_sorted . -mindepth 1 | sort -rz | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
 find . -empty 
