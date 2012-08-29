@@ -120,7 +120,6 @@ declare # variables functions
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
- ~/dev/tilde/scripts/cleanup.sh -v 
 ~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
@@ -550,6 +549,7 @@ lsusb | grep --ignore-case cam
 lyx file.lyx 
 m4 --version # compile dev 
 make 2>&1 | tee > make_compile.out~ # compile dev 
+ make -C ~/dev/tilde clean 
 make clean # dev 
 make # compile dev 
 make configure # dev 
