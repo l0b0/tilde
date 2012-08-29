@@ -1321,7 +1321,6 @@ svn help propedit | pager
 svn help propset | pager 
 svn help revert | pager 
 svn help status | pager 
-svn help update | pager 
 svn info 
 svn info | sed -ne 's/^Revision: //p' # revision 
 svn list http://svn/repo 
