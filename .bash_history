@@ -137,7 +137,7 @@ diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -
 diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
-dirname $PWD 
+dirname -- "$PWD" # parent directory 
 dmesg # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
@@ -624,6 +624,7 @@ man date # help
 man df # help 
 man diff # help 
 man dig # help 
+man dirname # help 
 man dmidecode # help 
 man dot # help 
 man dotty # help 
