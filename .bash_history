@@ -1,14 +1,14 @@
-ack-grep -a --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
+ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 add-apt-repository --help 
 alias ls 
-aplay -L # audio 
+aplay --list-pcms # audio 
 apport-bug package # report 
-apport-bug -w # report window 
+apport-bug --window # report 
 apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
-apropos -e mv # exact help man 
+apropos --exact mv # help man 
 apt-cache depends bash # package dependencies 
 apt-cache policy nvidia-current # ppa source 
 apt-cache rdepends bash # package reverse dependencies 
@@ -28,12 +28,11 @@ autoreconf --install # compile
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 avconv -i input.mov -codec copy -ss 15 output.mov # cut 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
-bash -n ~/.bash_history # verify syntax 
-bash # shell 
-bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
+bash -o noexec ~/.bash_history # verify syntax 
+bash -o xtrace # debug 
+bash -s stable < <(curl --silent https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
 bash --version 
-bash -x # debug 
 bc <<<'2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
@@ -70,14 +69,14 @@ cat /proc/vmstat # hardware
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
-cd -- "$(mktemp -d)" 
+cd -- "$(mktemp --directory)" 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
-chmod +x $rvm_path/hooks/after_cd_bundler # development plugin ruby version manager 
+chmod +x "$rvm_path"/hooks/after_cd_bundler # development plugin ruby version manager 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
-cmp -b $(which arch) $(which uname) # binary diff 
+cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
-comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort -u) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort -u) 
+comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') 
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
@@ -85,19 +84,19 @@ completions git config '' | grep user # autocomplete
 convert ./*.jpg output.pdf 
 count . # filesystem 
 cp file{,.orig} # filesystem 
-createdb -T template0 -U username dbname # postgresql 
+createdb --template template0 --username username dbname # postgresql 
 cronlist 
 cronlist --help 
-cronlist -s 
-cronlist -t '23:59:59' 
+cronlist --system 
+cronlist --to '23:59:59' 
 crontab -e # edit 
 crontab -l 
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
-curl -kL http://xrl.us/perlbrewinstall | bash # development 
+curl --insecure --location http://xrl.us/perlbrewinstall | bash # development 
 curl --version 
-cut -d : -f 1 /etc/group | sort 
+cut --delimiter ':' --fields 1 /etc/group | sort 
 cvs log 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
 date --date="6 months ago" # past time 
@@ -122,51 +121,50 @@ declare # variables functions
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
- ~/dev/tilde/scripts/cleanup.sh -v 
-~/dev/tilde/scripts/make-links.sh -v -d meld ~/settings/.* ~ # filesystem symlink 
+~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
-df -h . # filesystem 
-df -h # filesystem 
+df --human-readable . # filesystem 
+df --human-readable # filesystem 
 diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
 difff --help 
 diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
-diff -u file{.orig,} 
-diff -u <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
-diff -u <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
-diff <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) 
+diff --unified file{.orig,} 
+diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
+diff --unified <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
+diff <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
-dirname $PWD 
+dirname -- "$PWD" # parent directory 
 dmesg # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
-dpkg --get-selections | grep --invert-match deinstall | cut -f 1 # installed packages 
-dpkg -s bash # package status 
+dpkg --get-selections | grep --invert-match deinstall | cut --fields 1 # installed packages 
+dpkg --search "$(which apt-get)" # package file owner search 
 dpkg-shlibdeps $(which bash) # binary dependency packaging 
-dpkg -S "$(which apt-get)" # package file owner search 
-dropdb -U username dbname # postgresql 
+dpkg --status bash # package 
+dropdb --username username dbname # postgresql 
 du --si --summarize . # disk size 
-echo 0 61 62 63 | xxd -r # hex dump convert string character byte 
+echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
 echo $COLUMNS # terminal 
 echo $? # exit code 
-echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee -a /etc/environment # print 
+echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee --append /etc/environment # print 
 echo $LINES # terminal 
-echo $OSTYPE 
+echo "$OSTYPE" 
 echo "${paths[0]}" # array 
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
 echo "$PATH" | tr ':' $'\n' # user path 
-echo $PROMPT_COMMAND # shell 
-echo $REPLY # read 
+echo "$PROMPT_COMMAND" # shell 
+echo "$REPLY" # read 
 echo $$ # shell pid 
-echo $TERM # shell 
+echo "$TERM" # shell 
 echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
-echo $WINEPREFIX 
+echo "$WINEPREFIX" 
 editor ~/.bash_aliases_local # shell 
 editor ~/.bash_aliases # shell 
  editor ~/.bash_history # shell 
@@ -198,10 +196,10 @@ editor ~/.vimrc
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
-empty_line_before_eof -i ./* # newline 
+empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
-env -i bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
+env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
@@ -224,13 +222,12 @@ fgit push -- ~/*/ ~/.*/ ~/dev/*/
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fglrxinfo 
 file README.markdown 
-filterous -dtnb --tag toread --ntag read < ~/personal/bookmarks.xml | less 
 find_date_sorted . -mindepth 1 # files 
-find_date_sorted . -mindepth 1 | sort -rz | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
+find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
 find . -empty 
 find . -empty -delete # remove files 
 find . -exec printf '%s\0' {} \; | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
-find . -group 1000 -exec chgrp $(id -g) {} \; # update files permissions 
+find . -group 1000 -exec chgrp $(id --group) {} \; # update files permissions 
 find -L . -type l # broken symlinks 
 find . -name '*.marks' -delete # remove jedit temp files 
 find . -printf x | wc --chars 
@@ -240,11 +237,11 @@ find . -type f -name file | exclude_vcs
 find -version 
 firefox -profilemanager 
 firefox -safe-mode 
-for path in ./*.jpg; do mv -v "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
+for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
-for path in ./*.sass; do sass-convert $path ${path%.*}.scss; done 
+for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 fortune 
-for vcard in ./*.vcf; do msort -b 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' -s '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
 fullname 
 fullname root 
@@ -269,7 +266,7 @@ git add .gitignore
 git add --interactive 
 git add LICENSE 
 git add Makefile 
-git add -p 
+git add --patch 
 git add README.markdown 
 git add tools.mk 
 git bisect bad 
@@ -280,23 +277,23 @@ git bisect start HEAD HEAD~10
 git blame filename 
 git branch 
 git branch --all # list 
-git branch -d topic # delete local 
-git branch -r # remote 
+git branch --delete topic # local 
+git branch --remotes 
 git branch --set-upstream master origin/master # track 
 git branch --track topic master 
 git checkout . 
-git checkout -b topic-svn remotes/topic # branch svn 
+git checkout -b topic-svn remotes/topic # branch 
 git checkout master 
 git cherry-pick master:HEAD 
-git clean -nd # dry-run directories 
-git clean -ndx # dry-run directories 
+git clean --dry-run -d # directories 
+git clean --dry-run -dx # directories .gitignore 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
-git clone https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget -O ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
+git clone https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget --output-document ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
 git clone https://github.com/l0b0/mkgithub.git 
 git clone https://github.com/terreActive/redmine.git 
 git commit 
-git commit -am "Example" 
+git commit --all --message "Example" 
 git config diff.minimal 
 git config diff.minimal false 
 git config diff.minimal invalid 
@@ -310,40 +307,48 @@ git diff --color-words
 git diff | diff-ignore-moved-lines 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
+git diff --ignore-all-space --no-color | git apply --cached 
 git diff --ignore-space-change 
 git diff master origin/master 
 git diff --raw 
 git diff --staged 
 git diff --staged --ignore-space-at-eol 
 git diff --staged --stat 
-git diff -w --no-color | git apply --cached 
 git diff --word-diff 
 git fetch 
-git format-patch -M HEAD^ 
-git grep -I --name-only --null -e '' | xargs -0 sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
+git format-patch --find-renames HEAD^ 
+git grep -I --name-only --null -e '' | xargs --null sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui& 
 git help add 
 git help bisect 
 git help blame 
 git help branch 
+git help checkout 
 git help cherry-pick 
 git help clean 
 git help clone 
+git help commit 
 git help config 
 git help diff 
 git help fetch 
 git help format-patch 
 git help grep 
+git help gui 
+git help help 
 git help init 
 git help log 
 git help merge 
+git help mergetool 
+git help mv 
 git help pull 
 git help push 
 git help rebase 
 git help remote 
 git help request-pull 
+git help reset 
 git help show 
 git help stash 
+git help status 
 git help submodule 
 git help svn 
 git help tag 
@@ -363,8 +368,8 @@ git pull origin master
 git push 
 git push --force 
 git push origin :refs/tags/name # delete remote 
+git push --set-upstream origin master 
 git push --tags 
-git push -u origin master 
 git rebase --abort 
 git rebase --continue 
 git rebase --interactive HEAD~20 
@@ -394,8 +399,8 @@ git submodule add git://github.com/l0b0/make-includes.git
 git submodule add git://github.com/l0b0/shell-includes.git 
 git submodule init 
 git submodule update 
-git svn clone -s -r 1:HEAD http://svn/repo 
-git svn clone -s -r 1:HEAD --no-minimize-url http://svn/repo/path 
+git svn clone --stdlayout --revision 1:HEAD http://svn/repo 
+git svn clone --stdlayout --revision 1:HEAD --no-minimize-url http://svn/repo/path 
 git svn dcommit 
 git svn dcommit --dry-run 
 git svn fetch 
@@ -406,7 +411,7 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
-glc-capture -o recording.glc minecraft 
+glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
 glc-play recording.glc -a 1 -o recording.wav # audio 
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
@@ -424,19 +429,19 @@ gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature
 gpg --verify *.sig # pgp signature 
 grep --files-with-matches --null "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
 grep --fixed-strings --recursive --regexp 'foo' . # search literal 
+grep --fixed-strings "$USER" /etc/group 
+grep --fixed-strings "$USER" /etc/passwd # password 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
-grep $USER /etc/group 
-grep $USER /etc/passwd # password 
 grep --version 
 groups 
 groups nobody 
-groups $USER 
+groups "$USER" 
 guard 
-guard -g functional:controller # test 
-guard -g unit:decorator 
-guard -g unit:model 
+guard --group functional:controller # test 
+guard --group unit:decorator 
+guard --group unit:model 
 guard help 
 guard list 
 guard show 
@@ -469,21 +474,21 @@ help until
 help wait 
 host example.org # dns lookup internet network 
 hostname # internet network 
-hostname -s # internet network 
+hostname --short # internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
 id --group 
 id # group user 
 id --user 
-id $USER 
+id "$USER" 
 ifconfig -a eth0 # internet network nic 
 ifconfig -a # internet network 
 ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 if [[ "$(type rvm | head --lines=1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
 indentect --help 
-indentect -v < "$(which indentect)" 
+indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
 info autoconf # help 
 info automake # help 
@@ -519,7 +524,7 @@ less /etc/issue
 less /etc/passwd # password 
 less Makefile 
 less /proc/bus/input/devices 
-less -R filename # color 
+less --RAW-CONTROL-CHARS filename # color 
 less /sys/class/dmi/id/product_name 
 less /sys/class/dmi/id/sys_vendor 
 less /var/log/auth.log 
@@ -532,7 +537,7 @@ less /var/log/Xorg.0.log
 ll 
 ln --symbolic -- target source 
 locale 
-locale -a 
+locale --all-locales 
 locate file 
 longest < ~/.bash_history 
 lpstat -v 
@@ -555,6 +560,7 @@ make 2>&1 | tee > make_compile.out~ # compile dev
 make clean # dev 
 make # compile dev 
 make configure # dev 
+ make --directory ~/dev/tilde clean 
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
@@ -563,12 +569,16 @@ make test 2>&1 | tee > make_test.out~ # dev
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
+man 1 aplay # help 
+man 1 apport-bug # help 
+man 1 apport-cli # help 
 man 1 arandr # help 
 man 1 fakeroot # help 
 man 1 file # help 
 man 1 gfortran # help 
 man 1 git # help 
 man 1 gpg # help 
+man 1 hexdump # help 
 man 1 imake # help 
 man 1 lintian # help 
 man 1 patch # help 
@@ -578,6 +588,7 @@ man 1p mv # posix help
 man 1 ppc386 # help 
 man 1 python # help 
 man 1 quilt # help 
+man 1 ssh-keygen # help 
 man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -623,14 +634,17 @@ man curl # help
 man cut # help 
 man date # help 
 man df # help 
+man dh_make # help 
 man diff # help 
 man dig # help 
+man dirname # help 
 man dmidecode # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
 man dpkg # help 
 man dpkg-shlibdeps # help 
+man dropdb # help postgresql 
 man du # help 
 man env # help 
 man errno # help 
@@ -672,6 +686,7 @@ man iostat # help
 man iotop # help 
 man ip # help 
 man iwconfig # help 
+man java # help 
 man jhead # help 
 man join # help 
 man kill # help 
@@ -692,6 +707,7 @@ man make # help
 man man # help 
 man markdown # help 
 man md5sum # help 
+man mencoder # help 
 man mkdir # help 
 man mktemp # help 
 man mount # help 
@@ -703,6 +719,7 @@ man ncal # help
 man netstat # help 
 man nfs # help 
 man nl # help 
+man nmap # help 
 man nm # help 
 man node # help 
 man notify-send # help 
@@ -714,6 +731,7 @@ man od # help
 man openssl # help 
 man paperconfig # help 
 man passwd # help 
+man patch # help 
 man pdftk # help 
 man perlrun # help 
 man pgrep # help 
@@ -747,6 +765,7 @@ man sh # help
 man showkey # help 
 man shuf # help 
 man shunit2 # help 
+man shutdown # help 
 man signal # help 
 man sleep # help 
 man snmpd # help 
@@ -780,13 +799,13 @@ man trash # help
 man tr # help 
 man tty # help 
 man udevadm # help 
-man umask # help 
 man uname # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
 man update-alternatives # help 
 man updatedb # help 
+man update-java-alternatives # help 
 man uptime # help 
 man useradd # help 
 man usermod # help 
@@ -807,6 +826,7 @@ man xdg-desktop-menu # help
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xmodmap # help 
 man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
@@ -822,16 +842,16 @@ md5sum file # checksum
 meld .& # diff 
 meld old new& # diff 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
-meld <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget -O- http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
-meld <(wget -O- http://svn/repo/path?p=1) <(wget -O- http://svn/repo/path?p=2) # diff 
+meld <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
+meld <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) # diff 
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 mkdir mp3 
 mkdir test 
-mkgithub -chvu l0b0 
-mkgithub -csvu l0b0 
+mkgithub --configure --https --verbose --user l0b0 
+mkgithub --configure --ssh --verbose --user l0b0 
 mkgithub ~/dev/bm 
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
@@ -904,15 +924,14 @@ mkgithub ~/dev/worktime
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xFormsCal 
 mkgithub ~/dev/xterm-color-count 
-mkgithub -h 
 mkgithub --help 
 mogrify -crop 2316x1303+0+0 ./*.jpg 
 mogrify -format jpg ./*.CR2 # convert 
 mount 
 mount-image ./*.iso 
-mount -n -o remount,defaults /dev/sda1 / 
+mount --no-mtab --options remount,defaults /dev/sda1 / 
 mountpoint /home 
-mp3fs -b 256 music mp3 
+mp3fs -obitrate 256 music mp3 
 mutt 
 mutt -d 5 
 mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
@@ -923,7 +942,7 @@ mv file{.orig,}
 ncal -3bM 
 neato -O -Tsvg ./*.dot 
 netstat 
-netstat -a # internet connections sockets 
+netstat --all # internet connections sockets 
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
@@ -937,11 +956,11 @@ npm ls -g
 npm -v 
 nslookup example.org # dns internet lookup network 
 ntpq -p # query list peers 
-objdump -p $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg -S | cut -d ':' -f 1 | sort -u # binary dependency packaging 
+objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl x509 -noout -fingerprint -text < my.crt 
 passwd # password user 
-patch -p0 < patch.diff 
+patch --strip 0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
@@ -949,7 +968,7 @@ perl_modules
 perl_module_version URI 
 perl --version 
 pgrep -u root cron 
-php -a 
+php --interactive 
 php --version 
 pid=$! # process pid 
 ping -c 4 example.org 
@@ -964,23 +983,23 @@ printf $"\0" | uniname -bcepu # 1 nul
 printf \\0 | uniname -bcepu # 1 nul 
 printf \0 | uniname -bcepu # 1 zero 
 printf $'\0' | wc --chars # 0 
-printf "$IFS" | od -t x1 # string character byte convert hex dump posix 
-printf "$IFS" | xxd -g1 # string character byte convert hex dump 
+printf "$IFS" | od --format x1 # string character byte convert hex dump posix 
+printf "$IFS" | xxd -groupsize 1 # string character byte convert hex dump 
 printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 printf %q "$IFS" 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp -l <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -o) # clipboard test 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard test 
 printf %s "${IFS:0:1}" 
 prove 
-prove -r 
+prove --recurse 
 pry 
 psql dbname username < dump.sql # postgresql 
-psql -U db_user db_name # postgresql 
+psql --username db_user db_name # postgresql 
 psql --version # postgresql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
-puppet describe -s user 
+puppet describe --short user 
 puppet resource --help 
 puppet resource --types 
 puppet resource user 
@@ -992,14 +1011,14 @@ rails c # console
 rails d controller sessions # delete database 
 rails d scaffold user # delete database 
 rails g controller sessions new create destroy # create database 
+rails generate spine:scaffold user name # create javascript 
 rails g --help # generators 
 rails g migration add_email_to_user email:string email_plain_text_only:boolean # create database 
 rails g scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
-rails g spine:scaffold user name # create javascript 
 rails new project_name # create 
-rails s -e production -p 3002 # start service web 
-rails s -e test -p 3001 # start service web 
-rails s # start service web 
+rails server --environment production --port 3002 # start service web 
+rails server --environment test --port 3001 # start service web 
+rails server # start service web 
 rails --version 
 rake assets:clean 
 rake db:migrate --trace # rails database 
@@ -1014,13 +1033,13 @@ rake --tasks # rails
 rake test # rails 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname # remote keyboard share windows 
-readlink -f -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
+readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
-rename -n 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq -d # safe 
-rename -nv 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
+rename --no-act 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
+rename --no-act --verbose 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
 reset # clear log remove terminal text 
 rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rmdir ./* 
@@ -1029,7 +1048,7 @@ rm file
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
-ruby -v 
+ruby --verbose 
 rvm gemset empty project_name # gems delete uninstall 
 rvm get stable # install ruby version manager 
 rvm help do 
@@ -1049,7 +1068,7 @@ rvm use 1.9.3-p0
 rvm use system 
 rvm use system --default 
 rvm version 
-sandbox="$(mktemp -d)" 
+sandbox="$(mktemp --directory)" 
 sass-convert all.s{a,c}ss 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
@@ -1059,12 +1078,12 @@ scp -r file example.org:~
 screen 
 screen -dRR name # resume 
 screen -dRR # resume 
-screen -ls # list 
+screen -list 
 screen -S compile-project 
-sed -e '9d' file # delete line 
-sed -e '/^$/d' file 
-sed -e '/^[[:space:]]*$/d' file 
- sed -i -e 's/ *$/ /g' ~/dev/tilde/.bash_history 
+sed --expression '9d' file # delete line 
+sed --expression '/^$/d' file 
+sed --expression '/^[[:space:]]*$/d' file 
+ sed --in-place --expression 's/ *$/ /g' ~/dev/tilde/.bash_history 
 service snmpd status 
 set +o noclobber 
 set -o nounset 
@@ -1073,12 +1092,12 @@ set -o pipefail
 set +o pipefail 
 (set -o posix; set) 
 (set -o posix; set) | grep --only-matching ^COMP[^=]* 
+set +o xtrace # disable 
+set -o xtrace # enable 
 ./setup.py test 
-set -x 
-set +x 
 setxkbmap -option compose:caps # keyboard 
 setxkbmap -print # keyboard settings 
-setxkbmap -v | awk -F "+" '/symbols/ {print $2}' # keyboard layout settings 
+setxkbmap -verbose | awk --field-separator "+" '/symbols/ {print $2}' # keyboard layout settings 
 sh 
 sha1sum --check sha1sums.txt # verify checksum 
 sha1sum file # checksum 
@@ -1099,7 +1118,7 @@ snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
 software-properties-gtk # software sources 
- sort -u -o ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
+ sort --unique --output ~/dev/tilde/.bash_history ~/dev/tilde/.bash_history 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
@@ -1118,7 +1137,7 @@ strace -p 123 # process
 strings $(which strings) 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
-sudo addgroup $USER group 
+sudo addgroup "$USER" group 
 sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
@@ -1198,13 +1217,13 @@ sudo apt-get purge 'ubuntuone-*'
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
-sudo chfn -f "My Name" $USER # full name 
+sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown -R "$USER":"$USER" ~/.matplotlib 
-sudo chown -R "$USER":"$USER" RECOVERED_FILES 
+sudo chown --recursive "$USER":"$USER" ~/.matplotlib 
+sudo chown --recursive "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
-sudo chroot /var/jail/*$USER su -l $USER # jail 
+sudo chroot /var/jail/*"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
@@ -1228,7 +1247,7 @@ sudo etherape # network traffic visualization
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo iotop 
-sudo iotop -bn 1 
+sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo ldconfig 
 sudo lshw | less 
@@ -1240,19 +1259,19 @@ sudo make pkginstall 2>&1 | tee make_pkginstall.out~
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
 sudo mkdir /media/mountpoint 
-sudo mount -a 
-sudo mount -o remount,ro /dev/sda1 # readonly restore 
-sudo mount -o remount,rw /dev/sda1 # writeable 
+sudo mount --all 
+sudo mount --options remount,ro /dev/sda1 # readonly restore 
+sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
-sudo paperconfig -p a4 
+sudo paperconfig --paper a4 
 sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
 sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
-sudo rm -rf ~/build ~/src 
-sudo sed -i.bak -e 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
-sudo sed -i -e 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
+sudo rm --force --recursive ~/build ~/src 
+sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
+sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service ntp stop && sudo ntpdate ntp.example.org && sudo service ntp start # force manual synchronize time 
 sudo service postgresql reload 
@@ -1264,63 +1283,75 @@ sudo update-alternatives --set editor "$(which vim.basic)" # default
 sudo update-alternatives --set x-www-browser "$(which firefox)" # default 
 sudo updatedb 
 sudo update-grub 
-sudo update-java-alternatives --jre -s java-6-sun 
-sudo -u postgres createuser -s username 
-sudo usermod -g group $USER # change default group 
-sudo usermod -G "$(id -nG | sed -e 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" $USER # remove group 
+sudo update-java-alternatives --jre --set java-6-sun 
+sudo -u postgres createuser --username username 
+sudo usermod --gid group "$USER" # change default group 
+sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
 sudo visudo 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
 svn add . 
-svn blame -x -w Makefile 
-svn cat -r 1 Makefile | less 
-svn ci -m "Test" 
-svn ci --non-recursive doc 
-svn co http://svn/repo ~/dir 
-svn cp http://svn/repo/trunk http://svn/repo/branches/branch-name 
+svn blame --extensions --ignore-all-space Makefile 
+svn cat --revision 1 Makefile | less 
+svn checkout http://svn/repo ~/dir 
+svn commit --message "Test" 
+svn commit --non-recursive doc 
+svn copy http://svn/repo/trunk http://svn/repo/branches/branch-name 
+svn delete --force file 
+svn delete --keep-local file 
 svn diff 
-svn diff -c 1 
-svn diff -c 1 -x -w 
+svn diff --change 1 
+svn diff --change 1 --extensions --ignore-all-space 
 svn diff --diff-cmd diff > patch.diff 
+svn diff --extensions --ignore-all-space 
+svn diff --extensions --ignore-all-space --ignore-eol-style 
+svn diff --extensions --ignore-space-change 
+svn diff --extensions --unified 
+svn diff --extensions --unified > patch.diff 
 svn diff | less 
-svn diff -r 1:HEAD 
-svn diff -r PREV 
-svn diff -u 
-svn diff -x -b 
-svn diff -x -u 
-svn diff -x -u > patch.diff 
-svn diff -x -w 
-svn diff -x -w --ignore-eol-style 
+svn diff --revision 1:HEAD 
+svn diff --revision PREV 
 svn help 
-svn help ci 
-svn help co 
-svn help diff 
-svn help log 
-svn help merge 
+svn help blame | pager 
+svn help cat | pager 
+svn help checkout | pager 
+svn help commit | pager 
+svn help copy | pager 
+svn help delete | pager 
+svn help diff | pager 
+svn help help | pager 
+svn help info | pager 
+svn help list | pager 
+svn help log | pager 
+svn help merge | pager 
+svn help | pager 
+svn help propdel | pager 
+svn help propedit | pager 
+svn help propset | pager 
+svn help revert | pager 
+svn help status | pager 
 svn info 
-svn info | sed -ne 's/^Revision: //p' # revision 
+svn info | sed --quiet --expression 's/^Revision: //p' # revision 
 svn list http://svn/repo 
 svn log | less 
-svn log -r 1 
+svn log --revision 1 
 svn log --stop-on-copy | less 
 svn log --verbose | less 
 svn merge http://svn/repo/branches/name 
-svn merge -r 99:HEAD http://svn/repo/branches/name 
-svn merge -r HEAD:99 . # reverse 
+svn merge --revision 99:HEAD http://svn/repo/branches/name 
+svn merge --revision HEAD:99 . # reverse 
 svn propdel svn:ignore . 
 svn propedit svn:ignore . 
 svn propset svn:executable 1 test.sh 
 svn propset svn:keywords 'Id HeadURL' test.sh 
 svn revert Makefile 
 svn revert --recursive . 
-svn rm --force file 
-svn rm --keep-local file 
-svn st 
-svn up 
+svn status 
+svn update 
 svn --version 
 TAGS=all guard 
-TAGS=$USER guard 
-tail -F /var/log/messages 
+TAGS="$USER" guard 
+tail --follow name --retry /var/log/messages 
 tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
 tar --gzip --extract --file ~/tilde.tar.gz --transform='s/.*\///' # decompress flatten gzip 
@@ -1334,7 +1365,7 @@ tkmib &
 todos -- file # convert newline 
 top 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-touch -d '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
+touch --date '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
 traceroute example.org 
 trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
@@ -1342,7 +1373,7 @@ trap # signal
 traps="$(trap)" # signal 
 tty 
 txt2cloud 
-txt2cloud -m3 < $(which txt2cloud) > cloud.xhtml 
+txt2cloud --min 3 < $(which txt2cloud) > cloud.xhtml 
 type -a true 
 udevadm info --export-db 
 ulimit -a 
@@ -1364,7 +1395,7 @@ vainfo
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
-vlc -H 
+vlc --full-help | pager 
 vlc --spdif --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
@@ -1372,15 +1403,15 @@ vmware
 w 
 wait # process pid 
 watch 'svn diff' 
-wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut -d ' ' -f 1 # line count test 
+wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -mindepth 1 -exec printf '%s\0' {} \; | shuf -n 10 -z) # random shuffle files 
-while IFS= read -r -d '' -u 9; do if [[ "$(file -bs --mime-type -- "$REPLY")" = text/* ]]; then sed -i -e 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} \;) # whitespace eol eof 
-while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
-while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait -e close_write --format %f -m .) 
-while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait -e close_write --format %f -m test/*) 
+while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated) # random shuffle files 
+while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} \;) # whitespace eol eof 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
+while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait --event close_write --format %f --monitor test/*) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
 while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
@@ -1408,7 +1439,7 @@ x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux de
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
 x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head --lines=1 
-yes | dh_make -s && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
+yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 

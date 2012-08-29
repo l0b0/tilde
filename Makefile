@@ -16,6 +16,10 @@ DOTFILES = $(wildcard .*rc) \
 .PHONY: all
 all: test
 
+.PHONY: clean
+clean:
+	$(CURDIR)/scripts/cleanup.sh --verbose
+
 .PHONY: test
 test:
 	$(CURDIR)/tests/tests.sh
