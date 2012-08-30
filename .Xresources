@@ -1,7 +1,7 @@
-XTerm*metaSendsEscape: true
-XTerm*printAttributes: 2
-XTerm*printerCommand: cat - | $HOME/dev/tilde/scripts/ansi2html.sh > "`mktemp --tmpdir xterm-screenshot.XXXXXXXXXX.html`"
-XTerm*reverseVideo: true
-XTerm*saveLines: 32767
 XTerm.VT100.geometry: 96x66
+XTerm.VT100.metaSendsEscape: true
+XTerm.VT100.printAttributes: 2
+XTerm.VT100.printerCommand: cat - | $HOME/dev/tilde/scripts/ansi2html.sh > "`mktemp --tmpdir xterm-screenshot.XXXXXXXXXX.html`"
+XTerm.VT100.reverseVideo: true
+XTerm.VT100.saveLines: 32767
 XTerm.VT100.translations: #override Meta <KeyPress> P: print() \n
