@@ -1172,6 +1172,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
+sudo apt-get install hunspell-de-de hunspell-fr myspell-nb # language dictionary german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
@@ -1246,6 +1247,7 @@ sudo /etc/init.d/postgresql reload
 sudo etherape # network traffic visualization 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
+sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
@@ -1269,6 +1271,7 @@ sudo pip install --upgrade vcard
 sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
+sudo rename --no-act 's/$/.bak/' /usr/share/hunspell/en_!(US).{aff,dic} # language dictionary 
 sudo rm --force --recursive ~/build ~/src 
 sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
