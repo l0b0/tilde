@@ -2,6 +2,7 @@ PREFIX = $(HOME)
 
 DOTFILES = $(wildcard .*rc) \
            $(wildcard .bash_*) \
+           .config \
            .gitconfig \
            .imapfilter \
            .profile \
