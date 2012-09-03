@@ -1423,7 +1423,7 @@ whois example.org # dns lookup internet network
 who # logins users 
 wine --version 
 wnpp-alert # Debian packaging 
-worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml 
+worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
 xev 
 xinput --list 
 xinput --list 10 
@@ -1441,7 +1441,6 @@ x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux d
 x-www-browser /usr/share/doc/git-doc/index.html # help 
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
-x-www-browser ~/week.xhtml 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
