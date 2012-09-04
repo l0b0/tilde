@@ -823,6 +823,7 @@ man who # help
 man whois # help 
 man wnpp-alert # help 
 man xargs # help 
+man xautolock # help 
 man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
@@ -1215,6 +1216,7 @@ sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
+sudo apt-get install xautolock 
 sudo apt-get install xournal # editor pdf 
 sudo apt-get purge 'overlay-scrollbar*' # unity 
 sudo apt-get purge 'ubuntuone-*' 
