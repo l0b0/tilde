@@ -40,6 +40,7 @@ bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\
 ~/bin/git diff --check 
 ~/bin/git diff --minimal 
 ~/bin/git diff --staged --minimal 
+branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
@@ -634,6 +635,7 @@ man curl # help
 man cut # help 
 man date # help 
 man df # help 
+man dhclient # help 
 man dh_make # help 
 man diff # help 
 man dig # help 
@@ -1230,6 +1232,7 @@ sudo cpanm Net::LDAP # install ldap
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
+sudo dhclient -r wlan0 && sudo dhclient wlan0 # request refresh dhcp ip 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
