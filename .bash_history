@@ -635,6 +635,7 @@ man curl # help
 man cut # help 
 man date # help 
 man df # help 
+man dhclient # help 
 man dh_make # help 
 man diff # help 
 man dig # help 
@@ -1231,6 +1232,7 @@ sudo cpanm Net::LDAP # install ldap
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
+sudo dhclient -r wlan0 && sudo dhclient wlan0 # request refresh dhcp ip 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
