@@ -40,6 +40,7 @@ bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\
 ~/bin/git diff --check 
 ~/bin/git diff --minimal 
 ~/bin/git diff --staged --minimal 
+branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
