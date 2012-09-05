@@ -612,6 +612,7 @@ man arandr # help
 man arch # help 
 man ascii # help 
 man avconv # help 
+man awesome # help 
 man awk # help 
 man bash # help 
 man bc # help 
@@ -1441,6 +1442,7 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
+x-www-browser /usr/share/doc/awesome/luadoc/index.html # api help 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html # help 
