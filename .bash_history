@@ -1255,6 +1255,7 @@ sudo etherape # network traffic visualization
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
+sudo ifconfig wlan0 192.168.0.99 && sudo dhclient wlan0 # set ip address network 
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
