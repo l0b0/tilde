@@ -48,16 +48,6 @@ find_date_sorted() {
     done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%TdT%TH:%TM:%TS %p\0' | sort -z)
 }
 
-quote_shell() {
-    # Ensure that the output is escaped so that each line corresponds to a NUL-
-    # separated entry
-    while IFS= read -r -d ''
-    do
-        printf %q "$REPLY"
-        printf '\n'
-    done
-}
-
 substring() {
     # Extract substring with positive or negative indexes
     # @param $1: String
