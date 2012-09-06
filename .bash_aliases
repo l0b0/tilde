@@ -27,15 +27,6 @@ upgrade() {
     sudo sh -c "apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get autoclean"
 }
 
-# Diff
-wdiffc() {
-    if [ -z "${2-}" ]
-    then
-        return 2
-    fi
-    wdiff -w "$(tput bold;tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold;tput setaf 2)" -z "$(tput sgr0)" "$@"
-}
-
 # Find
 find_date_sorted() {
     # Sorted by ISO date, ascending
