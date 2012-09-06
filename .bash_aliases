@@ -33,9 +33,7 @@ find_date_sorted() {
     # Separated by NUL to be able to reuse in other loops
     while IFS= read -r -d '' -u 9
     do
-        path="${REPLY#* }"
-        printf %s "$path"
-        printf '\0'
+        printf '%s\0' "${REPLY#* }"
     done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%TdT%TH:%TM:%TS %p\0' | sort -z)
 }
 
