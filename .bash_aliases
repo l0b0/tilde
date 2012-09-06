@@ -229,7 +229,7 @@ locale_value() {
     fi
 
     #echo "$varname" >&2
-    printf "${!varname}"
+    echo "${!varname}"
 }
 
 schroedinger() {
