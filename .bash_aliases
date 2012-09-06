@@ -87,37 +87,6 @@ substring() {
     printf %s "${1:$start:$length}"
 }
 
-find_grouped() {
-    # Outputs files (not directories) recursively, with an empty line between
-    # directories.
-    while [ -n "${1-}" ]
-    do
-        target="${1%%/}/"
-        if [ ! -d "$target" ]
-        then
-            echo "${target}: No such directory"
-            return 1
-        fi
-
-        while IFS= read -rd '' dir
-        do
-            files_found=0
-            while IFS= read -rd '' path
-            do
-                files_found=1
-                ls -- "$path"
-            done < <(find "$dir" -maxdepth 1 \( -type f -o -type l \) -exec printf '%s\0' {} \; | sort -z)
-
-            if [ $files_found -eq 1 ]
-            then
-                echo
-            fi
-        done < <(find "$target" -mindepth 1 -type d -exec printf '%s\0' {} \; | sort -z)
-
-        shift
-    done
-}
-
 path_common() {
     if [ -z "${2-}" ]
     then
