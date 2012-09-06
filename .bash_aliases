@@ -1,9 +1,9 @@
 # enable color support
 if [ -x /usr/bin/dircolors ]
 then
-    if [ -r $HOME/.dircolors ]
+    if [ -r "$HOME/.dircolors" ]
     then
-        eval "$(dircolors -b $HOME/.dircolors)"
+        eval "$(dircolors -b "$HOME/.dircolors")"
     else
         eval "$(dircolors -b)"
     fi
@@ -75,23 +75,23 @@ path_common() {
     # Remove repeated slashes
     for param
     do
-        param=$(printf %s. "$1" | tr -s "/")
+        param="$(printf %s. "$1" | tr -s "/")"
         set -- "$@" "${param%.}"
         shift
     done
 
-    common_path=$1
+    common_path="$1"
     shift
 
     for param
     do
-        while case ${param%/}/ in "${common_path%/}/"*) false;; esac; do
-            new_common_path=${common_path%/*}
+        while case "${param%/}/" in "${common_path%/}/"*) false;; esac; do
+            new_common_path="${common_path%/*}"
             if [ "$new_common_path" = "$common_path" ]
             then
                 return 1 # Dead end
             fi
-            common_path=$new_common_path
+            common_path="$new_common_path"
         done
     done
     printf %s "$common_path"
@@ -101,12 +101,12 @@ path_common() {
 bash_timeout() {
     # Set the idle timeout before the shell will be closed automatically
     # @param $1: Timeout in <N>d<N>h<N>m<N>[s] format
-    local timeout=$1
-    timeout=${timeout//d/*24h}
-    timeout=${timeout//h/*60m}
-    timeout=${timeout//m/*60}
-    timeout=${timeout//s/}
-    export TMOUT=$(($timeout))
+    local timeout="$1"
+    timeout="${timeout//d/*24h}"
+    timeout="${timeout//h/*60m}"
+    timeout="${timeout//m/*60}"
+    timeout="${timeout//s/}"
+    export TMOUT="$(($timeout))"
 }
 
 # Perl
@@ -114,7 +114,7 @@ perl_module_version() {
     local version
     for module
     do
-        version=$(perl -M${module} -e "print \$${module}::VERSION")
+        version="$(perl -M${module} -e "print \$${module}::VERSION")"
         if [ -n "$version" ]
         then
             echo "$module $version"
@@ -173,7 +173,7 @@ longer() {
         do
             if [ ${#REPLY} -gt $length ]
             then
-                printf %q $path : $line_number :... ${REPLY:${length}}
+                printf %q "$path" : $line_number :... "${REPLY:${length}}"
                 printf '\n'
             fi
             let line_number++
@@ -253,7 +253,7 @@ ltrim() {
         trimmed=true
     done 9<&0
 
-    if [[ $REPLY ]]
+    if [[ "$REPLY" ]]
     then
         # No delimiter at last line
         if [ -n "${trimmed+defined}" ]
@@ -279,7 +279,7 @@ rtrim() {
         previous="$REPLY"
     done 9<&0
 
-    if [[ $REPLY ]]
+    if [[ "$REPLY" ]]
     then
         # No delimiter at last line
         last="$REPLY"
@@ -308,7 +308,7 @@ trs() {
     # $2, $4, ...: Search strings
     # $3, $5, ...: Replacement strings
 
-    local string=$1
+    local string="$1"
     shift
 
     while [ $# -gt 0 ]
@@ -368,7 +368,7 @@ collapse() {
         old_name="$name"
         unset first
     done
-    if [[ $name ]]
+    if [[ "$name" ]]
     then
         [ "$name" != "${old_name-}" -a "${first+defined}" != defined ] && printf "${IFS: -1}"
         [ "$name" != "${old_name-}" ] && printf %s "$name"
