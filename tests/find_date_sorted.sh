@@ -41,6 +41,7 @@ setUp() {
 }
 
 tearDown() {
+    cd ..
     rm -r -- "$test_dir"
 }
 
