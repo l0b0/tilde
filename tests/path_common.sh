@@ -81,6 +81,11 @@ test_complex() {
         "$(path_common $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n' \
             $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n'; echo x)" \
         $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x
+    assertEquals \
+        'Complicated path with bracketing' \
+        "$(path_common $'/test/--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n/foo' \
+            $'/test/--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n/bar'; echo x)" \
+        $'/test/--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x
 }
 
 # load and run shUnit2
