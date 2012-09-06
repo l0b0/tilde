@@ -118,26 +118,6 @@ path_common() {
     printf %s "$common_path"
 }
 
-compare_dirs() {
-    # Shows which files and directories exist in one directory but not both
-    if [ $# -ne 2 ]
-    then
-        echo "Usage: compare_dirs dir1 dir2" >&2
-        return 2
-    fi
-    for path
-    do
-        if [ ! -d "$path" ]
-        then
-            echo "Not a directory: $path" >&2
-            return 1
-        fi
-    done
-    comm -3 \
-        <(cd -- "$1" && find . -printf '%P\0' | sort -z | quote_shell) \
-        <(cd -- "$2" && find . -printf '%P\0' | sort -z | quote_shell)
-}
-
 # Bash
 bash_timeout() {
     # Set the idle timeout before the shell will be closed automatically
