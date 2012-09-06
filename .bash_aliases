@@ -144,12 +144,14 @@ perl_modules_test() {
 
 # String handling
 shortest() {
-    # Print only the (first) shortest line
+    # Print only the shortest line
+    # If multiple lines match, only the first one will be printed
     awk '(NR == 1 || length < length(line)) { line = $0 } END { print line }'
 }
 
 longest() {
-    # Print only the (first) longest line
+    # Print only the longest line
+    # If multiple lines match, only the first one will be printed
     awk '(NR == 1 || length > length(line)) { line = $0 } END { print line }'
 }
 
