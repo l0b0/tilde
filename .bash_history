@@ -613,7 +613,6 @@ man arandr # help
 man arch # help 
 man ascii # help 
 man avconv # help 
-man awesome # help 
 man awk # help 
 man bashdb # help 
 man bash # help 
@@ -1151,7 +1150,6 @@ sudo apt-get install arandr # screen layout graphics hardware
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
-sudo apt-get install awesome awesome-extra 
 sudo apt-get install bashdb 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds wormux xmoto 
 sudo apt-get install bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
@@ -1445,7 +1443,6 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
-x-www-browser /usr/share/doc/awesome/luadoc/index.html # api help 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html # help 
