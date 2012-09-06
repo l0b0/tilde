@@ -391,7 +391,6 @@ empty_line_before_eof() {
     #   Save backups to filename.bak, and process each file
     #
     # Command breakdown:
-    # '.' denotes any character *except* newline
     # '$' denotes the end of file
     # 'a\' appends the following text (which is nothing, in this case) on a new line
     # In other words, if the last line contains a character that is not newline,
