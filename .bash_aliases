@@ -134,12 +134,12 @@ perl_modules() {
 }
 
 perl_modules_test() {
-    local -i error=0
+    local -i exit_code=0
     while IFS= read -r -u 9
     do
-        perl_module_version "$REPLY" 2>&1 >/dev/null || let error=1
+        perl_module_version "$REPLY" 2>&1 >/dev/null || let exit_code=1
     done 9< <( perl_modules )
-    return $error
+    return $exit_code
 }
 
 # String handling
