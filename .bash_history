@@ -426,6 +426,7 @@ gnome-screensaver-command --lock
 gnome-screensaver-command --version 
 gnome-screensaver --version 
 gnome-shell --version 
+gnome-specimen & 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
@@ -672,6 +673,7 @@ man glabels # help
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
 man gnome-shell # help 
+man gnome-specimen # help 
 man gnome-terminal # help 
 man grep # help 
 man groupadd # help 
@@ -1174,6 +1176,7 @@ sudo apt-get install fortune-mod # strfile
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install gimp gimp-help-en glabels graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
+sudo apt-get install gnome-specimen # font graphics preview 
 sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
