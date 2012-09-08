@@ -413,6 +413,7 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
+glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
 glc-play recording.glc -a 1 -o recording.wav # audio 
@@ -667,6 +668,7 @@ man getopt # help
 man gitk # help 
 man git-svn # help 
 man gksu # help 
+man glabels # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
 man gnome-shell # help 
@@ -1170,7 +1172,7 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gimp gimp-help-en glabels graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
