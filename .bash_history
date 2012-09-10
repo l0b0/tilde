@@ -984,7 +984,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 pip help install 
-pngcrush -brute -d /target ./*.png 
+pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul 
 printf "\0" | uniname -bcepu # 1 nul 
