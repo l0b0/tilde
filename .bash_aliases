@@ -67,7 +67,7 @@ substring() {
 }
 
 path_common() {
-    if [ -z "${2-}" ]
+    if [ $# -ne 2 ]
     then
         return 2
     fi
