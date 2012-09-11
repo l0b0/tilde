@@ -413,6 +413,7 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
+glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
 glc-play recording.glc -a 1 -o recording.wav # audio 
@@ -425,6 +426,7 @@ gnome-screensaver-command --lock
 gnome-screensaver-command --version 
 gnome-screensaver --version 
 gnome-shell --version 
+gnome-specimen & 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
@@ -613,7 +615,6 @@ man arandr # help
 man arch # help 
 man ascii # help 
 man avconv # help 
-man awesome # help 
 man awk # help 
 man bashdb # help 
 man bash # help 
@@ -668,9 +669,11 @@ man getopt # help
 man gitk # help 
 man git-svn # help 
 man gksu # help 
+man glabels # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
 man gnome-shell # help 
+man gnome-specimen # help 
 man gnome-terminal # help 
 man grep # help 
 man groupadd # help 
@@ -981,7 +984,7 @@ ping -c 4 example.org
 ping example.org 
 pip help 
 pip help install 
-pngcrush -brute -d /target ./*.png 
+pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul 
 printf "\0" | uniname -bcepu # 1 nul 
@@ -1152,7 +1155,6 @@ sudo apt-get install arandr # screen layout graphics hardware
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
-sudo apt-get install awesome awesome-extra 
 sudo apt-get install bashdb 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds wormux xmoto 
 sudo apt-get install bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
@@ -1173,8 +1175,9 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install gimp gimp-help-en graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gimp gimp-help-en glabels graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
+sudo apt-get install gnome-specimen # font graphics preview 
 sudo apt-get install gnome-tweak-tool 
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
@@ -1446,7 +1449,6 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
-x-www-browser /usr/share/doc/awesome/luadoc/index.html # api help 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html # help 
