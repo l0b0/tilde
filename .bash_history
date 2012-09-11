@@ -1231,7 +1231,7 @@ sudo chown nobody "$sandbox"
 sudo chown --recursive "$USER":"$USER" ~/.matplotlib 
 sudo chown --recursive "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
-sudo chroot /var/jail/*"$USER" su --login "$USER" # jail 
+sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
