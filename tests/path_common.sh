@@ -28,13 +28,6 @@ oneTimeSetUp() {
     . "${HOME}/.bash_aliases" >/dev/null
 }
 
-test_empty() {
-    string=
-    assertEquals ltrim "$(ltrim <<< "$string"; printf x)" x
-    assertEquals rtrim "$(printf "$string" | rtrim; printf x)" x
-    assertEquals trim  "$(printf "$string" | trim; printf x)"  x
-}
-
 test_simple() {
     assertEquals \
         'Single character' \
