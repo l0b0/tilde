@@ -94,6 +94,7 @@ cronlist --to '23:59:59'
 crontab -e # edit 
 crontab -l 
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' 
+csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' 
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
