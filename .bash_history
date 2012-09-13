@@ -545,6 +545,7 @@ ln --symbolic -- target source
 locale 
 locale --all-locales 
 locate file 
+longer 80 example.txt 
 longest < ~/.bash_history 
 lpstat -v 
 lscpu # hardware architecture processor 
