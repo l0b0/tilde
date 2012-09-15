@@ -1149,6 +1149,7 @@ strace -p 123 # process
 strings $(which strings) 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
+sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
 sudo addgroup "$USER" group 
 sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
