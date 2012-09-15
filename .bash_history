@@ -974,6 +974,7 @@ openssl x509 -noout -fingerprint -text < my.crt
 passwd # password user 
 patch --strip 0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
+pavucontrol & 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl_modules 
@@ -1203,6 +1204,7 @@ sudo apt-get install nfs-common # filesystem
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
+sudo apt-get install pavucontrol videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install pgadmin3 # dev postgresql 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
@@ -1221,7 +1223,6 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree #
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
-sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
