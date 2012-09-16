@@ -974,7 +974,7 @@ openssl x509 -noout -fingerprint -text < my.crt
 passwd # password user 
 patch --strip 0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
-pavucontrol & 
+pavucontrol & # pulseaudio volume 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl_modules 
