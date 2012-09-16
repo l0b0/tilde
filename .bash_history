@@ -1416,9 +1416,10 @@ vainfo
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
+vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
-vlc --spdif --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
-vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vmware 
 w 
