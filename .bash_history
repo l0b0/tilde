@@ -1197,6 +1197,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libpg-java pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
 sudo apt-get install lyx # latex 
 sudo apt-get install markdown # convert 
@@ -1208,7 +1209,6 @@ sudo apt-get install ntp-doc
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio 
-sudo apt-get install pgadmin3 # dev postgresql 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
