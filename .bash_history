@@ -1181,7 +1181,7 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install gimp gimp-help-en glabels graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-specimen # font graphics preview 
 sudo apt-get install gnome-tweak-tool 
