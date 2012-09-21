@@ -419,6 +419,45 @@ fullname() {
     getent passwd -- "${@-$USER}" | cut -d ':' -f 5 | cut -d ',' -f 1
 }
 
+watch_url() {
+    # Watch a URL for changes, and open it in a web browser when a change is
+    # detected.
+    # @param $1: URL
+    # @param $2: Optional replacements in sed style, e.g.
+    #            /foo/d;s/123/456/g;...
+    # @param $3: Interval between checks; by default 1 hour
+    if [ $# -eq 0 -o $# -gt 3 ]
+    then
+        echo 'Synopsis: watch_url URL [REPLACEMENTS] [INTERVAL]' >&2
+        return 2
+    fi
+
+    local -r url="$1"
+    local -r dir="$(mktemp --directory)"
+    local -r file="${dir}/index.html"
+
+    # Get the current document
+    wget --quiet --output-document "$file" "$url"
+
+    # Replace in the current document
+    sed -i -e "${2-}" "${file}"
+
+    # Check for differences at intervals
+    # Add `--quiet` to the `diff` command if you don't want to see the
+    # difference.
+    while diff "$file" <(wget --quiet --output-document - "$url" | sed -e "${2-}")
+    do
+        sleep "${3-1h}"
+    done
+
+    # Cleanup
+    rm -- "$file"
+    rmdir -- "$dir"
+
+    # Start browser
+    x-www-browser "$url"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"

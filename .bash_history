@@ -507,8 +507,8 @@ ip route
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
@@ -972,10 +972,12 @@ ntpq -p # query list peers
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl x509 -noout -fingerprint -text < my.crt 
+paman & # pulseaudio manager 
+paprefs & # pulseaudio preference 
 passwd # password user 
 patch --strip 0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
-pavucontrol & 
+pavucontrol & # pulseaudio volume 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl_modules 
@@ -1196,6 +1198,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libpg-java pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
 sudo apt-get install lyx # latex 
 sudo apt-get install markdown # convert 
@@ -1206,8 +1209,7 @@ sudo apt-get install nfs-common # filesystem
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
-sudo apt-get install pavucontrol videolan-doc vlc vlc-plugin-pulse # video audio 
-sudo apt-get install pgadmin3 # dev postgresql 
+sudo apt-get install paman paprefs pavucontrol # pulseaudio 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
@@ -1225,6 +1227,7 @@ sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree #
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
+sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
@@ -1417,14 +1420,16 @@ vainfo
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 visudo 
+vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
-vlc --spdif --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
-vlc --spdif --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
+vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vmware 
 w 
 wait # process pid 
 watch 'svn diff' 
+watch_url http://example.org/ '/irrelevant variable/d;s/search/replacement/g' 1d # change 
 wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
 wget --output-document - http://user:password@host/function?id=foo 2>service.log | json_pp # web service 
