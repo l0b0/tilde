@@ -84,6 +84,7 @@ completions git config '' | grep user # autocomplete
 ./configure --help | less # packaging 
 ./configure # packaging 
 convert ./*.jpg output.pdf 
+convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
 cp file{,.orig} # filesystem 
 createdb --template template0 --username username dbname # postgresql 
@@ -633,6 +634,7 @@ man chown # help
 man chroot # help 
 man cmp # help 
 man comm # help 
+man convert # help 
 man cp # help 
 man createdb # help postgresql 
 man createuser # help postgresql 
