@@ -1287,6 +1287,7 @@ sudo mount --options remount,ro /dev/sda1 # readonly restore
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
 sudo paperconfig --paper a4 
+sudo passwd --delete root # disable 
 sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
 sudo pip install --upgrade worktime 
