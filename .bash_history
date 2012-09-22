@@ -702,6 +702,7 @@ man iwconfig # help
 man java # help 
 man jhead # help 
 man join # help 
+man json_pp # help 
 man kill # help 
 man kvm # help 
 man ldconfig # help 
@@ -1184,7 +1185,7 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install gimp gimp-help-en glabels graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
+sudo apt-get install gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-specimen # font graphics preview 
 sudo apt-get install gnome-tweak-tool 
@@ -1434,6 +1435,7 @@ watch 'svn diff'
 watch_url http://example.org/ '/irrelevant variable/d;s/search/replacement/g' 1d # change 
 wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
+wget --output-document - http://user:password@host/function?id=foo 2>service.log | json_pp # web service 
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
