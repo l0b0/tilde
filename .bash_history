@@ -83,7 +83,7 @@ comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p')
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
 ./configure # packaging 
-convert ./*.jpg output.pdf 
+convert ./*.jpg output.pdf # graphics 
 convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
 cp file{,.orig} # filesystem 
