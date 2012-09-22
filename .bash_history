@@ -930,6 +930,7 @@ mkgithub ~/dev/trim
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr # compress 
+mkgithub ~/dev/urlwatcher 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
 mkgithub ~/dev/vcf 
