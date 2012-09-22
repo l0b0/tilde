@@ -225,7 +225,6 @@ fgit --help
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
-fglrxinfo 
 file README.markdown 
 find_date_sorted . -mindepth 1 # files 
 find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
@@ -1155,7 +1154,6 @@ sudo add-apt-repository ppa:chrysn/openscad
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
 sudo addgroup "$USER" group 
-sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
