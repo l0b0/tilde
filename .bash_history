@@ -1157,6 +1157,7 @@ sudo add-apt-repository ppa:chrysn/openscad
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
 sudo addgroup "$USER" group 
+sudo apt-add-repository ppa:webupd8team/java && sudo apt-get update && sudo apt-get install oracle-java7-installer 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
