@@ -83,7 +83,9 @@ comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p')
 completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
 ./configure # packaging 
-convert ./*.jpg output.pdf 
+convert -density 150 -quality 100 input.pdf output.jpg 
+convert ./*.jpg output.pdf # graphics 
+convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
 cp file{,.orig} # filesystem 
 createdb --template template0 --username username dbname # postgresql 
@@ -224,7 +226,6 @@ fgit --help
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
-fglrxinfo 
 file README.markdown 
 find_date_sorted . -mindepth 1 # files 
 find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
@@ -559,6 +560,7 @@ lsof +c 0 | grep gnome-terminal | wc --lines # count files
 lsof # files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
+lsof -p $$ # files process 
 lspci | grep --ignore-case audio 
 lsusb | grep --ignore-case cam 
 lyx file.lyx 
@@ -633,6 +635,7 @@ man chown # help
 man chroot # help 
 man cmp # help 
 man comm # help 
+man convert # help 
 man cp # help 
 man createdb # help postgresql 
 man createuser # help postgresql 
@@ -930,6 +933,7 @@ mkgithub ~/dev/trim
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
 mkgithub ~/dev/unrarr # compress 
+mkgithub ~/dev/urlwatcher 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
 mkgithub ~/dev/vcf 
@@ -1154,7 +1158,6 @@ sudo add-apt-repository ppa:chrysn/openscad
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
 sudo addgroup "$USER" group 
-sudo amdcccle # catalyst video 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install apt-listchanges # package 
@@ -1288,6 +1291,7 @@ sudo mount --options remount,ro /dev/sda1 # readonly restore
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo nvidia-settings 
 sudo paperconfig --paper a4 
+sudo passwd --delete root # disable 
 sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
 sudo pip install --upgrade worktime 
