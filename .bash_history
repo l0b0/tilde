@@ -560,6 +560,7 @@ lsof +c 0 | grep gnome-terminal | wc --lines # count files
 lsof # files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
+lsof -p $$ # files process 
 lspci | grep --ignore-case audio 
 lsusb | grep --ignore-case cam 
 lyx file.lyx 
