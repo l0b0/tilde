@@ -846,7 +846,7 @@ man xscreensaver-command # help
 man xwininfo # help 
 man xxd # help 
 markdown_page README.markdown > README.xhtml 
-markdown_page "${TODOS[@]}" > ~/todo.xhtml 
+markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml & # list 
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
