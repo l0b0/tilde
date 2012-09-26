@@ -165,6 +165,7 @@ echo "${paths[0]}" # array
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
 echo "$PATH" | tr ':' $'\n' # user path 
+echo "${PIPESTATUS[@]}" | tr -s ' ' + | bc # array sum 
 echo "$PROMPT_COMMAND" # shell 
 echo "$REPLY" # read 
 echo $$ # shell pid 
