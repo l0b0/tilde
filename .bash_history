@@ -1152,7 +1152,6 @@ ssh -p 2222 example.org
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
 ssh -Y example.org 
-strace -p 123 # process 
 strings $(which strings) 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
@@ -1307,6 +1306,7 @@ sudo service ntp stop && sudo ntpdate ntp.example.org && sudo service ntp start 
 sudo service postgresql reload 
 sudo showkey # keyboard 
 sudo shutdown -r now 
+sudo strace -p 123 # process 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo umount mp3 
 sudo update-alternatives --set editor "$(which vim.basic)" # default 
