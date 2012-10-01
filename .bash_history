@@ -124,6 +124,7 @@ declare -f schroedinger # function definition
 declare -p # color variables functions 
 declare # variables functions 
 ~/dev/minecraft-scripts/backup.sh # game 
+~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
@@ -819,6 +820,7 @@ man uname # help
 man unicode # help 
 man uniname # help 
 man uniq # help 
+man unzip # help 
 man update-alternatives # help 
 man updatedb # help 
 man update-java-alternatives # help 
@@ -849,6 +851,7 @@ man xrdb # help
 man xscreensaver-command # help 
 man xwininfo # help 
 man xxd # help 
+man zip # help 
 markdown_page README.markdown > README.xhtml 
 markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml & # list 
 markdown README.markdown 
