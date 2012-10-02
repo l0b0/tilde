@@ -1477,6 +1477,7 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
+x-www-browser /tmp/xterm-screenshot.*.html 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html # help 
