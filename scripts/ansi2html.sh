@@ -180,6 +180,9 @@ s#\x1b[]>=\][0-9;]*##g
 s#\x1bP+.\{5\}##g
 s#${p}[0-9;?]*[^0-9;?m]##g
 
+# strip DEC* sequences
+s#\x1b\#[3-8]###g
+
 #remove backspace chars and what they're backspacing over
 :rm_bs
 s#[^\x08]\x08##g; t rm_bs
