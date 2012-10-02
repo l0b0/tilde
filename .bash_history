@@ -436,6 +436,7 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify *.sig # pgp signature 
+grep '\(\b\|^\)command\b.* .*help' ~/.bash_history 
 grep --files-with-matches --null "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
 grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --fixed-strings "$USER" /etc/group 
