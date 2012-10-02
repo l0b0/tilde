@@ -504,6 +504,7 @@ indentect --verbose < "$(which indentect)"
 indentect < "$(which indentect)" 
 info autoconf # help 
 info automake # help 
+info date # help 
 info find # help 
 info sed # help 
 iostat 
@@ -648,7 +649,6 @@ man crontab # help
 man csplit # help 
 man curl # help 
 man cut # help 
-man date # help 
 man df # help 
 man dhclient # help 
 man dh_make # help 
