@@ -1001,16 +1001,16 @@ pip help
 pip help install 
 pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
-printf '\0' | uniname -bcepu # 1 nul 
-printf "\0" | uniname -bcepu # 1 nul 
-printf $"\0" | uniname -bcepu # 1 nul 
-printf \\0 | uniname -bcepu # 1 nul 
-printf \0 | uniname -bcepu # 1 zero 
-printf $'\0' | wc --chars # 0 
+printf '\0' | uniname -bcepu # 1 nul escape quote 
+printf "\0" | uniname -bcepu # 1 nul escape quote 
+printf $"\0" | uniname -bcepu # 1 nul escape quote 
+printf \\0 | uniname -bcepu # 1 nul escape quote 
+printf \0 | uniname -bcepu # 1 zero escape quote 
+printf $'\0' | wc --chars # 0 escape quote 
 printf "$IFS" | od --format x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -groupsize 1 # string character byte convert hex dump 
-printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-printf %q "$IFS" 
+printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # escape test 
+printf %q "$IFS" # escape bash 
 printf %q "$PS1" # escape bash 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
