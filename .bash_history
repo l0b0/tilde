@@ -1025,6 +1025,7 @@ prove --recurse
 pry 
 psql dbname username < dump.sql # postgresql 
 psql --username db_user db_name # postgresql 
+psql --username postgres <<<'SELECT datname FROM pg_database WHERE datistemplate = false;' # list all postgresql 
 psql --version # postgresql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
