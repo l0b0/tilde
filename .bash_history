@@ -1023,8 +1023,8 @@ printf %s "${IFS:0:1}"
 prove 
 prove --recurse 
 pry 
-psql db_name db_user < dump.sql # postgresql 
-psql db_name db_user # postgresql 
+psql db_name db_user < dump.sql # postgresql import 
+psql db_name db_user # postgresql login 
 psql --username postgres <<<'SELECT datname FROM pg_database WHERE datistemplate = false;' # list all postgresql 
 psql --version # postgresql 
 ps wafux 
