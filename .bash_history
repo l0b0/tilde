@@ -1328,7 +1328,7 @@ sudo update-java-alternatives --jre --set java-6-sun
 sudo -u postgres createuser --username username 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
-sudo visudo 
+sudo visudo # permissions security 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
 svn add . 
