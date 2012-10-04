@@ -34,7 +34,7 @@ bash -o xtrace # debug
 bash -s stable < <(curl --silent https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
 bash --version 
-bc <<<'2+2' # calculator math 
+bc <<< '2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bg # background 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
@@ -1025,7 +1025,7 @@ prove --recurse
 pry 
 psql db_name db_user < dump.sql # postgresql import 
 psql db_name db_user # postgresql login 
-psql --username postgres <<<'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
+psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
 ps wafux 
 pulseaudio --kill && pulseaudio --start 
