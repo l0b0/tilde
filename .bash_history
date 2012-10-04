@@ -1436,7 +1436,6 @@ uptime
 vainfo 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
-visudo 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
