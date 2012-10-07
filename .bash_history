@@ -602,6 +602,7 @@ man 1 pdebuild # help
 man 1 perl # help 
 man 1p mv # posix help 
 man 1 ppc386 # help 
+man 1 ps # help 
 man 1 python # help 
 man 1 quilt # help 
 man 1 ssh-keygen # help 
