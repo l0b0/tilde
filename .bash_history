@@ -1030,6 +1030,7 @@ psql db_name db_user < dump.sql # postgresql import
 psql db_name db_user # postgresql login 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
+ps -U root -u root fu | less -S # processes list user tree 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
 puppet resource --help 
