@@ -1025,11 +1025,11 @@ printf %s "${IFS:0:1}"
 prove 
 prove --recurse 
 pry 
+ps afux | less -S # processes list all tree tty 
 psql db_name db_user < dump.sql # postgresql import 
 psql db_name db_user # postgresql login 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
-ps wafux 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
 puppet resource --help 
