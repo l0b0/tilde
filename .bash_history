@@ -596,11 +596,13 @@ man 1 git # help
 man 1 gpg # help 
 man 1 hexdump # help 
 man 1 imake # help 
+man 1 initdb # help postgresql server database 
 man 1 lintian # help 
 man 1 patch # help 
 man 1 pdebuild # help 
 man 1 perl # help 
 man 1p mv # posix help 
+man 1 postgres # help postgresql server 
 man 1 ppc386 # help 
 man 1 ps # help 
 man 1 python # help 
