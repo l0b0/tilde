@@ -247,6 +247,7 @@ firefox -safe-mode
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
+for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 fromdos -- file # convert newline 
@@ -601,6 +602,7 @@ man 1 pdebuild # help
 man 1 perl # help 
 man 1p mv # posix help 
 man 1 ppc386 # help 
+man 1 ps # help 
 man 1 python # help 
 man 1 quilt # help 
 man 1 ssh-keygen # help 
@@ -1023,11 +1025,12 @@ printf %s "${IFS:0:1}"
 prove 
 prove --recurse 
 pry 
+ps afux | less -S # processes list all tree tty 
 psql db_name db_user < dump.sql # postgresql import 
 psql db_name db_user # postgresql login 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
-ps wafux 
+ps -U root -u root fu | less -S # processes list user tree 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
 puppet resource --help 
