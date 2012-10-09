@@ -1431,7 +1431,7 @@ umask
 umask -S # symbolic 
 umount-image ./*.iso 
 uname --all 
-uname --machine # hardware architecture 
+uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
 unset -a array 
 unset -f function 
