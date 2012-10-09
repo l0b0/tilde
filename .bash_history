@@ -485,7 +485,7 @@ help ulimit
 help umask 
 help until 
 help wait 
-host example.org # dns lookup internet network 
+host example.org # dns lookup internet network ipv4 ipv6 
 hostname # internet network 
 hostname --short # internet network 
 hp-setup # printer 
