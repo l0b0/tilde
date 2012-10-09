@@ -268,6 +268,7 @@ gem rdoc --all
 gem server 
 getconf ARG_MAX # arguments 
 getconf -a # system configuration 
+gethostip -d example.org # dns hosts internet ipv4 decimal 
 git 
 git add . 
 git add .gitignore 
@@ -591,6 +592,7 @@ man 1 apport-cli # help
 man 1 arandr # help 
 man 1 fakeroot # help 
 man 1 file # help 
+man 1 gethostip # help 
 man 1 gfortran # help 
 man 1 git # help 
 man 1 gpg # help 
