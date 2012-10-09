@@ -268,6 +268,8 @@ gem rdoc --all
 gem server 
 getconf ARG_MAX # arguments 
 getconf -a # system configuration 
+getent ahosts example.org # dns hosts internet ipv4 decimal 
+getent hosts example.org # dns hosts internet ipv6 hex 
 gethostip -d example.org # dns hosts internet ipv4 decimal 
 git 
 git add . 
