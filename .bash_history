@@ -614,6 +614,7 @@ man 5 passwd # help password
 man 5 sudoers # help 
 man 7 debhelper # help 
 man 8 dh_make # help 
+man 8 netstat # help 
 man 8 pbuilder # help 
 man 8 visudo # help 
 man ack-grep # help 
@@ -740,7 +741,6 @@ man mutt # help
 man mv # help 
 man nautilus # help 
 man ncal # help 
-man netstat # help 
 man nfs # help 
 man nl # help 
 man nmap # help 
