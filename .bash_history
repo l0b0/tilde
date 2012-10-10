@@ -479,6 +479,7 @@ help local
 help printf 
 help read 
 help set 
+help shift 
 help shopt 
 help test 
 help trap # signal 
@@ -617,6 +618,7 @@ man 5 crontab # help
 man 5 passwd # help password 
 man 5 sudoers # help 
 man 7 debhelper # help 
+man 7 glob # help 
 man 8 dh_make # help 
 man 8 netstat # help 
 man 8 pbuilder # help 
