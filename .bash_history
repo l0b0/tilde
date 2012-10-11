@@ -81,7 +81,7 @@ coffee -v # coffeescript
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') 
 completions git config '' | grep user # autocomplete 
-./configure --help | less # packaging 
+./configure --help | pager # packaging 
 ./configure # packaging 
 convert -density 150 -quality 100 input.pdf output.jpg 
 convert ./*.jpg output.pdf # graphics 
@@ -1034,12 +1034,12 @@ printf %s "${IFS:0:1}"
 prove 
 prove --recurse 
 pry 
-ps afux | less -S # processes list all tree tty 
+ps afux | pager -S # processes list all tree tty 
 psql db_name db_user < dump.sql # postgresql import 
 psql db_name db_user # postgresql login 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
-ps -U root -u root fu | less -S # processes list user tree 
+ps -U root -u root fu | pager -S # processes list user tree 
 ps uw -p $$ # process single pid 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
@@ -1300,7 +1300,7 @@ sudo iotop
 sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo ldconfig 
-sudo lshw | less 
+sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 
@@ -1347,7 +1347,7 @@ sudo Xorg :1 -configure
 sum <<< '2 2' 
 svn add . 
 svn blame --extensions --ignore-all-space Makefile 
-svn cat --revision 1 Makefile | less 
+svn cat --revision 1 Makefile | pager 
 svn checkout http://svn/repo ~/dir 
 svn commit --message "Test" 
 svn commit --non-recursive doc 
@@ -1363,7 +1363,7 @@ svn diff --extensions --ignore-all-space --ignore-eol-style
 svn diff --extensions --ignore-space-change 
 svn diff --extensions --unified 
 svn diff --extensions --unified > patch.diff 
-svn diff | less 
+svn diff | pager 
 svn diff --revision 1:HEAD 
 svn diff --revision PREV 
 svn help 
@@ -1388,10 +1388,10 @@ svn help status | pager
 svn info 
 svn info | sed --quiet --expression 's/^Revision: //p' # revision 
 svn list http://svn/repo 
-svn log | less 
+svn log | pager 
 svn log --revision 1 
-svn log --stop-on-copy | less 
-svn log --verbose | less 
+svn log --stop-on-copy | pager 
+svn log --verbose | pager 
 svn merge http://svn/repo/branches/name 
 svn merge --revision 99:HEAD http://svn/repo/branches/name 
 svn merge --revision HEAD:99 . # reverse 
