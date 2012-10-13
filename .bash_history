@@ -69,6 +69,7 @@ cat /proc/stat # hardware
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
+ccsm & # compiz settings 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
 cd -- "$(mktemp --directory)" 
