@@ -989,8 +989,8 @@ s0_toggle_window_maximized_button = Disabled
 s0_toggle_window_maximized_horizontally_key = Disabled
 s0_toggle_window_maximized_vertically_key = Disabled
 s0_toggle_window_shaded_key = <Control><Primary><Alt>s
-s0_hsize = 2
-s0_vsize = 2
+s0_hsize = 4
+s0_vsize = 1
 s0_number_of_desktops = 1
 
 [kdecompat]
