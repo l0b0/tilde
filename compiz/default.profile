@@ -744,7 +744,7 @@ s0_menus_fadeout = 120
 s0_menus_discovery_duration = 2
 s0_menus_discovery_fadein = 200
 s0_menus_discovery_fadeout = 300
-s0_num_launchers = 0
+s0_num_launchers = 1
 s0_launcher_capture_mouse = true
 
 [staticswitcher]
