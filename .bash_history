@@ -507,11 +507,11 @@ if [[ "$(type rvm | head --lines=1)" != 'rvm is a function' ]]; then echo "Insta
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
-info autoconf # help 
-info automake # help 
-info date # help 
-info find # help 
-info sed # help 
+info --subnodes autoconf | pager # help 
+info --subnodes automake | pager # help 
+info --subnodes date | pager # help 
+info --subnodes find | pager # help 
+info --subnodes sed | pager # help 
 iostat 
 ip link show 
 ip link show up 
@@ -771,7 +771,6 @@ man rsync # help
 man scp # help 
 man screen # help 
 man script # help 
-man sed # help 
 man seq # help 
 man setkeycodes # help 
 man setxkbmap # help 
