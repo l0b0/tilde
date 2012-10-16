@@ -797,6 +797,7 @@ man ssh # help
 man stat # help 
 man strace # help 
 man strfile # help 
+man stty # help 
 man sudo # help 
 man su # help 
 man tac # help 
@@ -1174,6 +1175,7 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 strings $(which strings) 
+stty --all # terminal settings 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
