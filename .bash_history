@@ -538,19 +538,6 @@ la ~
 lastlog # login users 
 ldconfig 
 ldd $(which bash) 
-less /etc/issue 
-less /etc/passwd # password 
-less Makefile 
-less /proc/bus/input/devices 
-less --RAW-CONTROL-CHARS filename # color 
-less /sys/class/dmi/id/product_name 
-less /sys/class/dmi/id/sys_vendor 
-less /var/log/auth.log 
-less /var/log/dmesg 
-less /var/log/kern.log 
-less /var/log/messages 
-less /var/log/syslog 
-less /var/log/Xorg.0.log 
 /lib/udev/findkeyboards 
 ll 
 ln --symbolic -- target source 
@@ -725,7 +712,6 @@ man kvm # help
 man ldconfig # help 
 man ldd # help 
 man ld # help 
-man less # help 
 man line # help 
 man ln # help 
 man locate # help 
@@ -995,6 +981,19 @@ ntpq -p # query list peers
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl x509 -noout -fingerprint -text < my.crt 
+pager /etc/issue 
+pager /etc/passwd # password 
+pager Makefile 
+pager /proc/bus/input/devices 
+pager --RAW-CONTROL-CHARS filename # color 
+pager /sys/class/dmi/id/product_name 
+pager /sys/class/dmi/id/sys_vendor 
+pager /var/log/auth.log 
+pager /var/log/dmesg 
+pager /var/log/kern.log 
+pager /var/log/messages 
+pager /var/log/syslog 
+pager /var/log/Xorg.0.log 
 paman & # pulseaudio manager 
 paprefs & # pulseaudio preference 
 passwd # password user 
