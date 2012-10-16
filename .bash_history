@@ -240,6 +240,7 @@ find . -name '*.marks' -delete # remove jedit temp files
 find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
+find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
