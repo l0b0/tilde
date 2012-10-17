@@ -38,6 +38,7 @@ bc <<< '2+2' # calculator math
 bchunk image.bin image.cue image.iso 
 bg # background 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
+bind -p | grep -ve '^$' -e '^#' -e 'self-insert$' | sed -e "s/\(.*\)/bind '\1'/" | tr -s '\n' ';' # shortcuts code 
 ~/bin/git diff --check 
 ~/bin/git diff --minimal 
 ~/bin/git diff --staged --minimal 
