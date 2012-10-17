@@ -286,6 +286,7 @@ git bisect good
 git bisect reset 
 git bisect run ./bisect.sh 
 git bisect start HEAD HEAD~10 
+git blame 1234abcd filename # revision 
 git blame filename 
 git branch 
 git branch --all # list 
