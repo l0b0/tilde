@@ -38,7 +38,7 @@ bc <<< '2+2' # calculator math
 bchunk image.bin image.cue image.iso 
 bg # background 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
-bind -p | grep -ve '^$' -e '^#' -e 'self-insert$' | sed -e "s/\(.*\)/bind '\1'/" | tr -s '\n' ';' # shortcuts code 
+bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
 bundle help # rails 
@@ -164,7 +164,7 @@ echo "${paths[0]}" # array
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
 echo "$PATH" | tr ':' $'\n' # user path 
-echo "${PIPESTATUS[@]}" | tr -s ' ' + | bc # array sum 
+echo "${PIPESTATUS[@]}" | tr --squeeze-repeats ' ' + | bc # array sum 
 echo "$PROMPT_COMMAND" # shell 
 echo "$REPLY" # read 
 echo $$ # shell pid 
