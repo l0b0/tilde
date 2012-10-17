@@ -1177,6 +1177,7 @@ ssh -vvv example.org
 ssh -Y example.org 
 strings $(which strings) 
 stty --all # terminal settings 
+stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
