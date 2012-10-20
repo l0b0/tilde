@@ -38,9 +38,7 @@ bc <<< '2+2' # calculator math
 bchunk image.bin image.cue image.iso 
 bg # background 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
-~/bin/git diff --check 
-~/bin/git diff --minimal 
-~/bin/git diff --staged --minimal 
+bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
 bundle help # rails 
@@ -166,7 +164,7 @@ echo "${paths[0]}" # array
 echo "${paths[@]: -1}" # array 
 echo "${paths[@]}" # array 
 echo "$PATH" | tr ':' $'\n' # user path 
-echo "${PIPESTATUS[@]}" | tr -s ' ' + | bc # array sum 
+echo "${PIPESTATUS[@]}" | tr --squeeze-repeats ' ' + | bc # array sum 
 echo "$PROMPT_COMMAND" # shell 
 echo "$REPLY" # read 
 echo $$ # shell pid 
@@ -240,6 +238,7 @@ find . -name '*.marks' -delete # remove jedit temp files
 find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
+find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
 find -version 
 firefox -profilemanager 
@@ -285,6 +284,7 @@ git bisect good
 git bisect reset 
 git bisect run ./bisect.sh 
 git bisect start HEAD HEAD~10 
+git blame 1234abcd filename # revision 
 git blame filename 
 git branch 
 git branch --all # list 
@@ -507,11 +507,11 @@ if [[ "$(type rvm | head --lines=1)" != 'rvm is a function' ]]; then echo "Insta
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
-info autoconf # help 
-info automake # help 
-info date # help 
-info find # help 
-info sed # help 
+info --subnodes autoconf | pager # help 
+info --subnodes automake | pager # help 
+info --subnodes date | pager # help 
+info --subnodes find | pager # help 
+info --subnodes sed | pager # help 
 iostat 
 ip link show 
 ip link show up 
@@ -538,19 +538,6 @@ la ~
 lastlog # login users 
 ldconfig 
 ldd $(which bash) 
-less /etc/issue 
-less /etc/passwd # password 
-less Makefile 
-less /proc/bus/input/devices 
-less --RAW-CONTROL-CHARS filename # color 
-less /sys/class/dmi/id/product_name 
-less /sys/class/dmi/id/sys_vendor 
-less /var/log/auth.log 
-less /var/log/dmesg 
-less /var/log/kern.log 
-less /var/log/messages 
-less /var/log/syslog 
-less /var/log/Xorg.0.log 
 /lib/udev/findkeyboards 
 ll 
 ln --symbolic -- target source 
@@ -725,7 +712,6 @@ man kvm # help
 man ldconfig # help 
 man ldd # help 
 man ld # help 
-man less # help 
 man line # help 
 man ln # help 
 man locate # help 
@@ -785,7 +771,6 @@ man rsync # help
 man scp # help 
 man screen # help 
 man script # help 
-man sed # help 
 man seq # help 
 man setkeycodes # help 
 man setxkbmap # help 
@@ -812,6 +797,7 @@ man ssh # help
 man stat # help 
 man strace # help 
 man strfile # help 
+man stty # help 
 man sudo # help 
 man su # help 
 man tac # help 
@@ -995,6 +981,19 @@ ntpq -p # query list peers
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl x509 -noout -fingerprint -text < my.crt 
+pager /etc/issue 
+pager /etc/passwd # password 
+pager Makefile 
+pager /proc/bus/input/devices 
+pager --RAW-CONTROL-CHARS filename # color 
+pager /sys/class/dmi/id/product_name 
+pager /sys/class/dmi/id/sys_vendor 
+pager /var/log/auth.log 
+pager /var/log/dmesg 
+pager /var/log/kern.log 
+pager /var/log/messages 
+pager /var/log/syslog 
+pager /var/log/Xorg.0.log 
 paman & # pulseaudio manager 
 paprefs & # pulseaudio preference 
 passwd # password user 
@@ -1171,11 +1170,14 @@ ssh example.org < test.sh
 ssh example.org uptime 
 sshfs hostname: /media/mountpoint 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
+ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
 ssh -Y example.org 
 strings $(which strings) 
+stty --all # terminal settings 
+stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
