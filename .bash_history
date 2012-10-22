@@ -1262,8 +1262,7 @@ sudo apt-get install wine winetricks # windows
 sudo apt-get install x264 # video codec 
 sudo apt-get install xautolock 
 sudo apt-get install xournal # editor pdf 
-sudo apt-get purge 'overlay-scrollbar*' # unity 
-sudo apt-get purge 'ubuntuone-*' 
+sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' # unity 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
