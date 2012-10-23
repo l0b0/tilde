@@ -1150,6 +1150,7 @@ shopt nullglob # option get
 shopt # options 
 shopt -s dotglob # option set .* 
 shopt -s extglob # option set ?(a|b) *(a|b) +(a|b) @(a|b) !(a|b) 
+shopt -s extglob && sudo rename --no-act 's/$/.bak/' /usr/share/hunspell/en_!(US).{aff,dic} # language dictionary 
 shopt -s globstar # option set ** 
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
@@ -1323,7 +1324,6 @@ sudo pip install --upgrade vcard
 sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
-sudo rename --no-act 's/$/.bak/' /usr/share/hunspell/en_!(US).{aff,dic} # language dictionary 
 sudo rm --force --recursive ~/build ~/src 
 sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
