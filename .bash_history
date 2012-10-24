@@ -1005,6 +1005,7 @@ PATH=$(IFS=':'; echo "${paths[*]}")
 pavucontrol & # pulseaudio volume 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
+perl -d -e 1 # interactive console 
 perldoc file.pl # help 
 perl_modules 
 perl_module_version URI 
