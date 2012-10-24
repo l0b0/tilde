@@ -324,6 +324,7 @@ git diff --ignore-space-change
 git diff master origin/master 
 git diff --raw 
 git diff --staged 
+[ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ] # verify sort 
 git diff --staged --ignore-space-at-eol 
 git diff --staged --stat 
 git diff --word-diff 
