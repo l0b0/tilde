@@ -1225,7 +1225,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install hunspell-de-de hunspell-fr myspell-nb # language dictionary german french norwegian 
+sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
 sudo apt-get install ipython pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
