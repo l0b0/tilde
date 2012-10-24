@@ -594,6 +594,7 @@ man 1 initdb # help postgresql server database
 man 1 lintian # help 
 man 1 patch # help 
 man 1 pdebuild # help 
+man 1 perldoc # help 
 man 1 perl # help 
 man 1p mv # posix help 
 man 1 postgres # help postgresql server 
@@ -1004,6 +1005,7 @@ PATH=$(IFS=':'; echo "${paths[*]}")
 pavucontrol & # pulseaudio volume 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
+perldoc file.pl # help 
 perl_modules 
 perl_module_version URI 
 perl --version 
