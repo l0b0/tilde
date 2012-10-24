@@ -16,6 +16,7 @@ set imap_check_subscribed # Poll subscribed mailboxes for new mail
 bind index,pager \Cv next-unread-mailbox
 macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
 unset mark_old
+set auto_tag # Operate on tagged messages by default
 set delete = yes
 set pager_context = 2 # Context when going up/down pages
 set pager_index_lines = 8
