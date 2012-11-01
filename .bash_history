@@ -498,6 +498,7 @@ hostname # internet network
 hostname --short # internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
+htop 
 iconv --from-code=utf-8 --to-code=iso-8859-1 utf8.txt > latin1.txt # convert encoding 
 id --group 
 id # group user 
@@ -591,6 +592,7 @@ man 1 gfortran # help
 man 1 git # help 
 man 1 gpg # help 
 man 1 hexdump # help 
+man 1 htop # help 
 man 1 imake # help 
 man 1 initdb # help postgresql server database 
 man 1 lintian # help 
@@ -1226,6 +1228,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
+sudo apt-get install htop 
 sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
