@@ -150,6 +150,7 @@ dot -Tsvg graph.dot # graphics
 dotty graph.dot # graphics 
 dot -V 
 dpkg --get-selections | grep --invert-match deinstall | cut --fields 1 # installed packages 
+dpkg --listfiles w3-recs 
 dpkg --search "$(which apt-get)" # package file owner search 
 dpkg-shlibdeps $(which bash) # binary dependency packaging 
 dpkg --status bash # package 
