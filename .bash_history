@@ -1196,6 +1196,7 @@ sudo addgroup "$USER" group
 sudo apt-add-repository ppa:webupd8team/java && sudo apt-get update && sudo apt-get install oracle-java7-installer 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
+sudo apt-get install adobe-flashplugin 
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
 sudo apt-get install arandr # screen layout graphics hardware 
