@@ -122,6 +122,7 @@ declare -F # functions
 declare -f schroedinger # function definition 
 declare -p # color variables functions 
 declare # variables functions 
+~/dev/meta2jpeg/meta2jpeg.sh *.CR2 
 ~/dev/minecraft-scripts/backup.sh # game 
 ~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
@@ -917,6 +918,7 @@ mkgithub ~/dev/logitech-access-keyboard-bindings
 mkgithub ~/dev/lwpb 
 mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
+mkgithub ~/dev/meta2jpeg 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
 mkgithub ~/dev/minecraft-scripts 
