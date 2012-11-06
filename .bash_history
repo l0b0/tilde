@@ -217,6 +217,7 @@ evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exit 
+exiv2 print IMG_1234.CR2 # metadata 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -586,6 +587,7 @@ man 1 aplay # help
 man 1 apport-bug # help 
 man 1 apport-cli # help 
 man 1 arandr # help 
+man 1 exiv2 # help 
 man 1 fakeroot # help 
 man 1 file # help 
 man 1 gethostip # help 
@@ -1218,12 +1220,12 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
 sudo apt-get install etherape # network 
+sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d metadata exif jpeg 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-specimen # font graphics preview 
 sudo apt-get install gnome-tweak-tool 
