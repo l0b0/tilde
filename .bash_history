@@ -335,7 +335,7 @@ git diff --word-diff
 git fetch 
 git format-patch --find-renames HEAD^ 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
-git gui& 
+git gui & 
 git help add 
 git help bisect 
 git help blame 
@@ -370,7 +370,7 @@ git help submodule
 git help svn 
 git help tag 
 git init 
-gitk --all .& # gui 
+gitk --all . & # gui 
 git log 
 git log Makefile 
 git log --oneline --decorate 
@@ -870,8 +870,8 @@ markdown README.markdown | lynx -stdin
 markdown README.markdown > README.html 
 md5sum --check md5sums.txt # checksum 
 md5sum file # checksum 
-meld .& # diff 
-meld old new& # diff 
+meld . & # diff 
+meld old new & # diff 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
 meld <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
 meld <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) # diff 
@@ -1062,7 +1062,7 @@ puppet resource user
 puppet resource user root 
 pwd # current directory 
 qemu-img create -f qcow2 /tmp/my.img 10G 
-qgit --all .& # gui 
+qgit --all . & # gui 
 rails c # console 
 rails d controller sessions # delete database 
 rails d scaffold user # delete database 
