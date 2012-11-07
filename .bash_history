@@ -257,6 +257,7 @@ for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(
 fromdos -- file # convert newline 
 fullname 
 fullname root 
+fuseiso -p file.bin /media/mountpoint # mount 
 fusermount -u /media/mountpoint # unmount 
 gcc --version 
 gconf-editor # gnome config 
@@ -591,6 +592,7 @@ man 1 arandr # help
 man 1 exiv2 # help 
 man 1 fakeroot # help 
 man 1 file # help 
+man 1 fuseiso # help 
 man 1 gethostip # help 
 man 1 gfortran # help 
 man 1 git # help 
@@ -1227,6 +1229,7 @@ sudo apt-get install extundelete
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
+sudo apt-get install fuseiso 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-specimen # font graphics preview 
