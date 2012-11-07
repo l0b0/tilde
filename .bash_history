@@ -1246,6 +1246,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
 sudo apt-get install lyx # latex 
