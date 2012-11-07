@@ -216,6 +216,7 @@ eval `ssh-agent` && ssh-add
 eval "$traps" # signal 
 evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance 
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
+evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exit 
 exiv2 print IMG_1234.CR2 # metadata 
@@ -1253,6 +1254,7 @@ sudo apt-get install lyx # latex
 sudo apt-get install markdown # convert 
 sudo apt-get install mencoder # video 
 sudo apt-get install mp3fs # convert 
+sudo apt-get install msort 
 sudo apt-get install nethack-qt # game 
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install ntp-doc 
