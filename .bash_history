@@ -219,7 +219,7 @@ evince /usr/share/doc/gnu-standards/standards.pdf.gz # help
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exit 
-exiv2 print IMG_1234.CR2 # metadata 
+exiv2 print IMG_1234.exv # metadata 
 facter # hardware os 
 facter --help 
 facter id # user 
