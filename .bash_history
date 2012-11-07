@@ -593,6 +593,7 @@ man 1 exiv2 # help
 man 1 fakeroot # help 
 man 1 file # help 
 man 1 fuseiso # help 
+man 1 fusermount # help 
 man 1 gethostip # help 
 man 1 gfortran # help 
 man 1 git # help 
@@ -684,7 +685,6 @@ man feh # help
 man ffmpeg # help 
 man fmt # help 
 man fortune # help 
-man fusermount # help 
 man getconf # help 
 man getent # help 
 man getopt # help 
