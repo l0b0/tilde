@@ -22,11 +22,6 @@ sum() {
     echo $(cat "${@--}") | tr -s ' ' '+' | bc
 }
 
-# Update everything
-upgrade() {
-    sudo sh -c "apt-get update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get autoclean"
-}
-
 # Find
 find_date_sorted() {
     # Sorted by ISO date, ascending
