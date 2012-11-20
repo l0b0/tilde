@@ -1199,9 +1199,7 @@ stty --all # terminal settings
 stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
-sudo add-apt-repository ppa:voria/ppa && sudo apt-get install samsung-backlight 
 sudo addgroup "$USER" group 
-sudo apt-add-repository ppa:webupd8team/java && sudo apt-get update && sudo apt-get install oracle-java7-installer 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install adobe-flashplugin 
@@ -1287,7 +1285,6 @@ sudo apt-get install xautolock
 sudo apt-get install xournal # editor pdf 
 sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' # unity 
 sudo apt-get update 
-sudo apt-get update && sudo apt-get upgrade --yes 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
 sudo chfn -f "My Name" "$USER" # full name 
@@ -1301,7 +1298,6 @@ sudo cpanm Net::LDAP # install ldap
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo ~/dev/tilde/scripts/install-all.sh 
-sudo dhclient -r wlan0 && sudo dhclient wlan0 # request refresh dhcp ip 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
@@ -1321,7 +1317,6 @@ sudo etherape # network traffic visualization
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
-sudo ifconfig wlan0 192.168.0.99 && sudo dhclient wlan0 # set ip address network 
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
@@ -1351,8 +1346,13 @@ sudo rm --force --recursive ~/build ~/src
 sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
-sudo service ntp stop && sudo ntpdate ntp.example.org && sudo service ntp start # force manual synchronize time 
 sudo service postgresql reload 
+sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get install samsung-backlight' 
+sudo sh -c 'apt-add-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
+sudo sh -c 'apt-get update && apt-get upgrade --yes' 
+sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
+sudo sh -c 'ifconfig wlan0 192.168.0.99 && dhclient wlan0' # set ip address network 
+sudo sh -c 'service ntp stop && ntpdate ntp.example.org && service ntp start' # force manual synchronize time 
 sudo showkey # keyboard 
 sudo shutdown -r now 
 sudo strace -p 123 # process 
