@@ -1015,6 +1015,7 @@ passwd # password user
 patch --strip 0 < patch.diff 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 pavucontrol & # pulseaudio volume 
+pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
 perl -d -e 1 # interactive console 
