@@ -1054,6 +1054,7 @@ pry
 ps afux | pager -S # processes list all tree tty 
 psql db_name db_user < dump.sql # postgresql import 
 psql db_name db_user # postgresql login 
+psql --host localhost --port 15432 --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # forwarding list all postgresql 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
@@ -1190,6 +1191,7 @@ ssh example.org uptime
 sshfs hostname: /media/mountpoint 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id 
+ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
