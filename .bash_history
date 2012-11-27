@@ -1018,6 +1018,7 @@ pavucontrol & # pulseaudio volume
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 perlbrew switch 
+perl -c file.pl # check syntax 
 perl -d -e 1 # interactive console 
 perldoc file.pl # help 
 perl_modules 
