@@ -379,7 +379,7 @@ git log --oneline --decorate
 git log --patch-with-stat 
 git log --stat 
 git merge origin/master 
-git mergetool 
+git mergetool & 
 git merge topic # local branch 
 git mv README{,.markdown} 
 git pull 
