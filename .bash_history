@@ -1030,6 +1030,7 @@ perl --version
 pgrep -u root cron 
 php --interactive 
 php --version 
+pidof bash | wc --words # count processes 
 pidof init # process pid 
 pid=$! # process pid 
 ping -c 4 example.org 
