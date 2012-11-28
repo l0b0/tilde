@@ -624,6 +624,7 @@ man 7 glob # help
 man 8 dh_make # help 
 man 8 netstat # help 
 man 8 pbuilder # help 
+man 8 pidof # help 
 man 8 visudo # help 
 man ack-grep # help 
 man add-apt-repository # help 
@@ -1029,6 +1030,7 @@ perl --version
 pgrep -u root cron 
 php --interactive 
 php --version 
+pidof init # process pid 
 pid=$! # process pid 
 ping -c 4 example.org 
 ping example.org 
