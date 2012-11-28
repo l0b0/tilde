@@ -1022,6 +1022,7 @@ perlbrew switch
 perl -c file.pl # check syntax 
 perl -d -e 1 # interactive console 
 perldoc file.pl # help 
+perldoc -f kill # help function 
 perl_modules 
 perl_module_version URI 
 perl --version 
