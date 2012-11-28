@@ -875,6 +875,7 @@ md5sum --check md5sums.txt # checksum
 md5sum file # checksum 
 meld . & # diff 
 meld original mine & # diff 
+meld other original mine & # diff 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
 meld <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
 meld <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) # diff 
