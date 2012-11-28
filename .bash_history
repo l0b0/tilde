@@ -1095,8 +1095,8 @@ rake routes # rails web
 rake spec # rails test 
 rake --tasks # rails 
 rake test # rails 
-rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname # remote keyboard windows 
-rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname # remote keyboard share windows 
+rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 hostname & # remote keyboard windows 
+rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1024x768 -r disk:homedir=~ hostname & # remote keyboard share windows 
 readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
