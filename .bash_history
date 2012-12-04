@@ -450,13 +450,12 @@ gpg --import ~/pubring.gpg
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify *.sig # pgp signature 
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
-grep --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' file # search source 
 grep --files-with-matches --null "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
-grep --fixed-strings --recursive --regexp 'foo' . # search literal 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
-grep --regexp 'foo' file | exclude_vcs # search source 
+grep --recursive --fixed-strings --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
+grep --recursive --fixed-strings --regexp 'foo' . | exclude_vcs # search literal source 
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
 grep --version 
