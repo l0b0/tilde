@@ -1473,7 +1473,6 @@ umount-image ./*.iso
 uname --all 
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
-unset -a array 
 unset -f function 
 unset REPLY 
 unset var 
