@@ -615,6 +615,7 @@ man 1 ps # help
 man 1 python # help 
 man 1 quilt # help 
 man 1 ssh-keygen # help 
+man 1 traceroute # help 
 man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -826,7 +827,6 @@ man tofrodos # help
 man top # help 
 man touch # help 
 man tput # help 
-man traceroute # help 
 man trash # help 
 man tr # help 
 man tty # help 
@@ -1232,7 +1232,7 @@ sudo apt-get install deluge # torrent
 sudo apt-get install dfo # Flickr 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
-sudo apt-get install etherape # network 
+sudo apt-get install etherape traceroute # network 
 sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d metadata exif jpeg 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
