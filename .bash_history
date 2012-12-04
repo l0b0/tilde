@@ -206,6 +206,7 @@ editor ~/.vimrc
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
 editor ~/.xinitrc 
+eject # hardware cd dvd 
 empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
@@ -590,6 +591,7 @@ man 1 aplay # help
 man 1 apport-bug # help 
 man 1 apport-cli # help 
 man 1 arandr # help 
+man 1 eject # help 
 man 1 exiv2 # help 
 man 1 fakeroot # help 
 man 1 file # help 
