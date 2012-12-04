@@ -1441,10 +1441,10 @@ TAGS=all guard
 TAGS="$USER" guard 
 tail --follow name --retry $(find /var/log/ -type f -exec file -- {} \; | grep ':.*\(ASCII\|UTF\)' | cut --delimiter : --field 1) # text 
 tail --follow name --retry /var/log/messages 
-tar --gzip --create --exclude-vcs --file ~/tilde.tar.gz --directory ~/dev tilde # compress gzip 
-tar --gzip --extract --file ~/tilde.tar.gz # decompress gzip 
-tar --gzip --extract --file ~/tilde.tar.gz --transform='s#.*/##' # decompress flatten gzip 
-tar --gzip --list --file ~/tilde.tar.gz 
+tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde # compress gzip 
+tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip 
+tar --extract --gzip --transform='s#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
+tar --list --gzip --file ~/tilde.tar.gz 
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
