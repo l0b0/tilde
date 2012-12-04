@@ -606,6 +606,7 @@ man 1 htop # help
 man 1 imake # help 
 man 1 initdb # help postgresql server database 
 man 1 lintian # help 
+man 1 nc # help 
 man 1 patch # help 
 man 1 pdebuild # help 
 man 1 perldoc # help 
@@ -981,6 +982,7 @@ mutt -v
 mutt -vv 
 mv file{.orig,} 
 ncal -3bM 
+nc -l 12345 & netstat --tcp --all | grep :12345 && kill $! # test network listen port 
 neato -O -Tsvg ./*.dot 
 netstat 
 netstat --all # internet connections sockets 
