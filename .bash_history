@@ -495,6 +495,7 @@ help type
 help typeset 
 help ulimit 
 help umask 
+help unset 
 help until 
 help wait 
 host example.org # dns lookup internet network ipv4 ipv6 
@@ -1474,8 +1475,8 @@ uname --all
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
 unset -f function 
-unset REPLY 
-unset var 
+unset variable_or_function 
+unset -v variable 
 upgrade 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
