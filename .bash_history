@@ -219,6 +219,7 @@ evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
+exclude_vcs < <(grep --recursive --fixed-strings --regexp 'foo' .) # search literal source 
 exit 
 exiv2 print IMG_1234.exv # metadata 
 facter # hardware os 
@@ -456,7 +457,6 @@ grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep --recursive --fixed-strings --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
-grep --recursive --fixed-strings --regexp 'foo' . | exclude_vcs # search literal source 
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
 grep --version 
