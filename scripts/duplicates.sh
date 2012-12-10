@@ -45,7 +45,6 @@ then
     usage
 fi
 
-exec 9< <( find "$start_dir" -type f -exec printf '%s\0' {} \; )
 while IFS= read -r -d '' -u 9
 do
     file_path="$(readlink -fn -- "$REPLY"; echo x)"
@@ -72,4 +71,4 @@ do
                 ;;
         esac
     done
-done
+done 9< <( find "$start_dir" -type f -exec printf '%s\0' {} \; )
