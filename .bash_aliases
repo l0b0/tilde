@@ -164,7 +164,7 @@ longer() {
     for path
     do
         line_number=1
-        while IFS= read -r -d $'\n'
+        while IFS= read -r -d $'\n' || [ -n "$REPLY" ]
         do
             if [ ${#REPLY} -gt $length ]
             then
