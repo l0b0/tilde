@@ -1070,6 +1070,7 @@ psql db_name db_user # postgresql login
 psql --host localhost --port 15432 --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # forwarding list all postgresql 
 psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
 psql --username postgres <<< 'COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;' # unix integer timestamp 
+psql --username postgres <<< '\dt' # public schema tables list all postgresql 
 psql --username postgres <<< '\du' # users list all postgresql 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
