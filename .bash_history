@@ -242,6 +242,7 @@ find . -empty -delete # remove files
 find . -exec printf '%s\0' {} \; | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
 find . -group 1000 -exec chgrp $(id --group) {} \; # update files permissions 
 find -L . -type l # broken symlinks 
+find . -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -name '*.marks' -delete # remove jedit temp files 
 find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
@@ -1506,7 +1507,6 @@ wget --output-document - http://user:password@host/function?id=foo 2>service.log
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do echo "$REPLY"; done 9< <(find /tmp/ -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated) # random shuffle files 
 while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} \;) # whitespace eol eof 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
