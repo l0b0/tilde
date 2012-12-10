@@ -620,6 +620,7 @@ man 1 python # help
 man 1 quilt # help 
 man 1 ssh-keygen # help 
 man 1 traceroute # help 
+man 1 xclip # help 
 man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
@@ -859,7 +860,6 @@ man whois # help
 man wnpp-alert # help 
 man xargs # help 
 man xautolock # help 
-man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xev # help 
@@ -1058,6 +1058,8 @@ printf %q "$PS1" # escape bash
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard test 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test keyboard 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection primary # test mouse 
 printf %s "${IFS:0:1}" 
 prove 
 prove --recurse 
@@ -1297,6 +1299,7 @@ sudo apt-get install vim vim-rails # editor
 sudo apt-get install wine winetricks # windows 
 sudo apt-get install x264 # video codec 
 sudo apt-get install xautolock 
+sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
 sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' # unity 
 sudo apt-get update 
@@ -1519,6 +1522,8 @@ who # logins users
 wine --version 
 wnpp-alert # Debian packaging 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
+xclip -out -selection clipboard # keyboard 
+xclip -out -selection primary # mouse 
 xev 
 xinput --list 
 xinput --list 10 
