@@ -610,6 +610,7 @@ man 1 lintian # help
 man 1 nc # help 
 man 1 patch # help 
 man 1 pdebuild # help 
+man 1 pep8 # help 
 man 1 perldoc # help 
 man 1 perl # help 
 man 1p mv # posix help 
@@ -1024,6 +1025,7 @@ PATH=$(IFS=':'; echo "${paths[*]}")
 pavucontrol & # pulseaudio volume 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
+pep8 setup.py 
 perlbrew switch 
 perl -c file.pl # check syntax 
 perl -d -e 1 # interactive console 
