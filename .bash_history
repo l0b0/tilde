@@ -31,7 +31,6 @@ bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal
 bashdb test.sh # debug script 
 bash -o noexec ~/.bash_history # verify syntax 
 bash -o xtrace # debug 
-bash -s stable < <(curl --silent https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer) # install ruby version manager 
 bash test.sh # run script 
 bash --version 
 bc <<< '2+2' # calculator math 
@@ -43,7 +42,6 @@ branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/
 builtin # bash 
 bundle help # rails 
 bundle init # rails 
-bundle install --binstubs=./bundler_stubs # rails 
 bundle install # rails 
 bundle package 
 bundle update # rails 
@@ -73,7 +71,6 @@ cd - # back
 cd -- "$(mktemp --directory)" 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
-chmod +x "$rvm_path"/hooks/after_cd_bundler # development plugin ruby version manager 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
@@ -198,7 +195,6 @@ editor ~/.mozilla/firefox/*/chrome/userContent.css
 editor ~/.muttrc # email 
 editor ~/.muttrc_local # email 
 editor README.markdown # dev 
-editor ~/.rvmrc # config ruby version manager 
 editor ~/.ssh/config 
 editor ~/.subversion/config # dev 
 editor ~/.subversion/servers # dev 
@@ -515,7 +511,6 @@ ifconfig -a eth0 # internet network nic
 ifconfig -a # internet network 
 ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
-if [[ "$(type rvm | head --lines=1)" != 'rvm is a function' ]]; then echo "Installation failed"; fi # install ruby version manager 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -943,7 +938,6 @@ mkgithub ~/dev/progit
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/qr2scad 
 mkgithub ~/dev/RAYT 
-mkgithub ~/dev/rvm # ruby version manager 
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
@@ -1129,25 +1123,6 @@ rm -- ~/pubring.gpg ~/secring.gpg
 route 
 rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
 ruby --verbose 
-rvm gemset empty project_name # gems delete uninstall 
-rvm get stable # install ruby version manager 
-rvm help do 
-rvm help install 
-rvm help use 
-rvm info 
-rvm install 1.9.2 
-rvm install 1.9.3-p0 
-rvm list 
-rvm list known 
-rvm notes 
-rvm requirements 
-rvm # ruby version manager 
-rvm --rvmrc --create use ruby-version@project_name 
-rvm usage 
-rvm use 1.9.3-p0 
-rvm use system 
-rvm use system --default 
-rvm version 
 sandbox="$(mktemp --directory)" 
 sass-convert all.s{a,c}ss 
 schemaspy2svg ~/db 
