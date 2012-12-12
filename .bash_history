@@ -1088,6 +1088,7 @@ puppet resource user root
 pwd # current directory 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
+qtpfsgui & # hdr photo editor 
 rails c # console 
 rails d controller sessions # delete database 
 rails d scaffold user # delete database 
@@ -1246,7 +1247,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
 sudo apt-get install etherape traceroute # network 
-sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d metadata exif jpeg 
+sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush qtpfsgui shotwell # graphics 2d metadata exif jpeg 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
