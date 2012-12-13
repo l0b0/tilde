@@ -268,6 +268,7 @@ gem list --help
 gem list --local 
 gem rdoc --all 
 gem server 
+gem uninstall foo # remove 
 getconf ARG_MAX # arguments 
 getconf -a # system configuration 
 getent ahosts example.org # dns hosts internet ipv4 decimal 
