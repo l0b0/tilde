@@ -629,6 +629,7 @@ man 8 dh_make # help
 man 8 netstat # help 
 man 8 pbuilder # help 
 man 8 pidof # help 
+man 8 service # help 
 man 8 visudo # help 
 man ack-grep # help 
 man add-apt-repository # help 
