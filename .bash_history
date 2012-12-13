@@ -435,6 +435,7 @@ glc-capture --out recording.glc minecraft
 glc-play recording.glc 
 glc-play recording.glc -a 1 -o recording.wav # audio 
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
+glxgears # 3d graphics benchmark 
 glxinfo 
 gnome-control-center sound 
 gnome-screensaver & 
@@ -605,6 +606,7 @@ man 1 lintian # help
 man 1 nc # help 
 man 1 patch # help 
 man 1 pdebuild # help 
+man 1 pep8 # help 
 man 1 perldoc # help 
 man 1 perl # help 
 man 1p mv # posix help 
@@ -1018,6 +1020,7 @@ PATH=$(IFS=':'; echo "${paths[*]}")
 pavucontrol & # pulseaudio volume 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
+pep8 setup.py 
 perlbrew switch 
 perl -c file.pl # check syntax 
 perl -d -e 1 # interactive console 
@@ -1080,6 +1083,7 @@ puppet resource user root
 pwd # current directory 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
+qtpfsgui & # hdr photo editor 
 rails c # console 
 rails d controller sessions # delete database 
 rails d scaffold user # delete database 
@@ -1219,7 +1223,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
 sudo apt-get install etherape traceroute # network 
-sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush shotwell # graphics 2d metadata exif jpeg 
+sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush qtpfsgui rawstudio rawtherapee shotwell # graphics 2d metadata exif jpeg 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
