@@ -588,6 +588,7 @@ man 1 apport-cli # help
 man 1 arandr # help 
 man 1 createuser # help 
 man 1 dpkg # help 
+man 1 dropuser # help 
 man 1 eject # help 
 man 1 exiv2 # help 
 man 1 fakeroot # help 
@@ -1376,6 +1377,7 @@ sudo updatedb
 sudo update-grub 
 sudo update-java-alternatives --jre --set java-6-sun 
 sudo -u postgres createuser --pwprompt username 
+sudo -u postgres dropuser username 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
 sudo visudo # permissions security 
