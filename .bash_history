@@ -1097,11 +1097,15 @@ rails server --environment test --port 3001 # start service web
 rails server # start service web 
 rails --version 
 rake assets:clean 
+rake db:migrate # all rails database 
+rake db:migrate:redo VERSION=20010203123456 # rails database 
 rake db:migrate --trace # rails database 
 rake db:reset --trace # rails database 
 rake db:reset --trace && rails s # database 
 rake db:rollback --trace # rails database 
+rake db:schema:dump # rails database 
 rake db:seed --trace # rails database 
+rake db:setup # rails database 
 rake db:test:prepare --trace # rails database 
 rake routes # rails web 
 rake spec # rails test 
