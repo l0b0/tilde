@@ -586,6 +586,7 @@ man 1 aplay # help
 man 1 apport-bug # help 
 man 1 apport-cli # help 
 man 1 arandr # help 
+man 1 dpkg # help 
 man 1 eject # help 
 man 1 exiv2 # help 
 man 1 fakeroot # help 
