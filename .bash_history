@@ -263,10 +263,7 @@ gcc --version
 gconf-editor # gnome config 
 gem help rdoc # ruby 
 gem install bundler 
-gem install cucumber 
 gem install pry pry-doc 
-gem install rails 
-gem install sqlite3 
 gem list --help 
 gem list --local 
 gem rdoc --all 
