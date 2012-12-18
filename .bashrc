@@ -186,10 +186,10 @@ then
 fi
 
 # Load perlbrew if present
-if [ -r "${HOME}/perl5/perlbrew/etc/bashrc" ]
+if [ -r "$HOME/perl5/perlbrew/etc/bashrc" ]
 then
     set +o nounset
-    source "${HOME}/perl5/perlbrew/etc/bashrc"
+    source "$HOME/perl5/perlbrew/etc/bashrc"
     set -o nounset
 fi
 
