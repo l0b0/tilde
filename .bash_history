@@ -769,6 +769,8 @@ man passwd # help
 man patch # help 
 man pdftk # help 
 man perlrun # help 
+man pg_dumpall # help postgresql backup 
+man pg_dump # help postgresql backup 
 man pgrep # help 
 man ping # help 
 man pip # help 
@@ -1379,6 +1381,9 @@ sudo update-grub
 sudo update-java-alternatives --jre --set java-6-sun 
 sudo -u postgres createuser --pwprompt username 
 sudo -u postgres dropuser username 
+sudo -u postgres pg_dumpall > backup.sql # postgresql backup 
+sudo -u postgres pg_dump postgres > backup.sql # postgresql backup 
+sudo -u postgres psql --single-transaction --file backup.sql # restore postgresql 
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
