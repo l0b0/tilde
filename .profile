@@ -20,3 +20,10 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# rbenv <https://github.com/sstephenson/rbenv>
+if [ -d "$HOME/.rbenv/bin" ]
+then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
