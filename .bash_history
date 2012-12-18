@@ -582,59 +582,17 @@ make test 2>&1 | tee > make_test.out~ # dev
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
-man 1 aplay # help 
-man 1 apport-bug # help 
-man 1 apport-cli # help 
-man 1 arandr # help 
-man 1 createuser # help 
-man 1 dpkg # help 
-man 1 dropuser # help 
-man 1 eject # help 
-man 1 exiv2 # help 
-man 1 fakeroot # help 
-man 1 file # help 
-man 1 fuseiso # help 
-man 1 fusermount # help 
-man 1 gethostip # help 
-man 1 gfortran # help 
-man 1 git # help 
-man 1 gpg # help 
-man 1 hexdump # help 
-man 1 htop # help 
-man 1 imake # help 
-man 1 initdb # help postgresql server database 
-man 1 lintian # help 
-man 1 nc # help 
-man 1 patch # help 
-man 1 pdebuild # help 
-man 1 pep8 # help 
-man 1 perldoc # help 
-man 1 perl # help 
 man 1p mv # posix help 
-man 1 postgres # help postgresql server 
-man 1 ppc386 # help 
-man 1 ps # help 
-man 1 python # help 
-man 1 quilt # help 
-man 1 ssh-keygen # help 
-man 1 traceroute # help 
-man 1 xclip # help 
-man 1 xmkmf # help 
 man 5 crontab # help 
 man 5 passwd # help password 
-man 5 sudoers # help 
-man 7 debhelper # help 
 man 7 glob # help 
-man 8 dh_make # help 
-man 8 netstat # help 
-man 8 pbuilder # help 
-man 8 pidof # help 
-man 8 service # help 
-man 8 visudo # help 
 man ack-grep # help 
 man add-apt-repository # help 
 man addgroup # help 
 man adduser # help 
+man aplay # help 
+man apport-bug # help 
+man apport-cli # help 
 man apropos # help 
 man apt-cache # help 
 man apt-get # help 
@@ -663,10 +621,12 @@ man comm # help
 man convert # help 
 man cp # help 
 man createdb # help postgresql 
+man createuser # help 
 man crontab # help 
 man csplit # help 
 man curl # help 
 man cut # help 
+man debhelper # help 
 man df # help 
 man dhclient # help 
 man dh_make # help 
@@ -680,20 +640,30 @@ man download-mibs # help
 man dpkg # help 
 man dpkg-shlibdeps # help 
 man dropdb # help postgresql 
+man dropuser # help 
 man du # help 
+man eject # help 
 man env # help 
 man errno # help 
 man etherape # help 
+man exiv2 # help 
 man expr # help 
 man extundelete # help 
+man fakeroot # help 
 man fdisk # help 
 man feh # help 
 man ffmpeg # help 
+man file # help 
 man fmt # help 
 man fortune # help 
+man fuseiso # help 
+man fusermount # help 
 man getconf # help 
 man getent # help 
+man gethostip # help 
 man getopt # help 
+man gfortran # help 
+man git # help 
 man gitk # help 
 man git-svn # help 
 man gksu # help 
@@ -703,17 +673,22 @@ man gnome-screensaver # help
 man gnome-shell # help 
 man gnome-specimen # help 
 man gnome-terminal # help 
+man gpg # help 
 man grep # help 
 man groupadd # help 
 man groups # help 
 man head # help 
 man <(help2man help2man) # help 
+man hexdump # help 
 man hier # help 
 man host # help 
 man hostname # help 
 man hosts # help 
+man htop # help 
 man id # help 
 man ifconfig # help 
+man imake # help 
+man initdb # help postgresql server database 
 man inotify # help 
 man inotifywait # help 
 man install # help 
@@ -732,6 +707,7 @@ man ldconfig # help
 man ldd # help 
 man ld # help 
 man line # help 
+man lintian # help 
 man ln # help 
 man locate # help 
 man logger # help 
@@ -752,6 +728,8 @@ man mutt # help
 man mv # help 
 man nautilus # help 
 man ncal # help 
+man nc # help 
+man netstat # help 
 man nfs # help 
 man nl # help 
 man nmap # help 
@@ -767,19 +745,31 @@ man openssl # help
 man paperconfig # help 
 man passwd # help 
 man patch # help 
+man pbuilder # help 
+man pdebuild # help 
 man pdftk # help 
+man pep8 # help 
+man perldoc # help 
+man perl # help 
 man perlrun # help 
 man pg_dumpall # help postgresql backup 
 man pg_dump # help postgresql backup 
 man pgrep # help 
+man pidof # help 
 man ping # help 
 man pip # help 
 man pngcrush # help 
 man pod2man # help 
+man postgres # help postgresql server 
+man ppc386 # help 
 man proc # help 
+man ps # help 
+man psql # help 
 man psql # help postgresql 
 man puppet # help 
+man python # help 
 man qemu # help 
+man quilt # help 
 man rake # help 
 man rdesktop # help 
 man readlink # help 
@@ -793,6 +783,7 @@ man scp # help
 man screen # help 
 man script # help 
 man seq # help 
+man service # help 
 man setkeycodes # help 
 man setxkbmap # help 
 man sha1sum # help 
@@ -815,10 +806,12 @@ man ssh-copy-id # help
 man sshd # help 
 man sshfs # help 
 man ssh # help 
+man ssh-keygen # help 
 man stat # help 
 man strace # help 
 man strfile # help 
 man stty # help 
+man sudoers # help 
 man sudo # help 
 man su # help 
 man tac # help 
@@ -832,6 +825,7 @@ man tofrodos # help
 man top # help 
 man touch # help 
 man tput # help 
+man traceroute # help 
 man trash # help 
 man tr # help 
 man tty # help 
@@ -849,6 +843,7 @@ man useradd # help
 man usermod # help 
 man utf8 # help 
 man vim # help 
+man visudo # help 
 man watch # help 
 man wc # help 
 man wdiff # help 
@@ -860,10 +855,12 @@ man whois # help
 man wnpp-alert # help 
 man xargs # help 
 man xautolock # help 
+man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xmkmf # help 
 man xmodmap # help 
 man xrandr # help 
 man xrdb # help 
