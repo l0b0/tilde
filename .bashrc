@@ -180,7 +180,10 @@ set +o nounset
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 set -o nounset
 # Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
+if [ -d "$HOME/.rvm/bin" ]
+then
+    PATH="$PATH:$HOME/.rvm/bin"
+fi
 
 # Load perlbrew if present
 if [ -r "${HOME}/perl5/perlbrew/etc/bashrc" ]
