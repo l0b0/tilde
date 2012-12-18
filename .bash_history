@@ -1231,7 +1231,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
 sudo apt-get install etherape traceroute # network 
-sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush qtpfsgui rawstudio rawtherapee shotwell # graphics 2d metadata exif jpeg 
+sudo apt-get install exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rawstudio rawtherapee shotwell # graphics 2d metadata exif jpeg 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
