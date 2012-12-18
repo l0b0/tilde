@@ -506,9 +506,6 @@ id --group
 id # group user 
 id --user 
 id "$USER" 
-ifconfig -a eth0 # internet network nic 
-ifconfig -a # internet network 
-ifconfig # internet network 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
@@ -713,7 +710,6 @@ man host # help
 man hostname # help 
 man hosts # help 
 man id # help 
-man ifconfig # help 
 man inotify # help 
 man inotifywait # help 
 man install # help 
@@ -1363,7 +1359,7 @@ sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get install samsung-backligh
 sudo sh -c 'apt-add-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
 sudo sh -c 'apt-get update && apt-get upgrade --yes' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
-sudo sh -c 'ifconfig wlan0 192.168.0.99 && dhclient wlan0' # set ip address network 
+sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'service ntp stop && ntpdate ntp.example.org && service ntp start' # force manual synchronize time 
 sudo showkey # keyboard 
 sudo shutdown -r now 
