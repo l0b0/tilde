@@ -580,6 +580,7 @@ make test # dev
 make variables # dev 
 make variable-SHELL # dev 
 man 1p mv # posix help 
+man 3 printf # help format %d %f %s 
 man 5 crontab # help 
 man 5 passwd # help password 
 man 7 glob # help 
