@@ -487,6 +487,7 @@ help set
 help shift 
 help shopt 
 help test 
+help time 
 help trap # signal 
 help type 
 help typeset 
