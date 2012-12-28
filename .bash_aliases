@@ -453,6 +453,29 @@ watch_url() {
     x-www-browser "$url"
 }
 
+coalesce() {
+    # Print the first non-empty line
+    # Returns success if a non-empty line is found.
+    #
+    # Examples:
+    #
+    # $ coalesce < test.sh
+    # #!/usr/bin/env bash
+    #
+    # $ var=('' 'foo' 'bar')
+    # $ printf '%s\n' "${var[@]}" | coalesce
+    # foo
+    while IFS= read -r || [[ -n "$REPLY" ]]
+    do
+        if [[ -n "$REPLY" ]]
+        then
+            printf '%s\n' "$REPLY"
+            return
+        fi
+    done
+    return 1
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
