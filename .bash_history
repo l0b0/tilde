@@ -515,6 +515,7 @@ info --subnodes autoconf | pager # help
 info --subnodes automake | pager # help 
 info --subnodes date | pager # help 
 info --subnodes find | pager # help 
+info --subnodes mktemp | pager # help examples temporary files 
 info --subnodes sed | pager # help 
 iostat 
 ip link show 
