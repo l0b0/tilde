@@ -2,6 +2,7 @@ ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log
 ack-grep "pattern" . # search 
 add-apt-repository --help 
 alias ls 
+align_image_stack -vl -a aligned *.jpg 
 aplay --list-pcms # audio 
 apport-bug package # report 
 apport-bug --window # report 
@@ -590,6 +591,7 @@ man ack-grep # help
 man add-apt-repository # help 
 man addgroup # help 
 man adduser # help 
+man align_image_stack # help 
 man aplay # help 
 man apport-bug # help 
 man apport-cli # help 
