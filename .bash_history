@@ -1212,6 +1212,8 @@ stty sane # restore terminal state
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup "$USER" group 
+sudo apt-get autoclean 
+sudo apt-get autoremove 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install adobe-flashplugin 
