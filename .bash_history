@@ -965,8 +965,8 @@ mkgithub ~/dev/xterm-color-count
 mkgithub --help 
 mogrify -crop 2316x1303+0+0 ./*.jpg 
 mogrify -format jpg ./*.CR2 # convert 
-mount 
 mount-image ./*.iso 
+mount # list all 
 mount --no-mtab --options remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -obitrate=256 ~/music/ ~/mp3 # mount 
