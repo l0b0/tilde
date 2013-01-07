@@ -1453,6 +1453,7 @@ tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde 
 tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip 
 tar --extract --gzip --transform='s#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
 tar --list --gzip --file ~/tilde.tar.gz 
+telnet localhost 1234 # network 
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
