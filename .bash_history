@@ -2,6 +2,7 @@ ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log
 ack-grep "pattern" . # search 
 add-apt-repository --help 
 alias ls 
+align_image_stack -vl -a aligned *.jpg 
 aplay --list-pcms # audio 
 apport-bug package # report 
 apport-bug --window # report 
@@ -590,6 +591,7 @@ man ack-grep # help
 man add-apt-repository # help 
 man addgroup # help 
 man adduser # help 
+man align_image_stack # help 
 man aplay # help 
 man apport-bug # help 
 man apport-cli # help 
@@ -1082,6 +1084,7 @@ puppet resource user root
 pwd # current directory 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
+qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qtpfsgui & # hdr photo editor 
 rails c # console 
 rails d controller sessions # delete database 
@@ -1209,6 +1212,8 @@ stty sane # restore terminal state
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup "$USER" group 
+sudo apt-get autoclean 
+sudo apt-get autoremove 
 sudo apt-get dist-upgrade 
 sudo apt-get install ack-grep # search 
 sudo apt-get install adobe-flashplugin 
@@ -1293,7 +1298,7 @@ sudo apt-get install x264 # video codec
 sudo apt-get install xautolock 
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
-sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' # unity 
+sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' unity-lens-music unity-lens-video zeitgeist # unity spyware 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
