@@ -23,6 +23,7 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arandr & # screen layout graphics hardware 
 arch # hardware 
+ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
 aticonfig --initial=check 
 autoconf # compile 
 autoreconf --install # compile 
@@ -604,6 +605,7 @@ man apt-rdepends # help
 man arandr # help 
 man arch # help 
 man ascii # help 
+man ash # help 
 man avconv # help 
 man awk # help 
 man bashdb # help 
