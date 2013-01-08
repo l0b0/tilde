@@ -925,6 +925,7 @@ mkgithub ~/dev/logitech-access-keyboard-bindings
 mkgithub ~/dev/lwpb 
 mkgithub ~/dev/make-includes 
 mkgithub ~/dev/make-links 
+mkgithub ~/dev/makeThin 
 mkgithub ~/dev/meta2jpeg 
 mkgithub ~/dev/metal-book 
 mkgithub ~/dev/mian 
