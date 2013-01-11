@@ -58,6 +58,8 @@ autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expan
 " Switch between tabs and spaces for indentation
 nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
 
+match Todo /\s\+$/
+
 " Replace CR with LF
 noremap <C-n> :%s/\r/\r/g <CR>
 
