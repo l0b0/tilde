@@ -5,7 +5,7 @@ alias ls
 align_image_stack -vl -a aligned *.jpg 
 aplay --list-pcms # audio 
 apport-bug package # report 
-apport-bug --window # report 
+apport-bug --window & # report 
 apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
