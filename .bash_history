@@ -1085,6 +1085,7 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
+python -m py_compile script.py # verify code script 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
