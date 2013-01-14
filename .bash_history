@@ -543,6 +543,7 @@ l ~
 la 
 la ~ 
 lastlog # login users 
+ldconfig --print-cache # list all libraries 
 ldd $(which bash) 
 /lib/udev/findkeyboards 
 ll 
