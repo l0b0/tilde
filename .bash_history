@@ -522,6 +522,7 @@ info --subnodes sed | pager # help
 iostat 
 ip link show 
 ip link show up 
+ip -oneline -family inet addr show eth0 # ipv4 address 
 ip route 
 ipython 
 irb # interactive ruby shell 
