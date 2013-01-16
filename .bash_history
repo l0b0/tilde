@@ -5,7 +5,7 @@ alias ls
 align_image_stack -vl -a aligned *.jpg 
 aplay --list-pcms # audio 
 apport-bug package # report 
-apport-bug --window # report 
+apport-bug --window & # report 
 apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
@@ -398,11 +398,11 @@ git reset --soft HEAD~1 # commit undo
 git reset v0.1 
 git revert 123abc # commit undo 
 git show commit:./path > path.old 
-git stash drop # delete 
+git stash drop stash@{0} # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
-git stash list 
+git stash list --date=local 
 git stash list --patch # diff 
 git stash --patch # diff create 
 git stash pop 
@@ -522,6 +522,7 @@ info --subnodes sed | pager # help
 iostat 
 ip link show 
 ip link show up 
+ip -oneline -family inet addr show eth0 # ipv4 address 
 ip route 
 ipython 
 irb # interactive ruby shell 
@@ -543,7 +544,7 @@ l ~
 la 
 la ~ 
 lastlog # login users 
-ldconfig 
+ldconfig --print-cache # list all libraries 
 ldd $(which bash) 
 /lib/udev/findkeyboards 
 ll 
@@ -990,7 +991,7 @@ netstat --all # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
-nm libfoo.so | grep '^ *U ' # dev undefined 
+nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
 notify-send "summary" "body" 
@@ -1066,14 +1067,14 @@ prove
 prove --recurse 
 pry 
 ps afux | pager -S # processes list all tree tty 
-psql db_name db_user < dump.sql # postgresql import 
-psql db_name db_user # postgresql login 
-psql --host localhost --port 15432 --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # forwarding list all postgresql 
-psql --username postgres <<< 'COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;' # list all postgresql 
-psql --username postgres <<< 'COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;' # unix integer timestamp 
-psql --username postgres --dbname my_db <<< '\dt my_schema.*' # database schema tables list all postgresql 
-psql --username postgres <<< '\dt' # public schema tables list all postgresql 
-psql --username postgres <<< '\du' # users list all postgresql 
+psql --dbname postgres --username postgres < dump.sql # postgresql import 
+psql --dbname postgres --username postgres # postgresql login interactive 
+psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql 
+psql --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
+psql --username postgres <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
+psql --username postgres --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
+psql --username postgres <<< "\dt" # public schema tables list all postgresql 
+psql --username postgres <<< "\du" # users list all postgresql 
 psql --username postgres --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
@@ -1085,18 +1086,19 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
+python -m py_compile script.py # verify code script 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qtpfsgui & # hdr photo editor 
-rails c # console 
-rails d controller sessions # delete database 
-rails d scaffold user # delete database 
-rails g controller sessions new create destroy # create database 
+rails console 
+rails destroy controller sessions # delete database 
+rails destroy scaffold user # delete database 
+rails generate controller sessions new create destroy # create database 
+rails generate --help 
+rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
+rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails generate spine:scaffold user name # create javascript 
-rails g --help # generators 
-rails g migration add_email_to_user email:string email_plain_text_only:boolean # create database 
-rails g scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails new project_name # create 
 rails server --environment production --port 3002 # start service web 
 rails server --environment test --port 3001 # start service web 
