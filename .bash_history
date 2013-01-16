@@ -402,7 +402,7 @@ git stash drop stash@{0} # delete
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
-git stash list 
+git stash list --date=local 
 git stash list --patch # diff 
 git stash --patch # diff create 
 git stash pop 
