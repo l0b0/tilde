@@ -1271,7 +1271,7 @@ sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video accelera
 sudo apt-get install lyx # latex 
 sudo apt-get install markdown # convert 
 sudo apt-get install mencoder # video 
-sudo apt-get install mit-scheme mit-scheme-doc # dev 
+sudo apt-get install mit-scheme* plt-scheme* # dev 
 sudo apt-get install mp3fs # convert 
 sudo apt-get install msort 
 sudo apt-get install nethack-qt # game 
