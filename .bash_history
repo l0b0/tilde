@@ -1091,14 +1091,14 @@ qemu-img create -f qcow2 /tmp/my.img 10G
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qtpfsgui & # hdr photo editor 
-rails c # console 
-rails d controller sessions # delete database 
-rails d scaffold user # delete database 
-rails g controller sessions new create destroy # create database 
+rails console 
+rails destroy controller sessions # delete database 
+rails destroy scaffold user # delete database 
+rails generate controller sessions new create destroy # create database 
+rails generate --help 
+rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
+rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails generate spine:scaffold user name # create javascript 
-rails g --help # generators 
-rails g migration add_email_to_user email:string email_plain_text_only:boolean # create database 
-rails g scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
 rails new project_name # create 
 rails server --environment production --port 3002 # start service web 
 rails server --environment test --port 3001 # start service web 
