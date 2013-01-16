@@ -398,7 +398,7 @@ git reset --soft HEAD~1 # commit undo
 git reset v0.1 
 git revert 123abc # commit undo 
 git show commit:./path > path.old 
-git stash drop # delete 
+git stash drop stash@{0} # delete 
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
