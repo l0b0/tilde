@@ -1290,6 +1290,7 @@ sudo apt-get install shunit2 # test bash shell zsh
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
 sudo apt-get install sqlite3 sqlite3-doc # database 
 sudo apt-get install sshfs 
+sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
