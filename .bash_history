@@ -481,6 +481,7 @@ help enable
 help exit 
 help help 
 help history 
+help jobs 
 help kill 
 help local 
 help printf 
@@ -532,6 +533,7 @@ java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
+jobs -l # list all background 
 kill -0 $! # check background process pid 
 killall process 
 kill -INT $$ # signal 
