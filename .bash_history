@@ -1229,7 +1229,7 @@ sudo apt-get install audacity # audio editor
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
 sudo apt-get install bashdb bison bison-doc build-essential gcc gcc-doc gettext gettext-doc ia32-libs libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl xdotool zlib1g-dev # linux dev 
-sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds wormux xmoto # game 
+sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds wesnoth wormux xmoto # game 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
@@ -1270,6 +1270,7 @@ sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video accelera
 sudo apt-get install lyx # latex 
 sudo apt-get install markdown # convert 
 sudo apt-get install mencoder # video 
+sudo apt-get install mit-scheme* plt-scheme* # dev 
 sudo apt-get install mp3fs # convert 
 sudo apt-get install msort 
 sudo apt-get install nethack-qt # game 
@@ -1290,6 +1291,7 @@ sudo apt-get install shunit2 # test bash shell zsh
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
 sudo apt-get install sqlite3 sqlite3-doc # database 
 sudo apt-get install sshfs 
+sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
