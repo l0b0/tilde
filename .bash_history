@@ -1126,8 +1126,7 @@ rbenv local 1.9.3-p327 # ruby project
 rbenv version # ruby installed 
 rbenv versions # ruby all installed 
 rbenv which rails # ruby gem binary path 
-rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 hostname & # remote keyboard windows 
-rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:homedir=~ hostname & # remote keyboard share windows 
+rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
 readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
