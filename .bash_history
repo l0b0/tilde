@@ -816,6 +816,7 @@ man ssh-keygen # help
 man stat # help 
 man strace # help 
 man strfile # help 
+man strftime # help format string date 
 man stty # help 
 man sudoers # help 
 man sudo # help 
