@@ -557,6 +557,7 @@ locate file
 longer 80 example.txt 
 longest < ~/.bash_history 
 lpstat -v 
+lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
 ls --directory /proc/[^0-9]* # metadata 
 lshw 
@@ -717,6 +718,7 @@ man lintian # help
 man ln # help 
 man locate # help 
 man logger # help 
+man lsb_release # help 
 man lscpu # help 
 man ls # help 
 man lsof # help 
