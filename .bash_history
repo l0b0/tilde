@@ -1244,7 +1244,7 @@ sudo apt-get install curl wget # web
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
 sudo apt-get install dfo # Flickr 
-sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rawstudio rawtherapee shotwell # graphics 2d metadata exif jpeg 
+sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rawstudio rawtherapee # graphics 2d metadata exif jpeg 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
 sudo apt-get install etherape traceroute # network 
