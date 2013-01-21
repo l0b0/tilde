@@ -787,6 +787,7 @@ man resize # help
 man rm # help 
 man route # help 
 man rsync # help 
+man ruby # help 
 man scp # help 
 man screen # help 
 man script # help 
@@ -1148,6 +1149,7 @@ rm file
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
+ruby -c test.rb # check verify syntax 
 ruby --verbose 
 sandbox="$(mktemp --directory)" 
 sass-convert all.s{a,c}ss 
