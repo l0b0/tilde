@@ -1535,6 +1535,7 @@ who # logins users
 wine --version 
 wnpp-alert # Debian packaging 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
+xclip -in filename.txt # mouse clipboard save 
 xclip -out -selection clipboard # keyboard 
 xclip -out -selection primary # mouse 
 xev 
