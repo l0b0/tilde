@@ -1200,7 +1200,7 @@ snmptranslate -Of .1.3.6.1.2.1.1 # OID
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
-software-properties-gtk # software sources 
+software-properties-gtk & # software sources 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
