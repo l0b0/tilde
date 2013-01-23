@@ -33,7 +33,6 @@ bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal
 bashdb test.sh # debug script 
 bash -o noexec ~/.bash_history # verify syntax 
 bash -o xtrace # debug 
-bash --restricted 
 bash test.sh # run script 
 bash --version 
 bc <<< '2+2' # calculator math 
@@ -1128,6 +1127,7 @@ rake routes # rails web
 rake spec # rails test 
 rake --tasks # rails 
 rake test # rails 
+rbash # restricted 
 rbenv help # ruby 
 rbenv install 1.9.3-p327 # ruby install 
 rbenv install --list # ruby all install 
