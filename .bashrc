@@ -11,7 +11,7 @@ shopt -s nullglob
 
 # Make sure all terminals save history
 # Checks that PROMPT_COMMAND is not read-only
-if (unset PROMPT_COMMAND 2> /dev/null)
+if unset PROMPT_COMMAND 2> /dev/null
 then
     PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND-}"
 fi
