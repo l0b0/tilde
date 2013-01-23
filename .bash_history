@@ -1375,7 +1375,7 @@ sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf
 sudo service cups restart 
 sudo service postgresql reload 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get install samsung-backlight' 
-sudo sh -c 'apt-add-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
+sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
 sudo sh -c 'apt-get update && apt-get upgrade --yes' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
