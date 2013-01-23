@@ -218,6 +218,7 @@ evince /usr/share/doc/gnu-standards/standards.pdf.gz # help
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exclude_vcs < <(grep --recursive --fixed-strings --regexp 'foo' .) # search literal source 
+exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
 facter # hardware os 
