@@ -1374,6 +1374,7 @@ sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
+sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
 sudo sh -c 'apt-get update && apt-get upgrade --yes' 
