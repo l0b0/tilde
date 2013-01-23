@@ -33,6 +33,7 @@ bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal
 bashdb test.sh # debug script 
 bash -o noexec ~/.bash_history # verify syntax 
 bash -o xtrace # debug 
+bash --restricted 
 bash test.sh # run script 
 bash --version 
 bc <<< '2+2' # calculator math 
