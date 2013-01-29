@@ -159,6 +159,7 @@ dropdb --username username dbname # postgresql
 du --si --summarize . # disk size 
 echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
+echo "body" > ~/.events/summary # notify 
 echo $COLUMNS # terminal 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee --append /etc/environment # print 
