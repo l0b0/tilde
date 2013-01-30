@@ -1287,7 +1287,7 @@ sudo apt-get install markdown # convert
 sudo apt-get install mencoder # video 
 sudo apt-get install mp3fs # convert 
 sudo apt-get install msort 
-sudo apt-get install nethack-qt # game 
+sudo apt-get install nethack-qt nethack-spoilers # game 
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
@@ -1567,6 +1567,7 @@ x-www-browser /usr/share/doc/debian-policy/policy.html/index.html & # packaging 
 x-www-browser /usr/share/doc/developers-reference/index.html & # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html & # help 
 x-www-browser /usr/share/doc/maint-guide/html/index.en.html & # packaging linux dev 
+x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html & 
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html & # help 
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html & # help reference svg 
 xxd $(which xxd) | head --lines=1 
