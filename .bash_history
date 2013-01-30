@@ -1000,6 +1000,7 @@ mv file{.orig,}
 ncal -3bM 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill $! # test network listen port 
 neato -O -Tsvg ./*.dot 
+nethack-qt & 
 netstat 
 netstat --all # internet connections sockets 
 nl ~/.bashrc 
