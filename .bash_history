@@ -304,6 +304,7 @@ git branch --track topic master
 git checkout . 
 git checkout -b topic-svn remotes/topic # branch 
 git checkout master 
+git cherry-pick HEAD@{5} 
 git cherry-pick master:HEAD 
 git clean --dry-run -d # directories 
 git clean --dry-run -dx # directories .gitignore 
@@ -364,6 +365,7 @@ git help mv
 git help pull 
 git help push 
 git help rebase 
+git help reflog 
 git help remote 
 git help request-pull 
 git help reset 
@@ -395,6 +397,7 @@ git rebase --abort
 git rebase --continue 
 git rebase --interactive HEAD~20 
 git rebase master 
+git reflog 
 git remote add -f origin ssh://user@example.org/home/user/repo 
 git remote --verbose # list 
 git reset --soft HEAD~1 # commit undo 
