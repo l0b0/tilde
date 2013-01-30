@@ -357,6 +357,7 @@ git help format-patch
 git help grep 
 git help gui 
 git help help 
+git help ignore 
 git help init 
 git help log 
 git help merge 
