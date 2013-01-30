@@ -1026,6 +1026,7 @@ pager /proc/bus/input/devices
 pager --RAW-CONTROL-CHARS filename # color 
 pager /sys/class/dmi/id/product_name 
 pager /sys/class/dmi/id/sys_vendor 
+pager /usr/share/doc/nethack-common/Guidebook.txt.gz # help 
 pager /var/log/auth.log 
 pager /var/log/dmesg 
 pager /var/log/kern.log 
