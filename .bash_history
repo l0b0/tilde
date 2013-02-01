@@ -1532,6 +1532,7 @@ upgrade
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
 vainfo 
+valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
