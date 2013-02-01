@@ -265,6 +265,7 @@ fullname root
 fuseiso -p file.bin /media/mountpoint # mount 
 fusermount -u /media/mountpoint # unmount 
 gcc --version 
+gcc -Wall -o a.out foo.c # compile 
 gconf-editor # gnome config 
 gem help rdoc # ruby 
 gem install bundler 
@@ -675,6 +676,7 @@ man fmt # help
 man fortune # help 
 man fuseiso # help 
 man fusermount # help 
+man gcc # help 
 man getconf # help 
 man getent # help 
 man gethostip # help 
