@@ -1245,7 +1245,7 @@ sudo apt-get install adobe-flashplugin
 sudo apt-get install apt-listchanges # package 
 sudo apt-get install apt-rdepends # package 
 sudo apt-get install arandr # screen layout graphics hardware 
-sudo apt-get install arduino arduino-mk avrdude-doc gcc gcc-doc libjna-java-doc libyaml-shell-perl # dev 
+sudo apt-get install arduino arduino-mk avrdude-doc gcc gcc-doc libjna-java-doc libyaml-shell-perl # dev arduino 
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
