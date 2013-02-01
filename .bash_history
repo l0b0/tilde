@@ -952,6 +952,7 @@ mkgithub ~/dev/mkgithub
 mkgithub ~/dev/mount-image 
 mkgithub ~/dev/msort 
 mkgithub ~/dev/offlickr 
+mkgithub ~/dev/OpenDUNE 
 mkgithub ~/dev/OpenSCAD-Minimizer 
 mkgithub ~/dev/paperless 
 mkgithub ~/dev/paperless.wiki 
