@@ -521,10 +521,10 @@ id # group user
 id --user 
 id "$USER" 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
+indent *.c 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
-indent --k-and-r-style foo.c 
 info --subnodes autoconf | pager # help 
 info --subnodes automake | pager # help 
 info --subnodes date | pager # help 
