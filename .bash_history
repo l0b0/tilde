@@ -87,6 +87,7 @@ convert ./*.jpg output.pdf # graphics
 convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
 cp file{,.orig} # filesystem 
+cppcheck foo.c 
 createdb --template template0 --username username dbname # postgresql 
 cronlist 
 cronlist --help 
@@ -523,6 +524,7 @@ IFS=':' read -a paths <<< "$PATH" # tokenize array
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
+indent --k-and-r-style foo.c 
 info --subnodes autoconf | pager # help 
 info --subnodes automake | pager # help 
 info --subnodes date | pager # help 
@@ -637,6 +639,7 @@ man cmp # help
 man comm # help 
 man convert # help 
 man cp # help 
+man cppcheck # help 
 man createdb # help postgresql 
 man createuser # help 
 man crontab # help 
@@ -706,6 +709,7 @@ man hosts # help
 man htop # help 
 man id # help 
 man imake # help 
+man indent # help 
 man initdb # help postgresql server database 
 man inotify # help 
 man inotifywait # help 
@@ -820,6 +824,7 @@ man snmptranslate # help
 man snmpwalk # help 
 man software-properties-gtk # help 
 man sort # help 
+man splint # help 
 man ssh-agent # help 
 man ssh_config # help 
 man ssh-copy-id # help 
@@ -1221,6 +1226,7 @@ software-properties-gtk & # software sources
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
+splint foo.c 
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
 ssh example.org 
@@ -1259,6 +1265,7 @@ sudo apt-get install cloc sloccount # dev code
 sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
+sudo apt-get install cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
