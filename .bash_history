@@ -401,6 +401,7 @@ git rebase --continue
 git rebase --interactive HEAD~20 
 git rebase master 
 git reflog 
+git reflog show --patch-with-stat 
 git remote add -f origin ssh://user@example.org/home/user/repo 
 git remote --verbose # list 
 git reset --soft HEAD~1 # commit undo 
