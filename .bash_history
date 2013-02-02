@@ -629,6 +629,7 @@ man bashdb # help
 man bash # help 
 man bc # help 
 man blkid # help 
+man builtins # help bash 
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
