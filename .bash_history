@@ -1385,6 +1385,7 @@ sudo mount --all
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
+sudo ntpdate pool.ntp.org 
 sudo nvidia-settings 
 sudo paperconfig --paper a4 
 sudo passwd --delete root # disable 
@@ -1404,7 +1405,6 @@ sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get
 sudo sh -c 'apt-get update && apt-get upgrade --yes' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
-sudo sh -c 'service ntp stop && ntpdate ntp.example.org && service ntp start' # force manual synchronize time 
 sudo showkey # keyboard 
 sudo shutdown -r now 
 sudo strace -p 123 # process 
