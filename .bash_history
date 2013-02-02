@@ -836,6 +836,7 @@ man sshfs # help
 man ssh # help 
 man ssh-keygen # help 
 man stat # help 
+man stdlib.h # help dev c header 
 man strace # help 
 man strfile # help 
 man strftime # help format string date 
