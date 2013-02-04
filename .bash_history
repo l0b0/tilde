@@ -338,6 +338,7 @@ git diff --staged
 [ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ] # verify sort 
 git diff --staged --ignore-space-at-eol 
 git diff --staged --stat 
+git difftool old new # gui 
 git diff --word-diff 
 git fetch 
 git format-patch --find-renames HEAD^ 
@@ -354,6 +355,7 @@ git help clone
 git help commit 
 git help config 
 git help diff 
+git help difftool 
 git help fetch 
 git help format-patch 
 git help grep 
