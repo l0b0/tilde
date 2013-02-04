@@ -591,6 +591,7 @@ make clean # dev
 make # compile dev 
 make configure # dev 
  make --directory ~/dev/tilde clean 
+make && echo finished > ~/.events/compilation || echo failed > ~/.events/compilation 
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
