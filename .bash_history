@@ -1065,6 +1065,7 @@ perldoc file.pl # help
 perldoc -f kill # help function 
 perl_modules 
 perl_module_version URI 
+perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
 pgrep -u root cron 
 php --interactive 
