@@ -1367,6 +1367,7 @@ sudo dmidecode --type system
 sudo do-release-upgrade # Ubuntu distro 
 sudo download-mibs 
 sudo dpkg-reconfigure ca-certificates 
+sudo dpkg-reconfigure keyboard-configuration 
 sudo editor /etc/apt/sources.list 
 sudo editor /etc/default/keyboard 
 sudo editor /etc/fstab 
