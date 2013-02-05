@@ -358,6 +358,7 @@ git help diff
 git help difftool 
 git help fetch 
 git help format-patch 
+git help gc # garbage collection 
 git help grep 
 git help gui 
 git help help 
