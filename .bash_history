@@ -459,6 +459,7 @@ gnome-screensaver-command --version
 gnome-screensaver --version 
 gnome-shell --version 
 gnome-specimen & 
+gnome-tweak-tool & 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
