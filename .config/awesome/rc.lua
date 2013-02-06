@@ -388,3 +388,10 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
+-- {{{ Autostart
+-- Start most common applications
+awful.util.spawn("chromium-browser")
+awful.util.spawn("firefox")
+awful.util.spawn("x-terminal-emulator")
+-- }}}
