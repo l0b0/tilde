@@ -352,6 +352,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { instance = "plugin-container" },
       properties = { floating = true } },
+    { rule = { class = "Luakit" },
+      properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
@@ -387,4 +389,13 @@ end)
 
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
+
+-- {{{ Autostart
+-- Start most common applications
+awful.util.spawn("chromium-browser")
+awful.util.spawn("firefox")
+awful.util.spawn("x-terminal-emulator")
+awful.util.spawn("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps")
+awful.util.spawn("eval `gnome-keyring-daemon`")
 -- }}}
