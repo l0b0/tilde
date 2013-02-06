@@ -352,6 +352,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { instance = "plugin-container" },
       properties = { floating = true } },
+    { rule = { class = "Luakit" },
+      properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
