@@ -326,6 +326,7 @@ git config --global github.user l0b0
 git config --global mergetool.prompt false 
 git config --list 
 GIT_CURL_VERBOSE=1 git pull # debug 
+git cvsimport -p x -v -d :pserver:anonymous@projectname.cvs.sourceforge.net:/cvsroot/projectname projectname 
 git diff 
 git diff --color-words 
 git diff | diff-ignore-moved-lines 
@@ -355,6 +356,7 @@ git help clean
 git help clone 
 git help commit 
 git help config 
+git help cvsimport 
 git help diff 
 git help difftool 
 git help fetch 
@@ -376,6 +378,7 @@ git help reflog
 git help remote 
 git help request-pull 
 git help reset 
+git help revert 
 git help show 
 git help stash 
 git help status 
@@ -1274,7 +1277,7 @@ sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc g
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff cvs git-core git-doc git-gui gitk git-svn meld qgit subversion # vcs 
+sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
 sudo apt-get install cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
