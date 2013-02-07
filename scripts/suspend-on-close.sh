@@ -35,7 +35,7 @@ fi
 
 > "$target_file" cat <<EOF
 #!/bin/sh
-pm-suspend
+grep -q closed /proc/acpi/button/lid/*/state && pm-suspend
 EOF
 
 chmod u+x "$target_file"
