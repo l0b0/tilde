@@ -376,6 +376,7 @@ git help reflog
 git help remote 
 git help request-pull 
 git help reset 
+git help revert 
 git help show 
 git help stash 
 git help status 
