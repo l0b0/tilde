@@ -26,7 +26,7 @@ set -o errexit -o noclobber -o nounset
 > /usr/share/gnome-session/sessions/awesome.session cat <<EOF
 [GNOME Session]
 Name=Awesome session
-RequiredComponents=gnome-settings-daemon;gnome-panel;
+RequiredComponents=gnome-settings-daemon;
 RequiredProviders=windowmanager;
 DefaultProvider-windowmanager=awesome
 DefaultProvider-notifications=notification-osd
