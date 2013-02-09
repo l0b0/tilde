@@ -173,6 +173,7 @@ echo "$PATH" | tr ':' $'\n' # user path
 echo "${PIPESTATUS[@]}" | tr --squeeze-repeats ' ' + | bc # array sum 
 echo "$PROMPT_COMMAND" # shell 
 echo "$REPLY" # read 
+echo return _VERSION | awesome-client # lua version 
 echo $$ # shell pid 
 echo "$TERM" # shell 
 echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
