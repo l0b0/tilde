@@ -473,6 +473,7 @@ grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep --recursive --fixed-strings --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
+grep --recursive --no-filename --only-matching 'foo' . | wc --lines # sum count search 
 grep --regexp ^ --regexp "^$USER:" /etc/passwd # context highlight 
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
