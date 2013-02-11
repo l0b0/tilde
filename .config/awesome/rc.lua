@@ -73,7 +73,18 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
     names = {"shell", "edit", "web", "doc", "vcs", "db", "comm", "rdesktop", "toread", "fun"},
-    layouts = {layouts[6], layouts[6], layouts[6], layouts[4], layouts[9], layouts[9], layouts[9], layouts[6], layouts[6], layouts[6]}
+    layouts = {
+        awful.layout.suit.fair,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile.bottom,
+        awful.layout.suit.spiral.dwindle,
+        awful.layout.suit.spiral.dwindle,
+        awful.layout.suit.spiral.dwindle,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile
+    }
 }
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
