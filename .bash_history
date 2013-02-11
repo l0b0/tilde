@@ -702,6 +702,7 @@ man gitk # help
 man git-svn # help 
 man gksu # help 
 man glabels # help 
+man gnome-keyring-daemon # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
 man gnome-shell # help 
