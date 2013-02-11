@@ -1106,6 +1106,7 @@ printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbos
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test keyboard 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection primary # test mouse 
 printf %s "${IFS:0:1}" 
+printf "${USER}%.0s" {1..5} # repeat string 
 prove 
 prove --recurse 
 pry 
