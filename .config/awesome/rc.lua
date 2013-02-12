@@ -421,5 +421,4 @@ awful.util.spawn("chromium-browser")
 awful.util.spawn("firefox")
 awful.util.spawn("x-terminal-emulator")
 awful.util.spawn("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps")
-awful.util.spawn("eval `gnome-keyring-daemon`")
 -- }}}
