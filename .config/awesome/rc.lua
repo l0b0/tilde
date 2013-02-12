@@ -94,7 +94,7 @@ tags = {
         awful.layout.suit.spiral.dwindle,
         awful.layout.suit.tile,
         awful.layout.suit.tile,
-        awful.layout.suit.tile
+        awful.layout.suit.floating,
     }
 }
 for s = 1, screen.count() do
