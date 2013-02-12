@@ -474,6 +474,7 @@ grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep --recursive --fixed-strings --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
+grep --recursive --no-filename --only-matching 'foo' . | wc --lines # sum count search 
 grep --regexp ^ --regexp "^$USER:" /etc/passwd # context highlight 
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
@@ -703,6 +704,7 @@ man gitk # help
 man git-svn # help 
 man gksu # help 
 man glabels # help 
+man gnome-keyring-daemon # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
 man gnome-shell # help 
@@ -1105,6 +1107,7 @@ printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbos
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test keyboard 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection primary # test mouse 
 printf %s "${IFS:0:1}" 
+printf "${USER}%.0s" {1..5} # repeat string 
 prove 
 prove --recurse 
 pry 
