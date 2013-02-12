@@ -417,8 +417,7 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 
 -- {{{ Autostart
 -- Start most common applications
-awful.util.spawn("chromium-browser")
-awful.util.spawn("firefox")
+awful.util.spawn("x-www-browser")
 awful.util.spawn("x-terminal-emulator")
 awful.util.spawn("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps")
 -- }}}
