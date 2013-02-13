@@ -1538,6 +1538,7 @@ traceroute example.org
 trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
 trap # signal 
 traps="$(trap)" # signal 
+! ! true && ! false && echo verified 
 tty 
 txt2cloud 
 txt2cloud --min 3 < $(which txt2cloud) > cloud.xhtml 
