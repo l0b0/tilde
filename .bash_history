@@ -1428,7 +1428,7 @@ sudo service postgresql reload
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer' 
-sudo sh -c 'apt-get update && apt-get upgrade --yes' 
+sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
 sudo showkey # keyboard 
