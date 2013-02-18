@@ -370,6 +370,7 @@ git help gui
 git help help 
 git help ignore 
 git help init 
+git help instaweb 
 git help log 
 git help merge 
 git help mergetool 
@@ -389,6 +390,8 @@ git help submodule
 git help svn 
 git help tag 
 git init 
+git instaweb start 
+git instaweb stop 
 gitk --all . & # gui 
 git log 
 git log Makefile 
@@ -747,6 +750,7 @@ man kvm # help
 man ldconfig # help 
 man ldd # help 
 man ld # help 
+man lighttpd # help 
 man line # help 
 man lintian # help 
 man ln # help 
@@ -1322,6 +1326,7 @@ sudo apt-get install libav-tools # video
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
+sudo apt-get install lighttpd # web server 
 sudo apt-get install lyx # latex 
 sudo apt-get install markdown # convert 
 sudo apt-get install mencoder # video 
