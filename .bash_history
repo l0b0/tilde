@@ -1242,6 +1242,8 @@ shopt -s nullglob # option set *
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
 sleep 1m 
+slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
+slideshow -t s6blank presentation.md 
 sloccount . 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
@@ -1398,6 +1400,7 @@ sudo etherape # network traffic visualization
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
+sudo gem install slideshow 
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo java -jar jdivelog-installer-2.16.jar 
