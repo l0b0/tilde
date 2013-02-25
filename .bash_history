@@ -513,7 +513,7 @@ help jobs
 help kill 
 help local 
 help printf 
-help read 
+help rea? # read 
 help set 
 help shift 
 help shopt 
