@@ -511,6 +511,7 @@ help help
 help history 
 help jobs 
 help kill 
+help # list all 
 help local 
 help printf 
 help [r]ead # read 
