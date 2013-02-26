@@ -552,7 +552,7 @@ info --subnodes mktemp | pager # help examples temporary files
 info --subnodes sed | pager # help 
 iostat 
 ip addr show # ipv4 ipv6 address 
-ip link show 
+ip link show down 
 ip link show up 
 ip -oneline -family inet addr show dev eth0 # ipv4 address 
 ip route show 
