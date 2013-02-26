@@ -513,14 +513,14 @@ help jobs
 help kill 
 help local 
 help printf 
-help rea? # read 
-help set 
+help [r]ead # read 
+help [s]et # set 
 help shift 
 help shopt 
 help test 
-help time 
+help [t]ime # time 
 help trap # signal 
-help type 
+help [t]ype 
 help typeset 
 help ulimit 
 help umask 
