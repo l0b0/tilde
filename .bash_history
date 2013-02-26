@@ -1406,6 +1406,7 @@ sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exe
 sudo gem install slideshow 
 sudo iotop 
 sudo iotop --batch --iter 1 
+sudo ip link set dev eth0 up 
 sudo java -jar jdivelog-installer-2.16.jar 
 sudo ldconfig 
 sudo lshw | pager 
