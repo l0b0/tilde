@@ -949,6 +949,7 @@ mkgithub ~/dev/bookmarklets-janmoesen
 mkgithub ~/dev/CERN-Central-Library-bookmark 
 mkgithub ~/dev/coffeescript-jedit 
 mkgithub ~/dev/coin-sorter 
+mkgithub ~/dev/ComputerCraft 
 mkgithub ~/dev/count 
 mkgithub ~/dev/cronlist 
 mkgithub ~/dev/crumbling-beaker 
