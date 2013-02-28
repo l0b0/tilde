@@ -1454,7 +1454,6 @@ sudo update-alternatives --set editor "$(which vim.basic)" # default
 sudo update-alternatives --set x-www-browser "$(which firefox)" # default 
 sudo updatedb 
 sudo update-grub 
-sudo update-java-alternatives --jre --set java-6-sun 
 sudo -u postgres createuser --pwprompt username 
 sudo -u postgres dropuser username 
 sudo -u postgres pg_dumpall > backup.sql # postgresql backup 
