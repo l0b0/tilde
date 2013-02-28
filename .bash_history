@@ -127,6 +127,7 @@ declare -p # color variables functions
 declare # variables functions 
 ~/dev/meta2jpeg/meta2jpeg.sh *.CR2 
 ~/dev/minecraft-scripts/backup.sh # game directory 
+~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
 ~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
