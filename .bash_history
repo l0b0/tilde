@@ -456,6 +456,9 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
+gksudo do-release-upgrade & # Ubuntu distro 
+gksudo etherape & # network traffic visualization 
+gksudo java -jar jdivelog-installer-*.jar & 
 gksudo software-properties-gtk & # source 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
@@ -1390,7 +1393,6 @@ sudo dmidecode
 sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
-sudo do-release-upgrade # Ubuntu distro 
 sudo download-mibs 
 sudo dpkg-reconfigure ca-certificates 
 sudo dpkg-reconfigure keyboard-configuration 
@@ -1402,7 +1404,6 @@ sudo editor /etc/postgresql/*/main/pg_hba.conf
 sudo editor /etc/rc.local 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
-sudo etherape # network traffic visualization 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
@@ -1410,7 +1411,6 @@ sudo gem install slideshow
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo ip link set dev eth0 up 
-sudo java -jar jdivelog-installer-2.16.jar 
 sudo ldconfig 
 sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
