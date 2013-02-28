@@ -1426,7 +1426,6 @@ sudo mount --options remount,ro /dev/sda1 # readonly restore
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org 
-sudo nvidia-settings 
 sudo paperconfig --paper a4 
 sudo passwd --delete root # disable 
 sudo pip install --upgrade pip 
