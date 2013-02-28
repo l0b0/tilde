@@ -1445,7 +1445,6 @@ sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-r
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
 sudo showkey # keyboard 
-sudo shutdown -r now 
 sudo strace -p 123 # process 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
