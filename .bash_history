@@ -456,6 +456,7 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
+gksudo software-properties-gtk & # source 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
