@@ -476,6 +476,16 @@ coalesce() {
     return 1
 }
 
+head_tail() {
+    # Both head and tail of a file
+    # @param $1...$#-1: head *and* tail options, such as "-n 5"
+    # @param $#: File name
+    {
+        head "${@:1:$(($#-1))}";
+        tail "${@:1:$(($#-1))}";
+    } < "${@: -1}"
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
