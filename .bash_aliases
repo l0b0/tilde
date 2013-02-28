@@ -480,10 +480,23 @@ head_tail() {
     # Both head and tail of a file
     # @param $1...$#-1: head *and* tail options, such as "-n 5"
     # @param $#: File name
+
+    # Remove last parameter
+    local index=$#
+    for param
+    do
+        shift
+        if [ $index -ne 1 ]
+        then
+            set -- "$@" "$param"
+        fi
+        index=$((index - 1))
+    done
+
     {
-        head "${@:1:$(($#-1))}";
-        tail "${@:1:$(($#-1))}";
-    } < "${@: -1}"
+        head "$@";
+        tail "$@";
+    } < "$last"
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
