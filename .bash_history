@@ -1205,7 +1205,7 @@ rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rm file 
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
-rsync --archive --recursive --progress --verbose host:/path /target # network transfer 
+rsync --archive --human-readable --recursive --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 ruby --verbose 
 sandbox="$(mktemp --directory)" 
