@@ -8,7 +8,7 @@ require("beautiful")
 require("naughty")
 
 -- Load Debian menu entries
-require("debian.menu")
+require("menu")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
