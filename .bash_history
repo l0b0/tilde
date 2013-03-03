@@ -948,6 +948,7 @@ mkdir mp3
 mkdir test 
 mkgithub --configure --https --verbose --user l0b0 
 mkgithub --configure --ssh --verbose --user l0b0 
+mkgithub ~/dev/algorithms 
 mkgithub ~/dev/arm 
 mkgithub ~/dev/bm 
 mkgithub ~/dev/bookmarklets 
