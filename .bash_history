@@ -1023,6 +1023,7 @@ mkgithub ~/dev/vcard2mutt
 mkgithub ~/dev/vcf 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
+mkgithub ~/dev/xdg-menu-to-awesome-wm 
 mkgithub ~/dev/xFormsCal 
 mkgithub ~/dev/xterm-color-count 
 mkgithub --help 

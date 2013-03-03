@@ -1,218 +1,209 @@
--- automatically generated file. Do not edit (see /usr/share/doc/menu/html)
-
-module("debian.menu")
-
-Debian_menu = {}
-
-Debian_menu["Debian_Applications_Accessibility"] = {
-	{"Xmag","xmag"},
+submenu0 =
+{
+  { "Archive Manager", "file-roller" },
+  { "Calculator", "gcalctool" },
+  { "Character Map", "gucharmap" },
+  { "Contacts", "gnome-contacts" },
+  { "Disks", "gnome-disks" },
+  { "Files", "nautilus" },
+  { "Font Viewer", "gnome-font-viewer" },
+  { "gedit", "gedit" },
+  { "Help", "yelp" },
+  { "KeePassX", "keepassx" },
+  { "Main Menu", "alacarte" },
+  { "Screenshot", "gnome-screenshot --interactive" },
+  { "Terminal", "gnome-terminal" },
+  { "Xournal", "xournal" }
 }
-Debian_menu["Debian_Applications_Editors"] = {
-	{"Gedit","/usr/bin/gedit","/usr/share/pixmaps/gedit-icon.xpm"},
-	{"Nano", "x-terminal-emulator -e ".."/bin/nano","/usr/share/nano/nano-menu.xpm"},
-	{"Xedit","xedit"},
-	{"xournal","/usr/bin/xournal"},
+submenu1 =
+{
+  { "Amnesia - The Dark Descent", "/opt/amnesia/Launcher.bin64" },
+  { "Amnesia - The Dark Descent - Manual", "xdg-open /opt/amnesia/Manual_en.pdf" },
+  { "Amnesia - The Dark Descent - Remember", "xdg-open \"/opt/amnesia/Remember - Short Story Collection.pdf\"" },
+  { "Lone Survivor", "/opt/lonesurvivor/LoneSurvivor" },
+  { "Psychonauts", "/opt/psychonauts/psychonauts.sh" },
+  { "PsychoNauts Manual", "xdg-open \"/opt/psychonauts/Psychonauts Manual Win.pdf\"" },
+  { "Super Meat Boy", "/opt/supermeatboy/SuperMeatBoy" },
+  { "Sword &amp; Sworcery EP", "/opt/swordandsworcery/run.sh" },
+  { "Bastion", "/opt/bastion/Bastion/bastion64.sh" }
 }
-Debian_menu["Debian_Applications_File_Management"] = {
-	{"Baobab","/usr/bin/baobab","/usr/share/pixmaps/baobab.xpm"},
-	{"Brasero","/usr/bin/brasero"},
-	{"File-Roller","/usr/bin/file-roller","/usr/share/pixmaps/file-roller.xpm"},
-	{"Nautilus","/usr/bin/nautilus","/usr/share/pixmaps/nautilus.xpm"},
-	{"Xfdesktop","xfdesktop"},
+submenu2 =
+{
+  { "Amnesia - The Dark Descent", "/opt/amnesia/Launcher.bin64" },
+  { "Amnesia - The Dark Descent - Manual", "xdg-open /opt/amnesia/Manual_en.pdf" },
+  { "Amnesia - The Dark Descent - Remember", "xdg-open \"/opt/amnesia/Remember - Short Story Collection.pdf\"" },
+  { "LIMBO", "/opt/limbo/launch-limbo.sh" },
+  { "Psychonauts", "/opt/psychonauts/psychonauts.sh" },
+  { "PsychoNauts Manual", "xdg-open \"/opt/psychonauts/Psychonauts Manual Win.pdf\"" },
+  { "Super Meat Boy", "/opt/supermeatboy/SuperMeatBoy" },
+  { "Sword &amp; Sworcery EP", "/opt/swordandsworcery/run.sh" },
+  { "Teeworlds", "teeworlds" },
+  { "The Ur-Quan Masters", "uqm" },
+  { "Mahjongg", "/usr/games/gnome-mahjongg" },
+  { "AisleRiot Solitaire", "/usr/games/sol" },
+  { "FreeCell Solitaire", "/usr/games/sol --freecell" },
+  { "LIMBO", "/opt/limbo/launch-limbo.sh" },
+  { "Mines", "/usr/games/gnomine" },
+  { "Sudoku", "/usr/games/gnome-sudoku" },
+  { "Bastion", "/opt/bastion/Bastion/bastion64.sh" },
+  { "Braid", "/opt/braid/braid" },
+  { "Battle for Wesnoth (1.10)", "wesnoth-1.10-nolog" },
+  { "Battle for Wesnoth Map Editor (1.10)", "wesnoth-1.10-nolog -e" },
+  { "Grim Fandango", "grimfandango" },
+  { "Minecraft", "/usr/local/bin/minecraft" },
+  { "Steam", "/usr/bin/steam" }
 }
-Debian_menu["Debian_Applications_Graphics"] = {
-	{"Blender","/usr/bin/blender","/usr/share/pixmaps/blender-32x32.xpm"},
-	{"dotty","/usr/bin/dotty"},
-	{"gLabels","/usr/bin/glabels-3","/usr/share/pixmaps/glabels.xpm"},
-	{"Hugin","/usr/bin/hugin"},
-	{"ImageMagick","/usr/bin/display.im6 logo:","/usr/share/pixmaps/display.im6.xpm"},
-	{"Inkscape","/usr/bin/inkscape","/usr/share/pixmaps/inkscape.xpm"},
-	{"lefty","/usr/bin/lefty"},
-	{"LibreOffice Draw","/usr/bin/libreoffice --draw","/usr/share/icons/hicolor/32x32/apps/libreoffice-draw.xpm"},
-	{"luminance-hdr","/usr/bin/luminance-hdr"},
-	{"PTBatcherGUI","/usr/bin/PTBatcherGUI"},
-	{"Rapid Photo Downloader","/usr/bin/rapid-photo-downloader","/usr/share/pixmaps/rapid-photo-downloader.xpm"},
-	{"Rawstudio","/usr/bin/rawstudio","/usr/share/pixmaps/rawstudio.xpm"},
-	{"RawTherapee","rawtherapee","/usr/share/pixmaps/rawtherapee.xpm"},
-	{"The GIMP","/usr/bin/gimp","/usr/share/pixmaps/gimp.xpm"},
-	{"X Window Snapshot","xwd | xwud"},
+submenu3 =
+{
+  { "AcquireImages", "scangui -caption \"AcquireImages\"" },
+  { "Blender", "blender" },
+  { "Comix", "comix" },
+  { "digiKam", "digikam -caption \"digiKam\"" },
+  { "DNGConverter", "dngconverter -caption \"DNGConverter\"" },
+  { "Document Viewer", "evince" },
+  { "ExpoBlending", "expoblending -caption \"ExpoBlending\"" },
+  { "GIMP Image Editor", "gimp-2.8" },
+  { "Hugin Batch Processor", "PTBatcherGUI" },
+  { "Hugin Calibrate Lens", "calibrate_lens_gui" },
+  { "Hugin Panorama Creator", "hugin" },
+  { "ImageMagick (display)", "/usr/bin/display.im6" },
+  { "Image Viewer", "eog" },
+  { "Inkscape", "inkscape" },
+  { "LibreOffice Draw", "libreoffice --draw" },
+  { "Luminance HDR", "luminance-hdr --gui" },
+  { "Panorama", "panoramagui -caption \"Panorama\"" },
+  { "Photo Layouts Editor", "photolayoutseditor" },
+  { "Rapid Photo Downloader", "rapid-photo-downloader" },
+  { "Rawstudio", "rawstudio" },
+  { "RawTherapee", "rawtherapee" },
+  { "Simple Scan", "simple-scan" }
 }
-Debian_menu["Debian_Applications_Network_Communication"] = {
-	{"heirloom-mailx", "x-terminal-emulator -e ".."/usr/bin/heirloom-mailx"},
-	{"Minicom", "x-terminal-emulator -e ".."/usr/bin/minicom"},
-	{"Minicom (X11)","/usr/bin/xminicom"},
-	{"Mutt", "x-terminal-emulator -e ".."/usr/bin/mutt","/usr/share/pixmaps/mutt.xpm"},
-	{"Remmina","/usr/bin/remmina"},
-	{"Telnet", "x-terminal-emulator -e ".."/usr/bin/telnet"},
-	{"Xbiff","xbiff"},
+submenu4 =
+{
+  { "Chromium Web Browser", "/usr/bin/chromium-browser" },
+  { "Desktop Sharing", "vino-preferences" },
+  { "Empathy", "empathy" },
+  { "Firefox Web Browser", "firefox" },
+  { "Google Earth", "googleearth" },
+  { "Konqueror", "kfmclient openProfile webbrowsing" },
+  { "Oracle Java 7 Web Start", "/usr/lib/jvm/java-7-oracle/jre/bin/javaws" },
+  { "qBittorrent", "qbittorrent" },
+  { "Remmina Remote Desktop Client", "remmina" },
+  { "Skype", "skype" },
+  { "Steam", "/usr/bin/steam" }
 }
-Debian_menu["Debian_Applications_Network_File_Transfer"] = {
-	{"qBittorrent","/usr/bin/qbittorrent","/usr/share/pixmaps/qbittorrent.xpm"},
+submenu5 =
+{
+  { "Document Viewer", "evince" },
+  { "gLables", "glabels-3" },
+  { "LibreOffice", "libreoffice" },
+  { "LibreOffice Calc", "libreoffice --calc" },
+  { "LibreOffice Draw", "libreoffice --draw" },
+  { "LibreOffice Impress", "libreoffice --impress" },
+  { "LibreOffice Writer", "libreoffice --writer" }
 }
-Debian_menu["Debian_Applications_Network"] = {
-	{ "Communication", Debian_menu["Debian_Applications_Network_Communication"] },
-	{ "File Transfer", Debian_menu["Debian_Applications_Network_File_Transfer"] },
+submenu6 =
+{
+  { "Amazon", "unity-webapps-runner --amazon" },
+  { "Awesome", "awesome" },
+  { "Photos lens for Unity", "" },
+  { "Ubuntu One Music", "unity-webapps-runner --homepage=\"https://one.ubuntu.com/music-store/\"" },
+  { "Video lens for Unity", "" }
 }
-Debian_menu["Debian_Applications_Office"] = {
-	{"LibreOffice Calc","/usr/bin/libreoffice --calc","/usr/share/icons/hicolor/32x32/apps/libreoffice-calc.xpm"},
-	{"LibreOffice Impress","/usr/bin/libreoffice --impress","/usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm"},
-	{"LibreOffice Writer","/usr/bin/libreoffice --writer","/usr/share/icons/hicolor/32x32/apps/libreoffice-writer.xpm"},
+submenu7 =
+{
+  { "DrRacket", "drracket" },
+  { "jEdit", "jedit" },
+  { "Meld", "meld" },
+  { "qgit", "qgit" }
 }
-Debian_menu["Debian_Applications_Programming"] = {
-	{"DrRacket","/usr/bin/drracket","/usr/share/racket/collects/icons/mini-plt.xpm"},
-	{"GDB", "x-terminal-emulator -e ".."/usr/bin/gdb"},
-	{"jEdit","/usr/bin/jedit","/usr/share/pixmaps/jedit.xpm"},
-	{"Meld","/usr/bin/meld"},
-	{"Python (v2.7)", "x-terminal-emulator -e ".."/usr/bin/python2.7","/usr/share/pixmaps/python2.7.xpm"},
-	{"Python (v3.2)", "x-terminal-emulator -e ".."/usr/bin/python3.2","/usr/share/pixmaps/python3.2.xpm"},
-	{"qgit","/usr/bin/qgit"},
-	{"Ruby (irb1.8)", "x-terminal-emulator -e ".."/usr/bin/irb1.8"},
-	{"Ruby (irb1.9.1)", "x-terminal-emulator -e ".."/usr/bin/irb1.9.1"},
-	{"Tclsh8.5", "x-terminal-emulator -e ".."/usr/bin/tclsh8.5"},
-	{"TkWish8.5","x-terminal-emulator -e /usr/bin/wish8.5"},
+submenu8 =
+{
+  { "Stellarium", "stellarium" }
 }
-Debian_menu["Debian_Applications_Science_Astronomy"] = {
-	{"stellarium","/usr/bin/stellarium","/usr/share/pixmaps/stellarium.xpm"},
+submenu9 =
+{
+  { "Audacity", "audacity" },
+  { "Brasero", "brasero" },
+  { "Last.fm", "/usr/bin/lastfm" },
+  { "Pitivi Video Editor", "pitivi" },
+  { "PulseAudio Volume Meter (Capture)", "pavumeter --record" },
+  { "PulseAudio Volume Meter (Playback)", "pavumeter" },
+  { "Rhythmbox", "rhythmbox" },
+  { "Sound Recorder", "gnome-sound-recorder" },
+  { "VLC media player", "/usr/bin/vlc" }
 }
-Debian_menu["Debian_Applications_Science_Geoscience"] = {
-	{"Google Earth","/usr/bin/googleearth","/usr/share/pixmaps/googleearth.xpm"},
+submenu10 =
+{
+  { "Network Tools", "gnome-nettool" },
+  { "Software Updater", "/usr/bin/update-manager" },
+  { "Startup Disk Creator", "usb-creator-gtk" },
+  { "System Testing", "/usr/bin/checkbox-qt" },
+  { "Ubuntu Software Center", "/usr/bin/software-center" },
+  { "xdiagnose", "gksudo xdiagnose" }
 }
-Debian_menu["Debian_Applications_Science_Mathematics"] = {
-	{"Bc", "x-terminal-emulator -e ".."/usr/bin/bc"},
-	{"Dc", "x-terminal-emulator -e ".."/usr/bin/dc"},
-	{"GCalcTool","/usr/bin/gcalctool","/usr/share/pixmaps/gcalctool.xpm"},
-	{"Gnuplot", "x-terminal-emulator -e ".."/usr/bin/gnuplot"},
-	{"LibreOffice Math","/usr/bin/libreoffice --math","/usr/share/icons/hicolor/32x32/apps/libreoffice-math.xpm"},
-	{"Xcalc","xcalc"},
+submenu11 =
+{
+  { "ARandR", "arandr" },
+  { "CompizConfig Settings Manager", "ccsm" },
+  { "Default Sound Card", "/usr/bin/asoundconf-gtk" },
+  { "Desktop Sharing", "vino-preferences" },
+  { "Disks", "gnome-disks" },
+  { "Keyboard Input Methods", "ibus-setup" },
+  { "Main Menu", "alacarte" },
+  { "Network Connections", "nm-connection-editor" },
+  { "OpenJDK Java 7 Policy Tool", "/usr/bin/policytool" },
+  { "Oracle Java 7 Plugin Control Panel", "/usr/lib/jvm/java-7-oracle/bin/ControlPanel" },
+  { "Oracle Java 7 Policy Tool", "/usr/lib/jvm/java-7-oracle/bin/policytool" },
+  { "Passwords and Keys", "/usr/bin/seahorse" },
+  { "Personal File Sharing", "gnome-file-share-properties" },
+  { "Startup Applications", "gnome-session-properties" },
+  { "Tweak Tool", "gnome-tweak-tool" },
+  { "BOINC Manager", "/usr/bin/boincmgr" },
+  { "dconf Editor", "dconf-editor" },
+  { "Disk Usage Analyzer", "baobab" },
+  { "Dolphin", "dolphin -caption \"Dolphin\"" },
+  { "Htop", "xterm -title \"Htop\" -e htop" },
+  { "IBus", "ibus-daemon --xim" },
+  { "Nepomuk Backup", "nepomukbackup" },
+  { "Nepomuk File Indexing Controller", "nepomukcontroller" },
+  { "Oracle Java 7 Console", "/usr/lib/jvm/java-7-oracle/jconsole" },
+  { "Oracle Java 7 VisualVM", "/usr/lib/jvm/java-7-oracle/bin/jvisualvm" },
+  { "Power Statistics", "gnome-power-statistics" },
+  { "System Log", "gnome-system-log" },
+  { "System Monitor", "gnome-system-monitor" },
+  { "System Settings", "gnome-control-center --overview" },
+  { "UXTerm", "uxterm" },
+  { "XTerm", "xterm" }
 }
-Debian_menu["Debian_Applications_Science"] = {
-	{ "Astronomy", Debian_menu["Debian_Applications_Science_Astronomy"] },
-	{ "Geoscience", Debian_menu["Debian_Applications_Science_Geoscience"] },
-	{ "Mathematics", Debian_menu["Debian_Applications_Science_Mathematics"] },
+submenu12 =
+{
+  { "Notepad", "notepad" }
 }
-Debian_menu["Debian_Applications_Shells"] = {
-	{"Bash", "x-terminal-emulator -e ".."/bin/bash --login"},
-	{"Dash", "x-terminal-emulator -e ".."/bin/dash -i"},
-	{"Sh", "x-terminal-emulator -e ".."/bin/sh --login"},
+submenu13 =
+{
+  { "ExtendScript Toolkit", "env WINEPREFIX=\"/home/victor/.wine\" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/victor/.wine/dosdevices/c:/users/victor/Start\\ Menu/Programs/Adobe/ExtendScript\\ Toolkit.lnk" }
 }
-Debian_menu["Debian_Applications_Sound"] = {
-	{"Audacity","/usr/bin/audacity","/usr/share/pixmaps/audacity32.xpm"},
-	{"grecord (GNOME 2.0 Recorder)","/usr/bin/gnome-sound-recorder","/usr/share/pixmaps/gnome-grecord.xpm"},
-	{"Last.fm","/usr/bin/lastfm","/usr/share/pixmaps/lastfm32.xpm"},
-	{"pavumeter","/usr/bin/pavumeter"},
-	{"Rhythmbox","/usr/bin/rhythmbox","/usr/share/pixmaps/rhythmbox-small.xpm"},
-	{"TiMidity++","timidity -ia","/usr/share/pixmaps/timidity.xpm"},
-}
-Debian_menu["Debian_Applications_System_Administration"] = {
-	{"DSL/PPPoE configuration tool", "x-terminal-emulator -e ".."/usr/sbin/pppoeconf","/usr/share/pixmaps/pppoeconf.xpm"},
-	{"Editres","editres"},
-	{"Gnome Control Center","/usr/bin/gnome-control-center",},
-	{"GNOME Network Tool","/usr/bin/gnome-nettool","/usr/share/pixmaps/gnome-nettool.xpm"},
-	{"pppconfig", "x-terminal-emulator -e ".."su-to-root -p root -c /usr/sbin/pppconfig"},
-	{"Xclipboard","xclipboard"},
-	{"Xfontsel","xfontsel"},
-	{"Xkill","xkill"},
-	{"Xrefresh","xrefresh"},
-}
-Debian_menu["Debian_Applications_System_Hardware"] = {
-	{"Xvidtune","xvidtune"},
-}
-Debian_menu["Debian_Applications_System_Language_Environment"] = {
-	{"Input Method Swicher", "x-terminal-emulator -e ".."/usr/bin/im-switch"},
-}
-Debian_menu["Debian_Applications_System_Monitoring"] = {
-	{"BOINC Manager","/usr/bin/boincmgr"},
-	{"bwm-ng", "x-terminal-emulator -e ".."/usr/bin/bwm-ng"},
-	{"GNOME system monitor","/usr/bin/gnome-system-monitor"},
-	{"htop", "x-terminal-emulator -e ".."/usr/bin/htop"},
-	{"Pstree", "x-terminal-emulator -e ".."/usr/bin/pstree.x11","/usr/share/pixmaps/pstree16.xpm"},
-	{"Top", "x-terminal-emulator -e ".."/usr/bin/top"},
-	{"Xconsole","xconsole -file /dev/xconsole"},
-	{"Xev","x-terminal-emulator -e xev"},
-	{"Xload","xload"},
-}
-Debian_menu["Debian_Applications_System_Security"] = {
-	{"Seahorse","/usr/bin/seahorse","/usr/share/pixmaps/seahorse.xpm"},
-}
-Debian_menu["Debian_Applications_System"] = {
-	{ "Administration", Debian_menu["Debian_Applications_System_Administration"] },
-	{ "Hardware", Debian_menu["Debian_Applications_System_Hardware"] },
-	{ "Language Environment", Debian_menu["Debian_Applications_System_Language_Environment"] },
-	{ "Monitoring", Debian_menu["Debian_Applications_System_Monitoring"] },
-	{ "Security", Debian_menu["Debian_Applications_System_Security"] },
-}
-Debian_menu["Debian_Applications_Terminal_Emulators"] = {
-	{"Gnome Terminal","/usr/bin/gnome-terminal","/usr/share/pixmaps/gnome-terminal.xpm"},
-	{"XTerm","xterm","/usr/share/pixmaps/xterm-color_32x32.xpm"},
-	{"X-Terminal as root (GKsu)","/usr/bin/gksu -u root /usr/bin/x-terminal-emulator","/usr/share/pixmaps/gksu-debian.xpm"},
-	{"XTerm (Unicode)","uxterm","/usr/share/pixmaps/xterm-color_32x32.xpm"},
-}
-Debian_menu["Debian_Applications_Text"] = {
-	{"Character map","/usr/bin/gucharmap"},
-	{"Fortune","sh -c 'while /usr/games/fortune | col -x | xmessage -center -buttons OK:1,Another:0 -default OK -file - ; do :; done'"},
-}
-Debian_menu["Debian_Applications_Video"] = {
-	{"VLC media player","/usr/bin/qvlc","/usr/share/icons/hicolor/32x32/apps/vlc.xpm"},
-}
-Debian_menu["Debian_Applications_Viewers"] = {
-	{"comix","/usr/bin/comix"},
-	{"digikam","/usr/bin/digikam"},
-	{"Evince","/usr/bin/evince","/usr/share/pixmaps/evince.xpm"},
-	{"Eye of GNOME","/usr/bin/eog","/usr/share/pixmaps/gnome-eog.xpm"},
-	{"Xditview","xditview"},
-}
-Debian_menu["Debian_Applications"] = {
-	{ "Accessibility", Debian_menu["Debian_Applications_Accessibility"] },
-	{ "Editors", Debian_menu["Debian_Applications_Editors"] },
-	{ "File Management", Debian_menu["Debian_Applications_File_Management"] },
-	{ "Graphics", Debian_menu["Debian_Applications_Graphics"] },
-	{ "Network", Debian_menu["Debian_Applications_Network"] },
-	{ "Office", Debian_menu["Debian_Applications_Office"] },
-	{ "Programming", Debian_menu["Debian_Applications_Programming"] },
-	{ "Science", Debian_menu["Debian_Applications_Science"] },
-	{ "Shells", Debian_menu["Debian_Applications_Shells"] },
-	{ "Sound", Debian_menu["Debian_Applications_Sound"] },
-	{ "System", Debian_menu["Debian_Applications_System"] },
-	{ "Terminal Emulators", Debian_menu["Debian_Applications_Terminal_Emulators"] },
-	{ "Text", Debian_menu["Debian_Applications_Text"] },
-	{ "Video", Debian_menu["Debian_Applications_Video"] },
-	{ "Viewers", Debian_menu["Debian_Applications_Viewers"] },
-}
-Debian_menu["Debian_Games_Action"] = {
-	{"Teeworlds","/usr/games/teeworlds --quiet","/usr/share/pixmaps/teeworlds.xpm"},
-	{"Ur-Quan Masters","uqm","/usr/share/games/uqm.xpm"},
-}
-Debian_menu["Debian_Games_Card"] = {
-	{"Gnome FreeCell","/usr/games/sol --variation freecell","/usr/share/pixmaps/freecell.xpm"},
-	{"Gnome Solitaire Games","/usr/games/sol","/usr/share/pixmaps/aisleriot.xpm"},
-}
-Debian_menu["Debian_Games_Strategy"] = {
-	{"Battle for Wesnoth (1.10)","/usr/games/wesnoth-1.10-nolog","/usr/share/pixmaps/wesnoth-1.10-icon.xpm"},
-}
-Debian_menu["Debian_Games_Tools"] = {
-	{"Battle for Wesnoth Editor (1.10)","/usr/games/wesnoth-1.10-nolog -e","/usr/share/pixmaps/wesnoth-1.10_editor-icon.xpm"},
-}
-Debian_menu["Debian_Games_Toys"] = {
-	{"Oclock","oclock"},
-	{"Xclock (analog)","xclock -analog"},
-	{"Xclock (digital)","xclock -digital -update 1"},
-	{"Xeyes","xeyes"},
-	{"Xlogo","xlogo"},
-}
-Debian_menu["Debian_Games"] = {
-	{ "Action", Debian_menu["Debian_Games_Action"] },
-	{ "Card", Debian_menu["Debian_Games_Card"] },
-	{ "Strategy", Debian_menu["Debian_Games_Strategy"] },
-	{ "Tools", Debian_menu["Debian_Games_Tools"] },
-	{ "Toys", Debian_menu["Debian_Games_Toys"] },
-}
-Debian_menu["Debian_Help"] = {
-	{"Info", "x-terminal-emulator -e ".."info"},
-	{"Xman","xman"},
-	{"yelp","/usr/bin/yelp"},
-}
-Debian_menu["Debian"] = {
-	{ "Applications", Debian_menu["Debian_Applications"] },
-	{ "Games", Debian_menu["Debian_Games"] },
-	{ "Help", Debian_menu["Debian_Help"] },
+myappmenu =
+{
+  { "Accessories", submenu0 },
+  { "Games", submenu1 },
+  { "Action", submenu2 },
+  { "Arcade", submenu3 },
+  { "Graphics", submenu4 },
+  { "Internet", submenu5 },
+  { "Office", submenu6 },
+  { "Other", submenu7 },
+  { "Programming", submenu8 },
+  { "Science", submenu9 },
+  { "Sound &amp; Video", submenu10 },
+  { "System Tools", submenu11 },
+  { "Administration", submenu12 },
+  { "Preferences", submenu13 },
+  { "Wine", submenu14 },
+  { "Programs", submenu15 },
+  { "Accessories", submenu16 },
+  { "Adobe", submenu17 },
+  { "LucasArts", submenu18 },
+  { "Grim Fandango", submenu19 }
 }
