@@ -236,11 +236,11 @@ feh --fullscreen --hide-pointer ./* # images viewer
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground 
-fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
+fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
 fgit --help 
-fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
+fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
-fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/*/*/ 
+fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
 file README.markdown 
 find_date_sorted . -mindepth 1 # files 
 find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
