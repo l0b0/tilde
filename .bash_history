@@ -973,6 +973,7 @@ mkgithub ~/dev/export
 mkgithub ~/dev/fgit 
 mkgithub ~/dev/filterous 
 mkgithub ~/dev/git 
+mkgithub ~/dev/git-bisect-example 
 mkgithub ~/dev/graphics 
 mkgithub ~/dev/highlight 
 mkgithub ~/dev/https-everywhere 
