@@ -591,6 +591,7 @@ ln --symbolic -- target source
 locale 
 locale --all-locales 
 locate file 
+log_time_diff < /var/log/syslog | sort --numeric --reverse --key=1 | head 
 longer 80 example.txt 
 longest < ~/.bash_history 
 lpstat -v 

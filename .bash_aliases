@@ -499,6 +499,30 @@ head_tail() {
     } < "$last"
 }
 
+log_time_diff() {
+    # Prepends syslog log lines with the difference between the current line
+    # and the previous one in seconds
+    #
+    # Example:
+    #
+    # $ log_time_diff < /var/log/syslog
+    # $ log_time_diff < /var/log/syslog | sort --numeric --key=1
+    local prev line month day time rest
+    while read -r line
+    do
+        read -r month day time rest <<< "$line"
+        ts="$(date --date="$month $day $time" +%s)"
+        if [ "${prev+defined}" = defined ]
+        then
+            diff="$((ts - prev))"
+        else
+            diff=0
+        fi
+        printf "%d %s\n" "$diff" "$line"
+        prev="$ts"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
