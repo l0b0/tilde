@@ -512,7 +512,7 @@ log_time_diff() {
     do
         read -r month day time rest <<< "$line"
         ts="$(date --date="$month $day $time" +%s)"
-        if [ "${prev+defined}" = defined ]
+        if [ "${prev:+set}" = 'set' ]
         then
             diff="$((ts - prev))"
         else
