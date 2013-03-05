@@ -1303,12 +1303,12 @@ sudo apt-get install autopano-sift hugin # graphics panorama
 sudo apt-get install awesome awesome-extra # wm 
 sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc gettext gettext-doc ia32-libs-multiarch libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl valgrind xdotool zlib1g-dev # linux dev 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
+sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui gitk git-svn meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
-sudo apt-get install cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre sun-java6-fonts sun-java6-jre # java 
 sudo apt-get install deluge # torrent 
@@ -1624,6 +1624,8 @@ xscreensaver-command -version
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 x-www-browser /tmp/xterm-screenshot.*.html & 
+x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html & # help c 
+x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html & # help c++ cpp 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html & # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html & # packaging linux dev 
 x-www-browser /usr/share/doc/git-doc/index.html & # help 
