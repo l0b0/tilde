@@ -1085,6 +1085,7 @@ paman & # pulseaudio manager
 paprefs & # pulseaudio preference 
 passwd # password user 
 patch --strip 0 < patch.diff 
+(path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 pavucontrol & # pulseaudio volume 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
