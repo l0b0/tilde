@@ -751,6 +751,7 @@ man iotop # help
 man ip # help 
 man iwconfig # help 
 man java # help 
+man jedit # help 
 man jhead # help 
 man join # help 
 man json_pp # help 
@@ -810,6 +811,7 @@ man perlrun # help
 man pg_dumpall # help postgresql backup 
 man pg_dump # help postgresql backup 
 man pgrep # help 
+man pidgin # help 
 man pidof # help 
 man ping # help 
 man pip # help 
