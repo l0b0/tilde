@@ -1336,7 +1336,7 @@ sudo apt-get install htop
 sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
-sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-profiler python-pydot # python dev 
+sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
