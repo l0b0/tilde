@@ -564,8 +564,8 @@ ip route show
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html & # db visualization 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html & # db visualization 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jedit & # dev editor 
@@ -930,8 +930,8 @@ man xscreensaver-command # help
 man xwininfo # help 
 man xxd # help 
 man zip # help 
-markdown_page README.markdown > README.xhtml && x-www-browser README.xhtml & 
-markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml & # list 
+markdown_page README.markdown > README.xhtml && x-www-browser README.xhtml 
+markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml # list 
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
@@ -1610,7 +1610,7 @@ whois example.org # dns lookup internet network
 who # logins users 
 wine --version 
 wnpp-alert # Debian packaging 
-worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml & 
+worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
 xclip -in filename.txt # mouse clipboard save 
 xclip -out -selection clipboard # keyboard print stdout 
 xclip -out -selection primary # mouse clipboard print stdout 
@@ -1626,17 +1626,17 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
-x-www-browser /tmp/xterm-screenshot.*.html & 
-x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html & # help c 
-x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html & # help c++ cpp 
-x-www-browser /usr/share/doc/debian-policy/policy.html/index.html & # packaging linux dev 
-x-www-browser /usr/share/doc/developers-reference/index.html & # packaging linux dev 
-x-www-browser /usr/share/doc/git-doc/index.html & # help 
-x-www-browser /usr/share/doc/maint-guide/html/index.en.html & # packaging linux dev 
-x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html & 
-x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html & # help 
+x-www-browser /tmp/xterm-screenshot.*.html 
+x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c 
+x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp 
+x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
+x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
+x-www-browser /usr/share/doc/git-doc/index.html # help 
+x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
+x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html 
+x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
 x-www-browser /usr/share/doc/python-doc/html/index.html 
-x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html & # help reference svg 
+x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
