@@ -1336,7 +1336,7 @@ sudo apt-get install htop
 sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install iotop # storage 
-sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-pip python-profiler python-pydot # python dev 
+sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-profiler python-pydot # python dev 
 sudo apt-get install jedit # editor 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install lastfm # music web 
@@ -1637,6 +1637,7 @@ x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux de
 x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html 
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
 x-www-browser /usr/share/doc/python-doc/html/index.html 
+x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # help 
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
