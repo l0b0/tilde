@@ -1574,7 +1574,6 @@ unset -f function
 unset variable_or_function 
 unset -v variable 
 update-java-alternatives --jre --list 
-upgrade 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
 vainfo 
