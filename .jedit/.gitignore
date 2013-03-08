@@ -1,0 +1,14 @@
+*.log
+DockableWindowManager
+abbrevs
+history
+jars-cache/
+jars/
+killring.xml
+mirrorList.xml
+modes/
+perspective.xml
+pluginMgr-Cached.xml.gz
+recent.xml
+server
+settings-backup/
