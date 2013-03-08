@@ -1638,6 +1638,7 @@ x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html # game
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
 x-www-browser /usr/share/doc/python-doc/html/index.html # dev help 
 x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
+x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
