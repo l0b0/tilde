@@ -9,6 +9,7 @@ submenu0 =
   { "Font Viewer", "gnome-font-viewer" },
   { "gedit", "gedit" },
   { "Help", "yelp" },
+  { "ipython", "xterm -title \"ipython\" -e ipython" },
   { "KeePassX", "keepassx" },
   { "Main Menu", "alacarte" },
   { "Screenshot", "gnome-screenshot --interactive" },
@@ -112,6 +113,7 @@ submenu6 =
 submenu7 =
 {
   { "DrRacket", "drracket" },
+  { "ipython", "xterm -title \"ipython\" -e ipython" },
   { "jEdit", "jedit" },
   { "Meld", "meld" },
   { "qgit", "qgit" }
