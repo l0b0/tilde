@@ -1627,18 +1627,18 @@ xscreensaver-command -version
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 x-www-browser /tmp/xterm-screenshot.*.html 
-x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c 
-x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp 
+x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c dev 
+x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp dev 
 x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
 x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
-x-www-browser /usr/share/doc/git-doc/index.html # help 
-x-www-browser /usr/share/doc/ipython/html/index.html # help 
-x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev 
-x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html 
+x-www-browser /usr/share/doc/git-doc/index.html # dev help 
+x-www-browser /usr/share/doc/ipython/html/index.html # dev help 
+x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev help 
+x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html # game 
 x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
-x-www-browser /usr/share/doc/python-doc/html/index.html 
-x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # help 
-x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 
+x-www-browser /usr/share/doc/python-doc/html/index.html # dev help 
+x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
+x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
