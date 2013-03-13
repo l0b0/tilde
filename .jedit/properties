@@ -217,6 +217,7 @@ view.antiAlias=standard
 view.docking.framework=Original
 view.dragAndDrop=false
 view.extendedState=0
+view.gutter.lineNumbers=true
 view.gutter.selectionAreaBgColor=\#dbdbdb
 view.gutter.selectionAreaWidth=12
 view-markers.dock-position=floating
