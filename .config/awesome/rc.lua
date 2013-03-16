@@ -7,8 +7,26 @@ require("beautiful")
 -- Notification library
 require("naughty")
 
--- Load Debian menu entries
-require("menu")
+-- Optional libraries
+function isModuleAvailable(name)
+    if package.loaded[name] then
+        return true
+    else
+        for _, searcher in ipairs(package.searchers or package.loaders) do
+            local loader = searcher(name)
+            if type(loader) == 'function' then
+                package.preload[name] = loader
+                return true
+            end
+        end
+        return false
+    end
+end
+
+-- Menu entries
+if isModuleAvailable('menu') then
+    require('menu')
+end
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
