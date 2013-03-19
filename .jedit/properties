@@ -21,6 +21,7 @@ collapse-all-folds.shortcut=C+e c
 collapse-fold.shortcut=A+BACK_SPACE
 combined-options.shortcut2=C+F12
 combined-options.shortcut=A+o
+complete-word.shortcut=
 confirmSaveAll=false
 copy-append.shortcut=C+e C+a
 copy-append-string-register.shortcut=C+r C+a
