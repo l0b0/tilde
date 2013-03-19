@@ -1286,6 +1286,7 @@ ssh -p 2222 example.org
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
 ssh -Y example.org 
+stat --format %i / # inode 
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
