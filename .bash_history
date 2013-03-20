@@ -1234,6 +1234,7 @@ sed --expression '/^$/d' file
 sed --expression '/^[[:space:]]*$/d' file 
 sed --quiet --expression '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 service snmpd status 
+set -o noclobber # file error 
 set +o noclobber # file error 
 set -o nounset # variable error 
 set +o nounset # variable error 
