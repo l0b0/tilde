@@ -265,6 +265,7 @@ for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done
 for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+free # memory 
 fromdos -- file # convert newline 
 fullname 
 fullname root 
@@ -707,6 +708,7 @@ man ffmpeg # help
 man file # help 
 man fmt # help 
 man fortune # help 
+man free # help 
 man fuseiso # help 
 man fusermount # help 
 man gcc # help 
