@@ -814,6 +814,7 @@ man perlrun # help
 man pg_dumpall # help postgresql backup 
 man pg_dump # help postgresql backup 
 man pgrep # help 
+man php # help 
 man pidgin # help 
 man pidof # help 
 man ping # help 
@@ -1111,6 +1112,7 @@ perl -pe 'chomp if eof' input > output # remove newline eof
 perl --version 
 pgrep -u root cron 
 php --interactive 
+php --syntax-check index.php # verify 
 php --version 
 pidof bash | wc --words # count processes 
 pidof init # process pid 
@@ -1367,6 +1369,7 @@ sudo apt-get install ntp-doc
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio 
+sudo apt-get install php5-cli 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
