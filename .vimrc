@@ -59,6 +59,7 @@ autocmd FileType c set autoindent shiftwidth=4 softtabstop=4 noexpandtab
 " Switch between tabs and spaces for indentation
 nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
 
+" Highlight trailing whitespace characters
 match Todo /\s\+$/
 
 " Replace CR with LF
