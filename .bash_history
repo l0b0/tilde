@@ -1234,13 +1234,13 @@ sed --expression '/^$/d' file
 sed --expression '/^[[:space:]]*$/d' file 
 sed --quiet --expression '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 service snmpd status 
-set +o noclobber 
-set -o nounset 
-set +o nounset 
-set -o pipefail 
-set +o pipefail 
-(set -o posix; set) 
+set +o noclobber # file error 
+set -o nounset # variable error 
+set +o nounset # variable error 
+set -o pipefail # error 
+set +o pipefail # error 
 (set -o posix; set) | grep --only-matching ^COMP[^=]* 
+(set -o posix; set) # list all options 
 set +o xtrace # disable 
 set -o xtrace # enable 
 ./setup.py test 
