@@ -265,6 +265,7 @@ for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done
 for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+free # memory 
 fromdos -- file # convert newline 
 fullname 
 fullname root 
@@ -707,9 +708,11 @@ man ffmpeg # help
 man file # help 
 man fmt # help 
 man fortune # help 
+man free # help 
 man fuseiso # help 
 man fusermount # help 
 man gcc # help 
+man genrsa # help 
 man getconf # help 
 man getent # help 
 man gethostip # help 
@@ -811,6 +814,7 @@ man perlrun # help
 man pg_dumpall # help postgresql backup 
 man pg_dump # help postgresql backup 
 man pgrep # help 
+man php # help 
 man pidgin # help 
 man pidof # help 
 man ping # help 
@@ -915,6 +919,7 @@ man w # help
 man who # help 
 man whois # help 
 man wnpp-alert # help 
+man x509 # help 
 man xargs # help 
 man xautolock # help 
 man xclip # help 
@@ -1068,7 +1073,10 @@ nslookup example.org # dns internet lookup network
 ntpq -p # query list peers 
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
+openssl genrsa -des3 -out private.pem 1024 # create des3 encrypted private rsa key hex 
+openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
+openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 pager /etc/issue 
 pager /etc/passwd # password 
 pager Makefile 
@@ -1104,6 +1112,7 @@ perl -pe 'chomp if eof' input > output # remove newline eof
 perl --version 
 pgrep -u root cron 
 php --interactive 
+php --syntax-check index.php # verify 
 php --version 
 pidof bash | wc --words # count processes 
 pidof init # process pid 
@@ -1136,6 +1145,7 @@ prove
 prove --recurse 
 pry 
 ps afux | pager -S # processes list all tree tty 
+ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 psql --dbname postgres --username postgres < dump.sql # postgresql import 
 psql --dbname postgres --username postgres # postgresql login interactive 
 psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql 
@@ -1230,14 +1240,16 @@ screen -S compile-project
 sed --expression '9d' file # delete line 
 sed --expression '/^$/d' file 
 sed --expression '/^[[:space:]]*$/d' file 
+sed --quiet --expression '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 service snmpd status 
-set +o noclobber 
-set -o nounset 
-set +o nounset 
-set -o pipefail 
-set +o pipefail 
-(set -o posix; set) 
+set -o noclobber # file error 
+set +o noclobber # file error 
+set -o nounset # variable error 
+set +o nounset # variable error 
+set -o pipefail # error 
+set +o pipefail # error 
 (set -o posix; set) | grep --only-matching ^COMP[^=]* 
+(set -o posix; set) # list all options 
 set +o xtrace # disable 
 set -o xtrace # enable 
 ./setup.py test 
@@ -1285,6 +1297,7 @@ ssh -p 2222 example.org
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
 ssh -Y example.org 
+stat --format %i / # inode 
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
@@ -1356,6 +1369,7 @@ sudo apt-get install ntp-doc
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio 
+sudo apt-get install php5-cli 
 sudo apt-get install php5-cli php5-dev php5-pear # php 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
@@ -1479,6 +1493,7 @@ svn checkout http://svn/repo ~/dir
 svn commit --message "Test" 
 svn commit --non-recursive doc 
 svn copy http://svn/repo/trunk http://svn/repo/branches/branch-name 
+svn copy --message "Version 0.1 alpha" http://svn/repo/trunk http://svn/repo/tags/0.1a 
 svn delete --force file 
 svn delete --keep-local file 
 svn diff 

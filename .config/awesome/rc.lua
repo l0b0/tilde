@@ -444,3 +444,8 @@ awful.util.spawn("x-www-browser")
 awful.util.spawn("x-terminal-emulator")
 awful.util.spawn("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps")
 -- }}}
+
+-- Local configuration
+if isModuleAvailable('rc-local') then
+    require('rc-local')
+end
