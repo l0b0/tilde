@@ -1075,7 +1075,7 @@ openscad ~/dev/crumbling-beaker/beaker.scad &
 openssl genrsa -des3 -out private.pem 1024 # create des3 encrypted private rsa key hex 
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
-openssl x509 -req -days 1 -in request.csr -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
+openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 pager /etc/issue 
 pager /etc/passwd # password 
 pager Makefile 
