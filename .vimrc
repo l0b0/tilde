@@ -65,6 +65,9 @@ match Todo /\s\+$/
 " Replace CR with LF
 noremap <C-n> :%s/\r/\r/g <CR>
 
+" Reformat current paragraph
+noremap <C-f> gwap
+
 " Sort words
 command! -nargs=0 -range SortWords call VisualSortWords()
 
