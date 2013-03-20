@@ -461,6 +461,7 @@ gksudo do-release-upgrade & # Ubuntu distro
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
 gksudo software-properties-gtk & # source 
+gksudo update-manager & 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
