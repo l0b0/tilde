@@ -1138,6 +1138,7 @@ prove
 prove --recurse 
 pry 
 ps afux | pager -S # processes list all tree tty 
+ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 psql --dbname postgres --username postgres < dump.sql # postgresql import 
 psql --dbname postgres --username postgres # postgresql login interactive 
 psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql 
