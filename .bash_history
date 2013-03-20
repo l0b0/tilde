@@ -1485,6 +1485,7 @@ svn checkout http://svn/repo ~/dir
 svn commit --message "Test" 
 svn commit --non-recursive doc 
 svn copy http://svn/repo/trunk http://svn/repo/branches/branch-name 
+svn copy --message "Version 0.1 alpha" http://svn/repo/trunk http://svn/repo/tags/0.1a 
 svn delete --force file 
 svn delete --keep-local file 
 svn diff 
