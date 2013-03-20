@@ -457,7 +457,6 @@ git svn status
 git tag --delete name # local 
 git tag v0.1 
 git --version 
-gksudo do-release-upgrade & # Ubuntu distro 
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
 gksudo software-properties-gtk & # source 
@@ -1416,6 +1415,7 @@ sudo dmidecode
 sudo dmidecode --string system-product-name 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
+sudo do-release-upgrade # ubuntu distro 
 sudo download-mibs 
 sudo dpkg-reconfigure ca-certificates 
 sudo dpkg-reconfigure keyboard-configuration 
