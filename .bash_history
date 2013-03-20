@@ -712,6 +712,7 @@ man free # help
 man fuseiso # help 
 man fusermount # help 
 man gcc # help 
+man genrsa # help 
 man getconf # help 
 man getent # help 
 man gethostip # help 
@@ -917,6 +918,7 @@ man w # help
 man who # help 
 man whois # help 
 man wnpp-alert # help 
+man x509 # help 
 man xargs # help 
 man xautolock # help 
 man xclip # help 
@@ -1070,7 +1072,10 @@ nslookup example.org # dns internet lookup network
 ntpq -p # query list peers 
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
+openssl genrsa -des3 -out private.pem 1024 # create des3 encrypted private rsa key hex 
+openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
+openssl x509 -req -days 1 -in request.csr -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 pager /etc/issue 
 pager /etc/passwd # password 
 pager Makefile 
