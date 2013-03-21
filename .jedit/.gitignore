@@ -9,6 +9,7 @@ mirrorList.xml
 modes/
 perspective.xml
 pluginMgr-Cached.xml.gz
+plugins/
 recent.xml
 server
 settings-backup/
