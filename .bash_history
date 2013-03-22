@@ -460,6 +460,7 @@ git --version
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
 gksudo software-properties-gtk & # source 
+gksudo update-manager & 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
@@ -1457,6 +1458,7 @@ sudo pip uninstall vcard
 sudo reboot 
 sudo rm --force --recursive ~/build ~/src 
 sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
+sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
 sudo service postgresql reload 
