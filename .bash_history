@@ -459,6 +459,7 @@ git tag v0.1
 git --version 
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
+gksudo nm-connection-editor & # network configuration 
 gksudo software-properties-gtk & # source 
 gksudo update-manager & 
 glabels & # graphics 
