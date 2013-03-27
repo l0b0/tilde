@@ -1455,7 +1455,6 @@ sudo paperconfig --paper a4
 sudo passwd --delete root # disable 
 sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
-sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
 sudo rm --force --recursive ~/build ~/src 
