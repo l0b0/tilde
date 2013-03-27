@@ -257,8 +257,8 @@ find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # rem
 find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
 find -version 
-firefox -profilemanager 
-firefox -safe-mode 
+firefox -profilemanager & # config 
+firefox -safe-mode & 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
@@ -469,7 +469,7 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
 glxgears # 3d graphics benchmark 
 glxinfo 
-gnome-control-center sound 
+gnome-control-center sound & 
 gnome-screensaver & 
 gnome-screensaver-command --exit 
 gnome-screensaver-command --lock 
