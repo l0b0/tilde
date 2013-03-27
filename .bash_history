@@ -251,14 +251,15 @@ find . -group 1000 -exec chgrp $(id --group) {} \; # update files permissions
 find -L . -type l # broken symlinks 
 find . -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -name '*.marks' -delete # remove jedit temp files 
+find . \( -path ./.git -o -path ./.svn \) -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
 find -version 
-firefox -profilemanager 
-firefox -safe-mode 
+firefox -profilemanager & # config 
+firefox -safe-mode & 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
@@ -459,6 +460,7 @@ git tag v0.1
 git --version 
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
+gksudo nm-connection-editor & # network configuration 
 gksudo software-properties-gtk & # source 
 gksudo update-manager & 
 glabels & # graphics 
@@ -468,7 +470,7 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
 glxgears # 3d graphics benchmark 
 glxinfo 
-gnome-control-center sound 
+gnome-control-center sound & 
 gnome-screensaver & 
 gnome-screensaver-command --exit 
 gnome-screensaver-command --lock 
@@ -723,6 +725,7 @@ man gitk # help
 man git-svn # help 
 man gksu # help 
 man glabels # help 
+man gnome-control-center # help 
 man gnome-keyring-daemon # help 
 man gnome-screensaver-command # help 
 man gnome-screensaver # help 
@@ -1369,8 +1372,7 @@ sudo apt-get install ntp-doc
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio 
-sudo apt-get install php5-cli 
-sudo apt-get install php5-cli php5-dev php5-pear # php 
+sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
 sudo apt-get install rar # compress 
@@ -1413,6 +1415,7 @@ sudo ~/dev/tilde/scripts/install-all.sh
 sudo ~/dev/tilde/scripts/suspend-on-close.sh 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
+sudo dmidecode --string system-serial-number 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # ubuntu distro 
@@ -1453,7 +1456,6 @@ sudo paperconfig --paper a4
 sudo passwd --delete root # disable 
 sudo pip install --upgrade pip 
 sudo pip install --upgrade vcard 
-sudo pip install --upgrade worktime 
 sudo pip uninstall vcard 
 sudo reboot 
 sudo rm --force --recursive ~/build ~/src 
