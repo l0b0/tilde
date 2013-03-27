@@ -251,6 +251,7 @@ find . -group 1000 -exec chgrp $(id --group) {} \; # update files permissions
 find -L . -type l # broken symlinks 
 find . -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -name '*.marks' -delete # remove jedit temp files 
+find . \( -path ./.git -o -path ./.svn \) -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
