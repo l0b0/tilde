@@ -1414,6 +1414,7 @@ sudo ~/dev/tilde/scripts/install-all.sh
 sudo ~/dev/tilde/scripts/suspend-on-close.sh 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
+sudo dmidecode --string system-serial-number 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo do-release-upgrade # ubuntu distro 
