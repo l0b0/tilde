@@ -10,6 +10,8 @@ fi
 xrandr \
     --output "$monitor1_name" \
         --mode ${monitor1_width}x${monitor1_height} \
+        --rotate normal \
     --output "$monitor2_name" \
         --mode ${monitor2_width}x${monitor2_height} \
-        --right-of "$monitor1_name"
+        --right-of "$monitor1_name" \
+        --rotate normal
