@@ -597,7 +597,7 @@ locate file
 log_time_diff < /var/log/syslog | sort --numeric --reverse --key=1 | head 
 longer 80 example.txt 
 longest < ~/.bash_history 
-lpstat -v 
+lpstat -v # list all printers cups 
 lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
 ls --directory /proc/[^0-9]* # metadata 
