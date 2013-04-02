@@ -597,6 +597,7 @@ locate file
 log_time_diff < /var/log/syslog | sort --numeric --reverse --key=1 | head 
 longer 80 example.txt 
 longest < ~/.bash_history 
+lpstat -d # default printer cups 
 lpstat -v # list all printers cups 
 lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
@@ -772,6 +773,8 @@ man lintian # help
 man ln # help 
 man locate # help 
 man logger # help 
+man lpadmin # help 
+man lpstat # help 
 man lsb_release # help 
 man lscpu # help 
 man ls # help 
@@ -1438,6 +1441,7 @@ sudo iotop
 sudo iotop --batch --iter 1 
 sudo ip link set dev eth0 up 
 sudo ldconfig 
+sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
