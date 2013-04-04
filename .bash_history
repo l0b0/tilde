@@ -1247,9 +1247,9 @@ screen -dRR name # resume
 screen -dRR # resume 
 screen -list 
 screen -S compile-project 
-sed --expression '9d' file # delete line 
-sed --expression '/^$/d' file 
-sed --expression '/^[[:space:]]*$/d' file 
+sed --expression '9d' file # delete line one-indexed 
+sed --expression '/^$/d' file # delete empty lines 
+sed --expression '/^[[:space:]]*$/d' file # delete whitespace line 
 sed --quiet --expression '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 service snmpd status 
 set -o noclobber # file error 
