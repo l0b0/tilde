@@ -51,3 +51,6 @@ set sendmail = /usr/bin/esmtp
 
 # Printing
 set print_command = /usr/bin/enscript
+
+# Color
+color normal default default
