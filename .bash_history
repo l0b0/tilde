@@ -951,6 +951,7 @@ man Xorg # help
 man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
+man xsltproc # help 
 man xwininfo # help 
 man xxd # help 
 man zip # help 
@@ -1009,6 +1010,7 @@ mkgithub ~/dev/img2vcard
 mkgithub ~/dev/indentect 
 mkgithub ~/dev/ipcalc 
 mkgithub ~/dev/job-board 
+mkgithub ~/dev/lfmcol2csv 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/logitech-access-keyboard-bindings 
 mkgithub ~/dev/lwpb 
@@ -1056,6 +1058,7 @@ mkgithub ~/dev/worktime
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xdg-menu-to-awesome-wm 
 mkgithub ~/dev/xFormsCal 
+mkgithub ~/dev/xspf2csv 
 mkgithub ~/dev/xterm-color-count 
 mkgithub --help 
 mogrify -crop 2316x1303+0+0 ./*.jpg 
@@ -1338,7 +1341,7 @@ sudo apt-get install audacity # audio editor
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
 sudo apt-get install awesome awesome-extra # wm 
-sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc gettext gettext-doc ia32-libs-multiarch libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl valgrind xdotool zlib1g-dev # linux dev 
+sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc gettext gettext-doc ia32-libs-multiarch libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl valgrind xdotool xsltproc zlib1g-dev # linux dev 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
