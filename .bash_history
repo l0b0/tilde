@@ -563,6 +563,8 @@ info --subnodes mktemp | pager # help examples temporary files
 info --subnodes sed | pager # help 
 iostat 
 ip addr show # ipv4 ipv6 address 
+ipcalc 0.0.0.0/0 
+ipcalc 192.168.0.1/24 
 ip link show down 
 ip link show up 
 ip -oneline -family inet addr show dev eth0 # ipv4 address 
@@ -759,6 +761,7 @@ man install # help
 man interfaces # help 
 man iostat # help 
 man iotop # help 
+man ipcalc # help 
 man ip # help 
 man iwconfig # help 
 man java # help 
@@ -998,6 +1001,7 @@ mkgithub ~/dev/Hypervolume
 mkgithub ~/dev/img2scad 
 mkgithub ~/dev/img2vcard 
 mkgithub ~/dev/indentect 
+mkgithub ~/dev/ipcalc 
 mkgithub ~/dev/job-board 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/logitech-access-keyboard-bindings 
@@ -1342,7 +1346,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rapid-photo-downloader rawstudio rawtherapee # graphics 2d metadata exif jpeg 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
-sudo apt-get install etherape traceroute # network 
+sudo apt-get install etherape ipcalc traceroute # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
