@@ -512,6 +512,7 @@ help alias
 help bind 
 help builtin 
 help command 
+help continue 
 help declare 
 help echo 
 help enable 
