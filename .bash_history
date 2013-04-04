@@ -261,6 +261,7 @@ find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # rem
 find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
 find -version 
+firefox -no-remote -P secondary & 
 firefox -profilemanager & # config 
 firefox -safe-mode & 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
@@ -718,6 +719,7 @@ man fdisk # help
 man feh # help 
 man ffmpeg # help 
 man file # help 
+man firefox # help 
 man fmt # help 
 man fortune # help 
 man free # help 
