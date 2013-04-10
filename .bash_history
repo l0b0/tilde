@@ -74,6 +74,7 @@ ccsm & # compiz settings
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
 cd -- "$(mktemp --directory)" 
+certutil # help 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
