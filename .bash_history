@@ -1169,6 +1169,7 @@ psql --username postgres <<< "COPY(SELECT extract(epoch from now())::Integer) TO
 psql --username postgres --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
 psql --username postgres <<< "\dt" # public schema tables list all postgresql 
 psql --username postgres <<< "\du" # users list all postgresql 
+psql --username postgres <<< "\encoding" # postgresql db encoding 
 psql --username postgres --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
