@@ -1219,8 +1219,8 @@ rake --tasks # rails
 rake test # rails 
 rbash # restricted 
 rbenv help # ruby 
-rbenv install 1.9.3-p327 && rbenv rehash # ruby install 
 rbenv install --list # ruby all install 
+rbenv install < .ruby-version && rbenv rehash # ruby install 
 rbenv local 1.2.3 # ruby project version 
 rbenv version # ruby installed 
 rbenv versions # ruby all installed 
