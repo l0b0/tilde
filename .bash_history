@@ -943,6 +943,7 @@ man xev # help
 man xinput # help 
 man xmkmf # help 
 man xmodmap # help 
+man Xorg # help 
 man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
