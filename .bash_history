@@ -320,6 +320,7 @@ git cherry-pick HEAD@{5}
 git cherry-pick master:HEAD 
 git clean --dry-run -d # directories 
 git clean --dry-run -dx # directories .gitignore 
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv # install ruby 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget --output-document ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
