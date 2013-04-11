@@ -1425,8 +1425,6 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown --recursive "$USER":"$USER" ~/.matplotlib 
-sudo chown --recursive "$USER":"$USER" RECOVERED_FILES 
 sudo chown "$USER":"$USER" /media/mountpoint 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
