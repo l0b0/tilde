@@ -1318,6 +1318,7 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 stat --format %i / # inode 
+strace -Cf bash -lc true # count calls profile summary 
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
