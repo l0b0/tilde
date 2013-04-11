@@ -1494,7 +1494,7 @@ sudo strace -p 123 # process
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
 sudo umount "/media/${USER}/mountpoint" 
-sudo umount mp3 
+sudo umount ~/mp3 
 sudo update-alternatives --config java # interactive 
 sudo update-alternatives --set editor "$(which vim.basic)" # default 
 sudo update-alternatives --set x-www-browser "$(which firefox)" # default 
