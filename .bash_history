@@ -356,6 +356,7 @@ git diff --staged --stat
 git difftool old new # gui 
 git diff --word-diff 
 git fetch 
+git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui & 
@@ -1224,9 +1225,9 @@ rake --tasks # rails
 rake test # rails 
 rbash # restricted 
 rbenv help # ruby 
-rbenv install 1.9.3-p327 && rbenv rehash # ruby install 
 rbenv install --list # ruby all install 
-rbenv local 1.9.3-p327 # ruby project version 
+rbenv install < .ruby-version && rbenv rehash # ruby install 
+rbenv local 1.2.3 # ruby project version 
 rbenv version # ruby installed 
 rbenv versions # ruby all installed 
 rbenv which rails # ruby gem binary path 
@@ -1322,6 +1323,7 @@ ssh -R 9000:localhost:9000 example.org
 ssh -vvv example.org 
 ssh -Y example.org 
 stat --format %i / # inode 
+strace -Cf bash -lc true # count calls profile summary 
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
@@ -1379,7 +1381,7 @@ sudo apt-get install kvm qemu # vm virtualization
 sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
-sudo apt-get install libpg-java pgadmin3 # dev postgresql schemaspy 
+sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
 sudo apt-get install lighttpd # web server 
 sudo apt-get install lyx # latex 
@@ -1583,6 +1585,7 @@ telnet localhost 1234 # network
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+time bash -lc true # benchmark startup login shell 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
