@@ -274,8 +274,8 @@ free # memory
 fromdos -- file # convert newline 
 fullname 
 fullname root 
-fuseiso -p file.bin /media/mountpoint # mount 
-fusermount -u /media/mountpoint # unmount 
+fuseiso -p file.bin "/media/${USER}/mountpoint" # mount 
+fusermount -u "/media/${USER}/mountpoint" # unmount 
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
 gconf-editor # gnome config 
@@ -1313,7 +1313,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < test.sh 
 ssh example.org uptime 
-sshfs hostname: /media/mountpoint 
+sshfs hostname: "/media/${USER}/mountpoint" 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
@@ -1425,7 +1425,7 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown "$USER":"$USER" /media/mountpoint 
+sudo chown "$USER":"$USER" "/media/${USER}/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
@@ -1466,7 +1466,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
-sudo mkdir /media/mountpoint 
+sudo mkdir "/media/${USER}/mountpoint" 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
