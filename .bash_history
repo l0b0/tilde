@@ -355,6 +355,7 @@ git diff --staged --stat
 git difftool old new # gui 
 git diff --word-diff 
 git fetch 
+git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui & 
