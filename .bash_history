@@ -1581,6 +1581,7 @@ telnet localhost 1234 # network
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+time bash -lc true # benchmark startup login shell 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
