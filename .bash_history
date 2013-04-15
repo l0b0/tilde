@@ -1381,7 +1381,6 @@ sudo apt-get install iotop # storage
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
 sudo apt-get install kvm qemu # vm virtualization 
-sudo apt-get install lastfm # music web 
 sudo apt-get install libav-tools # video 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
