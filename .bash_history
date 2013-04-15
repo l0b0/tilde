@@ -928,6 +928,7 @@ man usermod # help
 man utf8 # help 
 man valgrind # help 
 man vim # help 
+man vipw # help 
 man visudo # help 
 man watch # help 
 man wc # help 
@@ -1510,6 +1511,8 @@ sudo -u postgres psql --single-transaction --file backup.sql # restore postgresq
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
+sudo vipw # edit password users 
+sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
