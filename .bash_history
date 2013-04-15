@@ -692,6 +692,8 @@ man csplit # help
 man curl # help 
 man cut # help 
 man debhelper # help 
+man delgroup # help 
+man deluser # help 
 man df # help 
 man dhclient # help 
 man dh_make # help 
@@ -747,7 +749,6 @@ man gnome-specimen # help
 man gnome-terminal # help 
 man gpg # help 
 man grep # help 
-man groupadd # help 
 man groups # help 
 man head # help 
 man <(help2man help2man) # help 
@@ -923,7 +924,6 @@ man update-alternatives # help
 man updatedb # help 
 man update-java-alternatives # help 
 man uptime # help 
-man useradd # help 
 man usermod # help 
 man utf8 # help 
 man valgrind # help 
@@ -1330,7 +1330,9 @@ stty --all # terminal settings
 stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
 sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
+sudo addgroup test 
 sudo addgroup "$USER" group 
+sudo adduser test 
 sudo apt-get autoclean 
 sudo apt-get autoremove 
 sudo apt-get dist-upgrade 
@@ -1433,6 +1435,8 @@ sudo chroot /var/jail/"$USER" su --login "$USER" # jail
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
+sudo delgroup test # delete group 
+sudo deluser test # delete user 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo ~/dev/tilde/scripts/suspend-on-close.sh 
 sudo dmidecode 
