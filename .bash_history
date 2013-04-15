@@ -222,6 +222,7 @@ enable -a # builtins
 enable -n # disabled builtins 
 env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
+escaped_env 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
 eval "$traps" # signal 

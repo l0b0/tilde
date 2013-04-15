@@ -523,6 +523,13 @@ log_time_diff() {
     done
 }
 
+escaped_env() {
+    env --null | while IFS== read -r -d '' name value
+    do
+        printf '%s=%q\n' "$name" "$value"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
