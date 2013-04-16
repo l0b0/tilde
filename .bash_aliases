@@ -523,11 +523,16 @@ log_time_diff() {
     done
 }
 
-escaped_env() {
-    env --null | while IFS== read -r -d '' name value
-    do
-        printf '%s=%q\n' "$name" "$value"
-    done
+escaped_declare() {
+    (
+        eval '
+            declare() {
+                printf declare;
+                printf " %q" "$@";
+                printf "\\n";
+            }'"
+            $(declare -p)"
+    )
 }
 
 if [ -r "$HOME/.bash_aliases_local" ]
