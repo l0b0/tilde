@@ -918,6 +918,7 @@ man tr # help
 man tty # help 
 man udevadm # help 
 man uname # help 
+man unetbootin # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
@@ -1415,6 +1416,7 @@ sudo apt-get install teamspeak-client # chat voice
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
+sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
@@ -1621,6 +1623,7 @@ umount-image ./*.iso
 uname --all 
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
+unetbootin & 
 unset -f function 
 unset variable_or_function 
 unset -v variable 
