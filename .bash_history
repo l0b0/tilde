@@ -860,6 +860,7 @@ man quilt # help
 man rake # help 
 man rdesktop # help 
 man readlink # help 
+man reboot # help 
 man recordmydesktop # help 
 man rename # help 
 man resize # help 
