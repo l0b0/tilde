@@ -50,6 +50,7 @@ bundle init # rails
 bundle install # rails 
 bundle package 
 bundle update # rails 
+bunzip2 file.bz2 
 cap deploy:check # rails 
 cap deploy:login 
 cap deploy:migrations # rails 
@@ -675,6 +676,7 @@ man bash # help
 man bc # help 
 man blkid # help 
 man builtins # help bash 
+man bunzip2 # help 
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
