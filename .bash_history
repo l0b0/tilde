@@ -152,6 +152,7 @@ diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environmen
 diff <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
+digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
 dmesg # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
@@ -701,6 +702,7 @@ man dhclient # help
 man dh_make # help 
 man diff # help 
 man dig # help 
+man digikam # help 
 man dirname # help 
 man dmidecode # help 
 man dot # help 
