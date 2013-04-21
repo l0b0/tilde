@@ -155,7 +155,7 @@ dig example.org # dns lookup internet network
 dig example.org mx # dns email lookup internet network 
 digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
-dmesg # debug os startup 
+dmesg | pager # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
