@@ -160,6 +160,7 @@ dot -O -Tsvg ./*.dot # graphics
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
+dpkg --audit # fix packages 
 dpkg --get-selections | grep --invert-match deinstall | cut --fields 1 # list all installed packages 
 dpkg --listfiles w3-recs | pager 
 dpkg --search "$(which apt-get)" # package file owner search 
