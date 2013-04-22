@@ -50,6 +50,7 @@ bundle init # rails
 bundle install # rails 
 bundle package 
 bundle update # rails 
+bunzip2 file.bz2 
 cap deploy:check # rails 
 cap deploy:login 
 cap deploy:migrations # rails 
@@ -70,6 +71,7 @@ cat /proc/stat # hardware
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
+cat /usr/share/gnome*/gnome-version.xml 
 ccsm & # compiz settings 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
@@ -152,12 +154,14 @@ diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environmen
 diff <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
+digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
-dmesg # debug os startup 
+dmesg | pager # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
+dpkg --audit # fix packages 
 dpkg --get-selections | grep --invert-match deinstall | cut --fields 1 # list all installed packages 
 dpkg --listfiles package # list package files 
 dpkg --search "$(which apt-get)" # package file owner search 
@@ -674,6 +678,7 @@ man bash # help
 man bc # help 
 man blkid # help 
 man builtins # help bash 
+man bunzip2 # help 
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
@@ -701,6 +706,7 @@ man dhclient # help
 man dh_make # help 
 man diff # help 
 man dig # help 
+man digikam # help 
 man dirname # help 
 man dmidecode # help 
 man dot # help 
@@ -856,6 +862,7 @@ man quilt # help
 man rake # help 
 man rdesktop # help 
 man readlink # help 
+man reboot # help 
 man recordmydesktop # help 
 man rename # help 
 man resize # help 
@@ -918,6 +925,7 @@ man tr # help
 man tty # help 
 man udevadm # help 
 man uname # help 
+man unetbootin # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
@@ -1416,6 +1424,7 @@ sudo apt-get install teamspeak-client # chat voice
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install ubuntu-restricted-extras # audio video codec 
+sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
@@ -1622,6 +1631,7 @@ umount-image ./*.iso
 uname --all 
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
+unetbootin & 
 unset -f function 
 unset variable_or_function 
 unset -v variable 
