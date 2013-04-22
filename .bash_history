@@ -958,6 +958,7 @@ man xscreensaver-command # help
 man xsltproc # help 
 man xwininfo # help 
 man xxd # help 
+man yes # help 
 man zip # help 
 markdown_page README.markdown > README.xhtml && x-www-browser README.xhtml 
 markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml # list 
