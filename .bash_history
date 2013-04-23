@@ -1304,6 +1304,7 @@ shopt -s dotglob # option set .*
 shopt -s extglob # option set ?(a|b) *(a|b) +(a|b) @(a|b) !(a|b) 
 shopt -s extglob && sudo rename --no-act 's/$/.bak/' /usr/share/hunspell/en_!(US).{aff,dic} # language dictionary 
 shopt -s globstar # option set ** 
+shopt -s globstar && wc --lines ./**/**.ext # count recursive lines 
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
