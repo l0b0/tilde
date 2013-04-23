@@ -617,6 +617,7 @@ longer 80 example.txt
 longest < ~/.bash_history 
 lpstat -d # default printer cups 
 lpstat -v # list all printers cups 
+lsblk # list block device disk 
 lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
 ls --directory /proc/[^0-9]* # metadata 
@@ -801,6 +802,7 @@ man locate # help
 man logger # help 
 man lpadmin # help 
 man lpstat # help 
+man lsblk # help 
 man lsb_release # help 
 man lscpu # help 
 man ls # help 
