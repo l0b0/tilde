@@ -266,6 +266,7 @@ find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
 find . -type f -name file | exclude_vcs 
+find . -type f -name '*.*' | sed -e 's/.*\.//' | sort | uniq --count | sort --general-numeric-sort # file extensions count 
 find -version 
 firefox -no-remote -P secondary & 
 firefox -profilemanager & # config 
