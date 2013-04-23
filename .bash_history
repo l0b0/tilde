@@ -1476,7 +1476,7 @@ sudo editor /etc/rc.local
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
-sudo fdisk -l 
+sudo fdisk -l # list all disks 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
 sudo gem install slideshow 
 sudo iotop 
