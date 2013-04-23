@@ -688,6 +688,7 @@ man chgrp # help
 man chmod # help 
 man chown # help 
 man chroot # help 
+man cloc # help 
 man cmp # help 
 man comm # help 
 man convert # help 
@@ -887,6 +888,7 @@ man shunit2 # help
 man shutdown # help 
 man signal # help 
 man sleep # help 
+man sloccount # help 
 man snmpd # help 
 man snmptranslate # help 
 man snmpwalk # help 
