@@ -455,6 +455,7 @@ git stash save --patch "message" # diff create
 git stash show 
 git stash show --patch # diff 
 git stash show --patch stash@{1} # diff 
+gitstats ~/dev/tilde ~/gitstats && x-www-browser ~/gitstats/index.html # statistics history repo 
 git status 
 git submodule add --force git://github.com/l0b0/make-includes.git 
 git submodule add --force git://github.com/l0b0/shell-includes.git 
@@ -747,6 +748,7 @@ man getopt # help
 man gfortran # help 
 man git # help 
 man gitk # help 
+man gitstats # help 
 man git-svn # help 
 man gksu # help 
 man glabels # help 
@@ -1366,7 +1368,7 @@ sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freec
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui gitk git-svn meld qgit subversion # vcs 
+sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
 sudo apt-get install curl wget # web 
