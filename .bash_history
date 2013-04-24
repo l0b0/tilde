@@ -1369,7 +1369,6 @@ sudo apt-get install arduino arduino-mk avrdude-doc gcc gcc-doc libjna-java-doc 
 sudo apt-get install audacity # audio editor 
 sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
 sudo apt-get install autopano-sift hugin # graphics panorama 
-sudo apt-get install awesome awesome-extra # wm 
 sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc gettext gettext-doc ia32-libs-multiarch libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl valgrind w3-recs xdotool xsltproc zlib1g-dev # linux dev 
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
@@ -1517,6 +1516,7 @@ sudo service cups restart
 sudo service postgresql reload 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
+sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" | tee /usr/share/applications/awesome.desktop && printf "%s\n" "[Desktop Entry]" "Name=Gnome with Awesome" "Comment=Gnome with Awesome as window manager" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" | tee /usr/share/xsessions/gnome-awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=Awesome" "RequiredComponents=gnome-panel;gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" | tee /usr/share/gnome-session/sessions/awesome.session' # awesome wm gnome desktop 
 sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
