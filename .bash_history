@@ -242,6 +242,9 @@ exiv2 print IMG_1234.exv # metadata
 facter # hardware os 
 facter --help 
 facter id # user 
+fc # edit command history 
+fc -l # list commands history 
+fc -s # execute last command history 
 feh --fullscreen --hide-pointer ./* # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
@@ -532,6 +535,7 @@ help declare
 help echo 
 help enable 
 help exit 
+help fc 
 help help 
 help history 
 help jobs 
