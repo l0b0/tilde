@@ -525,7 +525,6 @@ guard list
 guard show 
 gunzip example.gz 
 gzip example.txt # compress 
-help . 
 help alias 
 help bind 
 help builtin 
@@ -547,6 +546,7 @@ help [r]ead # read
 help [s]et # set 
 help shift 
 help shopt 
+help . # source 
 help test 
 help [t]ime # time 
 help trap # signal 
