@@ -18,7 +18,6 @@ apt-cache show bash # package description
 apt-cache showpkg bash # package 
 apt-cache showsrc bash # package source 
 apt-cache stats bash # package statistics 
-aptdcon --fix-install # package fix rescue daemon 
 apt-get source apt 
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
@@ -1363,6 +1362,7 @@ sudo add-apt-repository ppa:ubuntu-x-swat/x-updates
 sudo addgroup test 
 sudo addgroup "$USER" group 
 sudo adduser test 
+sudo aptdcon --fix-install # package fix rescue daemon 
 sudo apt-get autoclean 
 sudo apt-get autoremove 
 sudo apt-get dist-upgrade 
