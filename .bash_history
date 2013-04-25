@@ -18,6 +18,7 @@ apt-cache show bash # package description
 apt-cache showpkg bash # package 
 apt-cache showsrc bash # package source 
 apt-cache stats bash # package statistics 
+aptdcon --fix-install # package fix rescue daemon 
 apt-get source apt 
 apt-key --help 
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
@@ -671,6 +672,7 @@ man apport-bug # help
 man apport-cli # help 
 man apropos # help 
 man apt-cache # help 
+man aptdcon # help 
 man apt-get # help 
 man apt-key # help 
 man apt-listchanges # help 
