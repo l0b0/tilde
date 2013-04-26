@@ -308,7 +308,10 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Stream video in external player
-    awful.key({ modkey },            "v",     function () awful.util.spawn_with_shell('vlc $(xclip -out)') end)
+    awful.key({ modkey },            "v",     function () awful.util.spawn_with_shell('vlc $(xclip -out)') end),
+
+    -- Screenshot
+    awful.key({                   }, "Print", function () awful.util.spawn("gnome-screenshot") end)
 )
 
 clientkeys = awful.util.table.join(
