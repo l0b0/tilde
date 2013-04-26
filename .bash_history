@@ -574,6 +574,7 @@ indent *.c
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
+infocmp -1 # list terminal 
 info --subnodes autoconf | pager # help 
 info --subnodes automake | pager # help 
 info --subnodes date | pager # help 
@@ -783,6 +784,7 @@ man htop # help
 man id # help 
 man imake # help 
 man indent # help 
+man infocmp # help 
 man initdb # help postgresql server database 
 man inotify # help 
 man inotifywait # help 
