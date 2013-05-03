@@ -848,6 +848,7 @@ man ntpq # help
 man objdump # help 
 man od # help 
 man openssl # help 
+man pager # help 
 man paperconfig # help 
 man passwd # help 
 man patch # help 
@@ -1138,6 +1139,7 @@ pager /etc/passwd # password
 pager Makefile 
 pager /proc/bus/input/devices 
 pager --RAW-CONTROL-CHARS filename # color 
+pager --raw-control-chars typescript 
 pager /sys/class/dmi/id/product_name 
 pager /sys/class/dmi/id/sys_vendor 
 pager /usr/share/doc/nethack-common/Guidebook.txt.gz # help 
@@ -1294,6 +1296,7 @@ screen -dRR name # resume
 screen -dRR # resume 
 screen -list 
 screen -S compile-project 
+script --quiet --command "$SHELL" 
 sed --expression '9d' file # delete line one-indexed 
 sed --expression '/^$/d' file # delete empty lines 
 sed --expression '/^[[:space:]]*$/d' file # delete whitespace line 
