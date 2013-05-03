@@ -558,6 +558,7 @@ help umask
 help unset 
 help until 
 help wait 
+history | pager 
 host example.org # dns lookup internet network ipv4 ipv6 
 hostname # internet network 
 hostname --short # internet network 
@@ -777,6 +778,7 @@ man head # help
 man <(help2man help2man) # help 
 man hexdump # help 
 man hier # help 
+man history # help 
 man host # help 
 man hostname # help 
 man hosts # help 
