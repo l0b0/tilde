@@ -91,16 +91,13 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
     names = {
-        "shell",
+        "sh",
+        "WWW",
         "edit",
-        "web",
-        "doc",
         "vcs",
-        "db",
-        "comm",
-        "rdesktop",
-        "toread",
-        "fun",
+        "@",
+        "remote",
+        "misc",
     },
     layouts = {
         awful.layout.suit.fair,
