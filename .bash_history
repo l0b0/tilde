@@ -988,6 +988,7 @@ man xsltproc # help
 man xwininfo # help 
 man xxd # help 
 man yes # help 
+man youtube-dl # help 
 man zip # help 
 markdown_page README.markdown > README.xhtml && x-www-browser README.xhtml 
 markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml # list 
@@ -1459,6 +1460,7 @@ sudo apt-get install x264 # video codec
 sudo apt-get install xautolock 
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
+sudo apt-get install youtube-dl 
 sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' unity-lens-music unity-lens-video zeitgeist # unity spyware 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
@@ -1731,6 +1733,7 @@ x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev h
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
+youtube-dl --title --continue https://www.youtube.com/watch?v= # download video file 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
