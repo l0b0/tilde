@@ -1496,6 +1496,7 @@ sudo extundelete --restore-directory /dir/ /dev/sda1
 sudo fdisk -l # list all disks 
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
 sudo gem install slideshow 
+sudo grub-install /dev/sda # fix boot mbr 
 sudo iotop 
 sudo iotop --batch --iter 1 
 sudo ip link set dev eth0 up 
