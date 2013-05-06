@@ -131,6 +131,7 @@ declare -F # functions
 declare -f schroedinger # function definition 
 declare -p # color variables functions 
 declare # variables functions 
+deluge & 
 ~/dev/meta2jpeg/meta2jpeg.sh *.CR2 
 ~/dev/minecraft-scripts/backup.sh # game directory 
 ~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
@@ -716,6 +717,7 @@ man cut # help
 man dd # help 
 man debhelper # help 
 man delgroup # help 
+man deluge # help 
 man deluser # help 
 man df # help 
 man dhclient # help 
