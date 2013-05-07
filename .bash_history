@@ -1738,7 +1738,7 @@ x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev h
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
-youtube-dl --title --continue https://www.youtube.com/watch?v= # download video file 
+youtube-dl --title --continue 'https://www.youtube.com/watch?v=' # download video file 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
