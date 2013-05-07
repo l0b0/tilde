@@ -159,6 +159,7 @@ dig example.org # dns lookup internet network
 dig example.org mx # dns email lookup internet network 
 digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
+disown # job 
 dmesg | pager # debug os startup 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
@@ -534,6 +535,7 @@ help builtin
 help command 
 help continue 
 help declare 
+help disown 
 help echo 
 help enable 
 help exit 
