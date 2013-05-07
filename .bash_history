@@ -40,7 +40,7 @@ bash test.sh # run script
 bash --version 
 bc <<< '2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
-bg # background 
+bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
@@ -250,7 +250,7 @@ fc -s # execute last command history
 feh --fullscreen --hide-pointer ./* # images viewer 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
-fg # foreground 
+fg # foreground job 
 fgit gc -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
 fgit --help 
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
