@@ -528,6 +528,7 @@ guard show
 gunzip example.gz 
 gzip example.txt # compress 
 help alias 
+help bg 
 help bind 
 help builtin 
 help command 
@@ -537,6 +538,7 @@ help echo
 help enable 
 help exit 
 help fc 
+help fg 
 help help 
 help history 
 help jobs 
