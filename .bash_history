@@ -1499,8 +1499,10 @@ sudo editor /etc/apt/sources.list
 sudo editor /etc/default/keyboard 
 sudo editor /etc/fstab # mount points 
 sudo editor /etc/hosts # network 
+sudo editor /etc/network/interfaces 
 sudo editor /etc/postgresql/*/main/pg_hba.conf 
 sudo editor /etc/rc.local 
+sudo editor /etc/resolv.conf # dns network 
 sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
