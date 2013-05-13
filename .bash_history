@@ -1536,7 +1536,6 @@ sudo pip install --upgrade vcard
 sudo pip uninstall vcard 
 sudo reboot 
 sudo rm --force --recursive ~/build ~/src 
-sudo sed --in-place.bak --expression 's/^\(\s*\)\(native_origins = \[this_os\]\)/\1\2\n\1native_origins.append("Ubuntu")/' /usr/share/pyshared/apport/packaging_impl.py 
 sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
 sudo service cups restart 
