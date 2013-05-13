@@ -1445,7 +1445,7 @@ sudo apt-get install nfs-common # filesystem
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
-sudo apt-get install paman paprefs pavucontrol # pulseaudio 
+sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
