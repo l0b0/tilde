@@ -1535,7 +1535,6 @@ sudo pip install --upgrade pip # python
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
 sudo reboot # restart 
-sudo rm --force --recursive ~/build ~/src 
 sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo service cups restart 
