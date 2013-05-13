@@ -941,6 +941,7 @@ man tac # help
 man tail # help 
 man tar # help 
 man tee # help 
+man tig # help 
 man time # help 
 man timeout # help 
 man tkmib # help 
@@ -1397,7 +1398,7 @@ sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freec
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion # vcs 
+sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
 sudo apt-get install curl wget # web 
@@ -1643,6 +1644,7 @@ telnet localhost 1234 # network
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+tig 
 time bash -lc true # benchmark startup login shell 
 time make test 
 timeout 1 sleep 2 
