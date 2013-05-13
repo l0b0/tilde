@@ -1077,6 +1077,7 @@ mkgithub ~/dev/progit
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/qr2scad 
 mkgithub ~/dev/RAYT 
+mkgithub ~/dev/ruler 
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
