@@ -1431,6 +1431,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install keepassx 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libdvdcss2 ubuntu-restricted-extras w64codecs x264 # audio video codec 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
@@ -1461,14 +1462,12 @@ sudo apt-get install sshfs
 sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
-sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install wine winetricks # windows 
-sudo apt-get install x264 # video codec 
 sudo apt-get install xautolock 
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
