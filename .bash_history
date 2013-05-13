@@ -1510,9 +1510,9 @@ sudo fdisk -l # list all disks
 sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
 sudo gem install slideshow 
 sudo grub-install /dev/sda # fix boot mbr 
-sudo iotop 
-sudo iotop --batch --iter 1 
-sudo ip link set dev eth0 up 
+sudo iotop --batch --iter 1 # i/o storage 
+sudo iotop # i/o storage repeat 
+sudo ip link set dev eth0 up # network enable device 
 sudo ldconfig 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
@@ -1528,16 +1528,16 @@ sudo mount --all
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
-sudo ntpdate pool.ntp.org 
-sudo paperconfig --paper a4 
-sudo passwd --delete root # disable 
-sudo pip install --upgrade pip 
-sudo pip install --upgrade vcard 
-sudo pip uninstall vcard 
-sudo reboot 
+sudo ntpdate pool.ntp.org # update date time clock 
+sudo paperconfig --paper a4 # set print size 
+sudo passwd --delete root # disable account user 
+sudo pip install --upgrade pip # python 
+sudo pip install --upgrade vcard # validator 
+sudo pip uninstall vcard # validator 
+sudo reboot # restart 
 sudo rm --force --recursive ~/build ~/src 
 sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
-sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf 
+sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo service cups restart 
 sudo service postgresql reload 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
