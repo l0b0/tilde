@@ -80,6 +80,7 @@ certutil # help
 checkbashisms ./*.sh 
 chmod u+x test.sh 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
+clamtk & # antivirus 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) 
@@ -492,6 +493,7 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
 glxgears # 3d graphics benchmark 
 glxinfo 
+gnome-calculator & # math 
 gnome-control-center sound & 
 gnome-screensaver & 
 gnome-screensaver-command --exit 
@@ -706,6 +708,7 @@ man chgrp # help
 man chmod # help 
 man chown # help 
 man chroot # help 
+man clamtk # help 
 man cloc # help 
 man cmp # help 
 man comm # help 
@@ -771,6 +774,7 @@ man gitstats # help
 man git-svn # help 
 man gksu # help 
 man glabels # help 
+man gnome-calculator # help 
 man gnome-control-center # help 
 man gnome-keyring-daemon # help 
 man gnome-screensaver-command # help 
@@ -1350,7 +1354,6 @@ snmptranslate -Of .1.3.6.1.2.1.1 # OID
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
-software-properties-gtk & # software sources 
 sort --unique --output result.txt source.txt 
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
@@ -1376,7 +1379,6 @@ strings $(which strings)
 stty --all # terminal settings 
 stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
-sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup test 
 sudo addgroup "$USER" group 
 sudo adduser test 
@@ -1397,6 +1399,7 @@ sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc g
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
+sudo apt-get install clamav clamtk # antivirus 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
@@ -1430,6 +1433,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install keepassx 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libdvdcss2 ubuntu-restricted-extras w64codecs x264 # audio video codec 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
 sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
@@ -1444,7 +1448,7 @@ sudo apt-get install nfs-common # filesystem
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad # graphics 3d 
 sudo apt-get install openssh-server 
-sudo apt-get install paman paprefs pavucontrol # pulseaudio 
+sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
@@ -1460,19 +1464,17 @@ sudo apt-get install sshfs
 sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
-sudo apt-get install ubuntu-restricted-extras # audio video codec 
 sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
 sudo apt-get install wine winetricks # windows 
-sudo apt-get install x264 # video codec 
 sudo apt-get install xautolock 
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
 sudo apt-get install youtube-dl 
-sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' unity-lens-music unity-lens-video zeitgeist # unity spyware 
+sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video zeitgeist # unity spyware 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
