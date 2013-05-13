@@ -1375,7 +1375,6 @@ strings $(which strings)
 stty --all # terminal settings 
 stty sane # restore terminal state 
 sudo add-apt-repository ppa:chrysn/openscad 
-sudo add-apt-repository ppa:ubuntu-x-swat/x-updates 
 sudo addgroup test 
 sudo addgroup "$USER" group 
 sudo adduser test 
