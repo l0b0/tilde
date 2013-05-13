@@ -1728,6 +1728,7 @@ xinput --list 10
 xinput --list-props 10 
 xkill 
 xmodmap -pp >~/xmodmap 
+xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources 
 xrdb -query # list 
 xscreensaver-command -lock 
