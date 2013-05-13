@@ -1547,6 +1547,7 @@ sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
+sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
 sudo umount "/media/${USER}/mountpoint" 
@@ -1632,7 +1633,6 @@ svn --version
 TAGS=all guard 
 TAGS="$USER" guard 
 tail --follow name --retry $(find /var/log/ -type f -exec file -- {} \; | grep ':.*\(ASCII\|UTF\)' | cut --delimiter : --field 1) # text 
-tail --follow name --retry /var/log/messages 
 tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde # compress gzip 
 tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip 
 tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
