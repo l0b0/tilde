@@ -1545,6 +1545,7 @@ sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notific
 sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
+sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} \; | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
@@ -1632,7 +1633,6 @@ svn update
 svn --version 
 TAGS=all guard 
 TAGS="$USER" guard 
-tail --follow name --retry $(find /var/log/ -type f -exec file -- {} \; | grep ':.*\(ASCII\|UTF\)' | cut --delimiter : --field 1) # text 
 tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde # compress gzip 
 tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip 
 tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
