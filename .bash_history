@@ -941,6 +941,7 @@ man stty # help
 man sudoers # help 
 man sudo # help 
 man su # help 
+man sweethome3d # help 
 man tac # help 
 man tail # help 
 man tar # help 
@@ -1446,7 +1447,7 @@ sudo apt-get install msort
 sudo apt-get install nethack-qt nethack-spoilers # game 
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install ntp-doc 
-sudo apt-get install openscad # graphics 3d 
+sudo apt-get install openscad 'sweethome3d*' # cad graphics 3d 
 sudo apt-get install openssh-server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
 sudo apt-get install php5-cli php5-dev # php dev 
@@ -1636,6 +1637,7 @@ svn revert --recursive .
 svn status 
 svn update 
 svn --version 
+sweethome3d & 
 TAGS=all guard 
 TAGS="$USER" guard 
 tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde # compress gzip 
