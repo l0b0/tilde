@@ -80,6 +80,7 @@ certutil # help
 checkbashisms ./*.sh 
 chmod u+x test.sh 
 chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
+clamtk & # antivirus 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) 
@@ -707,6 +708,7 @@ man chgrp # help
 man chmod # help 
 man chown # help 
 man chroot # help 
+man clamtk # help 
 man cloc # help 
 man cmp # help 
 man comm # help 
@@ -1395,6 +1397,7 @@ sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc g
 sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
 sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
 sudo apt-get install chromium-browser lynx-cur # web 
+sudo apt-get install clamav clamtk # antivirus 
 sudo apt-get install cloc sloccount # dev code 
 sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion # vcs 
 sudo apt-get install comix feh # graphics viewer 
