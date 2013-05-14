@@ -243,6 +243,7 @@ exclude_vcs < <(grep --recursive --fixed-strings --regexp 'foo' .) # search lite
 exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
+expand --tabs=4 test.txt # convert tab space 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -747,6 +748,7 @@ man env # help
 man errno # help 
 man etherape # help 
 man exiv2 # help 
+man expand # help 
 man expect # help 
 man expr # help 
 man extundelete # help 
@@ -961,6 +963,7 @@ man tty # help
 man udevadm # help 
 man uname # help 
 man unetbootin # help 
+man unexpand # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
@@ -1678,6 +1681,7 @@ uname --all
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
 unetbootin & 
+unexpand --tabs=4 test.txt # convert space tab 
 unset -f function 
 unset variable_or_function 
 unset -v variable 
