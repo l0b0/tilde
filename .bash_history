@@ -40,6 +40,7 @@ bash test.sh # run script
 bash --version 
 bc <<< '2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
+bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
