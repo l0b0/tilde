@@ -1185,6 +1185,7 @@ perldoc file.pl # help
 perldoc -f kill # help function 
 perl_modules 
 perl_module_version URI 
+perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
 pgrep -u root cron 
