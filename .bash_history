@@ -229,6 +229,7 @@ eject # hardware cd dvd
 empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
+env - HOME="$HOME" LOGNAME="$USER" PATH="/usr/bin:/bin" SHELL="$(which sh)" command # emulate cron command 
 env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 escaped_declare 
