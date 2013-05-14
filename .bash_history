@@ -1686,6 +1686,8 @@ unexpand --tabs=4 test.txt # convert space tab
 unset -f function 
 unset variable_or_function 
 unset -v variable 
+unzip file.zip # decompress zip 
+unzip -l file.zip # list zip 
 update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
@@ -1757,6 +1759,7 @@ x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 youtube-dl --title --continue 'https://www.youtube.com/watch?v=' # download video file 
+zip --update file.zip input # add file compress zip 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
