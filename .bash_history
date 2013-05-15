@@ -1666,6 +1666,7 @@ tkmib &
 todos -- file # convert newline 
 top 
 top -c # command line 
+top -p "`pgrep -d ',' bash`" 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 touch --date '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
