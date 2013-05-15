@@ -477,6 +477,7 @@ git svn dcommit
 git svn dcommit --dry-run 
 git svn fetch 
 git svn help 
+git svn info 
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
 git svn status 
