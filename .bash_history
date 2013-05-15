@@ -580,6 +580,7 @@ id --group
 id # group user 
 id --user 
 id "$USER" 
+if [ -r /proc/sys/kernel/ns_last_pid ]; then while true; do while read; do if [ "$REPLY" != "$old" ]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 indent *.c 
 indentect --help 
