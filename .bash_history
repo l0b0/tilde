@@ -230,6 +230,7 @@ eject # hardware cd dvd
 empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
+env - HOME="$HOME" LOGNAME="$USER" PATH="/usr/bin:/bin" SHELL="$(which sh)" command # emulate cron command 
 env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
 escaped_declare 
@@ -244,6 +245,7 @@ exclude_vcs < <(grep --recursive --fixed-strings --regexp 'foo' .) # search lite
 exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
+expand --tabs=4 test.txt # convert tab space 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -476,6 +478,7 @@ git svn dcommit
 git svn dcommit --dry-run 
 git svn fetch 
 git svn help 
+git svn info 
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
 git svn status 
@@ -578,6 +581,7 @@ id --group
 id # group user 
 id --user 
 id "$USER" 
+if [ -r /proc/sys/kernel/ns_last_pid ]; then while true; do while read; do if [ "$REPLY" != "$old" ]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 indent *.c 
 indentect --help 
@@ -748,6 +752,7 @@ man env # help
 man errno # help 
 man etherape # help 
 man exiv2 # help 
+man expand # help 
 man expect # help 
 man expr # help 
 man extundelete # help 
@@ -852,6 +857,7 @@ man netstat # help
 man nfs # help 
 man nl # help 
 man nmap # help 
+man nmcli # help 
 man nm # help 
 man node # help 
 man notify-send # help 
@@ -962,6 +968,7 @@ man tty # help
 man udevadm # help 
 man uname # help 
 man unetbootin # help 
+man unexpand # help 
 man unicode # help 
 man uniname # help 
 man uniq # help 
@@ -1135,6 +1142,9 @@ netstat --all # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+nmcli con # network connections list 
+nmcli dev # network devices list 
+nmcli nm # network manager status 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
@@ -1183,6 +1193,7 @@ perldoc file.pl # help
 perldoc -f kill # help function 
 perl_modules 
 perl_module_version URI 
+perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
 pgrep -u root cron 
@@ -1657,6 +1668,7 @@ tkmib &
 todos -- file # convert newline 
 top 
 top -c # command line 
+top -p "`pgrep -d ',' bash`" 
 touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 touch --date '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
@@ -1679,9 +1691,12 @@ uname --all
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
 unetbootin & 
+unexpand --tabs=4 test.txt # convert space tab 
 unset -f function 
 unset variable_or_function 
 unset -v variable 
+unzip file.zip # decompress zip 
+unzip -l file.zip # list zip 
 update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
@@ -1698,7 +1713,7 @@ vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_
 vmware 
 w 
 wait # process pid 
-watch 'svn diff' 
+watch --color --differences -- git diff --color=always # change 
 watch_url http://example.org/ '/irrelevant variable/d;s/search/replacement/g' 1d # change 
 wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
@@ -1753,6 +1768,7 @@ x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/
 xxd $(which xxd) | head --lines=1 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 youtube-dl --title --continue 'https://www.youtube.com/watch?v=' # download video file 
+zip --update file.zip input # add file compress zip 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
