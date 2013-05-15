@@ -855,6 +855,7 @@ man netstat # help
 man nfs # help 
 man nl # help 
 man nmap # help 
+man nmcli # help 
 man nm # help 
 man node # help 
 man notify-send # help 
@@ -1139,6 +1140,9 @@ netstat --all # internet connections sockets
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+nmcli con # network connections list 
+nmcli dev # network devices list 
+nmcli nm # network manager status 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
