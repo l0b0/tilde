@@ -1712,7 +1712,7 @@ vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_
 vmware 
 w 
 wait # process pid 
-watch 'svn diff' 
+watch --color --differences -- git diff --color=always # change 
 watch_url http://example.org/ '/irrelevant variable/d;s/search/replacement/g' 1d # change 
 wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
