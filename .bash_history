@@ -1490,7 +1490,7 @@ sudo apt-get install xautolock
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
 sudo apt-get install youtube-dl 
-sudo apt-get purge indicator-appmenu 'overlay-scrollbar*' 'ubuntuone-*' unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video zeitgeist # unity spyware 
+sudo apt-get purge 'ubuntuone-*' unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video zeitgeist # unity spyware 
 sudo apt-get update 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
