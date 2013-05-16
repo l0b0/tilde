@@ -1387,6 +1387,7 @@ ssh -vvv example.org
 ssh -Y example.org 
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
 stat --format %i / # inode 
+stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
 strace -Cf bash -lc true # count calls profile summary 
 strace -fe open ./test.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
 strings $(which strings) 
