@@ -592,6 +592,7 @@ info --raw-escapes --subnodes autoconf | pager --raw-control-chars # help
 info --raw-escapes --subnodes automake | pager --raw-control-chars # help 
 info --raw-escapes --subnodes date | pager --raw-control-chars # help 
 info --raw-escapes --subnodes find | pager --raw-control-chars # help 
+info --raw-escapes --subnodes ls | pager --raw-control-chars # help 
 info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples temporary files 
 info --raw-escapes --subnodes sed | pager --raw-control-chars # help 
 iostat 
@@ -836,7 +837,6 @@ man lpstat # help
 man lsblk # help 
 man lsb_release # help 
 man lscpu # help 
-man ls # help 
 man lsof # help 
 man lynx # help 
 man make # help 
