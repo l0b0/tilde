@@ -588,12 +588,12 @@ indentect --help
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
 infocmp -1 # list terminal 
-info --subnodes autoconf | pager # help 
-info --subnodes automake | pager # help 
-info --subnodes date | pager # help 
-info --subnodes find | pager # help 
-info --subnodes mktemp | pager # help examples temporary files 
-info --subnodes sed | pager # help 
+info --raw-escapes --subnodes autoconf | pager --raw-control-chars # help 
+info --raw-escapes --subnodes automake | pager --raw-control-chars # help 
+info --raw-escapes --subnodes date | pager --raw-control-chars # help 
+info --raw-escapes --subnodes find | pager --raw-control-chars # help 
+info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples temporary files 
+info --raw-escapes --subnodes sed | pager --raw-control-chars # help 
 iostat 
 ip addr show # ipv4 ipv6 address 
 ipcalc 0.0.0.0/0 
