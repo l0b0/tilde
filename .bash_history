@@ -1369,6 +1369,7 @@ sloccount .
 snmpget -v 2c -c public localhost .1.3.6.1.2.1.1.1.0 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
+snmptranslate -Tl # list all mib oids 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
 sort --unique --output result.txt source.txt 
