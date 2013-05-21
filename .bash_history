@@ -929,6 +929,7 @@ man signal # help
 man sleep # help 
 man sloccount # help 
 man snmpd # help 
+man snmpget # help 
 man snmptranslate # help 
 man snmpwalk # help 
 man software-properties-gtk # help 
@@ -1365,6 +1366,7 @@ sleep 1m
 slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
 slideshow -t s6blank presentation.md 
 sloccount . 
+snmpget -v 2c -c public localhost .1.3.6.1.2.1.1.1.0 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
