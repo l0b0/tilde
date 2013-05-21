@@ -1515,7 +1515,7 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown "$USER":"$USER" "/media/${USER}/mountpoint" 
+sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/${USER}/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
