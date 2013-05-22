@@ -535,6 +535,23 @@ escaped_declare() {
     )
 }
 
+date_range() {
+    # Print dates from $1 through $2, inclusive
+    #
+    # Examples:
+    #
+    # $ date_range today Friday
+    # $ date_range 2000-01-01 2000-12-31
+    start="$(date --rfc-3339=date --date="$1")"
+    end="$(date --rfc-3339=date --date="$2")"
+    printf '%s\n' "$start"
+    until [ "$start" = "$end" ]
+    do
+        start="$(date --date="$start + 1 day" +%Y-%m-%d)"
+        printf '%s\n' "$start"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
