@@ -898,6 +898,7 @@ man proc # help
 man ps # help 
 man psql # help 
 man psql # help postgresql 
+man pstree # help 
 man puppet # help 
 man python # help 
 man qemu # help 
