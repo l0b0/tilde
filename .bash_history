@@ -794,6 +794,7 @@ man gnome-terminal # help
 man gpg # help 
 man grep # help 
 man groups # help 
+man gunzip # help 
 man head # help 
 man <(help2man help2man) # help 
 man hexdump # help 
