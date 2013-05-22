@@ -920,6 +920,7 @@ man rrdtool # help
 man rrdupdate # help 
 man rsync # help 
 man ruby # help 
+man runlevel # help 
 man scp # help 
 man screen # help 
 man script # help 
@@ -1332,6 +1333,7 @@ rrdtool update test.rrd --template content -- -3600:1 -3300:0 -3000:-1 -2700:-2 
 rsync --archive --human-readable --recursive --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 ruby --verbose 
+runlevel # kernel 
 sandbox="$(mktemp --directory)" 
 sass-convert all.s{a,c}ss 
 schemaspy2svg ~/db 
