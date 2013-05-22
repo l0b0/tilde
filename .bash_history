@@ -1325,6 +1325,7 @@ rrdtool create test.rrd --start -3600 DS:content:GAUGE:600:U:U RRA:AVERAGE:0.5:1
 rrdtool dump test.rrd 
 rrdtool graph test.png DEF:content=test.rrd:content:AVERAGE LINE1:content#FF0000:Content 
 rrdtool info test.rrd # metadata 
+rrdtool - # interactive 
 rrdtool last test.rrd # update time 
 rrdtool update test.rrd --template content -- -3600:1 -3300:0 -3000:-1 -2700:-2 -2400:2 -2100:U -1800:1 -1500:0 -1200:1 -900:1 -600:1 -300:-2 N:0 
 rsync --archive --human-readable --recursive --progress --verbose host:/path /target # network transfer 
