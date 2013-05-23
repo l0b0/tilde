@@ -482,7 +482,6 @@ git svn help
 git svn info 
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
-git svn status 
 git tag --delete name # local 
 git tag v0.1 
 git --version 
