@@ -1780,6 +1780,7 @@ xscreensaver-command -lock
 xscreensaver-command -version 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
+xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
 x-www-browser /tmp/xterm-screenshot.*.html 
 x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c dev 
 x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp dev 
