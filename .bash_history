@@ -1477,6 +1477,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install keepassx 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libdatetime-format-strptime-perl 
 sudo apt-get install libdvdcss2 ubuntu-restricted-extras w64codecs x264 # audio video codec 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
@@ -1581,6 +1582,7 @@ sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
+sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
 sudo pip install --upgrade pip # python 
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
