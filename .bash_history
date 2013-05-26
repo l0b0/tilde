@@ -29,6 +29,7 @@ autoconf # compile
 autoreconf --install # compile 
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 avconv -i input.mov -codec copy -ss 15 output.mov # cut 
+avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
 awesome --check # config verify parse 
 basename -- "$PWD" # current directory name 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
