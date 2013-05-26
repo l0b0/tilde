@@ -1004,6 +1004,7 @@ man xdotool # help
 man xev # help 
 man xinput # help 
 man xmkmf # help 
+man xmllint # help 
 man xmodmap # help 
 man Xorg # help 
 man xrandr # help 
@@ -1748,6 +1749,7 @@ xinput --list
 xinput --list 10 
 xinput --list-props 10 
 xkill 
+xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pp >~/xmodmap 
 xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources 
