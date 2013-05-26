@@ -1756,6 +1756,7 @@ xrdb -load ~/.Xresources
 xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
+xsltproc file.xslt file.xml # transform xslt xml 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 x-www-browser /tmp/xterm-screenshot.*.html 
