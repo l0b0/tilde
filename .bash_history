@@ -1517,6 +1517,7 @@ sudo apt-get install tofrodos # convert newline
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
+sudo apt-get install vagrant virtualbox-guest-additions-iso # dev environment 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
@@ -1740,6 +1741,8 @@ unzip -l file.zip # list zip
 update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
+vagrant --help 
+vagrant status 
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
