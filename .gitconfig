@@ -23,3 +23,5 @@
 	user = l0b0
 [mergetool]
 	prompt = false
+[push]
+	default = simple

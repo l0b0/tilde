@@ -535,6 +535,24 @@ escaped_declare() {
     )
 }
 
+date_range() {
+    # Print dates from $1 through $2, inclusive
+    #
+    # Both values default to today.
+    #
+    # Examples:
+    #
+    # $ date_range 2000-01-01 2000-12-31
+    # $ date_range 'last Monday'
+    start="$(date --rfc-3339=date --date="${1-today}")"
+    end="$(date --rfc-3339=date --date="${2-today}")"
+    while [[ "$start" < "$end" || "$start" = "$end" ]]
+    do
+        printf '%s\n' "$start"
+        start="$(date --date="$start + 1 day" +%Y-%m-%d)"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"

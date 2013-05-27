@@ -126,6 +126,8 @@ date --date="Tuesday" # today future midnight
 date --date="Wednesday" # today future midnight 
 date --date="yesterday" # time 
 date +%FT%T.%N # iso time 
+date_range 2000-01-01 2000-12-31 
+date_range 'last Monday' 
 date --rfc-3339=ns --date="2001-02-03T04:05:06.7 + 1 year 2 months 3 days 4 hours 5 minutes 6.7 seconds" # dst time iso 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%dT%H:%M:%S # iso time 
@@ -150,6 +152,7 @@ deluge &
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df --human-readable . # filesystem 
 df --human-readable # filesystem 
+! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
 difff --help 
@@ -214,6 +217,7 @@ editor ~/dev/tilde/scripts/make-links.sh
 editor ~/.gitconfig # dev 
 editor .git/config # dev 
 editor .gitignore # dev 
+editor ~/.imapfilter/config.lua 
 editor /lib/udev/rules.d/95-keymap.rules # keyboard 
 editor Makefile # dev 
 editor ~/.mkgithub # dev 
@@ -272,9 +276,9 @@ find . -exec printf '%s\0' {} \; | while read -r -d ''; do printf %q "$REPLY"; p
 find . -group 1000 -exec chgrp $(id --group) {} \; # update files permissions 
 find -L . -type l # broken symlinks 
 find . -mindepth 1 -exec printf '%s\0' {} \; | shuf --head-count 10 --zero-terminated # random shuffle files 
+find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
 find . -name '*.marks' -delete # remove jedit temp files 
 find . \( -path ./.git -o -path ./.svn \) -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
-find . -printf x | wc --chars 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
@@ -483,7 +487,6 @@ git svn help
 git svn info 
 git svn rebase 
 git svn show-ignore >> .git/info/exclude 
-git svn status 
 git tag --delete name # local 
 git tag v0.1 
 git --version 
@@ -586,6 +589,7 @@ id --user
 id "$USER" 
 if [ -r /proc/sys/kernel/ns_last_pid ]; then while true; do while read; do if [ "$REPLY" != "$old" ]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
+imapfilter 
 indent *.c 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
@@ -765,6 +769,7 @@ man fdisk # help
 man feh # help 
 man ffmpeg # help 
 man file # help 
+man find # help 
 man firefox # help 
 man fmt # help 
 man fortune # help 
@@ -795,6 +800,7 @@ man gnome-terminal # help
 man gpg # help 
 man grep # help 
 man groups # help 
+man gunzip # help 
 man head # help 
 man <(help2man help2man) # help 
 man hexdump # help 
@@ -806,6 +812,8 @@ man hosts # help
 man htop # help 
 man id # help 
 man imake # help 
+man imapfilter_config # help 
+man imapfilter # help 
 man indent # help 
 man infocmp # help 
 man initdb # help postgresql server database 
@@ -897,12 +905,14 @@ man proc # help
 man ps # help 
 man psql # help 
 man psql # help postgresql 
+man pstree # help 
 man puppet # help 
 man python # help 
 man qemu # help 
 man quilt # help 
 man rake # help 
 man rdesktop # help 
+man readelf # help 
 man readlink # help 
 man reboot # help 
 man recordmydesktop # help 
@@ -910,8 +920,16 @@ man rename # help
 man resize # help 
 man rm # help 
 man route # help 
+man rrdcreate # help 
+man rrddump # help 
+man rrdgraph # help 
+man rrdinfo # help 
+man rrdlast # help 
+man rrdtool # help 
+man rrdupdate # help 
 man rsync # help 
 man ruby # help 
+man runlevel # help 
 man scp # help 
 man screen # help 
 man script # help 
@@ -930,6 +948,7 @@ man signal # help
 man sleep # help 
 man sloccount # help 
 man snmpd # help 
+man snmpget # help 
 man snmptranslate # help 
 man snmpwalk # help 
 man software-properties-gtk # help 
@@ -992,6 +1011,7 @@ man wdiff # help
 man wget # help 
 man whatis # help 
 man w # help 
+man which # help 
 man who # help 
 man whois # help 
 man wnpp-alert # help 
@@ -1242,6 +1262,7 @@ psql --host localhost --port 15432 --dbname postgres --username postgres <<< "CO
 psql --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
 psql --username postgres <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
 psql --username postgres --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
+psql --username postgres <<< "\dn" # schemas list all postgresql 
 psql --username postgres <<< "\dt" # public schema tables list all postgresql 
 psql --username postgres <<< "\du" # users list all postgresql 
 psql --username postgres <<< "\encoding" # postgresql db encoding 
@@ -1298,6 +1319,7 @@ rbenv version # ruby installed
 rbenv versions # ruby all installed 
 rbenv which rails # ruby gem binary path 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
+readelf --all $(which readelf) # executable binary 
 readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 read < "/path" 
 read -r var 
@@ -1313,9 +1335,17 @@ rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test
 rm file 
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
+rrdtool create test.rrd --start -3600 DS:content:GAUGE:600:U:U RRA:AVERAGE:0.5:1:10 
+rrdtool dump test.rrd 
+rrdtool graph test.png DEF:content=test.rrd:content:AVERAGE LINE1:content#FF0000:Content 
+rrdtool info test.rrd # metadata 
+rrdtool - # interactive 
+rrdtool last test.rrd # update time 
+rrdtool update test.rrd --template content -- -3600:1 -3300:0 -3000:-1 -2700:-2 -2400:2 -2100:U -1800:1 -1500:0 -1200:1 -900:1 -600:1 -300:-2 N:0 
 rsync --archive --human-readable --recursive --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 ruby --verbose 
+runlevel # kernel 
 sandbox="$(mktemp --directory)" 
 sass-convert all.s{a,c}ss 
 schemaspy2svg ~/db 
@@ -1367,8 +1397,10 @@ sleep 1m
 slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
 slideshow -t s6blank presentation.md 
 sloccount . 
+snmpget -v 2c -c public localhost .1.3.6.1.2.1.1.1.0 
 snmptranslate -Of .1.3.6.1.2.1.1 # OID 
 snmptranslate -On .iso.org.dod.internet.mgmt.mib-2.system # symbol 
+snmptranslate -Tl # list all mib oids 
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
 sort --unique --output result.txt source.txt 
@@ -1452,6 +1484,7 @@ sudo apt-get install jedit # editor
 sudo apt-get install keepassx 
 sudo apt-get install kvm qemu # vm virtualization 
 sudo apt-get install libav-tools # video 
+sudo apt-get install libdatetime-format-strptime-perl 
 sudo apt-get install libdvdcss2 ubuntu-restricted-extras w64codecs x264 # audio video codec 
 sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
 sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
@@ -1474,6 +1507,7 @@ sudo apt-get install playonlinux # games
 sudo apt-get install rar unrar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
+sudo apt-get install rrdtool 
 sudo apt-get install rsync # filesystem 
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
@@ -1485,6 +1519,7 @@ sudo apt-get install tofrodos # convert newline
 sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
 sudo apt-get install unetbootin 
 sudo apt-get install uniutils # unicode 
+sudo apt-get install vagrant virtualbox-guest-additions-iso # dev environment 
 sudo apt-get install varicad2012-en # cad graphics 3d 
 sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
 sudo apt-get install vim vim-rails # editor 
@@ -1500,7 +1535,7 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown "$USER":"$USER" "/media/${USER}/mountpoint" 
+sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/${USER}/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
@@ -1555,6 +1590,7 @@ sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
+sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
 sudo pip install --upgrade pip # python 
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
@@ -1565,10 +1601,11 @@ sudo service cups restart
 sudo service postgresql reload 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
-sudo sh -c 'apt-get install awesome awesome-extra gnome-panel gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-panel;gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
+sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
 sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
+sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $(printf %q "$USER"):$(printf %q "$(groups | awk '{print $1}')") /var/lib/rrdcached/db /var/lib/rrdcached/journal && apt-get install rrdcached" # fix ubuntu rrdcached install bug 985341 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} \; | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
@@ -1706,6 +1743,13 @@ unzip -l file.zip # list zip
 update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
+vagrant box add precise32 http://files.vagrantup.com/precise32.box 
+vagrant box list # show all 
+vagrant --help 
+vagrant init precise32 # ubuntu vm 
+vagrant ssh 
+vagrant status 
+vagrant up # update vm 
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
@@ -1729,6 +1773,7 @@ whatis mv # exact help man
 which make 
 while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} \;) # whitespace eol eof 
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'pattern' .) # search open files 
+while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} \; | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait --event close_write --format %f --monitor test/*) 
@@ -1759,6 +1804,7 @@ xscreensaver-command -version
 xsltproc file.xslt file.xml # transform xslt xml 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
+xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
 x-www-browser /tmp/xterm-screenshot.*.html 
 x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c dev 
 x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp dev 
