@@ -216,6 +216,7 @@ editor ~/dev/tilde/scripts/make-links.sh
 editor ~/.gitconfig # dev 
 editor .git/config # dev 
 editor .gitignore # dev 
+editor ~/.imapfilter/config.lua 
 editor /lib/udev/rules.d/95-keymap.rules # keyboard 
 editor Makefile # dev 
 editor ~/.mkgithub # dev 
@@ -587,6 +588,7 @@ id --user
 id "$USER" 
 if [ -r /proc/sys/kernel/ns_last_pid ]; then while true; do while read; do if [ "$REPLY" != "$old" ]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
+imapfilter 
 indent *.c 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
@@ -809,6 +811,8 @@ man hosts # help
 man htop # help 
 man id # help 
 man imake # help 
+man imapfilter_config # help 
+man imapfilter # help 
 man indent # help 
 man infocmp # help 
 man initdb # help postgresql server database 
