@@ -1741,8 +1741,13 @@ unzip -l file.zip # list zip
 update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
+vagrant box add precise32 http://files.vagrantup.com/precise32.box 
+vagrant box list # show all 
 vagrant --help 
+vagrant init precise32 # ubuntu vm 
+vagrant ssh 
 vagrant status 
+vagrant up # update vm 
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
