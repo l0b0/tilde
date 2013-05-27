@@ -1010,6 +1010,7 @@ man wdiff # help
 man wget # help 
 man whatis # help 
 man w # help 
+man which # help 
 man who # help 
 man whois # help 
 man wnpp-alert # help 
