@@ -29,6 +29,7 @@ autoconf # compile
 autoreconf --install # compile 
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 avconv -i input.mov -codec copy -ss 15 output.mov # cut 
+avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
 awesome --check # config verify parse 
 basename -- "$PWD" # current directory name 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
@@ -1023,6 +1024,7 @@ man xdotool # help
 man xev # help 
 man xinput # help 
 man xmkmf # help 
+man xmllint # help 
 man xmodmap # help 
 man Xorg # help 
 man xrandr # help 
@@ -1792,12 +1794,14 @@ xinput --list
 xinput --list 10 
 xinput --list-props 10 
 xkill 
+xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pp >~/xmodmap 
 xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources 
 xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
+xsltproc file.xslt file.xml # transform xslt xml 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
