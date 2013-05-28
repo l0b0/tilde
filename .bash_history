@@ -679,6 +679,8 @@ make test # dev
 make variables # dev 
 make variable-SHELL # dev 
 man 1p mv # posix help 
+man 1p sort # posix help 
+man 1p xargs # posix help 
 man 2 open # help 
 man 3 exit # help 
 man 3 printf # help format %d %f %s 
