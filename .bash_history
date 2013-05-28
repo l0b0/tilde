@@ -1008,6 +1008,7 @@ man utf8 # help
 man valgrind # help 
 man vim # help 
 man vipw # help 
+man virtualbox # help 
 man visudo # help 
 man watch # help 
 man wc # help 
@@ -1760,6 +1761,7 @@ vainfo
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
+virtualbox & 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
