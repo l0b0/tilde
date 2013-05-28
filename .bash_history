@@ -1748,6 +1748,7 @@ uptime
 /usr/local/JDiveLog/bin/jdivelog 
 vagrant box add precise32 http://files.vagrantup.com/precise32.box 
 vagrant box list # show all 
+vagrant destroy # delete vm 
 vagrant --help 
 vagrant init precise32 # ubuntu vm 
 vagrant ssh 
