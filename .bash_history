@@ -821,6 +821,7 @@ man inotify # help
 man inotifywait # help 
 man install # help 
 man interfaces # help 
+man ionice # help 
 man iostat # help 
 man iotop # help 
 man ipcalc # help 
@@ -866,6 +867,7 @@ man ncal # help
 man nc # help 
 man netstat # help 
 man nfs # help 
+man nice # help 
 man nl # help 
 man nmap # help 
 man nmcli # help 
@@ -1163,6 +1165,7 @@ neato -O -Tsvg ./*.dot
 nethack-qt & 
 netstat 
 netstat --all # internet connections sockets 
+nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
 nl ~/.bashrc 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
