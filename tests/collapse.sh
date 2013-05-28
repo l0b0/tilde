@@ -24,8 +24,10 @@
 #
 ################################################################################
 
+declare -r directory="$(dirname -- "$0")"
+
 oneTimeSetUp() {
-    . "${HOME}/.bash_aliases" >/dev/null
+    . "${directory}/../.bash_aliases" >/dev/null
 }
 
 test_empty() {

@@ -27,7 +27,7 @@
 declare -r directory="$(dirname -- "$0")"
 
 oneTimeSetUp() {
-    . "${HOME}/.bash_aliases" >/dev/null
+    . "${directory}/../.bash_aliases" >/dev/null
     test_dir="$__shunit_tmpDir"/$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'
     file1="$test_dir/file1"
     file2="$test_dir/file2"
