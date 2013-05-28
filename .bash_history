@@ -1145,6 +1145,7 @@ mkgithub ~/dev/worktime
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xdg-menu-to-awesome-wm 
 mkgithub ~/dev/xFormsCal 
+mkgithub ~/dev/xkillthis 
 mkgithub ~/dev/xspf2csv 
 mkgithub ~/dev/xterm-color-count 
 mkgithub --help 
