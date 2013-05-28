@@ -21,4 +21,7 @@ Vagrant::Config.run do |config|
     config.vm.provision :shell,
       :inline => "echo 'Acquire::socks::proxy \"#{ENV['SOCKS_PROXY']}\";' >> /etc/apt/apt.conf.d/01proxy"
   end
+
+  # Bootstrap
+  config.vm.provision :shell, :path => "bootstrap.sh"
 end
