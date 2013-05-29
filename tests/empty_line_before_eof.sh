@@ -77,6 +77,7 @@ test_random() {
     while [ "$repeat" -gt '0' ]
     do
         IFS= read -r -d '' -n "$chars" < "$random_device"
+        assertEquals "Could not read random device; exit code $?" 0 $?
         if [ -n "$REPLY" ] && [ -n "${REPLY##*$'\n'}" ]
         then
             assertEquals \
