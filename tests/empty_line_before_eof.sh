@@ -65,15 +65,18 @@ test_complex() {
 }
 
 test_random() {
+    # Change configuration to tweak coverage/time
+    repeat=100
+    chars=1024
+
     random_device=/dev/urandom
     if [ ! -e "$random_device" ]
     then
         return
     fi
-    repeat=100
     while [ "$repeat" -gt '0' ]
     do
-        IFS= read -r -d '' -n 1024 < "$random_device"
+        IFS= read -r -d '' -n "$chars" < "$random_device"
         if [ -n "$REPLY" ] && [ -n "${REPLY##*$'\n'}" ]
         then
             assertEquals \
