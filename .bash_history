@@ -620,6 +620,8 @@ java -Xmx1024M -Xms512M -cp ~/.minecraft/minecraft.jar net.minecraft.LauncherFra
 jedit -reuseview # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
+json_xs < test.json # prettify json 
+json_xs -t null < test.json # verify json format 
 keepassx & 
 kill -0 $! # check background process pid 
 killall process 
@@ -836,6 +838,7 @@ man jedit # help
 man jhead # help 
 man join # help 
 man json_pp # help 
+man json_xs # help 
 man keepassx # help 
 man kill # help 
 man kvm # help 
