@@ -1012,6 +1012,7 @@ man update-alternatives # help
 man updatedb # help 
 man update-java-alternatives # help 
 man uptime # help 
+man urandom # help 
 man usermod # help 
 man utf8 # help 
 man valgrind # help 

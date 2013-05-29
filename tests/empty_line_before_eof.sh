@@ -7,7 +7,7 @@
 #    https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT AND LICENSE
-#    Copyright (C) 2011 Victor Engmark
+#    Copyright (C) 2011, 2013 Victor Engmark
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -62,6 +62,32 @@ test_complex() {
     assertEquals unchanged "$string"x "$(printf %s "$string" | empty_line_before_eof; printf x)"
     string=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 '
     assertEquals modified "$string"$'\n'x "$(printf %s "$string" | empty_line_before_eof; printf x)"
+}
+
+test_random() {
+    random_device=/dev/urandom
+    if [ ! -e "$random_device" ]
+    then
+        return
+    fi
+    repeat=100
+    while [ "$repeat" -gt '0' ]
+    do
+        IFS= read -r -d '' -n 1024 < "$random_device"
+        if [ -n "$REPLY" ] && [ -n "${REPLY##*$'\n'}" ]
+        then
+            assertEquals \
+                "Should've added a newline to $(printf %q "$REPLY")" \
+                "$REPLY"$'\n'x \
+                "$(printf %s "$REPLY" | empty_line_before_eof; printf x)"
+        else
+            assertEquals \
+                "Should not have changed $(printf %q "$REPLY")" \
+                "$REPLY"x \
+                "$(printf %s "$REPLY" | empty_line_before_eof; printf x)"
+        fi
+        let --repeat
+    done
 }
 
 # load and run shUnit2
