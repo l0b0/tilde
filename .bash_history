@@ -1192,7 +1192,7 @@ ntpq -p # query list peers
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl asn1parse -in ~/.ssh/id_?sa # decode key 
-openssl genrsa -des3 -out private.pem 1024 # create des3 encrypted private rsa key hex 
+openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa key hex 
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
