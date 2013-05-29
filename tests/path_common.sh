@@ -71,6 +71,12 @@ test_substring() {
     assertEquals x "$(path_common /foo /fo; echo x)"
 }
 
+test_multiple_slashes() {
+    assertEquals \
+        /long/namesx \
+        "$(path_common //long/names/foo /long/names///bar; echo x)"
+}
+
 test_complex() {
     assertEquals \
         'Complicated path' \
