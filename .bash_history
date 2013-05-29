@@ -706,6 +706,7 @@ man arandr # help
 man arch # help 
 man ascii # help 
 man ash # help 
+man asn1parse # help 
 man avconv # help 
 man awk # help 
 man basename # help 
@@ -756,6 +757,7 @@ man dpkg # help
 man dpkg-shlibdeps # help 
 man dropdb # help postgresql 
 man dropuser # help 
+man dsa # help 
 man du # help 
 man eject # help 
 man env # help 
@@ -931,6 +933,7 @@ man rrdinfo # help
 man rrdlast # help 
 man rrdtool # help 
 man rrdupdate # help 
+man rsa # help 
 man rsync # help 
 man ruby # help 
 man runlevel # help 
@@ -1188,6 +1191,7 @@ nslookup example.org # dns internet lookup network
 ntpq -p # query list peers 
 objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
+openssl asn1parse -in ~/.ssh/id_?sa # decode key 
 openssl genrsa -des3 -out private.pem 1024 # create des3 encrypted private rsa key hex 
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
