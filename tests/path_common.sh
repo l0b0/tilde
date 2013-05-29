@@ -63,6 +63,7 @@ test_special() {
 
 test_empty() {
     assertEquals 'Empty $1 and $2' x "$(path_common '' ''; echo x)"
+    assertEquals 'Empty $1' x "$(path_common '' /foo/bar; echo x)"
     assertEquals 'Empty $2' x "$(path_common /foo/bar ''; echo x)"
 }
 
