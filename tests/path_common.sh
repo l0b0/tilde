@@ -7,7 +7,7 @@
 #    https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT AND LICENSE
-#    Copyright (C) 2011-2012 Victor Engmark
+#    Copyright (C) 2011-2013 Victor Engmark
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -33,54 +33,54 @@ oneTimeSetUp() {
 test_simple() {
     assertEquals \
         'Single character' \
-        "$(path_common /a/b/c/d /a/b/e/f; echo x)" \
-        /a/bx
+        /a/bx \
+        "$(path_common /a/b/c/d /a/b/e/f; echo x)"
     assertEquals \
         'Normal' \
-        "$(path_common /long/names/foo /long/names/bar; echo x)" \
-        /long/namesx
+        /long/namesx \
+        "$(path_common /long/names/foo /long/names/bar; echo x)"
 }
 
 test_root() {
-    assertEquals 'Root path' "$(path_common / /a/b/c; echo x)" /x
+    assertEquals 'Root path' /x "$(path_common / /a/b/c; echo x)"
 }
 
 test_relative() {
-    assertEquals 'No dot' "$(path_common a/b/c/d a/b/e/f ; echo x)" a/bx
+    assertEquals 'No dot' a/bx "$(path_common a/b/c/d a/b/e/f ; echo x)"
     assertEquals \
         'With dot' \
-        "$(path_common ./a/b/c/d ./a/b/e/f; echo x)" \
-        ./a/bx
+        ./a/bx \
+        "$(path_common ./a/b/c/d ./a/b/e/f; echo x)"
 }
 
 test_special() {
     assertEquals \
         'Newlines' \
-        "$(path_common $'\n/\n/\n' $'\n/\n'; echo x)" \
-        $'\n/\n'x
-    assertEquals 'Dashes' "$(path_common --/-- --; echo x)" '--x'
+        $'\n/\n'x \
+        "$(path_common $'\n/\n/\n' $'\n/\n'; echo x)"
+    assertEquals 'Dashes' '--x' "$(path_common --/-- --; echo x)"
 }
 
 test_empty() {
-    assertEquals 'Empty $1 and $2' "$(path_common '' ''; echo x)" x
-    assertEquals 'Empty $2' "$(path_common /foo/bar ''; echo x)" x
+    assertEquals 'Empty $1 and $2' x "$(path_common '' ''; echo x)"
+    assertEquals 'Empty $2' x "$(path_common /foo/bar ''; echo x)"
 }
 
 test_substring() {
-    assertEquals  "$(path_common /foo /fo; echo x)" x
+    assertEquals x "$(path_common /foo /fo; echo x)"
 }
 
 test_complex() {
     assertEquals \
         'Complicated path' \
+        $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x \
         "$(path_common $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n' \
-            $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n'; echo x)" \
-        $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x
+            $'--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n'; echo x)"
     assertEquals \
         'Complicated path with bracketing' \
+        $'/test/--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x \
         "$(path_common $'/test/--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n/foo' \
-            $'/test/--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n/bar'; echo x)" \
-        $'/test/--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'x
+            $'/test/--$`!*@\a\b\E\f\r\t\v\\\'\"\360\240\202\211 \n/bar'; echo x)"
 }
 
 # load and run shUnit2
