@@ -903,6 +903,7 @@ man pidgin # help
 man pidof # help 
 man ping # help 
 man pip # help 
+man pkcs8 # help 
 man pngcrush # help 
 man pod2man # help 
 man postgres # help postgresql server 
@@ -948,6 +949,7 @@ man sha1sum # help
 man sha512sum # help 
 man sh # help 
 man showkey # help 
+man shred # help 
 man shuf # help 
 man shunit2 # help 
 man shutdown # help 
@@ -995,6 +997,7 @@ man trash # help
 man tr # help 
 man tty # help 
 man udevadm # help 
+man umask # help 
 man uname # help 
 man unetbootin # help 
 man unexpand # help 
@@ -1425,7 +1428,6 @@ ssh example.org
 ssh example.org < test.sh 
 ssh example.org uptime 
 sshfs hostname: "/media/${USER}/mountpoint" 
-ssh-keygen -b 4096 -f ~/.ssh/id_rsa -t rsa # create unencrypted private public rsa ssh key pair 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
@@ -1740,6 +1742,7 @@ udevadm info --export-db
 ulimit -a 
 ulimit -c unlimited 
 umask 
+umask 0077 && ssh-keygen -b 4096 -f ~/.ssh/id_rsa -t rsa && openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa.pk8 && shred --remove ~/.ssh/id_rsa && mv --no-clobber ~/.ssh/id_rsa.pk8 ~/.ssh/id_rsa # create encrypted private public rsa pkcs8 ssh key pair 
 umask -S # symbolic 
 umount-image ./*.iso 
 uname --all 
