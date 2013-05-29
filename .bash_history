@@ -1425,6 +1425,7 @@ ssh example.org
 ssh example.org < test.sh 
 ssh example.org uptime 
 sshfs hostname: "/media/${USER}/mountpoint" 
+ssh-keygen -b 4096 -f ~/.ssh/id_rsa -t rsa # create unencrypted private public rsa ssh key pair 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
