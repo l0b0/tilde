@@ -1411,6 +1411,7 @@ shopt -s globstar && wc --lines ./**/**.ext # count recursive lines
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
+shuf --input-range 0-1 --head-count 1 # random number range 
 sleep 1m 
 slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
 slideshow -t s6blank presentation.md 
