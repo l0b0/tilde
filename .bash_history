@@ -817,6 +817,7 @@ man hostname # help
 man hosts # help 
 man htop # help 
 man id # help 
+man iftop # help 
 man imake # help 
 man imapfilter_config # help 
 man imapfilter # help 
@@ -1496,7 +1497,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install htop iotop # monitor cpu memory storage 
+sudo apt-get install htop iftop iotop # monitor cpu memory storage network 
 sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
@@ -1589,6 +1590,7 @@ sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exe
 sudo gem install slideshow 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
+sudo iftop # bandwidth network interface monitor 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
 sudo ip link set dev eth0 up # network enable device 
