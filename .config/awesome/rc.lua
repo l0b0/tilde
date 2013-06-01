@@ -91,25 +91,28 @@ layouts =
 -- Define a tag table which hold all screen tags.
 tags = {
     names = {
-        "sh",
-        "WWW",
-        "edit",
+        "shell",
+        "browser",
+        "editor",
         "vcs",
-        "@",
+        "db",
         "remote",
+        "email",
+        "im",
+        "media",
         "misc",
     },
     layouts = {
-        awful.layout.suit.fair,
         awful.layout.suit.tile,
         awful.layout.suit.tile,
-        awful.layout.suit.tile.bottom,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile,
+        awful.layout.suit.tile,
         awful.layout.suit.spiral.dwindle,
         awful.layout.suit.spiral.dwindle,
         awful.layout.suit.spiral.dwindle,
         awful.layout.suit.tile,
-        awful.layout.suit.tile,
-        awful.layout.suit.floating,
     }
 }
 for s = 1, screen.count() do
