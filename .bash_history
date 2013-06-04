@@ -1410,7 +1410,6 @@ shopt nullglob # option get
 shopt # options 
 shopt -s dotglob # option set .* 
 shopt -s extglob # option set ?(a|b) *(a|b) +(a|b) @(a|b) !(a|b) 
-shopt -s extglob && sudo rename --no-act 's/$/.bak/' /usr/share/hunspell/en_!(US).{aff,dic} # language dictionary 
 shopt -s globstar # option set ** 
 shopt -s globstar && wc --lines ./**/**.ext # count recursive lines 
 shopt -s nullglob # option set * 
@@ -1500,7 +1499,6 @@ sudo apt-get install gtk-recordmydesktop # video
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
 sudo apt-get install htop iftop iotop # monitor cpu memory storage network 
-sudo apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb # language dictionary l10n german french norwegian 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
@@ -1588,7 +1586,6 @@ sudo editor /etc/X11/xorg.conf
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
-sudo find /usr/share/hunspell/ -type l \( -name '*.aff' -o -name '*.dic' \) -exec mv {} {}.bak \; # language dictionary 
 sudo gem install slideshow 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
@@ -1627,6 +1624,7 @@ sudo service postgresql reload
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
+sudo sh -c 'apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb && find /usr/share/hunspell \( \( -name "en_*.aff" -o -name "en_*.dic" \) -not -name "en_GB*" \) -o \( -type l \( -name "*.aff" -o -name "*.dic" \) \) -exec mv --verbose {} {}.bak \;' # language dictionary english l10n german french norwegian 
 sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
