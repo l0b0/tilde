@@ -93,7 +93,10 @@ for path in ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.jedit/keymaps/importe
 do
     if [ -e "$path" ]
     then
+        verbose_echo "Sorting $(printf %q "$path")"
         sort --unique --output="$path" "$path"
+    else
+        verbose_echo "Missing $(printf %q "$path")"
     fi
 done
 
