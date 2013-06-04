@@ -834,6 +834,7 @@ man iostat # help
 man iotop # help 
 man ipcalc # help 
 man ip # help 
+man iptables # help 
 man iwconfig # help 
 man java # help 
 man jedit # help 
@@ -1595,6 +1596,7 @@ sudo iftop # bandwidth network interface monitor
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
 sudo ip link set dev eth0 up # network enable device 
+sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
