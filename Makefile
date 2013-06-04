@@ -5,7 +5,6 @@ DOTFILES = $(wildcard .*rc) \
            .config \
            .gitconfig \
            .imapfilter \
-           .ipython \
            .jedit \
            .profile \
            .quiltrc-dpkg \
