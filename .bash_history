@@ -794,7 +794,7 @@ man git # help
 man gitk # help 
 man gitstats # help 
 man git-svn # help 
-man gksu # help 
+man gksudo # help 
 man glabels # help 
 man gnome-calculator # help 
 man gnome-control-center # help 
