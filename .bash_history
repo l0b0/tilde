@@ -44,7 +44,7 @@ bchunk image.bin image.cue image.iso
 bc --mathlib <<< 'e(1)' # calculator math e power 
 bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
 bg # background job 
-bind -P | fgrep ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
+bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
@@ -152,8 +152,8 @@ deluge &
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df --human-readable . # filesystem 
 df --human-readable # filesystem 
-! df --portability | awk '{print $5}' | fgrep --line-regexp --quiet '100%' # disk space available 
-df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | fgrep --invert-match --line-regexp --regexp '-' # directory partition 
+! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
+df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
 difff --help 
 diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
@@ -247,7 +247,7 @@ evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
-exclude_vcs < <(fgrep --recursive --regexp 'foo' .) # search literal source 
+exclude_vcs < <(grep --fixed-strings --recursive --regexp 'foo' .) # search literal source 
 exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
@@ -267,7 +267,6 @@ fgit --help
 fgit pull -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
 fgit push -- ~/*/ ~/.*/ ~/dev/*/ 
 fgit status -- ~/*/ ~/.*/ ~/dev/*/ /media/$USER/*/*/ 
-fgrep --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
 file README.markdown 
 find_date_sorted . -mindepth 1 # files 
 find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
@@ -522,6 +521,7 @@ gpg --verify *.sig # pgp signature
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
 grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
+grep --fixed-strings --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
