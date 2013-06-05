@@ -255,7 +255,6 @@ saveAsUsesFSB=false
 scroll-and-center=C+l
 search.beanshell.toggle=false
 search.ignoreCase.toggle=false
-search.regexp.toggle=false
 search.wholeWord.toggle=false
 search.wrap.toggle=false
 suppressNotSavedConfirmUntitled=false
