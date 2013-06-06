@@ -600,6 +600,7 @@ infocmp -1 # list terminal
 info --raw-escapes --subnodes autoconf | pager --raw-control-chars # help 
 info --raw-escapes --subnodes automake | pager --raw-control-chars # help 
 info --raw-escapes --subnodes date | pager --raw-control-chars # help 
+info --raw-escapes --subnodes dd | pager --raw-control-chars # help 
 info --raw-escapes --subnodes find | pager --raw-control-chars # help 
 info --raw-escapes --subnodes ls | pager --raw-control-chars # help 
 info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples temporary files 
@@ -741,7 +742,6 @@ man crontab # help
 man csplit # help 
 man curl # help 
 man cut # help 
-man dd # help 
 man debhelper # help 
 man delgroup # help 
 man deluge # help 
