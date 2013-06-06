@@ -289,6 +289,7 @@ find -version
 firefox -no-remote -P secondary & 
 firefox -profilemanager & # config 
 firefox -safe-mode & 
+fold --width 1 <<< foo # split characters lines 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
@@ -781,6 +782,7 @@ man file # help
 man find # help 
 man firefox # help 
 man fmt # help 
+man fold # help 
 man fortune # help 
 man free # help 
 man fuseiso # help 
