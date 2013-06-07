@@ -27,6 +27,9 @@ ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax
 aticonfig --initial=check 
 autoconf # compile 
 autoreconf --install # compile 
+avahi-browse-domains --terminate # network domains scan 
+avahi-browse --terminate --all # network services scan local remote 
+avahi-browse --terminate --ignore-local _workstation._tcp # network tcp workstations scan remote 
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 avconv -i input.mov -codec copy -ss 15 output.mov # cut 
 avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
@@ -716,6 +719,7 @@ man arch # help
 man ascii # help 
 man ash # help 
 man asn1parse # help 
+man avahi-browse # help 
 man avconv # help 
 man awk # help 
 man basename # help 
