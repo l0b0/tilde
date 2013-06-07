@@ -248,6 +248,7 @@ evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
+ex -c '1' -c '?^[[:space:]]*[^[:space:]#]?' -c $'a\n# New comment' -c 'wq' ~/.bashrc # insert after last match 
 exclude_vcs < <(grep --fixed-strings --recursive --regexp 'foo' .) # search literal source 
 exec $SHELL # replace 
 exit 
