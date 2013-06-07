@@ -608,6 +608,7 @@ info --raw-escapes --subnodes find | pager --raw-control-chars # help
 info --raw-escapes --subnodes ls | pager --raw-control-chars # help 
 info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples temporary files 
 info --raw-escapes --subnodes sed | pager --raw-control-chars # help 
+insert_after_last '^[ \t]*[^# \t]' '# Comment 1' ~/.bashrc 
 iostat 
 ip addr show # ipv4 ipv6 address 
 ipcalc 0.0.0.0/0 
@@ -1497,6 +1498,7 @@ sudo apt-get install fakeroot # chroot
 sudo apt-get install ffmpeg # video 
 sudo apt-get install fortune-mod # strfile 
 sudo apt-get install fuseiso 
+sudo apt-get install gawk 
 sudo apt-get install gedit gedit-developer-plugins 
 sudo apt-get install git-buildpackage 
 sudo apt-get install gnome-specimen # font graphics preview 

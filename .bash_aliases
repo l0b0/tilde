@@ -553,6 +553,50 @@ date_range() {
     done
 }
 
+insert_after_last() {
+    # Insert a string after the last occurrence of a pattern in files
+    #
+    # @param $1: Gawk-compatible pattern
+    # @param $2: Text to append
+    # @param $3...$#: Paths
+    #
+    # Example:
+    #
+    # insert_after_last '^[ \t]*[^# \t]' '# My comment' /path
+
+    if [ $# -lt 3 ]
+    then
+        echo "Synopsis: ${FUNCNAME} pattern text file..." >&2
+        return 2
+    fi
+
+    local -r pattern=$1
+    local -r text=$2
+    shift 2
+
+    for path
+    do
+        if [ ! -e "$path" ]
+        then
+            echo "${FUNCNAME}: $path: No such file" >&2
+            return 1
+        fi
+
+        set -o pipefail
+        tac -- "$path" |
+            TEXT=$text gawk -v size="$(wc -c < "$path")" '
+                $0 !~ /'"$pattern"'/ {
+                    footer=$0 "\n" footer
+                    next
+                }
+                {
+                    system("dd bs=1 seek=" size - length(footer) " conv=notrunc if=/dev/null 2>/dev/null")
+                    printf "%s\n%s", ENVIRON["TEXT"], footer
+                    exit
+                }' 1<> "$path"
+    done
+}
+
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
