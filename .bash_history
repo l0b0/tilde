@@ -970,6 +970,7 @@ man shuf # help
 man shunit2 # help 
 man shutdown # help 
 man signal # help 
+man sipcalc # help 
 man sleep # help 
 man sloccount # help 
 man snmpd # help 
@@ -1427,6 +1428,8 @@ shopt -s nullglob # option set *
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
 shuf --input-range 0-1 --head-count 1 # random number range 
+sipcalc 0.0.0.0/0 
+sipcalc 192.168.0.1/24 
 sleep 1m 
 slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
 slideshow -t s6blank presentation.md 
@@ -1496,7 +1499,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rapid-photo-downloader rawstudio rawtherapee # graphics 2d metadata exif jpeg 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
-sudo apt-get install etherape ipcalc traceroute # network 
+sudo apt-get install etherape ipcalc sipcalc traceroute # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
