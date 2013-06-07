@@ -209,7 +209,7 @@ do
     fi
 done
 
-export DEBFULLNAME="$(getent passwd -- "${@-$USER}" | cut -d ':' -f 5 | cut -d ',' -f 1)"
+export DEBFULLNAME="$(grep "^${USER}:" /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1)"
 export DEBEMAIL="$(tr A-Z a-z <<<"${DEBFULLNAME/ /@}").name"
 
 set +o noclobber +o nounset +o pipefail
