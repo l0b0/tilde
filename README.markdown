@@ -16,7 +16,6 @@ Install
 
     git clone git://github.com/l0b0/tilde.git
     cd tilde
-    git submodule init
-    git submodule update
+    git submodule update --init
     make test # Optional
     make install # NOT as root
