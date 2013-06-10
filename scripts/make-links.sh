@@ -169,13 +169,6 @@ do
         continue
     fi
 
-    # Can we create the link?
-    if [[ ! -w "$source_path" ]]
-    then
-        warning "$(printf %q "${cmdname}"): Path is not writeable; skipping: $(printf %q "$source_path")"
-        continue
-    fi
-
     if [[ -L "$source_path" && ! "${action-}" =~ ^[Ss]$ ]]
     then
         action=r
