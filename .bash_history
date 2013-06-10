@@ -1866,6 +1866,7 @@ x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # dev help
 x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
+yes -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test repeat string 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 youtube-dl --title --continue 'https://www.youtube.com/watch?v=' # download video file 
 zip --update file.zip input # add file compress zip 
