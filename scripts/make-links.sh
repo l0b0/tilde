@@ -109,11 +109,11 @@ do
             shift
             if [ -z "${1:-}" ]
             then
-                error "Missing targets." "$help_info" $EX_USAGE
+                error "$(printf %q "${cmdname}"): Missing targets." "$help_info" $EX_USAGE
             fi
             if [ -z "${2:-}" ]
             then
-                error "Missing directory." "$help_info" $EX_USAGE
+                error "$(printf %q "${cmdname}"): Missing directory." "$help_info" $EX_USAGE
             fi
             targets=(${@:1:$(($#-1))})
             source_dir="${@:$#}"
@@ -127,7 +127,7 @@ done
 
 if [ ! -d "$source_dir" ]
 then
-    error "Not a directory: $(printf %q "$source_dir")" "$help_info" $EX_USAGE
+    error "$(printf %q "${cmdname}"): Not a directory: $(printf %q "$source_dir")" "$help_info" $EX_USAGE
 fi
 
 # Set defaults
@@ -141,7 +141,7 @@ for target_path in "${targets[@]}"
 do
     if [ ! -e "$target_path" ]
     then
-        error "Target does not exist: $(printf %q "$target_path")" $EX_USAGE
+        error "$(printf %q "${cmdname}"): Target does not exist: $(printf %q "$target_path")" $EX_USAGE
     fi
 
     target_file="$(basename -- "$target_path")"
@@ -171,7 +171,7 @@ do
     # Can we create the link?
     if [[ ! -w "$source_path" ]]
     then
-        warning "Path is not writeable; skipping: $(printf %q "$source_path")"
+        warning "$(printf %q "${cmdname}"): Path is not writeable; skipping: $(printf %q "$source_path")"
         continue
     fi
 
