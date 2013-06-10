@@ -1537,7 +1537,7 @@ sudo apt-get install nethack-qt nethack-spoilers # game
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad 'sweethome3d*' # cad graphics 3d 
-sudo apt-get install openssh-server 
+sudo apt-get install openssh-server # ssh server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
@@ -1550,7 +1550,7 @@ sudo apt-get install rsync # filesystem
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
-sudo apt-get install sqlite3 sqlite3-doc # database 
+sudo apt-get install sqlite3 sqlite3-doc # database server 
 sudo apt-get install sshfs 
 sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
