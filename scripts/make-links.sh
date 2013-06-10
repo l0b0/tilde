@@ -163,15 +163,10 @@ do
 
     source_path="${source_dir}/${target_file}"
 
-    if [[ ! -e "$source_path" ]]
+    if [[ ! -e "$source_path" || ( -L "$source_path" && ! "${action-}" =~ ^[Ss]$ ) ]]
     then
-        ln ${verbose-} --symbolic "$target_path" "$source_dir"
+        ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
         continue
-    fi
-
-    if [[ -L "$source_path" && ! "${action-}" =~ ^[Ss]$ ]]
-    then
-        action=r
     fi
 
     # Have to either skip or replace
@@ -197,5 +192,5 @@ do
         rm ${verbose-} --recursive -- "$source_path"
     fi
 
-    ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
+    ln ${verbose-} --symbolic "$target_path" "$source_dir"
 done
