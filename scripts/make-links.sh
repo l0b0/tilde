@@ -165,7 +165,8 @@ do
 
     if [[ ! -e "$source_path" ]]
     then
-        ln ${verbose-} --force --symbolic "$target_path" "$source_dir"
+        ln ${verbose-} --symbolic "$target_path" "$source_dir"
+        continue
     fi
 
     # Can we create the link?
