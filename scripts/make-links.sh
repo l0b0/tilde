@@ -47,7 +47,7 @@
 #        https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT
-#        Copyright © 2008-2012 Victor Engmark. License GPLv3+: GNU GPL
+#        Copyright © 2008-2013 Victor Engmark. License GPLv3+: GNU GPL
 #        version 3 or later <http://gnu.org/licenses/gpl.html>.
 #        This is free software: you are free to change and redistribute it.
 #        There is NO WARRANTY, to the extent permitted by law.
@@ -127,7 +127,7 @@ done
 
 if [ ! -d "$source_dir" ]
 then
-    error "Not a directory: $source_dir" "$help_info" $EX_USAGE
+    error "Not a directory: $(printf %q "$source_dir")" "$help_info" $EX_USAGE
 fi
 
 # Set defaults
@@ -141,7 +141,7 @@ for target_path in "${targets[@]}"
 do
     if [ ! -e "$target_path" ]
     then
-        error "Target does not exist: $target_path" $EX_USAGE
+        error "Target does not exist: $(printf %q "$target_path")" $EX_USAGE
     fi
 
     target_file="$(basename -- "$target_path")"
@@ -171,7 +171,7 @@ do
     # Can we create the link?
     if [[ ! -w "$source_path" ]]
     then
-        warning "Path is not writeable; skipping: $source_path"
+        warning "Path is not writeable; skipping: $(printf %q "$source_path")"
         continue
     fi
 
