@@ -1290,17 +1290,7 @@ pry
 ps afux | pager -S # processes list all tree tty 
 ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
-psql --dbname postgres --username postgres < dump.sql # postgresql import 
-psql --dbname postgres --username postgres # postgresql login interactive 
-psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql 
-psql --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
-psql --username postgres <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
-psql --username postgres --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
-psql --username postgres <<< "\dn" # schemas list all postgresql 
-psql --username postgres <<< "\dt" # public schema tables list all postgresql 
-psql --username postgres <<< "\du" # users list all postgresql 
-psql --username postgres <<< "\encoding" # postgresql db encoding 
-psql --username postgres --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
+psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql network 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
 ps uw -p $$ # process single pid 
@@ -1542,6 +1532,7 @@ sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
+sudo apt-get install postgresql 
 sudo apt-get install rar unrar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
@@ -1638,6 +1629,7 @@ sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable cap
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo service cups restart 
 sudo service postgresql reload 
+sudo service postgresql status 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
@@ -1663,7 +1655,17 @@ sudo -u postgres createuser --pwprompt username
 sudo -u postgres dropuser username 
 sudo -u postgres pg_dumpall > backup.sql # postgresql backup 
 sudo -u postgres pg_dump postgres > backup.sql # postgresql backup 
+sudo -u postgres psql <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
+sudo -u postgres psql <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
+sudo -u postgres psql --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
+sudo -u postgres psql --dbname postgres < dump.sql # postgresql import 
+sudo -u postgres psql --dbname postgres # postgresql login interactive 
+sudo -u postgres psql <<< "\dn" # schemas list all postgresql 
+sudo -u postgres psql <<< "\dt" # public schema tables list all postgresql 
+sudo -u postgres psql <<< "\du" # users list all postgresql 
+sudo -u postgres psql <<< "\encoding" # postgresql db encoding 
 sudo -u postgres psql --single-transaction --file backup.sql # restore postgresql 
+sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
