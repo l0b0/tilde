@@ -1664,6 +1664,7 @@ sudo -u postgres psql <<< "\dn" # schemas list all postgresql
 sudo -u postgres psql <<< "\dt" # public schema tables list all postgresql 
 sudo -u postgres psql <<< "\du" # users list all postgresql 
 sudo -u postgres psql <<< "\encoding" # postgresql db encoding 
+sudo -u postgres psql <<< "SELECT * FROM pg_stat_activity;" # list sessions processes postgresql 
 sudo -u postgres psql --single-transaction --file backup.sql # restore postgresql 
 sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 sudo -u postgres service postgresql reload # configuration 
