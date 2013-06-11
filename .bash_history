@@ -109,6 +109,8 @@ crontab -e # edit
 crontab -l # list 
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' 
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' 
+csvtool col 3 test.csv # csv column 
+csvtool --help | pager 
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
@@ -1484,6 +1486,7 @@ sudo apt-get install cloc sloccount # dev code
 sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
+sudo apt-get install csvtool 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre # java 
 sudo apt-get install deluge # torrent 
