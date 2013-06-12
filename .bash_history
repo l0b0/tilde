@@ -1542,6 +1542,7 @@ sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
+sudo apt-get install python-gdata python-gdata-doc # python google export 
 sudo apt-get install rar unrar # compress 
 sudo apt-get install rdesktop # internet 
 sudo apt-get install --reinstall package 
