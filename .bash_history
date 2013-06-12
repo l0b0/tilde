@@ -997,6 +997,7 @@ man sudoers # help
 man sudo # help 
 man su # help 
 man sweethome3d # help 
+man synclient # help 
 man tac # help 
 man tail # help 
 man tar # help 
@@ -1732,6 +1733,7 @@ svn status
 svn update 
 svn --version 
 sweethome3d & 
+synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 TAGS=all guard 
 TAGS="$USER" guard 
 tar --create --gzip --exclude-vcs --directory ~/dev --file ~/tilde.tar.gz tilde # compress gzip 
