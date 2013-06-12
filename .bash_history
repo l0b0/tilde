@@ -483,8 +483,7 @@ gitstats ~/dev/tilde ~/gitstats && x-www-browser ~/gitstats/index.html # statist
 git status 
 git submodule add --force git://github.com/l0b0/make-includes.git 
 git submodule add --force git://github.com/l0b0/shell-includes.git 
-git submodule init 
-git submodule update 
+git submodule update --init 
 git svn clone --stdlayout --revision 1:HEAD http://svn/repo 
 git svn clone --stdlayout --revision 1:HEAD --no-minimize-url http://svn/repo/path 
 git svn dcommit 
