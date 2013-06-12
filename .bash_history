@@ -66,6 +66,7 @@ cap deploy:setup # rails
 capify . # rails 
 cap # rails 
 cat ~/contacts/*.vcf > ~/all.vcf 
+cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
 cat /proc/1/stat | awk '{ print $22 }' # process start time jiffies since boot 
