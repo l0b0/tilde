@@ -109,6 +109,8 @@ crontab -e # edit
 crontab -l # list 
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' 
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' 
+csvtool col 3 test.csv # csv column 
+csvtool --help | pager 
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
@@ -1290,17 +1292,7 @@ pry
 ps afux | pager -S # processes list all tree tty 
 ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
-psql --dbname postgres --username postgres < dump.sql # postgresql import 
-psql --dbname postgres --username postgres # postgresql login interactive 
-psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql 
-psql --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
-psql --username postgres <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
-psql --username postgres --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
-psql --username postgres <<< "\dn" # schemas list all postgresql 
-psql --username postgres <<< "\dt" # public schema tables list all postgresql 
-psql --username postgres <<< "\du" # users list all postgresql 
-psql --username postgres <<< "\encoding" # postgresql db encoding 
-psql --username postgres --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
+psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql network 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
 ps uw -p $$ # process single pid 
@@ -1494,6 +1486,7 @@ sudo apt-get install cloc sloccount # dev code
 sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
+sudo apt-get install csvtool 
 sudo apt-get install curl wget # web 
 sudo apt-get install default-jre # java 
 sudo apt-get install deluge # torrent 
@@ -1501,7 +1494,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rapid-photo-downloader rawstudio rawtherapee # graphics 2d metadata exif jpeg 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
-sudo apt-get install etherape ipcalc sipcalc traceroute # network 
+sudo apt-get install etherape ipcalc nmap sipcalc traceroute # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
 sudo apt-get install ffmpeg # video 
@@ -1537,11 +1530,12 @@ sudo apt-get install nethack-qt nethack-spoilers # game
 sudo apt-get install nfs-common # filesystem 
 sudo apt-get install ntp-doc 
 sudo apt-get install openscad 'sweethome3d*' # cad graphics 3d 
-sudo apt-get install openssh-server 
+sudo apt-get install openssh-server # ssh server 
 sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
 sudo apt-get install php5-cli php5-dev # php dev 
 sudo apt-get install pidgin # im 
 sudo apt-get install playonlinux # games 
+sudo apt-get install postgresql 
 sudo apt-get install python-gdata python-gdata-doc # python google export 
 sudo apt-get install rar unrar # compress 
 sudo apt-get install rdesktop # internet 
@@ -1551,7 +1545,7 @@ sudo apt-get install rsync # filesystem
 sudo apt-get install screen # virtual terminal 
 sudo apt-get install shunit2 # test bash shell zsh 
 sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
-sudo apt-get install sqlite3 sqlite3-doc # database 
+sudo apt-get install sqlite3 sqlite3-doc # database server 
 sudo apt-get install sshfs 
 sudo apt-get install teamspeak-client # chat voice 
 sudo apt-get install tofrodos # convert newline 
@@ -1639,6 +1633,7 @@ sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable cap
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo service cups restart 
 sudo service postgresql reload 
+sudo service postgresql status 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
@@ -1664,7 +1659,18 @@ sudo -u postgres createuser --pwprompt username
 sudo -u postgres dropuser username 
 sudo -u postgres pg_dumpall > backup.sql # postgresql backup 
 sudo -u postgres pg_dump postgres > backup.sql # postgresql backup 
+sudo -u postgres psql <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # list all postgresql 
+sudo -u postgres psql <<< "COPY(SELECT extract(epoch from now())::Integer) TO STDOUT;" # unix integer timestamp 
+sudo -u postgres psql --dbname my_db <<< "\dt my_schema.*" # database schema tables list all postgresql 
+sudo -u postgres psql --dbname postgres < dump.sql # postgresql import 
+sudo -u postgres psql --dbname postgres # postgresql login interactive 
+sudo -u postgres psql <<< "\dn" # schemas list all postgresql 
+sudo -u postgres psql <<< "\dt" # public schema tables list all postgresql 
+sudo -u postgres psql <<< "\du" # users list all postgresql 
+sudo -u postgres psql <<< "\encoding" # postgresql db encoding 
+sudo -u postgres psql <<< "SELECT * FROM pg_stat_activity;" # list sessions processes postgresql 
 sudo -u postgres psql --single-transaction --file backup.sql # restore postgresql 
+sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
@@ -1865,6 +1871,7 @@ x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # dev help
 x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
+yes -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test repeat string 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 youtube-dl --title --continue 'https://www.youtube.com/watch?v=' # download video file 
 zip --update file.zip input # add file compress zip 
