@@ -138,6 +138,7 @@ date --rfc-3339=ns --date="2001-02-03T04:05:06.7 + 1 year 2 months 3 days 4 hour
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%dT%H:%M:%S # iso time 
 dd if=/dev/null of=/file/to/truncate seek=1 bs=1024 # truncate file bytes 
+dd if=/dev/urandom bs=1kB count=1 | ent # calculate entropy 
 dd if=/dev/zero of="${sandbox}/zeros.bin" bs=1000 count=5 # create file size 
 declare -a # arrays 
 declare -F # functions 
@@ -774,6 +775,7 @@ man dropuser # help
 man dsa # help 
 man du # help 
 man eject # help 
+man ent # help 
 man env # help 
 man errno # help 
 man etherape # help 
@@ -1495,6 +1497,7 @@ sudo apt-get install dfo # Flickr
 sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rapid-photo-downloader rawstudio rawtherapee # graphics 2d metadata exif jpeg 
 sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
 sudo apt-get install enscript # convert postscript 
+sudo apt-get install ent 
 sudo apt-get install etherape ipcalc nmap sipcalc traceroute # network 
 sudo apt-get install extundelete 
 sudo apt-get install fakeroot # chroot 
