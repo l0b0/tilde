@@ -1176,6 +1176,7 @@ mkgithub ~/dev/xbug
 mkgithub ~/dev/xdg-menu-to-awesome-wm 
 mkgithub ~/dev/xFormsCal 
 mkgithub ~/dev/xkillthis 
+mkgithub ~/dev/xml 
 mkgithub ~/dev/xspf2csv 
 mkgithub ~/dev/xterm-color-count 
 mkgithub --help 
@@ -1857,6 +1858,7 @@ xrdb -load ~/.Xresources
 xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
+xsltproc --output file.xml ~/dev/xml/filter/filter.xslt file.xml # filter xml xslt replace 
 xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
