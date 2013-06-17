@@ -1857,7 +1857,7 @@ xrdb -load ~/.Xresources
 xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
-xsltproc file.xslt file.xml # transform xslt xml 
+xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace 
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
