@@ -617,6 +617,7 @@ info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples
 info --raw-escapes --subnodes sed | pager --raw-control-chars # help 
 insert_after_last '^[ \t]*[^# \t]' '# Comment 1' ~/.bashrc 
 iostat 
+ip addr show dev eth0 # ipv4 ipv6 device address 
 ip addr show # ipv4 ipv6 address 
 ipcalc 0.0.0.0/0 
 ipcalc 192.168.0.1/24 
