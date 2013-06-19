@@ -376,6 +376,7 @@ git cvsimport -p x -v -d :pserver:anonymous@projectname.cvs.sourceforge.net:/cvs
 git diff 
 git diff --color-words 
 git diff | diff-ignore-moved-lines 
+git diff 'HEAD@{2013.04.30 08:00}' # date 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
 git diff --ignore-all-space --no-color | git apply --cached 
