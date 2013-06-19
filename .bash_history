@@ -935,6 +935,7 @@ man ps # help
 man psql # help 
 man psql # help postgresql 
 man pstree # help 
+man pts # help 
 man puppet # help 
 man python # help 
 man qemu # help 
@@ -1356,6 +1357,7 @@ rbenv which rails # ruby gem binary path
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
 readelf --all $(which readelf) # executable binary 
 readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
+readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
 read < "/path" 
 read -r var 
 read <<< "$text" 
