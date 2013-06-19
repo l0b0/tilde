@@ -834,7 +834,9 @@ man hostname # help
 man hosts # help 
 man htop # help 
 man id # help 
+man ifdown # help 
 man iftop # help 
+man ifup # help 
 man imake # help 
 man imapfilter_config # help 
 man imapfilter # help 
@@ -1613,7 +1615,9 @@ sudo fdisk -l # list all disks
 sudo gem install slideshow 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
+sudo ifdown wlan0 # network interface disable 
 sudo iftop # bandwidth network interface monitor 
+sudo ifup wlan0 # network interface enable 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
 sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
