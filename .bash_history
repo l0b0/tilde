@@ -1616,6 +1616,8 @@ sudo hdparm -I /dev/sda # harddisk hardware properties
 sudo iftop # bandwidth network interface monitor 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
+sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
+sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete 
 sudo ip link set dev eth0 up # network enable device 
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
