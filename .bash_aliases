@@ -597,43 +597,6 @@ insert_after_last() {
     done
 }
 
-stdin_pid() {
-    # Prints the PID of the process sending data to standand input (if any)
-    #
-    # @param $1...$#: Process IDs
-
-    local out_fd parent_pid pids sibling_pid sibling_pids target_pid stdin
-
-    for target_pid
-    do
-        parent_pid="$(ps -p "$target_pid" o ppid=)"
-        sibling_pids="$(pgrep -P $parent_pid)"
-        stdin="$(readlink "/proc/${target_pid}/fd/0")"
-        if [[ ! $stdin =~ ^pipe: ]]
-        then
-            # Nothing is piping to this process
-            continue
-        fi
-
-        for sibling_pid in $sibling_pids
-        do
-            if [ "$sibling_pid" -eq "$target_pid" ] || [[ $'\n'${pids-}$'\n' = *$'\n'${sibling_pid}$'\n'* ]]
-            then
-                continue
-            fi
-            for out_fd in /proc/${sibling_pid}/fd/[1-9]*
-            do
-                if [ "$(readlink "${out_fd}")" = "$stdin" ]
-                then
-                    pids="${pids}${sibling_pid}"$'\n'
-                    continue 2 # Next sibling
-                fi
-            done
-        done
-    done
-    printf '%s' "$pids"
-}
-
 if [ -r "$HOME/.bash_aliases_local" ]
 then
     source "$HOME/.bash_aliases_local"
