@@ -1522,7 +1522,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install htop iftop iotop # monitor cpu memory storage network 
+sudo apt-get install htop iftop iotop powertop # monitor cpu memory storage network 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
@@ -1649,6 +1649,7 @@ sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::
 sudo pip install --upgrade pip # python 
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
+sudo powertop # power monitoring configuratino 
 sudo reboot # restart 
 sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
