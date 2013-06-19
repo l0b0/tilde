@@ -1297,6 +1297,7 @@ prove --recurse
 pry 
 ps afux | pager -S # processes list all tree tty 
 ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
+ps --pid $$ # current shell 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
 ps -p $$ o ppid= # parent pid 
 psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql network 
