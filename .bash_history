@@ -1619,6 +1619,8 @@ sudo iotop # i/o storage repeat
 sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
 sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete 
 sudo ip link set dev eth0 up # network enable device 
+sudo ip route add default via 1.2.3.4 dev eth0 
+sudo ip route del default via 1.2.3.4 dev eth0 
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
 sudo lpadmin -d printername # set default printer cups 
