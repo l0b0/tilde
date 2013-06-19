@@ -1260,6 +1260,7 @@ perl_module_version URI
 perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
+pgrep -P $$ # child processes pids 
 pgrep -u root cron 
 php --interactive 
 php --syntax-check index.php # verify 
@@ -1297,6 +1298,7 @@ pry
 ps afux | pager -S # processes list all tree tty 
 ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
+ps -p $$ o ppid= # parent pid 
 psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql network 
 psql --version # postgresql 
 ps -U root -u root fu | pager -S # processes list user tree 
