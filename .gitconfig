@@ -19,9 +19,12 @@
 	diffcontext = 3
 [core]
 	quotepath = false
+	attributesfile = ~/.gitattributes
 [github]
 	user = l0b0
 [mergetool]
 	prompt = false
 [push]
 	default = simple
+[diff "odf"]
+	textconv = odt2txt

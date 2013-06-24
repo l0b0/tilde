@@ -1497,7 +1497,7 @@ sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-do
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install clamav clamtk # antivirus 
 sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld qgit subversion tig # vcs 
+sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld odt2txt qgit subversion tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
 sudo apt-get install csvtool 
