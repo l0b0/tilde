@@ -454,6 +454,7 @@ git pull
 git pull origin master 
 git push 
 git push --force 
+git push origin :dead-branch # delete remote branch 
 git push origin :refs/tags/name # delete remote 
 git push --set-upstream origin master 
 git push --tags 
