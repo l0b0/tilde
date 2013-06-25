@@ -886,6 +886,7 @@ man markdown # help
 man md5sum # help 
 man mencoder # help 
 man mkdir # help 
+man mkfifo # help 
 man mktemp # help 
 man mount # help 
 man mp3fs # help 
@@ -1096,6 +1097,7 @@ minecraft &
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 mkdir mp3 
 mkdir test 
+mkfifo pipe1 pipe2 
 mkgithub --configure --https --verbose --user l0b0 
 mkgithub --configure --ssh --verbose --user l0b0 
 mkgithub ~/dev/algorithms 
