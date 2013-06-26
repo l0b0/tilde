@@ -785,7 +785,6 @@ man etherape # help
 man exiv2 # help 
 man expand # help 
 man expect # help 
-man expr # help 
 man extundelete # help 
 man fakeroot # help 
 man fdisk # help 
