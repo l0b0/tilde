@@ -385,7 +385,7 @@ git diff master origin/master
 git diff origin/master..HEAD # remote 
 git diff --raw 
 git diff --staged 
-[ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ] # verify sort 
+[[ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ]] # verify sort 
 git diff --staged --ignore-space-at-eol 
 git diff --staged --stat 
 git difftool old new # gui 
@@ -600,7 +600,7 @@ id --group
 id # group user 
 id --user 
 id "$USER" 
-if [ -r /proc/sys/kernel/ns_last_pid ]; then while true; do while read; do if [ "$REPLY" != "$old" ]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
+if [[ -r /proc/sys/kernel/ns_last_pid ]]; then while true; do while read; do if [[ "$REPLY" != "$old" ]]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 imapfilter 
 indent *.c 
@@ -1664,7 +1664,7 @@ sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-fre
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
 sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
 sudo sh -c 'apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb && find /usr/share/hunspell \( \( -name "en_*.aff" -o -name "en_*.dic" \) -not -name "en_GB*" \) -o \( -type l \( -name "*.aff" -o -name "*.dic" \) \) -exec mv --verbose {} {}.bak \;' # language dictionary english l10n german french norwegian 
-sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
+sudo sh -c 'apt-get update && apt-get upgrade --yes && if [[ -f /var/run/reboot-required ]]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $(printf %q "$USER"):$(printf %q "$(groups | awk '{print $1}')") /var/lib/rrdcached/db /var/lib/rrdcached/journal && apt-get install rrdcached" # fix ubuntu rrdcached install bug 985341 

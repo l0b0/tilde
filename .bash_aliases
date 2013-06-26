@@ -1,7 +1,7 @@
 # enable color support
-if [ -x /usr/bin/dircolors ]
+if [[ -x /usr/bin/dircolors ]]
 then
-    if [ -r "$HOME/.dircolors" ]
+    if [[ -r "$HOME/.dircolors" ]]
     then
         eval "$(dircolors -b "$HOME/.dircolors")"
     else
@@ -62,7 +62,7 @@ substring() {
 }
 
 path_common() {
-    if [ $# -ne 2 ]
+    if [[ $# -ne 2 ]]
     then
         return 2
     fi
@@ -82,7 +82,7 @@ path_common() {
     do
         while case "${param%/}/" in "${common_path%/}/"*) false;; esac; do
             new_common_path="${common_path%/*}"
-            if [ "$new_common_path" = "$common_path" ]
+            if [[ "$new_common_path" = "$common_path" ]]
             then
                 return 1 # Dead end
             fi
@@ -110,7 +110,7 @@ perl_module_version() {
     for module
     do
         version="$(perl -M${module} -e "print \$${module}::VERSION")"
-        if [ -n "$version" ]
+        if [[ -n "$version" ]]
         then
             echo "$module $version"
         else
@@ -152,7 +152,7 @@ longest() {
 
 longer() {
     # Print any lines in $2... which are more characters than $1.
-    if [ $# -lt 2 ]
+    if [[ $# -lt 2 ]]
     then
         echo 'Synopsis: longer NUMBER FILE...' >&2
         return 2
@@ -164,9 +164,9 @@ longer() {
     for path
     do
         line_number=1
-        while IFS= read -r -d $'\n' || [ -n "$REPLY" ]
+        while IFS= read -r -d $'\n' || [[ -n "$REPLY" ]]
         do
-            if [ ${#REPLY} -gt $length ]
+            if [[ ${#REPLY} -gt $length ]]
             then
                 printf %q "$path" : $line_number :... "${REPLY:${length}}"
                 printf '\n'
@@ -213,12 +213,12 @@ locale_value() {
         varname="$1"
     fi
 
-    if [ -n "${LC_ALL+defined}" ]
+    if [[ -n "${LC_ALL+defined}" ]]
     then
         varname=LC_ALL
     fi
 
-    if [ -n "${LANGUAGE+defined}" -a "${LANG-}" != C ]
+    if [[ -n "${LANGUAGE+defined}" ]] && [[ "${LANG-}" != C ]]
     then
         varname=LANGUAGE
     fi
@@ -241,7 +241,7 @@ trs() {
     local string="$1"
     shift
 
-    while [ $# -gt 0 ]
+    while [[ $# -gt 0 ]]
     do
         string="$(sed -e "s/$1/$2/g" <<< "$string")"
         shift 2
@@ -291,21 +291,21 @@ collapse() {
     local first=1
     while read -r name value
     do
-        [ "$name" != "${old_name-}" -a "${first+defined}" != defined ] && printf "${IFS: -1}"
-        [ "$name" != "${old_name-}" ] && printf %s "$name"
-        [ -n "$value" ] && printf %s "${IFS:0:1}"
+        [[ "$name" != "${old_name-}" ]] && [[ "${first+defined}" != defined ]] && printf "${IFS: -1}"
+        [[ "$name" != "${old_name-}" ]] && printf %s "$name"
+        [[ -n "$value" ]] && printf %s "${IFS:0:1}"
         printf %s "$value"
         old_name="$name"
         unset first
     done
     if [[ "$name" ]]
     then
-        [ "$name" != "${old_name-}" -a "${first+defined}" != defined ] && printf "${IFS: -1}"
-        [ "$name" != "${old_name-}" ] && printf %s "$name"
-        [ -n "$value" ] && printf %s "${IFS:0:1}"
+        [[ "$name" != "${old_name-}" ]] && [[ "${first+defined}" != defined ]] && printf "${IFS: -1}"
+        [[ "$name" != "${old_name-}" ]] && printf %s "$name"
+        [[ -n "$value" ]] && printf %s "${IFS:0:1}"
         printf %s "$value"
     else
-        [ "${first+defined}" != defined ] && printf "${IFS: -1}"
+        [[ "${first+defined}" != defined ]] && printf "${IFS: -1}"
     fi
 }
 
@@ -384,7 +384,7 @@ completions() {
     #
     #   List all available commands:
     #     completions
-    if [ $# -eq 0 ]
+    if [[ $# -eq 0 ]]
     then
         set -- ''
     fi
@@ -421,7 +421,7 @@ watch_url() {
     # @param $2: Optional replacements in sed style, e.g.
     #            /foo/d;s/123/456/g;...
     # @param $3: Interval between checks; by default 1 hour
-    if [ $# -eq 0 -o $# -gt 3 ]
+    if [[ $# -eq 0 ]] || [[ $# -gt 3 ]]
     then
         echo 'Synopsis: watch_url URL [REPLACEMENTS] [INTERVAL]' >&2
         return 2
@@ -486,7 +486,7 @@ head_tail() {
     for param
     do
         shift
-        if [ $index -ne 1 ]
+        if [[ $index -ne 1 ]]
         then
             set -- "$@" "$param"
         fi
@@ -512,7 +512,7 @@ log_time_diff() {
     do
         read -r month day time rest <<< "$line"
         ts="$(date --date="$month $day $time" +%s)"
-        if [ "${prev:+set}" = 'set' ]
+        if [[ "${prev:+set}" = 'set' ]]
         then
             diff="$((ts - prev))"
         else
@@ -564,7 +564,7 @@ insert_after_last() {
     #
     # insert_after_last '^[ \t]*[^# \t]' '# My comment' /path
 
-    if [ $# -lt 3 ]
+    if [[ $# -lt 3 ]]
     then
         echo "Synopsis: ${FUNCNAME} pattern text file..." >&2
         return 2
@@ -576,7 +576,7 @@ insert_after_last() {
 
     for path
     do
-        if [ ! -e "$path" ]
+        if [[ ! -e "$path" ]]
         then
             echo "${FUNCNAME}: $path: No such file" >&2
             return 1
@@ -597,7 +597,7 @@ insert_after_last() {
     done
 }
 
-if [ -r "$HOME/.bash_aliases_local" ]
+if [[ -r "$HOME/.bash_aliases_local" ]]
 then
     source "$HOME/.bash_aliases_local"
 fi
