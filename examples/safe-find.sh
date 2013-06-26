@@ -87,7 +87,7 @@ do
         printf %q "$file_name"
         printf '\n'
     fi
-done 9< <( find "$test_dir_path" -type f -exec printf '%s\0' {} \; )
+done 9< <( find "$test_dir_path" -type f -exec printf '%s\0' {} + )
 
 rm -- "$test_file_path"
 rmdir -- "$test_dir_path"

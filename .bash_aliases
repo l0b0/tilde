@@ -278,7 +278,7 @@ zsed() {
         while IFS= read -r -d '' -u 9
         do
             sed -i -e "$replacement" "$REPLY"
-        done 9< <( find . -type f -exec printf '%s\0' {} \; )
+        done 9< <( find . -type f -exec printf '%s\0' {} + )
         tar -czf "$full_path" .
         cd - >/dev/null
     done
