@@ -29,7 +29,7 @@ import_mod IPython.Extensions.PhysicalQInput
 import_all math IPython.Extensions.PhysicalQInteractive
 
 # from ... import ...
-import_some  
+import_some
 
 # code
 execute q = PhysicalQuantityInteractive
@@ -42,4 +42,4 @@ execute import ipy_constants as C
 execute print '*** C is the physical constants module'
 
 # Files to execute
-execfile 
+execfile

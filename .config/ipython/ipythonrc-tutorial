@@ -28,7 +28,7 @@ import_mod IPython.Extensions.InterpreterPasteInput
 import_all
 
 # from ... import ...
-import_some  
+import_some
 
 # code
 execute

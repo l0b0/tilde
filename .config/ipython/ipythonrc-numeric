@@ -49,7 +49,7 @@ execute xaxis=gpfunc('0',title='',with='lines lt -1')
 # For more details go to: http://www.idyll.org/~n8gray/code/index.html
 # Uncomment lines below if you have grace and its python support code
 
-#import_mod gracePlot 
+#import_mod gracePlot
 #execute grace = gracePlot.gracePlot  # alias to make gracePlot instances
 #execute print '*** grace is an alias for gracePlot.gracePlot'
 
