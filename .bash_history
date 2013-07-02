@@ -894,6 +894,7 @@ man mv # help
 man nautilus # help 
 man ncal # help 
 man nc # help 
+man nethogs # help 
 man netstat # help 
 man nfs # help 
 man nice # help 
@@ -1526,7 +1527,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install htop iftop iotop powertop # monitor cpu memory storage network 
+sudo apt-get install htop iftop iotop nethogs powertop # monitor cpu memory storage network 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
@@ -1645,6 +1646,7 @@ sudo mount --all
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpdir -- ramdisk.XXXXXXXXXX)" # create ramdisk partition 
+sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo paperconfig --paper a4 # set print size 
