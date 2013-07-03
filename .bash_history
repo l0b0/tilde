@@ -48,7 +48,7 @@ bc --mathlib <<< 'e(1)' # calculator math e power
 bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
-bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed --expression "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
+bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
 builtin # bash 
 bundle help # rails 
@@ -393,7 +393,7 @@ git diff --word-diff
 git fetch 
 git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
-git grep -I --name-only --null -e '' | xargs --null sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
+git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui & 
 git help add 
 git help bisect 
@@ -1405,11 +1405,11 @@ screen -dRR # resume
 screen -list 
 screen -S compile-project 
 script --quiet --command "$SHELL" 
-sed --expression '9d' file # delete line one-indexed 
-sed --expression '/^$/d' file # delete empty lines 
-sed --expression '/pattern/r./input.txt' test.txt # insert merge file pattern 
-sed --expression '/^[[:space:]]*$/d' file # delete whitespace line 
-sed --quiet --expression '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
+sed '9d' file # delete line one-indexed 
+sed '/^$/d' file # delete empty lines 
+sed '/pattern/r./input.txt' test.txt # insert merge file pattern 
+sed --quiet '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
+sed '/^[[:space:]]*$/d' file # delete whitespace line 
 service snmpd status 
 set -o noclobber # file error 
 set +o noclobber # file error 
@@ -1658,8 +1658,8 @@ sudo pip install --upgrade vcard # validator
 sudo pip uninstall vcard # validator 
 sudo powertop # power monitoring configuratino 
 sudo reboot # restart 
-sudo sed --in-place --expression 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
-sudo sed --in-place --expression 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
+sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
+sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo service cups restart 
 sudo service postgresql reload 
 sudo service postgresql status 
@@ -1702,7 +1702,7 @@ sudo -u postgres psql --single-transaction --file backup.sql # restore postgresq
 sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
-sudo usermod --groups "$(id --name --groups | sed --expression 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
+sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
 sudo vipw # edit password users 
 sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
@@ -1750,7 +1750,7 @@ svn help propset | pager
 svn help revert | pager 
 svn help status | pager 
 svn info 
-svn info | sed --quiet --expression 's/^Revision: //p' # revision 
+svn info | sed --quiet 's/^Revision: //p' # revision 
 svn list http://svn/repo 
 svn log | pager 
 svn log --revision 1 
@@ -1851,7 +1851,7 @@ wget --output-document - http://user:password@host/function?id=foo 2>service.log
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place --expression 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
+while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} + | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
