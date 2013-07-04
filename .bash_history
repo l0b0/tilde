@@ -99,6 +99,7 @@ convert -density 150 -quality 100 input.pdf output.jpg
 convert ./*.jpg output.pdf # graphics 
 convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
+cp --archive dir target # recursive owner permissions 
 cp file{,.orig} # filesystem 
 cppcheck foo.c 
 createdb --template template0 --username username dbname # postgresql 
