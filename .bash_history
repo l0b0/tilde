@@ -152,6 +152,7 @@ deluge &
 ~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
 ~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
+~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
