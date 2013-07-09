@@ -157,7 +157,7 @@ deluge &
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh ~/contacts/*.vcf 
-~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf 
+~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
 ~/dev/vcard/split.sh *.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
