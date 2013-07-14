@@ -1190,6 +1190,7 @@ mkgithub ~/dev/worktime
 mkgithub ~/dev/xbug 
 mkgithub ~/dev/xdg-menu-to-awesome-wm 
 mkgithub ~/dev/xFormsCal 
+mkgithub ~/dev/xkcd1110 
 mkgithub ~/dev/xkillthis 
 mkgithub ~/dev/xml 
 mkgithub ~/dev/xspf2csv 
