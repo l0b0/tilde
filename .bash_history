@@ -421,6 +421,7 @@ git help ignore
 git help init 
 git help instaweb 
 git help log 
+git help ls-tree 
 git help merge 
 git help mergetool 
 git help mv 
@@ -449,6 +450,7 @@ git log --oneline --decorate
 git log origin/master..HEAD # remote 
 git log --patch-with-stat 
 git log --stat 
+git ls-tree --long HEAD ./* | awk '{print $4 " " $5}' # file size commit 
 git merge origin/master 
 git mergetool & 
 git merge topic # local branch 
