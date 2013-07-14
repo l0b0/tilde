@@ -920,6 +920,7 @@ man paste # help
 man patch # help 
 man pbuilder # help 
 man pdebuild # help 
+man pdfinfo # help 
 man pdftk # help 
 man pep8 # help 
 man perldoc # help 
@@ -1259,6 +1260,7 @@ patch --strip 0 < patch.diff
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 pavucontrol & # pulseaudio volume 
+pdfinfo file.pdf 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 pep8 setup.py 
