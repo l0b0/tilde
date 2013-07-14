@@ -158,7 +158,7 @@ deluge &
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh ~/contacts/*.vcf 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
-~/dev/vcard/split.sh *.vcf 
+~/dev/vcard/split.sh ~/contacts/*.vcf 
 ~/dev/xterm-color-count/xterm-color-count.sh 
 ~/dev/xterm-color-count/xterm-color-count.sh -v 
 df --human-readable . # filesystem 
@@ -531,7 +531,7 @@ gnome-tweak-tool &
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
-gpg --verify *.sig # pgp signature 
+gpg --verify ./*.sig # pgp signature 
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
 grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
@@ -606,7 +606,7 @@ id "$USER"
 if [[ -r /proc/sys/kernel/ns_last_pid ]]; then while true; do while read; do if [[ "$REPLY" != "$old" ]]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 imapfilter 
-indent *.c 
+indent ./*.c 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
@@ -1840,7 +1840,7 @@ virtualbox &
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
-vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --verbose 2 --advanced *.avi 
+vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --verbose 2 --advanced ./*.avi 
 vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vmware 
