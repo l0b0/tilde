@@ -1157,6 +1157,7 @@ mkgithub ~/dev/OpenSCAD-Minimizer
 mkgithub ~/dev/paperless 
 mkgithub ~/dev/paperless.wiki 
 mkgithub ~/dev/parametric-box 
+mkgithub ~/dev/peel 
 mkgithub ~/dev/progit 
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/pspipe 
