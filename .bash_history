@@ -676,6 +676,7 @@ ls --directory /proc/[^0-9]* # metadata
 lshw 
 ls -l --all # list 
 ls -l --block-size 1 # list files size bytes 
+ls -l --directory ./*/ # list directories 
 ls -l --reverse # list 
 ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
