@@ -314,9 +314,6 @@ globalkeys = awful.util.table.join(
             awful.util.spawn("gnome-screensaver-command --lock")
         end),
 
-    -- Stream video in external player
-    awful.key({ modkey },            "v",     function () awful.util.spawn_with_shell('vlc $(xclip -out)') end),
-
     -- Screenshot
     awful.key({                   }, "Print", function () awful.util.spawn("gnome-screenshot") end)
 )
@@ -327,7 +324,6 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
-    awful.key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
         function (c)
