@@ -916,6 +916,7 @@ man ntpq # help
 man objdump # help 
 man od # help 
 man openssl # help 
+man pacman # help 
 man pager # help 
 man paperconfig # help 
 man passwd # help 
@@ -1244,6 +1245,7 @@ openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa k
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
+pacman --sync --search bash # search packages 
 pager /etc/issue 
 pager /etc/passwd # password 
 pager Makefile 
@@ -1663,6 +1665,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
+sudo pacman --sync awesome firefox git gnome-icon-theme gnome-keyring jedit keepassx scrot thunar tk vim xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xterm # desktop 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
