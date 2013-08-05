@@ -23,10 +23,6 @@ function isModuleAvailable(name)
     end
 end
 
--- Menu entries
-if isModuleAvailable('menu') then
-    local menu = require('menu')
-end
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -132,7 +128,6 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "GNOME", myappmenu, beautiful.awesome_icon },
                                     { "open terminal", terminal }
                                   }
                         })
