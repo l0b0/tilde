@@ -1,11 +1,11 @@
 -- Standard awesome library
-require("awful")
+local awful = require("awful")
+awful.rules = require("awful.rules")
 require("awful.autofocus")
-require("awful.rules")
 -- Theme handling library
-require("beautiful")
+local beautiful = require("beautiful")
 -- Notification library
-require("naughty")
+local naughty = require("naughty")
 
 -- Optional libraries
 function isModuleAvailable(name)
@@ -25,7 +25,7 @@ end
 
 -- Menu entries
 if isModuleAvailable('menu') then
-    require('menu')
+    local menu = require('menu')
 end
 
 -- {{{ Error handling
@@ -70,7 +70,7 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
-layouts =
+local layouts =
 {
     awful.layout.suit.floating,
     awful.layout.suit.tile,
