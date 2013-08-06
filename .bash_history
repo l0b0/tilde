@@ -1670,7 +1670,9 @@ sudo nethogs wlan0 # network monitor
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo pacman --sync awesome firefox git gnome-icon-theme gnome-keyring jedit keepassx pidgin scrot thunar tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xscreensaver xterm # desktop 
+sudo pacman --sync deluge pygtk # torrent gui 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
+sudo pacman --sync wine winetricks # windows 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
