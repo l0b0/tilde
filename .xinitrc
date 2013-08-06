@@ -6,6 +6,7 @@ if [ -f "$user_resources" ]
 then
     xrdb -merge "$user_resources"
 fi
+unset user_resources
 
 # Machine specific settings
 local_xinitrc=$HOME/.xinitrc_local
@@ -13,5 +14,6 @@ if [ -f "$local_xinitrc" ]
 then
     . "$local_xinitrc"
 fi
+unset local_xinitrc
 
 exec awesome
