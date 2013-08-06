@@ -16,4 +16,6 @@ then
 fi
 unset local_xinitrc
 
+xscreensaver -no-splash &
+
 exec awesome
