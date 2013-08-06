@@ -194,10 +194,9 @@ du --si --summarize . # disk size
 echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
 echo "body" > ~/.events/summary # notify 
-echo $COLUMNS # terminal 
+echo "${COLUMNS}x${LINES}" # terminal size dimensions 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee --append /etc/environment # print 
-echo $LINES # terminal 
 echo "$OSTYPE" 
 echo "${paths[0]}" # array 
 echo "${paths[@]: -1}" # array 
@@ -917,6 +916,7 @@ man ntpq # help
 man objdump # help 
 man od # help 
 man openssl # help 
+man pacman # help 
 man pager # help 
 man paperconfig # help 
 man passwd # help 
@@ -1081,6 +1081,7 @@ man Xorg # help
 man xrandr # help 
 man xrdb # help 
 man xscreensaver-command # help 
+man xscreensaver-demo # help 
 man xsltproc # help 
 man xwininfo # help 
 man xxd # help 
@@ -1248,6 +1249,7 @@ openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa k
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
+pacman --sync --search bash # search packages 
 pager /etc/issue 
 pager /etc/passwd # password 
 pager Makefile 
@@ -1667,6 +1669,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
+sudo pacman --sync awesome firefox git gnome-icon-theme gnome-keyring jedit keepassx pidgin scrot thunar tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xscreensaver xterm # desktop 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
@@ -1899,6 +1902,7 @@ xrdb -load ~/.Xresources
 xrdb -query # list 
 xscreensaver-command -lock 
 xscreensaver-command -version 
+xscreensaver-demo & # settings configuration 
 xsltproc --output file.xml ~/dev/xml/filter/filter.xslt file.xml # filter xml xslt replace 
 xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace 
 xterm -version 
