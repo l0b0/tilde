@@ -18,6 +18,11 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
+if ! which editor &> /dev/null
+then
+    alias editor=$EDITOR
+fi
+
 if which xdg-open &> /dev/null
 then
     alias open=xdg-open
