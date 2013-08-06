@@ -980,6 +980,7 @@ man runlevel # help
 man scp # help 
 man screen # help 
 man script # help 
+man scrot # help 
 man seq # help 
 man service # help 
 man setkeycodes # help 

@@ -330,7 +330,8 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Screenshot
-    awful.key({                   }, "Print", function () awful.util.spawn("gnome-screenshot") end)
+    awful.key({                   }, "Print", function () awful.util.spawn("scrot") end),
+    awful.key({ modkey,           }, "Print", function () awful.util.spawn_with_shell("sleep 1 && scrot --select") end)
 )
 
 clientkeys = awful.util.table.join(
