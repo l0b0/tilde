@@ -14,6 +14,7 @@ DOTFILES = $(wildcard .*rc) \
            .signatures \
            .subversion \
            .vim \
+           .xinitrc \
            .Xresources
 
 .PHONY: all
