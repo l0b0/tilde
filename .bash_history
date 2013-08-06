@@ -914,6 +914,7 @@ man node # help
 man notify-send # help 
 man nslookup # help 
 man ntpdate # help 
+man ntpd # help 
 man ntpq # help 
 man objdump # help 
 man od # help 
@@ -1027,6 +1028,7 @@ man tail # help
 man tar # help 
 man tee # help 
 man tig # help 
+man timedatectl # help 
 man time # help 
 man timeout # help 
 man tkmib # help 
@@ -1673,7 +1675,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync awesome firefox git gnome-icon-theme gnome-keyring jedit keepassx meld pidgin scrot thunar tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xscreensaver xterm # desktop 
+sudo pacman --sync awesome firefox git gnome-icon-theme gnome-keyring jedit keepassx meld ntp pidgin scrot thunar tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xscreensaver xterm # desktop 
 sudo pacman --sync deluge pygtk # torrent gui 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --sync wine winetricks # windows 
@@ -1810,6 +1812,7 @@ telnet localhost 1234 # network
 ./test.sh "first argument" "second argument" 
 tig 
 time bash -lc true # benchmark startup login shell 
+timedatectl status 
 time make test 
 timeout 1 sleep 2 
 tkmib & 
