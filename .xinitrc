@@ -31,4 +31,9 @@ unset local_xinitrc
 
 xscreensaver -no-splash &
 
+# GNOME Keyring Daemon
+source /etc/X11/xinit/xinitrc.d/30-dbus
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+
 exec awesome
