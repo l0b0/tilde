@@ -124,6 +124,10 @@ esac
 unset chroot
 
 # Git branch
+if ! type -t __git_ps1 &> /dev/null && [ -e /usr/share/git/completion/git-prompt.sh ]
+then
+    source /usr/share/git/completion/git-prompt.sh
+fi
 if type -t __git_ps1 &>/dev/null
 then
     PS1="$PS1"'$(__git_ps1 " (%s)")'
