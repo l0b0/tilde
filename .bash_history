@@ -1897,6 +1897,7 @@ xinput --list-props 10
 xkill 
 xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pp >~/xmodmap 
+xprop | grep --color=none "WM_CLASS\|^WM_NAME" 
 xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources 
 xrdb -query # list 
