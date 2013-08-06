@@ -1164,14 +1164,17 @@ mkgithub ~/dev/nestable-tube-table
 mkgithub ~/dev/offlickr 
 mkgithub ~/dev/OpenDUNE 
 mkgithub ~/dev/OpenSCAD-Minimizer 
+mkgithub ~/dev/oshw-logo 
 mkgithub ~/dev/paperless 
 mkgithub ~/dev/paperless.wiki 
 mkgithub ~/dev/parametric-box 
 mkgithub ~/dev/peel 
+mkgithub ~/dev/Platonic-solids 
 mkgithub ~/dev/progit 
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/pspipe 
 mkgithub ~/dev/qr2scad 
+mkgithub ~/dev/random 
 mkgithub ~/dev/RAYT 
 mkgithub ~/dev/ruler 
 mkgithub ~/dev/schemaspy2svg 
