@@ -1004,6 +1004,7 @@ man snmptranslate # help
 man snmpwalk # help 
 man software-properties-gtk # help 
 man sort # help 
+man speaker-test # help 
 man splint # help 
 man ssh-agent # help 
 man ssh_config # help 
@@ -1481,6 +1482,7 @@ sort --unique --output result.txt source.txt
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
+speaker-test --channels 2 
 splint foo.c 
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
