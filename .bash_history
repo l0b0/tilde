@@ -25,7 +25,7 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arandr & # screen layout graphics hardware 
 arch # hardware 
-arecord --list-pcms # list audio input microphone 
+arecord --list-devices # list audio input capture microphones 
 ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
 aticonfig --initial=check 
 autoconf # compile 
@@ -732,6 +732,7 @@ man apt-listchanges # help
 man apt-rdepends # help 
 man arandr # help 
 man arch # help 
+man arecord # help 
 man ascii # help 
 man ash # help 
 man asn1parse # help 
