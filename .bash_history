@@ -25,6 +25,7 @@ apt-key --help
 apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arandr & # screen layout graphics hardware 
 arch # hardware 
+arecord --list-pcms # list audio input microphone 
 ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
 aticonfig --initial=check 
 autoconf # compile 
