@@ -26,6 +26,7 @@ apt-rdepends --dotty apt-rdepends | dot -Tsvg | display
 arandr & # screen layout graphics hardware 
 arch # hardware 
 arecord --duration 5 --format dat recording.wav # record audio file 
+arecord --format dat | aplay # test audio input capture output playback default microphone speakers 
 arecord --list-devices # list audio input capture microphones 
 ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
 aticonfig --initial=check 
