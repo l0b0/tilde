@@ -4,7 +4,7 @@ add-apt-repository --help
 alias ls 
 align_image_stack -vl -a aligned *.jpg 
 alsamixer 
-aplay --list-pcms # audio 
+aplay --list-pcms # list audio output speaker 
 apport-bug package # report 
 apport-bug --window & # report 
 apport-collect 123456 # bug hardware software 
