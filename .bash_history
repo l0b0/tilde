@@ -1682,7 +1682,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync alsa-plugins awesome ekiga file-roller firefox git gnome-icon-theme gnome-keyring hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld ntp pidgin scrot thunar thunar-archive-plugin tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xscreensaver xterm # desktop 
+sudo pacman --sync alsa-plugins awesome ekiga evince file-roller firefox git gnome-icon-theme gnome-keyring hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld ntp pidgin scrot thunar thunar-archive-plugin tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync deluge pygtk # torrent gui 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --sync wine winetricks # windows 
