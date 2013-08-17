@@ -1693,7 +1693,7 @@ sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master
 sudo pip install --upgrade pip # python 
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
-sudo powertop # power monitoring configuratino 
+sudo powertop # power monitoring configuration 
 sudo reboot # restart 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
