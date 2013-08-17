@@ -1177,6 +1177,7 @@ mkgithub ~/dev/oshw-logo
 mkgithub ~/dev/paperless 
 mkgithub ~/dev/paperless.wiki 
 mkgithub ~/dev/parametric-box 
+mkgithub ~/dev/paths2openscad 
 mkgithub ~/dev/peel 
 mkgithub ~/dev/Platonic-solids 
 mkgithub ~/dev/progit 
