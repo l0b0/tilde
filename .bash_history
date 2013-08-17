@@ -1470,6 +1470,7 @@ shopt -s globstar && wc --lines ./**/**.ext # count recursive lines
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 shortest < ~/.bash_history 
+shred --remove filename # overwrite delete file 
 shuf --input-range 0-1 --head-count 1 # random number range 
 sipcalc 0.0.0.0/0 
 sipcalc 192.168.0.1/24 
