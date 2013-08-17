@@ -638,6 +638,7 @@ ip route show
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
+java -classpath ~/dev/hello-world/out/production/hello-world/ hello 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
@@ -1147,6 +1148,7 @@ mkgithub ~/dev/filterous
 mkgithub ~/dev/git 
 mkgithub ~/dev/git-bisect-example 
 mkgithub ~/dev/graphics 
+mkgithub ~/dev/hello-world 
 mkgithub ~/dev/highlight 
 mkgithub ~/dev/https-everywhere 
 mkgithub ~/dev/Hypervolume 
@@ -1704,7 +1706,7 @@ sudo service postgresql reload
 sudo service postgresql status 
 sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
 sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
-sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get install oracle-java7-installer oracle-java7-set-default&& update-java-alternatives -s java-7-oracle' # oracle java sdk jdk 
+sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer oracle-java7-set-default intellij-idea-ce && update-java-alternatives -s java-7-oracle' # oracle java sdk jdk intellij ide 
 sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
 sudo sh -c 'apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb && find /usr/share/hunspell \( \( -name "en_*.aff" -o -name "en_*.dic" \) -not -name "en_GB*" \) -o \( -type l \( -name "*.aff" -o -name "*.dic" \) \) -exec mv --verbose {} {}.bak \;' # language dictionary english l10n german french norwegian 
 sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
