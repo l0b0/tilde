@@ -18,6 +18,18 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
+idea() {
+    export JAVA_HOME=/usr/lib/jvm/java-7-oracle
+    export JDK_HOME=/usr/lib/jvm/java-7-oracle
+
+    export IDEA_HOME=/opt/intellij-idea-ce
+    export IDEA_VM_OPTIONS="$IDEA_HOME/bin/idea.vmoptions"
+    export IDEA_PROPERTIES="$IDEA_HOME/bin/idea.properties"
+
+    cd "$IDEA_HOME/bin"
+    ./idea.sh
+}
+
 if ! which editor &> /dev/null
 then
     alias editor=$EDITOR
