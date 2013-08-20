@@ -1915,9 +1915,9 @@ xclip -out # mouse clipboard print stdout
 xclip -selection clipboard filename.txt # keyboard clipboard copy 
 xclip -selection clipboard -out # keyboard clipboard print stdout 
 xev 
-xinput --list 
 xinput --list 10 
 xinput --list-props 10 
+xinput # all keyboard device list 
 xkill 
 xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pp >~/xmodmap 
