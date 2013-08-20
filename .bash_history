@@ -400,6 +400,7 @@ git diff --word-diff
 git fetch 
 git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
+git gc # garbage collect 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui & 
 git help add 
