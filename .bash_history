@@ -1331,7 +1331,7 @@ printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard test 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test keyboard 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection primary # test mouse 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip # test clipboard mouse copy 
 printf %s "${IFS:0:1}" 
 printf "${USER}%.0s" {1..5} # repeat string 
 prove 
@@ -1910,9 +1910,9 @@ who # logins users
 wine --version 
 wnpp-alert # Debian packaging 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
-xclip -in filename.txt # mouse clipboard save 
 xclip -out -selection clipboard # keyboard print stdout 
-xclip -out -selection primary # mouse clipboard print stdout 
+xclip filename.txt # mouse clipboard copy 
+xclip -out # mouse clipboard print stdout 
 xev 
 xinput --list 
 xinput --list 10 
