@@ -1912,6 +1912,7 @@ wnpp-alert # Debian packaging
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
 xclip filename.txt # mouse clipboard copy 
 xclip -out # mouse clipboard print stdout 
+xclip -selection clipboard filename.txt # keyboard clipboard copy 
 xclip -selection clipboard -out # keyboard clipboard print stdout 
 xev 
 xinput --list 
