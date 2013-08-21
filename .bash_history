@@ -355,6 +355,7 @@ git branch --delete topic # local
 git branch --remotes 
 git branch --set-upstream master origin/master # track 
 git branch --track topic master 
+git checkout -b topic remotes/origin/topic # branch change create 
 git checkout -b topic-svn remotes/topic # branch change create subversion 
 git checkout master # branch change 
 git checkout . # revert 
