@@ -400,6 +400,7 @@ git diff --word-diff
 git fetch 
 git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
+git gc # garbage collect 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
 git gui & 
 git help add 
@@ -1328,9 +1329,9 @@ printf %q "$IFS" # escape bash
 printf %q "$PS1" # escape bash 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard test 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test keyboard 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection primary # test mouse 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard copy test 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test clipboard keyboard copy 
+printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip # test clipboard mouse copy 
 printf %s "${IFS:0:1}" 
 printf "${USER}%.0s" {1..5} # repeat string 
 prove 
@@ -1455,6 +1456,7 @@ set +o pipefail # error
 set +o xtrace # disable 
 set -o xtrace # enable 
 ./setup.py test 
+setxkbmap -device 11 -layout us # keyboard device config 
 setxkbmap -layout us -variant dvorak-alt-intl # keyboard layout config 
 setxkbmap -option compose:caps # keyboard 
 setxkbmap -print # keyboard settings 
@@ -1909,13 +1911,14 @@ who # logins users
 wine --version 
 wnpp-alert # Debian packaging 
 worktime --end=$(date --date=Thursday +%Y-%m-%d) > ~/week.xhtml && x-www-browser ~/week.xhtml 
-xclip -in filename.txt # mouse clipboard save 
-xclip -out -selection clipboard # keyboard print stdout 
-xclip -out -selection primary # mouse clipboard print stdout 
+xclip filename.txt # mouse clipboard copy 
+xclip -out # mouse clipboard print stdout 
+xclip -selection clipboard filename.txt # keyboard clipboard copy 
+xclip -selection clipboard -out # keyboard clipboard print stdout 
 xev 
-xinput --list 
-xinput --list 10 
-xinput --list-props 10 
+xinput # all keyboard device list 
+xinput --list 10 # keyboard device info 
+xinput --list-props 10 # keyboard device properties 
 xkill 
 xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pp >~/xmodmap 
