@@ -355,9 +355,9 @@ git branch --delete topic # local
 git branch --remotes 
 git branch --set-upstream master origin/master # track 
 git branch --track topic master 
-git checkout . 
-git checkout -b topic-svn remotes/topic # branch 
-git checkout master 
+git checkout -b topic-svn remotes/topic # branch change create subversion 
+git checkout master # branch change 
+git checkout . # revert 
 git cherry-pick HEAD@{5} 
 git cherry-pick master:HEAD 
 git clean --dry-run -d # directories 
