@@ -159,9 +159,6 @@ export GIT_EDITOR='vim'
 export VISUAL='vim'
 export EDITOR='vim'
 
-# Java
-export JAVA_HOME='/usr/'
-
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
