@@ -184,6 +184,7 @@ digikam & # photo manager
 dirname -- "$PWD" # parent directory 
 disown # job 
 dmesg | pager # debug os startup 
+dos2unix test.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
@@ -784,6 +785,7 @@ man dig # help
 man digikam # help 
 man dirname # help 
 man dmidecode # help 
+man dos2unix # help 
 man dot # help 
 man dotty # help 
 man download-mibs # help 
