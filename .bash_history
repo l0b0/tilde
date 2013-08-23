@@ -1057,6 +1057,7 @@ man unexpand # help
 man unicode # help 
 man uniname # help 
 man uniq # help 
+man unix2dos # help 
 man unzip # help 
 man update-alternatives # help 
 man updatedb # help 
@@ -1859,6 +1860,7 @@ uname --kernel-name --kernel-release --kernel-version --machine --processor --ha
 unetbootin 
 unetbootin & 
 unexpand --tabs=4 test.txt # convert space tab 
+unix2dos contacts.vcf # newline convert 
 unset -f function 
 unset variable_or_function 
 unset -v variable 
