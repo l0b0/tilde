@@ -1,7 +1,7 @@
 # Reference: <http://www.mutt.org/doc/manual/manual-6.html>
 
 # Settings relevant only to me or this machine
-source ~/.muttrc_local
+source ~/.mutt/rc_local
 
 # Mailboxes
 set sort_browser = alpha
@@ -33,7 +33,7 @@ set envelope_from = yes
 set use_from = yes
 
 ## Recipients
-set alias_file = ~/.mutt_aliases
+set alias_file = ~/.mutt/aliases
 source $alias_file
 set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
 
