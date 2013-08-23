@@ -1051,6 +1051,7 @@ man tr # help
 man tty # help 
 man udevadm # help 
 man umask # help 
+man umount # help 
 man uname # help 
 man unetbootin # help 
 man unexpand # help 
@@ -1855,6 +1856,7 @@ umask
 umask 0077 && ssh-keygen -b 4096 -f ~/.ssh/id_rsa -t rsa && openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa.pk8 && shred --remove ~/.ssh/id_rsa && mv --no-clobber ~/.ssh/id_rsa.pk8 ~/.ssh/id_rsa # create encrypted private public rsa pkcs8 ssh key pair 
 umask -S # symbolic 
 umount-image ./*.iso 
+umount /mnt/foo # unmount device drive 
 uname --all 
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
