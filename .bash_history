@@ -836,6 +836,7 @@ man gnome-screensaver # help
 man gnome-shell # help 
 man gnome-specimen # help 
 man gnome-terminal # help 
+man gpasswd # help 
 man gpg # help 
 man grep # help 
 man groups # help 
@@ -1658,6 +1659,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
 sudo gem install slideshow 
+sudo gpasswd -a $USER group # user add group 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
