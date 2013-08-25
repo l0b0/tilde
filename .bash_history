@@ -1674,6 +1674,7 @@ sudo ip route add default via 1.2.3.4 dev eth0
 sudo ip route del default via 1.2.3.4 dev eth0 
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
+sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
