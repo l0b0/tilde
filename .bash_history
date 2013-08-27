@@ -152,6 +152,8 @@ declare -f schroedinger # function definition
 declare -p # color variables functions 
 declare # variables functions 
 deluge & 
+~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua 
+~/dev/awmtt/awmtt stop 
 ~/dev/meta2jpeg/meta2jpeg.sh *.CR2 
 ~/dev/minecraft-scripts/backup.sh # game directory 
 ~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
@@ -1130,6 +1132,7 @@ mkgithub --configure --https --verbose --user l0b0
 mkgithub --configure --ssh --verbose --user l0b0 
 mkgithub ~/dev/algorithms 
 mkgithub ~/dev/arm 
+mkgithub ~/dev/awmtt 
 mkgithub ~/dev/bm 
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
@@ -1623,6 +1626,7 @@ sudo apt-get install wine winetricks # windows
 sudo apt-get install xautolock 
 sudo apt-get install xclip 
 sudo apt-get install xournal # editor pdf 
+sudo apt-get install xserver-xephyr 
 sudo apt-get install youtube-dl 
 sudo apt-get purge 'ubuntuone-*' unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video zeitgeist # unity spyware 
 sudo apt-get update 
