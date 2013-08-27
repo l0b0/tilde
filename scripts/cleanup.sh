@@ -30,7 +30,7 @@ set -o errexit -o noclobber -o nounset -o pipefail
 shopt -s nullglob
 
 directory="$(dirname -- "$0")"
-PATH='/usr/bin:/bin'
+PATH='/usr/sbin:/usr/bin:/sbin:/bin'
 
 . "$directory/../shell-includes/functions.sh"
 

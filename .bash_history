@@ -840,6 +840,7 @@ man gnome-screensaver # help
 man gnome-shell # help 
 man gnome-specimen # help 
 man gnome-terminal # help 
+man gpasswd # help 
 man gpg # help 
 man grep # help 
 man groups # help 
@@ -1666,6 +1667,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
 sudo gem install slideshow 
+sudo gpasswd -a $USER group # user add group 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
@@ -1680,6 +1682,7 @@ sudo ip route add default via 1.2.3.4 dev eth0
 sudo ip route del default via 1.2.3.4 dev eth0 
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
+sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
@@ -1697,7 +1700,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync alsa-plugins awesome ekiga evince file-roller firefox git gnome-icon-theme gnome-keyring hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld ntp pidgin scrot thunar thunar-archive-plugin tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync alsa-plugins aspell-de aspell-en aspell-fr awesome ekiga evince file-roller firefox git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld ntfs-3g ntp pidgin scrot thunar thunar-archive-plugin thunar-volman tk vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync deluge pygtk # torrent gui 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --sync wine winetricks # windows 
@@ -1963,7 +1966,7 @@ xxd $(which xxd) | head --lines=1
 yes -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test repeat string 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
-youtube-dl --output ~"/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
+youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
 zip --update file.zip input # add file compress zip 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
