@@ -604,8 +604,8 @@ help until
 help wait 
 history | pager 
 host example.org # dns lookup internet network ipv4 ipv6 
-hostname --ip-address # internet network address dns 
 hostname # internet network 
+hostname --ip-address # internet network address dns 
 hostname --short # internet network 
 hp-setup # printer 
 hp-wificonfig # printer 
