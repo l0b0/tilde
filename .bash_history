@@ -1668,7 +1668,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
 sudo gem install slideshow 
-sudo gpasswd -a $USER group # user add group 
+sudo gpasswd --add $USER group # user add group 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
