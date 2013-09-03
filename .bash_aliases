@@ -18,6 +18,9 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
+# Never ever use vi
+alias vi=vim
+
 if ! which editor &> /dev/null
 then
     alias editor=$EDITOR
