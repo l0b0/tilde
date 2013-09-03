@@ -32,4 +32,4 @@ test:
 install:
 	$(CURDIR)/scripts/make-links.sh -v $(addprefix $(CURDIR)/, $(DOTFILES)) $(PREFIX)
 
-include tools.mk
+include make-includes/variables.mk

@@ -1,3 +1,6 @@
 [submodule "shell-includes"]
 	path = shell-includes
 	url = git://github.com/l0b0/shell-includes.git
+[submodule "make-includes"]
+	path = make-includes
+	url = git://github.com/l0b0/make-includes.git
