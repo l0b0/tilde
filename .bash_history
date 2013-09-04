@@ -1905,6 +1905,9 @@ vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter post
 vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vlc --spdif http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vmware 
+vncserver -kill :1 # stop service 
+vncserver -list # all 
+vncserver # start service remote desktop 
 w 
 wait # process pid 
 watch --color --differences -- git diff --color=always # change 
