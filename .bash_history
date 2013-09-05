@@ -1080,6 +1080,8 @@ man vipw # help
 man virtualbox # help 
 man visudo # help 
 man vncpasswd # help 
+man vncserver # help 
+man vncviewer # help 
 man watch # help 
 man wc # help 
 man wdiff # help 
@@ -1517,6 +1519,7 @@ ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
+ssh -L 5902:localhost:5901 example.org # local port forwarding vnc 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
@@ -1910,7 +1913,9 @@ vmware
 vncpasswd 
 vncserver -kill :1 # stop service 
 vncserver -list # all 
-vncserver # start service remote desktop 
+vncserver -localhost # start service remote desktop 
+vncviewer :1 # local desktop 
+vncviewer :2 # remote desktop 
 w 
 wait # process pid 
 watch --color --differences -- git diff --color=always # change 
