@@ -1519,7 +1519,7 @@ ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -vvv example.org 
-ssh -Y example.org 
+ssh -Y example.org # trusted x11 forwarding 
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
 stat --format %i / # inode 
 stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
