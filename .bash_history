@@ -1732,9 +1732,9 @@ sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
-sudo systemctl enable slim.service 
+sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
-sudo systemctl start slim.service 
+sudo systemctl start sshd.service 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
