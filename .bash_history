@@ -460,6 +460,7 @@ git log origin/master..HEAD # remote
 git log --patch-with-stat 
 git log --stat 
 git ls-tree --long HEAD ./* | awk '{print $4 " " $5}' # file size commit 
+git merge --abort # cancel revert 
 git merge origin/master 
 git mergetool & 
 git merge topic # local branch 
