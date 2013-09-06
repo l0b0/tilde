@@ -1913,7 +1913,7 @@ vmware
 vncpasswd 
 vncserver -kill :1 # stop service 
 vncserver -list # all 
-vncserver -localhost # start service remote desktop 
+vncserver -localhost -geometry $(xrandr | sed --quiet 's/.*current \([0-9]*\) x \([0-9]*\).*/\1x\2/p') # start service remote desktop 
 vncviewer :1 # local desktop 
 vncviewer :2 # remote desktop 
 w 
