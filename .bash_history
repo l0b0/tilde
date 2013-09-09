@@ -641,7 +641,7 @@ ipcalc 192.168.0.1/24 # network
 ip link show down # network 
 ip link show up # network 
 ip -oneline -family inet addr show dev eth0 # ipv4 address 
-ip route show 
+ip route show dev eth0 # network 
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
