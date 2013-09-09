@@ -36,13 +36,26 @@ sum() {
 }
 
 # Find
+_find_sorted() {
+    # General-purpose find and sort
+    format="$1"
+    sort_type="$2"
+    shift 2
+
+    while IFS=$'\t' read -r -d '' -u 9 stat path
+    do
+        printf '%s\0' "$path"
+    done 9< <(find ${1+"$@"} -printf "$format"'\t%p\0' | sort --key 1 "$sort_type" --zero-terminated)
+}
+
 find_date_sorted() {
     # Sorted by ISO date, ascending
     # Separated by NUL to be able to reuse in other loops
-    while IFS= read -r -d '' -u 9
-    do
-        printf '%s\0' "${REPLY#* }"
-    done 9< <(find ${1+"$@"} -printf '%TY-%Tm-%TdT%TH:%TM:%TS %p\0' | sort -z)
+    _find_sorted '%TY-%Tm-%TdT%TH:%TM:%TS' '--general-numeric-sort' "$@"
+}
+
+find_size_sorted() {
+    _find_sorted '%s' '--numeric-sort' "$@"
 }
 
 substring() {
