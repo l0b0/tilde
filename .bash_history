@@ -635,11 +635,11 @@ info --raw-escapes --subnodes sed | pager --raw-control-chars # help
 insert_after_last '^[ \t]*[^# \t]' '# Comment 1' ~/.bashrc 
 iostat 
 ip addr show dev eth0 # ipv4 ipv6 device address 
-ip addr show # ipv4 ipv6 address 
-ipcalc 0.0.0.0/0 
-ipcalc 192.168.0.1/24 
-ip link show down 
-ip link show up 
+ip addr show # ipv4 ipv6 network address 
+ipcalc 0.0.0.0/0 # network 
+ipcalc 192.168.0.1/24 # network 
+ip link show down # network 
+ip link show up # network 
 ip -oneline -family inet addr show dev eth0 # ipv4 address 
 ip route show 
 ipython 
