@@ -1706,7 +1706,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync alsa-plugins aspell-de aspell-en aspell-fr awesome bash-completion bc ekiga esmtp evince file-roller firefox git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof make meld mutt net-tools ntfs-3g ntp offlineimap openssh pidgin scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome bash-completion bc ekiga esmtp evince file-roller firefox git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof make meld mutt net-tools ntfs-3g ntp offlineimap openssh pidgin scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync deluge pygtk # torrent gui 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --sync wine winetricks # windows 
