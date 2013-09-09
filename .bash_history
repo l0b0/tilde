@@ -993,6 +993,8 @@ man rsa # help
 man rsync # help 
 man ruby # help 
 man runlevel # help 
+man sane-find-scanner # help 
+man scanimage # help 
 man scp # help 
 man screen # help 
 man script # help 
@@ -1010,6 +1012,7 @@ man shuf # help
 man shunit2 # help 
 man shutdown # help 
 man signal # help 
+man simple-scan # help 
 man sipcalc # help 
 man sleep # help 
 man sloccount # help 
@@ -1441,7 +1444,9 @@ ruby -c test.rb # check verify syntax
 ruby --verbose 
 runlevel # kernel 
 sandbox="$(mktemp --directory)" 
+sane-find-scanner # list device 
 sass-convert all.s{a,c}ss 
+scanimage --list-devices # scanner 
 schemaspy2svg ~/db 
 schemaspy2svg --help 
 scp example.org:/home/jdoe/example.txt . 
@@ -1491,6 +1496,7 @@ shopt -u nullglob # option unset *
 shortest < ~/.bash_history 
 shred --remove filename # overwrite delete file 
 shuf --input-range 0-1 --head-count 1 # random number range 
+simple-scan & 
 sipcalc 0.0.0.0/0 
 sipcalc 192.168.0.1/24 
 sleep 1m 
