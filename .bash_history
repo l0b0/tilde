@@ -120,7 +120,7 @@ csvtool --help | pager
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
-curl --insecure --location http://xrl.us/perlbrewinstall | bash # development 
+curl --insecure --location http://xrl.us/perlbrewinstall | bash # development perl 
 curl --version 
 cut --delimiter ':' --fields 1 /etc/group | sort 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
@@ -149,31 +149,31 @@ declare -F # functions
 declare -f schroedinger # function definition 
 declare -p # color variables functions 
 declare # variables functions 
-deluge & 
-~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua 
-~/dev/awmtt/awmtt stop 
-~/dev/meta2jpeg/meta2jpeg.sh *.CR2 
+deluge & # bittorrent gui 
+~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua # debug awesome configuration 
+~/dev/awmtt/awmtt stop # debug awesome configuration 
+~/dev/meta2jpeg/meta2jpeg.sh *.CR2 # copy metadata graphics image 
 ~/dev/minecraft-scripts/backup.sh # game directory 
 ~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
 ~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
 ~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
-~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database 
+~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
-~/dev/vcard/format-TEL.sh ~/contacts/*.vcf 
+~/dev/vcard/format-TEL.sh ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
-~/dev/vcard/split.sh ~/contacts/*.vcf 
-~/dev/xterm-color-count/xterm-color-count.sh 
-~/dev/xterm-color-count/xterm-color-count.sh -v 
-df --human-readable . # filesystem 
-df --human-readable # filesystem 
+~/dev/vcard/split.sh ~/contacts/*.vcf # split vcard files 
+~/dev/xterm-color-count/xterm-color-count.sh -v # xterm color 
+~/dev/xterm-color-count/xterm-color-count.sh # xterm color 
+df --human-readable . # filesystem current directory 
+df --human-readable # filesystem list all 
 ! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
 difff --help 
-diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) 
-diff --unified file{.orig,} 
+diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) # test option 
+diff --unified file{.orig,} # files 
 diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff --unified <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
