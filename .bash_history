@@ -2,10 +2,10 @@ ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log
 ack-grep "pattern" . # search 
 add-apt-repository --help 
 alias ls 
-align_image_stack -vl -a aligned *.jpg 
-alsamixer 
+align_image_stack -vl -a aligned *.jpg # graphics 
+alsamixer # audio input output volume 
 aplay --list-pcms # list audio output speaker 
-aplay recording.wav 
+aplay recording.wav # audio output 
 apport-bug package # report 
 apport-bug --window & # report 
 apport-collect 123456 # bug hardware software 
@@ -29,16 +29,16 @@ arecord --duration 5 --format dat recording.wav # record audio file
 arecord --format dat | aplay # test audio input capture output playback default microphone speakers 
 arecord --list-devices # list audio input capture microphones 
 ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
-aticonfig --initial=check 
+aticonfig --initial=check # graphics amd x configuration 
 autoconf # compile 
 autoreconf --install # compile 
 avahi-browse-domains --terminate # network domains scan 
 avahi-browse --terminate --all # network services scan local remote 
 avahi-browse --terminate --ignore-local _workstation._tcp # network tcp workstations scan remote 
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
-avconv -i input.mov -codec copy -ss 15 output.mov # cut 
+avconv -i input.mov -codec copy -ss 15 output.mov # video cut 
 avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
-awesome --check # config verify parse 
+awesome --check # configuration verify parse 
 basename -- "$PWD" # current directory name 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bashdb test.sh # debug script 
@@ -54,14 +54,14 @@ bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
-branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch 
-builtin # bash 
+branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch # git svn branch create 
+builtin # bash list 
 bundle help # rails 
 bundle init # rails 
 bundle install # rails 
 bundle package 
 bundle update # rails 
-bunzip2 file.bz2 
+bunzip2 file.bz2 # compression bzip 
 cap deploy:check # rails 
 cap deploy:login 
 cap deploy:migrations # rails 
@@ -70,7 +70,7 @@ cap deploy:rollback # rails
 cap deploy:setup # rails 
 capify . # rails 
 cap # rails 
-cat ~/contacts/*.vcf > ~/all.vcf 
+cat ~/contacts/*.vcf > ~/all.vcf # concatenate vcard 
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
@@ -87,25 +87,25 @@ cat /usr/share/gnome*/gnome-version.xml
 ccsm & # compiz settings 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
-cd -- "$(mktemp --directory)" 
+cd -- "$(mktemp --directory)" # create temporary directory 
 certutil # help 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
 clamtk & # antivirus 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
-comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) 
-comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') 
+comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
+comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
 completions git config '' | grep user # autocomplete 
 ./configure --help | pager # packaging 
 ./configure # packaging 
-convert -density 150 -quality 100 input.pdf output.jpg 
-convert ./*.jpg output.pdf # graphics 
+convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
+convert ./*.jpg output.pdf # graphics combine image 
 convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
 cp --archive dir target # recursive owner permissions 
 cp file{,.orig} # filesystem 
-cppcheck foo.c 
+cppcheck foo.c # lint c code 
 createdb --template template0 --username username dbname # postgresql 
 cronlist 
 cronlist --help 
@@ -113,8 +113,8 @@ cronlist --system
 cronlist --to '23:59:59' 
 crontab -e # edit 
 crontab -l # list 
-csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' 
-csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' 
+csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' # split vcard file 
+csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
 csvtool col 3 test.csv # csv column 
 csvtool --help | pager 
 cucumber --dry-run # rails 
