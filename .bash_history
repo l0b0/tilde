@@ -170,7 +170,6 @@ df --human-readable . # filesystem current directory
 df --human-readable # filesystem list all 
 ! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
-diff <(~/bin/git diff --staged) <(~/bin/git diff --staged --minimal) 
 difff --help 
 diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) # test option 
 diff --unified file{.orig,} # files 
