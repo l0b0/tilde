@@ -91,7 +91,6 @@ cd -- "$(mktemp --directory)"
 certutil # help 
 checkbashisms ./*.sh 
 chmod u+x test.sh 
-chromium-browser --proxy-pac-url=http://example.org:8888/proxy.pac 
 clamtk & # antivirus 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
