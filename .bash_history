@@ -54,7 +54,6 @@ bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
-branch=name && git config --add svn-remote.$branch.url http://svn/repo/branches/$branch && git config --add svn-remote.$branch.fetch :refs/remotes/$branch && git svn fetch $branch && git checkout -b local-$branch --track $branch && git svn rebase $branch && unset branch # git svn branch create 
 builtin # bash list 
 bundle help # rails 
 bundle init # rails 
@@ -176,7 +175,6 @@ diff --unified file{.orig,} # files
 diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff --unified <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
-diff <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
 digikam & # photo manager 
@@ -241,8 +239,6 @@ editor ~/.muttrc # email
 editor ~/.muttrc_local # email 
 editor README.markdown # dev 
 editor ~/.ssh/config 
-editor ~/.subversion/config # dev 
-editor ~/.subversion/servers # dev 
 editor ~/.vimrc 
 editor ~/.wine/system.reg 
 editor ~/.wine/user.reg 
@@ -294,7 +290,7 @@ find -L . -type l # broken symlinks
 find . -mindepth 1 -exec printf '%s\0' {} + | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
 find . -name '*.marks' -delete # remove jedit temp files 
-find . \( -path ./.git -o -path ./.svn \) -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
+find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
@@ -356,7 +352,6 @@ git branch --remotes
 git branch --set-upstream master origin/master # track 
 git branch --track topic master 
 git checkout -b topic remotes/origin/topic # branch change create 
-git checkout -b topic-svn remotes/topic # branch change create subversion 
 git checkout master # branch change 
 git checkout . # revert 
 git cherry-pick HEAD@{5} 
@@ -380,7 +375,6 @@ git config --global github.user l0b0
 git config --global mergetool.prompt false 
 git config --list 
 GIT_CURL_VERBOSE=1 git pull # debug 
-git cvsimport -p x -v -d :pserver:anonymous@projectname.cvs.sourceforge.net:/cvsroot/projectname projectname 
 git diff 
 git diff --color-words 
 git diff | diff-ignore-moved-lines 
@@ -414,7 +408,6 @@ git help clean
 git help clone 
 git help commit 
 git help config 
-git help cvsimport 
 git help diff 
 git help difftool 
 git help fetch 
@@ -443,7 +436,6 @@ git help show
 git help stash 
 git help status 
 git help submodule 
-git help svn 
 git help tag 
 git init 
 git instaweb start 
@@ -502,15 +494,6 @@ git status
 git submodule add --force git://github.com/l0b0/make-includes.git 
 git submodule add --force git://github.com/l0b0/shell-includes.git 
 git submodule update --init 
-git svn clone --stdlayout --revision 1:HEAD http://svn/repo 
-git svn clone --stdlayout --revision 1:HEAD --no-minimize-url http://svn/repo/path 
-git svn dcommit 
-git svn dcommit --dry-run 
-git svn fetch 
-git svn help 
-git svn info 
-git svn rebase 
-git svn show-ignore >> .git/info/exclude 
 git tag --delete name # local 
 git tag v0.1 
 git --version 
@@ -544,7 +527,7 @@ gpg --verify ./*.sig # pgp signature
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
 grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
-grep --fixed-strings --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'foo' . # search literal source 
+grep --fixed-strings --recursive --exclude-dir .git --regexp 'foo' . # search literal source 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
@@ -828,7 +811,6 @@ man gfortran # help
 man git # help 
 man gitk # help 
 man gitstats # help 
-man git-svn # help 
 man gksudo # help 
 man glabels # help 
 man gnome-calculator # help 
@@ -1126,7 +1108,6 @@ meld original mine & # diff
 meld other original mine & # diff 
 meld <(ssh example.org cat /etc/hosts) <(ssh example2.org cat /etc/hosts) # diff 
 meld <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore?id=250066249e06241e3bfd3863c1a233fb45f40a12) <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignore) # diff 
-meld <(wget --output-document - http://svn/repo/path?p=1) <(wget --output-document - http://svn/repo/path?p=2) # diff 
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
@@ -1558,7 +1539,7 @@ sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-do
 sudo apt-get install chromium-browser lynx-cur # web 
 sudo apt-get install clamav clamtk # antivirus 
 sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff cvs git-core git-cvs git-doc git-gui git-svn gitk gitstats meld odt2txt qgit subversion tig # vcs 
+sudo apt-get install colordiff git-core git-doc git-gui gitk gitstats meld odt2txt qgit tig # vcs 
 sudo apt-get install comix feh # graphics viewer 
 sudo apt-get install cpanminus # perl 
 sudo apt-get install csvtool 
@@ -1776,66 +1757,6 @@ sudo vipw --group # edit groups users members
 sudo visudo # permissions security 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
-svn add . 
-svn blame --extensions --ignore-all-space Makefile 
-svn cat --revision 1 Makefile | pager 
-svn checkout http://svn/repo ~/dir 
-svn commit --message "Test" 
-svn commit --non-recursive doc 
-svn copy http://svn/repo/trunk http://svn/repo/branches/branch-name 
-svn copy --message "Version 0.1 alpha" http://svn/repo/trunk http://svn/repo/tags/0.1a 
-svn delete --force file 
-svn delete --keep-local file 
-svn diff 
-svn diff --change 1 
-svn diff --change 1 --extensions --ignore-all-space 
-svn diff --diff-cmd diff > patch.diff 
-svn diff --extensions --ignore-all-space 
-svn diff --extensions --ignore-all-space --ignore-eol-style 
-svn diff --extensions --ignore-space-change 
-svn diff --extensions --unified 
-svn diff --extensions --unified > patch.diff 
-svn diff | pager 
-svn diff --revision 1:HEAD 
-svn diff --revision PREV 
-svn help 
-svn help blame | pager 
-svn help cat | pager 
-svn help checkout | pager 
-svn help commit | pager 
-svn help copy | pager 
-svn help delete | pager 
-svn help diff | pager 
-svn help help | pager 
-svn help info | pager 
-svn help list | pager 
-svn help log | pager 
-svn help merge | pager 
-svn help | pager 
-svn help propdel | pager 
-svn help propedit | pager 
-svn help propset | pager 
-svn help revert | pager 
-svn help status | pager 
-svn info 
-svn info | sed --quiet 's/^Revision: //p' # revision 
-svn list http://svn/repo 
-svn log | pager 
-svn log --revision 1 
-svn log --stop-on-copy | pager 
-svn log --verbose | pager 
-svn merge http://svn/repo/branches/name 
-svn merge --revision 99:HEAD http://svn/repo/branches/name 
-svn merge --revision HEAD:99 . # reverse 
-svn propdel svn:ignore . 
-svn propedit svn:ignore . 
-svn propset svn:executable 1 test.sh 
-svn propset svn:keywords 'Id HeadURL' test.sh 
-svn revert Makefile 
-svn revert --recursive . 
-svn status 
-svn update 
-svn --version 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 systemctl status slim.service 
@@ -1929,8 +1850,8 @@ wget --output-document - http://user:password@host/function?id=foo 2>service.log
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.\(git\|svn\)$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
-while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --exclude-dir .svn --exclude-dir CVS --regexp 'pattern' .) # search open files 
+while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
+while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} + | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
