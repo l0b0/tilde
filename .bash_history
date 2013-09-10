@@ -123,7 +123,6 @@ cucumber --version # rails
 curl --insecure --location http://xrl.us/perlbrewinstall | bash # development 
 curl --version 
 cut --delimiter ':' --fields 1 /etc/group | sort 
-cvs log 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
 date --date="6 months ago" # past time 
 date --date="6 months" # future time 
