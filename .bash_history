@@ -119,6 +119,7 @@ csvtool --help | pager
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
+curl https://aur.archlinux.org/packages/tt/ttf-source-sans-pro/ttf-source-sans-pro.tar.gz | tar -zx 
 curl --insecure --location http://xrl.us/perlbrewinstall | bash # development perl 
 curl --version 
 cut --delimiter ':' --fields 1 /etc/group | sort 
@@ -691,6 +692,7 @@ make && echo finished > ~/.events/compilation || echo failed > ~/.events/compila
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
+makepkg --syncdeps 
 make release # dev 
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
@@ -883,6 +885,7 @@ man lscpu # help
 man lsof # help 
 man lynx # help 
 man make # help 
+man makepkg # help 
 man man # help 
 man markdown # help 
 man md5sum # help 
@@ -1695,6 +1698,7 @@ sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-f
 sudo pacman --sync --needed deluge pygtk # torrent gui 
 sudo pacman --sync --needed wine winetricks # windows 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
+sudo pacman --upgrade *.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
