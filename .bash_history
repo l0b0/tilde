@@ -378,6 +378,7 @@ GIT_CURL_VERBOSE=1 git pull # debug
 git diff 
 git diff --color-words 
 git diff | diff-ignore-moved-lines 
+git diff --exit-code # check 
 git diff 'HEAD@{2013.04.30 08:00}' # date 
 git diff HEAD^ -- README.markdown 
 git diff --ignore-all-space 
