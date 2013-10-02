@@ -89,3 +89,6 @@ set encoding=utf-8
 " Temporary files
 set backupdir=~/.vimtmp,.
 set directory=~/.vimtmp,.
+
+" Load plugins
+runtime plugin/adjust-tabstop.vim
