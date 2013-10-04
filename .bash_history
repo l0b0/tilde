@@ -1510,6 +1510,7 @@ ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql
 ssh -L 5902:localhost:5901 example.org # local port forwarding vnc 
 ssh -p 2222 example.org 
 ssh -R 9000:localhost:9000 example.org 
+ssh -t localhost sudo -u nobody env # tty 
 ssh -vvv example.org 
 ssh -Y example.org # trusted x11 forwarding 
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
