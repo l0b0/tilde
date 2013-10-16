@@ -505,6 +505,7 @@ gksudo nm-connection-editor & # network configuration
 gksudo software-center & # install software 
 gksudo software-properties-gtk & # source 
 gksudo update-manager & 
+gksudo wifi-radar & 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
@@ -1069,6 +1070,7 @@ man vncpasswd # help
 man vncserver # help 
 man vncviewer # help 
 man watch # help 
+man wavemon # help 
 man wc # help 
 man wdiff # help 
 man wget # help 
@@ -1077,6 +1079,7 @@ man w # help
 man which # help 
 man who # help 
 man whois # help 
+man wifi-radar # help 
 man wnpp-alert # help 
 man x509 # help 
 man xargs # help 
@@ -1570,7 +1573,7 @@ sudo apt-get install gnome-tweak-tool
 sudo apt-get install gtk-recordmydesktop # video 
 sudo apt-get install help2man # convert 
 sudo apt-get install hplip-gui # printer 
-sudo apt-get install htop iftop iotop nethogs powertop # monitor cpu memory storage network 
+sudo apt-get install htop iftop iotop nethogs powertop wavemon wifi-radar # monitor cpu memory storage network 
 sudo apt-get install inotify-tools # shell 
 sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
 sudo apt-get install jedit # editor 
@@ -1761,6 +1764,7 @@ sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^
 sudo vipw # edit password users 
 sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
+sudo wavemon 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
 sweethome3d & 
