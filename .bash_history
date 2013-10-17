@@ -658,6 +658,7 @@ ll
 ln --symbolic -- target source 
 locale 
 locale --all-locales 
+localectl list-keymaps # keyboard layout list 
 locate file 
 log_time_diff < /var/log/syslog | sort --numeric --reverse --key=1 | head 
 longer 80 example.txt 
@@ -876,6 +877,7 @@ man lighttpd # help
 man line # help 
 man lintian # help 
 man ln # help 
+man localectl # help 
 man locate # help 
 man logger # help 
 man lpadmin # help 
@@ -1681,6 +1683,7 @@ sudo ip route del default via 1.2.3.4 dev eth0
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
 sudo loadkeys dvorak # keyboard layout vt terminal 
+sudo localectl set-x11-keymap dvorak 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | pager 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
