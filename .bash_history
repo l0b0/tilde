@@ -1783,6 +1783,7 @@ telnet localhost 1234 # network
 ./test.sh 
 ./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
+thunar-volman-settings & # mount removable storage 
 tig 
 time bash -lc true # benchmark startup login shell 
 timedatectl status 
