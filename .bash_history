@@ -1785,6 +1785,7 @@ sudo vipw # edit password users
 sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
 sudo wavemon 
+sudo wifi-menu 
 sudo Xorg :1 -configure 
 sum <<< '2 2' 
 sweethome3d & 
