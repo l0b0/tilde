@@ -630,6 +630,7 @@ ipython
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
 java -classpath ~/dev/hello-world/out/production/hello-world/ hello 
+JAVA_HOME=~/bin/jre ~/bin/pycharm/bin/pycharm.sh # python ide dev 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
