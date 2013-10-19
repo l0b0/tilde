@@ -696,6 +696,11 @@ make explain 2>&1 | grep MAKE # dev
 make explain-MAKE # dev 
 make install # dev 
 makepkg --syncdeps 
+make python-lint 
+make python-pep8 
+make python-pychecker 
+make python-pyflakes 
+make python-pylint 
 make release # dev 
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
@@ -1299,6 +1304,7 @@ pdfimages -j ./*.pdf .
 pdfinfo file.pdf 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
+pep8 --help 
 pep8 setup.py 
 perlbrew switch 
 perl -c file.pl # check syntax 
@@ -1361,6 +1367,9 @@ puppet resource --types
 puppet resource user 
 puppet resource user root 
 pwd # current directory 
+pychecker --help 
+pyflakes --help 
+pylint --help 
 python -m py_compile script.py # verify code script 
 python -m timeit -s 'text = "sample string"; char = "g"' 'char in text' # timing benchmark 
 qemu-img create -f qcow2 /tmp/my.img 10G 
@@ -1705,7 +1714,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld mutt net-tools ntfs-3g ntp offlineimap openssh pidgin scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld mutt net-tools ntfs-3g ntp offlineimap openssh pidgin python-pip pychecker scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed deluge pygtk # torrent gui 
 sudo pacman --sync --needed wine winetricks # windows 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
@@ -1714,7 +1723,10 @@ sudo paperconfig --paper a4 # set print size
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
+sudo pip install --upgrade pep8 
 sudo pip install --upgrade pip # python 
+sudo pip install --upgrade pyflakes 
+sudo pip install --upgrade pylint 
 sudo pip install --upgrade vcard # validator 
 sudo pip uninstall vcard # validator 
 sudo powertop # power monitoring configuration 
