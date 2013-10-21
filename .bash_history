@@ -912,10 +912,12 @@ man ncal # help
 man nc # help 
 man nethogs # help 
 man netstat # help 
+man NetworkManager # help 
 man nfs # help 
 man nice # help 
 man nl # help 
 man nmap # help 
+man nm-applet # help 
 man nmcli # help 
 man nm # help 
 man node # help 
@@ -1256,6 +1258,7 @@ netstat
 netstat --all # internet connections sockets 
 nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
 nl ~/.bashrc 
+nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
 nmcli con # network connections list 
@@ -1715,7 +1718,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld mutt net-tools ntfs-3g ntp offlineimap openssh pidgin python-pip pychecker scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin pychecker python-pip scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed deluge pygtk # torrent gui 
 sudo pacman --sync --needed wine winetricks # windows 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
@@ -1750,6 +1753,7 @@ sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
+sudo systemctl enable NetworkManager # network gui configuration 
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
 sudo systemctl start sshd.service 
