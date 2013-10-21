@@ -655,6 +655,7 @@ la ~
 lastlog # login users 
 ldconfig --print-cache # list all libraries 
 ldd $(which bash) 
+libreoffice & 
 /lib/udev/findkeyboards 
 ll 
 ln --symbolic -- target source 
@@ -880,6 +881,7 @@ man kvm # help
 man ldconfig # help 
 man ldd # help 
 man ld # help 
+man libreoffice # help 
 man lighttpd # help 
 man line # help 
 man lintian # help 
@@ -1719,7 +1721,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx lsof meld mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc ekiga esmtp evince file-roller firefox flashplugin git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc xorg-server xorg-server-common xorg-xinit xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed deluge pygtk # torrent gui 
 sudo pacman --sync --needed wine winetricks # windows 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
