@@ -199,7 +199,7 @@ echo 0 61 62 63 | xxd -revert # hex dump convert string character byte
 echo $BASHPID # shell subshell pid 
 echo "body" > ~/.events/summary # notify 
 echo "${COLUMNS}x${LINES}" # terminal size dimensions 
-(echo 'ctrl_interface=/var/run/wpa_supplicant' && wpa_passphrase ssid passphrase) | sudo tee /etc/wpa_supplicant/wpa_supplicant.conf # configuration wireless network wpa supplicant 
+(echo 'ctrl_interface=/var/run/wpa_supplicant' && wpa_passphrase ssid passphrase) | sudo tee /etc/wpa_supplicant.conf # configuration wireless network wpa supplicant 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee --append /etc/environment # print 
 echo "$OSTYPE" 
@@ -1747,7 +1747,7 @@ sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $(printf %q "$USER"):$(printf %q "$(groups | awk '{print $1}')") /var/lib/rrdcached/db /var/lib/rrdcached/journal && apt-get install rrdcached" # fix ubuntu rrdcached install bug 985341 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
-sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
+sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
 sudo systemctl enable sshd.service 
