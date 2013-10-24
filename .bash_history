@@ -144,6 +144,7 @@ date +%Y-%m-%dT%H:%M:%S # iso time
 dd if=/dev/null of=/file/to/truncate seek=1 bs=1024 # truncate file bytes 
 dd if=/dev/urandom bs=1kB count=1 | ent # calculate entropy 
 dd if=/dev/zero of="${sandbox}/zeros.bin" bs=1000 count=5 # create file size 
+deactivate # virtualenv 
 declare -a # arrays 
 declare -F # functions 
 declare -f schroedinger # function definition 
@@ -1522,6 +1523,7 @@ sort --unique --output result.txt source.txt
 source ~/.bash_aliases 
 source ~/.bash_aliases_local 
 source ~/.bashrc 
+source virtualenv/bin/activate 
 speaker-test --channels 2 
 splint foo.c 
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
@@ -1737,6 +1739,7 @@ sudo pip install --upgrade pip # python
 sudo pip install --upgrade pyflakes 
 sudo pip install --upgrade pylint 
 sudo pip install --upgrade vcard # validator 
+sudo pip install --upgrade virtualenv 
 sudo pip uninstall vcard # validator 
 sudo powertop # power monitoring configuration 
 sudo reboot # restart 
@@ -1870,6 +1873,8 @@ valgrind foo # check memory binary
 vcard ~/contacts/*.vcf 
 vim -c "setfiletype sh" test 
 virtualbox & 
+virtualenv --help 
+virtualenv --python=python2.7 virtualenv 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --full-help | pager 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
