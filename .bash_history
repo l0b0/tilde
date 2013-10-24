@@ -364,10 +364,8 @@ git clean --dry-run -dx # directories .gitignore
 git clone git://github.com/sstephenson/rbenv.git ~/.rbenv # install ruby 
 git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build # install ruby 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
-git clone git://repo.or.cz/cronlist.git 
 git clone https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget --output-document ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
 git clone https://github.com/l0b0/mkgithub.git 
-git clone https://github.com/terreActive/redmine.git 
 git commit 
 git commit --all --message "Example" 
 git config diff.minimal 
