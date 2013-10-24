@@ -1839,6 +1839,7 @@ txt2cloud
 txt2cloud --min 3 < $(which txt2cloud) > cloud.xhtml 
 type -a true 
 udevadm info --export-db 
+udevadm monitor --environment kernel # live events 
 ulimit -a 
 ulimit -c unlimited 
 umask 
