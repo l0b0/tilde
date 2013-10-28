@@ -697,7 +697,7 @@ make && echo finished > ~/.events/compilation || echo failed > ~/.events/compila
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
-makepkg --syncdeps 
+makepkg --syncdeps # package build tarball 
 make python-lint 
 make python-pep8 
 make python-pychecker 
