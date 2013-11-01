@@ -1269,6 +1269,7 @@ nmap -T Aggressive -A -v 192.168.0.1
 nmap -v -sP 192.168.0.0/24 
 nmcli con # network connections list 
 nmcli dev # network devices list 
+nmcli dev wifi connect SSID password PASSWORD # connect network wireless 
 nmcli nm # network manager status 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
