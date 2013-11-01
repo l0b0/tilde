@@ -37,7 +37,7 @@
 ################################################################################
 
 monitor_info() {
-    xrandr --query
+    xrandr --query | tee ~/.xsession-xrandr-query
 }
 
 monitor_resolutions() {
