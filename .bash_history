@@ -1264,6 +1264,7 @@ netstat
 netstat --all # internet connections sockets 
 nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
 nl ~/.bashrc 
+nmap -p 22 --open -sV 192.168.0.0/24 # search list ssh hosts network 
 nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
