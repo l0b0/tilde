@@ -71,17 +71,6 @@ then
     sed -i -e '/./,/^$/!d' ~/.config/vlc/vlcrc
 fi
 
-gnome_to_awesome_menu=~/dev/xdg-menu-to-awesome-wm/awesome-xdg-menu.py
-if [ -e "$gnome_to_awesome_menu" ]
-then
-    verbose_echo "Import GNOME menu to Awesome RC"
-    set +o noclobber
-    python "$gnome_to_awesome_menu" > ~/.config/awesome/menu.lua
-    set -o noclobber
-else
-    verbose_echo "Skipping GNOME -> Awesome RC menu import"
-fi
-
 verbose_echo "Fix .bash_history line endings"
 sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
 
