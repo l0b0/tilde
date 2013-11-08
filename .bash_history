@@ -1709,6 +1709,7 @@ sudo ip route add default via 1.2.3.4 dev eth0
 sudo ip route del default via 1.2.3.4 dev eth0 
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
+sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
 sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo localectl set-x11-keymap dvorak 
 sudo lpadmin -d printername # set default printer cups 
