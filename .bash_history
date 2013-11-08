@@ -1471,6 +1471,7 @@ screen -dRR # resume
 screen -list 
 screen -S compile-project 
 script --quiet --command "$SHELL" 
+scrot --delay 5 # screenshot 
 sed '9d' file # delete line one-indexed 
 sed '/^$/d' file # delete empty lines 
 sed '/pattern/r./input.txt' test.txt # insert merge file pattern 
