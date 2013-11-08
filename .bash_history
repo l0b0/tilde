@@ -1732,6 +1732,7 @@ sudo pacman --sync --needed alsa-plugins alsa-utils aspell-de aspell-en aspell-f
 sudo pacman --sync --needed deluge pygtk # torrent gui 
 sudo pacman --sync --needed steam # games gui 
 sudo pacman --sync --needed wine winetricks # windows 
+sudo pacman --sync --needed xf86-input-synaptics xf86-video-intel # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --upgrade *.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
