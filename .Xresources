@@ -1,3 +1,4 @@
+xscreensaver.mode: blank
 XTerm.termName: xterm-256color
 XTerm.VT100.geometry: 96x66
 XTerm.VT100.locale: true
