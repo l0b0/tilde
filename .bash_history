@@ -1290,6 +1290,7 @@ openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa k
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
+pacman --query bash # package version 
 pacman --query --list bash # list all package files 
 pacman --sync --search bash # search packages 
 pager /etc/issue 
