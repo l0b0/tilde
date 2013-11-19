@@ -1736,6 +1736,7 @@ sudo ntpdate pool.ntp.org # update date time clock
 sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr inkscape iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
+sudo pacman --sync --needed --refresh python2-pip 
 sudo pacman --sync --needed --refresh steam # games gui 
 sudo pacman --sync --needed --refresh wine winetricks # windows 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel # laptop drivers touchpad graphics 
@@ -1744,12 +1745,12 @@ sudo pacman --upgrade *.pkg.tar.xz # install
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
+sudo pip2 install --upgrade vcard # validator 
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
 sudo pip install --upgrade pep8 
 sudo pip install --upgrade pip # python 
 sudo pip install --upgrade pyflakes 
 sudo pip install --upgrade pylint 
-sudo pip install --upgrade vcard # validator 
 sudo pip install --upgrade virtualenv 
 sudo pip uninstall vcard # validator 
 sudo powertop # power monitoring configuration 
