@@ -1042,6 +1042,7 @@ man sudo # help
 man su # help 
 man sweethome3d # help 
 man synclient # help 
+man system-config-printer # help 
 man tac # help 
 man tail # help 
 man tar # help 
@@ -1732,7 +1733,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc digikam ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr inkscape iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot slim thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr inkscape iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh steam # games gui 
@@ -1776,6 +1777,7 @@ sudo systemctl enable NetworkManager # network gui configuration
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
 sudo systemctl start sshd.service 
+sudo systemctl status cupsd.service 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
@@ -1814,6 +1816,7 @@ sudo Xorg :1 -configure
 sum <<< '2 2' 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
+system-config-printer & 
 systemctl status slim.service 
 TAGS=all guard 
 TAGS="$USER" guard 
