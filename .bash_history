@@ -1454,7 +1454,7 @@ rrdtool info test.rrd # metadata
 rrdtool - # interactive 
 rrdtool last test.rrd # update time 
 rrdtool update test.rrd --template content -- -3600:1 -3300:0 -3000:-1 -2700:-2 -2400:2 -2100:U -1800:1 -1500:0 -1200:1 -900:1 -600:1 -300:-2 N:0 
-rsync --archive --human-readable --recursive --progress --verbose host:/path /target # network transfer 
+rsync --archive --human-readable --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 ruby --verbose 
 runlevel # kernel 
