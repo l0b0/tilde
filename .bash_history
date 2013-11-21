@@ -1734,7 +1734,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted hunspell-de hunspell-en hunspell-fr inkscape iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot simple-scan slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
+sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted gutenprint hunspell-de hunspell-en hunspell-fr inkscape iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-impress libreoffice-math libreoffice-writer lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot simple-scan slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
@@ -1775,6 +1775,7 @@ sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
+sudo systemctl enable cupsd.service 
 sudo systemctl enable NetworkManager # network gui configuration 
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
