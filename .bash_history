@@ -1,5 +1,6 @@
 ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
+acpi_listen # events power configuration 
 add-apt-repository --help 
 alias ls 
 align_image_stack -vl -a aligned *.jpg # graphics 
@@ -719,6 +720,8 @@ man 5 crontab # help
 man 5 passwd # help password 
 man 7 glob # help 
 man ack-grep # help 
+man acpid # help 
+man acpi_listen # help 
 man add-apt-repository # help 
 man addgroup # help 
 man adduser # help 
@@ -1736,7 +1739,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted gutenprint hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer lsb-release lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot simple-scan slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
+sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod gimp git gnome-icon-theme gnome-keyring gparted gutenprint hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer lsb-release lsof meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openssh pidgin powertop pychecker python-pip rsync scrot simple-scan slim system-config-printer thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
@@ -1773,6 +1776,7 @@ sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $(printf %q "$USER"):$(printf %q "$(groups | awk '{print $1}')") /var/lib/rrdcached/db /var/lib/rrdcached/journal && apt-get install rrdcached" # fix ubuntu rrdcached install bug 985341 
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
+sudo sh -c 'systemctl start acpid && systemctl enable acpid' 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
