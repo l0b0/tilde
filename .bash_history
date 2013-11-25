@@ -1,29 +1,14 @@
 ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
 ack-grep "pattern" . # search 
 acpi_listen # events power configuration 
-add-apt-repository --help 
 alias ls 
 align_image_stack -vl -a aligned *.jpg # graphics 
 alsamixer # audio input output volume 
 aplay --list-pcms # list audio output speaker 
 aplay recording.wav # audio output 
-apport-bug package # report 
-apport-bug --window & # report 
-apport-collect 123456 # bug hardware software 
 apropos . # all help man 
 apropos bash # help man 
 apropos --exact mv # help man 
-apt-cache depends bash # package dependencies 
-apt-cache policy nvidia-current # ppa source 
-apt-cache rdepends bash # package reverse dependencies 
-apt-cache search bash # package 
-apt-cache show bash # package description 
-apt-cache showpkg bash # package 
-apt-cache showsrc bash # package source 
-apt-cache stats bash # package statistics 
-apt-get source apt 
-apt-key --help 
-apt-rdepends --dotty apt-rdepends | dot -Tsvg | display 
 arandr & # screen layout graphics hardware 
 arch # hardware 
 arecord --duration 5 --format dat recording.wav # record audio file 
@@ -83,8 +68,6 @@ cat /proc/stat # hardware
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
-cat /usr/share/gnome*/gnome-version.xml 
-ccsm & # compiz settings 
 cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
 cd -- "$(mktemp --directory)" # create temporary directory 
@@ -97,7 +80,7 @@ coffee -v # coffeescript
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
 completions git config '' | grep user # autocomplete 
-./configure --help | pager # packaging 
+./configure --help | less # packaging 
 ./configure # packaging 
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
 convert ./*.jpg output.pdf # graphics combine image 
@@ -116,7 +99,7 @@ crontab -l # list
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' # split vcard file 
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
 csvtool col 3 test.csv # csv column 
-csvtool --help | pager 
+csvtool --help | less 
 cucumber --dry-run # rails 
 cucumber # rails 
 cucumber --version # rails 
@@ -160,7 +143,6 @@ deluge & # bittorrent gui
 ~/dev/minecraft-scripts/install-lwjgl.sh 
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
-~/dev/minecraft-scripts/install-Minecraft-shortcut-GNOME.sh # game 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh ~/contacts/*.vcf # format telephone number vcard 
@@ -183,18 +165,12 @@ dig example.org mx # dns email lookup internet network
 digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
 disown # job 
-dmesg | pager # debug os startup 
+dmesg | less # debug os startup 
 dos2unix test.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
 dot -V 
-dpkg --audit # fix packages 
-dpkg --get-selections | grep --invert-match deinstall | cut --fields 1 # list all installed packages 
-dpkg --listfiles package # list package files 
-dpkg --search "$(which apt-get)" # package file owner search 
-dpkg-shlibdeps $(which bash) # binary dependency packaging 
-dpkg --status bash # package 
 dropdb --username username dbname # postgresql 
 du --si --summarize . # disk size 
 echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
@@ -217,36 +193,6 @@ echo $$ # shell pid
 echo "$TERM" # shell 
 echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
 echo "$WINEPREFIX" 
-editor ~/.bash_aliases_local # shell 
-editor ~/.bash_aliases # shell 
- editor ~/.bash_history # shell 
-editor ~/.bashrc_local # shell 
-editor ~/.bashrc # shell 
-editor ~/.config/awesome/rc.lua 
-editor ~/dev/fgit/fgit.sh # dev 
-editor ~/dev/indentect/indentect.sh # dev 
-editor ~/dev/minecraft-scripts/install-Minecraft-dependencies-Ubuntu.sh # dev 
-editor ~/dev/mkgithub/mkgithub.sh # dev 
-editor ~/dev/tilde/.muttrc # email 
-editor ~/dev/tilde/scripts/cleanup.sh 
-editor ~/dev/tilde/scripts/install-all.sh 
-editor ~/dev/tilde/scripts/make-links.sh 
-editor ~/.gitconfig # dev 
-editor .git/config # dev 
-editor .gitignore # dev 
-editor ~/.imapfilter/config.lua 
-editor /lib/udev/rules.d/95-keymap.rules # keyboard 
-editor Makefile # dev 
-editor ~/.mkgithub # dev 
-editor ~/.mozilla/firefox/*/chrome/userContent.css 
-editor ~/.muttrc # email 
-editor ~/.muttrc_local # email 
-editor README.markdown # dev 
-editor ~/.ssh/config 
-editor ~/.vimrc 
-editor ~/.wine/system.reg 
-editor ~/.wine/user.reg 
-editor ~/.xinitrc 
 eject # hardware cd dvd 
 empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
@@ -305,6 +251,20 @@ find -version
 firefox -no-remote -P secondary & 
 firefox -profilemanager & # config 
 firefox -safe-mode & 
+firefox /tmp/xterm-screenshot.*.html 
+firefox /usr/share/doc/c-cpp-reference/html/C/cref.html # help c dev 
+firefox /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp dev 
+firefox /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
+firefox /usr/share/doc/developers-reference/index.html # packaging linux dev 
+firefox /usr/share/doc/git-doc/index.html # dev help 
+firefox /usr/share/doc/ipython/html/index.html # dev help 
+firefox /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev help 
+firefox /usr/share/doc/nethack-spoilers/gazetteer/index.html # game 
+firefox /usr/share/doc/ntp-doc/html/ntpq.html # help 
+firefox /usr/share/doc/python-doc/html/index.html # dev help 
+firefox /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
+firefox /usr/share/doc/python/python-policy.html/index.html # debian dev help 
+firefox /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 fold --width 1 <<< foo # split characters lines 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" $index).jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
@@ -320,7 +280,6 @@ fuseiso -p file.bin "/media/${USER}/mountpoint" # mount
 fusermount -u "/media/${USER}/mountpoint" # unmount 
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
-gconf-editor # gnome config 
 gem help rdoc # ruby 
 gem install bundler 
 gem install pry pry-doc 
@@ -504,9 +463,6 @@ git --version
 gksudo etherape & # network traffic visualization 
 gksudo java -jar jdivelog-installer-*.jar & 
 gksudo nm-connection-editor & # network configuration 
-gksudo software-center & # install software 
-gksudo software-properties-gtk & # source 
-gksudo update-manager & 
 gksudo wifi-radar & 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
@@ -515,16 +471,6 @@ glc-play recording.glc -a 1 -o recording.wav # audio
 glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts vcodec=mpeg4:vbitrate=3000 -audiofile recording.wav -oac mp3lame -o recording.avi # video encoding mp4 mpeg4 
 glxgears # 3d graphics benchmark 
 glxinfo 
-gnome-calculator & # math 
-gnome-control-center sound & 
-gnome-screensaver & 
-gnome-screensaver-command --exit 
-gnome-screensaver-command --lock 
-gnome-screensaver-command --version 
-gnome-screensaver --version 
-gnome-shell --version 
-gnome-specimen & 
-gnome-tweak-tool & 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
@@ -588,7 +534,7 @@ help umask
 help unset 
 help until 
 help wait 
-history | pager 
+history | less 
 host example.org # dns lookup internet network ipv4 ipv6 
 hostname # internet network 
 hostname --ip-address # internet network address dns 
@@ -609,14 +555,14 @@ indentect --help
 indentect --verbose < "$(which indentect)" 
 indentect < "$(which indentect)" 
 infocmp -1 # list terminal 
-info --raw-escapes --subnodes autoconf | pager --raw-control-chars # help 
-info --raw-escapes --subnodes automake | pager --raw-control-chars # help 
-info --raw-escapes --subnodes date | pager --raw-control-chars # help 
-info --raw-escapes --subnodes dd | pager --raw-control-chars # help 
-info --raw-escapes --subnodes find | pager --raw-control-chars # help 
-info --raw-escapes --subnodes ls | pager --raw-control-chars # help 
-info --raw-escapes --subnodes mktemp | pager --raw-control-chars # help examples temporary files 
-info --raw-escapes --subnodes sed | pager --raw-control-chars # help 
+info --raw-escapes --subnodes autoconf | less --raw-control-chars # help 
+info --raw-escapes --subnodes automake | less --raw-control-chars # help 
+info --raw-escapes --subnodes date | less --raw-control-chars # help 
+info --raw-escapes --subnodes dd | less --raw-control-chars # help 
+info --raw-escapes --subnodes find | less --raw-control-chars # help 
+info --raw-escapes --subnodes ls | less --raw-control-chars # help 
+info --raw-escapes --subnodes mktemp | less --raw-control-chars # help examples temporary files 
+info --raw-escapes --subnodes sed | less --raw-control-chars # help 
 inkscape & # editor svg 
 insert_after_last '^[ \t]*[^# \t]' '# Comment 1' ~/.bashrc 
 iostat 
@@ -657,6 +603,21 @@ la ~
 lastlog # login users 
 ldconfig --print-cache # list all libraries 
 ldd $(which bash) 
+less /etc/issue 
+less /etc/passwd # password 
+less Makefile 
+less /proc/bus/input/devices 
+less --RAW-CONTROL-CHARS filename # color 
+less --raw-control-chars typescript 
+less /sys/class/dmi/id/product_name 
+less /sys/class/dmi/id/sys_vendor 
+less /usr/share/doc/nethack-common/Guidebook.txt.gz # help 
+less /var/log/auth.log 
+less /var/log/dmesg 
+less /var/log/kern.log 
+less /var/log/messages 
+less /var/log/syslog 
+less /var/log/Xorg.0.log 
 libreoffice & 
 /lib/udev/findkeyboards 
 ll 
@@ -681,7 +642,7 @@ ls -l --directory ./*/ # list directories
 ls -l --reverse # list 
 ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
-lsof +c 0 | grep gnome-terminal | wc --lines # count files 
+lsof +c 0 | grep process-name | wc --lines # count files 
 lsof # files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
@@ -722,21 +683,12 @@ man 7 glob # help
 man ack-grep # help 
 man acpid # help 
 man acpi_listen # help 
-man add-apt-repository # help 
 man addgroup # help 
 man adduser # help 
 man align_image_stack # help 
 man alsamixer # help 
 man aplay # help 
-man apport-bug # help 
-man apport-cli # help 
 man apropos # help 
-man apt-cache # help 
-man aptdcon # help 
-man apt-get # help 
-man apt-key # help 
-man apt-listchanges # help 
-man apt-rdepends # help 
 man arandr # help 
 man arch # help 
 man arecord # help 
@@ -790,8 +742,6 @@ man dos2unix # help
 man dot # help 
 man dotty # help 
 man download-mibs # help 
-man dpkg # help 
-man dpkg-shlibdeps # help 
 man dropdb # help postgresql 
 man dropuser # help 
 man dsa # help 
@@ -830,14 +780,7 @@ man gitk # help
 man gitstats # help 
 man gksudo # help 
 man glabels # help 
-man gnome-calculator # help 
-man gnome-control-center # help 
 man gnome-keyring-daemon # help 
-man gnome-screensaver-command # help 
-man gnome-screensaver # help 
-man gnome-shell # help 
-man gnome-specimen # help 
-man gnome-terminal # help 
 man gpasswd # help 
 man gpg # help 
 man grep # help 
@@ -886,6 +829,7 @@ man kvm # help
 man ldconfig # help 
 man ldd # help 
 man ld # help 
+man less # help 
 man libreoffice # help 
 man lighttpd # help 
 man line # help 
@@ -937,7 +881,6 @@ man objdump # help
 man od # help 
 man openssl # help 
 man pacman # help 
-man pager # help 
 man paperconfig # help 
 man passwd # help 
 man paste # help 
@@ -1023,7 +966,6 @@ man snmpd # help
 man snmpget # help 
 man snmptranslate # help 
 man snmpwalk # help 
-man software-properties-gtk # help 
 man sort # help 
 man speaker-test # help 
 man splint # help 
@@ -1076,9 +1018,7 @@ man uniname # help
 man uniq # help 
 man unix2dos # help 
 man unzip # help 
-man update-alternatives # help 
 man updatedb # help 
-man update-java-alternatives # help 
 man uptime # help 
 man urandom # help 
 man usermod # help 
@@ -1291,7 +1231,6 @@ npm ls -g
 npm -v 
 nslookup example.org # dns internet lookup network 
 ntpq -p # query list peers 
-objdump --private-headers $(which bash) | grep NEEDED | awk '{print $2}' | xargs dpkg --search | cut --delimiter ':' --fields 1 | sort --unique # binary dependency packaging 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl asn1parse -in ~/.ssh/id_?sa # decode key 
 openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa key hex 
@@ -1301,21 +1240,6 @@ openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.
 pacman --query bash # package version 
 pacman --query --list bash # list all package files 
 pacman --sync --search bash # search packages 
-pager /etc/issue 
-pager /etc/passwd # password 
-pager Makefile 
-pager /proc/bus/input/devices 
-pager --RAW-CONTROL-CHARS filename # color 
-pager --raw-control-chars typescript 
-pager /sys/class/dmi/id/product_name 
-pager /sys/class/dmi/id/sys_vendor 
-pager /usr/share/doc/nethack-common/Guidebook.txt.gz # help 
-pager /var/log/auth.log 
-pager /var/log/dmesg 
-pager /var/log/kern.log 
-pager /var/log/messages 
-pager /var/log/syslog 
-pager /var/log/Xorg.0.log 
 paman & # pulseaudio manager 
 paprefs & # pulseaudio preference 
 passwd # password user 
@@ -1374,14 +1298,14 @@ printf "${USER}%.0s" {1..5} # repeat string
 prove 
 prove --recurse 
 pry 
-ps afux | pager -S # processes list all tree tty 
+ps afux | less -S # processes list all tree tty 
 ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes users 
 ps --pid $$ # current shell 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
 ps -p $$ o ppid= # parent pid 
 psql --host localhost --port 15432 --dbname postgres --username postgres <<< "COPY(SELECT datname FROM pg_database WHERE datistemplate = FALSE) TO STDOUT;" # forwarding list all postgresql network 
 psql --version # postgresql 
-ps -U root -u root fu | pager -S # processes list user tree 
+ps -U root -u root fu | less -S # processes list user tree 
 ps uw -p $$ # process single pid 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
@@ -1564,112 +1488,10 @@ strace -fe open ./test.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
-sudo add-apt-repository ppa:chrysn/openscad 
 sudo addgroup test 
 sudo addgroup "$USER" group 
 sudo adduser test 
 sudo aptdcon --fix-install # package fix rescue daemon 
-sudo apt-get autoclean 
-sudo apt-get autoremove 
-sudo apt-get dist-upgrade 
-sudo apt-get install ack-grep # search 
-sudo apt-get install adobe-flashplugin 
-sudo apt-get install apt-listchanges # package 
-sudo apt-get install apt-rdepends # package 
-sudo apt-get install arandr # screen layout graphics hardware 
-sudo apt-get install arduino arduino-mk avrdude-doc gcc gcc-doc libjna-java-doc libyaml-shell-perl # dev arduino 
-sudo apt-get install audacity # audio editor 
-sudo apt-get install autoconf autoconf-doc automake automake1.9-doc autotools-dev debhelper debian-policy developers-reference devscripts dh-make fakeroot fp-compiler gfortran gfortran-doc git git-doc gnu-standards gnupg gnupg-doc lintian maint-guide patch patchutils pbuilder perl perl-doc python python-doc quilt xutils-dev # Debian dev 
-sudo apt-get install autopano-sift hugin # graphics panorama 
-sudo apt-get install bashdb bison bison-doc build-essential expect gcc gcc-doc gettext gettext-doc ia32-libs-multiarch libc6-dev libgconf2-dev libglade2-dev libmysql-java libncurses5-dev libpg-java libreadline6-dev libsqlite3-dev libssl-dev libtiff-doc libtiff-tools libtool libtool-doc libxml2-dev libxml2-doc libxml-simple-perl libxslt1-dev libyaml-dev linux-doc linux-headers-generic linux-image-generic linux-source m4 make make-doc manpages-posix-dev minicom ncurses-dev openssl valgrind w3-recs xdotool xsltproc zlib1g-dev # linux dev 
-sudo apt-get install beneath-a-steel-sky dosbox flight-of-the-amazon-queen freeciv-client-sdl freeciv-sound-standard scorched3d teeworlds uqm wesnoth wormux xmoto # game 
-sudo apt-get install c-cpp-reference cppcheck indent indent-doc splint splint-doc-html # dev c cpp code lint syntax 
-sudo apt-get install chromium-browser lynx-cur # web 
-sudo apt-get install clamav clamtk # antivirus 
-sudo apt-get install cloc sloccount # dev code 
-sudo apt-get install colordiff git-core git-doc git-gui gitk gitstats meld odt2txt qgit tig # vcs 
-sudo apt-get install comix feh # graphics viewer 
-sudo apt-get install cpanminus # perl 
-sudo apt-get install csvtool 
-sudo apt-get install curl wget # web 
-sudo apt-get install default-jre # java 
-sudo apt-get install deluge # torrent 
-sudo apt-get install dfo # Flickr 
-sudo apt-get install digikam digikam-doc exiv2 gimp gimp-help-en glabels gnuplot gnuplot-doc graphviz graphviz-doc imagemagick imagemagick-doc inkscape jhead pdftk pngcrush psutils qtpfsgui rapid-photo-downloader rawstudio rawtherapee # graphics 2d metadata exif jpeg 
-sudo apt-get install enigmail esmtp imapfilter mutt muttprint offlineimap urlview # email 
-sudo apt-get install enscript # convert postscript 
-sudo apt-get install ent 
-sudo apt-get install etherape ipcalc nmap sipcalc traceroute # network 
-sudo apt-get install extundelete 
-sudo apt-get install fakeroot # chroot 
-sudo apt-get install ffmpeg # video 
-sudo apt-get install fortune-mod # strfile 
-sudo apt-get install fuseiso 
-sudo apt-get install gawk 
-sudo apt-get install gedit gedit-developer-plugins 
-sudo apt-get install git-buildpackage 
-sudo apt-get install gnome-specimen # font graphics preview 
-sudo apt-get install gnome-tweak-tool 
-sudo apt-get install gtk-recordmydesktop # video 
-sudo apt-get install help2man # convert 
-sudo apt-get install hplip-gui # printer 
-sudo apt-get install htop iftop iotop nethogs powertop wavemon wifi-radar # monitor cpu memory storage network 
-sudo apt-get install inotify-tools # shell 
-sudo apt-get install ipython ipython-doc pep8 pychecker pyflakes pylint python-dev python-doc python-lxml python-matplotlib python-matplotlib-doc python-pip python-pydot # python dev 
-sudo apt-get install jedit # editor 
-sudo apt-get install keepassx 
-sudo apt-get install kvm qemu # vm virtualization 
-sudo apt-get install libav-tools # video 
-sudo apt-get install libdatetime-format-strptime-perl 
-sudo apt-get install libdvdcss2 ubuntu-restricted-extras w64codecs x264 # audio video codec 
-sudo apt-get install libfreeimage3 lsb-core googleearth-package xfonts-75dpi xfonts-100dpi && make-googleearth-package && sudo dpkg -i googleearth*.deb && rm googleearth*.deb 
-sudo apt-get install libpg-java libpq-dev pgadmin3 # dev postgresql schemaspy 
-sudo apt-get install libva-glx1 vainfo xvba-va-driver && vainfo # video acceleration h.264 
-sudo apt-get install lighttpd # web server 
-sudo apt-get install lyx # latex 
-sudo apt-get install markdown # convert 
-sudo apt-get install mencoder # video 
-sudo apt-get install mp3fs # convert 
-sudo apt-get install msort 
-sudo apt-get install nethack-qt nethack-spoilers # game 
-sudo apt-get install nfs-common # filesystem 
-sudo apt-get install ntp-doc 
-sudo apt-get install openscad 'sweethome3d*' # cad graphics 3d 
-sudo apt-get install openssh-server # ssh server 
-sudo apt-get install paman paprefs pavucontrol # pulseaudio sound configuration 
-sudo apt-get install php5-cli php5-dev # php dev 
-sudo apt-get install pidgin # im 
-sudo apt-get install playonlinux # games 
-sudo apt-get install postgresql 
-sudo apt-get install python-gdata python-gdata-doc # python google export 
-sudo apt-get install rar unrar # compress 
-sudo apt-get install rdesktop # internet 
-sudo apt-get install --reinstall package 
-sudo apt-get install rrdtool 
-sudo apt-get install rsync # filesystem 
-sudo apt-get install screen # virtual terminal 
-sudo apt-get install shunit2 # test bash shell zsh 
-sudo apt-get install snmpd snmp-mibs-downloader tkmib # snmp mib viewer 
-sudo apt-get install sqlite3 sqlite3-doc # database server 
-sudo apt-get install sshfs 
-sudo apt-get install teamspeak-client # chat voice 
-sudo apt-get install tofrodos # convert newline 
-sudo apt-get install ttf-bitstream-vera ttf-dejavu ttf-lyx ttf-xfree86-nonfree # font 
-sudo apt-get install unetbootin 
-sudo apt-get install uniutils # unicode 
-sudo apt-get install vagrant virtualbox-guest-additions-iso # dev environment 
-sudo apt-get install varicad2012-en # cad graphics 3d 
-sudo apt-get install videolan-doc vlc vlc-plugin-pulse # video audio 
-sudo apt-get install vim vim-rails # editor 
-sudo apt-get install wine winetricks # windows 
-sudo apt-get install xautolock 
-sudo apt-get install xclip 
-sudo apt-get install xournal # editor pdf 
-sudo apt-get install xserver-xephyr 
-sudo apt-get install youtube-dl 
-sudo apt-get purge 'ubuntuone-*' unity-lens-friends unity-lens-music unity-lens-photos unity-lens-shopping unity-lens-video zeitgeist # unity spyware 
-sudo apt-get update 
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E6A233DBE3AFBEFC # jedit 
 sudo blkid -o list 
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1688,19 +1510,7 @@ sudo dmidecode --string system-product-name
 sudo dmidecode --string system-serial-number 
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
-sudo do-release-upgrade # ubuntu distro 
 sudo download-mibs 
-sudo dpkg-reconfigure ca-certificates 
-sudo dpkg-reconfigure keyboard-configuration 
-sudo editor /etc/apt/sources.list 
-sudo editor /etc/default/keyboard 
-sudo editor /etc/fstab # mount points 
-sudo editor /etc/hosts # network 
-sudo editor /etc/network/interfaces 
-sudo editor /etc/postgresql/*/main/pg_hba.conf 
-sudo editor /etc/rc.local 
-sudo editor /etc/resolv.conf # dns network 
-sudo editor /etc/X11/xorg.conf 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
@@ -1724,7 +1534,7 @@ sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # se
 sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo localectl set-keymap dvorak # x11 console vt keyboard layout 
 sudo lpadmin -d printername # set default printer cups 
-sudo lshw | pager 
+sudo lshw | less 
 sudo make distclean 2>&1 | tee make_distclean.out~ 
 sudo make docinstall 2>&1 | tee make_docinstall.out~ 
 sudo make install 
@@ -1767,15 +1577,8 @@ sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable
 sudo service cups restart 
 sudo service postgresql reload 
 sudo service postgresql status 
-sudo sh -c 'add-apt-repository "deb http://repository.spotify.com stable non-free" && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 94558F59 && apt-get update && apt-get install spotify-client' 
-sudo sh -c 'add-apt-repository ppa:voria/ppa && apt-get update && apt-get install samsung-backlight' 
-sudo sh -c 'add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer oracle-java7-set-default intellij-idea-ce && update-java-alternatives -s java-7-oracle' # oracle java sdk jdk intellij ide 
-sudo sh -c 'apt-get install awesome awesome-extra gnome-session-fallback notification-daemon && printf "%s\n" "[Desktop Entry]" "Version=1.0" "Type=Application" "Name=awesome" "TryExec=awesome" "Exec=awesome" > /usr/share/applications/awesome.desktop && printf "%s\n" "[GNOME Session]" "Name=awesome" "RequiredComponents=gnome-settings-daemon;" "RequiredProviders=windowmanager;notifications;" "DefaultProvider-windowmanager=awesome" "DefaultProvider-notifications=notification-daemon" > /usr/share/gnome-session/sessions/awesome.session && printf "%s\n" "[Desktop Entry]" "Name=awesome GNOME" "Comment=GNOME with awesome WM" "TryExec=gnome-session" "Exec=gnome-session --session=awesome" "Type=Application" > /usr/share/xsessions/gnome-awesome.desktop' # awesome wm gnome desktop 
-sudo sh -c 'apt-get install hunspell-de-de hunspell-fr language-pack-de language-pack-fr language-pack-nb myspell-nb && find /usr/share/hunspell \( \( -name "en_*.aff" -o -name "en_*.dic" \) -not -name "en_GB*" \) -o \( -type l \( -name "*.aff" -o -name "*.dic" \) \) -exec mv --verbose {} {}.bak \;' # language dictionary english l10n german french norwegian 
-sudo sh -c 'apt-get update && apt-get upgrade --yes && if [ -f /var/run/reboot-required ]; then echo You should reboot; fi' 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
-sudo sh -c "mkdir -p /var/lib/rrdcached/db /var/lib/rrdcached/journal && chown $(printf %q "$USER"):$(printf %q "$(groups | awk '{print $1}')") /var/lib/rrdcached/db /var/lib/rrdcached/journal && apt-get install rrdcached" # fix ubuntu rrdcached install bug 985341 
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
 sudo sh -c 'systemctl start acpid && systemctl enable acpid' 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
@@ -1796,9 +1599,6 @@ sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
 sudo umount "/media/${USER}/mountpoint" 
 sudo umount ~/mp3 
-sudo update-alternatives --config java # interactive 
-sudo update-alternatives --set editor "$(which vim.basic)" # default 
-sudo update-alternatives --set x-www-browser "$(which firefox)" # default 
 sudo updatedb 
 sudo update-grub 
 sudo -u postgres createuser --pwprompt username 
@@ -1820,6 +1620,15 @@ sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "C
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
+sudo vim /etc/apt/sources.list 
+sudo vim /etc/default/keyboard 
+sudo vim /etc/fstab # mount points 
+sudo vim /etc/hosts # network 
+sudo vim /etc/network/interfaces 
+sudo vim /etc/postgresql/*/main/pg_hba.conf 
+sudo vim /etc/rc.local 
+sudo vim /etc/resolv.conf # dns network 
+sudo vim /etc/X11/xorg.conf 
 sudo vipw # edit password users 
 sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
@@ -1886,7 +1695,6 @@ unset variable_or_function
 unset -v variable 
 unzip file.zip # decompress zip 
 unzip -l file.zip # list zip 
-update-java-alternatives --jre --list 
 uptime 
 /usr/local/JDiveLog/bin/jdivelog 
 vagrant box add precise32 http://files.vagrantup.com/precise32.box 
@@ -1900,12 +1708,41 @@ vagrant up # update vm
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
+vim ~/.bash_aliases_local # shell 
+vim ~/.bash_aliases # shell 
+ vim ~/.bash_history # shell 
+vim ~/.bashrc_local # shell 
+vim ~/.bashrc # shell 
+vim ~/.config/awesome/rc.lua 
 vim -c "setfiletype sh" test 
+vim ~/dev/fgit/fgit.sh # dev 
+vim ~/dev/indentect/indentect.sh # dev 
+vim ~/dev/mkgithub/mkgithub.sh # dev 
+vim ~/dev/tilde/.muttrc # email 
+vim ~/dev/tilde/scripts/cleanup.sh 
+vim ~/dev/tilde/scripts/install-all.sh 
+vim ~/dev/tilde/scripts/make-links.sh 
+vim ~/.gitconfig # dev 
+vim .git/config # dev 
+vim .gitignore # dev 
+vim ~/.imapfilter/config.lua 
+vim /lib/udev/rules.d/95-keymap.rules # keyboard 
+vim Makefile # dev 
+vim ~/.mkgithub # dev 
+vim ~/.mozilla/firefox/*/chrome/userContent.css 
+vim ~/.muttrc # email 
+vim ~/.muttrc_local # email 
+vim README.markdown # dev 
+vim ~/.ssh/config 
+vim ~/.vimrc 
+vim ~/.wine/system.reg 
+vim ~/.wine/user.reg 
+vim ~/.xinitrc 
 virtualbox & 
 virtualenv --help 
 virtualenv --python=python2.7 virtualenv 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
-vlc --full-help | pager 
+vlc --full-help | less 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --verbose 2 --advanced ./*.avi 
 vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
@@ -1935,8 +1772,6 @@ while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_pa
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait --event close_write --format %f --monitor test/*) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
-while true; do DISPLAY=:0 compiz --replace; done & # debug wm 
-while true; do DISPLAY=:0 gnome-shell --replace; done & # debug wm 
 whois example.org # dns lookup internet network 
 who # logins users 
 wine --version 
@@ -1967,20 +1802,6 @@ xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
-x-www-browser /tmp/xterm-screenshot.*.html 
-x-www-browser /usr/share/doc/c-cpp-reference/html/C/cref.html # help c dev 
-x-www-browser /usr/share/doc/c-cpp-reference/html/CPLUSPLUS/cref.html # help c++ cpp dev 
-x-www-browser /usr/share/doc/debian-policy/policy.html/index.html # packaging linux dev 
-x-www-browser /usr/share/doc/developers-reference/index.html # packaging linux dev 
-x-www-browser /usr/share/doc/git-doc/index.html # dev help 
-x-www-browser /usr/share/doc/ipython/html/index.html # dev help 
-x-www-browser /usr/share/doc/maint-guide/html/index.en.html # packaging linux dev help 
-x-www-browser /usr/share/doc/nethack-spoilers/gazetteer/index.html # game 
-x-www-browser /usr/share/doc/ntp-doc/html/ntpq.html # help 
-x-www-browser /usr/share/doc/python-doc/html/index.html # dev help 
-x-www-browser /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
-x-www-browser /usr/share/doc/python/python-policy.html/index.html # debian dev help 
-x-www-browser /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 xxd $(which xxd) | head --lines=1 
 yes -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test repeat string 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
