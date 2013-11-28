@@ -7,7 +7,6 @@ These will probably be moved to separate projects after a while:
 
 * `tools.mk` - Auxiliary `make` targets.
 * `scripts/duplicates.sh` - Check for duplicate files in two directories.
-* `scripts/install-all.sh` - Should probably be moved to `.bash_history`.
 * `scripts/make-links.sh` - Create symbolic links for several files in a separate directory, asking for confirmation or diffing if there is a collision.
 * `scripts/__svn_ps1.sh` - Similar to [`__git_ps1.sh`](), provides a string usable in Bash's `$PS1` when sourced while inside a Subversion repository.
 
