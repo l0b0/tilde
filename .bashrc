@@ -162,10 +162,25 @@ export EDITOR='vim'
 # OpenOffice.org
 export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
 
-if [[ -r "$HOME/.bash_aliases" ]]
+# enable color support
+if [[ -x /usr/bin/dircolors ]]
 then
-    source "$HOME/.bash_aliases"
+    if [[ -r "$HOME/.dircolors" ]]
+    then
+        eval "$(dircolors -b "$HOME/.dircolors")"
+    else
+        eval "$(dircolors -b)"
+    fi
+    alias ls='ls --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
+
+# some more ls aliases
+alias l='ls' # Default
+alias la='ls -hlA' # Full info
+alias lsd='ls -hlt' # List sorted by modification time
 
 if [[ -r "$HOME/.bashrc_local" ]]
 then

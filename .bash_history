@@ -79,7 +79,6 @@ cmp --print-bytes $(which arch) $(which uname) # binary diff
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
-completions git config '' | grep user # autocomplete 
 ./configure --help | less # packaging 
 ./configure # packaging 
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
@@ -120,8 +119,6 @@ date --date="Tuesday" # today future midnight
 date --date="Wednesday" # today future midnight 
 date --date="yesterday" # time 
 date +%FT%T.%N # iso time 
-date_range 2000-01-01 2000-12-31 
-date_range 'last Monday' 
 date --rfc-3339=ns --date="2001-02-03T04:05:06.7 + 1 year 2 months 3 days 4 hours 5 minutes 6.7 seconds" # dst time iso 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%dT%H:%M:%S # iso time 
@@ -131,7 +128,7 @@ dd if=/dev/zero of="${sandbox}/zeros.bin" bs=1000 count=5 # create file size
 deactivate # virtualenv 
 declare -a # arrays 
 declare -F # functions 
-declare -f schroedinger # function definition 
+declare -f function_name # function definition 
 declare -p # color variables functions 
 declare # variables functions 
 deluge & # bittorrent gui 
@@ -194,13 +191,11 @@ echo "$TERM" # shell
 echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
 echo "$WINEPREFIX" 
 eject # hardware cd dvd 
-empty_line_before_eof --in-place ./* # newline 
 enable -a # builtins 
 enable -n # disabled builtins 
 env - HOME="$HOME" LOGNAME="$USER" PATH="/usr/bin:/bin" SHELL="$(which sh)" command # emulate cron command 
 env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
-escaped_declare 
 eval `resize -s 24 80` # terminal 
 eval `ssh-agent` && ssh-add 
 eval "$traps" # signal 
@@ -209,7 +204,6 @@ evince /usr/share/doc/gnu-standards/standards.pdf.gz # help
 evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 ex -c '1' -c '?^[[:space:]]*[^[:space:]#]?' -c $'a\n# New comment' -c 'wq' ~/.bashrc # insert after last match 
-exclude_vcs < <(grep --fixed-strings --recursive --regexp 'foo' .) # search literal source 
 exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
@@ -231,8 +225,6 @@ fgit pull -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/$USER/*/*/.git/..
 fgit push -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. 
 fgit status -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/$USER/*/*/.git/.. 
 file README.markdown 
-find_date_sorted . -mindepth 1 # files 
-find_date_sorted . -mindepth 1 | sort --reverse --zero-terminated | while IFS= read -r -d ''; do stat -- "$REPLY"; done # files loop reverse 
 find . -empty 
 find . -empty -delete # remove files 
 find . -exec printf '%s\0' {} + | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
@@ -245,7 +237,6 @@ find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
-find . -type f -name file | exclude_vcs 
 find . -type f -name '*.*' | sed -e 's/.*\.//' | sort | uniq --count | sort --general-numeric-sort # file extensions count 
 find -version 
 firefox -no-remote -P secondary & 
@@ -274,8 +265,6 @@ fortune
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 free # memory 
 fromdos -- file # convert newline 
-fullname 
-fullname root 
 fuseiso -p file.bin "/media/${USER}/mountpoint" # mount 
 fusermount -u "/media/${USER}/mountpoint" # unmount 
 gcc --version 
@@ -564,7 +553,6 @@ info --raw-escapes --subnodes ls | less --raw-control-chars # help
 info --raw-escapes --subnodes mktemp | less --raw-control-chars # help examples temporary files 
 info --raw-escapes --subnodes sed | less --raw-control-chars # help 
 inkscape & # editor svg 
-insert_after_last '^[ \t]*[^# \t]' '# Comment 1' ~/.bashrc 
 iostat 
 ip addr show dev eth0 # ipv4 ipv6 device address 
 ip addr show # ipv4 ipv6 network address 
@@ -626,9 +614,6 @@ locale
 locale --all-locales 
 localectl list-keymaps # keyboard layout list 
 locate file 
-log_time_diff < /var/log/syslog | sort --numeric --reverse --key=1 | head 
-longer 80 example.txt 
-longest < ~/.bash_history 
 lpstat -d # default printer cups 
 lpstat -v # list all printers cups 
 lsblk # list block device disk 
@@ -1071,8 +1056,6 @@ man xxd # help
 man yes # help 
 man youtube-dl # help 
 man zip # help 
-markdown_page README.markdown > README.xhtml && x-www-browser README.xhtml 
-markdown_page ~/todo/*.markdown > ~/todo.xhtml && x-www-browser ~/todo.xhtml # list 
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
@@ -1258,8 +1241,6 @@ perl -c file.pl # check syntax
 perl -d -e 1 # interactive console 
 perldoc file.pl # help 
 perldoc -f kill # help function 
-perl_modules 
-perl_module_version URI 
 perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
@@ -1441,7 +1422,6 @@ shopt -s globstar # option set **
 shopt -s globstar && wc --lines ./**/**.ext # count recursive lines 
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
-shortest < ~/.bash_history 
 shred --remove filename # overwrite delete file 
 shuf --input-range 0-1 --head-count 1 # random number range 
 simple-scan & 
@@ -1757,7 +1737,6 @@ vncviewer :2 # remote desktop
 w 
 wait # process pid 
 watch --color --differences -- git diff --color=always # change 
-watch_url http://example.org/ '/irrelevant variable/d;s/search/replacement/g' 1d # change 
 wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
 wget --output-document - http://user:password@host/function?id=foo 2>service.log | json_pp # web service 
@@ -1768,7 +1747,6 @@ while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-t
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} + | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
-while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.markdown$ ]]; then markdown_page "$REPLY" > "${REPLY%.markdown}.xhtml"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait --event close_write --format %f --monitor test/*) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
