@@ -613,6 +613,9 @@ ln --symbolic -- target source
 locale 
 locale --all-locales 
 localectl list-keymaps # keyboard layout list 
+localectl list-x11-keymap-layouts # keyboard layout list 
+localectl list-x11-keymap-models # keyboard list 
+localectl list-x11-keymap-variants us # keyboard list 
 locate file 
 lpstat -d # default printer cups 
 lpstat -v # list all printers cups 
