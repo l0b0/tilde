@@ -80,4 +80,4 @@ test_file() {
 
 # load and run shUnit2
 test -n "${ZSH_VERSION:-}" && SHUNIT_PARENT=$0
-. /usr/share/shunit2/shunit2
+. /usr/share/shunit2/shunit2 || . /usr/bin/shunit2
