@@ -127,8 +127,8 @@ dd if=/dev/urandom bs=1kB count=1 | ent # calculate entropy
 dd if=/dev/zero of="${sandbox}/zeros.bin" bs=1000 count=5 # create file size 
 deactivate # virtualenv 
 declare -a # arrays 
-declare -F # functions 
 declare -f function_name # function definition 
+declare -F # functions 
 declare -p # color variables functions 
 declare # variables functions 
 deluge & # bittorrent gui 
