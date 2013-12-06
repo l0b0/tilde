@@ -1158,6 +1158,7 @@ mkgithub ~/dev/Smooth-CoffeeScript
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
 mkgithub ~/dev/subsurface 
+mkgithub ~/dev/svn_ps1 
 mkgithub ~/dev/teaching_C 
 mkgithub ~/dev/tilde 
 mkgithub ~/dev/trim 

@@ -12,7 +12,6 @@ DOTFILES = $(wildcard .*rc) \
            .screenlayout \
            .screenrc \
            .signatures \
-           .subversion \
            .vim \
            .xinitrc \
            .Xresources

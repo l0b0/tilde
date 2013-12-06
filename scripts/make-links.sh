@@ -58,7 +58,7 @@ set -o errexit -o noclobber -o nounset -o pipefail
 
 # Defaults
 default_diff=(diff -s)
-default_excludes=('\.' '\.\.' '\.git' '\.svn')
+default_excludes=('\.' '\.\.' '\.git')
 
 directory="$(dirname -- "$0")"
 

@@ -44,10 +44,6 @@ then
     source /etc/bash_completion
     set -o nounset
 fi
-if [[ -r ~/dev/tilde/scripts/__svn_ps1.sh ]]
-then
-    source ~/dev/tilde/scripts/__svn_ps1.sh
-fi
 
 color_enabled() {
     local -i colors=$(tput colors 2>/dev/null)
@@ -135,24 +131,6 @@ then
     export GIT_PS1_SHOWSTASHSTATE=1
     export GIT_PS1_SHOWUPSTREAM="auto"
 fi
-
-# Subversion branch
-svn_prompt() {
-    if ! type -t __svn_ps1 >/dev/null
-    then
-        return
-    fi
-
-    # Warn if you're not in the top directory of the checkout
-    if [[ -d ../.svn ]]
-    then
-        __svn_ps1 ' ('${BOLD_FORMAT}${WARNING_FORMAT}%s${RESET_FORMAT}')'
-    else
-        __svn_ps1 ' (%s)'
-    fi
-}
-
-PS1="$PS1"'$(svn_prompt)\n\$ '
 
 # Default editor
 export GIT_EDITOR='vim'
