@@ -163,11 +163,6 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
-if [[ -r "$HOME/.bashrc_local" ]]
-then
-    source "$HOME/.bashrc_local"
-fi
-
 # Avoid Bash autocompletion tilde expansion
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
@@ -208,6 +203,11 @@ done
 
 export DEBFULLNAME="$(grep "^${USER}:" /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1)"
 export DEBEMAIL="$(tr A-Z a-z <<<"${DEBFULLNAME/ /@}").name"
+
+if [[ -r "$HOME/.bashrc_local" ]]
+then
+    source "$HOME/.bashrc_local"
+fi
 
 set +o noclobber +o nounset +o pipefail
 shopt -u nullglob
