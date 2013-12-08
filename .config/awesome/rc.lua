@@ -507,7 +507,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- {{{ Autostart
 -- Start most common applications
 awful.util.spawn("firefox")
-awful.util.spawn("jedit -reuseview")
 awful.util.spawn("pidgin")
 awful.util.spawn("xterm")
 -- }}}
