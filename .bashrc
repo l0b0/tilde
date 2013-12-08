@@ -163,6 +163,9 @@ alias l='ls' # Default
 alias la='ls -hlA' # Full info
 alias lsd='ls -hlt' # List sorted by modification time
 
+# Use vim, not vi
+alias vi=vim
+
 # Avoid Bash autocompletion tilde expansion
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
