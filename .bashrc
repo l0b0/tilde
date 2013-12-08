@@ -132,6 +132,9 @@ then
     export GIT_PS1_SHOWUPSTREAM="auto"
 fi
 
+# Prompt end
+PS1="$PS1"$'\n$ '
+
 # Default editor
 export GIT_EDITOR='vim'
 export VISUAL='vim'
