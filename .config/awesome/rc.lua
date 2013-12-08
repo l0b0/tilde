@@ -427,8 +427,12 @@ awful.rules.rules = {
                      tag = tags[screen.count()]["media"] } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[math.min(2, screen.count())][2] } },
+    { rule_any = { class = { "Digikam", "Gimp", "Inkscape", "libreoffice-startcenter", "Simple-scan" } },
+      properties = { tag = tags[math.min(2, screen.count())][3] } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[math.min(2, screen.count())][5] } },
+    { rule_any = { class = { "feh", "Vlc" } },
+      properties = { tag = tags[math.min(2, screen.count())][6] } },
 }
 -- }}}
 
