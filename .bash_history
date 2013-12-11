@@ -1054,6 +1054,7 @@ man xrandr # help
 man xrdb # help 
 man xscreensaver-command # help 
 man xscreensaver-demo # help 
+man xscreensaver # help 
 man xsltproc # help 
 man xwininfo # help 
 man xxd # help 
