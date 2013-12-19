@@ -57,7 +57,7 @@ INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
 RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
 # Exit code
-PS1='$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s $BOLD_FORMAT $ERROR_FORMAT $exit_code $RESET_FORMAT " ")'
+PS1='$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
 
 if [[ "$USER" = 'root' ]]
 then
