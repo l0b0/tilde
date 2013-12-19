@@ -23,6 +23,10 @@ all: test
 clean:
 	$(CURDIR)/scripts/cleanup.sh --verbose
 
+.PHONY: test
+test:
+	find . \( -name '*.md' -o -name '*.markdown' \) -exec markdown {} \;
+
 .PHONY: install
 install:
 	$(CURDIR)/scripts/make-links.sh -v $(addprefix $(CURDIR)/, $(DOTFILES)) $(PREFIX)
