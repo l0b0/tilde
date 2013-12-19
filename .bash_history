@@ -608,7 +608,7 @@ less /var/log/syslog
 less /var/log/Xorg.0.log 
 libreoffice & 
 /lib/udev/findkeyboards 
-livestreamer http://www.twitch.tv/foo high & # video web 
+livestreamer http://www.twitch.tv/foo best & # video web 
 ll 
 ln --symbolic -- target source 
 locale 
