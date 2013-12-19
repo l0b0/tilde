@@ -1,5 +1,5 @@
-`X`
----
+X
+-
 
 Reboot hung system safely (aka. [Magic SysRq key](https://en.wikipedia.org/wiki/Magic_SysRq_key)): <kbd>Alt</kbd>+<kbd>SysRq</kbd>+
 
