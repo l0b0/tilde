@@ -12,8 +12,6 @@ These will probably be moved to separate projects after a while:
 Install
 -------
 
-    git clone git://github.com/l0b0/tilde.git
+    git clone --recursive git://github.com/l0b0/tilde.git
     cd tilde
-    git submodule update --init
-    make test # Optional
     make install # NOT as root

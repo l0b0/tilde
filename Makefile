@@ -23,10 +23,6 @@ all: test
 clean:
 	$(CURDIR)/scripts/cleanup.sh --verbose
 
-.PHONY: test
-test:
-	$(CURDIR)/tests/tests.sh
-
 .PHONY: install
 install:
 	$(CURDIR)/scripts/make-links.sh -v $(addprefix $(CURDIR)/, $(DOTFILES)) $(PREFIX)
