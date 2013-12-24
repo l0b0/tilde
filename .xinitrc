@@ -28,6 +28,9 @@ then
 fi
 unset user_resources
 
+# Keyboard settings
+xmodmap "${HOME}/.Xmodmap"
+
 # Machine specific settings
 local_xinitrc=$HOME/.xinitrc_local
 if [ -f "$local_xinitrc" ]
