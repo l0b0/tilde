@@ -26,7 +26,8 @@ clean:
 
 .PHONY: test
 test:
-	find . \( -name '*.md' -o -name '*.markdown' \) -exec markdown {} \;
+	markdown README.markdown > /dev/null
+	markdown doc/keyboard-shortcuts.md > /dev/null
 
 .PHONY: install
 install:
