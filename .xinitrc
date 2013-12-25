@@ -46,6 +46,9 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 
+# Battery monitor task bar applet
+batti &
+
 # Network Manager task bar applet
 nm-applet &
 
