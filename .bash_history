@@ -219,11 +219,11 @@ feh --fullscreen --hide-pointer ./* # images viewer
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fg # foreground job 
-fgit gc -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/$USER/*/*/.git/.. 
+fgit gc -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
 fgit --help 
-fgit pull -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/$USER/*/*/.git/.. 
+fgit pull -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
 fgit push -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. 
-fgit status -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/$USER/*/*/.git/.. 
+fgit status -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
 file README.markdown 
 find . -empty 
 find . -empty -delete # remove files 
@@ -265,8 +265,8 @@ fortune
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 free # memory 
 fromdos -- file # convert newline 
-fuseiso -p file.bin "/media/${USER}/mountpoint" # mount 
-fusermount -u "/media/${USER}/mountpoint" # unmount 
+fuseiso -p file.bin "/media/mountpoint" # mount 
+fusermount -u "/media/mountpoint" # unmount 
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
 gem help rdoc # ruby 
@@ -1456,7 +1456,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < test.sh 
 ssh example.org uptime 
-sshfs hostname: "/media/${USER}/mountpoint" 
+sshfs hostname: "/media/mountpoint" 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint 
@@ -1483,7 +1483,7 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 sudo chown nobody "$sandbox" 
-sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/${USER}/mountpoint" 
+sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
@@ -1530,7 +1530,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
-sudo mkdir "/media/${USER}/mountpoint" 
+sudo mkdir "/media/mountpoint" 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
@@ -1586,7 +1586,7 @@ sudo tcpdump tcp # network debug log packets protocol
 sudo tcpdump 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0 and not src and dst net 127.0.0.1' # network debug log packets internet 
 sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
-sudo umount "/media/${USER}/mountpoint" 
+sudo umount "/media/mountpoint" 
 sudo umount ~/mp3 
 sudo updatedb 
 sudo update-grub 
