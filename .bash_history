@@ -449,10 +449,6 @@ git submodule update --init
 git tag --delete name # local 
 git tag v0.1 
 git --version 
-gksudo etherape & # network traffic visualization 
-gksudo java -jar jdivelog-installer-*.jar & 
-gksudo nm-connection-editor & # network configuration 
-gksudo wifi-radar & 
 glabels & # graphics 
 glc-capture --out recording.glc minecraft 
 glc-play recording.glc 
@@ -576,6 +572,10 @@ jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image
 jobs -l # list all background 
 json_xs < test.json # prettify json 
 json_xs -t null < test.json # verify json format 
+kdesu etherape & # network traffic visualization 
+kdesu java -jar jdivelog-installer-*.jar & 
+kdesu nm-connection-editor & # network configuration 
+kdesu wifi-radar & 
 keepassx & 
 kill -0 $! # check background process pid 
 killall process 
@@ -768,7 +768,6 @@ man gfortran # help
 man git # help 
 man gitk # help 
 man gitstats # help 
-man gksudo # help 
 man glabels # help 
 man gnome-keyring-daemon # help 
 man gpasswd # help 
@@ -813,6 +812,7 @@ man jhead # help
 man join # help 
 man json_pp # help 
 man json_xs # help 
+man kdesu # help 
 man keepassx # help 
 man kill # help 
 man kvm # help 

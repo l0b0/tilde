@@ -135,8 +135,8 @@ myawesomemenu = {
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit },
-   { "reboot" , "gksudo shutdown -r now" },
-   { "shutdown" , "gksudo shutdown -h now" },
+   { "reboot" , "kdesu shutdown -r now" },
+   { "shutdown" , "kdesu shutdown -h now" },
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
