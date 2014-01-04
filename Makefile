@@ -1,18 +1,25 @@
 PREFIX = $(HOME)
 
-DOTFILES = $(wildcard .*rc) \
-           $(wildcard .bash_*) \
+DOTFILES = .ackrc \
+           .bash_history \
+           .bashrc \
            .config \
            .gitattributes \
            .gitconfig \
            .imapfilter \
+           .inputrc \
            .jedit \
+           .muttrc \
+           .offlineimaprc \
+           .perltidyrc \
            .profile \
            .quiltrc-dpkg \
            .screenlayout \
            .screenrc \
            .signatures \
+           .toprc \
            .vim \
+           .vimrc \
            .xinitrc \
            .Xmodmap \
            .Xresources
