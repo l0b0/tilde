@@ -416,7 +416,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
-    { rule_any = { instance = { "Plugin-container", "Luakit", "exe" } },
+    { rule_any = { instance = { "plugin-container", "Luakit", "exe" } },
       properties = { floating = true } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[math.min(2, screen.count())][2] } },
