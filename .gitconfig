@@ -17,6 +17,7 @@
 [mergetool "mymeld"]
 	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $MERGED $REMOTE
 [gui]
+	encoding = utf-8
 	diffcontext = 3
 [core]
 	quotepath = false
