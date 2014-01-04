@@ -1,4 +1,4 @@
-! Remove Caps Lock functionality
+! Remove shift lock functionality
 clear Lock
 
 ! Use Caps Lock button for compose key
