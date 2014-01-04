@@ -1230,6 +1230,7 @@ openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.
 pacman --query bash # package version 
 pacman --query --info bash # package info 
 pacman --query --list bash # list all package files 
+pacman --query --owns $(which bash) # file package owner 
 pacman --sync --search bash # search packages 
 paman & # pulseaudio manager 
 paprefs & # pulseaudio preference 
