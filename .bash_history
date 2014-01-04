@@ -1437,6 +1437,7 @@ simple-scan &
 sipcalc 0.0.0.0/0 
 sipcalc 192.168.0.1/24 
 sleep 1m 
+sleep 5s && xprop # x window properties fullscreen 
 slideshow -f http://github.com/geraldb/slideshow-s6-blank/raw/master/s6blank.txt 
 slideshow -t s6blank presentation.md 
 sloccount . 
