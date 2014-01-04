@@ -1,2 +1,5 @@
-remove Lock = Caps_Lock
-keysym Caps_Lock = Multi_key
+! Remove Caps Lock functionality
+clear Lock
+
+! Use Caps Lock button for compose key
+keysym Multi_key = Multi_key Caps_Lock
