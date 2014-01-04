@@ -1481,7 +1481,6 @@ stty sane # restore terminal state
 sudo addgroup test 
 sudo addgroup "$USER" group 
 sudo adduser test 
-sudo aptdcon --fix-install # package fix rescue daemon 
 sudo blkid -o list 
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1612,7 +1611,6 @@ sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "C
 sudo -u postgres service postgresql reload # configuration 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
-sudo vim /etc/apt/sources.list 
 sudo vim /etc/default/keyboard 
 sudo vim /etc/fstab # mount points 
 sudo vim /etc/hosts # network 
