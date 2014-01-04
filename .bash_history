@@ -1778,7 +1778,7 @@ xinput --list 10 # keyboard device info
 xinput --list-props 10 # keyboard device properties 
 xkill 
 xmllint --shell input.xml # interactive shell xpath xml 
-xmodmap -pp # mouse button list 
+xmodmap -pp # list mouse buttons 
 xmodmap ~/.Xmodmap # read configuration keyboard mouse 
 xprop | grep --color=none "WM_CLASS\|^WM_NAME" 
 xprop # x window properties 
