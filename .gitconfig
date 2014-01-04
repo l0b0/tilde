@@ -9,6 +9,8 @@
 [color]
 	diff = auto
 	status = auto
+	branch = auto
+	ui = auto
 [merge]
 	conflictstyle = diff3
 	tool = mymeld
