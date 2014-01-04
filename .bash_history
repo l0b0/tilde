@@ -1228,6 +1228,7 @@ openssl req -new -key private.pem -out request.pem # create x509 certificate sig
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 pacman --query bash # package version 
+pacman --query --info bash # package info 
 pacman --query --list bash # list all package files 
 pacman --sync --search bash # search packages 
 paman & # pulseaudio manager 
