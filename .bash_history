@@ -891,7 +891,6 @@ man php # help
 man pidgin # help 
 man pidof # help 
 man ping # help 
-man pip # help 
 man pkcs8 # help 
 man pngcrush # help 
 man pod2man # help 
