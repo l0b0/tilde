@@ -1262,6 +1262,8 @@ pidof init # process pid
 pid=$! # process pid 
 ping -c 4 example.org 
 ping example.org 
+pip2 freeze > requirements.txt # save python dependencies 
+pip freeze > requirements.txt # save python dependencies 
 pip help 
 pip help install 
 pngcrush -brute -d target ./*.png # graphics compress 
