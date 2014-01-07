@@ -4,6 +4,7 @@ acpi_listen # events power configuration
 alias ls 
 align_image_stack -vl -a aligned *.jpg # graphics 
 alsamixer # audio input output volume 
+amixer set 'Beep' 0% mute || amixer set 'PC Beep' 0% mute || amixer set 'PC Speaker' 0% mute # mute speaker 
 aplay --list-pcms # list audio output speaker 
 aplay recording.wav # audio output 
 apropos . # all help man 
