@@ -1118,6 +1118,7 @@ mkgithub ~/dev/img2vcard
 mkgithub ~/dev/indentect 
 mkgithub ~/dev/ipcalc 
 mkgithub ~/dev/job-board 
+mkgithub ~/dev/l0b0.github.io 
 mkgithub ~/dev/lfmcol2csv 
 mkgithub ~/dev/lines 
 mkgithub ~/dev/logitech-access-keyboard-bindings 
