@@ -419,6 +419,7 @@ git rebase --abort
 git rebase --continue 
 git rebase --interactive HEAD~20 
 git rebase master 
+git rebase origin/master # avoid empty merge commit 
 git reflog 
 git reflog show --patch-with-stat 
 git remote add -f origin ssh://user@example.org/home/user/repo 
