@@ -20,6 +20,7 @@
 [gui]
 	encoding = utf-8
 	diffcontext = 3
+	spellingdictionary = en_GB
 [core]
 	quotepath = false
 	attributesfile = ~/.gitattributes
