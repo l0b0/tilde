@@ -1,5 +1,5 @@
+! Use Caps Lock button for compose key
+keysym Caps_Lock = Multi_key Caps_Lock
+
 ! Remove shift lock functionality
 clear Lock
-
-! Use Caps Lock button for compose key
-keysym Multi_key = Multi_key Caps_Lock
