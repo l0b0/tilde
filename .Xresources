@@ -8,6 +8,7 @@ XTerm.VT100.metaSendsEscape: true
 XTerm.VT100.printAttributes: 2
 XTerm.VT100.printerCommand: cat - | $HOME/dev/tilde/scripts/ansi2html.sh --bg=dark > "`mktemp --tmpdir xterm-screenshot.XXXXXXXXXX.html`"
 XTerm.VT100.reverseVideo: true
+XTerm.VT100.rightScrollBar: true
 XTerm.VT100.saveLines: 32767
 XTerm.VT100.ScrollBar: true
 XTerm.VT100.scrollKey: true
