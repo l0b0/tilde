@@ -1153,6 +1153,7 @@ mkgithub ~/dev/qr2scad
 mkgithub ~/dev/random 
 mkgithub ~/dev/RAYT 
 mkgithub ~/dev/ruler 
+mkgithub ~/dev/samsung-tools 
 mkgithub ~/dev/schemaspy2svg 
 mkgithub ~/dev/screensaver-info 
 mkgithub ~/dev/see-colon 
