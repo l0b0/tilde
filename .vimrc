@@ -91,4 +91,4 @@ set backupdir=~/.vimtmp,.
 set directory=~/.vimtmp,.
 
 " Load plugins
-runtime plugin/adjust-tabstop.vim
+au VimEnter * runtime plugin/adjust-tabstop.vim
