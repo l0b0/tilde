@@ -1058,6 +1058,7 @@ man xscreensaver-command # help
 man xscreensaver-demo # help 
 man xscreensaver # help 
 man xsltproc # help 
+man xterm # help 
 man xwininfo # help 
 man xxd # help 
 man yes # help 
