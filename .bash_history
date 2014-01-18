@@ -1536,6 +1536,7 @@ sudo ip route del default via 1.2.3.4 dev eth0
 sudo iptables --list # list all firewall rules networ 
 sudo ldconfig 
 sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
+sudo ln --symbolic /media/windows/Windows/Fonts /usr/share/fonts/WindowsFonts # enable windows fonts 
 sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo localectl --no-convert set-keymap dvorak # x11 console vt keyboard layout 
 sudo localectl --no-convert set-x11-keymap us '' dvorak-alt-intl 
