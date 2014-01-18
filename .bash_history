@@ -659,6 +659,7 @@ make python-pychecker
 make python-pyflakes 
 make python-pylint 
 make release # dev 
+make --silent python-pep8 | cut --delimiter=: --fields=4- | grep --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
 make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
