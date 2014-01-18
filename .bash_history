@@ -272,6 +272,7 @@ fuseiso -p file.bin "/media/mountpoint" # mount
 fusermount -u "/media/mountpoint" # unmount 
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
+gdb program # debug 
 gem help rdoc # ruby 
 gem install bundler 
 gem install pry pry-doc 
@@ -766,6 +767,7 @@ man free # help
 man fuseiso # help 
 man fusermount # help 
 man gcc # help 
+man gdb # help 
 man genrsa # help 
 man getconf # help 
 man getent # help 
