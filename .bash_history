@@ -213,6 +213,7 @@ facter # hardware os
 facter --help 
 facter id # user 
 fc # edit command history 
+fc-list | sort # list fonts 
 fc -l # list commands history 
 fc -s # execute last command history 
 feh --auto-zoom --scale-down --recursive . # images viewer resize 
@@ -748,6 +749,7 @@ man expand # help
 man expect # help 
 man extundelete # help 
 man fakeroot # help 
+man fc-list # help 
 man fdisk # help 
 man feh # help 
 man ffmpeg # help 
