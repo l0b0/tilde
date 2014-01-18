@@ -212,6 +212,7 @@ expand --tabs=4 test.txt # convert tab space
 facter # hardware os 
 facter --help 
 facter id # user 
+fc-cache # refresh fonts 
 fc # edit command history 
 fc-list | sort # list fonts 
 fc -l # list commands history 
@@ -750,6 +751,7 @@ man expand # help
 man expect # help 
 man extundelete # help 
 man fakeroot # help 
+man fc-cache # help 
 man fc-list # help 
 man fdisk # help 
 man feh # help 
