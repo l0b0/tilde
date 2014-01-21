@@ -54,4 +54,6 @@ nm-applet &
 
 xscreensaver -no-splash &
 
+which numlockx && numlockx &
+
 exec awesome
