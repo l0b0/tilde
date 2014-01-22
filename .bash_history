@@ -826,6 +826,7 @@ man keepassx # help
 man keytool # help 
 man kill # help 
 man kvm # help 
+man lastlog # help 
 man ldconfig # help 
 man ldd # help 
 man ld # help 
