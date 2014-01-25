@@ -1240,6 +1240,7 @@ ntpq -p # query list peers
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl asn1parse -in ~/.ssh/id_?sa # decode key 
 openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa key hex 
+openssl pkcs12 -export -inkey name.key.pem -in name.crt.pem -out name.p12 # merge certificate key 
 openssl pkcs12 -info -in name.p12 -noout # list verify 
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl req -text -in name.csr.pem # list certificate request properties 
