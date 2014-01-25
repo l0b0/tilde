@@ -823,6 +823,7 @@ man json_pp # help
 man json_xs # help 
 man kdesu # help 
 man keepassx # help 
+man keytool # help 
 man kill # help 
 man kvm # help 
 man ldconfig # help 
@@ -923,6 +924,7 @@ man readlink # help
 man reboot # help 
 man recordmydesktop # help 
 man rename # help 
+man req # help 
 man resize # help 
 man rm # help 
 man route # help 
@@ -1170,6 +1172,7 @@ mkgithub ~/dev/SICP
 mkgithub ~/dev/Smooth-CoffeeScript 
 mkgithub ~/dev/spark 
 mkgithub ~/dev/Standardy 
+mkgithub ~/dev/startssl4java 
 mkgithub ~/dev/subsurface 
 mkgithub ~/dev/svn_ps1 
 mkgithub ~/dev/teaching_C 
