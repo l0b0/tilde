@@ -902,6 +902,7 @@ man php # help
 man pidgin # help 
 man pidof # help 
 man ping # help 
+man pkcs12 # help 
 man pkcs8 # help 
 man pngcrush # help 
 man pod2man # help 
@@ -1239,6 +1240,7 @@ ntpq -p # query list peers
 openscad ~/dev/crumbling-beaker/beaker.scad & 
 openssl asn1parse -in ~/.ssh/id_?sa # decode key 
 openssl genrsa -des3 -out private.pem 4096 # create des3 encrypted private rsa key hex 
+openssl pkcs12 -info -in name.p12 -noout # list verify 
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl x509 -noout -fingerprint -text < my.crt 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
