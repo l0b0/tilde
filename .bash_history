@@ -1414,6 +1414,7 @@ scanimage --list-devices # scanner
 schemaspy2svg ~/db 
 schemaspy2svg --help 
 scp example.org:/home/jdoe/example.txt . 
+scp -i ~/.ssh/server.pem example.txt user@example.org: # alternative key 
 scp -P 2222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
 screen 
@@ -1487,6 +1488,7 @@ ssh example.org
 ssh example.org < test.sh 
 ssh example.org uptime 
 sshfs hostname: "/media/mountpoint" 
+ssh -i ~/.ssh/server.pem user@example.org # alternative key 
 ssh-keygen -f "~/.ssh/known_hosts" -R [1.2.3.4]:1234 # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint 
