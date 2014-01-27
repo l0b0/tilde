@@ -855,6 +855,7 @@ man mencoder # help
 man mkdir # help 
 man mkfifo # help 
 man mktemp # help 
+man modinfo # help 
 man mount # help 
 man mp3fs # help 
 man mutt # help 
@@ -1197,6 +1198,7 @@ mkgithub ~/dev/xml
 mkgithub ~/dev/xspf2csv 
 mkgithub ~/dev/xterm-color-count 
 mkgithub --help 
+modinfo i915 # kernel module 
 mogrify -crop 2316x1303+0+0 ./*.jpg 
 mogrify -format jpg ./*.CR2 # convert 
 mount-image ./*.iso 
