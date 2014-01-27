@@ -1602,16 +1602,15 @@ sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip ad
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
 sudo sh -c 'systemctl start acpid && systemctl enable acpid' 
 sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
+sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
-sudo systemctl enable cupsd.service 
 sudo systemctl enable NetworkManager # network gui configuration 
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
 sudo systemctl start sshd.service 
-sudo systemctl status cupsd.service 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tcpdump # network debug log packets 
 sudo tcpdump tcp # network debug log packets protocol 
