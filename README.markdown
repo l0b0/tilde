@@ -1,6 +1,8 @@
 Home directory scripts and configuration
 ========================================
 
+[![Build Status](https://jenkins.engmark.name:8080/job/tilde/badge/icon)](https://jenkins.engmark.name:8080/job/tilde/)
+
 These files are mostly my own settings and tools, but some may be more generally useful.
 
 These will probably be moved to separate projects after a while:
