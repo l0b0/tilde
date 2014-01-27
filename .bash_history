@@ -1562,6 +1562,7 @@ sudo make install 2>&1 | tee make_install.out~
 sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
 sudo make topclean 2>&1 | tee make_topclean.out~ 
 sudo make uninstall 
+sudo mandb # update apropos database manual 
 sudo mkdir "/media/mountpoint" 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
