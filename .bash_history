@@ -1672,7 +1672,6 @@ tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress fl
 tar --list --gzip --file ~/tilde.tar.gz 
 telnet localhost 1234 # network 
 ./test.sh 
-./test.sh "first argument" "second argument 
 ./test.sh "first argument" "second argument" 
 thunar-volman-settings & # mount removable storage 
 tig 
