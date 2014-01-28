@@ -33,6 +33,7 @@ clean:
 
 .PHONY: test
 test:
+	bash -o noexec .bash_history
 	markdown README.markdown > /dev/null
 	markdown doc/keyboard-shortcuts.md > /dev/null
 
