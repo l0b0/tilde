@@ -29,7 +29,7 @@ avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clo
 awesome --check # configuration verify parse 
 basename -- "$PWD" # current directory name 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
-bashdb test.sh # debug script 
+bashdb example.sh # debug script 
 bash --noprofile --norc -x # test trace 
 bash -o noexec ~/.bash_history # verify syntax 
 bash -o xtrace # debug 
@@ -75,7 +75,7 @@ cd - # back
 cd -- "$(mktemp --directory)" # create temporary directory 
 certutil # help 
 checkbashisms ./*.sh 
-chmod u+x test.sh 
+chmod u+x example.sh # permission executable 
 clamtk & # antivirus 
 cmp --print-bytes $(which arch) $(which uname) # binary diff 
 coffee -v # coffeescript 
@@ -99,7 +99,7 @@ crontab -e # edit
 crontab -l # list 
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' # split vcard file 
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
-csvtool col 3 test.csv # csv column 
+csvtool col 3 example.csv # csv column 
 csvtool --help | less 
 cucumber --dry-run # rails 
 cucumber # rails 
@@ -165,7 +165,7 @@ digikam & # photo manager
 dirname -- "$PWD" # parent directory 
 disown # job 
 dmesg | less # debug os startup 
-dos2unix test.txt # convert newline 
+dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dotty graph.dot # graphics 
@@ -177,6 +177,8 @@ echo $BASHPID # shell subshell pid
 echo "body" > ~/.events/summary # notify 
 echo "${COLUMNS}x${LINES}" # terminal size dimensions 
 (echo 'ctrl_interface=/var/run/wpa_supplicant' && wpa_passphrase ssid passphrase) | sudo tee /etc/wpa_supplicant.conf # configuration wireless network wpa supplicant 
+echo example | xclip # clipboard mouse copy 
+echo example | xclip -selection clipboard # clipboard keyboard copy 
 echo $? # exit code 
 echo 'LC_PAPER="en_GB.UTF-8"' | sudo tee --append /etc/environment # print 
 echo "$OSTYPE" 
@@ -209,7 +211,7 @@ ex -c '1' -c '?^[[:space:]]*[^[:space:]#]?' -c $'a\n# New comment' -c 'wq' ~/.ba
 exec $SHELL # replace 
 exit 
 exiv2 print IMG_1234.exv # metadata 
-expand --tabs=4 test.txt # convert tab space 
+expand --tabs=4 example.txt # convert tab space 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -576,8 +578,8 @@ java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.Laun
 jedit -reuseview # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
-json_xs < test.json # prettify json 
-json_xs -t null < test.json # verify json format 
+json_xs < example.json # prettify json 
+json_xs -t null < example.json # verify json format 
 kdesu etherape & # network traffic visualization 
 kdesu java -jar jdivelog-installer-*.jar & 
 kdesu nm-connection-editor & # network configuration 
@@ -1095,8 +1097,8 @@ mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
 mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
+mkdir -- example # create directory 
 mkdir mp3 
-mkdir test 
 mkfifo pipe1 pipe2 
 mkgithub --configure --https --verbose --user l0b0 
 mkgithub --configure --ssh --verbose --user l0b0 
@@ -1214,7 +1216,7 @@ mp3fs -obitrate=256 ~/music/ ~/mp3 # mount
 mutt 
 mutt -d 5 
 mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
-mutt-ldap.pl name # test 
+mutt-ldap.pl name # ldap search 
 mutt -v 
 mutt -vv 
 mv file{.orig,} 
@@ -1316,8 +1318,6 @@ printf %q "$PS1" # escape bash
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard copy test 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip -selection clipboard # test clipboard keyboard copy 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip # test clipboard mouse copy 
 printf %s "${IFS:0:1}" 
 printf "${USER}%.0s" {1..5} # repeat string 
 prove 
@@ -1401,7 +1401,7 @@ reset # clear log remove terminal text
 rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rmdir ./* 
 rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-rm file 
+rm -- example.txt 
 rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 rrdtool create test.rrd --start -3600 DS:content:GAUGE:600:U:U RRA:AVERAGE:0.5:1:10 
@@ -1434,7 +1434,7 @@ script --quiet --command "$SHELL"
 scrot --delay 5 # screenshot 
 sed '9d' file # delete line one-indexed 
 sed '/^$/d' file # delete empty lines 
-sed '/pattern/r./input.txt' test.txt # insert merge file pattern 
+sed '/pattern/r./input.txt' example.txt # insert merge file pattern 
 sed --quiet '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 sed '/^[[:space:]]*$/d' file # delete whitespace line 
 service snmpd status 
@@ -1493,7 +1493,7 @@ splint foo.c
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
 ssh example.org 
-ssh example.org < test.sh 
+ssh example.org < example.sh # execute shell script remote 
 ssh example.org uptime 
 sshfs hostname: "/media/mountpoint" 
 ssh -i ~/.ssh/server.pem user@example.org # alternative key 
@@ -1511,24 +1511,24 @@ stat --format '%A %U %G %s %y %n' ./* # list permissions user group file
 stat --format %i / # inode 
 stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
 strace -Cf bash -lc true # count calls profile summary 
-strace -fe open ./test.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
+strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
 strings $(which strings) 
 stty --all # terminal settings 
 stty sane # restore terminal state 
-sudo addgroup test 
+sudo addgroup example 
 sudo addgroup "$USER" group 
-sudo adduser test 
+sudo adduser example 
 sudo blkid -o list 
 sudo chfn -f "My Name" "$USER" # full name 
-sudo chgrp --recursive nogroup -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
+sudo chgrp --recursive nogroup -- example.txt # set group file 
 sudo chown nobody "$sandbox" 
 sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
 sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
-sudo delgroup test # delete group 
-sudo deluser test # delete user 
+sudo delgroup example # delete group 
+sudo deluser example # delete user 
 sudo ~/dev/tilde/scripts/install-all.sh 
 sudo ~/dev/tilde/scripts/suspend-on-close.sh 
 sudo dmidecode 
@@ -1717,7 +1717,7 @@ uname --all
 uname --kernel-name --kernel-release --kernel-version --machine --processor --hardware-platform --operating-system # anonymized 
 unetbootin 
 unetbootin & 
-unexpand --tabs=4 test.txt # convert space tab 
+unexpand --tabs=4 example.txt # convert space tab 
 unix2dos contacts.vcf # newline convert 
 unset -f function 
 unset variable_or_function 
@@ -1743,7 +1743,7 @@ vim ~/.bash_aliases # shell
 vim ~/.bashrc_local # shell 
 vim ~/.bashrc # shell 
 vim ~/.config/awesome/rc.lua 
-vim -c "setfiletype sh" test 
+vim -c "setfiletype sh" example.txt 
 vim ~/dev/fgit/fgit.sh # dev 
 vim ~/dev/indentect/indentect.sh # dev 
 vim ~/dev/mkgithub/mkgithub.sh # dev 
@@ -1786,7 +1786,7 @@ vncviewer :2 # remote desktop
 w 
 wait # process pid 
 watch --color --differences -- git diff --color=always # change 
-wc --lines -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | head --lines=1 | cut --delimiter ' ' --fields 1 # line count test 
+wc --lines -- example.txt # line count 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
 wget --output-document - http://user:password@host/function?id=foo 2>service.log | json_pp # web service 
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
@@ -1832,9 +1832,9 @@ xterm -version
 xwininfo -id $(xdotool selectwindow) 
 xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
 xxd $(which xxd) | head --lines=1 
-yes -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test repeat string 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
+yes -- example # repeat string 
 youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
 zip --update file.zip input # add file compress zip 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
