@@ -276,12 +276,8 @@ fusermount -u "/media/mountpoint" # unmount
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
 gdb program # debug 
-gem help rdoc # ruby 
 gem install bundler 
-gem install pry pry-doc 
-gem list --help 
 gem list --local 
-gem rdoc --all 
 gem server 
 gem uninstall foo # remove 
 getconf ARG_MAX # arguments 
@@ -318,8 +314,6 @@ git cherry-pick HEAD@{5}
 git cherry-pick master:HEAD 
 git clean --dry-run -d # directories 
 git clean --dry-run -dx # directories .gitignore 
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv # install ruby 
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build # install ruby 
 git clone git://libdivecomputer.git.sourceforge.net/gitroot/libdivecomputer/libdivecomputer 
 git clone --recurse-submodules https://github.com/l0b0/cronlist.deb ~/dev/cronlist-0.1 && cd ~/dev/cronlist-0.1 && git remote add upstream git://github.com/l0b0/cronlist.git && git fetch upstream && git branch upstream && wget --output-document ~/dev/cronlist_0.1.orig.tar.gz https://github.com/l0b0/cronlist/tarball/v0.1 && git-import-orig --pristine-tar ~/dev/cronlist_0.1.orig.tar.gz 
 git clone --recurse-submodules https://github.com/l0b0/mkgithub.git 
@@ -483,13 +477,6 @@ grep --version
 groups 
 groups nobody 
 groups "$USER" 
-guard 
-guard --group functional:controller # test 
-guard --group unit:decorator 
-guard --group unit:model 
-guard help 
-guard list 
-guard show 
 gunzip example.gz 
 gzip example.txt # compress 
 help alias 
@@ -925,7 +912,6 @@ man puppet # help
 man python # help 
 man qemu # help 
 man quilt # help 
-man rake # help 
 man rdesktop # help 
 man readelf # help 
 man readlink # help 
@@ -1349,41 +1335,9 @@ qgit --all . & # gui
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qtpfsgui & # hdr photo editor 
 rails console 
-rails destroy controller sessions # delete database 
-rails destroy scaffold user # delete database 
-rails generate controller sessions new create destroy # create database 
-rails generate --help 
-rails generate migration add_email_to_user email:string email_plain_text_only:boolean # create database 
-rails generate scaffold user name:string full_name:string hashed_password:string salt:string description:text password_expiration:datetime birthday:date visits:integer photo:binary enabled:boolean distance:float weight:decimal update_stats:time last_checkout:timestamp # create database 
-rails generate spine:scaffold user name # create javascript 
 rails new project_name # create 
-rails server --environment production --port 3002 # start service web 
-rails server --environment test --port 3001 # start service web 
 rails server # start service web 
-rails --version 
-rake assets:clean 
-rake db:migrate # all rails database 
-rake db:migrate:redo VERSION=20010203123456 # rails database 
-rake db:migrate --trace # rails database 
-rake db:reset --trace # rails database 
-rake db:reset --trace && rails s # database 
-rake db:rollback --trace # rails database 
-rake db:schema:dump # rails database 
-rake db:seed --trace # rails database 
-rake db:setup # rails database 
-rake db:test:prepare --trace # rails database 
-rake routes # rails web 
-rake spec # rails test 
-rake --tasks # rails 
-rake test # rails 
 rbash # restricted 
-rbenv help # ruby 
-rbenv install --list # ruby all install 
-rbenv install < .ruby-version && rbenv rehash # ruby install 
-rbenv local 1.2.3 # ruby project version 
-rbenv version # ruby installed 
-rbenv versions # ruby all installed 
-rbenv which rails # ruby gem binary path 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
 readelf --all $(which readelf) # executable binary 
 readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
@@ -1540,7 +1494,6 @@ sudo download-mibs
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
 sudo fdisk -l # list all disks 
-sudo gem install slideshow 
 sudo gpasswd --add $USER group # user add group 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
@@ -1796,7 +1749,6 @@ while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-t
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} \; | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
-while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*_test\.rb$ ]]; then rake test; fi; done 9< <(inotifywait --event close_write --format %f --monitor test/*) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
 whois example.org # dns lookup internet network 
