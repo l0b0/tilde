@@ -28,13 +28,10 @@ avconv -i input.mov -codec copy -ss 15 output.mov # video cut
 avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
 awesome --check # configuration verify parse 
 basename -- "$PWD" # current directory name 
-bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
 bashdb example.sh # debug shell script 
 bash --noprofile --norc -x # test trace shell 
 bash -o noexec ~/.bash_history # verify shell script syntax 
 bash -o xtrace # debug shell 
-bash test.sh # run script 
-bash --version 
 bc <<< '2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bc --mathlib <<< 'e(1)' # calculator math e power 
@@ -70,7 +67,6 @@ cat /proc/stat # hardware
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
-cd -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 cd - # back 
 cd -- "$(mktemp --directory)" # create temporary directory 
 certutil # help 
@@ -154,10 +150,8 @@ df --human-readable # filesystem list all
 ! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 difff --help 
-diff <(git diff --staged --minimal) <(~/bin/git diff --staged --minimal) # test option 
 diff --unified file{.orig,} # files 
 diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
-diff --unified <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp) <(bash -c 'trap -- $'\''printf %s --\$\`!*@\		\\\\\\\'\''\\"𠂉\ $\'\''\\n\'\'''\'' INT; traps="$(trap)"; eval "$traps"; kill -INT $$' | uniname -bcp) # test 
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
@@ -192,7 +186,6 @@ echo "$REPLY" # read
 echo return _VERSION | awesome-client # lua version 
 echo $$ # shell pid 
 echo "$TERM" # shell 
-echo 'test foo test bar test' | grep --only-matching test | wc --lines # count 
 echo "$WINEPREFIX" 
 eject # hardware cd dvd 
 enable -a # builtins 
@@ -556,11 +549,8 @@ ip route show dev eth0 # network
 ipython 
 irb # interactive ruby shell 
 iwconfig # wireless network configuration 
-java -classpath ~/dev/hello-world/out/production/hello-world/ hello 
-JAVA_HOME=~/bin/jre ~/bin/pycharm/bin/pycharm.sh & # python ide dev 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
-java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jedit -reuseview # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
@@ -1082,7 +1072,6 @@ meld <(wget --output-document - http://git.gnome.org/browse/meld/plain/.gitignor
 mencoder -fps 10 -nosound -ovc copy timelapse.mp4 -o timelapse-slow.mp4 # video 
 mian ~/.minecraft/saves/New\ World 
 minecraft & 
-mkdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 mkdir -- example # create directory 
 mkdir mp3 
 mkfifo pipe1 pipe2 
@@ -1298,10 +1287,8 @@ printf \0 | uniname -bcepu # 1 zero escape quote
 printf $'\0' | wc --chars # 0 escape quote 
 printf "$IFS" | od --format x1 # string character byte convert hex dump posix 
 printf "$IFS" | xxd -groupsize 1 # string character byte convert hex dump 
-printf %q $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # escape test 
 printf %q "$IFS" # escape bash 
 printf %q "$PS1" # escape bash 
-printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' > $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard copy test 
 printf %s "${IFS:0:1}" 
@@ -1340,7 +1327,6 @@ rails server # start service web
 rbash # restricted 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
 readelf --all $(which readelf) # executable binary 
-readlink --canonicalize -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
 read < "/path" 
 read -r var 
@@ -1352,11 +1338,8 @@ rename --no-act --verbose 's#/([^/]+)$#/prefix $1#' ./* # prefix
 rename --no-act --verbose 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
 rename --no-act --verbose 's/\.txt$/\.html/' ./*.txt # extension suffix 
 reset # clear log remove terminal text 
-rm -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rmdir ./* 
-rmdir -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
 rm -- example.txt 
-rm -- ~/pubring.gpg ~/secring.gpg 
 route 
 rsync --archive --human-readable --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
@@ -1625,8 +1608,6 @@ tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip
 tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
 tar --list --gzip --file ~/tilde.tar.gz 
 telnet localhost 1234 # network 
-./test.sh 
-./test.sh "first argument" "second argument" 
 thunar-volman-settings & # mount removable storage 
 tig 
 time bash -lc true # benchmark startup login shell 
@@ -1638,14 +1619,10 @@ todos -- file # convert newline
 top 
 top -c # command line 
 top -p "`pgrep -d ',' bash`" 
-touch -- $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' # test 
-touch --date '1970-01-01 00:00:00 UTC' test && find . -maxdepth 1 -name test -printf '%T@ %p\n' 
 tput colors 
 traceroute example.org 
-trap -- $'printf %s --\$\`!*@\		\\\\\\\'\\"𠂉\ $\'\\n\'' INT # signal 
 trap # signal 
 traps="$(trap)" # signal 
-! ! true && ! false && echo verified 
 tty 
 txt2cloud 
 txt2cloud --min 3 < $(which txt2cloud) > cloud.xhtml 
