@@ -990,6 +990,7 @@ man sudo # help
 man su # help 
 man sweethome3d # help 
 man synclient # help 
+man syndaemon # help 
 man system-config-printer # help 
 man systemd-analyze # help 
 man tac # help 

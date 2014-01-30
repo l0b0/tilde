@@ -54,4 +54,6 @@ nm-applet &
 
 xscreensaver -no-splash &
 
+syndaemon -d -t -k
+
 exec awesome
