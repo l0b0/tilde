@@ -552,7 +552,7 @@ iwconfig # wireless network configuration
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
 java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
-jedit -reuseview # dev editor 
+jedit -reuseview & # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
 json_xs < example.json # prettify json 
