@@ -29,10 +29,10 @@ avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clo
 awesome --check # configuration verify parse 
 basename -- "$PWD" # current directory name 
 bash -c 'trap "echo baz" INT; kill -INT $$' > test.txt # signal 
-bashdb example.sh # debug script 
-bash --noprofile --norc -x # test trace 
-bash -o noexec ~/.bash_history # verify syntax 
-bash -o xtrace # debug 
+bashdb example.sh # debug shell script 
+bash --noprofile --norc -x # test trace shell 
+bash -o noexec ~/.bash_history # verify shell script syntax 
+bash -o xtrace # debug shell 
 bash test.sh # run script 
 bash --version 
 bc <<< '2+2' # calculator math 
@@ -338,7 +338,7 @@ git diff --color-words
 git diff | diff-ignore-moved-lines 
 git diff --exit-code # check 
 git diff 'HEAD@{2013.04.30 08:00}' # date 
-git diff HEAD^ -- README.markdown 
+git diff HEAD^ -- README.markdown # last commit 
 git diff --ignore-all-space 
 git diff --ignore-all-space --no-color | git apply --cached 
 git diff --ignore-space-change 
@@ -571,8 +571,8 @@ irb # interactive ruby shell
 iwconfig # wireless network configuration 
 java -classpath ~/dev/hello-world/out/production/hello-world/ hello 
 JAVA_HOME=~/bin/jre ~/bin/pycharm/bin/pycharm.sh & # python ide dev 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
-java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # db visualization 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
+java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
 java -jar /usr/local/bin/technic-launcher-latest.jar 
 java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
 jedit -reuseview # dev editor 
