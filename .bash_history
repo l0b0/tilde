@@ -991,6 +991,7 @@ man su # help
 man sweethome3d # help 
 man synclient # help 
 man syndaemon # help 
+man sysctl # help 
 man system-config-printer # help 
 man systemd-analyze # help 
 man tac # help 
@@ -1661,6 +1662,7 @@ sudo Xorg :1 -configure
 sum <<< '2 2' 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
+sysctl --all # list kernel parameters 
 system-config-printer & 
 systemctl status slim.service 
 systemd-analyze plot > startup-timing.svg # time 
