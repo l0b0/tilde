@@ -1612,6 +1612,7 @@ sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
+sudo sysctl --all # list kernel parameters 
 sudo systemctl enable NetworkManager # network gui configuration 
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
@@ -1662,7 +1663,6 @@ sudo Xorg :1 -configure
 sum <<< '2 2' 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
-sysctl --all # list kernel parameters 
 system-config-printer & 
 systemctl status slim.service 
 systemd-analyze plot > startup-timing.svg # time 
