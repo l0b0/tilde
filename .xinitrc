@@ -44,6 +44,11 @@ unset local_xinitrc
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
+if which syndaemon
+then
+    syndaemon -d -t -k
+fi
+
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 
 # Battery monitor task bar applet
@@ -53,7 +58,5 @@ batti &
 nm-applet &
 
 xscreensaver -no-splash &
-
-syndaemon -d -t -k
 
 exec awesome
