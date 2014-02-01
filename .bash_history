@@ -1485,6 +1485,7 @@ source ~/.bash_aliases_local
 source ~/.bashrc 
 source virtualenv/bin/activate 
 speaker-test --channels 2 
+speaker-test --device plughw:2,3 # test audio device 
 splint foo.c 
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 ssh-copy-id example.org 
