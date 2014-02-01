@@ -783,6 +783,7 @@ man gpasswd # help
 man gpg # help 
 man grep # help 
 man groups # help 
+man grub-mkconfig # help 
 man gunzip # help 
 man head # help 
 man <(help2man help2man) # help 
@@ -1610,6 +1611,7 @@ sudo sh -c 'systemctl start acpid && systemctl enable acpid'
 sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
 sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
+sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
 sudo strace -p 123 # process 
