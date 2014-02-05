@@ -46,7 +46,7 @@ export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
 if which syndaemon
 then
-    syndaemon -d -t -k
+    syndaemon -i 0.3 -m 50 -d -t -K
 fi
 
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
