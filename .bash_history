@@ -672,6 +672,7 @@ man ascii # help
 man ash # help 
 man asn1parse # help 
 man avahi-browse # help 
+man avahi-daemon # help 
 man avconv # help 
 man awk # help 
 man basename # help 
@@ -1539,6 +1540,7 @@ sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
 sudo sh -c 'systemctl start acpid && systemctl enable acpid' 
+sudo sh -c 'systemctl start avahi-daemon && systemctl enable avahi-daemon' # printer discovery service 
 sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
 sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
 sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
