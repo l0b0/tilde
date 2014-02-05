@@ -35,7 +35,7 @@
 
 directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-. "$directory/../shell-includes/functions.sh"
+. "$directory/../shell-includes/usage.sh"
 
 start_dir_x="$(readlink -fn -- "$1"; echo x)"
 start_dir="${start_dir_x%x}"

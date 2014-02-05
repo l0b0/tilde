@@ -62,12 +62,14 @@ default_excludes=('\.' '\.\.' '\.git')
 
 directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-. "$directory/../shell-includes/functions.sh"
+. "$directory/../shell-includes/error.sh"
+. "$directory/../shell-includes/usage.sh"
+. "$directory/../shell-includes/variables.sh"
 
 # Process parameters
 params="$(getopt -o d:e:fshv \
     -l diff:,exclude:,force,skip-existing,help,verbose \
-    --name "$cmdname" -- "$@")"
+    --name "$script" -- "$@")"
 
 if [ $? -ne 0 ]
 then
@@ -109,11 +111,11 @@ do
             shift
             if [ -z "${1:-}" ]
             then
-                error "$(printf %q "${cmdname}"): Missing targets." "$help_info" $EX_USAGE
+                error "$(printf %q "${script}"): Missing targets." $ex_usage
             fi
             if [ -z "${2:-}" ]
             then
-                error "$(printf %q "${cmdname}"): Missing directory." "$help_info" $EX_USAGE
+                error "$(printf %q "${script}"): Missing directory." $ex_usage
             fi
             targets=(${@:1:$(($#-1))})
             source_dir="${@:$#}"
@@ -127,7 +129,7 @@ done
 
 if [ ! -d "$source_dir" ]
 then
-    error "$(printf %q "${cmdname}"): Not a directory: $(printf %q "$source_dir")" "$help_info" $EX_USAGE
+    error "$(printf %q "${script}"): Not a directory: $(printf %q "$source_dir")" $ex_usage
 fi
 
 # Set defaults
@@ -141,7 +143,7 @@ for target_path in "${targets[@]}"
 do
     if [ ! -e "$target_path" ]
     then
-        error "$(printf %q "${cmdname}"): Target does not exist: $(printf %q "$target_path")" $EX_USAGE
+        error "$(printf %q "${script}"): Target does not exist: $(printf %q "$target_path")" $ex_usage
     fi
 
     target_file="$(basename -- "$target_path")"
@@ -183,7 +185,7 @@ do
 
     if [[ "${action-}" =~ ^[Ss]$ ]]
     then
-        verbose_echo "Skipping $source_path"
+        verbose_print_line "Skipping $source_path"
         continue
     fi
 
