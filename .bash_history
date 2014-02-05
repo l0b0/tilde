@@ -1449,8 +1449,7 @@ set +o pipefail # error
 set +o xtrace # disable 
 set -o xtrace # enable 
 ./setup.py test 
-setxkbmap -device 11 -layout us # keyboard device config 
-setxkbmap -layout us -variant dvorak-alt-intl # keyboard layout config 
+setxkbmap -device 10 -layout us -variant dvorak-alt-intl # keyboard layout config 
 setxkbmap -option compose:caps # keyboard 
 setxkbmap -print # keyboard settings 
 setxkbmap -verbose | awk -F '+' '/^symbols:/ {print $2}' # keyboard layout settings 
