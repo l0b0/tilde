@@ -60,7 +60,7 @@ set -o errexit -o noclobber -o nounset -o pipefail
 default_diff=(diff -s)
 default_excludes=('\.' '\.\.' '\.git')
 
-directory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
+directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 . "$directory/../shell-includes/functions.sh"
 
