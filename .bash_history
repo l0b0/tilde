@@ -1173,6 +1173,7 @@ mkgithub ~/dev/unrarr # compress
 mkgithub ~/dev/urlwatcher 
 mkgithub ~/dev/vcard 
 mkgithub ~/dev/vcard2mutt 
+mkgithub ~/dev/vcard4 
 mkgithub ~/dev/vcf 
 mkgithub ~/dev/worktime 
 mkgithub ~/dev/xbug 
