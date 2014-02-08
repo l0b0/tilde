@@ -366,6 +366,7 @@ git help ignore
 git help init 
 git help instaweb 
 git help log 
+git help ls-files 
 git help ls-tree 
 git help merge 
 git help mergetool 
@@ -394,6 +395,7 @@ git log --oneline --decorate
 git log origin/master..HEAD # remote 
 git log --patch-with-stat 
 git log --stat 
+git ls-files '*.py' # list files 
 git ls-tree --long HEAD ./* | awk '{print $4 " " $5}' # file size commit 
 git merge --abort # cancel revert 
 git merge origin/master 
