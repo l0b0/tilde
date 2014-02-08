@@ -636,6 +636,7 @@ make && echo finished > ~/.events/compilation || echo failed > ~/.events/compila
 make explain 2>&1 | grep MAKE # dev 
 make explain-MAKE # dev 
 make install # dev 
+make METHOD=git python-pep8 
 makepkg --syncdeps # package build tarball 
 make python-lint 
 make python-pep8 
