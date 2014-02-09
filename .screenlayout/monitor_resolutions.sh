@@ -19,7 +19,7 @@
 #        https://github.com/l0b0/tilde/issues
 #
 # COPYRIGHT
-#        Copyright (C) 2013 Victor Engmark
+#        Copyright (C) 2013-2014 Victor Engmark
 #
 #        This program is free software: you can redistribute it and/or modify
 #        it under the terms of the GNU General Public License as published by
@@ -47,7 +47,7 @@ monitor_resolutions() {
     do
         if [ "${word2:-}" = 'connected' ]
         then
-            IFS='x ' read -r width height _
+            IFS='xi ' read -r width height _
             printf '%s %d %d\n' "$word1" "$width" "$height"
         fi
     done
