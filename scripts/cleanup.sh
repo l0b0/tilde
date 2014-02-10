@@ -78,8 +78,17 @@ sed -i -e 's/ *$/ /' "${directory}/../.bash_history"
 verbose_print_line "Auto-tag .bash_history lines"
 sed -i -e 's/^\(\(man\|info\) [^#]\+\)$/\1# help /' "${directory}/../.bash_history"
 
+verbose_print_line "Get standard formatted X resources file"
+new_file=$(mktemp)
+trap "rm $new_file" EXIT
+set +o noclobber
+xrdb -query > "$new_file"
+set -o noclobber
+mv "$new_file" "$directory"/../.Xresources
+unset new_file
+
 verbose_print_line "Sort text files"
-for path in ~/.config/ipython/profile_default/history.py ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.jedit/keymaps/imported_keys.props ~/.mozilla/*/*/{cert_override.txt,persdict.dat} "${directory}/../.bash_history" "${directory}/../.Xresources"
+for path in ~/.config/ipython/profile_default/history.py ~/.gnupg/ownertrust.txt ~/.jedit/properties ~/.jedit/keymaps/imported_keys.props ~/.mozilla/*/*/{cert_override.txt,persdict.dat} "${directory}/../.bash_history"
 do
     if [ -e "$path" ]
     then
