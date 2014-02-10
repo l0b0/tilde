@@ -8,6 +8,7 @@ amixer --card 2 # list audio hardware device configuration
 amixer set 'Beep' 0% mute || amixer set 'PC Beep' 0% mute || amixer set 'PC Speaker' 0% mute # mute speaker 
 aplay --list-pcms # list audio output speaker 
 aplay recording.wav # audio output 
+appres XTerm # list x application resource database 
 apropos . # all help man 
 apropos bash # help man 
 apropos --exact mv # help man 
@@ -667,6 +668,7 @@ man align_image_stack # help
 man alsamixer # help 
 man amixer # help 
 man aplay # help 
+man appres # help 
 man apropos # help 
 man arandr # help 
 man arch # help 
