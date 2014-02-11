@@ -1761,7 +1761,7 @@ xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace
 xterm -version 
 xwininfo -id $(xdotool selectwindow) 
 xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
-xxd $(which xxd) | head --lines=1 
+xxd $(which xxd) | head --lines=1 # binary hex 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 yes -- example # repeat string 
