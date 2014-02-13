@@ -1,6 +1,6 @@
 PREFIX = $(HOME)
 
-DOTFILES = .ackrc \
+dotfiles = .ackrc \
            .bash_history \
            .bashrc \
            .config \
@@ -24,7 +24,7 @@ DOTFILES = .ackrc \
            .Xmodmap \
            .Xresources
 
-dotfile_links = $(addprefix $(HOME)/,$(DOTFILES))
+dotfile_links = $(addprefix $(HOME)/,$(dotfiles))
 
 .PHONY: all
 all: test
