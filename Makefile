@@ -44,6 +44,12 @@ uninstall:
 .PHONY: test
 test:
 	bash -o noexec .bash_history
+	dir="$$(mktemp -d)" && \
+		make dotfiles=.gitconfig PREFIX="$$dir" install && \
+		[ $$(find "$$dir" -mindepth 1 -type l -name .gitconfig | wc -l) -eq 1 ] && \
+		make dotfiles=.gitconfig PREFIX="$$dir" uninstall && \
+		[ $$(find "$$dir" -mindepth 1 -type l -name .gitconfig | wc -l) -eq 0 ] && \
+		rmdir "$$dir"
 	markdown README.markdown > /dev/null
 	markdown doc/keyboard-shortcuts.md > /dev/null
 
