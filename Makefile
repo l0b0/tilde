@@ -24,7 +24,7 @@ dotfiles = .ackrc \
            .Xmodmap \
            .Xresources
 
-dotfile_links = $(addprefix $(HOME)/,$(dotfiles))
+dotfile_links = $(addprefix $(PREFIX)/,$(dotfiles))
 
 .PHONY: all
 all: test
@@ -47,7 +47,7 @@ test:
 	markdown README.markdown > /dev/null
 	markdown doc/keyboard-shortcuts.md > /dev/null
 
-$(dotfile_links): $(addprefix $(HOME)/,%) : $(addprefix $(CURDIR)/,%)
+$(dotfile_links): $(addprefix $(PREFIX)/,%) : $(addprefix $(CURDIR)/,%)
 	ln --verbose --symbolic $< $@
 
 .PHONY: dotfiles
