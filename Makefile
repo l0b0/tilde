@@ -33,8 +33,8 @@ all: test
 clean:
 	$(CURDIR)/scripts/cleanup.sh --verbose
 
-.PHONY: clean_dotfiles
-clean_dotfiles:
+.PHONY: uninstall
+uninstall:
 	for path in $(dotfile_links); do \
 		if [ -L $$path ]; then \
 			rm --verbose $$path || exit $$?; \
