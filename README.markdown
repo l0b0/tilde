@@ -8,7 +8,6 @@ These files are mostly my own settings and tools, but some may be more generally
 These will probably be moved to separate projects after a while:
 
 * `scripts/duplicates.sh` - Check for duplicate files in two directories.
-* `scripts/make-links.sh` - Create symbolic links for several files in a separate directory, asking for confirmation or diffing if there is a collision.
 
 Install
 -------
