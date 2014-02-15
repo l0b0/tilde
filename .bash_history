@@ -473,6 +473,7 @@ grep --version
 groups 
 groups nobody 
 groups "$USER" 
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf # pdf remove password 
 gunzip example.gz 
 gzip example.txt # compress 
 help alias 
@@ -771,6 +772,7 @@ man gpg # help
 man grep # help 
 man groups # help 
 man grub-mkconfig # help 
+man gs # help 
 man gunzip # help 
 man head # help 
 man <(help2man help2man) # help 
