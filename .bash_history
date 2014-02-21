@@ -1730,6 +1730,7 @@ which make
 while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} \; | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
+while IFS= read -r -d '' -u 9; do sed --in-place '/\x0/{q;}; s/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # file whitespace eol eof 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while read; do xdotool windowactivate $REPLY; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
