@@ -343,7 +343,7 @@ git fetch
 git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
 git gc # garbage collect 
-git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # whitespace eol eof 
+git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # git whitespace eol eof 
 git gui & 
 git help add 
 git help bisect 
@@ -1727,7 +1727,7 @@ wget --output-document - http://user:password@host/function?id=foo 2>service.log
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
 which make 
-while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # whitespace eol eof 
+while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # text whitespace eol eof 
 while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} \; | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -d '' -u 9; do sed --in-place '/\x0/{q;}; s/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # file whitespace eol eof 
