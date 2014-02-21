@@ -1609,7 +1609,7 @@ sweethome3d &
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 system-config-printer & 
 systemctl status slim.service 
-systemd-analyze plot > startup-timing.svg # time 
+systemd-analyze plot > startup-timing.svg # time startup 
 TAGS=all guard 
 TAGS="$USER" guard 
 tail --follow=name --retry --lines 0 /var/log/wpa_supplicant.log 
