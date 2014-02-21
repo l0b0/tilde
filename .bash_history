@@ -1611,7 +1611,7 @@ synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug
 system-config-printer & 
 systemctl status slim.service 
 systemd-analyze dot | dot -Tsvg > startup-dependencies.svg # 2d startup process dependencies 
-systemd-analyze plot > startup-timing.svg # time startup 
+systemd-analyze plot > startup-timing.svg # time startup process 
 TAGS=all guard 
 TAGS="$USER" guard 
 tail --follow=name --retry --lines 0 /var/log/wpa_supplicant.log 
