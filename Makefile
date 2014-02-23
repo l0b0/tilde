@@ -26,7 +26,8 @@ dotfiles = .ackrc \
 
 dotfile_links = $(addprefix $(PREFIX)/,$(dotfiles))
 
-gpg_configuration_path = $(PREFIX)/.gnupg/trustdb.gpg
+gpg_configuration_path = $(PREFIX)/.gnupg
+gpg_trust_database_path = $(gpg_configuration_path)/trustdb.gpg
 gpg_backup_path = $(gpg_configuration_path)/ownertrust.txt
 
 signature_dat_files = $(patsubst %.sig,%.dat,$(wildcard .signatures/*.sig))
@@ -36,7 +37,7 @@ all: test
 
 .PHONY: $(gpg_backup_path)
 $(gpg_backup_path):
-	if [ -e "$(gpg_configuration_path)" ]; then \
+	if [ -e "$(gpg_trust_database_path)" ]; then \
 		gpg --export-ownertrust > "$@" || exit $$?; \
 	fi
 
