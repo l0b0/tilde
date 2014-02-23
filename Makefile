@@ -16,6 +16,7 @@ dotfiles = .ackrc \
            .quiltrc-dpkg \
            .screenlayout \
            .screenrc \
+           .stellarium \
            .signatures \
            .toprc \
            .vim \

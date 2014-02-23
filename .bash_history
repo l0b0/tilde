@@ -971,6 +971,7 @@ man ssh # help
 man ssh-keygen # help 
 man stat # help 
 man stdlib.h # help dev c header 
+man stellarium # help 
 man strace # help 
 man strfile # help 
 man strftime # help format string date 
@@ -1450,6 +1451,7 @@ ssh -Y example.org # trusted x11 forwarding
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
 stat --format %i / # inode 
 stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
+stellarium & 
 strace -Cf bash -lc true # count calls profile summary 
 strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
 strings $(which strings) 
@@ -1523,6 +1525,7 @@ sudo pacman --sync --needed --refresh deluge pygtk # torrent gui
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
 sudo pacman --sync --needed --refresh steam # games gui 
+sudo pacman --sync --needed --refresh stellarium # planetarium gui 
 sudo pacman --sync --needed --refresh wine winetricks # windows 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
