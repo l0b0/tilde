@@ -1614,6 +1614,9 @@ sweethome3d &
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 system-config-printer & 
 systemctl status slim.service 
+systemd-analyze blame # list boot service time 
+systemd-analyze # boot time kernel user 
+systemd-analyze critical-chain # boot process dependency time 
 systemd-analyze dot | dot -Tsvg > startup-dependencies.svg # 2d startup process dependencies 
 systemd-analyze plot > startup-timing.svg # time startup process 
 TAGS=all guard 
