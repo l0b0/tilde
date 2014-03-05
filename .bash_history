@@ -1383,7 +1383,7 @@ set -o nounset # variable error
 set +o nounset # variable error 
 set -o pipefail # error 
 set +o pipefail # error 
-(set -o posix; set) | grep --only-matching ^COMP[^=]* 
+(set -o posix; set) | grep --only-matching '^COMP[^=]*' 
 (set -o posix; set) # list all options 
 set +o xtrace # disable 
 set -o xtrace # enable 
