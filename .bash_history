@@ -1296,13 +1296,13 @@ printf $"\0" | uniname -bcepu # 1 nul escape quote
 printf \\0 | uniname -bcepu # 1 nul escape quote 
 printf \0 | uniname -bcepu # 1 zero escape quote 
 printf $'\0' | wc --chars # 0 escape quote 
-printf "$IFS" | od --format x1 # string character byte convert hex dump posix 
-printf "$IFS" | xxd -groupsize 1 # string character byte convert hex dump 
 printf %q "$IFS" # escape bash 
 printf %q "$PS1" # escape bash 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard copy test 
 printf %s "${IFS:0:1}" 
+printf %s "$IFS" | od --format x1 # string character byte convert hex dump posix 
+printf %s "$IFS" | xxd -groupsize 1 # string character byte convert hex dump 
 printf "${USER}%.0s" {1..5} # repeat string 
 prove 
 prove --recurse 
