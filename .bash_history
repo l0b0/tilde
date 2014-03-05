@@ -74,7 +74,7 @@ certutil # help
 checkbashisms ./*.sh 
 chmod u+x example.sh # permission executable 
 clamtk & # antivirus 
-cmp --print-bytes $(which arch) $(which uname) # binary diff 
+cmp --print-bytes "$(which arch)" "$(which uname)" # binary diff 
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
@@ -228,7 +228,7 @@ file README.markdown
 find . -empty 
 find . -empty -delete # remove files 
 find . -exec printf '%s\0' {} + | while read -r -d ''; do printf %q "$REPLY"; printf '\n'; done 
-find . -group 1000 -exec chgrp $(id --group) {} + # update files permissions 
+find . -group 1000 -exec chgrp "$(id --group)" {} + # update files permissions 
 find -L . -type l # broken symlinks 
 find . -mindepth 1 -exec printf '%s\0' {} + | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
@@ -579,7 +579,7 @@ la
 la ~ 
 lastlog # login users 
 ldconfig --print-cache # list all libraries 
-ldd $(which bash) 
+ldd "$(which bash)" 
 less /etc/issue 
 less /etc/passwd # password 
 less Makefile 
@@ -1251,7 +1251,7 @@ pacman --query bash # package version
 pacman --query --info bash # package info 
 pacman --query --info | grep -e '^Name' -e '^Required By' | grep -B 1 '^Required By.*\bbash\b' # list reverse dependencies 
 pacman --query --list bash # list all package files 
-pacman --query --owns $(which bash) # file package owner 
+pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
 paman & # pulseaudio manager 
 paprefs & # pulseaudio preference 
@@ -1337,12 +1337,12 @@ rails new project_name # create
 rails server # start service web 
 rbash # restricted 
 rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
-readelf --all $(which readelf) # executable binary 
+readelf --all "$(which readelf)" # executable binary 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
 read < "/path" 
 read -r var 
 read <<< "$text" 
-recordmydesktop --windowid $(xdotool selectwindow) --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
+recordmydesktop --windowid "$(xdotool selectwindow)" --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 rename --no-act 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
 rename --no-act --verbose 's/(\d{4})(\d{2})(\d{2})/$1-$2-$3/' ./* # date 
 rename --no-act --verbose 's#/([^/]+)$#/prefix $1#' ./* # prefix 
@@ -1454,7 +1454,7 @@ stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul
 stellarium & 
 strace -Cf bash -lc true # count calls profile summary 
 strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
-strings $(which strings) 
+strings "$(which strings)" 
 stty --all # terminal settings 
 stty sane # restore terminal state 
 sudo addgroup example 
@@ -1556,7 +1556,7 @@ sudo sh -c 'systemctl start avahi-daemon && systemctl enable avahi-daemon' # pri
 sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
 sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
 sudo sh -c 'systemctl start NetworkManager && systemctl enable NetworkManager' # network service 
-sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)' # text 
+sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
@@ -1644,7 +1644,7 @@ trap # signal
 traps="$(trap)" # signal 
 tty 
 txt2cloud 
-txt2cloud --min 3 < $(which txt2cloud) > cloud.xhtml 
+txt2cloud --min 3 < "$(which txt2cloud)" > cloud.xhtml 
 type -a true 
 udevadm info --export-db 
 udevadm monitor --environment kernel # live events 
@@ -1722,7 +1722,7 @@ vmware
 vncpasswd 
 vncserver -kill :1 # stop service 
 vncserver -list # all 
-vncserver -localhost -geometry $(xrandr | sed --quiet 's/.*current \([0-9]*\) x \([0-9]*\).*/\1x\2/p') # start service remote desktop 
+vncserver -localhost -geometry "$(xrandr | sed --quiet 's/.*current \([0-9]*\) x \([0-9]*\).*/\1x\2/p')" # start service remote desktop 
 vncviewer :1 # local desktop 
 vncviewer :2 # remote desktop 
 w 
@@ -1771,9 +1771,9 @@ xscreensaver-demo & # settings configuration
 xsltproc --output file.xml ~/dev/xml/filter/filter.xslt file.xml # filter xml xslt replace 
 xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace 
 xterm -version 
-xwininfo -id $(xdotool selectwindow) 
-xwininfo -id $(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}') # current window 
-xxd $(which xxd) | head --lines=1 # binary hex 
+xwininfo -id "$(xdotool selectwindow)" 
+xwininfo -id "$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')" # current window 
+xxd "$(which xxd)" | head --lines=1 # binary hex 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 yes -- example # repeat string 
