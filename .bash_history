@@ -911,7 +911,6 @@ man puppet # help
 man python # help 
 man qemu # help 
 man quilt # help 
-man rdesktop # help 
 man readelf # help 
 man readlink # help 
 man reboot # help 
@@ -1336,7 +1335,6 @@ rails console
 rails new project_name # create 
 rails server # start service web 
 rbash # restricted 
-rdesktop -r clipboard:CLIPBOARD -k de-ch -g 1280x1024 -r disk:$USER=$HOME hostname & # remote keyboard share windows 
 readelf --all "$(which readelf)" # executable binary 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
 read < "/path" 
