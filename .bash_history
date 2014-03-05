@@ -2,7 +2,7 @@ ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log
 ack-grep "pattern" . # search 
 acpi_listen # events power configuration 
 alias ls 
-align_image_stack -vl -a aligned *.jpg # graphics 
+align_image_stack -vl -a aligned ./*.jpg # graphics 
 alsamixer # audio input output volume 
 amixer --card 2 # list audio hardware device configuration 
 amixer set 'Beep' 0% mute || amixer set 'PC Beep' 0% mute || amixer set 'PC Speaker' 0% mute # mute speaker 
@@ -133,7 +133,7 @@ declare # variables functions
 deluge & # bittorrent gui 
 ~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua # debug awesome configuration 
 ~/dev/awmtt/awmtt stop # debug awesome configuration 
-~/dev/meta2jpeg/meta2jpeg.sh *.CR2 # copy metadata graphics image 
+~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/minecraft-scripts/backup.sh # game directory 
 ~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
 ~/dev/minecraft-scripts/install-lwjgl.sh 
@@ -1529,7 +1529,7 @@ sudo pacman --sync --needed --refresh stellarium # planetarium gui
 sudo pacman --sync --needed --refresh wine winetricks # windows 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
-sudo pacman --upgrade *.pkg.tar.xz # install 
+sudo pacman --upgrade ./*.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
