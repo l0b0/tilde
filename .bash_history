@@ -28,6 +28,7 @@ avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.
 avconv -i input.mov -codec copy -ss 15 output.mov # video cut 
 avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
 awesome --check # configuration verify parse 
+awk '{ print $22 }' /proc/1/stat # process start time jiffies since boot 
 basename -- "$PWD" # current directory name 
 bashdb example.sh # debug shell script 
 bash --noprofile --norc -x # test trace shell 
@@ -59,7 +60,6 @@ cat ~/contacts/*.vcf > ~/all.vcf # concatenate vcard
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
-awk '{ print $22 }' /proc/1/stat # process start time jiffies since boot 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
 cat /proc/filesystems # hardware 
