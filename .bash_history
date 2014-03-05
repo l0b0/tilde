@@ -194,8 +194,8 @@ enable -n # disabled builtins
 env - HOME="$HOME" LOGNAME="$USER" PATH="/usr/bin:/bin" SHELL="$(which sh)" command # emulate cron command 
 env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$*}" "${@+@=$@}" "${-+-=$-}" "${!+!=$!}" "${_+_=$_}" "${$+$=$$}"; env' 
 env # variable 
-eval `resize -s 24 80` # terminal 
-eval `ssh-agent` && ssh-add 
+eval "$(resize -s 24 80)" # terminal 
+eval "$(ssh-agent)" && ssh-add 
 eval "$traps" # signal 
 evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance 
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
