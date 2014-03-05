@@ -59,7 +59,7 @@ cat ~/contacts/*.vcf > ~/all.vcf # concatenate vcard
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
-cat /proc/1/stat | awk '{ print $22 }' # process start time jiffies since boot 
+awk '{ print $22 }' /proc/1/stat # process start time jiffies since boot 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
 cat /proc/filesystems # hardware 
