@@ -1635,7 +1635,7 @@ tkmib &
 todos -- file # convert newline 
 top 
 top -c # command line 
-top -p "`pgrep -d ',' bash`" 
+top -p "$(pgrep -d ',' bash)" 
 tput colors 
 traceroute example.org 
 trap # signal 
