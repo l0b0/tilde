@@ -1435,7 +1435,6 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < example.sh # execute shell script remote 
 ssh example.org uptime 
-sshfs hostname: "/media/mountpoint" 
 ssh -i ~/.ssh/server.pem user@example.org # alternative key 
 ssh-keygen -f ~"/.ssh/known_hosts" -R '[1.2.3.4]:1234' # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
@@ -1519,7 +1518,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion batti bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted graphviz gutenprint gvfs htop hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rsync scrot simple-scan slim system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
+sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion batti bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted graphviz gutenprint gvfs htop hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rsync scrot sshfs simple-scan slim system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
@@ -1559,6 +1558,7 @@ sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
+sudo sshfs host:/path /run/mount/host 
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
 sudo systemctl enable NetworkManager # network gui configuration 
