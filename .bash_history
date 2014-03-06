@@ -206,6 +206,7 @@ exec "$SHELL" # replace
 exit 
 exiv2 print IMG_1234.exv # metadata 
 expand --tabs=4 example.txt # convert tab space 
+export DISPLAY=:0.0 # remote x display 
 facter # hardware os 
 facter --help 
 facter id # user 
