@@ -122,6 +122,7 @@ date +%FT%T.%N # iso time
 date --rfc-3339=ns --date="2001-02-03T04:05:06.7 + 1 year 2 months 3 days 4 hours 5 minutes 6.7 seconds" # dst time iso 
 date --rfc-3339=seconds --date="@1000000000" # convert timestamp 
 date +%Y-%m-%dT%H:%M:%S # iso time 
+dd if=/dev/cdrom of=cdrom.iso # rip cd 
 dd if=/dev/null of=/file/to/truncate seek=1 bs=1024 # truncate file bytes 
 dd if=/dev/urandom bs=1kB count=1 | ent # calculate entropy 
 dd if=/dev/zero of="${sandbox}/zeros.bin" bs=1000 count=5 # create file size 
