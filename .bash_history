@@ -918,6 +918,7 @@ man reboot # help
 man recordmydesktop # help 
 man rename # help 
 man req # help 
+man reset # help 
 man resize # help 
 man rm # help 
 man route # help 
