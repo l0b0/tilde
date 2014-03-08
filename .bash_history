@@ -65,6 +65,7 @@ cat /proc/devices # hardware
 cat /proc/filesystems # hardware 
 cat /proc/misc # hardware 
 cat /proc/stat # hardware 
+cat /proc/sys/dev/cdrom/info 
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
