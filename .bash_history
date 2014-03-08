@@ -476,6 +476,8 @@ grep --regexp ^ --regexp "^$USER:" /etc/passwd # context highlight
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
 grep --version 
+grive --auth # authenticate google drive 
+grive # upload download sync files google drive 
 groups 
 groups nobody 
 groups "$USER" 
@@ -778,6 +780,7 @@ man gpg # help
 man gphoto2 # help 
 man graphviz # help 
 man grep # help 
+man grive # help 
 man groups # help 
 man grub-mkconfig # help 
 man gs # help 
