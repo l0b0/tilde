@@ -266,7 +266,7 @@ for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done
 for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
-free # memory 
+free --human # memory 
 fromdos -- file # convert newline 
 fuseiso -p file.bin "/media/mountpoint" # mount 
 fusermount -u "/media/mountpoint" # unmount 
