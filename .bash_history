@@ -574,7 +574,7 @@ kdesu java -jar jdivelog-installer-*.jar &
 kdesu nm-connection-editor & # network configuration 
 kdesu wifi-radar & 
 keepassx & 
-kill -0 $! # check background process pid 
+kill -0 "$!" # check background process pid 
 killall process 
 kill -INT $$ # signal 
 kill -l # list signals 
@@ -1218,7 +1218,7 @@ mutt -v
 mutt -vv 
 mv file{.orig,} 
 ncal -3bM 
-nc -l 12345 & netstat --tcp --all | grep :12345 && kill $! # test network listen port 
+nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
 nethack-qt & 
 netstat 
@@ -1784,7 +1784,7 @@ xterm -version
 xwininfo -id "$(xdotool selectwindow)" 
 xwininfo -id "$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')" # current window 
 xxd "$(which xxd)" | head --lines=1 # binary hex 
-(yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 $! # process pid pipe stdin 
+(yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 "$!" # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 yes -- example # repeat string 
 youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
