@@ -326,6 +326,7 @@ git config --global mergetool.prompt false
 git config --list 
 GIT_CURL_VERBOSE=1 git pull # debug 
 git diff 
+git diff --cached # stage 
 git diff --color-words 
 git diff | diff-ignore-moved-lines 
 git diff --exit-code # check 
