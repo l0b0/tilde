@@ -570,6 +570,7 @@ java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.Laun
 jedit -reuseview & # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
+journalctl --since=today --output=short-iso # systemd service log 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
 kdesu etherape & # network traffic visualization 
@@ -825,6 +826,7 @@ man java # help
 man jedit # help 
 man jhead # help 
 man join # help 
+man journalctl # help 
 man json_pp # help 
 man json_xs # help 
 man kdesu # help 
