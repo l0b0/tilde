@@ -158,7 +158,6 @@ diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
-digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
 disown # job 
 dmesg | less # debug os startup 
@@ -731,7 +730,6 @@ man dhclient # help
 man dh_make # help 
 man diff # help 
 man dig # help 
-man digikam # help 
 man dirname # help 
 man dmidecode # help 
 man dos2unix # help 
@@ -928,6 +926,7 @@ man puppet # help
 man python # help 
 man qemu # help 
 man quilt # help 
+man rawtherapee # help 
 man readelf # help 
 man readlink # help 
 man reboot # help 
@@ -1353,6 +1352,7 @@ qtpfsgui & # hdr photo editor
 rails console 
 rails new project_name # create 
 rails server # start service web 
+rawtherapee & # raw photo editor 
 rbash # restricted 
 readelf --all "$(which readelf)" # executable binary 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
@@ -1536,7 +1536,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion batti bc cups cups-filters digikam dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rsync scrot sshfs simple-scan slim system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
+sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion batti bc cups cups-filters dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rawtherapee rsync scrot sshfs simple-scan slim system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
