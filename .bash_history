@@ -628,6 +628,7 @@ lshw
 ls -l --all # list 
 ls -l --block-size 1 # list files size bytes 
 ls -l --directory ./*/ # list directories 
+lslocks # list file locks 
 ls -l --reverse # list 
 ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
@@ -850,6 +851,7 @@ man lpstat # help
 man lsblk # help 
 man lsb_release # help 
 man lscpu # help 
+man lslocks # help 
 man lsof # help 
 man lynx # help 
 man make # help 
