@@ -638,7 +638,9 @@ lsof -i tcp # internet network
 lsof # list open files 
 lsof -p $$ # files process 
 lspci | grep --ignore-case audio 
+lspci # list pci hardware 
 lsusb | grep --ignore-case cam 
+lsusb # list usb hardware 
 lyx file.lyx 
 m4 --version # compile dev 
 make 2>&1 | tee > make_compile.out~ # compile dev 
@@ -854,6 +856,8 @@ man lscpu # help
 man lslocks # help 
 man lsmod # help 
 man lsof # help 
+man lspci # help 
+man lsusb # help 
 man lynx # help 
 man make # help 
 man makepkg # help 
