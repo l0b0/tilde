@@ -852,6 +852,7 @@ man lsblk # help
 man lsb_release # help 
 man lscpu # help 
 man lslocks # help 
+man lsmod # help 
 man lsof # help 
 man lynx # help 
 man make # help 
