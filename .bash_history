@@ -632,9 +632,9 @@ ls -l --reverse # list
 ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
 lsof +c 0 | grep process-name | wc --lines # count files 
-lsof # files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
+lsof # list open files 
 lsof -p $$ # files process 
 lspci | grep --ignore-case audio 
 lsusb | grep --ignore-case cam 
