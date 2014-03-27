@@ -471,7 +471,6 @@ grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --compl
 grep --fixed-strings --recursive --exclude-dir .git --regexp 'foo' . # search literal source 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
-grep --quiet "^flags.*\blm\b" /proc/cpuinfo # 64 bit long mode 
 grep --recursive --no-filename --only-matching 'foo' . | wc --lines # sum count search 
 grep --regexp ^ --regexp "^$USER:" /etc/passwd # context highlight 
 grep ":$USER\$" /etc/group 
@@ -622,6 +621,7 @@ lpstat -d # default printer cups
 lpstat -v # list all printers cups 
 lsblk # list block device disk 
 lsb_release --all # linux version distro 
+lscpu | grep '^CPU op-mode' # detect cpu bit mode 
 lscpu # hardware architecture processor 
 ls --directory /proc/[^0-9]* # metadata 
 lshw 
