@@ -100,19 +100,6 @@ CustomProfileBuilderKeys=0
 
 [GUI]
 Font=sans, 8
-WindowWidth=1200
-WindowHeight=680
-WindowMaximized=true
-DirBrowserWidth=260
-DirBrowserHeight=350
-PreferencesWidth=800
-PreferencesHeight=0
-SaveAsDialogWidth=920
-SaveAsDialogHeight=680
-ToolPanelWidth=390
-BrowserToolPanelWidth=430
-BrowserToolPanelHeight=600
-HistoryPanelWidth=330
 LastPreviewScale=5
 PanAccelFactor=5
 LastCropSize=1
