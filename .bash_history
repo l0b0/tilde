@@ -485,6 +485,7 @@ groups "$USER"
 gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpdfwrite -f encrypted.pdf # pdf remove password 
 gunzip example.gz 
 gzip example.txt # compress 
+hash # list program recent 
 help alias 
 help bg 
 help bind 
@@ -792,6 +793,7 @@ man grub-mkconfig # help
 man gs # help 
 man gunzip # help 
 man gvfs # help 
+man hash # help 
 man head # help 
 man <(help2man help2man) # help 
 man hexdump # help 
