@@ -7,9 +7,7 @@ XTerm.vt100.on5Clicks:	all
 XTerm.vt100.printAttributes:	2
 XTerm.vt100.printerCommand:	cat - | $HOME/dev/tilde/scripts/ansi2html.sh --bg=dark > "`mktemp --tmpdir xterm-screenshot.XXXXXXXXXX.html`"
 XTerm.vt100.reverseVideo:	true
-XTerm.vt100.rightScrollBar:	true
 XTerm.vt100.saveLines:	32767
-XTerm.vt100.scrollBar:	true
 XTerm.vt100.scrollKey:	true
 XTerm.vt100.scrollTtyOutput:	false
 XTerm.vt100.translations:	#override \n Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD) \n Meta <KeyPress> M: print() \n
