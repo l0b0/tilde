@@ -209,6 +209,7 @@ exit
 exiv2 print IMG_1234.exv # metadata 
 expand --tabs=4 example.txt # convert tab space 
 export DISPLAY=:0.0 # remote x display 
+export key=~/.ssh/id_rsa_service_name && umask 0077 && ssh-keygen -b 4096 -f "$key" -t rsa && openssl pkcs8 -topk8 -v2 des3 -in "$key" -out "${key}.pk8" && shred --remove "$key" && mv --no-clobber "${key}.pk8" "$key" && unset key # create encrypted private public rsa pkcs8 ssh key pair 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -1679,7 +1680,6 @@ udevadm monitor --environment kernel # live events
 ulimit -a 
 ulimit -c unlimited 
 umask 
-umask 0077 && ssh-keygen -b 4096 -f ~/.ssh/id_rsa -t rsa && openssl pkcs8 -topk8 -v2 des3 -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa.pk8 && shred --remove ~/.ssh/id_rsa && mv --no-clobber ~/.ssh/id_rsa.pk8 ~/.ssh/id_rsa # create encrypted private public rsa pkcs8 ssh key pair 
 umask -S # symbolic 
 umount-image ./*.iso 
 umount /mnt/foo # unmount device drive 
