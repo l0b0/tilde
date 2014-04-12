@@ -1,4 +1,6 @@
 XTerm.termName:	xterm-256color
+XTerm.vt100.background:	gray10
+XTerm.vt100.foreground:	white
 XTerm.vt100.geometry:	96x66
 XTerm.vt100.locale:	true
 XTerm.vt100.metaSendsEscape:	true
@@ -6,7 +8,6 @@ XTerm.vt100.on4Clicks:	group
 XTerm.vt100.on5Clicks:	all
 XTerm.vt100.printAttributes:	2
 XTerm.vt100.printerCommand:	cat - | $HOME/dev/tilde/scripts/ansi2html.sh --bg=dark > "`mktemp --tmpdir xterm-screenshot.XXXXXXXXXX.html`"
-XTerm.vt100.reverseVideo:	true
 XTerm.vt100.saveLines:	32767
 XTerm.vt100.scrollKey:	true
 XTerm.vt100.scrollTtyOutput:	false
