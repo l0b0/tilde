@@ -1075,6 +1075,7 @@ man wpa_supplicant # help
 man x509 # help 
 man xargs # help 
 man xautolock # help 
+man xbacklight # help 
 man xclip # help 
 man xdg-desktop-menu # help 
 man xdotool # help 
@@ -1554,7 +1555,7 @@ sudo pacman --sync --needed --refresh python2-pip
 sudo pacman --sync --needed --refresh steam # games gui 
 sudo pacman --sync --needed --refresh stellarium # planetarium gui 
 sudo pacman --sync --needed --refresh wine winetricks # windows 
-sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel # laptop drivers touchpad graphics 
+sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel xorg-xbacklight # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --upgrade ./*.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
@@ -1775,6 +1776,8 @@ wine --version
 wireshark & 
 wnpp-alert # Debian packaging 
 worktime --end="$(date --date=Thursday +%Y-%m-%d)" > ~/week.xhtml && x-www-browser ~/week.xhtml 
+xbacklight -set 0 
+xbacklight -set 100 
 xclip filename.txt # mouse clipboard copy 
 xclip -out # mouse clipboard print stdout 
 xclip -selection clipboard filename.txt # keyboard clipboard copy 
