@@ -35,6 +35,7 @@ bashdb example.sh # debug shell script
 bash --noprofile --norc -x # test trace shell 
 bash -o noexec ~/.bash_history # verify shell script syntax 
 bash -o xtrace # debug shell 
+batti & # battery indicator x 
 bc <<< '2+2' # calculator math 
 bchunk image.bin image.cue image.iso 
 bc --mathlib <<< 'e(1)' # calculator math e power 
