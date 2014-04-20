@@ -23,11 +23,11 @@ fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	False
+dpmsEnabled:	True
 dpmsQuickOff:	False
-dpmsStandby:	2:00:00
-dpmsSuspend:	2:00:00
-dpmsOff:	4:00:00
+dpmsStandby:	0:10:00
+dpmsSuspend:	0:20:00
+dpmsOff:	0:45:00
 grabDesktopImages:  True
 grabVideoFrames:    False
 chooseRandomImages: False
