@@ -3,7 +3,7 @@
 
 timeout:	0:05:00
 cycle:		0:10:00
-lock:		False
+lock:		True
 lockTimeout:	0:02:00
 passwdTimeout:	0:00:30
 visualID:	default
