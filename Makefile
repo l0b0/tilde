@@ -23,7 +23,8 @@ dotfiles = .ackrc \
            .vimrc \
            .xinitrc \
            .Xmodmap \
-           .Xresources
+           .Xresources \
+           .xscreensaver
 
 dotfile_links = $(addprefix $(PREFIX)/,$(dotfiles))
 
