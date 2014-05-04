@@ -1555,7 +1555,7 @@ sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion batti bc cups cups-filters dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rawtherapee rsync scrot sshfs simple-scan slim system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
-sudo pacman --sync --needed --refresh eog mcomix # graphics viewer 2d 
+sudo pacman --sync --needed --refresh eog mcomix qcad # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
 sudo pacman --sync --needed --refresh steam # games gui 
 sudo pacman --sync --needed --refresh stellarium # planetarium gui 
