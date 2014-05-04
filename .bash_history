@@ -699,6 +699,7 @@ man asn1parse # help
 man avahi-browse # help 
 man avahi-daemon # help 
 man avconv # help 
+man awesome # help 
 man awk # help 
 man basename # help 
 man bashdb # help 
