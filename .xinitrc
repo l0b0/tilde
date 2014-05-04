@@ -64,4 +64,4 @@ then
     numlockx &
 fi
 
-exec awesome
+exec awesome >> ~/.cache/awesome/log 2>&1
