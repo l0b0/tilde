@@ -658,7 +658,7 @@ make explain 2>&1 | grep MAKE # dev
 make explain-MAKE # dev 
 make install # dev 
 make METHOD=git python-pep8 
-makepkg --syncdeps # package build tarball 
+makepkg --syncdeps --install # package build tarball install 
 make python-lint 
 make python-pep8 
 make python-pychecker 
