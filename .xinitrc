@@ -52,7 +52,7 @@ fi
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 
 # Battery monitor task bar applet
-batti &
+cbatticon &
 
 # Network Manager task bar applet
 nm-applet &
