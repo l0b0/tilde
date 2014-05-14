@@ -1248,7 +1248,7 @@ nethack-qt &
 netstat 
 netstat --all # internet connections sockets 
 nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
-nl ~/.bashrc 
+nl ~/.bashrc # number lines 
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
 nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
