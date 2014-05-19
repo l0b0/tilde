@@ -1005,7 +1005,6 @@ man ssh # help
 man ssh-keygen # help 
 man stat # help 
 man stdlib.h # help dev c header 
-man stellarium # help 
 man strace # help 
 man strfile # help 
 man strftime # help format string date 
@@ -1487,7 +1486,6 @@ ssh -Y example.org # trusted x11 forwarding
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
 stat --format %i / # inode 
 stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
-stellarium & 
 strace -Cf bash -lc true # count calls profile summary 
 strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
 strings "$(which strings)" 
@@ -1558,7 +1556,6 @@ sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo pacman --sync --needed --refresh abcde acpid aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cbatticon cups cups-filters deluge dia dos2unix eog esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx lib32-alsa-plugins lib32-libpulse libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pavucontrol pidgin polkit-gnome powertop pychecker python-pip python2-pip qcad rawtherapee rsync scrot simple-scan slim sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh steam # games gui 
-sudo pacman --sync --needed --refresh stellarium # planetarium gui 
 sudo pacman --sync --needed --refresh wine winetricks # windows 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-intel xorg-xbacklight # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
