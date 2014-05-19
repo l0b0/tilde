@@ -1289,7 +1289,6 @@ pacman --query --info | grep -e '^Name' -e '^Required By' | grep -B 1 '^Required
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
-paman & # pulseaudio manager 
 passwd # password user 
 patch --strip 0 < patch.diff 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
