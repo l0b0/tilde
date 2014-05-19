@@ -1291,7 +1291,6 @@ pacman --query --list bash # list all package files
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
 paman & # pulseaudio manager 
-paprefs & # pulseaudio preference 
 passwd # password user 
 patch --strip 0 < patch.diff 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
@@ -1558,7 +1557,7 @@ sudo nethogs wlan0 # network monitor
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
 sudo pacman --sync --needed --refresh abcde # audio 
-sudo pacman --sync --needed --refresh acpid alsa-plugins alsa-utils aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cbatticon cups cups-filters dia dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pidgin polkit-gnome powertop pychecker python-pip rawtherapee rsync scrot simple-scan slim sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
+sudo pacman --sync --needed --refresh acpid aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cbatticon cups cups-filters dia dos2unix ekiga esmtp evince feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit keepassx lib32-alsa-plugins lib32-libpulse libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pavucontrol pidgin polkit-gnome powertop pychecker python-pip rawtherapee rsync scrot simple-scan slim sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh deluge pygtk # torrent gui 
 sudo pacman --sync --needed --refresh eog mcomix qcad # graphics viewer 2d 
 sudo pacman --sync --needed --refresh python2-pip 
