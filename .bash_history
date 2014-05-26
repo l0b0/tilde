@@ -744,6 +744,7 @@ man dh_make # help
 man diff # help 
 man dig # help 
 man dirname # help 
+man dmesg # help 
 man dmidecode # help 
 man dos2unix # help 
 man dot # help 
