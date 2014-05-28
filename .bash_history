@@ -1287,6 +1287,7 @@ openssl x509 -text -in name.crt.pem -noout # list x509 certificate properties
 pacman --query bash # package version 
 pacman --query --info bash # package info 
 pacman --query --info | grep -e '^Name' -e '^Required By' | grep -B 1 '^Required By.*\bbash\b' # list reverse dependencies 
+pacman --query # list all installed packages 
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
