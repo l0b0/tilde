@@ -1646,6 +1646,7 @@ sudo visudo # permissions security
 sudo wavemon 
 sudo wifi-menu 
 sudo Xorg :1 -configure 
+su --login "$USER" # substitute user login 
 sum <<< '2 2' 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
