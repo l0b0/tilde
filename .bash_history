@@ -503,6 +503,7 @@ help declare
 help disown 
 help echo 
 help enable 
+help exec 
 help exit 
 help fc 
 help fg 
