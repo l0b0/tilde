@@ -798,6 +798,7 @@ man graphviz # help
 man grep # help 
 man grive # help 
 man groupadd # help 
+man groupdel # help 
 man groups # help 
 man grub-mkconfig # help 
 man gs # help 
@@ -1054,6 +1055,7 @@ man updatedb # help
 man uptime # help 
 man urandom # help 
 man useradd # help 
+man userdel # help 
 man usermod # help 
 man utf8 # help 
 man valgrind # help 
@@ -1518,6 +1520,7 @@ sudo extundelete --restore-directory /dir/ /dev/sda1
 sudo fdisk -l # list all disks 
 sudo gpasswd --add "$USER" group # user add group 
 sudo groupadd example # add create group 
+sudo groupdel example # delete remove group 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
@@ -1625,6 +1628,7 @@ sudo -u postgres psql --single-transaction --file backup.sql # restore postgresq
 sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
 sudo -u postgres service postgresql reload # configuration 
 sudo useradd example # add create user 
+sudo userdel example # delete remove user 
 sudo usermod --append --groups example "$USER" # modify user add group 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
