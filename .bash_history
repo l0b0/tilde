@@ -531,6 +531,7 @@ help until
 help wait 
 history | less 
 host example.org # dns lookup internet network ipv4 ipv6 
+hostid # host id hex 
 hostname # internet network 
 hostname --ip-address # internet network address dns 
 hostname --short # internet network 
@@ -811,6 +812,7 @@ man hexdump # help
 man hier # help 
 man history # help 
 man host # help 
+man hostid # help 
 man hostname # help 
 man hosts # help 
 man htop # help 
