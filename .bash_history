@@ -879,6 +879,7 @@ man make # help
 man makepkg # help 
 man man # help 
 man markdown # help 
+man mcomix # help 
 man md5sum # help 
 man mencoder # help 
 man mkdir # help 
@@ -1115,6 +1116,7 @@ man zip # help
 markdown README.markdown 
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
+mcomix & 
 md5sum --check md5sums.txt # checksum 
 md5sum file # checksum 
 meld . & # diff 
