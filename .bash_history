@@ -1153,6 +1153,7 @@ mkgithub ~/dev/dialogue.wiki
 mkgithub ~/dev/difff 
 mkgithub ~/dev/diff-ignore-moved-lines 
 mkgithub ~/dev/digbuild 
+mkgithub ~/dev/dogapi 
 mkgithub ~/dev/dsa3helden 
 mkgithub ~/dev/duplicates 
 mkgithub ~/dev/export 
