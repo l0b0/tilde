@@ -170,31 +170,6 @@ alias vi=vim
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
-# Load RVM into a shell session *as a function*
-set +o nounset
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-set -o nounset
-# Add RVM to PATH for scripting
-if [[ -d "$HOME/.rvm/bin" ]]
-then
-    PATH="$PATH:$HOME/.rvm/bin"
-fi
-
-# Load perlbrew if present
-if [[ -r "$HOME/perl5/perlbrew/etc/bashrc" ]]
-then
-    set +o nounset
-    source "$HOME/perl5/perlbrew/etc/bashrc"
-    set -o nounset
-fi
-
-# node.js and npm
-if [[ -d "$HOME/local/bin" ]]
-then
-    export PATH="$HOME/local/bin:$PATH"
-    export NODE_PATH=~/local/lib/node_modules
-fi
-
 # Custom-built libraries
 for dir in /usr/lib64 /usr/lib32
 do
