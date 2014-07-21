@@ -111,6 +111,7 @@ curl https://aur.archlinux.org/packages/tt/ttf-source-sans-pro/ttf-source-sans-p
 curl --insecure --location http://xrl.us/perlbrewinstall | bash # development perl 
 curl --version 
 cut --delimiter ':' --fields 1 /etc/group | sort 
+darktable & # 2d image editor raw 
 date --date="2001-09-09 03:46:40+02:00" +%s # convert timestamp 
 date --date="6 months ago" # past time 
 date --date="6 months" # future time 
@@ -735,6 +736,7 @@ man crontab # help
 man csplit # help 
 man curl # help 
 man cut # help 
+man darktable # help 
 man debhelper # help 
 man delgroup # help 
 man deluge # help 
@@ -1569,7 +1571,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cbatticon cups cups-filters deluge dia dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rawtherapee rsync scrot simple-scan slim sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
+sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cbatticon cups cups-filters darktable deluge dia dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-calc libreoffice-draw libreoffice-en-GB libreoffice-impress libreoffice-math libreoffice-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp numlockx offlineimap openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rawtherapee rsync scrot simple-scan slim sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-ubuntu-font-family vim vlc whois wireshark-gtk xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xscreensaver xterm youtube-dl # desktop 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-fbdev xf86-video-intel xf86-video-modesetting xf86-video-vesa xorg-xbacklight # laptop drivers touchpad graphics 
 sudo pacman --sync --refresh --sysupgrade # upgrade system 
