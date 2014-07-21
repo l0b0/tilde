@@ -1313,6 +1313,8 @@ pdfinfo file.pdf
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
 pep8 --help 
+pep8-python2 --help 
+pep8-python2 setup.py 
 pep8 setup.py 
 perlbrew switch 
 perl -c file.pl # check syntax 
@@ -1575,6 +1577,7 @@ sudo pacman --upgrade ./*.pkg.tar.xz # install
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
+sudo pip2 install --upgrade pep8 
 sudo pip2 install --upgrade vcard # validator 
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
 sudo pip install --upgrade pep8 
