@@ -170,15 +170,6 @@ alias vi=vim
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
-# Custom-built libraries
-for dir in /usr/lib64 /usr/lib32
-do
-    if [[ -d "$dir" ]]
-    then
-        export LD_LIBRARY_PATH="${LD_LIBRARY_PATH+${LD_LIBRARY_PATH}:}$dir"
-    fi
-done
-
 export DEBFULLNAME="$(grep "^${USER}:" /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1)"
 export DEBEMAIL="$(tr A-Z a-z <<<"${DEBFULLNAME/ /@}").name"
 
