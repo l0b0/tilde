@@ -170,9 +170,6 @@ alias vi=vim
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
-export DEBFULLNAME="$(grep "^${USER}:" /etc/passwd | cut -d ':' -f 5 | cut -d ',' -f 1)"
-export DEBEMAIL="$(tr A-Z a-z <<<"${DEBFULLNAME/ /@}").name"
-
 if [[ -r "$HOME/.bashrc_local" ]]
 then
     source "$HOME/.bashrc_local"
