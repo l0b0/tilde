@@ -249,6 +249,9 @@ find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
+find . -type f -name '*.odg' -execdir libreoffice --headless --convert-to fodg {} + # convert binary xml 
+find . -type f -name '*.ods' -execdir libreoffice --headless --convert-to fods {} + # convert binary xml 
+find . -type f -name '*.odt' -execdir libreoffice --headless --convert-to fodt {} + # convert binary xml 
 find . -type f -name '*.*' | sed -e 's/.*\.//' | sort | uniq --count | sort --general-numeric-sort # file extensions count 
 find -version 
 firefox -no-remote -P secondary & 
