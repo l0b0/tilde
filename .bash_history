@@ -325,6 +325,7 @@ git clone --recurse-submodules https://github.com/l0b0/cronlist.deb ~/dev/cronli
 git clone --recurse-submodules https://github.com/l0b0/mkgithub.git 
 git commit 
 git commit --all --message "Example" 
+git commit --amend 
 git config diff.minimal 
 git config diff.minimal false 
 git config diff.minimal invalid 
