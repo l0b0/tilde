@@ -244,11 +244,11 @@ find . -group 1000 -exec chgrp "$(id --group)" {} + # update files permissions
 find -L . -type l # broken symlinks 
 find . -mindepth 1 -exec printf '%s\0' {} + | shuf --head-count 10 --zero-terminated # random shuffle files 
 find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
-find . -name '*.marks' -delete # remove jedit temp files 
 find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
+find . -type f -name '*.marks' -delete # remove jedit temp files 
 find . -type f -name '*.odg' -execdir libreoffice --headless --convert-to fodg {} + # convert binary xml 
 find . -type f -name '*.ods' -execdir libreoffice --headless --convert-to fods {} + # convert binary xml 
 find . -type f -name '*.odt' -execdir libreoffice --headless --convert-to fodt {} + # convert binary xml 
