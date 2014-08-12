@@ -1598,13 +1598,13 @@ sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
-sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
-sudo sh -c 'systemctl start acpid && systemctl enable acpid' 
-sudo sh -c 'systemctl start avahi-daemon && systemctl enable avahi-daemon' # printer discovery service 
-sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
-sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
-sudo sh -c 'systemctl start NetworkManager && systemctl enable NetworkManager' # network service 
-sudo sh -c 'systemctl start ntpd && systemctl enable ntpd' # network service 
+sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim service 
+sudo sh -c 'systemctl start acpid.service && systemctl enable acpid.service' # service 
+sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemon.service' # printer discovery service 
+sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' # cron service 
+sudo sh -c 'systemctl start cups.service && systemctl enable cups.service' # printer service 
+sudo sh -c 'systemctl start NetworkManager.service && systemctl enable NetworkManager.service' # network service 
+sudo sh -c 'systemctl start ntpd.service && systemctl enable ntpd.service' # network service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
@@ -1613,7 +1613,7 @@ sudo smartctl --attributes /dev/sda # harddisk smart
 sudo sshfs user@host:/path /run/mount/host 
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
-sudo systemctl enable NetworkManager # network gui configuration 
+sudo systemctl enable NetworkManager.service # network gui configuration 
 sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
 sudo systemctl start sshd.service 
