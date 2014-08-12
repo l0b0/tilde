@@ -1608,6 +1608,7 @@ sudo sh -c 'systemctl start avahi-daemon && systemctl enable avahi-daemon' # pri
 sudo sh -c 'systemctl start cronie && systemctl enable cronie' # cron service 
 sudo sh -c 'systemctl start cups && systemctl enable cups' # printer service 
 sudo sh -c 'systemctl start NetworkManager && systemctl enable NetworkManager' # network service 
+sudo sh -c 'systemctl start ntpd && systemctl enable ntpd' # network service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
