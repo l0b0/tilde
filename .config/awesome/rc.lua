@@ -411,7 +411,7 @@ awful.rules.rules = {
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true,
-                     tag = tags[screen.count()]["media"] } },
+                     tag = tags[screen.count()][6] } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
