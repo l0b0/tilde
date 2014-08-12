@@ -409,9 +409,6 @@ awful.rules.rules = {
                      focus = awful.client.focus.filter,
                      keys = clientkeys,
                      buttons = clientbuttons } },
-    { rule = { class = "MPlayer" },
-      properties = { floating = true,
-                     tag = tags[screen.count()][6] } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
@@ -424,7 +421,7 @@ awful.rules.rules = {
       properties = { tag = tags[math.min(2, screen.count())][3] } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[math.min(2, screen.count())][5] } },
-    { rule_any = { class = { "feh", "Vlc" } },
+    { rule_any = { class = { "feh", "MPlayer", "Vlc" } },
       properties = { tag = tags[math.min(2, screen.count())][6] } },
 }
 -- }}}
