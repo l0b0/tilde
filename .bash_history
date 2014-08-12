@@ -1735,30 +1735,7 @@ vainfo
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
  vim ~/.bash_history # shell 
-vim ~/.bashrc_local # shell 
-vim ~/.bashrc # shell 
-vim ~/.config/awesome/rc.lua 
 vim -c "setfiletype sh" example.txt 
-vim ~/dev/fgit/fgit.sh # dev 
-vim ~/dev/indentect/indentect.sh # dev 
-vim ~/dev/mkgithub/mkgithub.sh # dev 
-vim ~/dev/tilde/.muttrc # email 
-vim ~/.gitconfig # dev 
-vim .git/config # dev 
-vim .gitignore # dev 
-vim ~/.imapfilter/config.lua 
-vim /lib/udev/rules.d/95-keymap.rules # keyboard 
-vim Makefile # dev 
-vim ~/.mkgithub # dev 
-vim ~/.mozilla/firefox/*/chrome/userContent.css 
-vim ~/.muttrc # email 
-vim ~/.muttrc_local # email 
-vim README.markdown # dev 
-vim ~/.ssh/config 
-vim ~/.vimrc 
-vim ~/.wine/system.reg 
-vim ~/.wine/user.reg 
-vim ~/.xinitrc 
 virtualbox & 
 virtualenv --help 
 virtualenv --python=python2.7 virtualenv 
