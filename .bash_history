@@ -1011,6 +1011,7 @@ man snmpwalk # help
 man sort # help 
 man speaker-test # help 
 man splint # help 
+man sqlite3 # help 
 man ssh-agent # help 
 man ssh_config # help 
 man ssh-copy-id # help 
