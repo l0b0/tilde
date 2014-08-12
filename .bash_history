@@ -1605,6 +1605,7 @@ sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' #
 sudo sh -c 'systemctl start cups.service && systemctl enable cups.service' # printer service 
 sudo sh -c 'systemctl start NetworkManager.service && systemctl enable NetworkManager.service' # network service 
 sudo sh -c 'systemctl start ntpd.service && systemctl enable ntpd.service' # network service 
+sudo sh -c 'systemctl start sshd.service && systemctl enable sshd.service' # network service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
