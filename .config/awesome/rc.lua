@@ -417,7 +417,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "Firefox" },
       properties = { tag = tags[math.min(2, screen.count())][2] } },
-    { rule_any = { class = { "Digikam", "Gimp", "Hugin", "Inkscape", "libreoffice-startcenter", "Openscad", "Simple-scan" } },
+    { rule_any = { class = { "Digikam", "Gimp", "Hugin", "Inkscape", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman" } },
       properties = { tag = tags[math.min(2, screen.count())][3] } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[math.min(2, screen.count())][5] } },
