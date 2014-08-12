@@ -1479,8 +1479,6 @@ snmptranslate -Tl # list all mib oids
 snmpwalk -v 2c -c public localhost .1.3.6.1.2.1.1 # system 
 snmpwalk -v 2c -c public localhost # all 
 sort --unique --output result.txt source.txt 
-source ~/.bash_aliases 
-source ~/.bash_aliases_local 
 source ~/.bashrc 
 source virtualenv/bin/activate 
 speaker-test --channels 2 
@@ -1524,7 +1522,6 @@ sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/f
 sudo crontab -e # edit 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
-sudo ~/dev/tilde/scripts/install-all.sh 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --string system-serial-number 
@@ -1737,8 +1734,6 @@ vagrant up # update vm
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
-vim ~/.bash_aliases_local # shell 
-vim ~/.bash_aliases # shell 
  vim ~/.bash_history # shell 
 vim ~/.bashrc_local # shell 
 vim ~/.bashrc # shell 
@@ -1748,9 +1743,6 @@ vim ~/dev/fgit/fgit.sh # dev
 vim ~/dev/indentect/indentect.sh # dev 
 vim ~/dev/mkgithub/mkgithub.sh # dev 
 vim ~/dev/tilde/.muttrc # email 
-vim ~/dev/tilde/scripts/cleanup.sh 
-vim ~/dev/tilde/scripts/install-all.sh 
-vim ~/dev/tilde/scripts/make-links.sh 
 vim ~/.gitconfig # dev 
 vim .git/config # dev 
 vim .gitignore # dev 
