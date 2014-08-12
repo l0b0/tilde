@@ -1035,6 +1035,7 @@ man sysctl # help
 man system-config-printer # help 
 man systemctl # help 
 man systemd-analyze # help 
+man systemd # help 
 man tac # help 
 man tail # help 
 man tar # help 
