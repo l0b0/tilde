@@ -1669,7 +1669,7 @@ sweethome3d &
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 system-config-printer & 
 systemctl is-enabled cronie.service 
-systemctl status slim.service 
+systemctl status slim.service # service status 
 systemd-analyze blame # list boot service time 
 systemd-analyze # boot time kernel user 
 systemd-analyze critical-chain # boot process dependency time 
