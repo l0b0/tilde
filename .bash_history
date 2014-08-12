@@ -1433,7 +1433,6 @@ sed '/^$/d' file # delete empty lines
 sed '/pattern/r./input.txt' example.txt # insert merge file pattern 
 sed --quiet '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 sed '/^[[:space:]]*$/d' file # delete whitespace line 
-service snmpd status 
 set -o noclobber # file error 
 set +o noclobber # file error 
 set -o nounset # variable error 
@@ -1597,9 +1596,6 @@ sudo powertop # power monitoring configuration
 sudo reboot # restart 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
-sudo service cups restart 
-sudo service postgresql reload 
-sudo service postgresql status 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim 
@@ -1647,7 +1643,6 @@ sudo -u postgres psql <<< "\encoding" # postgresql db encoding
 sudo -u postgres psql <<< "SELECT * FROM pg_stat_activity;" # list sessions processes postgresql 
 sudo -u postgres psql --single-transaction --file backup.sql # restore postgresql 
 sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "COPY(SELECT :'name') TO STDOUT;" # test escape literal postgresql 
-sudo -u postgres service postgresql reload # configuration 
 sudo useradd example # add create user 
 sudo userdel example # delete remove user 
 sudo usermod --append --groups example "$USER" # modify user add group 
