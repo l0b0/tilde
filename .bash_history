@@ -1525,7 +1525,6 @@ sudo crontab -e # edit
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
 sudo ~/dev/tilde/scripts/install-all.sh 
-sudo ~/dev/tilde/scripts/suspend-on-close.sh 
 sudo dmidecode 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --string system-serial-number 
