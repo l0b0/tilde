@@ -421,7 +421,7 @@ awful.rules.rules = {
       properties = { tag = tags[math.min(2, screen.count())][3] } },
     { rule = { class = "Pidgin" },
       properties = { tag = tags[math.min(2, screen.count())][5] } },
-    { rule_any = { class = { "feh", "MPlayer", "Vlc" } },
+    { rule_any = { class = { "feh", "MPlayer", "smplayer", "Vlc" } },
       properties = { tag = tags[math.min(2, screen.count())][6] } },
 }
 -- }}}
