@@ -326,7 +326,7 @@ globalkeys = awful.util.table.join(
         { "Mod1", "Control" },
         "l",
         function ()
-            awful.util.spawn("xscreensaver-command -lock")
+            awful.util.spawn("xautolock -locknow")
         end),
 
     -- Screenshot

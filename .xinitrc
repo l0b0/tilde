@@ -57,7 +57,7 @@ cbatticon &
 # Network Manager task bar applet
 nm-applet &
 
-xscreensaver -no-splash &
+xautolock -locker slock &
 
 if which numlockx
 then
