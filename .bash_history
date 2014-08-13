@@ -770,6 +770,7 @@ man exiv2 # help
 man expand # help 
 man expect # help 
 man extundelete # help 
+man faillog # help 
 man fakeroot # help 
 man fc-cache # help 
 man fc-list # help 
@@ -1530,6 +1531,7 @@ sudo dmidecode --type system
 sudo download-mibs 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-directory /dir/ /dev/sda1 
+sudo faillog # log summary user 
 sudo fdisk -l # list all disks 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
 sudo gpasswd --add "$USER" group # user add group 
