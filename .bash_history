@@ -585,6 +585,7 @@ jedit -reuseview & # dev editor
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
 journalctl --since=today --output=short-iso # systemd service log 
+journalctl --user-unit screenlock.service # systemd user service log 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
 kdesu etherape & # network traffic visualization 
