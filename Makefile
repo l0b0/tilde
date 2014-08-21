@@ -67,7 +67,7 @@ clean_x_resources:
 
 .PHONY: clean_sort_text_files
 clean_sort_text_files:
-	for path in .config/ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .jedit/properties .jedit/keymaps/imported_keys.props .bash_history; do \
+	for path in .config/ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .jedit/properties .jedit/keymaps/imported_keys.props .bash_history .config/darktable/keyboardrc_default; do \
 		sort --unique --output="$$path" "$$path" || exit $$?; \
 	done
 
