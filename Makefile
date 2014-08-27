@@ -8,7 +8,6 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
-           .jedit \
            .mutt \
            .muttrc \
            .offlineimaprc \
@@ -45,7 +44,7 @@ $(gpg_backup_path):
 
 .PHONY: clean_comments
 clean_comments:
-	for path in $(PREFIX)/.gnupg/ownertrust.txt .jedit/properties .jedit/keymaps/imported_keys.props; do \
+	for path in $(PREFIX)/.gnupg/ownertrust.txt; do \
 		if [ -e "$$path" ]; then \
 			sed -i -e '/^#/D' -e 's/[[:space:]]\+#.*$$//g' "$$path" || exit 1; \
 		fi \
@@ -67,7 +66,7 @@ clean_x_resources:
 
 .PHONY: clean_sort_text_files
 clean_sort_text_files:
-	for path in .config/ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .jedit/properties .jedit/keymaps/imported_keys.props .bash_history .config/darktable/keyboardrc_default; do \
+	for path in .config/ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .bash_history .config/darktable/keyboardrc_default; do \
 		sort --unique --output="$$path" "$$path" || exit $$?; \
 	done
 

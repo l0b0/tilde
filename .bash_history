@@ -248,7 +248,6 @@ find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
 find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
-find . -type f -name '*.marks' -delete # remove jedit temp files 
 find . -type f -name '*.odg' -execdir libreoffice --headless --convert-to fodg {} + # convert binary xml 
 find . -type f -name '*.ods' -execdir libreoffice --headless --convert-to fods {} + # convert binary xml 
 find . -type f -name '*.odt' -execdir libreoffice --headless --convert-to fodt {} + # convert binary xml 
@@ -582,7 +581,6 @@ iwconfig # wireless network configuration
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
 java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
-jedit -reuseview & # dev editor 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
 journalctl --since=today --output=short-iso # systemd service log 
@@ -850,7 +848,6 @@ man ip # help
 man iptables # help 
 man iwconfig # help 
 man java # help 
-man jedit # help 
 man jhead # help 
 man join # help 
 man journalctl # help 
@@ -1150,7 +1147,6 @@ mkgithub ~/dev/bm
 mkgithub ~/dev/bookmarklets 
 mkgithub ~/dev/bookmarklets-janmoesen 
 mkgithub ~/dev/CERN-Central-Library-bookmark 
-mkgithub ~/dev/coffeescript-jedit 
 mkgithub ~/dev/coin-sorter 
 mkgithub ~/dev/ComputerCraft 
 mkgithub ~/dev/count 
@@ -1577,7 +1573,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw jedit kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rawtherapee rsync scrot simple-scan slim slock sqliteman sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
+sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rawtherapee rsync scrot simple-scan slim slock sqliteman sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
 sudo pacman --sync --needed --refresh cbatticon # laptop packages install 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
@@ -1770,7 +1766,6 @@ wget --server-response --output-document=/dev/null http://example.org/ # web hea
 whatis mv # exact help man 
 which make 
 while IFS= read -r -d '' -u 9; do if [[ "$(file --brief --special-files --mime-type -- "$REPLY")" = text/* ]]; then sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; else echo "Skipping $REPLY" >&2; fi; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # text whitespace eol eof 
-while IFS= read -r -d '' -u 9; do jedit -reuseview "$REPLY"; done 9< <(grep --null --files-with-matches --recursive --exclude-dir .git --regexp 'pattern' .) # search open files 
 while IFS= read -r -d '' -u 9; do printf '%q\n' "${REPLY#* }"; done 9< <(find . -printf '%T@' -exec printf ' %s\0' {} \; | sort --general-numeric-sort --zero-terminated) # sort file list modification date 
 while IFS= read -r -d '' -u 9; do sed --in-place '/\x0/{q;}; s/[ \t]\+\(\r\?\)$/\1/;$a\' -- "$REPLY"; done 9< <(find . \( -type d -regex '^.*/\.git$' -prune -false \) -o -type f -exec printf '%s\0' {} +) # file whitespace eol eof 
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
