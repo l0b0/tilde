@@ -408,6 +408,7 @@ git instaweb stop
 gitk --all . & # gui 
 git log 
 git log --after '2012-01-20 17:06' --before '2012-04-03 16:15' # date range 
+git log --all --decorate --graph # branch 
 git log Makefile 
 git log --oneline --decorate 
 git log origin/master..HEAD # remote 
