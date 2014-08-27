@@ -1173,6 +1173,7 @@ mkgithub ~/dev/git-bisect-example
 mkgithub ~/dev/graphics 
 mkgithub ~/dev/hello-world 
 mkgithub ~/dev/highlight 
+mkgithub ~/dev/hivelogic-flickrtouchr 
 mkgithub ~/dev/https-everywhere 
 mkgithub ~/dev/Hypervolume 
 mkgithub ~/dev/img2scad 
