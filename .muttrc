@@ -3,6 +3,8 @@
 # Settings relevant only to me or this machine
 source ~/.mutt/rc_local
 
+source ~/.mutt/gpg.rc
+
 # Mailboxes
 set sort_browser = alpha
 set postponed = =postponed

@@ -9,6 +9,7 @@ dotfiles = .ackrc \
            .imapfilter \
            .inputrc \
            .jedit \
+           .mutt \
            .muttrc \
            .offlineimaprc \
            .perltidyrc \
