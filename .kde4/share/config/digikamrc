@@ -46,3 +46,6 @@ Save Template=true
 Update File Timestamp=true
 Use XMP Sidecar For Reading=false
 Write RAW Files=false
+
+[TipOfDay]
+RunOnStart=false
