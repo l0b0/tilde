@@ -1690,6 +1690,8 @@ todos -- file # convert newline
 top 
 top -c # command line 
 top -p "$(pgrep -d ',' bash)" 
+touch --date='2001-02-03 04:05:06.789' file # set access modification time 
+touch file # create empty file 
 tput colors 
 traceroute example.org 
 trap # signal 
