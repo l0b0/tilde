@@ -660,26 +660,16 @@ lsusb | grep --ignore-case cam
 lsusb # list usb hardware 
 lyx file.lyx 
 m4 --version # compile dev 
-make 2>&1 | tee > make_compile.out~ # compile dev 
 make clean # dev 
 make # compile dev 
-make configure # dev 
  make --directory ~/dev/tilde clean 
-make && echo finished > ~/.events/compilation || echo failed > ~/.events/compilation 
-make explain 2>&1 | grep MAKE # dev 
-make explain-MAKE # dev 
 make install # dev 
 make METHOD=git python-pep8 
 makepkg --syncdeps --install # package build tarball install 
-make python-lint 
 make python-pep8 
-make python-pychecker 
-make python-pyflakes 
-make python-pylint 
 make PYTHON_VERSION=2.7.8 virtualenv 
 make release # dev 
 make --silent python-pep8 | cut --delimiter=: --fields=4- | grep --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
-make test 2>&1 | tee > make_test.out~ # dev 
 make test # dev 
 make variables # dev 
 make variable-SHELL # dev 
