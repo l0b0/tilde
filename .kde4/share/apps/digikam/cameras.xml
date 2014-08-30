@@ -1,0 +1,4 @@
+<!DOCTYPE XMLCameraList>
+<cameralist version="1.2" client="digikam">
+ <item title="Canon EOS 7D" port="usb:" model="Canon EOS 7D" path="/" startingnumber="1"/>
+</cameralist>
