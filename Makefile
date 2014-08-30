@@ -8,6 +8,7 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
+           .kde4 \
            .mutt \
            .muttrc \
            .offlineimaprc \

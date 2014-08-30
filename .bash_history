@@ -165,6 +165,7 @@ diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch)
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
 dig example.org # dns lookup internet network 
 dig example.org mx # dns email lookup internet network 
+digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
 disown # job 
 dmesg | less # debug os startup 
@@ -742,6 +743,7 @@ man dhclient # help
 man dh_make # help 
 man diff # help 
 man dig # help 
+man digikam # help 
 man dirname # help 
 man dmesg # help 
 man dmidecode # help 
@@ -1563,7 +1565,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rsync scrot simple-scan slim slock sqliteman sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
+sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia digikam dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rsync scrot simple-scan slim slock sqliteman sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
 sudo pacman --sync --needed --refresh cbatticon # laptop packages install 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 

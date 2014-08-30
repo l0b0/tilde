@@ -1,0 +1,48 @@
+[AdvancedRename Input]
+Pattern History List=\\0
+
+[Album Settings]
+Item Left Click Action=1
+Preview Load Full Image Size=false
+Show Album ToolTips=false
+Show ToolTips=false
+
+[Database Settings]
+Database Connectoptions=
+Database Hostname=
+Database Name=pictures/
+Database Name Thumbnails=pictures/
+Database Password=
+Database Port=-1
+Database Type=QSQLITE
+Database Username=
+Internal Database Server=false
+
+[General Settings]
+ToolBarsMovable=Disabled
+
+[ImageViewer Settings]
+UseRawImportTool=false
+
+[LightTable Settings]
+Load Full Image size=false
+
+[Metadata Settings]
+EXIF Rotate=true
+EXIF Set Orientation=true
+Metadata Writing Mode=0
+Rotate By Internal Flag=true
+Rotate By Metadata Flag=true
+Rotate Contents Lossless=true
+Rotate Contents Lossy=false
+Save Color Label=true
+Save Date Time=true
+Save EXIF Comments=true
+Save FaceTags=false
+Save Pick Label=true
+Save Rating=true
+Save Tags=true
+Save Template=true
+Update File Timestamp=true
+Use XMP Sidecar For Reading=false
+Write RAW Files=false
