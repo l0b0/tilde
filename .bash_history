@@ -461,6 +461,7 @@ git status
 git submodule add --force git://github.com/l0b0/make-includes.git 
 git submodule add --force git://github.com/l0b0/shell-includes.git 
 git submodule update --init 
+git subtree add --prefix=example git@github.com:l0b0/example.git master # merge repository history 
 git tag --delete name # local 
 git tag v0.1 
 git --version 
