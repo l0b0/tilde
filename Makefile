@@ -107,7 +107,7 @@ test:
 	markdown doc/keyboard-shortcuts.md > /dev/null
 
 $(dotfile_links): $(addprefix $(PREFIX)/,%) : $(addprefix $(CURDIR)/,%)
-	ln --verbose --symbolic $< $@
+	ln --verbose --symbolic --no-target-directory $< $@
 
 .PHONY: dotfiles
 dotfiles: $(dotfile_links)
