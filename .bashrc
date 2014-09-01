@@ -52,8 +52,11 @@ WARNING_FORMAT="${WARNING_FORMAT-$(color_enabled && tput setaf 3)}"
 INFO_FORMAT="${INFO_FORMAT-$(color_enabled && tput setaf 4)}"
 RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 
+# Move shell prompt to the bottom of the terminal
+PS1='\[$(tput cup "$LINES")\]'
+
 # Exit code
-PS1='$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
+PS1="$PS1"'$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
 
 if [[ "$USER" = 'root' ]]
 then
