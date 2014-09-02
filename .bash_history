@@ -1148,6 +1148,7 @@ mkgithub ~/dev/cronlist
 mkgithub ~/dev/crumbling-beaker 
 mkgithub ~/dev/csv2zarafa-contacts 
 mkgithub ~/dev/cvsignore2svn 
+mkgithub ~/dev/dcp2icc 
 mkgithub ~/dev/dialogue 
 mkgithub ~/dev/dialogue.wiki 
 mkgithub ~/dev/difff 
