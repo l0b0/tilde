@@ -885,6 +885,7 @@ man md5sum # help
 man mencoder # help 
 man mkdir # help 
 man mkfifo # help 
+man mkfs.msdos # help 
 man mktemp # help 
 man modinfo # help 
 man mount # help 
@@ -1558,6 +1559,7 @@ sudo make topclean 2>&1 | tee make_topclean.out~
 sudo make uninstall 
 sudo mandb # update apropos database manual 
 sudo mkdir "/media/mountpoint" 
+sudo mkfs.msdos -F 32 /dev/sdxy # format fat32 partition 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
 sudo mount --options remount,rw /dev/sda1 # writeable 
