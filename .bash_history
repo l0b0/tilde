@@ -1268,10 +1268,10 @@ nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network
 nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
-nmcli con # network connections list 
-nmcli dev # network devices list 
-nmcli dev wifi connect SSID password PASSWORD # connect network wireless 
-nmcli nm # network manager status 
+nmcli connection # network connections list 
+nmcli device # network devices list 
+nmcli device wifi connect SSID password PASSWORD # connect network wireless 
+nmcli general # network manager status 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
