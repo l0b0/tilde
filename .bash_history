@@ -1268,6 +1268,7 @@ nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network
 nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+nmcli connection modify em1-1 connection.autoconnect yes 
 nmcli connection # network connections list 
 nmcli device # network devices list 
 nmcli device wifi connect SSID password PASSWORD # connect network wireless 
