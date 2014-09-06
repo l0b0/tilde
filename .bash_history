@@ -1269,10 +1269,10 @@ nm-applet & # network gui
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
 nmcli connection modify em1-1 connection.autoconnect yes 
-nmcli connection # network connections list 
+nmcli connection show # network connections list 
 nmcli device # network devices list 
 nmcli device wifi connect SSID password PASSWORD # connect network wireless 
-nmcli general # network manager status 
+nmcli general status # network manager status 
 nmcli networking # network manager enabled 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
