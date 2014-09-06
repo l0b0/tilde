@@ -1274,6 +1274,8 @@ nmcli device # network devices list
 nmcli device wifi connect SSID password PASSWORD # connect network wireless 
 nmcli general status # network manager status 
 nmcli networking # network manager enabled 
+nmcli networking off # disable network 
+nmcli networking on # enable network 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
