@@ -1272,6 +1272,7 @@ nmcli connection modify em1-1 connection.autoconnect yes
 nmcli connection show # network connections list 
 nmcli device # network devices list 
 nmcli device wifi connect SSID password PASSWORD # connect network wireless 
+nmcli device wifi list # show networks quality 
 nmcli general status # network manager status 
 nmcli networking connectivity check # show connection status 
 nmcli networking # network manager enabled 
