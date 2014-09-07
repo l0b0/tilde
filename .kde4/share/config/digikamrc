@@ -80,9 +80,51 @@ CaseSensitive=0
 
 
 [Camera Settings]
+AutoAlbumDate=false
+AutoAlbumExt=false
+AutoRotate=true
+Case Type=0
+ConvertJpeg=false
+CustomDateFormat=
+DefaultTargetAlbumId=0
+FixDateTime=false
+FolderDateFormat=0
+LossLessFormat=0
+Rename Method=0
+ShowLog=false
+Template=0
 TurnHighQualityThumbs=false
 UseDefaultTargetAlbum=false
 UseFileMetadata=false
+
+[CameraGui Sidebar Right][GPS Properties Tab]
+Sort Order=0
+Web GPS Locator=0
+
+[CameraGui Sidebar Right][GPS Properties Tab][Map Widget]
+Backend=marble
+GoogleMaps Map Type=ROADMAP
+GoogleMaps Show Map Type Control=true
+GoogleMaps Show Navigation Control=true
+GoogleMaps Show Scale Control=true
+Marble Map Theme=atlas
+Marble Projection=spherical
+Marble Show Compass=false
+Marble Show Overview Map=false
+Marble Show Scale Bar=false
+Marker Grouping Radius=1
+Mouse Mode=0
+Preview Grouped Items=true
+Preview Single Items=true
+Show Thumbnails=true
+Show numbers on items=true
+Sticky Mode State=false
+
+[CameraGui Sidebar Right][Metadata Properties Tab]
+EXIF Level=2
+IPTC Level=2
+MAKERNOTE Level=2
+XMP Level=2
 
 [Color Management]
 BPCAlgorithm=true
@@ -558,6 +600,27 @@ Save Intermediate When Not Reproducible=false
 Saving Format for Versions=TIFF
 Show Intermediates in View=false
 Show Original in View=false
+
+[import_mapwidgetview]
+Sort Order=0
+
+[import_mapwidgetview][Central Map Widget]
+Backend=marble
+GoogleMaps Map Type=ROADMAP
+GoogleMaps Show Map Type Control=true
+GoogleMaps Show Navigation Control=true
+GoogleMaps Show Scale Control=true
+Marble Map Theme=atlas
+Marble Projection=spherical
+Marble Show Compass=false
+Marble Show Overview Map=false
+Marble Show Scale Bar=false
+Marker Grouping Radius=1
+Mouse Mode=0
+Preview Grouped Items=true
+Preview Single Items=true
+Show Thumbnails=true
+Show numbers on items=true
 
 [mainwindow_mapwidgetview]
 Sort Order=0
