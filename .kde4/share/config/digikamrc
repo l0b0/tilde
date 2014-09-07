@@ -85,7 +85,7 @@ AutoRotate=true
 Case Type=0
 ConvertJpeg=false
 CustomDateFormat=
-DefaultTargetAlbumId=0
+DefaultTargetAlbumId=1
 FixDateTime=false
 FolderDateFormat=0
 LossLessFormat=0
@@ -93,7 +93,7 @@ Rename Method=0
 ShowLog=false
 Template=0
 TurnHighQualityThumbs=false
-UseDefaultTargetAlbum=false
+UseDefaultTargetAlbum=true
 UseFileMetadata=false
 
 [CameraGui Sidebar Right][GPS Properties Tab]
