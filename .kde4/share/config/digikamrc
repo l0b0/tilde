@@ -78,7 +78,6 @@ AlbumTreeViewSortColumn=0
 AlbumTreeViewSortOrder=0
 CaseSensitive=0
 
-
 [Camera Settings]
 AutoAlbumDate=true
 AutoAlbumExt=false
