@@ -80,7 +80,7 @@ CaseSensitive=0
 
 
 [Camera Settings]
-AutoAlbumDate=false
+AutoAlbumDate=true
 AutoAlbumExt=false
 AutoRotate=true
 Case Type=0
