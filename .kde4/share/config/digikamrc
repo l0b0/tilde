@@ -326,6 +326,7 @@ JPEG2000Compression=75
 JPEG2000LossLess=true
 JPEGCompression=95
 JPEGSubSampling=2
+LastSavedImageExtension=jpeg
 Median Filter Passes=0
 Noise Reduction Chrominance Threshold=0
 Noise Reduction Threshold=0
