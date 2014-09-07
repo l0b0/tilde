@@ -302,7 +302,7 @@ Use Trash=true
 AutomaticDetectionLanguage=1
 
 [ImageViewer Settings]
-AutoBrightness=true
+AutoBrightness=false
 AutoZoom=true
 BackgroundColor=0,0,0
 Black Point=0
@@ -316,9 +316,9 @@ Dont Stretch Pixels=false
 Eeci Refine=false
 EnableCACorrection=false
 Es Median Filter Passes=0
-Expo Correction=false
+Expo Correction=true
 Expo Correction Highlight=0
-Expo Correction Shift=0.994
+Expo Correction Shift=3.35
 ExpoIndicatorMode=true
 FixColorsHighlights=false
 Four Color RGB=false
@@ -556,6 +556,45 @@ SortOrder=0
 
 [PluginsSearchBar Search Text Tool]
 CaseSensitive=0
+
+[RAW Import Settings]
+AutoBrightness=false
+Black Point=0
+Brightness=0
+Brightness Multiplier=1
+Contrast=0
+Custom White Balance=6500
+Custom White Balance Green=1
+Dcb Enhance Filter=false
+Dcb Iterations=-1
+Decoding Quality=0
+Dont Stretch Pixels=false
+Eeci Refine=false
+EnableCACorrection=false
+Es Median Filter Passes=0
+Expo Correction=true
+Expo Correction Highlight=0
+Expo Correction Shift=3.35
+FineExposure=0
+FixColorsHighlights=false
+Four Color RGB=false
+Gamma=1
+Histogram Channel=0
+Histogram Scale=1
+Median Filter Passes=0
+Noise Reduction Chrominance Threshold=0
+Noise Reduction Threshold=0
+Noise Reduction Type=0
+Output Color Space=1
+Saturation=1
+SixteenBitsImage=false
+Unclip Color=0
+Use Black Point=false
+Use White Point=false
+White Balance=1
+White Point=0
+caBlueMultiplier=0
+caRedMultiplier=0
 
 [RawCameraDlgSearchBar Search Text Tool]
 CaseSensitive=0
