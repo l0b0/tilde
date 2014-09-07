@@ -360,6 +360,8 @@ ImageDescEditTab TagCheckViewSortColumn=0
 ImageDescEditTab TagCheckViewSortOrder=0
 
 [ImageViewer Settings][Right Sidebar][Color Properties Tab]
+Histogram Channel=0
+Histogram Scale=1
 ICC Level=2
 
 [ImageViewer Settings][Right Sidebar][GPS Properties Tab]
