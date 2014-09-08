@@ -1353,8 +1353,8 @@ printf $"\0" | uniname -bcepu # 1 nul escape quote
 printf \\0 | uniname -bcepu # 1 nul escape quote 
 printf \0 | uniname -bcepu # 1 zero escape quote 
 printf $'\0' | wc --chars # 0 escape quote 
-printf %q "$IFS" # escape bash 
-printf %q "$PS1" # escape bash 
+printf '%q\n' "$IFS" # escape bash 
+printf '%q\n' "$PS1" # escape bash 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | xclip; cmp --verbose <(printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n') <(xclip -out) # clipboard copy test 
 printf %s "${IFS:0:1}" 
