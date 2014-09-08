@@ -92,9 +92,9 @@ LossLessFormat=0
 Rename Method=0
 ShowLog=false
 Template=0
-TurnHighQualityThumbs=false
+TurnHighQualityThumbs=true
 UseDefaultTargetAlbum=true
-UseFileMetadata=false
+UseFileMetadata=true
 
 [CameraGui Sidebar Right][GPS Properties Tab]
 Sort Order=0
