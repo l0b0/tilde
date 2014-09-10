@@ -55,9 +55,6 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 # Remove old prompt
 PS1=
 
-# Move shell prompt to the bottom of the terminal
-PS1='\[\e[$LINES;1H\]'
-
 # Exit code
 PS1="$PS1"'$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
 
