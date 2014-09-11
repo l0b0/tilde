@@ -314,7 +314,7 @@ git branch
 git branch --all # list 
 git branch --delete topic # local 
 git branch --remotes 
-git branch --set-upstream master origin/master # track 
+git branch --set-upstream-to=origin/master master # track 
 git branch --track topic master 
 git checkout -b topic remotes/origin/topic # branch change create 
 git checkout master # branch change 
