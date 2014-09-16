@@ -422,7 +422,7 @@ git mergetool &
 git merge topic # local branch 
 git mv README{,.markdown} 
 git pull 
-git pull origin master 
+git pull --update-head-ok origin master # follow initial fetch 
 git push 
 git push --force 
 git push origin :dead-branch # delete remote branch 
