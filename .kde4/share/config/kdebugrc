@@ -3,3 +3,33 @@ InfoOutput=4
 
 [digikam]
 InfoOutput=4
+
+[kbuildsycoca4]
+InfoOutput=4
+
+[kdecore (KConfigSkeleton)]
+InfoOutput=2
+
+[kdesu (kdelibs)]
+InfoOutput=2
+
+[khelpcenter]
+InfoOutput=2
+
+[kio (delegateanimationhandler)]
+InfoOutput=4
+
+[kio_help]
+InfoOutput=4
+
+[kio_help4]
+InfoOutput=2
+
+[kio_thumbnail]
+InfoOutput=4
+
+[kio_trash]
+InfoOutput=4
+
+[knotify]
+InfoOutput=4
