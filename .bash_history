@@ -1660,7 +1660,6 @@ sudo vim /etc/network/interfaces
 sudo vim /etc/postgresql/*/main/pg_hba.conf 
 sudo vim /etc/rc.local 
 sudo vim /etc/resolv.conf # dns network 
-sudo vim /etc/X11/xorg.conf 
 sudo vipw # edit password users 
 sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
