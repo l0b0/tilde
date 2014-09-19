@@ -1042,6 +1042,9 @@ man timeout # help
 man tkmib # help 
 man tofrodos # help 
 man top # help 
+man tor # help 
+man torify # help 
+man torsocks # help 
 man touch # help 
 man tput # help 
 man traceroute # help 
@@ -1576,7 +1579,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo ntpdate pool.ntp.org # update date time clock 
-sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia digikam dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rsync scrot simple-scan slim slock sqliteman sshfs strace system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
+sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia digikam dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pidgin pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad rsync scrot simple-scan slim slock sqliteman sshfs strace system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk tor torsocks ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xinit xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xournal xterm youtube-dl # software packages install 
 sudo pacman --sync --needed --refresh cbatticon # laptop packages install 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
@@ -1610,6 +1613,7 @@ sudo sh -c 'systemctl start cups.service && systemctl enable cups.service' # pri
 sudo sh -c 'systemctl start NetworkManager.service && systemctl enable NetworkManager.service' # network service 
 sudo sh -c 'systemctl start ntpd.service && systemctl enable ntpd.service' # network service 
 sudo sh -c 'systemctl start sshd.service && systemctl enable sshd.service' # network service 
+sudo sh -c 'systemctl start tor.service && systemctl enable tor.service' # network privacy service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
@@ -1700,6 +1704,8 @@ todos -- file # convert newline
 top 
 top -c # command line 
 top -p "$(pgrep -d ',' bash)" 
+torify wget --output-document=- https://check.torproject.org/ # privacy network tor 
+torsocks --shell # privacy tor interactive shell 
 touch --date='2001-02-03 04:05:06.789' file # set access modification time 
 touch file # create empty file 
 tput colors 
