@@ -176,6 +176,7 @@ dotty graph.dot # graphics
 dot -V 
 dropdb --username username dbname # postgresql 
 du --si --summarize . # disk size 
+du --si --summarize --one-file-system * # find large directory file 
 echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
 echo $BASHPID # shell subshell pid 
 echo "body" > ~/.events/summary # notify 
