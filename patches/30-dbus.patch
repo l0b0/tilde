@@ -1,0 +1,10 @@
+--- /etc/X11/xinit/xinitrc.d/30-dbus.orig	2014-09-25 21:06:17.667374287 +0100
++++ /etc/X11/xinit/xinitrc.d/30-dbus	2014-09-25 21:06:30.148566753 +0100
+@@ -1,6 +1,6 @@
+ #!/bin/bash
+ 
+ # launches a session dbus instance
+-if [ -z "$DBUS_SESSION_BUS_ADDRESS" ] && type dbus-launch >/dev/null; then
++if [ -z "${DBUS_SESSION_BUS_ADDRESS-}" ] && type dbus-launch >/dev/null; then
+   eval $(dbus-launch --sh-syntax --exit-with-session)
+ fi

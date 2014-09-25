@@ -1586,7 +1586,6 @@ sudo pacman --sync --needed --refresh cbatticon # laptop packages install
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-fbdev xf86-video-intel xf86-video-modesetting xf86-video-vesa xorg-xbacklight # laptop drivers touchpad graphics 
-sudo pacman --sync --refresh --sysupgrade # upgrade system 
 sudo pacman --upgrade ./*.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
@@ -1607,6 +1606,7 @@ sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'pacman --sync --needed --refresh jenkins && systemctl start jenkins.service && systemctl enable jenkins.service' # jenkins ci service 
+sudo sh -c "pacman --sync --refresh --sysupgrade && patch --directory=/ --forward --strip=0 --input=$HOME/dev/tilde/patches/30-dbus.patch" # upgrade system 
 sudo sh -c 'systemctl enable slim.service && systemctl start slim.service' # x11 display server slim service 
 sudo sh -c 'systemctl start acpid.service && systemctl enable acpid.service' # service 
 sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemon.service' # printer discovery service 
