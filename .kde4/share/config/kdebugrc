@@ -10,6 +10,9 @@ InfoOutput=4
 [kdecore (KConfigSkeleton)]
 InfoOutput=2
 
+[kded]
+InfoOutput=4
+
 [kdesu (kdelibs)]
 InfoOutput=2
 
