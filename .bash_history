@@ -90,6 +90,9 @@ convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image
 convert ./*.jpg output.pdf # graphics combine image 
 convert ./name-*.gif name-%04d.png # format number graphics 
 count . # filesystem 
+coverage help 
+coverage report --include='*/*' --fail-under=100 # python test coverage 
+coverage run setup.py test # python test coverage 
 cp --archive dir target # recursive owner permissions 
 cp file{,.orig} # filesystem 
 cppcheck foo.c # lint c code 
@@ -1351,6 +1354,7 @@ pip2 freeze > requirements.txt # save python dependencies
 pip freeze > requirements.txt # save python dependencies 
 pip help 
 pip help install 
+pip install coverage 
 pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul escape quote 
