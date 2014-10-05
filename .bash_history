@@ -1354,7 +1354,7 @@ pip2 freeze > requirements.txt # save python dependencies
 pip freeze > requirements.txt # save python dependencies 
 pip help 
 pip help install 
-pip install coverage 
+pip install --requirement requirements.txt 
 pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul escape quote 
