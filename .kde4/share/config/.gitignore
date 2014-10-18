@@ -8,9 +8,11 @@ khelpcenterrc
 kio_httprc
 kioslaverc
 kmailrc
+kmetainformationrc
 knoderc
 ktimezonedrc
 kuriikwsfilterrc
 kwalletrc
 mailtransports
 phonondevicesrc
+trashrc
