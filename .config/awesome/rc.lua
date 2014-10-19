@@ -56,6 +56,17 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+wallpaper_extensions = {
+    "png",
+    "jpg",
+}
+for index, wallpaper_extension in ipairs(wallpaper_extensions) do
+    wallpaper_path = os.getenv("HOME") .. "/.wallpaper." .. wallpaper_extension
+    if awful.util.file_readable(wallpaper_path) then
+        theme.wallpaper = wallpaper_path
+        break
+    end
+end
 
 -- This is used later as the default terminal and editor to run.
 terminal = "xterm"
