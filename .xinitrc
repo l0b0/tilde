@@ -64,6 +64,11 @@ then
     numlockx &
 fi
 
+if which redshift
+then
+    redshift &
+fi
+
 /usr/bin/start-pulseaudio-x11
 
 exec awesome >> ~/.cache/awesome/log 2>&1
