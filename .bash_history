@@ -558,6 +558,7 @@ id "$USER"
 if [[ -r /proc/sys/kernel/ns_last_pid ]]; then while true; do while read; do if [[ "$REPLY" != "$old" ]]; then printf '%(%s)T %d\n' -1 "$REPLY"; old="$REPLY"; fi; done < /proc/sys/kernel/ns_last_pid; read -t 1 || true; done; fi # processes pids log 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 imapfilter 
+img2scad < test.png # openscad convert image 
 indent ./*.c 
 indentect --help 
 indentect --verbose < "$(which indentect)" 
@@ -1596,6 +1597,7 @@ sudo pacman --upgrade ./*.pkg.tar.xz # install
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
+sudo pip2 install --upgrade img2scad 
 sudo pip2 install --upgrade pep8 
 sudo pip2 install --upgrade vcard # validator 
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
