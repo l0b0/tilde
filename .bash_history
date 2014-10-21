@@ -1145,6 +1145,7 @@ mkfifo pipe1 pipe2
 mkgithub --configure --https --verbose --user l0b0 
 mkgithub --configure --ssh --verbose --user l0b0 
 mkgithub ~/dev/algorithms 
+mkgithub ~/dev/analytical-engine 
 mkgithub ~/dev/arm 
 mkgithub ~/dev/awmtt 
 mkgithub ~/dev/bm 
