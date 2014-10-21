@@ -114,7 +114,7 @@ tags = {
         "browser",
         "editor",
         "vcs",
-        "im",
+        "net",
         "media",
         "7",
         "8",
