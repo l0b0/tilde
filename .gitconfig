@@ -32,3 +32,5 @@
 	default = simple
 [diff "odf"]
 	textconv = odt2txt
+[branch]
+	autosetuprebase = always
