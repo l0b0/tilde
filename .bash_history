@@ -1,6 +1,4 @@
 abcde -o mp3 # rip audio cd 
-ack-grep --all --ignore-dir .jhw-cache --ignore-dir .sass-cache --ignore-dir log --ignore-dir public --ignore-dir tmp "pattern" . # search rails 
-ack-grep "pattern" . # search 
 acpi_listen # events power configuration 
 alias ls 
 align_image_stack -vl -a aligned ./*.jpg # graphics 
@@ -44,20 +42,7 @@ bg # background job
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 builtin # bash list 
-bundle help # rails 
-bundle init # rails 
-bundle install # rails 
-bundle package 
-bundle update # rails 
 bunzip2 file.bz2 # compression bzip 
-cap deploy:check # rails 
-cap deploy:login 
-cap deploy:migrations # rails 
-cap deploy # rails 
-cap deploy:rollback # rails 
-cap deploy:setup # rails 
-capify . # rails 
-cap # rails 
 cat ~/contacts/*.vcf > ~/all.vcf # concatenate vcard 
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
@@ -107,9 +92,6 @@ csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
 csvtool col 3 example.csv # csv column 
 csvtool --help | less 
-cucumber --dry-run # rails 
-cucumber # rails 
-cucumber --version # rails 
 curl https://aur.archlinux.org/packages/tt/ttf-source-sans-pro/ttf-source-sans-pro.tar.gz | tar -zx 
 curl --insecure --location http://xrl.us/perlbrewinstall | bash # development perl 
 curl --version 
@@ -583,7 +565,6 @@ ip link show up # network
 ip -oneline -family inet addr show dev eth0 # ipv4 address 
 ip route show dev eth0 # network 
 ipython 
-irb # interactive ruby shell 
 iwconfig # wireless network configuration 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
@@ -978,7 +959,6 @@ man rrdtool # help
 man rrdupdate # help 
 man rsa # help 
 man rsync # help 
-man ruby # help 
 man runlevel # help 
 man sane-find-scanner # help 
 man scanimage # help 
@@ -1402,10 +1382,6 @@ qemu-img create -f qcow2 /tmp/my.img 10G
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qtpfsgui & # hdr photo editor 
-rails console 
-rails new project_name # create 
-rails server # start service web 
-rbash # restricted 
 readelf --all "$(which readelf)" # executable binary 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
 read < "/path" 
@@ -1425,7 +1401,6 @@ ronn --roff README.markdown # man
 route 
 rsync --archive --human-readable --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
-ruby --verbose 
 runlevel # kernel 
 sandbox="$(mktemp --directory)" 
 sane-find-scanner # list device 
@@ -1822,7 +1797,6 @@ xrdb -query # list
 xset q # list settings x monitor 
 xsltproc --output file.xml ~/dev/xml/filter/filter.xslt file.xml # filter xml xslt replace 
 xsltproc --output file.xml file.xslt file.xml # transform xslt xml replace 
-xterm -version 
 xwininfo -id "$(xdotool selectwindow)" 
 xwininfo -id "$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')" # current window 
 xxd "$(which xxd)" | head --lines=1 # binary hex 
@@ -1832,6 +1806,3 @@ yes -- example # repeat string
 youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
 zip --update file.zip input # add file compress zip 
 zless /proc/config.gz # kernel configuration parameter 
-zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
-zless /usr/share/doc/devscripts/README.gz # help 
-zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
