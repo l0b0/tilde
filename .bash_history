@@ -1831,6 +1831,7 @@ yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git a
 yes -- example # repeat string 
 youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue 'https://www.youtube.com/watch?v=' # download video files 
 zip --update file.zip input # add file compress zip 
+zless /proc/config.gz # kernel configuration parameter 
 zless /usr/share/doc/autotools-dev/README.Debian.gz # help 
 zless /usr/share/doc/devscripts/README.gz # help 
 zless /usr/share/doc/rar/rar.txt.gz # help compress git mergetool 
