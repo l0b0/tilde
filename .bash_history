@@ -641,8 +641,9 @@ lsof -i :22 # internet port network
 lsof -i tcp # internet network 
 lsof # list open files 
 lsof -p $$ # files process 
-lspci | grep --ignore-case audio 
+lspci | grep --ignore-case audio # pci device 
 lspci # list pci hardware 
+lspci -v -s 00:1b.0 # pci device details 
 lsusb | grep --ignore-case cam 
 lsusb # list usb hardware 
 lyx file.lyx 
@@ -1050,6 +1051,7 @@ man unzip # help
 man updatedb # help 
 man uptime # help 
 man urandom # help 
+man usb-devices # help 
 man useradd # help 
 man userdel # help 
 man usermod # help 
@@ -1722,6 +1724,7 @@ unset -v variable
 unzip file.zip # decompress zip 
 unzip -l file.zip # list zip 
 uptime 
+usb-devices # list usb device 
 /usr/local/JDiveLog/bin/jdivelog 
 vagrant box add precise32 http://files.vagrantup.com/precise32.box 
 vagrant box list # show all 
