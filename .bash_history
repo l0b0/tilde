@@ -1166,6 +1166,7 @@ mkgithub ~/dev/img2vcard
 mkgithub ~/dev/indentect 
 mkgithub ~/dev/ipcalc 
 mkgithub ~/dev/job-board 
+mkgithub ~/dev/JSLint 
 mkgithub ~/dev/l0b0.github.io 
 mkgithub ~/dev/lfmcol2csv 
 mkgithub ~/dev/lines 
@@ -1277,6 +1278,7 @@ node -v
 notify-send "summary" "body" 
 npm config set registry http://registry.npmjs.org/ 
 npm install -g coffee-script # coffeescript 
+npm install jslint 
 npm ls -g 
 npm -v 
 nslookup example.org # dns internet lookup network 
@@ -1568,6 +1570,7 @@ sudo ntpdate pool.ntp.org # update date time clock
 sudo pacman --sync --clean # remove cache temporary file 
 sudo pacman --sync --needed --refresh abcde acpid adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts android-tools aspell-de aspell-en aspell-fr awesome base-devel bash-completion bc cups cups-filters darktable deluge dia digikam dnsutils dos2unix dosfstools eog esmtp evince exfat-utils feh file-roller firefox flashplugin fortune-mod fuse-exfat gimp git gnome-icon-theme gnome-keyring gparted gphoto2 graphviz gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop hugin hunspell-de hunspell-en hunspell-fr inkscape intellij-idea-community-edition ipython iw kdemultimedia-mplayerthumbs keepassx lib32-alsa-plugins lib32-libpulse libreoffice-still-calc libreoffice-still-draw libreoffice-still-en-GB libreoffice-still-impress libreoffice-still-math libreoffice-still-writer livestreamer lsb-release lsof markdown mcomix meld mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g ntp offlineimap openscad openssh pavucontrol pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa pychecker python-pip python2-pip qcad redshift rsync ruby-ronn scrot simple-scan slim slock sqliteman sshfs strace system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk tor torsocks ttf-bitstream-vera ttf-dejavu ttf-droid ttf-freefont ttf-inconsolata ttf-liberation ttf-ubuntu-font-family vim vlc whois wireshark-gtk xautolock xorg-server xorg-server-common xorg-xev xorg-xinit xorg-xinput xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xorg-xwininfo xournal xterm youtube-dl # software packages install 
 sudo pacman --sync --needed --refresh cbatticon # laptop packages install 
+sudo pacman --sync --needed --refresh nodejs 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-fbdev xf86-video-intel xf86-video-modesetting xf86-video-vesa xorg-xbacklight # laptop drivers touchpad graphics 
