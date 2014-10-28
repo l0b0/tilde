@@ -1202,6 +1202,7 @@ mkgithub ~/dev/qr2scad
 mkgithub ~/dev/random 
 mkgithub ~/dev/RAYT 
 mkgithub ~/dev/RedPhone 
+mkgithub ~/dev/redshift 
 mkgithub ~/dev/ruler 
 mkgithub ~/dev/samsung-tools 
 mkgithub ~/dev/schemaspy2svg 
