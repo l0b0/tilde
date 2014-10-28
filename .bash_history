@@ -1338,11 +1338,11 @@ pidof init # process pid
 pid=$! # process pid 
 ping -c 4 example.org 
 ping example.org 
-pip2 freeze > requirements.txt # save python dependencies 
-pip freeze > requirements.txt # save python dependencies 
+pip2 freeze > python-requirements.txt # save python dependencies 
+pip freeze > python-requirements.txt # save python dependencies 
 pip help 
 pip help install 
-pip install --requirement requirements.txt 
+pip install --requirement python-requirements.txt 
 pngcrush -brute -d target ./*.png # graphics compress 
 PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul escape quote 
