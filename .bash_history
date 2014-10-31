@@ -937,7 +937,6 @@ man psql # help
 man psql # help postgresql 
 man pstree # help 
 man pts # help 
-man puppet # help 
 man python # help 
 man qemu # help 
 man quilt # help 
@@ -1374,6 +1373,7 @@ ps -U root -u root fu | less -S # processes list user tree
 ps uw -p $$ # process single pid 
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
+puppet help 
 puppet resource --help 
 puppet resource --types 
 puppet resource user 
