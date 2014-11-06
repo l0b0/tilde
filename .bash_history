@@ -995,6 +995,7 @@ man sqlite3 # help
 man ssh-agent # help 
 man ssh_config # help 
 man ssh-copy-id # help 
+man sshd_config # help 
 man sshd # help 
 man sshfs # help 
 man ssh # help 
