@@ -55,7 +55,6 @@ cat /proc/stat # hardware
 cat /proc/sys/dev/cdrom/info 
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
-cat /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 cbatticon --help-all 
 cbatticon --list-batteries 
 cd - # back 
@@ -1515,7 +1514,6 @@ sudo chown nobody "$sandbox"
 sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo cpanm Net::LDAP # install ldap 
-sudo cp /sys/class/hwmon/hwmon0/device/fan1_max /sys/class/hwmon/hwmon0/device/fan1_output # hardware macmini4,1 speed 
 sudo crontab -e # edit 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
@@ -1629,7 +1627,6 @@ sudo tar --directory /opt --extract --gzip --file ideaIU-*.tar.gz && /opt/idea-I
 sudo tcpdump # network debug log packets 
 sudo tcpdump tcp # network debug log packets protocol 
 sudo tcpdump 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0 and not src and dst net 127.0.0.1' # network debug log packets internet 
-sudo tee /sys/class/hwmon/hwmon0/device/fan1_output <<<5500 # hardware macmini4,1 speed 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
 sudo umount "/media/mountpoint" 
 sudo umount ~/mp3 
