@@ -1609,8 +1609,6 @@ sudo sh -c 'systemctl start cups.service && systemctl enable cups.service' # pri
 sudo sh -c 'systemctl start dkms.service && systemctl enable dkms.service' # dynamic kernel module support 
 sudo sh -c 'systemctl start NetworkManager.service && systemctl enable NetworkManager.service' # network service 
 sudo sh -c 'systemctl start ntpd.service && systemctl enable ntpd.service' # network service 
-sudo sh -c 'systemctl start sshd.service && systemctl enable sshd.service' # network service 
-sudo sh -c 'systemctl start tor.service && systemctl enable tor.service' # network privacy service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
@@ -1620,9 +1618,7 @@ sudo sshfs user@host:/path /run/mount/host
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
 sudo systemctl enable NetworkManager.service # network gui configuration 
-sudo systemctl enable sshd.service 
 sudo systemctl restart dhcpcd.service 
-sudo systemctl start sshd.service 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tar --directory /opt --extract --gzip --file ideaIU-*.tar.gz && /opt/idea-IU-*/bin/idea.sh # install intellij idea ide 
 sudo tcpdump # network debug log packets 
