@@ -835,7 +835,6 @@ man journalctl # help
 man json_pp # help 
 man json_xs # help 
 man kdesu # help 
-man keepassx # help 
 man keytool # help 
 man kill # help 
 man kvm # help 
