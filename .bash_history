@@ -1343,7 +1343,6 @@ pip help
 pip help install 
 pip install --requirement python-requirements.txt 
 pngcrush -brute -d target ./*.png # graphics compress 
-PREFIX=~ sudo make install 
 printf '\0' | uniname -bcepu # 1 nul escape quote 
 printf "\0" | uniname -bcepu # 1 nul escape quote 
 printf $"\0" | uniname -bcepu # 1 nul escape quote 
