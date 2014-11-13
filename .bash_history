@@ -1038,6 +1038,7 @@ man trash # help
 man tr # help 
 man tty # help 
 man udevadm # help 
+man ufw # help 
 man umask # help 
 man umount # help 
 man uname # help 
@@ -1620,6 +1621,7 @@ sudo tcpdump # network debug log packets
 sudo tcpdump tcp # network debug log packets protocol 
 sudo tcpdump 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0 and not src and dst net 127.0.0.1' # network debug log packets internet 
 sudo traceroute -4 -p 1234 -T example.org # ipv4 port tcp network 
+sudo ufw status 
 sudo umount "/media/mountpoint" 
 sudo umount ~/mp3 
 sudo updatedb 
