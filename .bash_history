@@ -1735,7 +1735,7 @@ vagrant --help
 vagrant init precise32 # ubuntu vm 
 vagrant ssh 
 vagrant status 
-vagrant up # update vm 
+vagrant up # start vm 
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
