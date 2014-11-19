@@ -848,6 +848,7 @@ man libreoffice # help
 man lighttpd # help 
 man line # help 
 man lintian # help 
+man livestreamer # help 
 man ln # help 
 man localectl # help 
 man locate # help 
