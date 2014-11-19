@@ -1732,7 +1732,10 @@ usb-devices # list usb device
 /usr/local/JDiveLog/bin/jdivelog 
 vagrant box list # show all 
 vagrant destroy # delete vm 
+vagrant halt # stop shutdown vm 
 vagrant --help 
+vagrant package --base archlinux # create vm 
+vagrant provision # vm 
 vagrant ssh # login vm 
 vagrant status 
 vagrant up # start vm 
