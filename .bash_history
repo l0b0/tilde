@@ -1694,6 +1694,8 @@ todos -- file # convert newline
 top 
 top -c # command line 
 top -p "$(pgrep -d ',' bash)" 
+tor-browser-en & 
+tor-browser-en --help 
 torify wget --output-document=- https://check.torproject.org/ # privacy network tor 
 torsocks --shell # privacy tor interactive shell 
 touch --date='2001-02-03 04:05:06.789' file # set access modification time 

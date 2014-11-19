@@ -426,7 +426,7 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule_any = { instance = { "plugin-container", "Luakit", "exe" } },
       properties = { floating = true } },
-    { rule = { class = "Firefox" },
+    { rule_any = { class = { "Firefox", "Tor Browser" } },
       properties = { tag = tags[math.min(2, screen.count())][2] } },
     { rule_any = { class = { "Digikam", "Gimp", "Hugin", "Inkscape", "Keepassx", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman" } },
       properties = { tag = tags[math.min(2, screen.count())][3] } },
