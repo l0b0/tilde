@@ -133,7 +133,7 @@ deluge & # bittorrent gui
 ~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
-~/dev/vcard/format-TEL.sh ~/contacts/*.vcf # format telephone number vcard 
+~/dev/vcard/format-TEL.sh -i ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
 ~/dev/vcard/split.sh ~/contacts/*.vcf # split vcard files 
 ~/dev/xterm-color-count/xterm-color-count.sh -v # xterm color 
