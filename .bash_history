@@ -1733,7 +1733,7 @@ usb-devices # list usb device
 vagrant box list # show all 
 vagrant destroy # delete vm 
 vagrant --help 
-vagrant ssh 
+vagrant ssh # login vm 
 vagrant status 
 vagrant up # start vm 
 vainfo 
