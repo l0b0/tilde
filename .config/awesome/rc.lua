@@ -146,7 +146,7 @@ myawesomemenu = {
    { "edit config", editor_cmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", awesome.quit },
-   { "reboot" , "kdesu shutdown -r now" },
+   { "reboot" , "reboot" },
    { "shutdown" , "kdesu shutdown -h now" },
 }
 
