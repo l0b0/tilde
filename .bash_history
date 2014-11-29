@@ -671,6 +671,7 @@ man 3 printf # help format %d %f %s
 man 5 crontab # help 
 man 5 passwd # help password 
 man 5 sshd_config # help 
+man 5 sudoers # help 
 man 7 glob # help 
 man abcde # help 
 man ack-grep # help 
