@@ -1199,6 +1199,7 @@ mkgithub ~/dev/Platonic-solids
 mkgithub ~/dev/progit 
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/pspipe 
+mkgithub ~/dev/puppetlabs-java 
 mkgithub ~/dev/qr2scad 
 mkgithub ~/dev/random 
 mkgithub ~/dev/RAYT 
