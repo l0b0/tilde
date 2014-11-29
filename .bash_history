@@ -1247,6 +1247,7 @@ mount # list all
 mount --no-mtab --options remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -obitrate=256 ~/music/ ~/mp3 # mount 
+msort --help 
 mutt 
 mutt -d 5 
 mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
