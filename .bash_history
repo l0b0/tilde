@@ -1377,6 +1377,7 @@ ps uw -p $$ # process single pid
 pulseaudio --kill && pulseaudio --start 
 puppet describe --short user 
 puppet help 
+puppet module install --modulepath modules puppetlabs-java 
 puppet resource --help 
 puppet resource --types 
 puppet resource user 
