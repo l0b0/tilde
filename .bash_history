@@ -585,6 +585,7 @@ killall process
 kill -INT $$ # signal 
 kill -l # list signals 
 komodo & 
+ktrash --empty # kde trash empty delete 
 kvm -boot d -m 512 -cdrom archlinux-*.iso # vm 
 kvm -hda /tmp/my.img -cdrom boot.iso -boot d # vm 
 l 
