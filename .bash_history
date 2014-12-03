@@ -580,7 +580,7 @@ kdesu java -jar jdivelog-installer-*.jar &
 kdesu nm-connection-editor & # network configuration 
 kdesu wifi-radar & 
 keepassx & 
-kill -0 "$!" # check background process pid 
+kill -0 "$!" # check last job background process pid 
 kill -18 "$!" # resume last job background process pid 
 kill -20 "$!" # suspend last job background process pid 
 killall process 
