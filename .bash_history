@@ -151,7 +151,7 @@ dig example.org # dns lookup internet network
 dig example.org mx # dns email lookup internet network 
 digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
-disown # job 
+disown %+ # nohup last job background process 
 dmesg | less # debug os startup 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
