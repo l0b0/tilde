@@ -581,6 +581,8 @@ kdesu nm-connection-editor & # network configuration
 kdesu wifi-radar & 
 keepassx & 
 kill -0 "$!" # check background process pid 
+kill -18 "$!" # resume last job background process pid 
+kill -20 "$!" # suspend last job background process pid 
 killall process 
 kill -INT $$ # signal 
 kill -l # list signals 
