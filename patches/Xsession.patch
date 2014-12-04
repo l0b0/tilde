@@ -1,0 +1,11 @@
+--- /etc/lightdm/Xsession.orig	2014-12-04 08:44:08.188548538 +0000
++++ /etc/lightdm/Xsession	2014-12-04 08:44:22.898547995 +0000
+@@ -30,7 +30,7 @@
+ done
+ 
+ # Load xmodmap if not using XKB
+-if [ -z "$XKB_IN_USE" ]; then
++if [ -z "${XKB_IN_USE-}" ]; then
+     for file in "/etc/X11/Xmodmap" "$HOME/.Xmodmap"; do
+         if [ -f "$file" ]; then
+            echo "Loading modmap: $file"
