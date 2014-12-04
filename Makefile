@@ -38,7 +38,7 @@ dotfiles = .ackrc \
            .toprc \
            .vim \
            .vimrc \
-           .xinitrc \
+           .xprofile \
            .Xmodmap \
            .Xresources
 

@@ -1,8 +1,4 @@
 #!/bin/sh
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
 
 set -o errexit -o nounset
 
@@ -70,5 +66,3 @@ then
 fi
 
 /usr/bin/start-pulseaudio-x11
-
-exec awesome >> ~/.cache/awesome/log 2>&1
