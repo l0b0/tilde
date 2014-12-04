@@ -913,6 +913,7 @@ man passwd # help
 man paste # help 
 man patch # help 
 man pbuilder # help 
+man pcmanfm # help 
 man pdebuild # help 
 man pdfimages # help 
 man pdfinfo # help 
@@ -1320,6 +1321,7 @@ patch --strip 0 < patch.diff
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
 PATH=$(IFS=':'; echo "${paths[*]}") 
 pavucontrol & # pulseaudio volume 
+pcmanfm & 
 pdfimages -j ./*.pdf . 
 pdfinfo file.pdf 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
@@ -1578,7 +1580,7 @@ sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpd
 sudo nethogs wlan0 # network monitor 
 sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
 sudo pacman --sync --clean # remove cache temporary file 
-sudo pacman --sync --needed --refresh abcde acpid android-tools base-devel darktable dkms dnsutils dosfstools esmtp exfat-utils file-roller fortune-mod fuse-exfat gnome-icon-theme gnome-keyring gparted gphoto2 gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop ipython iw kdemultimedia-mplayerthumbs lib32-alsa-plugins lib32-libpulse linux-headers livestreamer lsb-release markdown mcomix mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g offlineimap openssh pavucontrol pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa puppet pychecker python-pip python2-pip redshift ruby-ronn ruby-shadow sqliteman sshfs system-config-printer tcpdump thunar thunar-archive-plugin thunar-volman tigervnc tk vagrant virtualbox virtualbox-guest-utils virtualbox-host-dkms whois wireshark-gtk xautolock xorg-xev xorg-xinit xorg-xinput xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xorg-xwininfo # software packages install 
+sudo pacman --sync --needed --refresh abcde acpid android-tools base-devel darktable dkms dnsutils dosfstools esmtp exfat-utils file-roller fortune-mod fuse-exfat gnome-icon-theme gnome-keyring gparted gphoto2 gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop ipython iw kdemultimedia-mplayerthumbs lib32-alsa-plugins lib32-libpulse linux-headers livestreamer lsb-release markdown mcomix mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g offlineimap openssh pavucontrol pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa puppet pychecker python-pip python2-pip redshift ruby-ronn ruby-shadow sqliteman sshfs system-config-printer tcpdump tigervnc tk vagrant virtualbox virtualbox-guest-utils virtualbox-host-dkms whois wireshark-gtk xautolock xorg-xev xorg-xinit xorg-xinput xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xorg-xwininfo # software packages install 
 sudo pacman --sync --needed --refresh intel-ucode 
 sudo pacman --sync --needed --refresh nodejs 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
@@ -1689,7 +1691,6 @@ tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip
 tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
 tar --list --gzip --file ~/tilde.tar.gz 
 telnet localhost 1234 # network 
-thunar-volman-settings & # mount removable storage 
 tig 
 time bash -lc true # benchmark startup login shell 
 timedatectl status 
