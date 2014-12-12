@@ -463,7 +463,11 @@ gpg --import ~/pubring.gpg
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify ./*.sig # pgp signature 
 gphoto2 --auto-detect # camera hardware 
+gphoto2 --get-config=/main/status/batterylevel # battery camera 
+gphoto2 --get-config=/main/status/lensname # lens camera 
+gphoto2 --list-config | while read line; do echo $line; gphoto2 --get-config=$line; done # all camera config 
 gphoto2 --list-files # camera list photo 
+gphoto2 --set-config /main/settings/datetime=now # camera set time date 
 gphoto2 --summary # camera hardware 
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
