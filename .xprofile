@@ -3,7 +3,7 @@
 set -o errexit -o nounset
 
 exec 5>&1 6>&2 # Save stdout and stderr pointers
-exec > ~/.xinitrc.log 2>&1 # Log stdout and stderr
+exec > ~/.xprofile.log 2>&1 # Log stdout and stderr
 
 set -o noclobber
 
