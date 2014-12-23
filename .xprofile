@@ -28,12 +28,12 @@ unset user_resources
 xmodmap "${HOME}/.Xmodmap"
 
 # Machine specific settings
-local_xinitrc=$HOME/.xinitrc_local
-if [ -f "$local_xinitrc" ]
+local_xprofile=$HOME/.xprofile_local
+if [ -f "$local_xprofile" ]
 then
-    . "$local_xinitrc"
+    . "$local_xprofile"
 fi
-unset local_xinitrc
+unset local_xprofile
 
 # GNOME Keyring Daemon
 . /etc/X11/xinit/xinitrc.d/30-dbus
