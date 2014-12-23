@@ -37,25 +37,17 @@ fi
 
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 
-# Battery monitor task bar applet
-if which cbatticon
-then
-    cbatticon &
-fi
+/usr/bin/start-pulseaudio-x11
 
 # Network Manager task bar applet
 nm-applet &
 
 xautolock -locker slock &
 
-if which numlockx
-then
-    numlockx &
-fi
-
-if which redshift
-then
-    redshift &
-fi
-
-/usr/bin/start-pulseaudio-x11
+for service in cbatticon numlockx redshift
+do
+    if which "$service"
+    then
+        "$service" &
+    fi
+done
