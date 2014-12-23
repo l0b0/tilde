@@ -463,6 +463,7 @@ gpg --allow-secret-key-import --import ~/secring.gpg
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify ./*.sig # pgp signature 
+gpg --with-fingerprint ~/.gnupg/pubring.gpg # print public keys 
 gphoto2 --auto-detect # camera hardware 
 gphoto2 --capture-image-and-download --frames 100 --interval 1 # time series capture usb camera 
 gphoto2 --get-config=/main/status/batterylevel # battery camera 
