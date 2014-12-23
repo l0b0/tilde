@@ -36,3 +36,6 @@ InfoOutput=4
 
 [knotify]
 InfoOutput=4
+
+[ktrash]
+InfoOutput=4
