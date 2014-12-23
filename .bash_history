@@ -265,6 +265,7 @@ fortune
 for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 free --human # memory 
 fromdos -- file # convert newline 
+fswebcam --loop 5 --resolution 640x480 webcam.jpeg # webcam capture 
 fuseiso -p file.bin "/media/mountpoint" # mount 
 fusermount -u "/media/mountpoint" # unmount 
 gcc --version 
@@ -775,6 +776,7 @@ man fold # help
 man fortune # help 
 man free # help 
 man fsck # help 
+man fswebcam # help 
 man fuseiso # help 
 man fusermount # help 
 man gcc # help 
