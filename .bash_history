@@ -464,6 +464,7 @@ gpg --import ~/pubring.gpg
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify ./*.sig # pgp signature 
 gphoto2 --auto-detect # camera hardware 
+gphoto2 --capture-image-and-download --frames 100 --interval 1 # time series capture usb camera 
 gphoto2 --get-config=/main/status/batterylevel # battery camera 
 gphoto2 --get-config=/main/status/lensname # lens camera 
 gphoto2 --list-config | while read line; do echo $line; gphoto2 --get-config=$line; done # all camera config 
