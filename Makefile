@@ -19,6 +19,7 @@ XRDB = /usr/bin/xrdb
 dotfiles = .ackrc \
            .bash_history \
            .bashrc \
+           .color \
            .config \
            .gitattributes \
            .gitconfig \

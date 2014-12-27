@@ -26,6 +26,13 @@ then
 fi
 unset local_xprofile
 
+monitor_color_profile="${HOME}/.color/icc/monitor.icc"
+if [ -f "$monitor_color_profile" ]
+then
+    /usr/bin/dispwin "$monitor_color_profile"
+fi
+unset monitor_color_profile
+
 # GNOME Keyring Daemon
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 export GPG_AGENT_INFO SSH_AUTH_SOCK
@@ -44,7 +51,7 @@ nm-applet &
 
 xautolock -locker slock &
 
-for service in cbatticon numlockx redshift
+for service in cbatticon numlockx
 do
     if which "$service"
     then
