@@ -17,6 +17,7 @@ arch # hardware
 arecord --duration 5 --format dat recording.wav # record audio file 
 arecord --format dat | aplay # test audio input capture output playback default microphone speakers 
 arecord --list-devices # list audio input capture microphones 
+arp -a # network list arp cache 
 ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
 aticonfig --initial=check # graphics amd x configuration 
 autoconf # compile 
@@ -695,6 +696,7 @@ man apropos # help
 man arandr # help 
 man arch # help 
 man arecord # help 
+man arp # help 
 man ascii # help 
 man ash # help 
 man asn1parse # help 
