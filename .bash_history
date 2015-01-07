@@ -1507,6 +1507,7 @@ sqliteman --help
 sqliteman name.sqlite # gui sqlite db 
 ssh-add -l # list key fingerprint 
 ssh-add -L # list key parameter 
+ssh -A example.org # forward agent key 
 ssh-copy-id example.org 
 ssh example.org 
 ssh example.org < example.sh # execute shell script remote 
