@@ -1008,6 +1008,7 @@ man sort # help
 man speaker-test # help 
 man splint # help 
 man sqlite3 # help 
+man ssh-add # help 
 man ssh-agent # help 
 man ssh_config # help 
 man ssh-copy-id # help 
@@ -1504,6 +1505,8 @@ splint foo.c
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 sqliteman --help 
 sqliteman name.sqlite # gui sqlite db 
+ssh-add -l # list key fingerprint 
+ssh-add -L # list key parameter 
 ssh-copy-id example.org 
 ssh example.org 
 ssh example.org < example.sh # execute shell script remote 
