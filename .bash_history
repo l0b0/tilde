@@ -1392,6 +1392,7 @@ psql --version # postgresql
 ps -U root -u root fu | less -S # processes list user tree 
 ps uw -p $$ # process single pid 
 pulseaudio --kill && pulseaudio --start 
+puppet apply --noop --modulepath modules manifests/site.pp # no-op test configuration 
 puppet describe --short user 
 puppet help 
 puppet module install --modulepath modules puppetlabs-java 
