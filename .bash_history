@@ -267,6 +267,7 @@ for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(
 free --human # memory 
 fromdos -- file # convert newline 
 fswebcam --loop 5 --resolution 640x480 webcam.jpeg # webcam capture 
+full_name="$(getent passwd "$USER" | cut -d ':' -f 5)" && gphoto2 --set-config /main/settings/artist="$full_name" --set-config /main/settings/copyright="Copyright $full_name" --set-config /main/settings/ownername="$full_name" # set camera config 
 fuseiso -p file.bin "/media/mountpoint" # mount 
 fusermount -u "/media/mountpoint" # unmount 
 gcc --version 
@@ -468,6 +469,9 @@ gpg --verify ./*.sig # pgp signature
 gpg --with-fingerprint ~/.gnupg/pubring.gpg # print public keys 
 gphoto2 --auto-detect # camera hardware 
 gphoto2 --capture-image-and-download --frames 100 --interval 1 # time series capture usb camera 
+gphoto2 --get-config /main/settings/artist # artist 
+gphoto2 --get-config /main/settings/copyright # copyright 
+gphoto2 --get-config /main/settings/ownername # camera owner 
 gphoto2 --get-config=/main/status/batterylevel # battery camera 
 gphoto2 --get-config=/main/status/lensname # lens camera 
 gphoto2 --list-config | while read line; do echo $line; gphoto2 --get-config=$line; done # all camera config 
