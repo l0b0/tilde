@@ -280,6 +280,7 @@ getconf ARG_MAX # arguments
 getconf -a # system configuration 
 getent ahosts example.org # dns hosts internet ipv4 decimal 
 getent hosts example.org # dns hosts internet ipv6 hex 
+getent passwd "$USER" | cut -d ':' -f 5 # user full name 
 gethostip -d example.org # dns hosts internet ipv4 decimal 
 git 
 git add . 
