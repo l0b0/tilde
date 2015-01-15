@@ -283,6 +283,8 @@ getent ahosts example.org # dns hosts internet ipv4 decimal
 getent hosts example.org # dns hosts internet ipv6 hex 
 getent passwd "$USER" | cut -d ':' -f 5 # user full name 
 gethostip -d example.org # dns hosts internet ipv4 decimal 
+get_iplayer --help # bbc video audio download uk 
+get_iplayer --type=liveradio,tv,radio,livetv --modes=best # bbc video audio download uk 
 git 
 git add . 
 git add .gitignore 
