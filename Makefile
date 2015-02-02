@@ -10,7 +10,7 @@ MV = /usr/bin/mv
 RM = /usr/bin/rm
 RMDIR = /usr/bin/rmdir
 SED = /usr/bin/sed
-SORT = /usr/bin/sort
+SORT = LANG=en_US.utf8 /usr/bin/sort
 SQLITE = /usr/bin/sqlite3
 STRFILE = /usr/bin/strfile
 WC = /usr/bin/wc
