@@ -469,8 +469,8 @@ gpg --armor --export 92126B54 # print public key text
 gpg --delete-keys 44E2703A 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
+gpg --list-keys --with-fingerprint # print public keys 
 gpg --verify ./*.sig # pgp signature 
-gpg --with-fingerprint ~/.gnupg/pubring.gpg # print public keys 
 gphoto2 --auto-detect # camera hardware 
 gphoto2 --capture-image-and-download --frames 100 --interval 1 # time series capture usb camera 
 gphoto2 --get-config /main/settings/artist # artist 
