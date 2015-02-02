@@ -465,6 +465,7 @@ glc-play recording.glc -y 1 -o - | mencoder -demuxer y4m - -ovc lavc -lavcopts v
 glxgears # 3d graphics benchmark 
 glxinfo 
 gpg --allow-secret-key-import --import ~/secring.gpg 
+gpg --armor --export 92126B54 # print public key text 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --verify ./*.sig # pgp signature 
