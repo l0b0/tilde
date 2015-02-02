@@ -467,6 +467,7 @@ glxinfo
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --armor --export 92126B54 # print public key text 
 gpg --delete-keys 44E2703A 
+gpg --full-gen-key # create key 
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --list-public-keys --with-fingerprint # print public keys 
