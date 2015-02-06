@@ -472,6 +472,7 @@ gpg --full-gen-key # create key
 gpg --import ~/pubring.gpg 
 gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
 gpg --list-public-keys --with-fingerprint # print public keys 
+gpg --list-secret-keys 
 gpg --list-sigs 92126B54 # signature 
 gpg --send-key 92126B54 # upload 
 gpg --verify ./*.sig # pgp signature 
