@@ -466,6 +466,7 @@ glxgears # 3d graphics benchmark
 glxinfo 
 gpg --allow-secret-key-import --import ~/secring.gpg 
 gpg --armor --export 92126B54 # print public key text 
+gpg --decrypt encrypted.asc 
 gpg --decrypt | gpg --import # import key signature 
 gpg --delete-keys 44E2703A 
 gpg --edit-key 4DF0089E 
