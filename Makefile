@@ -26,8 +26,6 @@ dotfiles = .ackrc \
            .imapfilter \
            .inputrc \
            .kde4 \
-           .mutt \
-           .muttrc \
            .offlineimaprc \
            .perltidyrc \
            .profile \
