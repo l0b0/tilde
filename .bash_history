@@ -1689,6 +1689,7 @@ sudo userdel example # delete remove user
 sudo usermod --append --groups example "$USER" # modify user add group 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
+sudo vigr # edit groups users members 
 sudo vim /etc/default/keyboard 
 sudo vim /etc/fstab # mount points 
 sudo vim /etc/hosts # network 
@@ -1697,7 +1698,6 @@ sudo vim /etc/postgresql/*/main/pg_hba.conf
 sudo vim /etc/rc.local 
 sudo vim /etc/resolv.conf # dns network 
 sudo vipw # edit password users 
-sudo vipw --group # edit groups users members 
 sudo visudo # permissions security 
 sudo wavemon 
 sudo wifi-menu 
