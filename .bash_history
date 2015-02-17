@@ -470,6 +470,7 @@ gpg --decrypt encrypted.asc
 gpg --decrypt | gpg --import # import key signature 
 gpg --delete-keys 44E2703A 
 gpg --edit-key 4DF0089E 
+gpg --export --armor --output 92126B54.public.gpg.key 92126B54 # export public key file 
 gpg --full-gen-key # create key 
 gpg --gen-revoke --output 4DF0089E.rev 4DF0089E # generate revoke key certificate file 
 gpg --import ~/pubring.gpg 
