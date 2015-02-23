@@ -1442,6 +1442,7 @@ rename --no-act --verbose 's/\.txt$/\.html/' ./*.txt # extension suffix
 reset # clear log remove terminal text 
 rmdir ./* 
 rm -- example.txt 
+rm --recursive ~/.local/share/Trash/ && mkdir --parent ~/.local/share/Trash/{files,info,metadata} # clean kde trash bug 
 ronn --help 
 ronn --roff README.markdown # man 
 route 
