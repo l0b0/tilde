@@ -92,6 +92,7 @@ LossLessFormat=0
 Rename Method=0
 ShowLog=false
 Template=0
+ToolBarsMovable=Disabled
 TurnHighQualityThumbs=true
 UseDefaultTargetAlbum=true
 UseFileMetadata=true
