@@ -1591,6 +1591,7 @@ sudo ip link set dev eth0 up # network enable device
 sudo ip route add default via 1.2.3.4 dev eth0 
 sudo ip route del default via 1.2.3.4 dev eth0 
 sudo iptables --list # list all firewall rules network 
+sudo iptables --list-rules # list all firewall rules network commands 
 sudo kismet # wireless network monitor 
 sudo ldconfig 
 sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
