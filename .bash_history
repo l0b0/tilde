@@ -716,6 +716,7 @@ man apropos # help
 man arandr # help 
 man arch # help 
 man arecord # help 
+man arm # help 
 man arp # help 
 man ascii # help 
 man ash # help 
@@ -1694,6 +1695,7 @@ sudo userdel example # delete remove user
 sudo usermod --append --groups example "$USER" # modify user add group 
 sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
+sudo -u tor arm # anonymizing relay monitor service tor 
 sudo vigr # edit groups users members 
 sudo vim /etc/default/keyboard 
 sudo vim /etc/fstab # mount points 
