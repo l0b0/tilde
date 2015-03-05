@@ -1,14 +1,14 @@
-# Up and down arrows
+# Up and down arrows search through the history for the characters before the cursor
 "\e[A": history-search-backward
 "\e[B": history-search-forward
 
-# Meta-Delete
+# Alt-Delete deletes up to the end of the current word
 "\e[3;3~": kill-word
 
 # Delete for wonky terminals
 "\e[3~": delete-char
 
-# Ctrl/Meta arrow keys
+# Ctrl/Alt arrow keys
 "\e[1;5D": backward-word
 "\e[1;3D": backward-word
 "\e[1;5C": forward-word
