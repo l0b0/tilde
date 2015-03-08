@@ -416,6 +416,7 @@ git mv README{,.markdown}
 git pull 
 git pull --update-head-ok origin master # follow initial fetch 
 git push 
+git push origin 123abc:master # push commit 
 git push --force 
 git push origin :dead-branch # delete remote branch 
 git push origin :refs/tags/name # delete remote 
