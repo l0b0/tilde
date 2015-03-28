@@ -259,6 +259,7 @@ firefox /usr/share/doc/python-matplotlib-doc/html/index.html # dev help
 firefox /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 firefox /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
 fold --width 1 <<< foo # split characters lines 
+for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080p height 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
 for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
@@ -915,6 +916,7 @@ man mkfs.msdos # help
 man mktemp # help 
 man modinfo # help 
 man modprobe # help 
+man mogrify # help 
 man mount # help 
 man mp3fs # help 
 man mutt # help 
