@@ -492,6 +492,7 @@ gphoto2 --get-config=/main/status/batterylevel # battery camera
 gphoto2 --get-config=/main/status/lensname # lens camera 
 gphoto2 --list-config | while read line; do echo $line; gphoto2 --get-config=$line; done # all camera config 
 gphoto2 --list-files # camera list photo 
+gphoto2 --port usb: --abilities # camera list abilities usb 
 gphoto2 --set-config /main/settings/datetime=now # camera set time date 
 gphoto2 --summary # camera hardware 
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
