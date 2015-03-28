@@ -39,6 +39,7 @@ ToolTips Show Album Category=true
 ToolTips Show Album Collection=true
 ToolTips Show Album Date=true
 ToolTips Show Album Name=false
+ToolTips Show Album Preview=false
 ToolTips Show Album Title=true
 ToolTips Show Audio Bit Rate=true
 ToolTips Show Audio Channel Type=true
@@ -77,6 +78,10 @@ AlbumTreeViewRestoreChecked=false
 AlbumTreeViewSortColumn=0
 AlbumTreeViewSortOrder=0
 CaseSensitive=0
+
+[Baloo Settings]
+Sync Baloo to Digikam=false
+Sync Digikam to Baloo=false
 
 [Camera Settings]
 AutoAlbumDate=true
@@ -243,6 +248,9 @@ Toggle Auto Tags=0
 [DigikamViewTagSearchBar Search Text Tool]
 CaseSensitive=0
 
+[Face Detection Settings]
+Detection Accuracy=0.8
+
 [Find Duplicates View]
 AlbumComboBox-RestoreChecked=true
 AlbumComboBox-SortColumn=0
@@ -329,6 +337,7 @@ JPEGCompression=95
 JPEGSubSampling=2
 LastSavedImageExtension=jpeg
 Median Filter Passes=0
+MenuBar=Disabled
 Noise Reduction Chrominance Threshold=0
 Noise Reduction Threshold=0
 Noise Reduction Type=0
@@ -341,6 +350,7 @@ PGFLossLess=true
 PNGCompression=9
 Show Thumbbar=false
 SixteenBitsImage=true
+StatusBar=Disabled
 TIFFCompression=true
 ToolBarsMovable=Disabled
 Unclip Color=0
