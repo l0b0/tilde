@@ -198,6 +198,7 @@ evince /usr/share/doc/msort/msort.pdf.gz & # help
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 ex -c '1' -c '?^[[:space:]]*[^[:space:]#]?' -c $'a\n# New comment' -c 'wq' ~/.bashrc # insert after last match 
 exec "$SHELL" # replace 
+exiftool -AllDates+='-00:01:00 00:00:00' . # exif adjust date time images 
 exit 
 exiv2 print IMG_1234.exv # metadata 
 expand --tabs=4 example.txt # convert tab space 
@@ -782,6 +783,7 @@ man ent # help
 man env # help 
 man errno # help 
 man etherape # help 
+man exiftool # help 
 man exiv2 # help 
 man expand # help 
 man expect # help 
