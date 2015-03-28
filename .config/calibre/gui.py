@@ -10,10 +10,6 @@ send_to_storage_card_by_default = False
 # Confirm before deleting
 confirm_delete = False
  
-# main window geometry
-# Main window geometry
-main_window_geometry = cPickle.loads('\x80\x02csip\n_unpickle_type\nq\x01U\x0cPyQt4.QtCoreq\x02U\nQByteArrayU.\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x13\x00\x00\x05U\x00\x00\x02\xff\x00\x00\x00\x01\x00\x00\x00\x14\x00\x00\x05T\x00\x00\x02\xfe\x00\x00\x00\x00\x00\x00\x85\x87Rq\x03.')
- 
 # new version notification
 # Notify when a new version is available
 new_version_notification = True
