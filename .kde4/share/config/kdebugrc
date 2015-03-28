@@ -39,3 +39,6 @@ InfoOutput=4
 
 [ktrash]
 InfoOutput=4
+
+[unnamed app]
+InfoOutput=2

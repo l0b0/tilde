@@ -127,7 +127,7 @@ plugin_search_history = cPickle.loads('\x80\x02]q\x01.')
 shortcuts_search_history = cPickle.loads('\x80\x02]q\x01.')
  
 # jobs search history
-# Search history for the keyboard preferences
+# Search history for the tweaks preferences
 jobs_search_history = cPickle.loads('\x80\x02]q\x01.')
  
 # tweaks search history
