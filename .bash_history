@@ -932,8 +932,6 @@ man nfs # help
 man nice # help 
 man nl # help 
 man nmap # help 
-man nm-applet # help 
-man nmcli # help 
 man nm # help 
 man node # help 
 man notify-send # help 
@@ -1119,6 +1117,9 @@ man w # help
 man which # help 
 man who # help 
 man whois # help 
+man wicd-client # help 
+man wicd-cli # help 
+man wicd # help 
 man wifi-radar # help 
 man wireshark-filter # help 
 man wireshark # help 
@@ -1308,19 +1309,8 @@ netstat --all # internet connections sockets
 nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
 nl ~/.bashrc # number lines 
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
-nm-applet & # network gui 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
-nmcli connection modify em1-1 connection.autoconnect yes 
-nmcli connection show # network connections list 
-nmcli device # network devices list 
-nmcli device wifi connect SSID password PASSWORD # connect network wireless 
-nmcli device wifi list # show networks quality 
-nmcli general status # network manager status 
-nmcli networking connectivity check # show connection status 
-nmcli networking # network manager enabled 
-nmcli networking off # disable network 
-nmcli networking on # enable network 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
@@ -1830,6 +1820,7 @@ while read; do xdotool windowactivate "$REPLY"; xdotool key F5; done < <(xdotool
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
 whois example.org # dns lookup internet network 
 who # logins users 
+wicd-cli --wireless --list-networks 
 wine --version 
 wireshark & 
 wnpp-alert # Debian packaging 
