@@ -608,7 +608,6 @@ json_xs < example.json # prettify json
 json_xs -t null < example.json # verify json format 
 kdesu etherape & # network traffic visualization 
 kdesu java -jar jdivelog-installer-*.jar & 
-kdesu nm-connection-editor & # network configuration 
 kdesu wifi-radar & 
 keepassx & 
 kill -0 "$!" # check last job background process pid 
