@@ -672,6 +672,7 @@ lsmod # kernel modules
 lsof +c 0 | grep process-name | wc --lines # count files 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
+lsof +L1 # list deleted files 
 lsof # list open files 
 lsof -p $$ # files process 
 lspci | grep --ignore-case audio # pci device 
