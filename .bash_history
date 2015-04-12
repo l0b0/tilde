@@ -1779,7 +1779,7 @@ vagrant destroy # delete vm
 vagrant halt # stop shutdown vm 
 vagrant --help 
 vagrant package --base archlinux # create vm 
-vagrant plugin install reload 
+vagrant plugin install vagrant-reload 
 vagrant provision # vm 
 vagrant ssh # login vm 
 vagrant status 
