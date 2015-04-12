@@ -846,6 +846,7 @@ man hostname # help
 man hosts # help 
 man htop # help 
 man hugin # help 
+man hunspell # help 
 man id # help 
 man ifdown # help 
 man iftop # help 
