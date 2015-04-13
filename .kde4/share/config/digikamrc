@@ -657,6 +657,10 @@ Show Original in View=false
 [aspectratiocrop Tool]
 Hor.Oriented Aspect Ratio=13
 
+[freerotation Tool]
+Anti Aliasing=true
+Auto Crop Type=2
+
 [import_mapwidgetview]
 Sort Order=0
 
