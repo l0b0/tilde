@@ -271,7 +271,7 @@ fromdos -- file # convert newline
 fswebcam --loop 5 --resolution 640x480 webcam.jpeg # webcam capture 
 full_name="$(getent passwd "$USER" | cut -d ':' -f 5)" && gphoto2 --set-config /main/settings/artist="$full_name" --set-config /main/settings/copyright="Copyright $full_name" --set-config /main/settings/ownername="$full_name" # set camera config 
 fuseiso -p file.bin "/media/mountpoint" # mount 
-fusermount -u "/media/mountpoint" # unmount 
+fusermount -uz "/media/mountpoint" # lazy unmount 
 gcc --version 
 gcc -Wall -o a.out foo.c # compile 
 gdb program # debug 
