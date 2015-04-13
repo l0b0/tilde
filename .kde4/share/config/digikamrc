@@ -20,6 +20,7 @@ Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
 Image Group Mode=2
+Image Group Sort Order=0
 Image Sort Order=0
 Image Sorting=0
 Item Left Click Action=1
