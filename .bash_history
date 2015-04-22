@@ -258,6 +258,7 @@ firefox /usr/share/doc/python-doc/html/index.html # dev help
 firefox /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
 firefox /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 firefox /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
+flash-player-properties & # config flash 
 fold --width 1 <<< foo # split characters lines 
 for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080p height 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
