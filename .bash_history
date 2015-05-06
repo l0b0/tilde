@@ -426,7 +426,7 @@ git push --set-upstream origin master
 git push --tags 
 git rebase --abort 
 git rebase --continue 
-git rebase --interactive HEAD~20 
+git rebase --interactive origin/master # change local commits 
 git rebase master 
 git rebase origin/master # avoid empty merge commit 
 git reflog 
