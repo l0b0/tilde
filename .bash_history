@@ -222,7 +222,6 @@ fg # foreground job
 fgit gc -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
 fgit --help 
 fgit pull -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
-fgit push -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. 
 fgit status -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
 file README.markdown 
 find . -empty 
