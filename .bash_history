@@ -1581,6 +1581,7 @@ sudo grub-install /dev/sda # fix boot mbr
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
 sudo iftop # bandwidth network interface monitor 
+sudo iftop -i wlp1s0 # bandwidth network interface monitor wireless 
 sudo ifup wlan0 # network interface enable 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
