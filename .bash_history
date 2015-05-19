@@ -930,6 +930,7 @@ man nc # help
 man nethogs # help 
 man netstat # help 
 man NetworkManager # help 
+man newgrp # help 
 man nfs # help 
 man nice # help 
 man nl # help 
@@ -1309,6 +1310,7 @@ nethack-qt &
 netstat 
 netstat --all # internet connections sockets 
 netstat --tcp --udp --listening --numeric --program 
+newgrp group # change default group 
 nice --adjustment 19 ionice --class 3 du | sort --numeric-sort --key 1 # priority cpu io 
 nl ~/.bashrc # number lines 
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
@@ -1692,7 +1694,6 @@ sudo -u postgres psql --variable name="Robert'); DROP TABLE Students; --" <<< "C
 sudo useradd example # add create user 
 sudo userdel example # delete remove user 
 sudo usermod --append --groups example "$USER" # modify user add group 
-sudo usermod --gid group "$USER" # change default group 
 sudo usermod --groups "$(id --name --groups | sed 's/ \?group \?/ /g;s/ /,/g;s/^,//;s/,$//')" "$USER" # remove group 
 sudo -u tor arm # anonymizing relay monitor service tor 
 sudo vigr # edit groups users members 
