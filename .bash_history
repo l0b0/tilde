@@ -1005,6 +1005,7 @@ man rsync # help
 man runlevel # help 
 man sane-find-scanner # help 
 man scanimage # help 
+man s_client # help 
 man scp # help 
 man screen # help 
 man script # help 
@@ -1335,6 +1336,7 @@ openssl pkcs12 -info -in name.p12 -noout # list verify
 openssl req -new -key private.pem -out request.pem # create x509 certificate signing request hex 
 openssl req -text -in name.csr.pem # list certificate request properties 
 openssl rsa -text -in name.key.pem # list key properties 
+openssl s_client -connect example.com:443 <<< '' # get certificate connect host ssl https 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 openssl x509 -text -in name.crt.pem -noout # list x509 certificate properties 
 /opt/android-sdk/platform-tools/adb devices # list 
