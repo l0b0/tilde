@@ -417,7 +417,7 @@ Dcb Iterations=-1
 Decoding Quality=0
 Dont Stretch Pixels=false
 Eeci Refine=false
-EnableCACorrection=false
+EnableCACorrection=true
 Es Median Filter Passes=0
 Expo Correction=true
 Expo Correction Highlight=0
@@ -478,7 +478,7 @@ White Balance=1
 White Point=0
 caBlueMultiplier=0
 caRedMultiplier=0
-corrections Expanded=false
+corrections Expanded=true
 demosaicing Expanded=true
 whitebalance Expanded=true
 
