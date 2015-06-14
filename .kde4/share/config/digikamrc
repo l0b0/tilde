@@ -5,7 +5,10 @@ Pattern History List=\\0
 Options are expanded=true
 
 [Album Settings]
+Album Collections=Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
 Album Sort Order=0
+Default Icon Size=142
+Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
 Icon Show Comments=true
 Icon Show Coordinates=false
@@ -19,6 +22,7 @@ Icon Show Resolution=false
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
+IconView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 Image Group Mode=2
 Image Group Sort Order=0
 Image Sort Order=0
@@ -35,6 +39,7 @@ Show Thumbbar=true
 Show ToolTips=false
 Sidebar Title Style=0
 Theme=Default
+ToolTips Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 ToolTips Show Album Caption=true
 ToolTips Show Album Category=true
 ToolTips Show Album Collection=true
@@ -65,9 +70,16 @@ ToolTips Show Video Aspect Ratio=true
 ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
+TreeView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
+
+[AlbumDB Settings]
+Recently Used Tags=
 
 [AlbumFolderView Sidebar]
+CurrentIndex=
+Expansion=0
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -75,7 +87,10 @@ SortOrder=0
 CaseSensitive=0
 
 [AlbumSelectWidget]
+AlbumTreeViewCurrentIndex=
+AlbumTreeViewExpansion=
 AlbumTreeViewRestoreChecked=false
+AlbumTreeViewSelection=
 AlbumTreeViewSortColumn=0
 AlbumTreeViewSortOrder=0
 CaseSensitive=0
@@ -83,6 +98,8 @@ CaseSensitive=0
 [Baloo Settings]
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
+
+[Batch Queue Manager Settings]
 
 [Camera Settings]
 AutoAlbumDate=true
@@ -94,6 +111,9 @@ CustomDateFormat=
 DefaultTargetAlbumId=1
 FixDateTime=false
 FolderDateFormat=0
+FullScreen Hide SideBars=false
+FullScreen Hide ThumbBar=true
+FullScreen Hide ToolBars=false
 LossLessFormat=0
 Rename Method=0
 ShowLog=false
@@ -136,11 +156,14 @@ XMP Level=2
 BPCAlgorithm=true
 DefaultMismatchBehavior=2049
 DefaultMissingProfileBehavior=2050
+DefaultPath=
 DefaultUncalibratedBehavior=2080
 DoGamutCheck=0
 EnableCM=true
 GamutCheckMaskColor=126,255,255
 InProfileFile[$e]=$HOME/dev/tilde/.color/icc/Canon EOS 7D.icc
+LastSpecifiedAssignProfile=
+LastSpecifiedInputProfile=
 ManagedPreviews=true
 ManagedView=true
 MonitorProfileFile[$e]=/usr/share/apps/libkdcraw/profiles/srgb-d65.icm
@@ -160,17 +183,25 @@ Database Username=
 Internal Database Server=false
 
 [DateFolderView Sidebar]
+CurrentIndex=
+Expansion=
+Selection=
 SortColumn=0
 SortOrder=0
 
 [Digikam Left Sidebar]
+ActiveTab=0
 Minimized=false
+RestoreSize=-1
 
 [Digikam Right Sidebar]
+ActiveTab=0
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
+Minimized=true
 PhotographProperties Expanded=true
+RestoreSize=-1
 VideoProperties Expanded=true
 
 [Digikam Right Sidebar][Captions Tags Properties Tab]
@@ -191,6 +222,7 @@ Rights Expanded=true
 Subjects Expanded=true
 
 [Digikam Right Sidebar][Color Properties Tab]
+Current ICC Item=
 Histogram Channel=0
 Histogram Scale=1
 ICC Level=2
@@ -202,6 +234,7 @@ Web GPS Locator=0
 
 [Digikam Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -218,14 +251,23 @@ Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
 Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [Digikam Right Sidebar][Metadata Properties Tab]
+Current EXIF Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
 EXIF Level=2
 IPTC Level=2
+ImagePropertiesMetaData Tab=0
 MAKERNOTE Level=2
 XMP Level=2
 
 [Digikam Right Sidebar][Version Properties Tab]
+Version Properties Tab=versions
 Version Properties View Mode=2
 
 [DigikamViewFolderSearchBar Search Text Tool]
@@ -241,7 +283,10 @@ CaseSensitive=0
 CaseSensitive=0
 
 [DigikamViewTagFilterView]
+CurrentIndex=
+Expansion=
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 Toggle Auto Tags=0
@@ -253,17 +298,34 @@ CaseSensitive=0
 Detection Accuracy=0.8
 
 [Find Duplicates View]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=
+AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
+TagComboBox-Checked=
+TagComboBox-CurrentIndex=
+TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
+TagComboBox-Selection=
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholePAlbumsEntry=true
 UseWholeTAlbumsEntry=true
 
 [Fuzzy Search Sidebar]
+CurrentIndex=
+Expansion=
+FuzzySearch Tab=0
+Pen Sketch Hue=0
+Pen Sketch Saturation=0
+Pen Sketch Size=10
+Pen Sketch Value=255
 RestoreChecked=false
+Result Sketch items=10
+Selection=
 Similars Threshold=90
 SortColumn=0
 SortOrder=0
@@ -272,13 +334,17 @@ SortOrder=0
 CaseSensitive=0
 
 [GPS Search Sidebar]
+CurrentIndex=
+Expansion=
 RestoreChecked=false
+Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=0
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -294,12 +360,19 @@ Preview Grouped Items=true
 Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [GPSSearchViewSearchGPSBar Search Text Tool]
 CaseSensitive=0
 
 [General Settings]
+Application Style=
 Apply Sidebar Changes Directly=false
+FullScreen Hide SideBars=false
+FullScreen Hide ThumbBar=true
+FullScreen Hide ToolBars=false
 Show Permanent Delete Dialog=true
 Show Splash=false
 Show Trash Delete Dialog=true
@@ -310,6 +383,26 @@ Use Trash=true
 
 [HTML Settings]
 AutomaticDetectionLanguage=1
+
+[Image Properties SideBar]
+EXIF Tags Filter=
+
+[Image Quality Settings]
+Accepted Threshold=60
+Blur Weight=100
+Compression Weight=100
+Detect Blur=true
+Detect Compression=true
+Detect Noise=true
+Detect Overexposure=true
+Enable Sorter=false
+HighQ Accepted=true
+LowQ Rejected=true
+MediumQ Pending=true
+Noise Weight=100
+Pending Threshold=40
+Rejected Threshold=10
+Speed=1
 
 [ImageViewer Settings]
 AutoBrightness=false
@@ -332,6 +425,9 @@ Expo Correction Shift=3.35
 ExpoIndicatorMode=true
 FixColorsHighlights=false
 Four Color RGB=false
+FullScreen Hide SideBars=false
+FullScreen Hide ThumbBar=true
+FullScreen Hide ToolBars=false
 JPEG2000Compression=75
 JPEG2000LossLess=true
 JPEGCompression=95
@@ -349,8 +445,24 @@ OverExposurePercentsEntry=1
 PGFCompression=3
 PGFLossLess=true
 PNGCompression=9
+PreviewMode=128
 Show Thumbbar=false
 SixteenBitsImage=true
+SlideScreen=-2
+SlideShowDelay=5
+SlideShowLoop=false
+SlideShowPrintApertureFocal=false
+SlideShowPrintCapIfNoTitle=false
+SlideShowPrintComment=false
+SlideShowPrintDate=false
+SlideShowPrintExpoSensitivity=false
+SlideShowPrintLabels=false
+SlideShowPrintMakeModel=false
+SlideShowPrintName=true
+SlideShowPrintTags=false
+SlideShowPrintTitle=false
+SlideShowProgressIndicator=true
+SlideShowStartCurrent=false
 StatusBar=Disabled
 TIFFCompression=true
 ToolBarsMovable=Disabled
@@ -361,21 +473,48 @@ UnderExposurePercentsEntry=1
 Use Black Point=false
 Use White Point=false
 UseRawImportTool=true
+UseThemeBackgroundColor=true
 White Balance=1
 White Point=0
 caBlueMultiplier=0
 caRedMultiplier=0
+corrections Expanded=false
+demosaicing Expanded=true
+whitebalance Expanded=true
+
+[ImageViewer Settings][Right Sidebar]
+ActiveTab=0
+DigikamProperties Expanded=true
+FileProperties Expanded=true
+ItemProperties Expanded=true
+Minimized=true
+PhotographProperties Expanded=true
+RestoreSize=-1
+VideoProperties Expanded=true
 
 [ImageViewer Settings][Right Sidebar][Captions Tags Properties Tab]
+Contact Expanded=true
+ImageDescEdit Tab=0
+ImageDescEditTab CaptionsLang=
 ImageDescEditTab SearchBarCaseSensitive=0
+ImageDescEditTab TagCheckViewCurrentIndex=
+ImageDescEditTab TagCheckViewExpansion=0
 ImageDescEditTab TagCheckViewRestoreChecked=false
+ImageDescEditTab TagCheckViewSelection=
 ImageDescEditTab TagCheckViewSortColumn=0
 ImageDescEditTab TagCheckViewSortOrder=0
+ImageDescEditTab TagCheckViewToggle Auto Tags=0
+ImageDescEditTab TitleLang=
+Location Expanded=true
+Rights Expanded=true
+Subjects Expanded=true
 
 [ImageViewer Settings][Right Sidebar][Color Properties Tab]
+Current ICC Item=
 Histogram Channel=0
 Histogram Scale=1
 ICC Level=2
+ImagePropertiesColors Tab=0
 
 [ImageViewer Settings][Right Sidebar][GPS Properties Tab]
 Sort Order=0
@@ -383,6 +522,7 @@ Web GPS Locator=0
 
 [ImageViewer Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -399,20 +539,39 @@ Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
 Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [ImageViewer Settings][Right Sidebar][Metadata Properties Tab]
+Current EXIF Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
 EXIF Level=2
 IPTC Level=2
+ImagePropertiesMetaData Tab=0
 MAKERNOTE Level=2
 XMP Level=2
 
 [ImageViewer Settings][Right Sidebar][Version Properties Tab]
+Version Properties Tab=versions
 Version Properties View Mode=2
 
 [ImageViewer Thumbbar]
 ToolBarsMovable=Disabled
 
+[Import Filters]
+Filter0=All Files|false|||
+Filter1=Only New Files|true|||
+Filter2=Raw Files|false|||image/x-nikon-nef;image/x-fuji-raf;image/x-adobe-dng;image/x-panasonic-raw;image/x-olympus-orf;image/x-kodak-dcr;image/x-kodak-k25;image/x-sony-arw;image/x-minolta-mrw;image/x-kodak-kdc;image/x-sigma-x3f;image/x-sony-srf;image/x-pentax-pef;image/x-panasonic-raw2;image/x-canon-crw;image/x-sony-sr2;image/x-canon-cr2
+Filter3=JPG/TIFF Files|false|||image/jpeg;image/tiff
+Filter4=Video Files|false|||video/quicktime;video/mp4;video/x-msvideo;video/mpeg
+IgnoreExtensions=dsp dps
+IgnoreNames=mgr_data pgr_mgr
+
 [Import Settings]
+Default Icon Size=142
 Icon Show Coordinates=false
 Icon Show Date=true
 Icon Show Image Format=false
@@ -422,6 +581,7 @@ Icon Show Rating=true
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
+IconView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 Image Group Mode=1
 Image Sort Order=0
 Image Sorting=0
@@ -431,6 +591,7 @@ Preview Load Full Image Size=false
 Preview Show Icons=true
 Show Thumbbar=true
 Show ToolTips=false
+ToolTips Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 ToolTips Show File Date=false
 ToolTips Show File Name=true
 ToolTips Show File Size=false
@@ -445,24 +606,55 @@ ToolTips Show Photo Make=true
 ToolTips Show Photo WB=false
 ToolTips Show Tags=true
 
+[Labels Sidebar]
+ColorSelection=
+Expansion=
+PickSelection=
+RatingSelection=
+
 [LightTable Settings]
 Auto Load Right Panel=true
 Auto Sync Preview=true
 Clear On Close=false
+FullScreen Hide SideBars=false
+FullScreen Hide ToolBars=false
 Load Full Image size=false
 Navigate By Pair=false
 Show Thumbbar=true
 
+[LightTable Settings][Left Sidebar]
+ActiveTab=0
+DigikamProperties Expanded=true
+FileProperties Expanded=true
+ItemProperties Expanded=true
+Minimized=true
+PhotographProperties Expanded=true
+RestoreSize=-1
+VideoProperties Expanded=true
+
 [LightTable Settings][Left Sidebar][Captions Tags Properties Tab]
+Contact Expanded=true
+ImageDescEdit Tab=0
+ImageDescEditTab CaptionsLang=
 ImageDescEditTab SearchBarCaseSensitive=0
+ImageDescEditTab TagCheckViewCurrentIndex=
+ImageDescEditTab TagCheckViewExpansion=0
 ImageDescEditTab TagCheckViewRestoreChecked=false
+ImageDescEditTab TagCheckViewSelection=
 ImageDescEditTab TagCheckViewSortColumn=0
 ImageDescEditTab TagCheckViewSortOrder=0
+ImageDescEditTab TagCheckViewToggle Auto Tags=0
+ImageDescEditTab TitleLang=
+Location Expanded=true
+Rights Expanded=true
+Subjects Expanded=true
 
 [LightTable Settings][Left Sidebar][Color Properties Tab]
+Current ICC Item=
 Histogram Channel=0
 Histogram Scale=1
 ICC Level=2
+ImagePropertiesColors Tab=0
 
 [LightTable Settings][Left Sidebar][GPS Properties Tab]
 Sort Order=0
@@ -470,6 +662,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Left Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -486,26 +679,58 @@ Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
 Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [LightTable Settings][Left Sidebar][Metadata Properties Tab]
+Current EXIF Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
 EXIF Level=2
 IPTC Level=2
+ImagePropertiesMetaData Tab=0
 MAKERNOTE Level=2
 XMP Level=2
 
 [LightTable Settings][Left Sidebar][Version Properties Tab]
+Version Properties Tab=versions
 Version Properties View Mode=2
 
+[LightTable Settings][Right Sidebar]
+ActiveTab=0
+DigikamProperties Expanded=true
+FileProperties Expanded=true
+ItemProperties Expanded=true
+Minimized=true
+PhotographProperties Expanded=true
+RestoreSize=-1
+VideoProperties Expanded=true
+
 [LightTable Settings][Right Sidebar][Captions Tags Properties Tab]
+Contact Expanded=true
+ImageDescEdit Tab=0
+ImageDescEditTab CaptionsLang=
 ImageDescEditTab SearchBarCaseSensitive=0
+ImageDescEditTab TagCheckViewCurrentIndex=
+ImageDescEditTab TagCheckViewExpansion=0
 ImageDescEditTab TagCheckViewRestoreChecked=false
+ImageDescEditTab TagCheckViewSelection=
 ImageDescEditTab TagCheckViewSortColumn=0
 ImageDescEditTab TagCheckViewSortOrder=0
+ImageDescEditTab TagCheckViewToggle Auto Tags=0
+ImageDescEditTab TitleLang=
+Location Expanded=true
+Rights Expanded=true
+Subjects Expanded=true
 
 [LightTable Settings][Right Sidebar][Color Properties Tab]
+Current ICC Item=
 Histogram Channel=0
 Histogram Scale=1
 ICC Level=2
+ImagePropertiesColors Tab=0
 
 [LightTable Settings][Right Sidebar][GPS Properties Tab]
 Sort Order=0
@@ -513,6 +738,7 @@ Web GPS Locator=0
 
 [LightTable Settings][Right Sidebar][GPS Properties Tab][Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -529,20 +755,33 @@ Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
 Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [LightTable Settings][Right Sidebar][Metadata Properties Tab]
+Current EXIF Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
 EXIF Level=2
 IPTC Level=2
+ImagePropertiesMetaData Tab=0
 MAKERNOTE Level=2
 XMP Level=2
 
 [LightTable Settings][Right Sidebar][Version Properties Tab]
+Version Properties Tab=versions
 Version Properties View Mode=2
+
+[MainWindow]
+InitialAlbumID=0
 
 [Metadata Settings]
 EXIF Rotate=true
 EXIF Set Orientation=true
 Metadata Writing Mode=0
+Rescan File If Modified=false
 Rotate By Internal Flag=true
 Rotate By Metadata Flag=true
 Rotate Contents Lossless=true
@@ -563,7 +802,10 @@ Write RAW Files=false
 CaseSensitive=0
 
 [People Sidebar]
+CurrentIndex=
+Expansion=
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -616,7 +858,10 @@ CaseSensitive=0
 collectionlocation[$e]=file://$HOME/pictures
 
 [Search Sidebar]
+CurrentIndex=
+Expansion=
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -624,18 +869,31 @@ SortOrder=0
 CaseSensitive=0
 
 [TagFilter Sidebar]
+LabelsFilter Expanded=true
 Matching Condition=0
+Search Text Filter Fields=127
 Show Untagged=false
+TagsFilter Expanded=true
+TextFilter Expanded=true
+TypeGeolocationFilter Expanded=true
+TypeMimeFilter Expanded=true
 
 [TagView Sidebar]
+CurrentIndex=
+Expansion=0
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
+TagsSource=false
 
 [TimeLine Sidebar]
+CurrentIndex=
+Expansion=
 Histogram Scale=0
 Histogram TimeUnit=2
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -688,6 +946,7 @@ Sort Order=0
 
 [mainwindow_mapwidgetview][Central Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -703,6 +962,33 @@ Preview Grouped Items=true
 Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [mainwindow_tableview]
 Grouping mode=2
+
+[mainwindow_tableview][Current Profile]
+Column Count=5
+Profile Name=
+
+[mainwindow_tableview][Current Profile][Column 0]
+Column Id=thumbnail
+NSettings=0
+
+[mainwindow_tableview][Current Profile][Column 1]
+Column Id=filename
+NSettings=0
+
+[mainwindow_tableview][Current Profile][Column 2]
+Column Id=digikam-rating
+NSettings=0
+
+[mainwindow_tableview][Current Profile][Column 3]
+Column Id=itemcreationdatetime
+NSettings=0
+
+[mainwindow_tableview][Current Profile][Column 4]
+Column Id=digikam-title
+NSettings=0
