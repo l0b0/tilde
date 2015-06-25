@@ -14,6 +14,7 @@ apropos bash # help man
 apropos --exact mv # help man 
 arandr & # screen layout graphics hardware 
 arch # hardware 
+archlinux-java status 
 arecord --duration 5 --format dat recording.wav # record audio file 
 arecord --format dat | aplay # test audio input capture output playback default microphone speakers 
 arecord --list-devices # list audio input capture microphones 
