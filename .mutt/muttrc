@@ -1,0 +1,54 @@
+# Mailboxes
+set sort_browser = alpha
+set postponed = =postponed
+
+# Use IMAP instead of local mailboxes
+bind index G imap-fetch-mail
+bind pager G imap-fetch-mail
+set imap_check_subscribed # Poll subscribed mailboxes for new mail
+
+# Navigation
+bind index,pager \Cv next-unread-mailbox
+macro index,pager \CR <read-thread><previous-entry><next-unread> "mark the current thread as read, then jump to the next unread message"
+unset mark_old
+set auto_tag # Operate on tagged messages by default
+set delete = yes
+set pager_context = 2 # Context when going up/down pages
+set pager_index_lines = 8
+
+# Delete via trash
+unset confirmappend
+folder-hook .      set trash="=trash"
+folder-hook trash$ unset trash
+
+# Headers
+
+## Sender
+set envelope_from = yes
+set use_from = yes
+
+## Recipients
+set query_command = "/usr/local/bin/mutt-ldap.pl '%s'" # <http://wiki.mutt.org/?QueryCommand>
+
+# Body
+
+## Editing
+set editor = "vim -c 'set spell spelllang=en' -c 'set tw=72' -c 'set filetype=mail'"
+
+## Signature
+set signature = ~/.signature
+
+# Sending
+set copy = yes
+set sendmail = /usr/bin/esmtp
+
+# Printing
+set print_command = /usr/bin/enscript
+
+# Color
+color normal default default
+
+# Private settings
+source ~/.mutt/local/accounts/default
+source ~/.mutt/local/aliases
+source ~/.mutt/local/gpg.rc
