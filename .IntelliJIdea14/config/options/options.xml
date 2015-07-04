@@ -1,0 +1,18 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="log.debug.categories" value="" />
+    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true" />
+    <property name="DefaultHtmlDoctype.Refreshed" value="1" />
+    <property name="evlsprt3.14" value="17" />
+    <property name="installation.uid" value="a2c1a4e6-5127-4278-8057-180dd42e407b" />
+    <property name="default.storage.format" value=".idea (directory based)" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/dev/root" />
+    <property name="toolwindow.stripes.buttons.info.shown" value="true" />
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
+    <property name="file.colors.enable.non.project" value="Yellow" />
+    <property name="file.colors.enable.tests" value="Green" />
+    <property name="lastTip" value="1" />
+    <property name="Non-Project Files" value="Yellow" />
+    <property name="Tests" value="Green" />
+  </component>
+</application>
