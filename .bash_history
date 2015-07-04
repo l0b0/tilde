@@ -356,6 +356,7 @@ git fetch
 git fetch && git merge FETCH_HEAD # pull 
 git format-patch --find-renames HEAD^ 
 git gc # garbage collect 
+git --git-dir=../other/.git format-patch --keep-subject -1 --stdout HEAD | git am --keep --3way # cherry-pick commit head repo 
 git grep -I --name-only --null -e '' | xargs --null sed --in-place 's/[ \t]\+\(\r\?\)$/\1/;$a\' -- # git whitespace eol eof 
 git gui & 
 git help add 
