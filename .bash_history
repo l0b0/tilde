@@ -1363,6 +1363,7 @@ pdfimages -j ./*.pdf .
 pdfinfo file.pdf 
 pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
 pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
+pdfunite first.pdf second.pdf output.pdf # join pdf 
 pep8 --help 
 pep8-python2 --help 
 pep8-python2 setup.py 
