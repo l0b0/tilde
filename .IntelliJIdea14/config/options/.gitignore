@@ -1,5 +1,7 @@
 dimensions.xml
 feature.usage.statistics.xml
+project.default.xml
+recentProjects.xml
 statistics.application.usages.xml
 usage.statistics.xml
-project.default.xml
+window.manager.xml

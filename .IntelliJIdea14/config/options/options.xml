@@ -11,7 +11,6 @@
     <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
     <property name="file.colors.enable.non.project" value="Yellow" />
     <property name="file.colors.enable.tests" value="Green" />
-    <property name="lastTip" value="1" />
     <property name="Non-Project Files" value="Yellow" />
     <property name="Tests" value="Green" />
   </component>
