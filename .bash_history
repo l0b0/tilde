@@ -418,7 +418,7 @@ git mergetool &
 git merge topic # local branch 
 git mv README{,.markdown} 
 git pull 
-git pull --update-head-ok origin master # follow initial fetch 
+git pull --recurse-submodules=yes --update-head-ok origin master # follow initial fetch 
 git push 
 git push origin 123abc:master # push commit 
 git push origin :dead-branch # delete remote branch 
