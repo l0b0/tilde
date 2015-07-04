@@ -1,0 +1,4 @@
+*.pyc
+README
+__init__.py
+db/

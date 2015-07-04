@@ -25,6 +25,7 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
+           .ipython \
            .kde4 \
            .offlineimaprc \
            .perltidyrc \
@@ -82,7 +83,7 @@ clean_x_resources:
 
 .PHONY: clean_sort_text_files
 clean_sort_text_files:
-	for path in .config/ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .bash_history .config/darktable/keyboardrc_default; do \
+	for path in .ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .bash_history .config/darktable/keyboardrc_default; do \
 		$(SORT) --unique --output="$$path" "$$path" || exit $$?; \
 	done
 
