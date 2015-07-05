@@ -18,8 +18,9 @@ set pager_index_lines = 8
 
 # Delete via trash
 unset confirmappend
-folder-hook .      set trash="=trash"
-folder-hook trash$ unset trash
+folder-hook .         'set record="!" trash="=trash/trash"'
+folder-hook IN/.      'set record="^" trash="^.trash"'
+folder-hook \.trash$  'unset trash'
 
 # Headers
 
