@@ -99,9 +99,8 @@ CaseSensitive=0
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
 
-[Batch Queue Manager Settings]
-
 [Camera Settings]
+AlbumBox Expanded=false
 AutoAlbumDate=true
 AutoAlbumExt=false
 AutoRotate=true
@@ -115,7 +114,12 @@ FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
 LossLessFormat=0
+Manual Rename String=
+OnFlyBox Expanded=true
 Rename Method=0
+RenameCustomizer Expanded=true
+Script=
+ScriptingBox Expanded=true
 ShowLog=false
 Template=0
 ToolBarsMovable=Disabled
@@ -123,12 +127,23 @@ TurnHighQualityThumbs=true
 UseDefaultTargetAlbum=true
 UseFileMetadata=true
 
+[CameraGui Sidebar Right]
+ActiveTab=0
+Minimized=true
+RestoreSize=-1
+
+[CameraGui Sidebar Right][Camera Item Properties Tab]
+FileProperties Expanded=true
+PhotographProperties Expanded=true
+VideoProperties Expanded=true
+
 [CameraGui Sidebar Right][GPS Properties Tab]
 Sort Order=0
 Web GPS Locator=0
 
 [CameraGui Sidebar Right][GPS Properties Tab][Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -145,10 +160,18 @@ Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
 Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [CameraGui Sidebar Right][Metadata Properties Tab]
+Current EXIF Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
 EXIF Level=2
 IPTC Level=2
+ImagePropertiesMetaData Tab=0
 MAKERNOTE Level=2
 XMP Level=2
 
@@ -562,6 +585,7 @@ Version Properties View Mode=2
 ToolBarsMovable=Disabled
 
 [Import Filters]
+CurrentFilter=0
 Filter0=All Files|false|||
 Filter1=Only New Files|true|||
 Filter2=Raw Files|false|||image/x-nikon-nef;image/x-fuji-raf;image/x-adobe-dng;image/x-panasonic-raw;image/x-olympus-orf;image/x-kodak-dcr;image/x-kodak-k25;image/x-sony-arw;image/x-minolta-mrw;image/x-kodak-kdc;image/x-sigma-x3f;image/x-sony-srf;image/x-pentax-pef;image/x-panasonic-raw2;image/x-canon-crw;image/x-sony-sr2;image/x-canon-cr2
@@ -569,6 +593,8 @@ Filter3=JPG/TIFF Files|false|||image/jpeg;image/tiff
 Filter4=Video Files|false|||video/quicktime;video/mp4;video/x-msvideo;video/mpeg
 IgnoreExtensions=dsp dps
 IgnoreNames=mgr_data pgr_mgr
+
+[Import MainWindow]
 
 [Import Settings]
 Default Icon Size=142
@@ -925,6 +951,7 @@ Sort Order=0
 
 [import_mapwidgetview][Central Map Widget]
 Backend=marble
+Center=geo:52,6
 GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
@@ -940,6 +967,9 @@ Preview Grouped Items=true
 Preview Single Items=true
 Show Thumbnails=true
 Show numbers on items=true
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [mainwindow_mapwidgetview]
 Sort Order=0
