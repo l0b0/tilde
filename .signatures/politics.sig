@@ -21,3 +21,6 @@ Rubin Frank, ex-NBC news president <http://www.dreamslaughter.com/BTB%2004.html>
 %
 “Why do we kill people who are killing people to show that killing people is wrong?”
 Foolish Notion <http://www.hollynear.com/lyrics/foolish.notion.html>, by Holly Near
+%
+“In a real democracy, citizens have a right to privacy, while government has a duty of transparency.”
+Carlo Graziani <https://www.schneier.com/blog/archives/2015/07/organizational_.html#c6700511>
