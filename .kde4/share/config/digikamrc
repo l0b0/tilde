@@ -594,8 +594,6 @@ Filter4=Video Files|false|||video/quicktime;video/mp4;video/x-msvideo;video/mpeg
 IgnoreExtensions=dsp dps
 IgnoreNames=mgr_data pgr_mgr
 
-[Import MainWindow]
-
 [Import Settings]
 Default Icon Size=142
 Icon Show Coordinates=false
