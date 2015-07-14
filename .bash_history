@@ -1667,6 +1667,7 @@ sudo smartctl --attributes /dev/sda # harddisk smart
 sudo sshfs user@host:/path /run/mount/host 
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
+sudo system-config-printer 
 sudo systemctl enable NetworkManager.service # network gui configuration 
 sudo systemctl restart dhcpcd.service 
 sudo tail --follow=name --retry --lines 0 /var/log/syslog 
@@ -1718,7 +1719,6 @@ su --login "$USER" # substitute user login
 sum <<< '2 2' 
 sweethome3d & 
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
-system-config-printer & 
 systemctl --failed # service status 
 systemctl is-enabled cronie.service 
 systemctl # service status 
