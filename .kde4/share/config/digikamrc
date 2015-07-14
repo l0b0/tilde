@@ -860,6 +860,7 @@ Four Color RGB=false
 Gamma=1
 Histogram Channel=0
 Histogram Scale=1
+MainExposure=0
 Median Filter Passes=0
 Noise Reduction Chrominance Threshold=0
 Noise Reduction Threshold=0
