@@ -1151,6 +1151,7 @@ man xrandr # help
 man xrdb # help 
 man xset # help 
 man xsltproc # help 
+man xss-lock # help 
 man xterm # help 
 man xwininfo # help 
 man xxd # help 
