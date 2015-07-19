@@ -48,7 +48,7 @@ exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 
 wicd-client --tray &
 
-xautolock -locker slock &
+xautolock -time 10 -notify 10 -locker slock &
 
 xss-lock slock &
 
