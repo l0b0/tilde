@@ -50,6 +50,8 @@ wicd-client --tray &
 
 xautolock -locker slock &
 
+xss-lock slock &
+
 for service in cbatticon numlockx
 do
     if which "$service"
