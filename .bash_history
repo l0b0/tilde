@@ -962,6 +962,7 @@ man pdftk # help
 man pep8 # help 
 man perldoc # help 
 man perl # help 
+man perl-rename # help 
 man perlrun # help 
 man pg_dumpall # help postgresql backup 
 man pg_dump # help postgresql backup 
@@ -990,7 +991,6 @@ man readlink # help
 man reboot # help 
 man recordmydesktop # help 
 man redshift # help 
-man rename # help 
 man req # help 
 man reset # help 
 man resize # help 
@@ -1377,6 +1377,11 @@ perldoc file.pl # help
 perldoc -f kill # help function 
 perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
+perl-rename --dry-run 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
+perl-rename --dry-run --verbose 's/(\d{4})(\d{2})(\d{2})/$1-$2-$3/' ./* # date 
+perl-rename --dry-run --verbose 's#/([^/]+)$#/prefix $1#' ./* # prefix 
+perl-rename --dry-run --verbose 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
+perl-rename --dry-run --verbose 's/\.txt$/\.html/' ./*.txt # extension suffix 
 perl --version 
 pgrep -P $$ # child processes pids 
 pgrep -u root cron 
@@ -1445,11 +1450,6 @@ read < "/path"
 read -r var 
 read <<< "$text" 
 recordmydesktop --windowid "$(xdotool selectwindow)" --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
-rename --no-act 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
-rename --no-act --verbose 's/(\d{4})(\d{2})(\d{2})/$1-$2-$3/' ./* # date 
-rename --no-act --verbose 's#/([^/]+)$#/prefix $1#' ./* # prefix 
-rename --no-act --verbose 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
-rename --no-act --verbose 's/\.txt$/\.html/' ./*.txt # extension suffix 
 reset # clear log remove terminal text 
 rmdir ./* 
 rm -- example.txt 
