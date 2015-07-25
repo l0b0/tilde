@@ -687,7 +687,7 @@
 #croppadd-paddtop=0
 
 # Pixels to padd to bottom (integer)
-#croppadd-paddbottom=0
+croppadd-paddbottom=140
 
 # Pixels to padd to left (integer)
 #croppadd-paddleft=0
@@ -3775,7 +3775,7 @@ qt-privacy-ask=0
 #vout=
 
 # Video filter module (string)
-#video-filter=
+video-filter=croppadd
 
 # Video splitter module (string)
 #video-splitter=
@@ -3802,7 +3802,7 @@ qt-privacy-ask=0
 #sub-autodetect-path=./Subtitles, ./subtitles, ./Subs, ./subs
 
 # Force subtitle position (integer)
-#sub-margin=0
+sub-margin=-60
 
 # Subpictures source module (string)
 #sub-source=
