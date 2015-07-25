@@ -1,6 +1,6 @@
 XTerm.termName:	xterm-256color
-XTerm.vt100.background:	gray10
-XTerm.vt100.foreground:	white
+XTerm.vt100.background:	black
+XTerm.vt100.foreground:	gray80
 XTerm.vt100.geometry:	96x66
 XTerm.vt100.locale:	true
 XTerm.vt100.metaSendsEscape:	true
