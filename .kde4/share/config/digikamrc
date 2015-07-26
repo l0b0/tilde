@@ -967,6 +967,7 @@ RedAdjustment=1
 
 [convertbw Tool]
 BW Film=7
+BW Filter=0
 BW Tone=25
 BWSepiaCurveChannel0Point0=0,0
 BWSepiaCurveChannel0Point1=-1,-1
@@ -1063,9 +1064,13 @@ BWSepiaCurveChannel4Point7=-1,-1
 BWSepiaCurveChannel4Point8=-1,-1
 BWSepiaCurveChannel4Point9=-1,-1
 BWSepiaCurveChannel4Type=0
+ContrastValueAdjustment=1
 Film Expanded=true
+Histogram Channel=0
+Histogram Scale=1
 Lens Filters Expanded=false
 Luminosity Expanded=false
+StrengthAdjustment=1
 Tone Expanded=false
 
 [freerotation Tool]
