@@ -393,6 +393,7 @@ CaseSensitive=0
 [General Settings]
 Application Style=
 Apply Sidebar Changes Directly=false
+Finger Prints Generator First Run=true
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
