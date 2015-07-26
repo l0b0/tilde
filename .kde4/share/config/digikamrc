@@ -947,10 +947,24 @@ Show Intermediates in View=false
 Show Original in View=false
 
 [aspectratiocrop Tool]
+Auto Orientation=false
 CompositionGuide Expanded=true
 CropInformation Expanded=true
 CropSelection Expanded=true
+Golden Flip Horizontal=false
+Golden Flip Vertical=false
+Golden Section=true
+Golden Spiral=false
+Golden Spiral Section=false
+Golden Triangle=false
+Guide Color=250,250,255
+Guide Lines Type=4
+Guide Width=1
+Histogram Channel=0
+Histogram Scale=1
 Hor.Oriented Aspect Ratio=13
+Hor.Oriented Aspect Ratio Orientation=0
+Precise Aspect Ratio Crop=false
 
 [bcgadjust Tool]
 BrightnessAdjustment=0
