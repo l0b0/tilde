@@ -1080,6 +1080,14 @@ Auto Crop Type=2
 AutoAdjustContainer Expanded=true
 SettingsContainer Expanded=true
 
+[hsladjust Tool]
+Histogram Channel=0
+Histogram Scale=1
+HueAdjustment=0
+LighnessAdjustment=0
+SaturationAdjustment=0
+VibranceAdjustment=0
+
 [import_mapwidgetview]
 Sort Order=0
 
