@@ -11,7 +11,7 @@ set -o noclobber
 user_resources=$HOME/.Xresources
 if [ -f "$user_resources" ]
 then
-    xrdb -merge "$user_resources"
+    DISPLAY=:0 xrdb -merge "$user_resources"
 fi
 unset user_resources
 
