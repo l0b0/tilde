@@ -3,17 +3,14 @@
 set -o errexit -o nounset
 
 exec 5>&1 6>&2 # Save stdout and stderr pointers
-_log() (
-    level="$1"
-    fifo_file="$(mktemp)"
-    printf '%s\n' "$fifo_file"
-    exec >&- >/dev/null
-    {
-        rm "$fifo_file"
-        logger --priority "user.${level}" --tag "${USER}-$(basename "$0")"
-    } < "$fifo_file" &
-) <&- </dev/null
-exec >"$(_log notice)" 2>"$(_log error)"
+pipe_dir="$(mktemp --directory)"
+name="xprofile-${USER}"
+stdout="${pipe_dir}/stdout"
+stderr="${pipe_dir}/stderr"
+mkfifo "$stdout" "$stderr"
+<"$stdout" logger --priority user.notice --tag "$name" &
+<"$stderr" logger --priority user.error --tag "$name" &
+exec >"$stdout" 2>"$stderr"
 set -o noclobber
 
 # User settings
@@ -52,6 +49,7 @@ then
 fi
 
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
+rm --recursive "$pipe_dir"
 
 /usr/bin/start-pulseaudio-x11
 
