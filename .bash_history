@@ -607,6 +607,7 @@ jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image
 jobs -l # list all background 
 journalctl --follow _SYSTEMD_UNIT=NetworkManager.service # log 
 journalctl --since=today --output=short-iso # systemd service log 
+journalctl --since=today --output=short-iso SYSLOG_IDENTIFIER="xprofile-${USER}" # log user x profile 
 journalctl --user-unit screenlock.service # systemd user service log 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
