@@ -3,8 +3,17 @@
 set -o errexit -o nounset
 
 exec 5>&1 6>&2 # Save stdout and stderr pointers
-exec > ~/.xprofile.log 2>&1 # Log stdout and stderr
-
+_log() (
+    level="$1"
+    fifo_file="$(mktemp)"
+    printf '%s\n' "$fifo_file"
+    exec >&- >/dev/null
+    {
+        rm "$fifo_file"
+        logger --priority "user.${level}" --tag "${USER}-$(basename "$0")"
+    } < "$fifo_file" &
+) <&- </dev/null
+exec >"$(_log notice)" 2>"$(_log error)"
 set -o noclobber
 
 # User settings
