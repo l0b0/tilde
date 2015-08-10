@@ -12,5 +12,6 @@
     <property name="file.colors.enable.tests" value="Green" />
     <property name="Non-Project Files" value="Yellow" />
     <property name="Tests" value="Green" />
+    <property name="Copy.OpenInEditor" value="true" />
   </component>
 </application>
