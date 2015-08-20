@@ -897,6 +897,7 @@ man lintian # help
 man livestreamer # help 
 man ln # help 
 man localectl # help 
+man locale # help 
 man locate # help 
 man logger # help 
 man lpadmin # help 
