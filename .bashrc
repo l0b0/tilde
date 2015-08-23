@@ -165,6 +165,9 @@ alias lsd='ls -hlt' # List sorted by modification time
 # Use vim, not vi
 alias vi=vim
 
+# Paste with Ctrl-Alt-e
+alias pc='$(xclip -display :0 -out)'
+
 # Avoid Bash autocompletion tilde expansion
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
