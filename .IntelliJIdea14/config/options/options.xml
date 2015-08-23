@@ -13,5 +13,6 @@
     <property name="Non-Project Files" value="Yellow" />
     <property name="Tests" value="Green" />
     <property name="Copy.OpenInEditor" value="true" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/dev/root" />
   </component>
 </application>
