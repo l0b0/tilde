@@ -600,6 +600,7 @@ ip -oneline -family inet addr show dev eth0 # ipv4 address
 ip route show dev eth0 # network 
 ipython 
 iwconfig # wireless network configuration 
+iwlist scanning 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/mysql.jar -hq -t mysql -host localhost:3306 -db database -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # mysql db visualization 
 java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host localhost:5432 -db database -s public -u user -p password -o ~/db && x-www-browser file://"$HOME"/db/index.html # postgresql db visualization 
 java -Xmx1024M -Xms512M -classpath ~/.minecraft/minecraft.jar net.minecraft.LauncherFrame 
@@ -874,6 +875,7 @@ man ipcalc # help
 man ip # help 
 man iptables # help 
 man iwconfig # help 
+man iwlist # help 
 man java # help 
 man jhead # help 
 man join # help 
