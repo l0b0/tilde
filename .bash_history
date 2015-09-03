@@ -195,7 +195,6 @@ eval "$(ssh-agent)" && ssh-add
 eval "$traps" # signal 
 evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance 
 evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
-evince /usr/share/doc/msort/msort.pdf.gz & # help 
 evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 ex -c '1' -c '?^[[:space:]]*[^[:space:]#]?' -c $'a\n# New comment' -c 'wq' ~/.bashrc # insert after last match 
 exec "$SHELL" # replace 
@@ -267,7 +266,7 @@ for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
-for vcard in ./*.vcf; do msort --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
+for vcard in ~/contacts/*.vcf; do python2 ~/dev/msort/msort.py --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 free --human # memory 
 fromdos -- file # convert newline 
 fswebcam --loop 5 --resolution 640x480 webcam.jpeg # webcam capture 
@@ -1304,7 +1303,6 @@ mount # list all
 mount --no-mtab --options remount,defaults /dev/sda1 / 
 mountpoint /home 
 mp3fs -obitrate=256 ~/music/ ~/mp3 # mount 
-msort --help 
 mutt 
 mutt -d 5 
 mutt -i <(git request-pull HEAD https://github.com/l0b0/project) -s "Pull request" address@example.org # email 
