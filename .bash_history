@@ -1872,6 +1872,6 @@ xxd "$(which xxd)" | head --lines=1 # binary hex
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 "$!" # process pid pipe stdin 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 yes -- example # repeat string 
-youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue --format best '' # download video files
+youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue --format best --prefer-free-formats '' # download video files 
 zip --update file.zip input # add file compress zip 
 zless /proc/config.gz # kernel configuration parameter 
