@@ -1795,6 +1795,7 @@ vagrant halt # stop shutdown vm
 vagrant --help 
 vagrant package --base archlinux # create vm 
 vagrant plugin install vagrant-reload 
+vagrant provision --provision-with puppet 
 vagrant provision # vm 
 vagrant ssh # login vm 
 vagrant status 
