@@ -96,7 +96,7 @@ clean_signatures: $(signature_dat_files)
 
 .PHONY: clean_sqlite
 clean_sqlite:
-	for db_file in $(PREFIX)/.mozilla/*/*/*.sqlite; do \
+	for db_file in $(PREFIX)/.mozilla/*/*/*.sqlite $(PREFIX)/.thunderbird/*/*.sqlite; do \
 		echo 'VACUUM;' | $(SQLITE) $$db_file || (echo "Vacuuming file failed: $$db_file"; exit 1) \
 	done
 
