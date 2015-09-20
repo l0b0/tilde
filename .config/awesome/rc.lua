@@ -432,7 +432,7 @@ awful.rules.rules = {
       properties = { tag = tags[math.min(2, screen.count())][3] } },
     { rule_any = { class = { "Git-gui" } },
       properties = { tag = tags[math.min(2, screen.count())][4] } },
-    { rule_any = { class = { "Pidgin", "Deluge" } },
+    { rule_any = { class = { "Pidgin", "Deluge", "Thunderbird" } },
       properties = { tag = tags[math.min(2, screen.count())][5] } },
     { rule_any = { class = { "feh", "MPlayer", "smplayer", "Vlc" } },
       properties = { tag = tags[math.min(2, screen.count())][6] } },
