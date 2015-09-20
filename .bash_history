@@ -45,7 +45,7 @@ bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
-cat ~/contacts/*.vcf > ~/all.vcf # concatenate vcard 
+cat ~/contacts/*.vcf > ~/contacts.vcf # concatenate vcard 
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
