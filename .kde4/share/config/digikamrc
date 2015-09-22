@@ -1273,3 +1273,8 @@ NSettings=0
 [mainwindow_tableview][Current Profile][Column 4]
 Column Id=digikam-title
 NSettings=0
+
+[perspective Tool]
+Draw Grid=false
+Draw While Moving=true
+Inverse Transformation=false
