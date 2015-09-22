@@ -14,5 +14,6 @@
     <property name="Tests" value="Green" />
     <property name="Copy.OpenInEditor" value="true" />
     <property name="file.chooser.recent.files" value="$USER_HOME$/dev/root" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
   </component>
 </application>
