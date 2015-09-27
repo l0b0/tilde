@@ -1277,6 +1277,7 @@ mkgithub ~/dev/subsurface
 mkgithub ~/dev/svn_ps1 
 mkgithub ~/dev/teaching_C 
 mkgithub ~/dev/tilde 
+mkgithub ~/dev/travis-ci-helper 
 mkgithub ~/dev/trim 
 mkgithub ~/dev/txt2cloud 
 mkgithub ~/dev/unflickr 
