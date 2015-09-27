@@ -1,7 +1,7 @@
 Home directory scripts and configuration
 ========================================
 
-[![Build Status](https://jenkins.engmark.name:8080/job/tilde/badge/icon)](https://jenkins.engmark.name:8080/job/tilde/)
+[![Build Status](https://travis-ci.org/l0b0/tilde.svg?branch=master)](https://travis-ci.org/l0b0/tilde)
 
 These files are mostly my own settings and tools, but some may be more generally useful.
 
