@@ -4,16 +4,18 @@ FIND = /usr/bin/find
 GPG = /usr/bin/gpg
 LN = /usr/bin/ln
 MAKE = /usr/bin/make
-MARKDOWN = /usr/bin/markdown
 MKTEMP = /usr/bin/mktemp
 MV = /usr/bin/mv
+PERL = /usr/bin/perl
 RM = /usr/bin/rm
 RMDIR = /usr/bin/rmdir
 SED = /usr/bin/sed
 SORT = /usr/bin/sort
 SQLITE = /usr/bin/sqlite3
 STRFILE = /usr/bin/strfile
+UNZIP = /usr/bin/unzip
 WC = /usr/bin/wc
+WGET = /usr/bin/wget
 XRDB = /usr/bin/xrdb
 
 dotfiles = .ackrc \
@@ -50,6 +52,11 @@ gpg_trust_database_path = $(gpg_configuration_path)/trustdb.gpg
 gpg_backup_path = $(gpg_configuration_path)/ownertrust.txt
 
 signature_dat_files = $(patsubst %.sig,%.dat,$(wildcard .signatures/*.sig))
+
+markdown_version = 1.0.1
+markdown_dir = Markdown_$(markdown_version)
+markdown_archive = $(markdown_dir).zip
+markdown = $(PERL) $(markdown_dir)/Markdown.pl
 
 .PHONY: all
 all: test
@@ -112,7 +119,7 @@ uninstall:
 	done
 
 .PHONY: test
-test:
+test: $(markdown_dir)
 	$(BASH) -o noexec .bash_history
 	dir="$$($(MKTEMP) -d)" && \
 		$(MAKE) dotfiles=.gitconfig PREFIX="$$dir" install && \
@@ -120,11 +127,20 @@ test:
 		$(MAKE) dotfiles=.gitconfig PREFIX="$$dir" uninstall && \
 		[ $$($(FIND) "$$dir" -mindepth 1 -type l -name .gitconfig | $(WC) -l) -eq 0 ] && \
 		$(RMDIR) "$$dir"
-	$(MARKDOWN) README.markdown > /dev/null
-	$(MARKDOWN) doc/keyboard-shortcuts.md > /dev/null
+	$(markdown) README.markdown > /dev/null
+	$(markdown) doc/keyboard-shortcuts.md > /dev/null
 
 $(dotfile_links): $(addprefix $(PREFIX)/,%) : $(addprefix $(CURDIR)/,%)
 	$(LN) --verbose --symbolic --no-target-directory $< $@
+
+$(markdown_dir):
+	$(WGET) --timestamping "http://daringfireball.net/projects/downloads/$(markdown_archive)"
+	$(UNZIP) -o $(markdown_archive)
+
+.PHONY: clean
+clean:
+	$(RM) --force $(markdown_archive)
+	$(RM) --force --recursive $(markdown_dir)
 
 .PHONY: dotfiles
 dotfiles: $(dotfile_links)
