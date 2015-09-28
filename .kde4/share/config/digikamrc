@@ -128,8 +128,8 @@ UseDefaultTargetAlbum=true
 UseFileMetadata=true
 
 [CameraGui Sidebar Right]
-ActiveTab=0
-Minimized=true
+ActiveTab=3
+Minimized=false
 RestoreSize=-1
 
 [CameraGui Sidebar Right][Camera Item Properties Tab]
