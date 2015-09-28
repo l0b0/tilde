@@ -1278,3 +1278,15 @@ NSettings=0
 Draw Grid=false
 Draw While Moving=true
 Inverse Transformation=false
+
+[whitebalance Tool]
+Black=0
+Dark=0.5
+FineExposure=0
+Gamma=1
+Green=1
+Histogram Chanel=0
+Histogram Scale=1
+MainExposure=0
+Saturation=1
+Temperature=6500
