@@ -629,6 +629,7 @@ l
 l ~ 
 la 
 la ~ 
+last | less # list all user login history 
 lastlog # login users 
 ldconfig --print-cache # list all libraries 
 ldd "$(which bash)" 
@@ -886,6 +887,7 @@ man keytool # help
 man kill # help 
 man kismet # help 
 man kvm # help 
+man last # help 
 man lastlog # help 
 man ldconfig # help 
 man ldd # help 
@@ -1607,6 +1609,7 @@ sudo ip route del default via 1.2.3.4 dev eth0
 sudo iptables --list # list all firewall rules network 
 sudo iptables --list-rules # list all firewall rules network commands 
 sudo kismet # wireless network monitor 
+sudo lastb | less # list all bad failed user login history 
 sudo ldconfig 
 sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
 sudo ln --symbolic /media/windows/Windows/Fonts /usr/share/fonts/WindowsFonts # enable windows fonts 
