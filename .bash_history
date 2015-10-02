@@ -1127,6 +1127,7 @@ man wget # help
 man whatis # help 
 man w # help 
 man which # help 
+man whoami # help 
 man who # help 
 man whois # help 
 man wicd-client # help 
@@ -1840,6 +1841,7 @@ while IFS= read -r -d '' -u 9; do sed --in-place '/\x0/{q;}; s/[ \t]\+\(\r\?\)$/
 while IFS= read -r -u 9; do if [[ "$REPLY" =~ .*\.dot$ ]]; then dot -O -Tsvg "$REPLY"; fi; done 9< <(inotifywait --event close_write --format %f --monitor .) 
 while read; do xdotool windowactivate "$REPLY"; xdotool key F5; done < <(xdotool search --name "Mozilla Firefox") # refresh 
 while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in "$events_dir"/*; do notify-send --icon="${HOME}/dev/graphics/${USER}.png" "$(basename "$path")" "$(cat "$path")" && rm "$path"; done;) done 
+whoami # user id 
 whois example.org # dns lookup internet network 
 who # logins users 
 wicd-cli --wireless --list-networks 
