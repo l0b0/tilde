@@ -2,6 +2,8 @@ cachedDictionary.xml
 dimensions.xml
 feature.usage.statistics.xml
 find.recents.xml
+jdk.table.xml
+packages.xml
 project.default.xml
 recentProjects.xml
 statistics.application.usages.xml

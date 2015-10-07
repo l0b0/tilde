@@ -1,0 +1,7 @@
+<application>
+  <component name="UpdatesConfigurable">
+    <outdatedPlugins>
+      <item value="mobi.hsz.idea.gitignore" />
+    </outdatedPlugins>
+  </component>
+</application>
