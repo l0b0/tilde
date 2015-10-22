@@ -840,6 +840,7 @@ man groupdel # help
 man groups # help 
 man grub-mkconfig # help 
 man gs # help 
+man gsmartcontrol # help 
 man gunzip # help 
 man gvfs # help 
 man hash # help 
@@ -1597,6 +1598,7 @@ sudo gpasswd --add "$USER" group # user add group
 sudo groupadd example # add create group 
 sudo groupdel example # delete remove group 
 sudo grub-install /dev/sda # fix boot mbr 
+sudo gsmartcontrol 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
 sudo ifdown wlan0 # network interface disable 
 sudo iftop # bandwidth network interface monitor 
