@@ -514,7 +514,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- {{{ Autostart
 -- Start most common applications
 awful.util.spawn("firefox")
-awful.util.spawn("xterm")
+awful.util.spawn(terminal)
 -- }}}
 
 -- Local configuration
