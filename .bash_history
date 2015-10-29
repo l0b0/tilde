@@ -1583,7 +1583,7 @@ sudo cpanm Net::LDAP # install ldap
 sudo crontab -e # edit 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
-sudo dmidecode 
+sudo dmidecode | less 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --string system-serial-number 
 sudo dmidecode --type 1 
