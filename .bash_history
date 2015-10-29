@@ -43,6 +43,7 @@ bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
+bsdtar --list --file /boot/initramfs-linux.img | less # print kernel image files 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
 cat ~/contacts/*.vcf > ~/contacts.vcf # concatenate vcard 
@@ -742,6 +743,7 @@ man bashdb # help
 man bash # help 
 man bc # help 
 man blkid # help 
+man bsdtar # help 
 man builtins # help bash 
 man bunzip2 # help 
 man cal # help 
