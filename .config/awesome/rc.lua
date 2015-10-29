@@ -427,15 +427,15 @@ awful.rules.rules = {
     { rule_any = { instance = { "plugin-container", "Luakit", "exe" } },
       properties = { floating = true } },
     { rule_any = { class = { "Firefox", "Tor Browser" } },
-      properties = { tag = tags[math.min(2, screen.count())][2] } },
+      properties = { tag = tags[1][2] } },
     { rule_any = { class = { "Digikam", "Gimp", "Hugin", "Inkscape", "Keepassx", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman", "jetbrains-idea" } },
-      properties = { tag = tags[math.min(2, screen.count())][3] } },
+      properties = { tag = tags[1][3] } },
     { rule_any = { class = { "Git-gui" } },
-      properties = { tag = tags[math.min(2, screen.count())][4] } },
+      properties = { tag = tags[1][4] } },
     { rule_any = { class = { "Pidgin", "Deluge", "Thunderbird" } },
-      properties = { tag = tags[math.min(2, screen.count())][5] } },
+      properties = { tag = tags[1][5] } },
     { rule_any = { class = { "feh", "MPlayer", "smplayer", "Vlc" } },
-      properties = { tag = tags[math.min(2, screen.count())][6] } },
+      properties = { tag = tags[1][6] } },
 }
 -- }}}
 
