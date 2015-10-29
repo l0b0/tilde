@@ -155,7 +155,7 @@ dig example.org mx # dns email lookup internet network
 digikam & # photo manager 
 dirname -- "$PWD" # parent directory 
 disown %+ # nohup last job background process 
-dmesg | less # debug os startup 
+dmesg --color=always | less -r # debug os startup 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
