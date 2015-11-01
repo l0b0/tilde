@@ -157,6 +157,14 @@ then
     alias egrep='egrep --color=auto'
 fi
 
+for path in "${HOME}/.gem/ruby/"*"/bin"
+do
+    if [[ -e "$path" ]] && ! [[ ":${PATH}:" = *":${path}:"* ]]
+    then
+        PATH="${PATH}:${path}"
+    fi
+done
+
 # some more ls aliases
 alias l='ls' # Default
 alias la='ls -hlA' # Full info
