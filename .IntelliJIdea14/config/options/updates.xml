@@ -1,5 +1,14 @@
 <application>
   <component name="UpdatesConfigurable">
+    <knownUpdateChannels>
+      <item value="IDEA12" />
+      <item value="IDEA13.1" />
+      <item value="IDEA_14_EAP" />
+      <item value="IDEA14.1" />
+      <item value="IDEA_14_1_EAP" />
+      <item value="IDEA_15_EAP" />
+      <item value="IDEA_Beta" />
+    </knownUpdateChannels>
     <outdatedPlugins>
       <item value="mobi.hsz.idea.gitignore" />
     </outdatedPlugins>

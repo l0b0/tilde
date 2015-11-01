@@ -2,7 +2,6 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
-        <option value="lua.global.name" />
         <option value="Ruby.cucumber.step" />
         <option value="JRuby.import.shortName" />
         <option value="Ruby.require.load.shortName" />
