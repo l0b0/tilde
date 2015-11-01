@@ -180,6 +180,7 @@ echo "${paths[@]}" # array
 echo "$PATH" | tr ':' $'\n' # user path 
 echo "${PIPESTATUS[@]}" | tr --squeeze-repeats ' ' + | bc # array sum 
 echo "$PROMPT_COMMAND" # shell 
+echo !!:q | xclip -selection clipboard # copy previous command 
 echo "$REPLY" # read 
 echo return _VERSION | awesome-client # lua version 
 echo $$ # shell pid 
