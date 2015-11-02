@@ -803,6 +803,7 @@ Version Properties View Mode=2
 
 [MainWindow]
 InitialAlbumID=0
+SplitterState=AAAA/wAAAAAAAAADAAABEAAABj4AAAAAAQAAAAQAAAAAAQ==
 
 [Metadata Settings]
 EXIF Rotate=true
