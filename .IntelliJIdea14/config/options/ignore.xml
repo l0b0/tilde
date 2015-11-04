@@ -6,6 +6,7 @@
       <language id="Cvs" ENABLE="true" NEW_FILE="true" />
       <language id="Darcs" ENABLE="true" NEW_FILE="true" />
       <language id="Docker" ENABLE="false" NEW_FILE="true" />
+      <language id="Floobits" ENABLE="false" NEW_FILE="true" />
       <language id="Fossil" ENABLE="true" NEW_FILE="true" />
       <language id="Git" ENABLE="true" NEW_FILE="true" />
       <language id="JSHint" ENABLE="false" NEW_FILE="true" />
