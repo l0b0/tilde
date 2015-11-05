@@ -237,7 +237,7 @@ find . -mindepth 1 -exec printf '%s\0' {} + | shuf --head-count 10 --zero-termin
 find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
 find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find /proc -regex '/proc/[0-9].*' -prune -o -print # not process number 
-find . -regex '.*\.\(orig$\|\(BACKUP\|BASE\|LOCAL\|REMOTE\)\..*\)' -delete # remove git rebase temp files 
+find . -regex '.*\(\.orig$\|\(_\(BACKUP\|BASE\|LOCAL\|REMOTE\)_\).*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
 find . -type f -name '*.odg' -execdir libreoffice --headless --convert-to fodg {} + # convert binary xml 
 find . -type f -name '*.ods' -execdir libreoffice --headless --convert-to fods {} + # convert binary xml 
