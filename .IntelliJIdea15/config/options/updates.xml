@@ -9,8 +9,5 @@
       <item value="IDEA_15_EAP" />
       <item value="IDEA_Beta" />
     </knownUpdateChannels>
-    <outdatedPlugins>
-      <item value="mobi.hsz.idea.gitignore" />
-    </outdatedPlugins>
   </component>
 </application>
