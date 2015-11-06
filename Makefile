@@ -27,7 +27,7 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
-           .IntelliJIdea14 \
+           .IntelliJIdea15 \
            .ipython \
            .kde4 \
            .offlineimaprc \
