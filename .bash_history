@@ -135,6 +135,7 @@ deluge & # bittorrent gui
 ~/dev/minecraft-scripts/install-Minecraft.sh # game 
 ~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
+~/dev/tilde/scripts/arch_linux_system_upgrade.sh 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh -i ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
@@ -1673,7 +1674,6 @@ sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'pacman --sync --needed --refresh jenkins && systemctl start jenkins.service && systemctl enable jenkins.service' # jenkins ci service 
-sudo sh -c "pacman --sync --refresh --sysupgrade && find $HOME/dev/tilde/patches -type f -exec patch --directory=/ --forward --strip=0 --input={} ';'" # upgrade system 
 sudo sh -c 'systemctl start acpid.service && systemctl enable acpid.service' # service 
 sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemon.service' # printer discovery service 
 sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' # cron service 
