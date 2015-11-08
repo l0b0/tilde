@@ -1031,6 +1031,7 @@ man service # help
 man setkeycodes # help 
 man setxkbmap # help 
 man sha1sum # help 
+man sha256sum # help 
 man sha512sum # help 
 man sh # help 
 man showkey # help 
@@ -1516,6 +1517,8 @@ setxkbmap -verbose | awk -F '+' '/^symbols:/ {print $2}' # keyboard layout setti
 sh 
 sha1sum --check *.sha1 # verify checksum 
 sha1sum file # print checksum 
+sha256sum --check *.sha256 # verify checksum 
+sha256sum file # print checksum 
 sha512sum --check *.sha512 # verify checksum 
 sha512sum file # print checksum 
 shopt nullglob # option get 
