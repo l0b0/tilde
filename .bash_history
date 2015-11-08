@@ -1177,8 +1177,8 @@ markdown README.markdown
 markdown README.markdown | lynx -stdin 
 markdown README.markdown > README.html 
 mcomix & 
-md5sum --check md5sums.txt # checksum 
-md5sum file # checksum 
+md5sum --check *.md5 # verify checksum 
+md5sum file # print checksum 
 meld . & # diff 
 meld original mine & # diff 
 meld other original mine & # diff 
@@ -1514,10 +1514,10 @@ setxkbmap -device 10 -layout us -variant dvorak-alt-intl -option compose:caps # 
 setxkbmap -print # keyboard settings 
 setxkbmap -verbose | awk -F '+' '/^symbols:/ {print $2}' # keyboard layout settings 
 sh 
-sha1sum --check sha1sums.txt # verify checksum 
-sha1sum file # checksum 
-sha512sum --check sha512sums.txt # checksum 
-sha512sum file # checksum 
+sha1sum --check *.sha1 # verify checksum 
+sha1sum file # print checksum 
+sha512sum --check *.sha512 # verify checksum 
+sha512sum file # print checksum 
 shopt nullglob # option get 
 shopt # options 
 shopt -s dotglob # option set .* 
