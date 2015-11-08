@@ -55,7 +55,7 @@ rm --recursive "$pipe_dir"
 
 wicd-client --tray >> "${HOME}/.wicd-client.log" 2>&1 &
 
-xautolock -time 10 -notify 30 -notifier "notify-send --urgency low --expire-time=10000 -- 'Locking screen in 30 seconds'" -locker slock >> "${HOME}/.xautolock.log" 2>&1 &
+(xautolock -time 10 -notify 30 -notifier "notify-send --urgency low --expire-time=10000 -- 'Locking screen in 30 seconds'" -locker slock >> "${HOME}/.xautolock.log" 2>&1 &)
 
 xss-lock slock &
 
