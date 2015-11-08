@@ -1265,6 +1265,7 @@ mkgithub ~/dev/Platonic-solids
 mkgithub ~/dev/progit 
 mkgithub ~/dev/Project-Euler 
 mkgithub ~/dev/pspipe 
+mkgithub ~/dev/puppet-color-management 
 mkgithub ~/dev/puppetlabs-apache 
 mkgithub ~/dev/puppetlabs-java 
 mkgithub ~/dev/qr2scad 
