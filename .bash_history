@@ -962,6 +962,7 @@ man od # help
 man openscad # help 
 man openssl # help 
 man pacman # help 
+man padsp # help 
 man paperconfig # help 
 man passwd # help 
 man paste # help 
@@ -1373,6 +1374,7 @@ pacman --query # list all installed packages
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
+padsp java ./my.jar # pulseaudio oss wrapper 
 passwd # password user 
 patch --strip 0 < patch.diff 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
