@@ -36,6 +36,7 @@ dotfiles = .ackrc \
            .quiltrc-dpkg \
            .screenlayout \
            .screenrc \
+           .screensaver-notifier.sh \
            .stellarium \
            .signatures \
            .toprc \
