@@ -337,7 +337,7 @@ globalkeys = awful.util.table.join(
         { "Mod1", "Control" },
         "l",
         function ()
-            awful.util.spawn("xautolock -locknow")
+            awful.util.spawn("slock")
         end),
 
     -- Screenshot
