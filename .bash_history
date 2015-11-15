@@ -1,5 +1,6 @@
 abcde -o mp3 # rip audio cd 
 acpi_listen # events power configuration 
+adb devices # list android 
 alias ls 
 align_image_stack -vl -a aligned ./*.jpg # graphics 
 alsamixer # audio input output volume 
