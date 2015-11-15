@@ -56,9 +56,7 @@ rm --recursive "$pipe_dir"
 wicd-client --tray >> "${HOME}/.wicd-client.log" 2>&1 &
 
 # Lock screen automatically
-grace_period_seconds=30
-xset s 570 "$grace_period_seconds"
-xss-lock --notifier="${HOME}/.screensaver-notifier.sh ${grace_period_seconds}" slock &
+xss-lock slock &
 
 for service in cbatticon numlockx
 do
