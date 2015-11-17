@@ -957,6 +957,7 @@ man nmap # help
 man nm # help 
 man node # help 
 man notify-send # help 
+man nproc # help 
 man nslookup # help 
 man ntpd # help 
 man ntpq # help 
@@ -1352,6 +1353,7 @@ npm install -g coffee-script # coffeescript
 npm install jslint 
 npm ls -g 
 npm -v 
+nproc # print processor count 
 nslookup example.org # dns internet lookup network 
 ntpq -p # query list peers 
 openscad ~/dev/crumbling-beaker/beaker.scad & 
