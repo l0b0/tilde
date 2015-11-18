@@ -3607,7 +3607,7 @@ qt-privacy-ask=0
 #spdif=0
 
 # Force detection of Dolby Surround (integer)
-#force-dolby-surround=0
+force-dolby-surround=1
 
 # Stereo audio output mode (integer)
 #stereo-mode=0
