@@ -1,6 +1,7 @@
 abcde -o mp3 # rip audio cd 
 acpi_listen # events power configuration 
 adb devices # list android 
+adb reboot bootloader # fastboot android 
 adb shell # android 
 adb shell logcat -T 10 # list follow android log 
 alias ls 
