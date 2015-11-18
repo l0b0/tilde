@@ -215,6 +215,7 @@ export key=~/.ssh/id_rsa_service_name && umask 0077 && ssh-keygen -b 4096 -f "$k
 facter # hardware os 
 facter --help 
 facter id # user 
+fastboot devices # list android 
 fc-cache # refresh fonts 
 fc # edit command history 
 fc-list | sort # list fonts 
