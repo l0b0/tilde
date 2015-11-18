@@ -161,6 +161,8 @@ digikam & # photo manager
 dirname -- "$PWD" # parent directory 
 disown %+ # nohup last job background process 
 dmesg --color=always | less -r # debug os startup 
+docker images # list 
+docker info 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
