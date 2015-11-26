@@ -3604,7 +3604,7 @@ qt-privacy-ask=0
 #volume-save=1
 
 # Use S/PDIF when available (boolean)
-#spdif=0
+spdif=1
 
 # Force detection of Dolby Surround (integer)
 force-dolby-surround=1
