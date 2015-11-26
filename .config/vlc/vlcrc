@@ -1363,7 +1363,7 @@
 [samplerate] # Secret Rabbit Code (libsamplerate) resampler
 
 # Sample rate converter type (integer)
-#src-converter-type=2
+src-converter-type=0
 
 [gain] # Gain control filter
 
