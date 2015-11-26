@@ -3823,7 +3823,7 @@ force-dolby-surround=1
 #sub-track=-1
 
 # Audio language (string)
-#audio-language=
+audio-language=jp,no,en
 
 # Subtitle language (string)
 #sub-language=
