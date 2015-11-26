@@ -3610,7 +3610,7 @@ spdif=1
 force-dolby-surround=1
 
 # Stereo audio output mode (integer)
-#stereo-mode=0
+stereo-mode=5
 
 # Audio desynchronization compensation (integer)
 #audio-desync=0
