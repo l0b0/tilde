@@ -309,7 +309,7 @@
 [gnutls] # GNU TLS transport layer security
 
 # TLS cipher priorities (string)
-#gnutls-priorities=NORMAL
+gnutls-priorities=SECURE256
 
 [vod_rtsp] # Legacy RTSP VoD server
 
