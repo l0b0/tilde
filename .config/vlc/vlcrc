@@ -3766,16 +3766,16 @@ stereo-mode=5
 #zoom=1.000000
 
 # Deinterlace (integer)
-#deinterlace=0
+deinterlace=-1
 
 # Deinterlace mode (string)
-#deinterlace-mode=blend
+deinterlace-mode=yadif2x
 
 # Video output module (string)
-#vout=
+vout=any
 
 # Video filter module (string)
-#video-filter=
+video-filter=postproc
 
 # Video splitter module (string)
 #video-splitter=
@@ -4045,7 +4045,7 @@ audio-language=jp,no,en
 #packetizer=
 
 # VoD server module (string)
-#vod-server=
+vod-server=any
 
 # Use a plugins cache (boolean)
 #plugins-cache=1
