@@ -1757,6 +1757,7 @@ sweethome3d &
 synclient SHMConfig=1 -m 100 | tee synaptics.log # synaptics touchpad debug 
 systemctl --failed # service status 
 systemctl is-enabled cronie.service 
+systemctl list-units # services 
 systemctl # service status 
 systemctl status display-manager.service 
 systemctl status # service status 
