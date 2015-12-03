@@ -566,6 +566,8 @@ help umask
 help unset 
 help until 
 help wait 
+hiera --config ~/dev/root/hieradata/hiera.yaml fonts::packages ::osfamily=Archlinux 
+hiera --help 
 history | less 
 host example.org # dns lookup internet network ipv4 ipv6 
 hostid # host id hex 
