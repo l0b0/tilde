@@ -514,6 +514,7 @@ grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
 grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
 grep --fixed-strings --recursive --exclude-dir .git --regexp 'foo' . # search literal source 
+grep 'GREEK SMALL LETTER PI' "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # unicode character 
 grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
 (grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 grep --recursive --no-filename --only-matching 'foo' . | wc --lines # sum count search 
