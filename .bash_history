@@ -659,6 +659,7 @@ less --raw-control-chars typescript
 less /sys/class/dmi/id/product_name 
 less /sys/class/dmi/id/sys_vendor 
 less /usr/share/doc/nethack-common/Guidebook.txt.gz # help 
+less "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # keyboard shortcuts 
 less /var/log/auth.log 
 less /var/log/dmesg 
 less /var/log/kern.log 
