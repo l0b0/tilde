@@ -8,6 +8,7 @@
       <item value="IDEA_14_1_EAP" />
       <item value="IDEA_15_EAP" />
       <item value="IDEA_Beta" />
+      <item value="IDEA_Release" />
     </knownUpdateChannels>
   </component>
 </application>

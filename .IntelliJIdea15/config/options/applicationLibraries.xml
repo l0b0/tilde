@@ -1,5 +1,12 @@
 <application>
   <component name="libraryTable">
+    <library name="puppetlabs-stdlib_4.3.2 [puppet module]">
+      <CLASSES>
+        <root url="file://$USER_HOME$/.puppet/modules/stdlib" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
     <library name="stub [puppet module]">
       <CLASSES>
         <root url="file://$APPLICATION_PLUGINS_DIR$/puppet/lib/stubs" />
