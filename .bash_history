@@ -233,8 +233,8 @@ fg && command # append command continue
 fg # foreground job 
 fgit gc -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
 fgit --help 
-fgit pull -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
-fgit status -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
+fgit pull -- ~/*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
+fgit status -- ~/*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
 file /boot/vmlinuz-linux | grep --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
 file README.markdown 
 find . -empty 
