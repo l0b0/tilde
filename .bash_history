@@ -1617,7 +1617,7 @@ sudo dmidecode --type 1
 sudo dmidecode --type system 
 sudo download-mibs 
 sudo /etc/init.d/postgresql reload 
-sudo extundelete --restore-directory /dir/ /dev/sda1 
+sudo extundelete --restore-all /dev/sdx1 
 sudo faillog # log summary user 
 sudo fdisk -l # list all disks 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
