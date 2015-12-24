@@ -215,6 +215,7 @@ exiv2 print IMG_1234.exv # metadata
 expand --tabs=4 example.txt # convert tab space 
 export DISPLAY=:0.0 # remote x display 
 export key=~/.ssh/id_rsa_service_name && umask 0077 && ssh-keygen -b 4096 -f "$key" -t rsa && openssl pkcs8 -topk8 -v2 des3 -in "$key" -out "${key}.pk8" && shred --remove "$key" && mv --no-clobber "${key}.pk8" "$key" && unset key # create encrypted private public rsa pkcs8 ssh key pair 
+extundelete --help 
 facter # hardware os 
 facter --help 
 facter id # user 
@@ -814,7 +815,6 @@ man exiftool # help
 man exiv2 # help 
 man expand # help 
 man expect # help 
-man extundelete # help 
 man faillog # help 
 man fakeroot # help 
 man fc-cache # help 
