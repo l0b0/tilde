@@ -1898,6 +1898,7 @@ xmodmap -pp # list mouse buttons
 xmodmap ~/.Xmodmap # read configuration keyboard mouse 
 xprop | grep --color=none "WM_CLASS\|^WM_NAME" 
 xprop # x window properties 
+xrandr --display :0 --output LVDS1 --mode 1366x768 # reset resolution graphics desktop 
 xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources 
 xrdb -query # list 
