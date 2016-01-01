@@ -1377,6 +1377,7 @@ openssl rsa -text -in name.key.pem # list key properties
 openssl s_client -connect example.com:443 -status <<< '' # get certificate connect host ssl https 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 openssl x509 -text -in name.crt.pem -noout # list x509 certificate properties 
+opentyrian "--net-player-name=${USER}" --net-player-number 1 --net=192.168.0.1 # tyrian game network 
 /opt/android-sdk/platform-tools/adb devices # list 
 /opt/android-sdk/platform-tools/adb push cm.zip /sdcard # upload 
 /opt/android-sdk/platform-tools/adb reboot bootloader 
