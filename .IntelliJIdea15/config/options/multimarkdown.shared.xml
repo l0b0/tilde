@@ -1,3 +1,53 @@
 <application>
+  <component name="ApplicationShared">
+    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="true" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false">
+      <PanelProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.panel" providerName="Default - Swing" />
+      </PanelProvider>
+    </PreviewSettings>
+    <ParserSettings parsingTimeout="10000">
+      <PegdownExtensions>
+        <option name="ABBREVIATIONS" value="false" />
+        <option name="ANCHORLINKS" value="true" />
+        <option name="ATXHEADERSPACE" value="false" />
+        <option name="AUTOLINKS" value="true" />
+        <option name="DEFINITIONS" value="true" />
+        <option name="FENCED_CODE_BLOCKS" value="true" />
+        <option name="FOOTNOTES" value="false" />
+        <option name="FORCELISTITEMPARA" value="false" />
+        <option name="HARDWRAPS" value="true" />
+        <option name="QUOTES" value="false" />
+        <option name="RELAXEDHRULES" value="true" />
+        <option name="SMARTS" value="false" />
+        <option name="STRIKETHROUGH" value="true" />
+        <option name="SUPPRESS_HTML_BLOCKS" value="false" />
+        <option name="SUPPRESS_INLINE_HTML" value="false" />
+        <option name="TABLES" value="true" />
+        <option name="TASKLISTITEMS" value="true" />
+        <option name="TOC" value="false" />
+        <option name="WIKILINKS" value="true" />
+      </PegdownExtensions>
+      <ParserOptions>
+        <option name="GITHUB_WIKI_LINKS" value="true" />
+      </ParserOptions>
+    </ParserSettings>
+    <HtmlSettings headerTopEnabled="false" headerBottomEnabled="false" bodyTopEnabled="false" bodyBottomEnabled="false">
+      <GeneratorProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.generator" providerName="Default Swing HTML Generator" />
+      </GeneratorProvider>
+      <headerTop />
+      <headerBottom />
+      <bodyTop />
+      <bodyBottom />
+    </HtmlSettings>
+    <CssSettings previewScheme="UI_SCHEME" cssUri="" isCssUriEnabled="false" isCssTextEnabled="false" isDynamicPageWidth="false">
+      <StylesheetProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.css" providerName="Default Swing Stylesheet" />
+      </StylesheetProvider>
+      <ScriptProviders />
+      <cssText />
+    </CssSettings>
+    <DocumentSettings trimTrailingBlanks="false" />
+  </component>
   <component name="MultiMarkdownSettings" abbreviations="false" anchorLinks="true" autoLinks="true" definitions="true" enableTrimSpaces="false" fencedCodeBlocks="true" forceListPara="false" hardWraps="true" headerSpace="false" quotes="false" relaxedHRules="true" showHtmlText="true" showHtmlTextAsModified="false" smarts="false" strikethrough="true" suppressHTMLBlocks="false" suppressInlineHTML="false" tables="true" taskLists="true" wikiLinks="true" todoComments="false" useCustomCss="false" enableFirebug="false" useHighlightJs="true" includesHljsCss="false" includesLayoutCss="false" includesColorsCss="true" footnotes="false" htmlTheme="2" maxImgWidth="900" parsingTimeout="10000" pageZoom="1.0" updateDelay="1000" tabbedPaneIndex="0" customCss="" customFxCss="" useOldPreview="true" githubWikiLinks="true" />
 </application>

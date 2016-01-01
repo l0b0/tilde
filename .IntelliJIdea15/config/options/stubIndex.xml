@@ -26,7 +26,6 @@
         <option value="bash.script.name" />
         <option value="puppet.text.search.index" />
         <option value="Py.class.shortName" />
-        <option value="bash.script.fullname" />
         <option value="Ruby.include.extend.qualified.shortName" />
         <option value="bash.vardef" />
         <option value="Ruby.method.dynamic.name" />
@@ -84,6 +83,7 @@
         <option value="Css.class" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
+        <option value="bash.var" />
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex" />
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex" />
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeClassByPackageIndex" />
