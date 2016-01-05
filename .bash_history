@@ -134,11 +134,6 @@ deluge & # bittorrent gui
 ~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua # debug awesome configuration 
 ~/dev/awmtt/awmtt stop # debug awesome configuration 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
-~/dev/minecraft-scripts/backup.sh # game directory 
-~/dev/minecraft-scripts/backup.sh ~/.techniclauncher # game directory 
-~/dev/minecraft-scripts/install-lwjgl.sh 
-~/dev/minecraft-scripts/install-Minecraft.sh # game 
-~/dev/minecraft-scripts/install-Minecraft.sh -o 1.4.6 # game old version 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
 ~/dev/tilde/scripts/arch_linux_system_upgrade.sh 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
@@ -275,7 +270,6 @@ flash-player-properties & # config flash
 fold --width 1 <<< foo # split characters lines 
 for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080p height 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
-for path in ~/.minecraft/saves/*; do overviewer.py --rendermodes=smooth-lighting,smooth-night,spawn "$path" "$path"/map; done 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 for path in ./*.zip; do unzip "$file"; done # all 
 fortune 
