@@ -705,11 +705,7 @@ make clean # dev
 make # compile dev 
  make --directory ~/dev/tilde clean 
 make install # dev 
-make METHOD=git python-pep8 
 makepkg --syncdeps --install # package build tarball install 
-make python-pep8 
-make PYTHON_VERSION=2.7.8 virtualenv 
-make release # dev 
 make --silent python-pep8 | cut --delimiter=: --fields=4- | grep --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
 make test # dev 
 make variables # dev 
@@ -1645,13 +1641,6 @@ sudo localectl --no-convert set-keymap dvorak # x11 console vt keyboard layout
 sudo localectl --no-convert set-x11-keymap us '' dvorak-alt-intl 
 sudo lpadmin -d printername # set default printer cups 
 sudo lshw | less 
-sudo make distclean 2>&1 | tee make_distclean.out~ 
-sudo make docinstall 2>&1 | tee make_docinstall.out~ 
-sudo make install 
-sudo make install 2>&1 | tee make_install.out~ 
-sudo make pkginstall 2>&1 | tee make_pkginstall.out~ 
-sudo make topclean 2>&1 | tee make_topclean.out~ 
-sudo make uninstall 
 sudo mandb # update apropos database manual 
 sudo mkdir "/media/mountpoint" 
 sudo mkfs.msdos -F 32 /dev/sdxy # format fat32 partition 
