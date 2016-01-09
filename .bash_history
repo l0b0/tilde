@@ -660,7 +660,6 @@ less /var/log/auth.log
 less /var/log/dmesg 
 less /var/log/kern.log 
 less /var/log/messages 
-less /var/log/syslog 
 less /var/log/Xorg.0.log 
 libreoffice & 
 /lib/udev/findkeyboards 
@@ -1674,7 +1673,6 @@ sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-fbdev xf86
 sudo pacman --upgrade ./*.pkg.tar.xz # install 
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
-sudo perl -n -e 'use DateTime::Format::Strptime; my $parser = DateTime::Format::Strptime->new( pattern => "%B %d %Y"); m/^(\w+ \d+ )(.*)/; print ($parser->parse_datetime("$1" . DateTime->now->year)->ymd, " ", $2, "\n");' /var/log/syslog # date format iso 
 sudo pip2 install --upgrade img2scad 
 sudo pip2 install --upgrade pep8 
 sudo pip2 install --upgrade vcard # validator 
@@ -1708,7 +1706,6 @@ sudo sysctl --all # list kernel parameters
 sudo system-config-printer 
 sudo systemctl enable NetworkManager.service # network gui configuration 
 sudo systemctl restart dhcpcd.service 
-sudo tail --follow=name --retry --lines 0 /var/log/syslog 
 sudo tar --directory /opt --extract --gzip --file ideaIU-*.tar.gz && /opt/idea-IU-*/bin/idea.sh # install intellij idea ide 
 sudo tcpdump # network debug log packets 
 sudo tcpdump tcp # network debug log packets protocol 
