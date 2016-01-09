@@ -319,6 +319,7 @@ git branch --delete topic # local
 git branch --remotes 
 git branch --set-upstream-to=origin/master master # track 
 git branch --track topic master 
+git -C "$(git rev-parse --show-toplevel)" checkout-index --all --prefix="../$(basename "$(git rev-parse --show-toplevel)")-copy/" # copy repository file 
 git checkout -b topic remotes/origin/topic # branch change create 
 git checkout master # branch change 
 git checkout . # revert 
@@ -372,6 +373,7 @@ git help bisect
 git help blame 
 git help branch 
 git help checkout 
+git help checkout-index 
 git help cherry-pick 
 git help clean 
 git help clone 
