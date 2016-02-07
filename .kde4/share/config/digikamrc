@@ -633,6 +633,10 @@ ToolTips Show Photo Make=true
 ToolTips Show Photo WB=false
 ToolTips Show Tags=true
 
+[KFileDialog Settings]
+Recent Files[$e]=
+Recent URLs[$e]=
+
 [Labels Sidebar]
 ColorSelection=
 Expansion=
