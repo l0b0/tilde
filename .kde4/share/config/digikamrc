@@ -987,6 +987,7 @@ CaseSensitive=0
 
 [Recent Dirs]
 collectionlocation[$e]=file://$HOME/pictures
+digikam-image-export[$e]=file://$HOME/,file://$HOME
 
 [Search Sidebar]
 CurrentIndex=
