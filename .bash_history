@@ -529,6 +529,7 @@ gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=unencrypted.pdf -c .setpd
 gunzip example.gz 
 gzip example.txt # compress 
 hash # list program recent 
+heimdall detect # list android 
 heimdall download-pit --output my.pit # download pit partition file android 
 heimdall print-pit --file my.pit # print partition table android 
 help alias 
