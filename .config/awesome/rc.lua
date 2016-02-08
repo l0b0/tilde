@@ -432,7 +432,7 @@ awful.rules.rules = {
       properties = { tag = tags[1][3] } },
     { rule_any = { class = { "Git-gui" } },
       properties = { tag = tags[1][4] } },
-    { rule_any = { class = { "Deluge", "Pidgin", "Thunderbird" } },
+    { rule_any = { class = { "Deluge", "Pidgin", "Thunderbird", "Transmission-gtk" } },
       properties = { tag = tags[1][5] } },
     { rule_any = { class = { "feh", "MPlayer", "smplayer", "Vlc" } },
       properties = { tag = tags[1][6] } },
