@@ -83,6 +83,7 @@
         <option value="Css.class" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex" />
         <option value="bash.var" />
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex" />
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex" />
