@@ -766,6 +766,7 @@ man chgrp # help
 man chmod # help 
 man chown # help 
 man chroot # help 
+man clamscan # help 
 man clamtk # help 
 man cloc # help 
 man cmp # help 
@@ -825,6 +826,7 @@ man fmt # help
 man fold # help 
 man fortune # help 
 man free # help 
+man freshclam # help 
 man fsck # help 
 man fswebcam # help 
 man fuseiso # help 
@@ -1603,6 +1605,7 @@ sudo chgrp --recursive nogroup -- example.txt # set group file
 sudo chown nobody "$sandbox" 
 sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
+sudo clamscan --quiet --recursive / # antivirus scan 
 sudo cpanm Net::LDAP # install ldap 
 sudo crontab -e # edit 
 sudo delgroup example # delete group 
@@ -1617,6 +1620,7 @@ sudo /etc/init.d/postgresql reload
 sudo extundelete --restore-all /dev/sdx1 
 sudo faillog # log summary user 
 sudo fdisk -l # list all disks 
+sudo freshclam # antivirus update 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
 sudo gpasswd --add "$USER" group # user add group 
 sudo groupadd example # add create group 
