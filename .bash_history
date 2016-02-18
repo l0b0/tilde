@@ -1502,7 +1502,7 @@ schemaspy2svg ~/db
 schemaspy2svg --help 
 scp example.org:/home/jdoe/example.txt . 
 scp -i ~/.ssh/server.pem example.txt user@example.org: # alternative key 
-scp -P 2222 example.org:/home/jdoe/example.txt . 
+scp -P 22222 example.org:/home/jdoe/example.txt . 
 scp -r file example.org:~ 
 screen 
 screen -dRR name # resume 
@@ -1578,7 +1578,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < example.sh # execute shell script remote 
 ssh example.org uptime 
-sshfs -o port=2222 server: /media/server # sftp 
+sshfs -o port=22222 server: /media/server # sftp 
 ssh -i ~/.ssh/server.pem user@example.org # alternative key 
 ssh-keygen -f ~"/.ssh/known_hosts" -R '[1.2.3.4]:1234' # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
@@ -1586,7 +1586,7 @@ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint
 ssh-keygen -y -f ~/.ssh/id_rsa # generate public key 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
 ssh -L 5902:localhost:5901 example.org # local port forwarding vnc 
-ssh -p 2222 example.org 
+ssh -p 22222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -t localhost sudo -u nobody env # tty 
 ssh -vvv example.org 
