@@ -804,6 +804,7 @@ man dropdb # help postgresql
 man dropuser # help 
 man dsa # help 
 man du # help 
+man efibootmgr # help 
 man eject # help 
 man ent # help 
 man env # help 
@@ -1618,6 +1619,7 @@ sudo dmidecode --string system-serial-number
 sudo dmidecode --type 1 
 sudo dmidecode --type system 
 sudo download-mibs 
+sudo efibootmgr # list uefi boot config 
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-all /dev/sdx1 
 sudo faillog # log summary user 
