@@ -750,6 +750,7 @@ man avahi-daemon # help
 man avconv # help 
 man awesome # help 
 man awk # help 
+man badblocks # help 
 man basename # help 
 man bashdb # help 
 man bash # help 
@@ -1599,6 +1600,7 @@ strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\
 strings "$(which strings)" 
 stty --all # terminal settings 
 stty sane # restore terminal state 
+sudo badblocks -sv /dev/sda # check disk health 
 sudo blkid -o list 
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- example.txt # set group file 
