@@ -956,6 +956,7 @@ man mv # help
 man nautilus # help 
 man ncal # help 
 man nc # help 
+man netctl # help 
 man nethogs # help 
 man netstat # help 
 man NetworkManager # help 
@@ -1345,6 +1346,7 @@ mv file{.orig,}
 ncal -3bM 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
+netctl list # network profile 
 nethack-qt & 
 netstat 
 netstat --all # internet connections sockets 
