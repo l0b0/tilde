@@ -30,6 +30,7 @@ dotfiles = .ackrc \
            .IntelliJIdea15 \
            .ipython \
            .kde4 \
+           .mutt \
            .offlineimaprc \
            .perltidyrc \
            .profile \
