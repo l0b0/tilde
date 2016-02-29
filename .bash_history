@@ -1879,6 +1879,7 @@ whoami # user id
 whois example.org # dns lookup internet network 
 who # logins users 
 wicd-cli --wireless --list-networks 
+wifi-menu --help 
 wine --version 
 wireshark & 
 wnpp-alert # Debian packaging 
