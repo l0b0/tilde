@@ -1630,6 +1630,7 @@ sudo efibootmgr # list uefi boot config
 sudo /etc/init.d/postgresql reload 
 sudo extundelete --restore-all /dev/sdx1 
 sudo faillog # log summary user 
+sudo fdisk /dev/sdx # partition disk 
 sudo fdisk -l # list all disks 
 sudo freshclam # antivirus update 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
