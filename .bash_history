@@ -946,6 +946,7 @@ man md5sum # help
 man mencoder # help 
 man mkdir # help 
 man mkfifo # help 
+man mkfs.ext4 # help 
 man mkfs.msdos # help 
 man mktemp # help 
 man modinfo # help 
@@ -1663,6 +1664,7 @@ sudo lpadmin -d printername # set default printer cups
 sudo lshw | less 
 sudo mandb # update apropos database manual 
 sudo mkdir "/media/mountpoint" 
+sudo mkfs.ext4 /dev/sdx1 # format ext4 partition 
 sudo mkfs.msdos -F 32 /dev/sdxy # format fat32 partition 
 sudo modprobe microcode # add insert kernel module 
 sudo mount --all 
