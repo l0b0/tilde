@@ -1757,7 +1757,7 @@ sudo vim /etc/resolv.conf # dns network
 sudo vipw # edit password users 
 sudo visudo # permissions security 
 sudo wavemon 
-sudo wifi-menu 
+sudo wifi-menu --obscure 
 sudo Xorg :1 -configure 
 su --login "$USER" # substitute user login 
 sum <<< '2 2' 
