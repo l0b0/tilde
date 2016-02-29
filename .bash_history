@@ -959,6 +959,7 @@ man nautilus # help
 man ncal # help 
 man nc # help 
 man netctl # help 
+man netctl.profile # help 
 man nethogs # help 
 man netstat # help 
 man NetworkManager # help 
