@@ -1,11 +1,11 @@
 <application>
   <component name="ApplicationShared">
-    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="true" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false">
+    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="yes" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false" showGitHubPageIfSynced="false" allowBrowsingInPreview="false">
       <PanelProvider>
         <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.panel" providerName="Default - Swing" />
       </PanelProvider>
     </PreviewSettings>
-    <ParserSettings parsingTimeout="10000">
+    <ParserSettings parsingTimeout="100">
       <PegdownExtensions>
         <option name="ABBREVIATIONS" value="false" />
         <option name="ANCHORLINKS" value="true" />
@@ -47,7 +47,6 @@
       <ScriptProviders />
       <cssText />
     </CssSettings>
-    <DocumentSettings trimTrailingBlanks="false" />
   </component>
   <component name="MultiMarkdownSettings" abbreviations="false" anchorLinks="true" autoLinks="true" definitions="true" enableTrimSpaces="false" fencedCodeBlocks="true" forceListPara="false" hardWraps="true" headerSpace="false" quotes="false" relaxedHRules="true" showHtmlText="true" showHtmlTextAsModified="false" smarts="false" strikethrough="true" suppressHTMLBlocks="false" suppressInlineHTML="false" tables="true" taskLists="true" wikiLinks="true" todoComments="false" useCustomCss="false" enableFirebug="false" useHighlightJs="true" includesHljsCss="false" includesLayoutCss="false" includesColorsCss="true" footnotes="false" htmlTheme="2" maxImgWidth="900" parsingTimeout="10000" pageZoom="1.0" updateDelay="1000" tabbedPaneIndex="0" customCss="" customFxCss="" useOldPreview="true" githubWikiLinks="true" />
 </application>
