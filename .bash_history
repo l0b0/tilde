@@ -70,6 +70,7 @@ cd -- "$(mktemp --directory)" # create temporary directory
 certutil # help 
 checkbashisms ./*.sh 
 chfn --full-name "John Doe" 
+chmod go= ~/.ssh/id_rsa # permission 
 chmod u+x example.sh # permission executable 
 clamtk & # antivirus 
 cmp --print-bytes "$(which arch)" "$(which uname)" # binary diff 
