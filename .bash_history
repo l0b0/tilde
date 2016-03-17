@@ -1648,6 +1648,7 @@ sudo iftop -i wlp1s0 # bandwidth network interface monitor wireless
 sudo ifup wlan0 # network interface enable 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
+sudo iotop --pid=$$ # i/o process 
 sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
 sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete 
 sudo ip link set dev eth0 up # network enable device 
