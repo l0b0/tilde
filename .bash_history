@@ -1594,7 +1594,7 @@ ssh -i ~/.ssh/server.pem user@example.org # alternative key
 ssh-keygen -f ~"/.ssh/known_hosts" -R '[1.2.3.4]:1234' # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
 ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint 
-ssh-keygen -y -f ~/.ssh/id_rsa # generate public key 
+ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub # generate public key 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
 ssh -L 5902:localhost:5901 example.org # local port forwarding vnc 
 ssh -p 22222 example.org 
