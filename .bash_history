@@ -699,6 +699,7 @@ ls -l --reverse # list
 ls -lt /var/log/ # sort time list 
 lsmod # kernel modules 
 lsof +c 0 | grep process-name | wc --lines # count files 
+lsof +D /path # list open file directory recursive 
 lsof -i :22 # internet port network 
 lsof -i tcp # internet network 
 lsof +L1 # list deleted files 
