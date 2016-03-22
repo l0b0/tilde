@@ -334,7 +334,7 @@ globalkeys = awful.util.table.join(
 
     -- Lock screen
     awful.key(
-        { "Mod1", "Control" },
+        { "Mod4" },
         "l",
         function ()
             awful.util.spawn("slock")
