@@ -101,6 +101,10 @@
         <option value="Css.class" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
+        <option value="java.unit.tree" />
+        <option value="amd.requirePaths.index" />
+        <option value="amd.baseUrl.index" />
+        <option value="Css.custom.property" />
         <option value="java.class.fqn" />
         <option value="java.class.shortname" />
         <option value="java.method.parameter.types" />

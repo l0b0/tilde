@@ -27,7 +27,7 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
-           .IntelliJIdea15 \
+           $(wildcard .IntelliJIdea*) \
            .ipython \
            .kde4 \
            .mutt \
