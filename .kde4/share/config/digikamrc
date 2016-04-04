@@ -398,6 +398,7 @@ Finger Prints Generator First Run=true
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
+MenuBar=Disabled
 Scroll Current Item To Center=false
 Show Permanent Delete Dialog=true
 Show Splash=false
