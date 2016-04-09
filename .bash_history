@@ -1597,6 +1597,7 @@ ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key # host id rsa fingerprint
 ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub # generate public key 
 ssh -L 15432:localhost:5432 example.org # local port forwarding postgresql 
 ssh -L 5902:localhost:5901 example.org # local port forwarding vnc 
+ssh -L 8080:localhost:8081 proxy.example.com -t ssh -D 8081 endpoint.example.com # ssh network proxy 
 ssh -p 22222 example.org 
 ssh -R 9000:localhost:9000 example.org 
 ssh -t localhost sudo -u nobody env # tty 
