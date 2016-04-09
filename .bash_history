@@ -161,6 +161,7 @@ disown %+ # nohup last job background process
 dmesg --color=always | less -r # debug os startup 
 docker images # list 
 docker info 
+docker ps --all # list container 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
