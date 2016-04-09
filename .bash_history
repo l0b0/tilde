@@ -162,6 +162,7 @@ dmesg --color=always | less -r # debug os startup
 docker images # list 
 docker info 
 docker ps --all # list container 
+docker rm $(docker ps --all --quiet) # clean remove container 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
