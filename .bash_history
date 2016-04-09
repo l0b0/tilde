@@ -642,6 +642,9 @@ kdesu etherape & # network traffic visualization
 kdesu java -jar jdivelog-installer-*.jar & 
 kdesu wifi-radar & 
 keepassx & 
+keybase help 
+keybase login 
+keybase prove twitter 
 kill -0 "$!" # check last job background process pid 
 kill -18 "$!" # resume last job background process pid 
 kill -20 "$!" # suspend last job background process pid 
