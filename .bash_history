@@ -1529,6 +1529,7 @@ screen -list
 screen -S compile-project 
 script --quiet --command "$SHELL" 
 scrot --delay 5 # screenshot 
+scrot --select # screenshot area selection 
 sed '9d' file # delete line one-indexed 
 sed '/^$/d' file # delete empty lines 
 sed '/pattern/r./input.txt' example.txt # insert merge file pattern 
