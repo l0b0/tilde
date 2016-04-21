@@ -1698,15 +1698,8 @@ sudo pacman --upgrade ./*.pkg.tar.xz # install
 sudo paperconfig --paper a4 # set print size 
 sudo passwd --delete root # disable account user 
 sudo pip2 install --upgrade img2scad 
-sudo pip2 install --upgrade pep8 
-sudo pip2 install --upgrade vcard # validator 
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
-sudo pip install --upgrade pep8 
 sudo pip install --upgrade pip # python 
-sudo pip install --upgrade pyflakes 
-sudo pip install --upgrade pylint 
-sudo pip install --upgrade virtualenv 
-sudo pip uninstall vcard # validator 
 sudo powertop # power monitoring configuration 
 sudo reboot # restart 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
