@@ -108,8 +108,14 @@ clean_sqlite:
 		echo 'VACUUM;' | $(SQLITE) $$db_file || (echo "Vacuuming file failed: $$db_file"; exit 1) \
 	done
 
+.PHONY: clean_xml
+clean_xml:
+	for file in .idea/*.xml .idea/*/*.xml; do \
+		xsltproc --output $$file sort.xslt $$file || exit 1; \
+	done
+
 .PHONY: clean
-clean: $(gpg_backup_path) clean_comments clean_line_endings clean_history_tags clean_x_resources clean_sort_text_files clean_signatures clean_sqlite
+clean: $(gpg_backup_path) clean_comments clean_line_endings clean_history_tags clean_x_resources clean_sort_text_files clean_signatures clean_sqlite clean_xml
 
 .PHONY: uninstall
 uninstall:
