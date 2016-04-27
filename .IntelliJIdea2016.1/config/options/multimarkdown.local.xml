@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="ApplicationLocal" sharedSettingsMigrated="true">
-    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="true" htmlLangInjections="true" syntaxHighlighting="0" softWraps="0" />
+    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="true" htmlLangInjections="true" syntaxHighlighting="0" softWraps="0"/>
+    <FailedInBuild scratchFileServiceFailed="" fxPreviewFailedBuild="" lightParserFailedBuild=""/>
     <LicenseInformation licenseType="" showLicenseExpiration="true" showLicenseExpired="true" showFeatureUpdates="false">
-      <licenseCode />
-      <activationCode />
+      <activationCode/>
+      <licenseCode/>
     </LicenseInformation>
-    <Notifications showFeatureUpdates="true" />
-    <FailedInBuild scratchFileServiceFailed="" fxPreviewFailedBuild="" lightParserFailedBuild="" />
-    <WasShown licensedAvailable="true" lastFeatureUpdateVersion="1.3.0" javaFxAvailable="false" />
+    <Notifications showFeatureUpdates="true"/>
+    <WasShown licensedAvailable="true" lastFeatureUpdateVersion="1.3.0" javaFxAvailable="false"/>
   </component>
 </application>

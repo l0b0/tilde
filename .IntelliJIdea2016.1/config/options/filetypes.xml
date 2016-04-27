@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="FileTypeManager" version="16">
     <extensionMap>
-      <mapping pattern="papersize" type="PLAIN_TEXT" />
+      <mapping pattern="papersize" type="PLAIN_TEXT"/>
     </extensionMap>
   </component>
 </application>

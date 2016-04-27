@@ -110,9 +110,7 @@ clean_sqlite:
 
 .PHONY: clean_xml
 clean_xml:
-	for file in .idea/*.xml .idea/*/*.xml; do \
-		xsltproc --output $$file sort.xslt $$file || exit 1; \
-	done
+	$(MAKE) XML_FILES_COMMAND='$(FIND) .idea .IntelliJIdea* -name "*.xml" -print0' sort-xml-files
 
 .PHONY: clean
 clean: $(gpg_backup_path) clean_comments clean_line_endings clean_history_tags clean_x_resources clean_sort_text_files clean_signatures clean_sqlite clean_xml
@@ -156,3 +154,4 @@ dotfiles: $(dotfile_links)
 install: dotfiles
 
 include make-includes/variables.mk
+include make-includes/xml.mk

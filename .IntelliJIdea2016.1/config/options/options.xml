@@ -1,15 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="PropertiesComponent">
-    <property name="log.debug.categories" value="" />
-    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true" />
-    <property name="DefaultHtmlDoctype.Refreshed" value="2" />
-    <property name="evlsprt3.14" value="17" />
-    <property name="installation.uid" value="a2c1a4e6-5127-4278-8057-180dd42e407b" />
-    <property name="default.storage.format" value=".idea (directory based)" />
-    <property name="toolwindow.stripes.buttons.info.shown" value="true" />
-    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false" />
-    <property name="Copy.OpenInEditor" value="true" />
-    <property name="file.chooser.recent.files" value="$USER_HOME$/dev/root" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="ChangesViewManager.DETAILS_SPLITTER_PROPORTION" value="0.5"/>
+    <property name="Copy.OpenInEditor" value="true"/>
+    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true"/>
+    <property name="DefaultHtmlDoctype.Refreshed" value="2"/>
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false"/>
+    <property name="android-component-compatibility-check" value="1461787990880"/>
+    <property name="default.storage.format" value=".idea (directory based)"/>
+    <property name="evlsprt3.14" value="17"/>
+    <property name="file.chooser.recent.files" value="$USER_HOME$/dev/root"/>
+    <property name="installation.uid" value="a2c1a4e6-5127-4278-8057-180dd42e407b"/>
+    <property name="installed.kotlin.plugin.version" value="1.0.1-release-IJ143-32"/>
+    <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
+    <property name="log.debug.categories" value=""/>
+    <property name="toolwindow.stripes.buttons.info.shown" value="true"/>
   </component>
 </application>

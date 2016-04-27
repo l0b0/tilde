@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="GradleSystemRunningSettings">
-    <option name="preferredTestRunner" value="PLATFORM_TEST_RUNNER" />
+    <option name="preferredTestRunner" value="PLATFORM_TEST_RUNNER"/>
   </component>
 </application>
