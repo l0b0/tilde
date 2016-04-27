@@ -1,6 +1,6 @@
 <application>
   <component name="ApplicationLocal" sharedSettingsMigrated="true">
-    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="true" htmlLangInjections="true" showSyntaxHighlighting="true" />
+    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="true" htmlLangInjections="true" syntaxHighlighting="0" softWraps="0" />
     <LicenseInformation licenseType="" showLicenseExpiration="true" showLicenseExpired="true" showFeatureUpdates="false">
       <licenseCode />
       <activationCode />

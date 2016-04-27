@@ -2,11 +2,6 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
-        <option value="Ruby.require.load.shortName" />
-        <option value="Ruby.inheritance.shortName" />
-        <option value="Ruby.method.name" />
-        <option value="Rails.render.file" />
-        <option value="Ruby.method.dynamic.name" />
         <option value="Ruby.symbol.name" />
         <option value="Ruby.include.extend.qualified.shortName" />
         <option value="Ruby.class_eval.receiver" />
@@ -70,6 +65,8 @@
         <option value="gr.field.name" />
         <option value="gr.script.fqn" />
         <option value="gr.class.fqn" />
+        <option value="amd.requirePaths.index" />
+        <option value="amd.baseUrl.index" />
         <option value="js.symbol.qualified.names.index" />
         <option value="JS.subclass.stub.index" />
         <option value="js.namespace.index" />
@@ -80,6 +77,7 @@
         <option value="js.symbol.index2" />
         <option value="JS.class.implements" />
         <option value="JS.class.super" />
+        <option value="ts.external.module.index" />
         <option value="js.element.qualifiedName" />
         <option value="js.qualified.shortName" />
         <option value="bash.var" />
@@ -96,15 +94,13 @@
         <option value="sql.column.name" />
         <option value="sql.table.shortName" />
         <option value="properties.index" />
+        <option value="Css.custom.property" />
         <option value="Css.attr" />
         <option value="Css.id" />
         <option value="Css.class" />
         <option value="dom.elementClass" />
         <option value="dom.namespaceKey" />
         <option value="java.unit.tree" />
-        <option value="amd.requirePaths.index" />
-        <option value="amd.baseUrl.index" />
-        <option value="Css.custom.property" />
         <option value="java.class.fqn" />
         <option value="java.class.shortname" />
         <option value="java.method.parameter.types" />
@@ -117,6 +113,11 @@
         <option value="java.annotations" />
         <option value="Ruby.cucumber.step" />
         <option value="JRuby.import.shortName" />
+        <option value="Ruby.require.load.shortName" />
+        <option value="Ruby.inheritance.shortName" />
+        <option value="Ruby.method.name" />
+        <option value="Rails.render.file" />
+        <option value="Ruby.method.dynamic.name" />
       </list>
     </option>
   </component>
