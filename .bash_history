@@ -1394,6 +1394,7 @@ rm --recursive ~/.local/share/Trash/ && mkdir --parent ~/.local/share/Trash/{fil
 ronn --help 
 ronn --roff README.markdown # man 
 route 
+rsync --archive --human-readable --progress --verbose --remove-source-files source host:target # network transfer move 
 rsync --rsh='ssh -p 2020 -i ~/.ssh/host.pem' --archive --human-readable --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 runlevel # kernel 
