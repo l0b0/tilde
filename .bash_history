@@ -162,6 +162,7 @@ dmesg --color=always | less -r # debug os startup
 docker images # list 
 docker info 
 docker ps --all # list container 
+docker pull base/archlinux 
 docker rm $(docker ps --all --quiet) # clean remove container 
 docker rmi $(docker images --quiet --filter dangling=true) # clean remove container 
 docker run -it image /bin/bash # shell container 
