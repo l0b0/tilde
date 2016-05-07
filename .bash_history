@@ -1245,6 +1245,7 @@ mv file{.orig,}
 ncal -3bM 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
+netctl-auto current # network profile
 netctl list # network profile 
 nethack-qt & 
 netstat 
