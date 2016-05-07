@@ -159,6 +159,7 @@ digikam & # photo manager
 dirname -- "$PWD" # parent directory 
 disown %+ # nohup last job background process 
 dmesg --color=always | less -r # debug os startup 
+docker build . 
 docker images # list 
 docker info 
 docker ps --all # list container 
