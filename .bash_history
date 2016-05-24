@@ -633,7 +633,6 @@ jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image
 jobs -l # list all background 
 journalctl --catalog --boot=0 --output=short-iso 
 journalctl --catalog --follow 
-journalctl --catalog --follow _SYSTEMD_UNIT=NetworkManager.service # log 
 journalctl --catalog --lines=10 
 journalctl --catalog --since=today --output=short-iso SYSLOG_IDENTIFIER="xprofile-${USER}" # log user x profile 
 journalctl --catalog --since=today --output=short-iso # systemd service log 
@@ -974,7 +973,6 @@ man netctl # help
 man netctl.profile # help 
 man nethogs # help 
 man netstat # help 
-man NetworkManager # help 
 man newgrp # help 
 man nfs # help 
 man nice # help 
@@ -1170,9 +1168,6 @@ man which # help
 man whoami # help 
 man who # help 
 man whois # help 
-man wicd-client # help 
-man wicd-cli # help 
-man wicd # help 
 man wifi-radar # help 
 man wireshark-filter # help 
 man wireshark # help 
@@ -1601,7 +1596,6 @@ sudo sh -c 'systemctl start acpid.service && systemctl enable acpid.service' # s
 sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemon.service' # printer discovery service 
 sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' # cron service 
 sudo sh -c 'systemctl start dkms.service && systemctl enable dkms.service' # dynamic kernel module support 
-sudo sh -c 'systemctl start NetworkManager.service && systemctl enable NetworkManager.service' # network service 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
@@ -1611,7 +1605,6 @@ sudo sshfs user@host:/path /run/mount/host
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
 sudo system-config-printer 
-sudo systemctl enable NetworkManager.service # network gui configuration 
 sudo systemctl restart dhcpcd.service 
 sudo tar --directory /opt --extract --gzip --file ideaIU-*.tar.gz && /opt/idea-IU-*/bin/idea.sh # install intellij idea ide 
 sudo tcpdump # network debug log packets 
@@ -1776,7 +1769,6 @@ while sleep 1; do (shopt -s nullglob; events_dir="${HOME}/.events"; for path in 
 whoami # user id 
 whois example.org # dns lookup internet network 
 who # logins users 
-wicd-cli --wireless --list-networks 
 wifi-menu --help 
 wine --version 
 wireshark & 
