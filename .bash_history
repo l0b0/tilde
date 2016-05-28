@@ -792,6 +792,7 @@ man createdb # help postgresql
 man createuser # help 
 man crond # help 
 man crontab # help 
+man cryptsetup # help 
 man csplit # help 
 man curl # help 
 man cut # help 
@@ -1589,6 +1590,7 @@ sudo powertop # power monitoring configuration
 sudo reboot # restart 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
+sudo sh -c 'cryptsetup open --type luks /dev/sda encrypted && mount /dev/mapper/encrypted /media/encrypted' # mount encrypted disk 
 sudo sh -c 'dhclient -r wlan0 && dhclient wlan0' # request refresh dhcp ip 
 sudo sh -c 'ip addr add 192.168.0.99/16 dev wlan0 && dhclient wlan0' # set ip address network 
 sudo sh -c 'pacman --sync --needed --refresh jenkins && systemctl start jenkins.service && systemctl enable jenkins.service' # jenkins ci service 
@@ -1597,6 +1599,7 @@ sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemo
 sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' # cron service 
 sudo sh -c 'systemctl start dkms.service && systemctl enable dkms.service' # dynamic kernel module support 
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
+sudo sh -c 'umount /media/encrypted && cryptsetup close encrypted' # disk unmount 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo showkey # keyboard 
