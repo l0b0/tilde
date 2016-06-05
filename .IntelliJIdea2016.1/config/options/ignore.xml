@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" outerIgnoreWrapperHeight="100" version="1.3.3" settingsFixed="true">
+  <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" outerIgnoreWrapperHeight="100" version="1.4.1" settingsFixed="true">
     <languages>
       <language id="Bazaar" NEW_FILE="true" ENABLE="true"/>
       <language id="Chef" NEW_FILE="true" ENABLE="false"/>
@@ -12,7 +12,9 @@
       <language id="Floobits" NEW_FILE="true" ENABLE="false"/>
       <language id="Fossil" NEW_FILE="true" ENABLE="true"/>
       <language id="Git" NEW_FILE="true" ENABLE="true"/>
+      <language id="Git exclude" NEW_FILE="true" ENABLE="true"/>
       <language id="JSHint" NEW_FILE="true" ENABLE="false"/>
+      <language id="Jetpack" NEW_FILE="true" ENABLE="false"/>
       <language id="Mercurial" NEW_FILE="true" ENABLE="true"/>
       <language id="Monotone" NEW_FILE="true" ENABLE="true"/>
       <language id="Nodemon" NEW_FILE="true" ENABLE="false"/>

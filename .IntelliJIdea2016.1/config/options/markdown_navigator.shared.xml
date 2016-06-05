@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="ApplicationShared">
+    <CssSettings previewScheme="UI_SCHEME" cssUri="" isCssUriEnabled="false" isCssTextEnabled="false" isDynamicPageWidth="false">
+      <ScriptProviders/>
+      <StylesheetProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.css" providerName="Default Swing Stylesheet"/>
+      </StylesheetProvider>
+      <cssText/>
+    </CssSettings>
+    <HtmlSettings headerTopEnabled="false" headerBottomEnabled="false" bodyTopEnabled="false" bodyBottomEnabled="false" embedUrlContent="false">
+      <GeneratorProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.generator" providerName="Default Swing HTML Generator"/>
+      </GeneratorProvider>
+      <bodyBottom/>
+      <bodyTop/>
+      <headerBottom/>
+      <headerTop/>
+    </HtmlSettings>
+    <ParserSettings parsingTimeout="100">
+      <ParserOptions>
+        <option name="EMOJI_SHORTCUTS" value="true"/>
+        <option name="GITBOOK_URL_ENCODING" value="false"/>
+        <option name="GITHUB_EMOJI_URL" value="false"/>
+        <option name="GITHUB_WIKI_LINKS" value="true"/>
+        <option name="JEKYLL_FRONT_MATTER" value="false"/>
+      </ParserOptions>
+      <PegdownExtensions>
+        <option name="ABBREVIATIONS" value="false"/>
+        <option name="ANCHORLINKS" value="true"/>
+        <option name="ATXHEADERSPACE" value="false"/>
+        <option name="AUTOLINKS" value="true"/>
+        <option name="DEFINITIONS" value="true"/>
+        <option name="FENCED_CODE_BLOCKS" value="true"/>
+        <option name="FOOTNOTES" value="false"/>
+        <option name="FORCELISTITEMPARA" value="false"/>
+        <option name="HARDWRAPS" value="true"/>
+        <option name="QUOTES" value="false"/>
+        <option name="RELAXEDHRULES" value="true"/>
+        <option name="SMARTS" value="false"/>
+        <option name="STRIKETHROUGH" value="true"/>
+        <option name="SUPPRESS_HTML_BLOCKS" value="false"/>
+        <option name="SUPPRESS_INLINE_HTML" value="false"/>
+        <option name="TABLES" value="true"/>
+        <option name="TASKLISTITEMS" value="true"/>
+        <option name="TOC" value="false"/>
+        <option name="TRACE_PARSER" value="false"/>
+        <option name="WIKILINKS" value="true"/>
+      </PegdownExtensions>
+    </ParserSettings>
+    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="yes" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizeScrollPosition="false">
+      <PanelProvider>
+        <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.panel" providerName="Default - Swing"/>
+      </PanelProvider>
+    </PreviewSettings>
+  </component>
+</application>
