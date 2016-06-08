@@ -22,6 +22,9 @@ InfoOutput=2
 [kio (delegateanimationhandler)]
 InfoOutput=4
 
+[kio_file]
+InfoOutput=4
+
 [kio_help]
 InfoOutput=4
 
