@@ -1514,6 +1514,7 @@ sudo chroot /var/jail/"$USER" su --login "$USER" # jail
 sudo clamscan --quiet --recursive / # antivirus scan 
 sudo cpanm Net::LDAP # install ldap 
 sudo crontab -e # edit 
+sudo cryptsetup luksDump /dev/sda # list property luks 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
 sudo dmidecode | less 
