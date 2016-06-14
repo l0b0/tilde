@@ -636,7 +636,7 @@ journalctl --catalog --follow
 journalctl --catalog --lines=10 
 journalctl --catalog --since=today --output=short-iso SYSLOG_IDENTIFIER="xprofile-${USER}" # log user x profile 
 journalctl --catalog --since=today --output=short-iso # systemd service log 
-journalctl --catalog --user-unit screenlock.service # systemd user service log 
+journalctl --catalog --since=today --unit=shadow.service 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
 kdesu etherape & # network traffic visualization 
