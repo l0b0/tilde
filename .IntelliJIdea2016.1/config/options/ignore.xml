@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" outerIgnoreWrapperHeight="100" version="1.4.1" settingsFixed="true">
+  <component name="IgnoreSettings" missingGitignore="true" ignoredFileStatus="true" outerIgnoreRules="true" outerIgnoreWrapperHeight="100" version="1.5" starredTemplates="" settingsFixed="true">
     <languages>
       <language id="Bazaar" NEW_FILE="true" ENABLE="true"/>
       <language id="Chef" NEW_FILE="true" ENABLE="false"/>
