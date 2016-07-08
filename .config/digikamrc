@@ -7,6 +7,7 @@ Options are expanded=true
 [Album Settings]
 Album Collections=,Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
 Album Sort Order=0
+Album Sort Role=0
 Default Icon Size=142
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
@@ -31,6 +32,7 @@ Image Sorting=0
 Item Left Click Action=1
 Preview Load Full Image Size=false
 Preview Show Icons=true
+Preview Zoom Use Original Size=true
 Rating Filter Condition=0
 Recursive Albums=false
 Recursive Tags=true
@@ -195,16 +197,22 @@ ProofingRenderingIntent=3
 RenderingIntent=0
 WorkProfileFile[$e]=/usr/share/apps/libkdcraw/profiles/srgb-d65.icm
 
+[CoreDB Settings]
+
 [Database Settings]
 Database Connectoptions=
 Database Hostname=
 Database Name=$HOME/pictures/
 Database Name Thumbnails=$HOME/pictures/
+Database Name Face=$HOME/pictures/
 Database Password=
 Database Port=-1
 Database Type=QSQLITE
 Database Username=
 Internal Database Server=false
+Internal Database Server Mysql Init Command=
+Internal Database Server Mysql Server Command=
+Internal Database Server Path=
 
 [DateFolderView Sidebar]
 CurrentIndex=
@@ -398,6 +406,7 @@ Finger Prints Generator First Run=true
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
+Icon Theme=
 MenuBar=Disabled
 Scroll Current Item To Center=false
 Show Permanent Delete Dialog=true
