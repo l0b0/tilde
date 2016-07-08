@@ -102,6 +102,8 @@ CaseSensitive=0
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
 
+[Batch Queue Manager Settings]
+
 [Camera Settings]
 AlbumBox Expanded=false
 AutoAlbumDate=true
@@ -111,6 +113,7 @@ Case Type=0
 ConvertJpeg=false
 CustomDateFormat=
 DefaultTargetAlbumId=1
+FileSaveConflictRule=1
 FixDateTime=false
 FolderDateFormat=0
 FullScreen Hide SideBars=false
@@ -188,16 +191,566 @@ DoGamutCheck=0
 EnableCM=true
 GamutCheckMaskColor=126,255,255
 InProfileFile[$e]=$HOME/dev/tilde/.color/icc/Canon EOS 7D.icc
+LastMismatchBehavior=2049
+LastMissingProfileBehavior=2050
 LastSpecifiedAssignProfile=
 LastSpecifiedInputProfile=
+LastUncalibratedBehavior=2080
 ManagedPreviews=true
 ManagedView=true
-MonitorProfileFile[$e]=/usr/share/apps/libkdcraw/profiles/srgb-d65.icm
+MonitorProfileFile[$e]=$HOME/dev/tilde/.color/icc/Dell_U2412M.icc
 ProofingRenderingIntent=3
 RenderingIntent=0
-WorkProfileFile[$e]=/usr/share/apps/libkdcraw/profiles/srgb-d65.icm
+WorkProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
 
 [CoreDB Settings]
+Recently Used Tags=
+
+[DMetadata Settings][readCommentNamespaces][Exif.Image.ImageDescription]
+alternativeName=Exif.Photo.UserComment
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][Iptc.Application2.Caption]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][JPEG/TIFF Comments]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=4
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][Xmp.acdsee.notes]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=3
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][Xmp.dc.description]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=2
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][Xmp.exif.UserComment]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readCommentNamespaces][Xmp.tiff.ImageDescription]
+alternativeName=
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Exif.Image.0x4746]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=3
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Exif.Image.0x4749]
+alternativeName=
+convertRatio=0,1,25,50,75,99
+index=4
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Iptc.Application2.Urgency]
+alternativeName=
+convertRatio=8,6,5,4,2,1
+index=5
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Xmp.MicrosoftPhoto.Rating]
+alternativeName=
+convertRatio=0,1,25,50,75,99
+index=2
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Xmp.acdsee.rating]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=1
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readRatingNamespaces][Xmp.xmp.Rating]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=0
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Exif.Image.XPKeywords]
+alternativeName=
+convertRatio=
+index=7
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=;
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Iptc.Application2.Keywords]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=.
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Xmp.MicrosoftPhoto.LastKeywordXMP]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=5
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Xmp.acdsee.categories]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=7
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Xmp.dc.subject]
+alternativeName=
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=5
+subspace=2
+tagPaths=0
+
+[DMetadata Settings][readTagsNamespaces][Xmp.digiKam.TagsList]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=6
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Xmp.lr.hierarchicalSubject]
+alternativeName=Xmp.lr.HierarchicalSubject
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=6
+separator=|
+specialOpts=5
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][readTagsNamespaces][Xmp.mediapro.CatalogSets]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=|
+specialOpts=5
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Exif.Image.ImageDescription]
+alternativeName=Exif.Photo.UserComment
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Iptc.Application2.Caption]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][JPEG/TIFF Comments]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=4
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Xmp.acdsee.notes]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=3
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Xmp.dc.description]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=2
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Xmp.exif.UserComment]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeCommentNamespaces][Xmp.tiff.ImageDescription]
+alternativeName=
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+nsType=2
+secondNameOpts=0
+separator=
+specialOpts=1
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Exif.Image.0x4746]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=3
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Exif.Image.0x4749]
+alternativeName=
+convertRatio=0,1,25,50,75,99
+index=4
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Iptc.Application2.Urgency]
+alternativeName=
+convertRatio=8,6,5,4,2,1
+index=5
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Xmp.MicrosoftPhoto.Rating]
+alternativeName=
+convertRatio=0,1,25,50,75,99
+index=2
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Xmp.acdsee.rating]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=1
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeRatingNamespaces][Xmp.xmp.Rating]
+alternativeName=
+convertRatio=0,1,2,3,4,5
+index=0
+isDefault=true
+isDisabled=false
+nsType=1
+secondNameOpts=0
+separator=
+specialOpts=0
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Exif.Image.XPKeywords]
+alternativeName=
+convertRatio=
+index=7
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=;
+specialOpts=0
+subspace=0
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Iptc.Application2.Keywords]
+alternativeName=
+convertRatio=
+index=6
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=.
+specialOpts=0
+subspace=1
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.MicrosoftPhoto.LastKeywordXMP]
+alternativeName=
+convertRatio=
+index=1
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=5
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.acdsee.categories]
+alternativeName=
+convertRatio=
+index=4
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=7
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.dc.subject]
+alternativeName=
+convertRatio=
+index=5
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=5
+subspace=2
+tagPaths=0
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.digiKam.TagsList]
+alternativeName=
+convertRatio=
+index=0
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=/
+specialOpts=6
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.lr.hierarchicalSubject]
+alternativeName=Xmp.lr.HierarchicalSubject
+convertRatio=
+index=2
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=6
+separator=|
+specialOpts=5
+subspace=2
+tagPaths=1
+
+[DMetadata Settings][writeTagsNamespaces][Xmp.mediapro.CatalogSets]
+alternativeName=
+convertRatio=
+index=3
+isDefault=true
+isDisabled=false
+nsType=0
+secondNameOpts=0
+separator=|
+specialOpts=5
+subspace=2
+tagPaths=1
 
 [Database Settings]
 Database Connectoptions=
@@ -412,6 +965,7 @@ Scroll Current Item To Center=false
 Show Permanent Delete Dialog=true
 Show Splash=false
 Show Trash Delete Dialog=false
+State=AAAA/wAAAAD9AAAAAAAAB34AAARcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -467,7 +1021,7 @@ FullScreen Hide ToolBars=false
 JPEG2000Compression=75
 JPEG2000LossLess=true
 JPEGCompression=95
-JPEGSubSampling=2
+JPEGSubSampling=0
 LastSavedImageExtension=jpeg
 Median Filter Passes=0
 MenuBar=Disabled
@@ -483,6 +1037,7 @@ PGFLossLess=true
 PNGCompression=9
 PreviewMode=128
 Show Thumbbar=false
+ShowImageSettingsDialog=true
 SixteenBitsImage=true
 SlideScreen=-2
 SlideShowDelay=5
@@ -499,6 +1054,7 @@ SlideShowPrintTags=false
 SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
+State=AAAA/wAAAAD9AAAAAAAAAAAAAAAAAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 TIFFCompression=true
 ToolBarsMovable=Disabled
@@ -598,7 +1154,7 @@ Version Properties View Mode=2
 ToolBarsMovable=Disabled
 
 [Import Filters]
-CurrentFilter=0
+CurrentFilter[$d]
 Filter0=All Files|false|||
 Filter1=Only New Files|true|||
 Filter2=Raw Files|false|||image/x-nikon-nef;image/x-fuji-raf;image/x-adobe-dng;image/x-panasonic-raw;image/x-olympus-orf;image/x-kodak-dcr;image/x-kodak-k25;image/x-sony-arw;image/x-minolta-mrw;image/x-kodak-kdc;image/x-sigma-x3f;image/x-sony-srf;image/x-pentax-pef;image/x-panasonic-raw2;image/x-canon-crw;image/x-sony-sr2;image/x-canon-cr2
@@ -662,6 +1218,7 @@ FullScreen Hide ToolBars=false
 Load Full Image size=false
 Navigate By Pair=false
 Show Thumbbar=true
+ToolBarsMovable=Disabled
 
 [LightTable Settings][Left Sidebar]
 ActiveTab=0
@@ -815,9 +1372,12 @@ XMP Level=2
 Version Properties Tab=versions
 Version Properties View Mode=2
 
+[LightTable Thumbbar]
+ToolBarsMovable=Disabled
+
 [MainWindow]
 InitialAlbumID=0
-SplitterState=AAAA/wAAAAAAAAADAAABEAAABj4AAAAAAQAAAAQAAAAAAQ==
+SplitterState=AAAA/wAAAAEAAAADAAABEAAABj4AAAAAAQAAAAQAAAAAAQE=
 
 [Metadata Settings]
 EXIF Rotate=true
@@ -837,6 +1397,7 @@ Save Rating=true
 Save Tags=true
 Save Template=true
 Update File Timestamp=true
+Use Lazy Synchronization=false
 Use XMP Sidecar For Reading=false
 Write RAW Files=false
 
@@ -1013,6 +1574,8 @@ SortOrder=0
 
 [SearchBar Search Text Tool]
 CaseSensitive=0
+
+[Setup Dialog]
 
 [TagFilter Sidebar]
 LabelsFilter Expanded=true
@@ -1272,6 +1835,7 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=5
+Header State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x05\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Í\x00\x00\x00\x05\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03Ë\x00\x00\x00\x00b
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]
