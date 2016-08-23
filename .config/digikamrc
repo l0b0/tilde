@@ -24,7 +24,6 @@ Icon Show Resolution=false
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
-IconView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 Image Group Mode=2
 Image Group Sort Order=0
 Image Sort Order=0
@@ -73,16 +72,12 @@ ToolTips Show Video Aspect Ratio=true
 ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
-TreeView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 
 [AlbumDB Settings]
 Recently Used Tags=
 
 [AlbumFolderView Sidebar]
-CurrentIndex=
-Expansion=0
 RestoreChecked=false
-Selection=
 SortColumn=0
 SortOrder=0
 
@@ -792,7 +787,6 @@ FileProperties Expanded=true
 ItemProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=-1
 VideoProperties Expanded=true
 
 [Digikam Right Sidebar][Captions Tags Properties Tab]
@@ -972,7 +966,6 @@ Scroll Current Item To Center=false
 Show Permanent Delete Dialog=true
 Show Splash=false
 Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB34AAARcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
 StatusBar=Disabled
 String Comparison Type=0
 ToolBarsMovable=Disabled
@@ -1384,8 +1377,6 @@ Version Properties View Mode=2
 ToolBarsMovable=Disabled
 
 [MainWindow]
-InitialAlbumID=0
-SplitterState=AAAA/wAAAAEAAAADAAABEAAABj4AAAAAAQAAAAQAAAAAAQE=
 
 [Metadata Settings]
 EXIF Rotate=true
