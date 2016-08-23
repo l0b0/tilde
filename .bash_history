@@ -1379,6 +1379,7 @@ python -m timeit -s 'text = "sample string"; char = "g"' 'char in text' # timing
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
+qt5ct & 
 qtpfsgui & # hdr photo editor 
 readelf --all "$(which readelf)" # executable binary 
 readlink /proc/$$/fd/0 # symlink source pipe file descriptor pseudo terminal 
@@ -1579,6 +1580,7 @@ sudo pacman --sync --needed --refresh abcde acpid android-tools base-devel darkt
 sudo pacman --sync --needed --refresh intel-ucode 
 sudo pacman --sync --needed --refresh nodejs 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
+sudo pacman --sync --needed --refresh qt5ct 
 sudo pacman --sync --needed --refresh steam wine winetricks # games gui 
 sudo pacman --sync --needed --refresh xf86-input-synaptics xf86-video-fbdev xf86-video-intel xf86-video-modesetting xf86-video-vesa xorg-xbacklight # laptop drivers touchpad graphics 
 sudo pacman --upgrade ./*.pkg.tar.xz # install 
