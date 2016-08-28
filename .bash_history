@@ -1483,7 +1483,7 @@ ssh-copy-id example.org
 ssh example.org 
 ssh example.org < example.sh # execute shell script remote 
 ssh example.org uptime 
-sshfs -o port=22222 server: /media/server # sftp 
+sshfs server: /media/server # sftp 
 ssh -i ~/.ssh/server.pem user@example.org # alternative key 
 ssh-keygen -f ~"/.ssh/known_hosts" -R '[1.2.3.4]:1234' # remove public key 
 ssh-keygen -l -f /etc/ssh/ssh_host_ecdsa_key.pub # host id ecdsa fingerprint 
