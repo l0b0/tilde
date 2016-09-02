@@ -56,7 +56,8 @@ RESET_FORMAT="${RESET_FORMAT-$(color_enabled && tput sgr0)}"
 PS1=
 
 # Exit code
-PS1="$PS1"'$(exit_code=$?; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
+# Also push the prompt to the bottom of the terminal (need to take off 1 to account for two-line prompt)
+PS1="$PS1"'$(exit_code=$?; tput cup "$(($LINES - 1))" 0; [[ $exit_code -eq 0 ]] || printf %s \[$BOLD_FORMAT\] \[$ERROR_FORMAT\] $exit_code \[$RESET_FORMAT\] " ")'
 
 if [[ "$USER" = 'root' ]]
 then
