@@ -140,9 +140,6 @@ export GIT_EDITOR='vim'
 export VISUAL='vim'
 export EDITOR='vim'
 
-# OpenOffice.org
-export MOZILLA_CERTIFICATE_FOLDER="$HOME/.mozilla/firefox/Default"
-
 # enable color support
 if [[ -x /usr/bin/dircolors ]]
 then
