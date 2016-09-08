@@ -1341,6 +1341,7 @@ printf $"\0" | uniname -bcepu # 1 nul escape quote
 printf \\0 | uniname -bcepu # 1 nul escape quote 
 printf \0 | uniname -bcepu # 1 zero escape quote 
 printf $'\0' | wc --chars # 0 escape quote 
+(printf '%s\n' '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' '<html xmlns="http://www.w3.org/1999/xhtml">' '<head>' '<title/>' '</head>' '<body>' && cat in.xhtml && printf '%s\n' '</body>' '</html>') > out.xhtml 
 printf '%q\n' "$IFS" # escape bash 
 printf '%q\n' "$PS1" # escape bash 
 printf %s $'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n' | uniname -bcp # test unicode 
