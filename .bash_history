@@ -1285,11 +1285,13 @@ opentyrian "--net-player-name=${USER}" --net-player-number 1 --net=192.168.0.1 #
 /opt/android-sdk/platform-tools/adb shell 
 pacman --query bash # package version 
 pacman --query --info bash # package info 
-pacman --query --info | grep -e '^Name' -e '^Required By' | grep -B 1 '^Required By.*\bbash\b' # list reverse dependencies 
 pacman --query # list all installed packages 
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
+pactree bash # installed package dependencies 
+pactree --reverse bash # installed package reverse dependencies 
+pactree --reverse --sync bash # all package reverse dependencies 
 padsp java ./my.jar # pulseaudio oss wrapper 
 passwd # password user 
 patch --strip 0 < patch.diff 
