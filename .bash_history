@@ -1284,6 +1284,7 @@ opentyrian "--net-player-name=${USER}" --net-player-number 1 --net=192.168.0.1 #
 /opt/android-sdk/platform-tools/adb reboot download 
 /opt/android-sdk/platform-tools/adb shell 
 pacman --query bash # package version 
+pacman --query --explicit # list user installed package 
 pacman --query --info bash # package info 
 pacman --query # list all installed packages 
 pacman --query --list bash # list all package files 
