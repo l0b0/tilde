@@ -631,7 +631,7 @@ java -jar ~/schemaSpy.jar -dp /usr/share/java/postgresql.jar -hq -t pgsql -host 
 java -Xmx4096M -Xms512M -jar ~/.minecraft/launcher.jar 
 jhead -da2010:11:12/13:14:15-2005:01:01 ./*.jpg # adjust date time image 
 jobs -l # list all background 
-journalctl --catalog --boot=0 --output=short-iso 
+journalctl --boot --catalog --output=short-iso 
 journalctl --catalog --follow 
 journalctl --catalog --lines=10 
 journalctl --catalog --since=today --output=short-iso SYSLOG_IDENTIFIER="xprofile-${USER}" # log user x profile 
