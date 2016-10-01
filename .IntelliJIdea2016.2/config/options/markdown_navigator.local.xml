@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="ApplicationLocal" sharedSettingsMigrated="true">
-    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="false" htmlLangInjections="false" syntaxHighlighting="1" softWraps="0" debugFormatText="false" debugCombinationColors="false" showEmojiInGutter="false"/>
+    <DebugSettings debugFormatText="false" debugCombinationColors="false" debugTestFileDirectory="" flexmarkLexer="true" flexmarkParser="true" flexmarkAnnotator="true" flexmarkHtmlRenderer="true" enableAnnotator="true" generateParserExceptions="false" flexmarkSpecExampleRendering="0" flexmarkSpecExampleRenderHtml="false" parsingTimeout="100"/>
+    <DocumentSettings trimTrailingBlanks="false" showHtmlPreview="false" verbatimLangInjections="false" htmlLangInjections="false" syntaxHighlighting="1" softWraps="0" showEmojiInGutter="false"/>
     <FailedInBuild scratchFileServiceFailed="" fxPreviewFailedBuild="" lightParserFailedBuild=""/>
     <LicenseInformation licenseType="" showLicenseExpiration="true" showLicenseExpired="true" showFeatureUpdates="false">
       <activationCode/>

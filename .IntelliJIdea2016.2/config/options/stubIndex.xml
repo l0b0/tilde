@@ -13,6 +13,8 @@
         <option value="JS.base.types.index"/>
         <option value="JS.class.implements"/>
         <option value="JS.class.super"/>
+        <option value="JS.custom.stub.index"/>
+        <option value="JS.global.qualified.elements"/>
         <option value="JS.subclass.stub.index"/>
         <option value="Less.mixins"/>
         <option value="Less.variables"/>
@@ -89,6 +91,7 @@
         <option value="js.typedef.index2"/>
         <option value="jvm.static.member.name"/>
         <option value="jvm.static.member.type"/>
+        <option value="markdown.flexmark.example.option.index"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex"/>

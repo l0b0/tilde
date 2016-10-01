@@ -5,6 +5,7 @@ find.recents.xml
 jdk.table.xml
 packages.xml
 project.default.xml
+proxy.settings.pwd
 recentProjects.xml
 statistics.application.usages.xml
 usage.statistics.xml

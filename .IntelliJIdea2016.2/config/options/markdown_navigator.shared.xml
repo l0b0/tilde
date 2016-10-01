@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <component name="ApplicationShared">
+  <component name="Markdown Navigator">
     <CssSettings previewScheme="UI_SCHEME" cssUri="" isCssUriEnabled="false" isCssTextEnabled="false" isDynamicPageWidth="false">
       <ScriptProviders/>
       <StylesheetProvider>
@@ -17,13 +17,17 @@
       <headerBottom/>
       <headerTop/>
     </HtmlSettings>
-    <ParserSettings parsingTimeout="100">
+    <ParserSettings>
       <ParserOptions>
+        <option name="DUMMY" value="false"/>
         <option name="EMOJI_SHORTCUTS" value="true"/>
+        <option name="FLEXMARK_FRONT_MATTER" value="false"/>
+        <option name="GFM_TABLE_RENDERING" value="true"/>
         <option name="GITBOOK_URL_ENCODING" value="false"/>
         <option name="GITHUB_EMOJI_URL" value="false"/>
         <option name="GITHUB_WIKI_LINKS" value="true"/>
         <option name="JEKYLL_FRONT_MATTER" value="false"/>
+        <option name="SIM_TOC_BLANK_LINE_SPACER" value="false"/>
       </ParserOptions>
       <PegdownExtensions>
         <option name="ABBREVIATIONS" value="false"/>
@@ -48,7 +52,7 @@
         <option name="WIKILINKS" value="true"/>
       </PegdownExtensions>
     </ParserSettings>
-    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="yes" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizeScrollPosition="false">
+    <PreviewSettings splitEditorLayout="FIRST" splitEditorPreview="PREVIEW" useGrayscaleRendering="false" zoomFactor="1.0" maxImageWidth="900" showPreviewTab="yes" showModifiedHtmlTab="false" showUnmodifiedHtmlTab="false" showGitHubPageIfSynced="false" allowBrowsingInPreview="false" synchronizeScrollPosition="false" highlightPreviewType="LINE" highlightFadeOut="5" highlightOnTyping="true">
       <PanelProvider>
         <provider providerId="com.vladsch.idea.multimarkdown.editor.swing.html.panel" providerName="Default - Swing"/>
       </PanelProvider>
