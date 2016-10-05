@@ -1178,7 +1178,6 @@ man wpa_supplicant.conf # help
 man wpa_supplicant # help 
 man x509 # help 
 man xargs # help 
-man xautolock # help 
 man xbacklight # help 
 man xclip # help 
 man xdg-desktop-menu # help 
@@ -1581,7 +1580,7 @@ sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^
 sudo paccache --dryrun # pacman package cache clean files delete 
 sudo pacman --recursive --remove $(pacman --deps --query --quiet --unrequired) # clean remove orphan package dependencies 
 sudo pacman --sync --clean # remove cache temporary file 
-sudo pacman --sync --needed --refresh abcde acpid android-tools base-devel darktable dkms dnsutils dosfstools esmtp exfat-utils file-roller fortune-mod fuse-exfat gnome-icon-theme gnome-keyring gparted gphoto2 gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop ipython iw kdemultimedia-mplayerthumbs kismet lib32-alsa-plugins lib32-libpulse linux-headers livestreamer lsb-release markdown mcomix mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g offlineimap openssh pavucontrol pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa puppet pychecker python-pip python2-pip redshift ruby-ronn ruby-shadow sqliteman sshfs system-config-printer tcpdump tigervnc tk vagrant virtualbox virtualbox-guest-utils virtualbox-host-dkms whois wireshark-gtk xautolock xorg-xev xorg-xinit xorg-xinput xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xorg-xwininfo # software packages install 
+sudo pacman --sync --needed --refresh abcde acpid android-tools base-devel darktable dkms dnsutils dosfstools esmtp exfat-utils file-roller fortune-mod fuse-exfat gnome-icon-theme gnome-keyring gparted gphoto2 gsmartcontrol gst-libav gst-plugins-good gutenprint gvfs gvfs-gphoto2 htop ipython iw kdemultimedia-mplayerthumbs kismet lib32-alsa-plugins lib32-libpulse linux-headers livestreamer lsb-release markdown mcomix mlocate mutt net-tools network-manager-applet networkmanager ntfs-3g offlineimap openssh pavucontrol pkgbuild-introspection polkit-gnome powertop pulseaudio-alsa puppet pychecker python-pip python2-pip redshift ruby-ronn ruby-shadow sqliteman sshfs system-config-printer tcpdump tigervnc tk vagrant virtualbox virtualbox-guest-utils virtualbox-host-dkms whois wireshark-gtk xorg-xev xorg-xinit xorg-xinput xorg-xkill xorg-xmodmap xorg-xprop xorg-xrandr xorg-xrdb xorg-xwininfo # software packages install 
 sudo pacman --sync --needed --refresh intel-ucode 
 sudo pacman --sync --needed --refresh nodejs 
 sudo pacman --sync --needed --refresh numlockx # desktop packages install 
