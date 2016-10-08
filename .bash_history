@@ -35,6 +35,7 @@ avconv -i input.mov -codec copy -ss 15 output.mov # video cut
 avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clock output.mov # video rotate 
 awesome --check # configuration verify parse 
 awk '{ print $22 }' /proc/1/stat # process start time jiffies since boot 
+basename "$(find -L /dev/disk/by-uuid -samefile /dev/sda1)" # disk uuid 
 basename -- /path/to/file.dat .dat # file name extension 
 basename -- "$PWD" # current directory name 
 bashdb example.sh # debug shell script 
