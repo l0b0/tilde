@@ -56,6 +56,7 @@ cat ~/contacts/*.vcf > ~/contacts.vcf # concatenate vcard
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
 cat /etc/papersize # print 
 cat /etc/*release # os 
+cat /proc/cmdline # boot command 
 cat /proc/cpuinfo # hardware 
 cat /proc/devices # hardware 
 cat /proc/filesystems # hardware 
