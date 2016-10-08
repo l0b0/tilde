@@ -1572,6 +1572,7 @@ sudo mandb # update apropos database manual
 sudo mkdir "/media/mountpoint" 
 sudo mkfs.ext4 /dev/sdx1 # format ext4 partition 
 sudo mkfs.msdos -F 32 /dev/sdxy # format fat32 partition 
+sudo mkinitcpio -p linux # generate ramdisk 
 sudo modprobe microcode # add insert kernel module 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
