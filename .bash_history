@@ -1454,6 +1454,7 @@ shopt -s globstar # option set **
 shopt -s globstar && wc --lines ./**/**.ext # count recursive lines 
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
+showkey # keyboard console 
 shred --remove filename # overwrite delete file 
 shuf --input-range 0-1 --head-count 1 # random number range 
 simple-scan & 
@@ -1610,7 +1611,6 @@ sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec
 sudo sh -c 'umount /media/encrypted && cryptsetup close encrypted' # disk unmount 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
-sudo showkey # keyboard 
 sudo smartctl --attributes /dev/sda # harddisk smart 
 sudo sshfs user@host:/path /run/mount/host 
 sudo strace -p 123 # process 
