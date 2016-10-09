@@ -342,7 +342,12 @@ globalkeys = awful.util.table.join(
 
     -- Screenshot
     awful.key({                   }, "Print", function () awful.util.spawn("scrot") end),
-    awful.key({ modkey,           }, "Print", function () awful.util.spawn_with_shell("sleep 1 && scrot --select") end)
+    awful.key({ modkey,           }, "Print", function () awful.util.spawn_with_shell("sleep 1 && scrot --select") end),
+    awful.key({                   }, "XF86MonBrightnessDown", function () awful.util.spawn_with_shell("xbacklight -dec 5") end),
+    awful.key({                   }, "XF86MonBrightnessUp", function () awful.util.spawn_with_shell("xbacklight -inc 5") end),
+    awful.key({                   }, "XF86AudioMute", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 toggle") end),
+    awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%") end),
+    awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%") end)
 )
 
 clientkeys = awful.util.table.join(
