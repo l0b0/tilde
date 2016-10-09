@@ -139,7 +139,6 @@ deluge & # bittorrent gui
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
-~/dev/tilde/scripts/arch_linux_system_upgrade.sh 
 ~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh -i ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
@@ -1525,6 +1524,7 @@ sudo crontab -e # edit
 sudo cryptsetup luksDump /dev/sda # list property luks 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
+sudo ~/dev/tilde/scripts/arch_linux_system_upgrade.sh 
 sudo dmidecode | less 
 sudo dmidecode --string system-product-name 
 sudo dmidecode --string system-serial-number 
