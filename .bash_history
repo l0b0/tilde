@@ -1574,7 +1574,6 @@ sudo mandb # update apropos database manual
 sudo mkdir "/media/mountpoint" 
 sudo mkfs.ext4 /dev/sdx1 # format ext4 partition 
 sudo mkfs.msdos -F 32 /dev/sdxy # format fat32 partition 
-sudo mkinitcpio -p linux # generate ramdisk 
 sudo modprobe microcode # add insert kernel module 
 sudo mount --all 
 sudo mount --options remount,ro /dev/sda1 # readonly restore 
@@ -1613,6 +1612,7 @@ sudo sh -c 'systemctl start dkms.service && systemctl enable dkms.service' # dyn
 sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
 sudo sh -c 'umount /media/encrypted && cryptsetup close encrypted' # disk unmount 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
+sudo sh -c 'vim /etc/mkinitcpio.conf && mkinitcpio -p linux' # edit generate ramdisk 
 sudo sh -c 'wpa_supplicant -d -Dwext -i wlan0 -c /etc/wpa_supplicant.conf 2>&1 >> /var/log/wpa_supplicant.log' # wireless network 
 sudo smartctl --attributes /dev/sda # harddisk smart 
 sudo sshfs user@host:/path /run/mount/host 
