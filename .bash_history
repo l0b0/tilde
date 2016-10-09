@@ -1185,6 +1185,7 @@ man xdg-desktop-menu # help
 man xdotool # help 
 man xev # help 
 man xinput # help 
+man xkill # help 
 man xmkmf # help 
 man xmllint # help 
 man xmodmap # help 
