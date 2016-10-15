@@ -1437,7 +1437,7 @@ set +o pipefail # error
 set +o xtrace # disable 
 set -o xtrace # enable 
 ./setup.py test 
-setxkbmap -device 10 -layout us -variant dvorak-alt-intl -option compose:caps # keyboard layout config 
+setxkbmap -device $(which-keyboard) -layout us -variant dvorak-alt-intl -option compose:caps # keyboard layout config 
 setxkbmap -print # keyboard settings 
 setxkbmap -verbose | awk -F '+' '/^symbols:/ {print $2}' # keyboard layout settings 
 sh 
@@ -1796,8 +1796,8 @@ xclip -selection clipboard filename.txt # keyboard clipboard copy
 xclip -selection clipboard -out # keyboard clipboard print stdout 
 xev # x event keyboard mouse input 
 xinput # all keyboard device list 
-xinput --list 10 # keyboard device info 
-xinput --list-props 10 # keyboard device properties 
+xinput --list-props $(which-keyboard) # keyboard device properties 
+xinput --list $(which-keyboard) # keyboard device info 
 xkill # kill x window 
 xmllint --shell input.xml # interactive shell xpath xml 
 xmodmap -pm # list keyboard modifiers 
