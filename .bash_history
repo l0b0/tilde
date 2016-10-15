@@ -1446,6 +1446,7 @@ sha256sum --check *.sha256 # verify checksum
 sha256sum file # print checksum 
 sha512sum --check *.sha512 # verify checksum 
 sha512sum file # print checksum 
+shellcheck *.sh # lint 
 shopt nullglob # option get 
 shopt # options 
 shopt -s dotglob # option set .* 
