@@ -681,7 +681,6 @@ less /var/log/kern.log
 less /var/log/messages 
 less /var/log/Xorg.0.log 
 libreoffice & 
-/lib/udev/findkeyboards 
 livestreamer http://www.twitch.tv/foo best & # video web 
 ll 
 ln --symbolic -- target source 
