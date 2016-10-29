@@ -91,7 +91,7 @@
         <option value="js.typedef.index2"/>
         <option value="jvm.static.member.name"/>
         <option value="jvm.static.member.type"/>
-        <option value="markdown.flexmark.example.option.index"/>
+        <option value="lua.global.name"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex"/>

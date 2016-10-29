@@ -5,6 +5,9 @@
       <entry key="ChangesView">
         <PlaceSettings/>
       </entry>
+      <entry key="CommitDialog">
+        <PlaceSettings/>
+      </entry>
     </option>
   </component>
   <component name="TextDiffSettings">
