@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="PropertiesComponent">
-    <property name="ChangesViewManager.DETAILS_SPLITTER_PROPORTION" value="0.5"/>
     <property name="Copy.OpenInEditor" value="true"/>
     <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true"/>
     <property name="DefaultHtmlDoctype.Refreshed" value="2"/>
