@@ -2,9 +2,7 @@
 <application>
   <component name="libraryTable">
     <library name="puppetlabs-stdlib_4.3.2 [puppet module]">
-      <CLASSES>
-        <root url="file://$USER_HOME$/.puppet/modules/stdlib"/>
-      </CLASSES>
+      <CLASSES/>
       <JAVADOC/>
       <SOURCES/>
     </library>
