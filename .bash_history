@@ -74,7 +74,6 @@ checkbashisms ./*.sh
 chfn --full-name "John Doe" 
 chmod go= ~/.ssh/id_rsa # permission 
 chmod u+x example.sh # permission executable 
-clamtk & # antivirus 
 cmp --print-bytes "$(which arch)" "$(which uname)" # binary diff 
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
@@ -781,7 +780,6 @@ man chmod # help
 man chown # help 
 man chroot # help 
 man clamscan # help 
-man clamtk # help 
 man cloc # help 
 man cmp # help 
 man comm # help 
