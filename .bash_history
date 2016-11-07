@@ -1598,7 +1598,7 @@ sudo pip2 install --upgrade img2scad
 sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master 
 sudo pip install --upgrade pip # python 
 sudo powertop # power monitoring configuration 
-sudo puppet apply --modulepath modules --detailed-exitcodes --execute 'include module_name' 
+sudo puppet apply --modulepath modules --detailed-exitcodes --hiera_config=hieradata/hiera.yaml --execute 'include module_name' 
 sudo reboot # restart 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
