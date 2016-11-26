@@ -40,9 +40,6 @@ set autowrite
 " Hide buffers when they are abandoned
 set hidden
 
-" Enable mouse usage (all modes) in terminals
-"set mouse=a
-
 " Backspace behaving as in other editors
 set backspace=indent,eol,start
 
