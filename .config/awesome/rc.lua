@@ -343,6 +343,8 @@ globalkeys = awful.util.table.join(
     -- Screenshot
     awful.key({                   }, "Print", function () awful.util.spawn("scrot") end),
     awful.key({ modkey,           }, "Print", function () awful.util.spawn_with_shell("sleep 1 && scrot --select") end),
+    awful.key({ "Shift", "Mod1"   }, "1", function () awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps") end),
+    awful.key({ "Shift", "Mod1"   }, "2", function () awful.util.spawn_with_shell("setxkbmap -layout us -option compose:caps") end),
     awful.key({                   }, "XF86MonBrightnessDown", function () awful.util.spawn_with_shell("xbacklight -dec 5") end),
     awful.key({                   }, "XF86MonBrightnessUp", function () awful.util.spawn_with_shell("xbacklight -inc 5") end),
     awful.key({                   }, "XF86AudioMute", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 toggle") end),
