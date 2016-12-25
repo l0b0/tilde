@@ -22,3 +22,8 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
+
+if [[ -e /usr/lib/jvm/default ]]
+then
+    export JAVA_HOME=/usr/lib/jvm/default
+fi
