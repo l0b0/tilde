@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
-  <component name="FileTypeManager" version="16">
+  <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping pattern="papersize" type="PLAIN_TEXT"/>
+      <mapping ext="test" type="PHP"/>
     </extensionMap>
   </component>
 </application>
