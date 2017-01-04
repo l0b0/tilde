@@ -73,6 +73,7 @@
         <option value="gr.method.name"/>
         <option value="gr.script.class"/>
         <option value="gr.script.fqn"/>
+        <option value="ini.property.key"/>
         <option value="java.annotations"/>
         <option value="java.anonymous.baseref"/>
         <option value="java.class.extlist"/>
