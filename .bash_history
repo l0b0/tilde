@@ -135,6 +135,7 @@ declare # variables functions
 deluge & # bittorrent gui 
 ~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua # debug awesome configuration 
 ~/dev/awmtt/awmtt stop # debug awesome configuration 
+~/dev/flickrmirrorer/flickrmirrorer.py ~/backup/flickr.com 
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
