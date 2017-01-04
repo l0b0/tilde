@@ -4,6 +4,8 @@ set -o errexit -o noclobber -o nounset -o pipefail
 
 directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+pacman-key --refresh-keys
+
 pacman --sync --refresh --sysupgrade
 
 # Fix CUPS PPD files
