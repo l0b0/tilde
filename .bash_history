@@ -518,6 +518,7 @@ gphoto2 --list-files # camera list photo
 gphoto2 --port usb: --abilities # camera list abilities usb 
 gphoto2 --set-config /main/settings/datetime=now # camera set time date 
 gphoto2 --summary # camera hardware 
+./gradlew # java build project 
 grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
 grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
 grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
