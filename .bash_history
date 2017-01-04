@@ -740,6 +740,7 @@ man 5 passwd # help password
 man 5 sshd_config # help 
 man 5 sudoers # help 
 man 7 glob # help 
+man 7z # help 
 man abcde # help 
 man ack-grep # help 
 man acpid # help 
@@ -772,6 +773,7 @@ man blkid # help
 man bsdtar # help 
 man builtins # help bash 
 man bunzip2 # help 
+man bzip2 # help 
 man cal # help 
 man charsets # help 
 man checkbashisms # help 
@@ -780,12 +782,14 @@ man chgrp # help
 man chmod # help 
 man chown # help 
 man chroot # help 
+man clamd # help 
 man clamscan # help 
 man cloc # help 
 man cmp # help 
 man comm # help 
 man convert # help 
 man cp # help 
+man cpio # help 
 man cppcheck # help 
 man createdb # help postgresql 
 man createuser # help 
@@ -821,6 +825,7 @@ man efibootmgr # help
 man eject # help 
 man ent # help 
 man env # help 
+man envsubst # help 
 man errno # help 
 man etherape # help 
 man exiftool # help 
@@ -966,6 +971,7 @@ man mount # help
 man mp3fs # help 
 man mutt # help 
 man mv # help 
+man mysql # help 
 man nautilus # help 
 man ncal # help 
 man nc # help 
@@ -1033,11 +1039,13 @@ man readlink # help
 man reboot # help 
 man recordmydesktop # help 
 man redshift # help 
+man replace # help 
 man req # help 
 man reset # help 
 man resize # help 
 man rm # help 
 man route # help 
+man rpm2cpio # help 
 man rrdcreate # help 
 man rrddump # help 
 man rrdgraph # help 
@@ -1073,6 +1081,7 @@ man simple-scan # help
 man sipcalc # help 
 man sleep # help 
 man sloccount # help 
+man slock # help 
 man smartctl # help 
 man snmpd # help 
 man snmpget # help 
@@ -1197,6 +1206,7 @@ man xss-lock # help
 man xterm # help 
 man xwininfo # help 
 man xxd # help 
+man xz # help 
 man yes # help 
 man youtube-dl # help 
 man zip # help 
