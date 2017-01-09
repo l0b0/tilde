@@ -543,7 +543,6 @@ hash # list program recent
 heimdall detect # list android 
 heimdall download-pit --output my.pit # download pit partition file android 
 heimdall flash --CACHE cache.img --RECOVERY recovery.img --pit my.pit --no-reboot # android flash cache recovery partition 
-heimdall print-pit --file my.pit # print partition table android 
 help alias 
 help bg 
 help bind 
