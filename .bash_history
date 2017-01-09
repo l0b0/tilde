@@ -541,8 +541,7 @@ gunzip example.gz
 gzip example.txt # compress 
 hash # list program recent 
 heimdall detect # list android 
-heimdall download-pit --output my.pit # download pit partition file android 
-heimdall flash --CACHE cache.img --RECOVERY recovery.img --pit my.pit --no-reboot # android flash cache recovery partition 
+heimdall download-pit --no-reboot --output my.pit && heimdall flash --pit my.pit --ABOOT aboot.mbn --BOOT boot.img --CACHE cache.img.ext4 --HIDDEN hidden.img.ext4 --QHEE hyp.mbn --MODEM modem.bin --APNHLOS NON-HLOS.bin --RECOVERY recovery.img --RPM rpm.mbn --SBL1 sbl1.mbn --SYSTEM system.img.ext4 --QSEE tz.mbn --verbose --no-reboot --resume # android flash mobile 
 help alias 
 help bg 
 help bind 
