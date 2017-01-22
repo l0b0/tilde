@@ -517,11 +517,6 @@ awful.rules.rules = {
         }
       }, properties = { floating = true }},
 
-    -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
-    },
-
     { rule_any = { class = { "Firefox", "Tor Browser" } },
       properties = { screen = 1, tag = browser_tag } },
     { rule_any = { class = { "Digikam", "digikam", "Gimp", "Hugin", "Inkscape", "jetbrains-clion", "jetbrains-idea", "Keepassx", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman" } },
