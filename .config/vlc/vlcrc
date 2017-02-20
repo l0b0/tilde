@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.2.3
+###  vlc 2.2.4
 ###
 
 ###
@@ -2812,7 +2812,7 @@ qt-privacy-ask=0
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 2.2.3 Weatherwax
+#sout-avi-encoder=VLC Media Player - 2.2.4 Weatherwax
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3673,7 +3673,7 @@ aout=any
 #mouse-events=1
 
 # Overlay video output (boolean)
-#overlay=1
+overlay=0
 
 # Always on top (boolean)
 #video-on-top=0
