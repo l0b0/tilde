@@ -955,7 +955,6 @@ man lynx # help
 man make # help 
 man makepkg # help 
 man man # help 
-man markdown # help 
 man mcomix # help 
 man md5sum # help 
 man mencoder # help 
@@ -1210,9 +1209,6 @@ man xz # help
 man yes # help 
 man youtube-dl # help 
 man zip # help 
-markdown README.markdown 
-markdown README.markdown | lynx -stdin 
-markdown README.markdown > README.html 
 mcomix & 
 md5sum --check *.md5 # verify checksum 
 md5sum file # print checksum 
@@ -1303,6 +1299,7 @@ pactree bash # installed package dependencies
 pactree --reverse bash # installed package reverse dependencies 
 pactree --reverse --sync bash # all package reverse dependencies 
 padsp java ./my.jar # pulseaudio oss wrapper 
+pandoc --standalone README.md > README.html # convert markdown markup 
 passwd # password user 
 patch --strip 0 < patch.diff 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
