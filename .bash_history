@@ -1564,7 +1564,7 @@ sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete
 sudo ip link set eth0 up # network enable device 
 sudo ip route add default via 1.2.3.4 dev eth0 
 sudo ip route del default via 1.2.3.4 dev eth0 
-sudo iptables --list # list all firewall rules network 
+sudo iptables --list --line-numbers # list all firewall rules network 
 sudo iptables --list-rules # list all firewall rules network commands 
 sudo kismet # wireless network monitor 
 sudo lastb | less # list all bad failed user login history 
