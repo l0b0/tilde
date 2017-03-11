@@ -10,6 +10,10 @@ send_to_storage_card_by_default = False
 # Confirm before deleting
 confirm_delete = False
  
+# main window geometry
+# Main window geometry
+main_window_geometry = cPickle.loads('\x80\x02csip\n_unpickle_type\nq\x01U\x0cPyQt5.QtCoreq\x02U\nQByteArrayU2\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x03\xc9\x00\x00\x04\xaf\x00\x00\x07\x7f\x00\x00\x00\x01\x00\x00\x03\xca\x00\x00\x04\xae\x00\x00\x07~\x00\x00\x00\x01\x00\x00\x00\x00\x04\xb0\x85\x87Rq\x03.')
+ 
 # new version notification
 # Notify when a new version is available
 new_version_notification = True
@@ -105,6 +109,10 @@ main_search_history = cPickle.loads('\x80\x02]q\x01.')
 # viewer search history
 # Search history for the ebook viewer
 viewer_search_history = cPickle.loads('\x80\x02]q\x01.')
+ 
+# viewer toc search history
+# Search history for the ToC in the ebook viewer
+viewer_toc_search_history = cPickle.loads('\x80\x02]q\x01.')
  
 # lrf viewer search history
 # Search history for the LRF viewer

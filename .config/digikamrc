@@ -24,6 +24,7 @@ Icon Show Resolution=false
 Icon Show Size=false
 Icon Show Tags=false
 Icon Show Title=false
+IconView Font=DejaVu Sans,12,-1,5,50,0,0,0,0,0
 Image Group Mode=2
 Image Group Sort Order=0
 Image Sort Order=0
@@ -68,16 +69,21 @@ ToolTips Show Photo Make=true
 ToolTips Show Photo Mode=true
 ToolTips Show Photo WB=false
 ToolTips Show Tags=true
+ToolTips Show Titles=true
 ToolTips Show Video Aspect Ratio=true
 ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
+TreeView Font=DejaVu Sans,12,-1,5,50,0,0,0,0,0
 
 [AlbumDB Settings]
 Recently Used Tags=
 
 [AlbumFolderView Sidebar]
+CurrentIndex=
+Expansion=0
 RestoreChecked=false
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -787,6 +793,7 @@ FileProperties Expanded=true
 ItemProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
+RestoreSize=-1
 VideoProperties Expanded=true
 
 [Digikam Right Sidebar][Captions Tags Properties Tab]
@@ -890,6 +897,9 @@ AlbumComboBox-RestoreChecked=true
 AlbumComboBox-Selection=
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
+AlbumTypeEntry=0
+Last maximum similarity=100
+Last minimum similarity=90
 TagComboBox-Checked=
 TagComboBox-CurrentIndex=
 TagComboBox-Expansion=
@@ -911,6 +921,7 @@ Pen Sketch Value=255
 RestoreChecked=false
 Result Sketch items=10
 Selection=
+Similars Maximum Threshold=100
 Similars Threshold=90
 SortColumn=0
 SortOrder=0
@@ -1403,6 +1414,9 @@ Write RAW Files=false
 [MetadataSelectorView Search Text Tool]
 CaseSensitive=0
 
+[Notification Messages]
+Select Locked ItemsToggle LockCtrl+L=false
+
 [People Sidebar]
 CurrentIndex=
 Expansion=
@@ -1573,8 +1587,6 @@ SortOrder=0
 
 [SearchBar Search Text Tool]
 CaseSensitive=0
-
-[Setup Dialog]
 
 [TagFilter Sidebar]
 LabelsFilter Expanded=true
@@ -1834,7 +1846,7 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=5
-Header State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x05\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Í\x00\x00\x00\x05\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00bˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03Ë\x00\x00\x00\x00b
+Header State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x05\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Í\x00\x00\x00\x05\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00aˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03Ë\x00\x00\x00\x00b
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]
