@@ -6,6 +6,7 @@ directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 pacman-key --refresh-keys
 
+pacman --sync --refresh --needed ca-certificates-utils
 pacman --sync --refresh --sysupgrade
 
 # Fix CUPS PPD files
