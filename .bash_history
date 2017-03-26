@@ -640,9 +640,6 @@ journalctl --catalog --since=today --unit=shadow.service
 jq . < *.json # json pretty-print 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
-kdesu etherape & # network traffic visualization 
-kdesu java -jar jdivelog-installer-*.jar & 
-kdesu wifi-radar & 
 keepassx & 
 keybase help 
 keybase login 
@@ -1663,6 +1660,7 @@ sudo vipw # edit password users
 sudo visudo # permissions security 
 sudo wavemon 
 sudo wifi-menu --obscure 
+sudo wifi-radar # wifi diagnostic 
 sudo Xorg :1 -configure 
 su --login "$USER" # substitute user login 
 sum <<< '2 2' 
