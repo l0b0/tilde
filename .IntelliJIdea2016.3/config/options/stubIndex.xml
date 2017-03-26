@@ -115,6 +115,11 @@
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyByPackageIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustGotoClassIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustImplIndex.InherentImpls"/>
+        <option value="org.rust.lang.core.stubs.index.RustImplIndex.TraitImpls"/>
+        <option value="org.rust.lang.core.stubs.index.RustModulesIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustNamedElementIndex"/>
         <option value="php.class.shortName"/>
         <option value="php.classConstant.shortName"/>
         <option value="php.constant.case.sensitive.shortName"/>

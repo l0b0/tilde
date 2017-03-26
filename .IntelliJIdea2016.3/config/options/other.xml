@@ -16,4 +16,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="RefactoringSettings">
+    <option name="INTRODUCE_FIELD_VISIBILITY" value="private"/>
+  </component>
 </application>

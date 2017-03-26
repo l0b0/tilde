@@ -5,8 +5,9 @@
     <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true"/>
     <property name="DefaultHtmlDoctype.Refreshed" value="2"/>
     <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false"/>
+    <property name="LayoutCode.optimizeImports" value="true"/>
+    <property name="LayoutCode.rearrangeEntries" value="true"/>
     <property name="create.project.preferred.importer" value="Existing Sources"/>
-    <property name="default.storage.format" value=".idea (directory based)"/>
     <property name="evlsprt3.14" value="17"/>
     <property name="evlsprt3.16" value="14"/>
     <property name="evlsprt3.162" value="14"/>
