@@ -353,31 +353,31 @@ globalkeys = awful.util.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Lock screen
-    awful.key({ modkey }, "l", function () awful.util.spawn("slock") end,
+    awful.key({ modkey }, "l", function () awful.spawn("slock") end,
               {description = "lock the screen", group = "client"}),
 
     -- Screenshot
-    awful.key({        }, "Print", function () awful.util.spawn("scrot") end,
+    awful.key({        }, "Print", function () awful.spawn("scrot") end,
         {description = "take screenshot", group = "client"}),
-    awful.key({ modkey }, "Print", function () awful.util.spawn_with_shell("sleep 1 && scrot --select") end,
+    awful.key({ modkey }, "Print", function () awful.spawn_with_shell("sleep 1 && scrot --select") end,
         {description = "take screenshot of selection", group = "client"}),
 
     -- Keyboard layout
-    awful.key({ "Shift", "Mod1" }, "1", function () awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps") end,
+    awful.key({ "Shift", "Mod1" }, "1", function () awful.spawn_with_shell("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps") end,
         {description = "set keyboard layout to alternative international Dvorak with Caps Lock as the compose key", group = "client"}),
-    awful.key({ "Shift", "Mod1" }, "2", function () awful.util.spawn_with_shell("setxkbmap -layout us -option compose:caps") end,
+    awful.key({ "Shift", "Mod1" }, "2", function () awful.spawn_with_shell("setxkbmap -layout us -option compose:caps") end,
         {description = "set keyboard layout to US English with Caps Lock as the compose key", group = "client"}),
 
     -- Media keys
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn_with_shell("xbacklight -dec 5") end,
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn_with_shell("xbacklight -dec 5") end,
         {description = "decrease screen brightness", group = "client"}),
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn_with_shell("xbacklight -inc 5") end,
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn_with_shell("xbacklight -inc 5") end,
         {description = "increase screen brightness", group = "client"}),
-    awful.key({ }, "XF86AudioMute", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 toggle") end,
+    awful.key({ }, "XF86AudioMute", function () awful.spawn_with_shell("pactl set-sink-mute 0 toggle") end,
         {description = "mute audio", group = "client"}),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%") end,
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%") end,
         {description = "lower volume", group = "client"}),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%") end,
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%") end,
         {description = "increase volume", group = "client"})
 )
 
@@ -601,8 +601,8 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- {{{ Autostart
 -- Start most common applications
-awful.util.spawn("firefox")
-awful.util.spawn("pcmanfm")
-awful.util.spawn("thunderbird")
-awful.util.spawn(terminal)
+awful.spawn("firefox")
+awful.spawn("pcmanfm")
+awful.spawn("thunderbird")
+awful.spawn(terminal)
 -- }}}
