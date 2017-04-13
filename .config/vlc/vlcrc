@@ -3775,7 +3775,7 @@ deinterlace-mode=yadif2x
 vout=any
 
 # Video filter module (string)
-video-filter=postproc
+#video-filter=
 
 # Video splitter module (string)
 #video-splitter=
