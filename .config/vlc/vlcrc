@@ -3766,7 +3766,7 @@ overlay=0
 #zoom=1.000000
 
 # Deinterlace (integer)
-deinterlace=1
+deinterlace=-1
 
 # Deinterlace mode (string)
 deinterlace-mode=yadif2x
