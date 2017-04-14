@@ -2,5 +2,6 @@
 <application>
   <component name="ProjectViewSharedSettings">
     <option name="autoscrollFromSource" value="true"/>
+    <option name="hideEmptyPackages" value="false"/>
   </component>
 </application>

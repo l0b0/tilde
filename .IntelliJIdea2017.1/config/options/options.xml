@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="PropertiesComponent">
+    <property name="CREATE_FIELD_FROM_PARAMETER_DECLARE_FINAL" value="true"/>
+    <property name="Copy.OpenInEditor" value="true"/>
+    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true"/>
+    <property name="DefaultHtmlDoctype.Refreshed" value="2"/>
+    <property name="DeploymentNotificationsComponent.WarnDisplayed.Java7&amp;Windows7FTPIssue" value="false"/>
+    <property name="ExpandBeforeRunStepsPanel" value="true"/>
+    <property name="FileTemplates.CurrentTab" value="Includes"/>
+    <property name="FileTemplates.SelectedTemplate" value="ActionScript File Header"/>
+    <property name="GradleModuleWizard.inheritGroupId" value="true"/>
+    <property name="GradleModuleWizard.inheritVersion" value="true"/>
+    <property name="JUnitSupport.hidePassedTests" value="true"/>
+    <property name="LayoutCode.optimizeImports" value="true"/>
+    <property name="LayoutCode.rearrangeEntriesJava" value="true"/>
+    <property name="MemberChooser.copyJavadoc" value="false"/>
+    <property name="MemberChooser.showClasses" value="true"/>
+    <property name="PLUGIN_FILTER" value="antlr&#10;makef&#10;make&#10;rust"/>
+    <property name="com.intellij.diagnostic.IdeErrorsDialogactiveTab" value="0"/>
+    <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300"/>
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Dependencies"/>
+    <property name="create.project.preferred.importer" value="Existing Sources"/>
+    <property name="evlsprt3.14" value="17"/>
+    <property name="evlsprt3.16" value="14"/>
+    <property name="evlsprt3.162" value="14"/>
+    <property name="evlsprt3.163" value="15"/>
+    <property name="evlsprt3.171" value="16"/>
+    <property name="file.gist.reindex.count" value="12800"/>
+    <property name="fileTypeChangedCounter" value="2"/>
+    <property name="installed.kotlin.plugin.version" value="1.1.1-release-IJ2017.1-1"/>
+    <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
+    <property name="log.debug.categories" value=""/>
+    <property name="org.rust.LAST_UPDATE" value="1491600603206"/>
+    <property name="project.wizard.group" value="RUST_MODULE"/>
+    <property name="project.wizard.template" value="Rust"/>
+    <property name="toolwindow.stripes.buttons.info.shown" value="true"/>
+  </component>
+</application>

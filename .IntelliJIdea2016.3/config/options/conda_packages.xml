@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <component name="PyCondaPackageService">
-    <option name="CONDA_CHANNELS">
-      <set/>
-    </option>
-  </component>
-</application>

@@ -1,5 +1,8 @@
+javascript/
+jdbc-drivers/
 *.key
 plugins/
 port
 scratches/
 tasks/
+tools/

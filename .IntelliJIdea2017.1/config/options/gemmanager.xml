@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="RubySdkGemsetsSettings">
+    <moduleSdks>
+      <map>
+        <entry key="Corundum">
+          <value>
+            <list/>
+          </value>
+        </entry>
+        <entry key="root">
+          <value>
+            <list/>
+          </value>
+        </entry>
+      </map>
+    </moduleSdks>
+  </component>
+</application>

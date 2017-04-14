@@ -8,6 +8,9 @@
       <entry key="CommitDialog">
         <PlaceSettings/>
       </entry>
+      <entry key="Default">
+        <PlaceSettings/>
+      </entry>
     </option>
   </component>
   <component name="TextDiffSettings">

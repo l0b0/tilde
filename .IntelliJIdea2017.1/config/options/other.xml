@@ -16,7 +16,11 @@
       </profile-state>
     </entry>
   </component>
+  <component name="NodeJsLocalInterpreters">
+    <local-interpreter path="/usr/bin/node"/>
+  </component>
   <component name="RefactoringSettings">
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private"/>
+    <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="true"/>
   </component>
 </application>

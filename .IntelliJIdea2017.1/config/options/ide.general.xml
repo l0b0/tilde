@@ -6,6 +6,7 @@
     <option name="showTipsOnStartup" value="false"/>
   </component>
   <component name="Registry">
+    <entry key="SBT.system.in.process" value="true"/>
     <entry key="ide.firstStartup" value="false"/>
   </component>
 </application>

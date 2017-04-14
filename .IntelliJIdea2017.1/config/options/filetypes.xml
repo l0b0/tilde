@@ -3,7 +3,6 @@
   <component name="FileTypeManager" version="17">
     <extensionMap>
       <mapping pattern="papersize" type="PLAIN_TEXT"/>
-      <mapping ext="test" type="PHP"/>
     </extensionMap>
   </component>
 </application>
