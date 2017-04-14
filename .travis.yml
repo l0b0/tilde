@@ -1,2 +1,6 @@
 language: shell
+addons:
+  apt:
+    packages:
+    - markdown
 script: make BASH=/bin/bash LN=/bin/ln MKTEMP=/bin/mktemp RM=/bin/rm RMDIR=/bin/rmdir test
