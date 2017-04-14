@@ -1298,6 +1298,7 @@ pactree --reverse bash # installed package reverse dependencies
 pactree --reverse --sync bash # all package reverse dependencies 
 padsp java ./my.jar # pulseaudio oss wrapper 
 pandoc --standalone README.md > README.html # convert markdown markup 
+parse-edid < ./edid # monitor resolution 
 passwd # password user 
 patch --strip 0 < patch.diff 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
