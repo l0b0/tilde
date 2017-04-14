@@ -14,5 +14,11 @@ Install
 
     git clone --recursive git://github.com/l0b0/tilde.git
     cd tilde
-    make test # Optional
     make install # NOT as root
+
+Test
+----
+
+Requirements: `markdown`
+
+    make test # Optional
