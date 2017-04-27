@@ -359,25 +359,25 @@ globalkeys = awful.util.table.join(
     -- Screenshot
     awful.key({        }, "Print", function () awful.spawn("scrot") end,
         {description = "take screenshot", group = "client"}),
-    awful.key({ modkey }, "Print", function () awful.spawn_with_shell("sleep 1 && scrot --select") end,
+    awful.key({ modkey }, "Print", function () awful.spawn("sleep 1") awful.spawn("scrot --select") end,
         {description = "take screenshot of selection", group = "client"}),
 
     -- Keyboard layout
-    awful.key({ "Shift", "Mod1" }, "1", function () awful.spawn_with_shell("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps") end,
+    awful.key({ "Shift", "Mod1" }, "1", function () awful.spawn("setxkbmap -layout us -variant dvorak-alt-intl -option compose:caps") end,
         {description = "set keyboard layout to alternative international Dvorak with Caps Lock as the compose key", group = "client"}),
-    awful.key({ "Shift", "Mod1" }, "2", function () awful.spawn_with_shell("setxkbmap -layout us -option compose:caps") end,
+    awful.key({ "Shift", "Mod1" }, "2", function () awful.spawn("setxkbmap -layout us -option compose:caps") end,
         {description = "set keyboard layout to US English with Caps Lock as the compose key", group = "client"}),
 
     -- Media keys
-    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn_with_shell("xbacklight -dec 5") end,
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.spawn("xbacklight -dec 5") end,
         {description = "decrease screen brightness", group = "client"}),
-    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn_with_shell("xbacklight -inc 5") end,
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("xbacklight -inc 5") end,
         {description = "increase screen brightness", group = "client"}),
-    awful.key({ }, "XF86AudioMute", function () awful.spawn_with_shell("pactl set-sink-mute 0 toggle") end,
+    awful.key({ }, "XF86AudioMute", function () awful.spawn("pactl set-sink-mute 0 toggle") end,
         {description = "mute audio", group = "client"}),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 -5%") end,
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pactl set-sink-mute 0 false") awful.spawn("pactl set-sink-volume 0 -5%") end,
         {description = "lower volume", group = "client"}),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn_with_shell("pactl set-sink-mute 0 false && pactl set-sink-volume 0 +5%") end,
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pactl set-sink-mute 0 false") awful.spawn("pactl set-sink-volume 0 +5%") end,
         {description = "increase volume", group = "client"})
 )
 
