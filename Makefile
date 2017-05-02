@@ -55,6 +55,8 @@ gpg_backup_path = $(gpg_configuration_path)/ownertrust.txt
 
 signature_dat_files = $(patsubst %.sig,%.dat,$(wildcard .signatures/*.sig))
 
+export LC_COLLATE=en_US.utf-8
+
 .PHONY: all
 all: test
 
