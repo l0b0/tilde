@@ -3697,7 +3697,7 @@ overlay=0
 #mouse-hide-timeout=1000
 
 # Video snapshot directory (or filename) (string)
-#snapshot-path=
+snapshot-path=/tmp
 
 # Video snapshot file prefix (string)
 #snapshot-prefix=vlcsnap-
