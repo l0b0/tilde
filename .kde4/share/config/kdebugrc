@@ -16,6 +16,9 @@ InfoOutput=4
 [kdesu (kdelibs)]
 InfoOutput=2
 
+[kdiff3]
+InfoOutput=4
+
 [khelpcenter]
 InfoOutput=2
 
