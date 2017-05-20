@@ -373,11 +373,11 @@ globalkeys = awful.util.table.join(
         {description = "decrease screen brightness", group = "client"}),
     awful.key({ }, "XF86MonBrightnessUp", function () awful.spawn("xbacklight -inc 5") end,
         {description = "increase screen brightness", group = "client"}),
-    awful.key({ }, "XF86AudioMute", function () awful.spawn("pactl set-sink-mute 0 toggle") end,
+    awful.key({ }, "XF86AudioMute", function () awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
         {description = "mute audio", group = "client"}),
-    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pactl set-sink-mute 0 false") awful.spawn("pactl set-sink-volume 0 -5%") end,
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ false") awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
         {description = "lower volume", group = "client"}),
-    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pactl set-sink-mute 0 false") awful.spawn("pactl set-sink-volume 0 +5%") end,
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ false") awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
         {description = "increase volume", group = "client"})
 )
 
