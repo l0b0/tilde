@@ -410,7 +410,15 @@ clientkeys = awful.util.table.join(
             c.maximized = not c.maximized
             c:raise()
         end ,
-        {description = "maximize", group = "client"})
+        {description = "maximize", group = "client"}),
+    awful.key({ modkey,           }, "0",
+        function (c)
+            c.maximized_horizontal = false
+            c.maximized_vertical   = false
+            c.maximized            = false
+            c.fullscreen           = false
+        end ,
+        {description = "reset", group = "client"})
 )
 
 -- Bind all key numbers to tags.
