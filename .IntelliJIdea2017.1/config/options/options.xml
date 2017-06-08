@@ -16,7 +16,6 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="true"/>
     <property name="MemberChooser.copyJavadoc" value="false"/>
     <property name="MemberChooser.showClasses" value="true"/>
-    <property name="PLUGIN_FILTER" value="antlr&#10;makef&#10;make&#10;rust"/>
     <property name="com.intellij.diagnostic.IdeErrorsDialogactiveTab" value="0"/>
     <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300"/>
     <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Dependencies"/>
@@ -27,12 +26,9 @@
     <property name="evlsprt3.163" value="15"/>
     <property name="evlsprt3.171" value="16"/>
     <property name="fileTypeChangedCounter" value="2"/>
-    <property name="installed.kotlin.plugin.version" value="1.1.1-release-IJ2017.1-1"/>
     <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
     <property name="log.debug.categories" value=""/>
     <property name="org.rust.LAST_UPDATE" value="1491600603206"/>
-    <property name="project.wizard.group" value="RUST_MODULE"/>
-    <property name="project.wizard.template" value="Rust"/>
     <property name="toolwindow.stripes.buttons.info.shown" value="true"/>
   </component>
 </application>

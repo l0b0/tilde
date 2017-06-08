@@ -3,6 +3,7 @@ jdbc-drivers/
 *.key
 plugins/
 port
+rubystubs/
 scratches/
 tasks/
 tools/

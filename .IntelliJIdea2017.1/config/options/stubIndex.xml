@@ -107,6 +107,7 @@
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex"/>
+        <option value="org.jetbrains.kotlin.idea.stubindex.KotlinOverridableInternalMembersShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingFunctionShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingPropertyShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex"/>
@@ -123,7 +124,6 @@
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasByExpansionShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex"/>
         <option value="org.rust.lang.core.stubs.index.RustGotoClassIndex"/>
-        <option value="org.rust.lang.core.stubs.index.RustImplIndex.InherentImpls"/>
         <option value="org.rust.lang.core.stubs.index.RustImplIndex.TraitImpls"/>
         <option value="org.rust.lang.core.stubs.index.RustMacroDefinitionIndex"/>
         <option value="org.rust.lang.core.stubs.index.RustModulesIndex"/>
