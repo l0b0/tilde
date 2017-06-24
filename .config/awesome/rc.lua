@@ -192,9 +192,9 @@ awful.screen.connect_for_each_screen(function(s)
     awful.tag.add(vcs_tag,     {screen = s, layout = awful.layout.suit.tile})
     awful.tag.add(net_tag,     {screen = s, layout = awful.layout.suit.tile})
     awful.tag.add(media_tag,   {screen = s, layout = awful.layout.suit.tile})
-    awful.tag.add("7",         {screen = s, layout = awful.layout.suit.dwindle})
-    awful.tag.add("8",         {screen = s, layout = awful.layout.suit.dwindle})
-    awful.tag.add("9",         {screen = s, layout = awful.layout.suit.dwindle})
+    awful.tag.add("7",         {screen = s, layout = awful.layout.suit.tile})
+    awful.tag.add("8",         {screen = s, layout = awful.layout.suit.tile})
+    awful.tag.add("9",         {screen = s, layout = awful.layout.suit.tile})
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
