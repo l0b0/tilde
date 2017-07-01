@@ -16,9 +16,7 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="true"/>
     <property name="MemberChooser.copyJavadoc" value="false"/>
     <property name="MemberChooser.showClasses" value="true"/>
-    <property name="com.intellij.diagnostic.IdeErrorsDialogactiveTab" value="0"/>
     <property name="com.intellij.history.integration.ui.views.FileHistoryDialog.0" value="300"/>
-    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Dependencies"/>
     <property name="create.project.preferred.importer" value="Existing Sources"/>
     <property name="evlsprt3.14" value="17"/>
     <property name="evlsprt3.16" value="14"/>
