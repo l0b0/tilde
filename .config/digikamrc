@@ -164,6 +164,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -834,6 +835,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -900,6 +902,9 @@ AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Last maximum similarity=100
 Last minimum similarity=90
+Last search album tag relation=0
+Last search results restriction=0
+Lower bound for minimum similarity=40
 TagComboBox-Checked=
 TagComboBox-CurrentIndex=
 TagComboBox-Expansion=
@@ -907,8 +912,10 @@ TagComboBox-RestoreChecked=true
 TagComboBox-Selection=
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
 UseWholePAlbumsEntry=true
 UseWholeTAlbumsEntry=true
+UseWholeTagsEntry=true
 
 [Fuzzy Search Sidebar]
 CurrentIndex=
@@ -925,6 +932,16 @@ Similars Maximum Threshold=100
 Similars Threshold=90
 SortColumn=0
 SortOrder=0
+
+[Fuzzy Search View]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=
+AlbumComboBox-Expansion=1
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
 
 [FuzzySearchViewSearchFuzzyBar Search Text Tool]
 CaseSensitive=0
@@ -948,6 +965,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -966,6 +984,7 @@ CaseSensitive=0
 [General Settings]
 Application Style=Oxygen
 Apply Sidebar Changes Directly=false
+Clean core DB At Start=false
 Finger Prints Generator First Run=true
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
@@ -974,6 +993,7 @@ Icon Theme=
 MenuBar=Disabled
 Scan At Start=true
 Scroll Current Item To Center=false
+Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=false
 Show Trash Delete Dialog=false
@@ -982,6 +1002,15 @@ String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
 Use Trash=true
+
+[Grouping Behaviour]
+Do BQM operations on all=2
+Do Kipi operations on all=2
+Do light table operations on all=2
+Do metadata operations on all=2
+Do slideshow operations on all=2
+Operate tools on all=2
+Rename all=2
 
 [HTML Settings]
 AutomaticDetectionLanguage=1
@@ -1134,6 +1163,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1280,6 +1310,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1356,6 +1387,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1588,6 +1620,16 @@ SortOrder=0
 [SearchBar Search Text Tool]
 CaseSensitive=0
 
+[Sketch Search View]
+AlbumComboBox-Checked=
+AlbumComboBox-CurrentIndex=
+AlbumComboBox-Expansion=1
+AlbumComboBox-RestoreChecked=true
+AlbumComboBox-Selection=
+AlbumComboBox-SortColumn=0
+AlbumComboBox-SortOrder=0
+UseWholeAlbumsEntry=true
+
 [TagFilter Sidebar]
 LabelsFilter Expanded=true
 Matching Condition=0
@@ -1804,6 +1846,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1829,6 +1872,7 @@ GoogleMaps Show Scale Control=true
 Marble Map Theme=atlas
 Marble Projection=spherical
 Marble Show Compass=false
+Marble Show Navigation=false
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
