@@ -533,7 +533,7 @@ awful.rules.rules = {
       properties = { screen = 1, tag = vcs_tag } },
     { rule_any = { class = { "Deluge", "Pidgin", "Thunderbird", "Transmission-gtk" } },
       properties = { screen = 1, tag = net_tag } },
-    { rule_any = { class = { "feh", "Kodi", "MPlayer", "Pcmanfm", "smplayer", "Vlc" } },
+    { rule_any = { class = { "feh", "Kodi", "MPlayer", "Thunar", "smplayer", "Vlc" } },
       properties = { screen = 1, tag = media_tag } },
 }
 -- }}}
@@ -610,7 +610,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- {{{ Autostart
 -- Start most common applications
 awful.spawn("firefox")
-awful.spawn("pcmanfm")
+awful.spawn("thunar")
 awful.spawn("thunderbird")
 awful.spawn(terminal)
 -- }}}
