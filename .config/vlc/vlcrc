@@ -3668,7 +3668,7 @@ aout=any
 #mouse-events=1
 
 # Overlay video output (boolean)
-overlay=0
+#overlay=1
 
 # Always on top (boolean)
 #video-on-top=0
