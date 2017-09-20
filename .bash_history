@@ -887,9 +887,7 @@ man htop # help
 man hugin # help 
 man hunspell # help 
 man id # help 
-man ifdown # help 
 man iftop # help 
-man ifup # help 
 man imake # help 
 man imapfilter_config # help 
 man imapfilter # help 
@@ -1548,15 +1546,14 @@ sudo groupdel example # delete remove group
 sudo grub-install /dev/sda # fix boot mbr 
 sudo gsmartcontrol 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
-sudo ifdown wlan0 # network interface disable 
 sudo iftop # bandwidth network interface monitor 
 sudo iftop -i wlp1s0 # bandwidth network interface monitor wireless 
-sudo ifup wlan0 # network interface enable 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop # i/o storage repeat 
 sudo iotop --pid=$$ # i/o process 
 sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
 sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete 
+sudo ip link set eth0 down # network disable device 
 sudo ip link set eth0 up # network enable device 
 sudo ip route add default via 1.2.3.4 dev eth0 
 sudo ip route del default via 1.2.3.4 dev eth0 
