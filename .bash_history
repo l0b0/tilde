@@ -1706,6 +1706,7 @@ traps="$(trap)" # signal
 tshark -D # list network interface 
 tshark -G fields | grep --perl-regexp '\tdns\t' | cut --fields 2-4,6- # list field dns 
 tshark -n -T fields -e dns.qry.name src port 53 # network dns 
+tshark -Y 'http.request and http contains "application/ocsp-request"' -T fields -e http.host tcp port 80 # network ocsp request 
 tty 
 txt2cloud 
 txt2cloud --min 3 < "$(which txt2cloud)" > cloud.xhtml 
