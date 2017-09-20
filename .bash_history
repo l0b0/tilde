@@ -1129,6 +1129,7 @@ man tput # help
 man traceroute # help 
 man trash # help 
 man tr # help 
+man tshark # help 
 man tty # help 
 man udevadm # help 
 man ufw # help 
@@ -1702,6 +1703,7 @@ tput colors
 traceroute example.org 
 trap # signal 
 traps="$(trap)" # signal 
+tshark -n -T fields -e dns.qry.name src port 53 # network dns 
 tty 
 txt2cloud 
 txt2cloud --min 3 < "$(which txt2cloud)" > cloud.xhtml 
