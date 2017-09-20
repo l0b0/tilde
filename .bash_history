@@ -140,7 +140,6 @@ deluge & # bittorrent gui
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
-~/dev/tilde/scripts/make-links.sh --verbose --diff meld ~/settings/.* ~ # filesystem symlink 
 ~/dev/vcard/format-TEL.sh -i ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
 ~/dev/vcard/split.sh ~/contacts/*.vcf # split vcard files 
@@ -277,7 +276,6 @@ firefox /usr/share/doc/python-doc/html/index.html # dev help
 firefox /usr/share/doc/python-matplotlib-doc/html/index.html # dev help 
 firefox /usr/share/doc/python/python-policy.html/index.html # debian dev help 
 firefox /usr/share/doc/w3-recs/html/www.w3.org/TR/2003/REC-SVG11-20030114/index.html # help reference svg 2d graphics 
-flash-player-properties & # config flash 
 fold --width 1 <<< foo # split characters lines 
 for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080p height 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
@@ -641,7 +639,6 @@ journalctl --catalog --since=today --unit=shadow.service
 jq . < *.json # json pretty-print 
 json_xs < example.json # prettify json 
 json_xs -t null < example.json # verify json format 
-keepassx & 
 keybase help 
 keybase login 
 keybase prove twitter 
