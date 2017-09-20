@@ -58,7 +58,7 @@ wicd-client --tray >> "${HOME}/.wicd-client.log" 2>&1 &
 # Lock screen automatically
 xss-lock slock &
 
-for service in cbatticon numlockx
+for service in cbatticon numlockx redshift
 do
     if which "$service" 2> /dev/null
     then
