@@ -23,7 +23,6 @@
     <property name="evlsprt3.162" value="14"/>
     <property name="evlsprt3.163" value="15"/>
     <property name="evlsprt3.171" value="16"/>
-    <property name="fileTypeChangedCounter" value="2"/>
     <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
     <property name="log.debug.categories" value=""/>
     <property name="org.rust.LAST_UPDATE" value="1491600603206"/>
