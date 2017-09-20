@@ -1703,6 +1703,7 @@ tput colors
 traceroute example.org 
 trap # signal 
 traps="$(trap)" # signal 
+tshark -D # list network interface 
 tshark -G fields | grep --perl-regexp '\tdns\t' | cut --fields 2-4,6- # list field dns 
 tshark -n -T fields -e dns.qry.name src port 53 # network dns 
 tty 
