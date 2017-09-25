@@ -232,6 +232,7 @@ fc -l # list commands history
 fc -s # execute last command history 
 feh --auto-zoom --scale-down --recursive . # images viewer resize 
 feh --fullscreen --hide-pointer ./* # images viewer 
+ffmpeg -activation_bytes ACTIVATION_BYTES -i input.aax -vn -c:a copy output.mp4 # aax audio convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 ffmpeg -i input.mov -vcodec copy -acodec copy -ss 00:00:00 -t 00:01:00 output.mov # video split 
