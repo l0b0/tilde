@@ -36,3 +36,5 @@
 	autosetuprebase = always
 [mergetool "kdiff3"]
 	path = /usr/bin/kdiff3
+[pull]
+	rebase = true
