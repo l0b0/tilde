@@ -15,3 +15,4 @@ XTerm.vt100.saveLines:	32767
 XTerm.vt100.scrollKey:	true
 XTerm.vt100.scrollTtyOutput:	false
 XTerm.vt100.translations:	#override \n Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD) \n Ctrl <KeyPress> Insert: copy-selection(PRIMARY) \n Shift <KeyPress> Insert: insert-selection(PRIMARY) \n Meta <KeyPress> M: print() \n
+xscreensaver.mode:	blank
