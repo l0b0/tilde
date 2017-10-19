@@ -38,3 +38,5 @@
 	path = /usr/bin/kdiff3
 [pull]
 	rebase = true
+[gpg]
+	program = gpg2
