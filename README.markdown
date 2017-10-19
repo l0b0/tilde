@@ -16,6 +16,8 @@ Install
     cd tilde
     make install # NOT as root
 
+**Git users:** Make sure to add your user specific configuration in `~/.gitconfig_local`.
+
 Test
 ----
 

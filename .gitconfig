@@ -1,7 +1,3 @@
-[user]
-	name = Victor Engmark
-	email = victor.engmark@gmail.com
-	signingkey = E5D23A00D8C693B4C2ACD93CEC92D395260D3194
 [alias]
 	st = status
 	git = !git
@@ -40,3 +36,5 @@
 	rebase = true
 [gpg]
 	program = gpg2
+[include]
+	path = .gitconfig_local
