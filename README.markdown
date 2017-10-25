@@ -16,6 +16,8 @@ Install
     cd tilde
     make install # NOT as root
 
+You'll need to remove existing dot files for this to install successfully.
+
 **Git users:** Make sure to add your user specific configuration in `~/.gitconfig_local`.
 
 Test
