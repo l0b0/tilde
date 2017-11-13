@@ -79,6 +79,7 @@ cmp --print-bytes "$(which arch)" "$(which uname)" # binary diff
 coffee -v # coffeescript 
 comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
+COMPOSE_HTTP_TIMEOUT=99999999 docker-compose logs -f --tail=10 
 ./configure --help | less # packaging 
 ./configure # packaging 
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
