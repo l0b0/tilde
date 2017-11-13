@@ -163,6 +163,7 @@ disown %+ # nohup last job background process
 dmesg --color=always | less -r # debug os startup 
 docker build . 
 docker-compose build && docker-compose up -d 
+docker-compose run --rm test bash # shell container 
 docker container prune && docker image prune # clean remove container image 
 docker images # list 
 docker info 
