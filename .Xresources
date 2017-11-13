@@ -1,6 +1,6 @@
 XTerm.termName:	xterm-256color
 XTerm.vt100.background:	black
-XTerm.vt100.faceName:	VeraMono
+XTerm.vt100.faceName:	DejaVu Sans Mono:pixelsize=42
 XTerm.vt100.faceSize:	10
 XTerm.vt100.foreground:	gray80
 XTerm.vt100.geometry:	96x66
