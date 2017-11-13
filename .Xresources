@@ -1,9 +1,9 @@
 URxvt.background:	gray5
 URxvt.color0:	Black
 URxvt.color1:	Red3
-URxvt.color10:	Green
+URxvt.color10:	SpringGreen1
 URxvt.color11:	Yellow
-URxvt.color12:	Blue
+URxvt.color12:	RoyalBlue1
 URxvt.color13:	Magenta
 URxvt.color14:	Cyan
 URxvt.color15:	White
