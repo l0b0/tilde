@@ -1773,6 +1773,7 @@ wait # process pid
 watch --color --differences -- git diff --color=always # change 
 wc --lines -- example.txt # line count 
 wdiff -w "$(tput bold && tput setaf 1)" -x "$(tput sgr0)" -y "$(tput bold && tput setaf 2)" -z "$(tput sgr0)" path1 path2 # color word diff 
+weechat # irc client 
 wget --output-document - http://user:password@host/function?id=foo 2>service.log | json_pp # web service 
 wget --server-response --output-document=/dev/null http://example.org/ # web header 
 whatis mv # exact help man 
