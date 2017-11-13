@@ -1,4 +1,20 @@
 URxvt.background:	gray5
+URxvt.color0:	Black
+URxvt.color1:	Red3
+URxvt.color10:	Green
+URxvt.color11:	Yellow
+URxvt.color12:	Blue
+URxvt.color13:	Magenta
+URxvt.color14:	Cyan
+URxvt.color15:	White
+URxvt.color2:	Green3
+URxvt.color3:	Yellow3
+URxvt.color4:	Blue3
+URxvt.color5:	Magenta3
+URxvt.color6:	Cyan3
+URxvt.color7:	AntiqueWhite
+URxvt.color8:	Grey25
+URxvt.color9:	Red
 URxvt.font:	xft:DejaVu Sans Mono:pixelsize=42
 URxvt.foreground:	gray80
 URxvt.scrollBar:	false
