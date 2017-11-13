@@ -161,12 +161,11 @@ dirname -- "$PWD" # parent directory
 disown %+ # nohup last job background process 
 dmesg --color=always | less -r # debug os startup 
 docker build . 
+docker container prune && docker image prune # clean remove container image 
 docker images # list 
 docker info 
 docker ps --all # list container 
 docker pull base/archlinux 
-docker rm $(docker ps --all --quiet) # clean remove container 
-docker rmi $(docker images --quiet --filter dangling=true) # clean remove container 
 docker run -it image /bin/bash # shell container 
 dos2unix example.txt # convert newline 
 dot -O -Tsvg ./*.dot # graphics 
