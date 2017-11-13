@@ -1,3 +1,12 @@
+URxvt.background:	black
+URxvt.font:	xft:DejaVu Sans Mono:pixelsize=42
+URxvt.foreground:	gray80
+URxvt.scrollBar:	false
+URxvt.scrollTtyKeypress:	true
+URxvt.scrollTtyOutput:	false
+URxvt.scrollWithBuffer:	true
+URxvt.secondaryScreen:	true
+URxvt.secondaryScroll:	false
 XTerm.termName:	xterm-256color
 XTerm.vt100.background:	black
 XTerm.vt100.faceName:	DejaVu Sans Mono:pixelsize=42
