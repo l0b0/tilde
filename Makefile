@@ -85,7 +85,7 @@ clean_history_tags:
 .PHONY: clean_x_resources
 clean_x_resources:
 	new_file=$$($(MKTEMP)) && \
-		$(XRDB) -query  | grep --invert-match --fixed-strings --line-regexp --file=/etc/X11/Xresources > "$$new_file" && \
+		$(XRDB) -query | grep --invert-match --fixed-strings --line-regexp --file=/etc/X11/Xresources > "$$new_file" && \
 		$(MV) "$$new_file" .Xresources
 
 .PHONY: clean_sort_text_files
