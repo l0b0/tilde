@@ -1016,7 +1016,6 @@ man ping # help
 man pkcs12 # help 
 man pkcs8 # help 
 man pngcrush # help 
-man pod2man # help 
 man postgres # help postgresql server 
 man powertop # help 
 man ppc386 # help 
@@ -1342,6 +1341,8 @@ pip help
 pip help install 
 pip install --requirement python-requirements.txt 
 pngcrush -brute -d target ./*.png # graphics compress 
+pod2text file.pl # perl documentation 
+podchecker file.pl # perl documentation verify 
 printf '\0' | uniname -bcepu # 1 nul escape quote 
 printf "\0" | uniname -bcepu # 1 nul escape quote 
 printf $"\0" | uniname -bcepu # 1 nul escape quote 
