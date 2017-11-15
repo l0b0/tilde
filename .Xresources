@@ -15,7 +15,7 @@ URxvt.color6:	Cyan3
 URxvt.color7:	AntiqueWhite
 URxvt.color8:	Grey25
 URxvt.color9:	Red
-URxvt.font:	xft:DejaVu Sans Mono:pixelsize=42
+URxvt.font:	xft:DejaVu Sans Mono
 URxvt.foreground:	gray80
 URxvt.scrollBar:	false
 URxvt.scrollTtyKeypress:	true
@@ -25,7 +25,7 @@ URxvt.secondaryScreen:	true
 URxvt.secondaryScroll:	false
 XTerm.termName:	xterm-256color
 XTerm.vt100.background:	gray5
-XTerm.vt100.faceName:	DejaVu Sans Mono:pixelsize=42
+XTerm.vt100.faceName:	DejaVu Sans Mono
 XTerm.vt100.faceSize:	10
 XTerm.vt100.foreground:	gray80
 XTerm.vt100.geometry:	96x66
