@@ -13,7 +13,7 @@ recentProjects.xml
 runner.layout.xml
 scala.xml
 scratches.xml
-statistics.application.usages.xml
+statistics.*.xml
 updates.xml
 *usage.statistics.xml
 web-browsers.xml
