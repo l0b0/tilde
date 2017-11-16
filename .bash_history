@@ -1812,7 +1812,8 @@ xprop | grep --color=none "WM_CLASS\|^WM_NAME"
 xprop # x window properties 
 xrandr --display :0 --output LVDS1 --mode 1366x768 # reset resolution graphics desktop 
 xrandr --verbose # graphics hardware 
-xrdb -load ~/.Xresources 
+xrdb -load ~/.Xresources # replace x settings 
+xrdb -merge ~/.Xresources # merge x settings 
 xrdb -query # list 
 xset q # list settings x monitor 
 xsltproc --output file.xml ~/dev/xml/filter/filter.xslt file.xml # filter xml xslt replace 
