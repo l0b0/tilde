@@ -46,6 +46,8 @@ XTerm.vt100.scrollKey:	true
 XTerm.vt100.scrollTtyOutput:	false
 XTerm.vt100.translations:	#override \n Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD) \n Ctrl <KeyPress> Insert: copy-selection(PRIMARY) \n Shift <KeyPress> Insert: insert-selection(PRIMARY) \n Meta <KeyPress> M: print() \n
 xscreensaver.dateFormat:	%Y-%m-%d %H:%M
+xscreensaver.fadeSeconds:	0:00:10
 xscreensaver.font:	DejaVu Sans Mono
 xscreensaver.lock:	true
+xscreensaver.lockTimeout:	00:00:10
 xscreensaver.mode:	blank
