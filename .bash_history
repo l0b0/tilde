@@ -52,6 +52,7 @@ bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$
 bsdtar --list --file /boot/initramfs-linux.img | less # print kernel image files 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
+cargo init --bin project-name # rust project create 
 cargo test # rust build test 
 cat ~/contacts/*.vcf > ~/contacts.vcf # concatenate vcard 
 cat /dev/zero > /tmp/ramdisk.XXXXXXXXXX/full.log # fill ramdisk partition file tmpfs 
