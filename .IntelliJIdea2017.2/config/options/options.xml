@@ -25,10 +25,10 @@
     <property name="evlsprt3.162" value="14"/>
     <property name="evlsprt3.163" value="15"/>
     <property name="evlsprt3.171" value="16"/>
+    <property name="evlsprt3.172" value="17"/>
     <property name="installed.kotlin.plugin.version" value="1.1.4-release-IJ2017.2-3"/>
     <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
     <property name="log.debug.categories" value=""/>
-    <property name="org.rust.LAST_UPDATE" value="1510806336252"/>
     <property name="toolwindow.stripes.buttons.info.shown" value="true"/>
     <property name="ts.lib.d.ts.version" value="2.4.1"/>
   </component>
