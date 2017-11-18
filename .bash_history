@@ -1618,6 +1618,7 @@ sudo sshfs user@host:/path /run/mount/host
 sudo strace -p 123 # process 
 sudo sysctl --all # list kernel parameters 
 sudo system-config-printer 
+sudo systemctl daemon-reload # reload service file 
 sudo systemctl restart dhcpcd.service 
 sudo tar --directory /opt --extract --gzip --file ideaIU-*.tar.gz && /opt/idea-IU-*/bin/idea.sh # install intellij idea ide 
 sudo tcpdump # network debug log packets 
