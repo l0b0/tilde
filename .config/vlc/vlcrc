@@ -1817,6 +1817,20 @@ gnutls-priorities=SECURE256
 # Workaround for France (boolean)
 #telx-french-workaround=0
 
+[twolame] # Libtwolame audio encoder
+
+# Encoding quality (float)
+#sout-twolame-quality=0.000000
+
+# Stereo mode (integer)
+#sout-twolame-mode=0
+
+# VBR mode (boolean)
+#sout-twolame-vbr=0
+
+# Psycho-acoustic model (integer)
+#sout-twolame-psy=3
+
 [spudec] # DVD subtitles decoder
 
 # Disable DVD subtitle transparency (boolean)
@@ -2125,6 +2139,11 @@ src-converter-type=0
 
 # UDP timeout (in ms) (integer)
 #netsync-timeout=500
+
+[lirc] # Infrared remote control interface
+
+# Change the lirc configuration file (string)
+#lirc-file=
 
 [motion] # motion control interface
 
@@ -2824,6 +2843,17 @@ src-converter-type=0
 
 # Peak height (integer)
 #spect-peak-height=1
+
+[goom] # Goom effect
+
+# Goom display width (integer)
+#goom-width=800
+
+# Goom display height (integer)
+#goom-height=500
+
+# Goom animation speed (integer)
+#goom-speed=6
 
 [glspectrum] # 3D OpenGL spectrum visualization
 
