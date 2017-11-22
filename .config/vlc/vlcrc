@@ -250,7 +250,7 @@
 #qt-fs-controller=1
 
 # Save the recently played items in the menu (boolean)
-qt-recentplay=0
+#qt-recentplay=1
 
 # List of words separated by | to filter (string)
 #qt-recentplay-filter=
