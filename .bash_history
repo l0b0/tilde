@@ -1743,6 +1743,7 @@ vagrant --help
 vainfo 
 valgrind foo # check memory binary 
 vcard ~/contacts/*.vcf 
+vim ~/admin/timesheets/$(date +%Y-%m-%d).tks 
 vim -c "setfiletype sh" example.txt 
 virtualbox & 
 virtualenv --help 
