@@ -11,7 +11,7 @@ PERL = /usr/bin/perl
 RM = /usr/bin/rm
 RMDIR = /usr/bin/rmdir
 SED = /usr/bin/sed
-SORT = /usr/bin/sort
+SORT = LC_ALL=en_US.UTF-8 /usr/bin/sort --version-sort
 SQLITE = /usr/bin/sqlite3
 STRFILE = /usr/bin/strfile
 UNZIP = /usr/bin/unzip
@@ -89,7 +89,7 @@ clean_x_resources:
 		grep --invert-match --fixed-strings --line-regexp --file=/etc/X11/Xresources; \
 	else \
 		cat; \
-	fi > .Xresources
+	fi | $(SORT) > .Xresources
 
 .PHONY: clean_sort_text_files
 clean_sort_text_files:

@@ -2,12 +2,6 @@ URxvt.altSendsEscape:	true
 URxvt.background:	gray5
 URxvt.color0:	White
 URxvt.color1:	Red3
-URxvt.color10:	SpringGreen1
-URxvt.color11:	Yellow
-URxvt.color12:	RoyalBlue1
-URxvt.color13:	Magenta
-URxvt.color14:	Cyan
-URxvt.color15:	Black
 URxvt.color2:	Green3
 URxvt.color3:	Yellow3
 URxvt.color4:	Blue3
@@ -16,6 +10,12 @@ URxvt.color6:	Cyan3
 URxvt.color7:	AntiqueWhite
 URxvt.color8:	Grey25
 URxvt.color9:	Red
+URxvt.color10:	SpringGreen1
+URxvt.color11:	Yellow
+URxvt.color12:	RoyalBlue1
+URxvt.color13:	Magenta
+URxvt.color14:	Cyan
+URxvt.color15:	Black
 URxvt.font:	xft:DejaVu Sans Mono
 URxvt.foreground:	gray80
 URxvt.keysym.Control-Down:	\033[1;5B
@@ -52,6 +52,6 @@ XTerm.vt100.translations:	#override \n Ctrl Shift <KeyPress> C: copy-selection(C
 xscreensaver.dateFormat:	%Y-%m-%d %H:%M
 xscreensaver.fadeSeconds:	0:00:10
 xscreensaver.font:	DejaVu Sans Mono
-xscreensaver.lock:	true
 xscreensaver.lockTimeout:	00:00:10
+xscreensaver.lock:	true
 xscreensaver.mode:	blank
