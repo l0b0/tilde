@@ -22,6 +22,8 @@ URxvt.keysym.Control-Down:	\033[1;5B
 URxvt.keysym.Control-Left:	\033[1;5D
 URxvt.keysym.Control-Right:	\033[1;5C
 URxvt.keysym.Control-Up:	\033[1;5A
+URxvt.matcher.button:	1
+URxvt.perl-ext:	default,matcher
 URxvt.saveLines:	32767
 URxvt.scrollBar:	false
 URxvt.scrollTtyKeypress:	true
@@ -29,6 +31,7 @@ URxvt.scrollTtyOutput:	false
 URxvt.scrollWithBuffer:	true
 URxvt.secondaryScreen:	true
 URxvt.secondaryScroll:	false
+URxvt.url-launcher:	/usr/bin/xdg-open
 XTerm.termName:	xterm-256color
 XTerm.vt100.background:	gray5
 XTerm.vt100.faceName:	DejaVu Sans Mono
