@@ -723,6 +723,7 @@ make clean # dev
 make # compile dev 
  make --directory ~/dev/tilde clean 
 make install # dev 
+ make MKTEMP=/bin/mktemp SED=/bin/sed --directory ~/dev/tilde clean 
 makepkg --syncdeps --install # package build tarball install 
 make --silent python-pep8 | cut --delimiter=: --fields=4- | grep --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
 make test # dev 
@@ -1256,6 +1257,7 @@ nl ~/.bashrc # number lines
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -v -sP 192.168.0.0/24 
+nm-connection-editor # network manager gui 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
@@ -1731,6 +1733,7 @@ uname --kernel-name --kernel-release --kernel-version --machine --processor --ha
 unetbootin 
 unetbootin & 
 unexpand --tabs=4 example.txt # convert space tab 
+unity-control-center # ubuntu settings gui 
 unix2dos contacts.vcf # newline convert 
 unset -f function 
 unset variable_or_function 
