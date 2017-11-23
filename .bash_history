@@ -1698,6 +1698,8 @@ timedatectl status
 time make test 
 timeout 1 sleep 2 
 tkmib & 
+tks -c ~/admin/timesheets/$(date +%Y-%m-%d).tks # timekeeping work commit 
+tks --list=month # timekeeping list work 
 todos -- file # convert newline 
 top 
 top -c # command line 
