@@ -1,6 +1,6 @@
 URxvt.altSendsEscape:	true
 URxvt.background:	gray5
-URxvt.color0:	White
+URxvt.color0:	gray5
 URxvt.color1:	Red3
 URxvt.color2:	Green3
 URxvt.color3:	Yellow3
