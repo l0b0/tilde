@@ -155,7 +155,7 @@ then
     alias egrep='egrep --color=auto'
 fi
 
-for path in "${HOME}/.gem/ruby/"*"/bin"
+for path in "${HOME}/.gem/ruby/"*"/bin" "${HOME}/.cargo/bin"
 do
     if [[ -e "$path" ]] && ! [[ ":${PATH}:" = *":${path}:"* ]]
     then
