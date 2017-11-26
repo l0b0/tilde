@@ -122,9 +122,7 @@ csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
 csvtool col 3 example.csv # csv column 
 csvtool --help | less 
-curl https://aur.archlinux.org/packages/tt/ttf-source-sans-pro/ttf-source-sans-pro.tar.gz | tar -zx 
-curl --insecure --location http://xrl.us/perlbrewinstall | bash # development perl 
-curl --version 
+curl --request POST --header 'Content-Type: application/json' --data '{"foo": 1}' https://example.org/ # post web api 
 cut --delimiter ':' --fields 1 /etc/group | sort 
 darktable & # 2d image editor raw 
 date +%FT%T.%N # iso time 
