@@ -31,16 +31,6 @@ shopt -s checkwinsize
 [[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
 LESS="--RAW-CONTROL-CHARS"
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [[ -f /etc/bash_completion ]] && ! shopt -oq posix
-then
-    set +o nounset
-    source /etc/bash_completion
-    set -o nounset
-fi
-
 color_enabled() {
     local -i colors=$(tput colors 2>/dev/null)
     [[ $? -eq 0 ]] && [[ $colors -gt 2 ]]
