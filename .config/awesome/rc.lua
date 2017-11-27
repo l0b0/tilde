@@ -357,9 +357,7 @@ globalkeys = awful.util.table.join(
               {description = "lock the screen", group = "client"}),
 
     -- Screenshot
-    awful.key({        }, "Print", function () awful.spawn("scrot") end,
-        {description = "take screenshot", group = "client"}),
-    awful.key({ modkey }, "Print", function () awful.spawn("sleep 1") awful.spawn("scrot --select") end,
+    awful.key({        }, "Print", function () awful.util.spawn_with_shell("sleep 0.5 && scrot --select") end,
         {description = "take screenshot of selection", group = "client"}),
 
     -- Keyboard layout
