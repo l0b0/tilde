@@ -7,6 +7,7 @@
   <component name="EditorSettings">
     <option name="IS_CAMEL_WORDS" value="true"/>
     <option name="IS_ENSURE_NEWLINE_AT_EOF" value="true"/>
+    <option name="IS_FOLDING_OUTLINE_SHOWN" value="false"/>
   </component>
   <component name="SqlEditorOptions">
     <option name="concatenateStringsOnEnter" value="true"/>

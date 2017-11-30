@@ -9,6 +9,9 @@
         <option value="Css.custom.mixin"/>
         <option value="Css.custom.property"/>
         <option value="Css.id"/>
+        <option value="Django.foreignKey"/>
+        <option value="Django.manager"/>
+        <option value="JRuby.import.shortName"/>
         <option value="JS.base.types.index"/>
         <option value="JS.class.implements"/>
         <option value="JS.class.super"/>
@@ -17,6 +20,27 @@
         <option value="JS.subclass.stub.index"/>
         <option value="Less.mixins"/>
         <option value="Less.variables"/>
+        <option value="Py.class.attributes"/>
+        <option value="Py.class.shortName"/>
+        <option value="Py.class.shortNameInsensitive"/>
+        <option value="Py.class.super"/>
+        <option value="Py.function.shortName"/>
+        <option value="Py.variable.shortName"/>
+        <option value="Python.Decorator"/>
+        <option value="Rails.render.file"/>
+        <option value="Ruby.class.module.shortName"/>
+        <option value="Ruby.class_eval.receiver"/>
+        <option value="Ruby.constructor.call"/>
+        <option value="Ruby.cucumber.step"/>
+        <option value="Ruby.implicit.class.module.shortName"/>
+        <option value="Ruby.include.extend.qualified.shortName"/>
+        <option value="Ruby.inheritance.shortName"/>
+        <option value="Ruby.method.dynamic.name"/>
+        <option value="Ruby.method.name"/>
+        <option value="Ruby.require.load.shortName"/>
+        <option value="Ruby.symbol.name"/>
+        <option value="Ruby.top.level.include.extend.shortName"/>
+        <option value="Ruby.toplevel.shortName"/>
         <option value="Scss.function"/>
         <option value="Scss.mixin"/>
         <option value="Scss.placeholder.selector"/>
@@ -30,7 +54,6 @@
         <option value="amd.baseUrl.index"/>
         <option value="amd.requirePaths.index"/>
         <option value="angularjs.controller.index"/>
-        <option value="angularjs.decorators.index"/>
         <option value="angularjs.delimiter.index"/>
         <option value="angularjs.directives.doc.index"/>
         <option value="angularjs.directives.index"/>
@@ -40,6 +63,13 @@
         <option value="angularjs.symbol.index"/>
         <option value="angularjs.ui.router.generic.states.index"/>
         <option value="angularjs.ui.router.states.index"/>
+        <option value="bash.function.name"/>
+        <option value="bash.included"/>
+        <option value="bash.includers"/>
+        <option value="bash.script.name"/>
+        <option value="bash.scriptCommandReference"/>
+        <option value="bash.var"/>
+        <option value="bash.vardef"/>
         <option value="cfml.component.shortName"/>
         <option value="cfml.inheritors.shortName"/>
         <option value="cfml.interface.shortName"/>
@@ -80,6 +110,7 @@
         <option value="jvm.static.member.name"/>
         <option value="jvm.static.member.type"/>
         <option value="lua.global.name"/>
+        <option value="markdown.header"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex"/>
@@ -111,11 +142,29 @@
         <option value="org.rust.lang.core.stubs.index.RustImplIndex.TraitImpls"/>
         <option value="org.rust.lang.core.stubs.index.RustModulesIndex"/>
         <option value="org.rust.lang.core.stubs.index.RustNamedElementIndex"/>
+        <option value="perl.glob"/>
+        <option value="perl.global.array"/>
+        <option value="perl.global.hash"/>
+        <option value="perl.global.scalar"/>
+        <option value="perl.html.mason.flags"/>
+        <option value="perl.mason2.namespace"/>
+        <option value="perl.mason2.namespace.parent"/>
+        <option value="perl.package.definition"/>
+        <option value="perl.package.light.direct"/>
+        <option value="perl.package.light.reverse"/>
+        <option value="perl.package.parent"/>
+        <option value="perl.sub.declaration"/>
+        <option value="perl.sub.declaration.reverse"/>
+        <option value="perl.sub.definition"/>
+        <option value="perl.sub.definition.reverse"/>
+        <option value="perl.sub.polynamed"/>
+        <option value="perl.sub.polynamed.reverse"/>
         <option value="properties.index"/>
         <option value="sql.column.name"/>
         <option value="sql.names"/>
         <option value="sql.table.shortName"/>
         <option value="ts.external.module.index"/>
+        <option value="ts.local.classes"/>
       </list>
     </option>
   </component>
