@@ -120,6 +120,7 @@ crontab -e # edit
 crontab -l # list 
 csplit --prefix contact- --suffix-format %02d.vcf --elide-empty-files --quiet ~/contacts.vcf '/BEGIN:VCARD/' '{*}' # split vcard file 
 csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet headers.txt '/----------------------------------------------------------/1' '{*}' # split file 
+cssh server{1,2,3} # ssh multiple servers 
 csvtool col 3 example.csv # csv column 
 csvtool --help | less 
 curl --request POST --header 'Content-Type: application/json' --data '{"foo": 1}' https://example.org/ # post web api 
