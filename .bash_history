@@ -436,7 +436,7 @@ git log --patch-with-stat
 git log --stat 
 git ls-files '*.py' # list files 
 git ls-tree --long HEAD ./* | awk '{print $4 " " $5}' # file size commit 
-git mergetool & 
+git mergetool 
 git merge origin/master 
 git merge topic # local branch 
 git merge --abort # cancel revert 
