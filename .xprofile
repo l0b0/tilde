@@ -39,10 +39,6 @@ then
 fi
 unset monitor_color_profile
 
-# GNOME Keyring Daemon
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-export GPG_AGENT_INFO SSH_AUTH_SOCK
-
 if which syndaemon 2> /dev/null
 then
     syndaemon -i 0.3 -m 50 -d -t -K

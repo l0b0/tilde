@@ -178,6 +178,8 @@ alias pc='$(xclip -display :0 -out)'
 _expand(){ true; }
 __expand_tilde_by_ref(){ true; }
 
+eval "$(keychain --agents gpg,ssh --eval --gpg2)"
+
 if [[ -r "$HOME/.bashrc_local" ]]
 then
     source "$HOME/.bashrc_local"
