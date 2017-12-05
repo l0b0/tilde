@@ -1290,6 +1290,7 @@ pacman --query --info bash # package info
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
 pacman --sync --search bash # search packages 
+pacmd set-default-sink SINK_NAME # pulseaudio output 
 pactree bash # installed package dependencies 
 pactree --reverse bash # installed package reverse dependencies 
 pactree --reverse --sync bash # all package reverse dependencies 
