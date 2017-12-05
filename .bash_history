@@ -21,8 +21,13 @@ TAGS=all guard
 TAGS="$USER" guard 
 abcde -o mp3 # rip audio cd 
 acpi_listen # events power configuration 
+adb devices # list 
 adb devices # list android 
+adb push cm.zip /sdcard # upload 
+adb reboot bootloader 
 adb reboot bootloader # fastboot android 
+adb reboot download 
+adb shell 
 adb shell logcat -T 10 # list follow android log 
 adb shell # android 
 alias ls 
@@ -1829,10 +1834,5 @@ zless /proc/config.gz # kernel configuration parameter
 (set -o posix; set) # list all options 
 (set -o posix; set) | grep --only-matching '^COMP[^=]*' 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 "$!" # process pid pipe stdin 
-/opt/android-sdk/platform-tools/adb devices # list 
-/opt/android-sdk/platform-tools/adb push cm.zip /sdcard # upload 
-/opt/android-sdk/platform-tools/adb reboot bootloader 
-/opt/android-sdk/platform-tools/adb reboot download 
-/opt/android-sdk/platform-tools/adb shell 
 /usr/local/JDiveLog/bin/jdivelog 
 [[ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ]] # verify sort 
