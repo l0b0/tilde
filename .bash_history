@@ -75,6 +75,7 @@ bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal
 bg # background job 
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
+bluetoothctl 
 bsdtar --list --file /boot/initramfs-linux.img | less # print kernel image files 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
