@@ -21,14 +21,11 @@ TAGS=all guard
 TAGS="$USER" guard 
 abcde -o mp3 # rip audio cd 
 acpi_listen # events power configuration 
-adb devices # list 
 adb devices # list android 
-adb push cm.zip /sdcard # upload 
-adb reboot bootloader 
+adb push PATH \$EXTERNAL_STORAGE # upload file directory recursive android 
 adb reboot bootloader # fastboot android 
-adb reboot download 
-adb shell 
 adb shell logcat -T 10 # list follow android log 
+adb shell ls \$EXTERNAL_STORAGE # list file directory android 
 adb shell # android 
 alias ls 
 align_image_stack -vl -a aligned ./*.jpg # graphics 
