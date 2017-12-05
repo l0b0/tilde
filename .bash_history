@@ -477,6 +477,7 @@ git stash show --patch # diff
 git stash && git merge origin/master && git stash pop 
 git stash && git pull && git stash pop 
 git stash && git rebase --interactive HEAD~20 
+git stash --keep-index # stage 
 git stash --patch # diff create 
 git status 
 git submodule add --force git://github.com/l0b0/make-includes.git 
