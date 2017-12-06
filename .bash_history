@@ -22,7 +22,7 @@ TAGS="$USER" guard
 abcde -o mp3 # rip audio cd 
 acpi_listen # events power configuration 
 adb devices # list android 
-adb push PATH \$EXTERNAL_STORAGE # upload file directory recursive android 
+adb push PATH /storage/PATH # upload file directory recursive android 
 adb reboot bootloader # fastboot android 
 adb shell logcat -T 10 # list follow android log 
 adb shell ls \$EXTERNAL_STORAGE # list file directory android 
