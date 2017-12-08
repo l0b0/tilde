@@ -160,6 +160,17 @@
         <option value="perl.sub.polynamed"/>
         <option value="perl.sub.polynamed.reverse"/>
         <option value="properties.index"/>
+        <option value="puppet.class"/>
+        <option value="puppet.class.instantiation"/>
+        <option value="puppet.function"/>
+        <option value="puppet.namespace"/>
+        <option value="puppet.node"/>
+        <option value="puppet.resource"/>
+        <option value="puppet.resource.by.type"/>
+        <option value="puppet.subclass"/>
+        <option value="puppet.top.variable"/>
+        <option value="puppet.type"/>
+        <option value="puppet.variable"/>
         <option value="sql.column.name"/>
         <option value="sql.names"/>
         <option value="sql.table.shortName"/>
