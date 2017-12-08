@@ -609,6 +609,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Start most common applications
 awful.spawn("firefox")
 awful.spawn("pidgin")
+awful.spawn("seafile-applet")
 awful.spawn("thunar")
 awful.spawn("thunderbird")
 awful.spawn(terminal)
