@@ -50,8 +50,8 @@ set pastetoggle=<F2>
 set tabstop=4
 set shiftwidth=4
 set expandtab
-autocmd FileType ruby,eruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType c set autoindent shiftwidth=4 softtabstop=4 noexpandtab
+autocmd FileType eruby,ruby,yaml set autoindent shiftwidth=2 softtabstop=2 expandtab
 
 " Switch between tabs and spaces for indentation
 nmap <silent> <S-t> :set expandtab! | if &expandtab | retab | echo 'spaces' | else | retab! | echo 'tabs' | endif<CR>
