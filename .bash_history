@@ -1313,6 +1313,7 @@ pep8-python2 --help
 perlbrew switch 
 perldoc file.pl # help 
 perldoc -f kill # help function 
+perl -MFile::stat -MData::Dumper -le '$f = stat shift; print Dumper($f);' PATH # print file metadata 
 perl -c file.pl # check syntax 
 perl -d -e 1 # interactive console 
 perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
