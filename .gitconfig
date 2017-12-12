@@ -38,3 +38,6 @@
 	program = gpg2
 [include]
 	path = .gitconfig_local
+[filter "ignore_password_lines"]
+	clean = sed /password/d
+	smudge = cat
