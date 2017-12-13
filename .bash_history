@@ -1259,7 +1259,6 @@ nmap -T Aggressive -A -v 192.168.0.1
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
 nmap -v -sP 192.168.0.0/24 
 nm libfoo.so | grep '^ *U ' # dev undefined object 
-nm-connection-editor # network manager gui 
 node # javascript 
 node -v 
 notify-send "summary" "body" 
@@ -1725,7 +1724,6 @@ uname --kernel-name --kernel-release --kernel-version --machine --processor --ha
 unetbootin 
 unetbootin & 
 unexpand --tabs=4 example.txt # convert space tab 
-unity-control-center # ubuntu settings gui 
 unix2dos contacts.vcf # newline convert 
 unset variable_or_function 
 unset -f function 
@@ -1823,7 +1821,6 @@ yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git a
 youtube-dl --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue --format best --prefer-free-formats '' # download video files 
 zip --update file.zip input # add file compress zip 
 zless /proc/config.gz # kernel configuration parameter 
- make MKTEMP=/bin/mktemp SED=/bin/sed --directory ~/dev/tilde clean 
  make --directory ~/dev/tilde clean 
  vim ~/.bash_history # shell 
 ! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
