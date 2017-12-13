@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="Perl5ApplicationSettings">
-    <option name="pluginVersion" value="2017.4"/>
+    <option name="pluginVersion" value="2017.4.1"/>
     <option name="popupShown" value="true"/>
   </component>
 </application>
