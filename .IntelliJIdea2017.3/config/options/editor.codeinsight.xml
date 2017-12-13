@@ -4,4 +4,11 @@
     <option name="COLLAPSE_FILE_HEADER" value="false"/>
     <option name="COLLAPSE_IMPORTS" value="false"/>
   </component>
+  <component name="JavaCodeFoldingSettings">
+    <option name="collapseLambdas" value="false"/>
+    <option name="collapseOneLineMethods" value="false"/>
+  </component>
+  <component name="RsCodeFoldingSettings">
+    <option name="collapsibleOneLineMethods" value="false"/>
+  </component>
 </application>
