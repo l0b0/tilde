@@ -5,25 +5,15 @@ Pattern History List=\\0
 Options are expanded=true
 
 [Album Settings]
-Album Collections=,Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
-Album Sort Order=0
 Album Sort Role=0
 Default Icon Size=142
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
-Icon Show Comments=false
-Icon Show Coordinates=false
 Icon Show Date=false
-Icon Show Fullscreen=false
 Icon Show Image Format=true
 Icon Show Modification Date=false
-Icon Show Name=true
-Icon Show Overlays=false
-Icon Show Rating=false
 Icon Show Resolution=false
 Icon Show Size=false
-Icon Show Tags=false
-Icon Show Title=false
 IconView Font=DejaVu Sans,12,-1,5,50,0,0,0,0,0
 Image Group Mode=2
 Image Group Sort Order=0
@@ -32,7 +22,6 @@ Image Sorting=0
 Item Left Click Action=0
 Preview Convert To Eight Bit=true
 Preview Load Full Image Size=false
-Preview Show Icons=false
 Preview Zoom Use Original Size=true
 Rating Filter Condition=0
 Recursive Albums=false
@@ -41,9 +30,7 @@ Show Album ToolTips=false
 Show Folder Tree View Items Count=false
 Show Thumbbar=true
 Show ToolTips=false
-Sidebar Title Style=0
 Theme=Default
-ToolTips Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 ToolTips Show Album Caption=true
 ToolTips Show Album Category=true
 ToolTips Show Album Collection=true
@@ -77,14 +64,8 @@ ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
 TreeView Font=DejaVu Sans,12,-1,5,50,0,0,0,0,0
 
-[AlbumDB Settings]
-Recently Used Tags=
-
 [AlbumFolderView Sidebar]
-CurrentIndex=
-Expansion=0
 RestoreChecked=false
-Selection=
 SortColumn=0
 SortOrder=0
 
@@ -93,7 +74,6 @@ CaseSensitive=0
 
 [AlbumSelectWidget]
 AlbumTreeViewCurrentIndex=
-AlbumTreeViewExpansion=
 AlbumTreeViewRestoreChecked=false
 AlbumTreeViewSelection=
 AlbumTreeViewSortColumn=0
@@ -107,88 +87,14 @@ Sync Digikam to Baloo=false
 [Batch Queue Manager Settings]
 
 [Camera Settings]
-AlbumBox Expanded=false
-AutoAlbumDate=true
-AutoAlbumExt=false
-AutoRotate=true
-BackupOriginalRawFile=false
-Case Type=0
-CompressLossLess=true
-ConvertDng=false
-ConvertJpeg=false
-CustomDateFormat=
-DNGSettings Expanded=false
-DefaultTargetAlbumId=1
-DocumentName=false
+DefaultTargetAlbumId=0
 FileSaveConflictRule=1
-FixDateTime=false
-FolderDateFormat=0
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
-LossLessFormat=0
-Manual Rename String=
-OnFlyBox Expanded=true
-PreviewMode=1
-Rename Method=0
-RenameCustomizer Expanded=true
-Script=
-ScriptingBox Expanded=true
-ShowLog=false
-Template=0
-ToolBarsMovable=Disabled
-TurnHighQualityThumbs=true
-UseDefaultTargetAlbum=true
-UseFileMetadata=true
-
-[CameraGui Sidebar Right]
-ActiveTab=3
-Minimized=false
-RestoreSize=-1
-
-[CameraGui Sidebar Right][Camera Item Properties Tab]
-FileProperties Expanded=true
-PhotographProperties Expanded=true
-VideoProperties Expanded=true
-
-[CameraGui Sidebar Right][GPS Properties Tab]
-Sort Order=0
-Web GPS Locator=0
-
-[CameraGui Sidebar Right][GPS Properties Tab][Map Widget]
-Backend=marble
-Center=geo:52,6
-GoogleMaps Map Type=ROADMAP
-GoogleMaps Show Map Type Control=true
-GoogleMaps Show Navigation Control=true
-GoogleMaps Show Scale Control=true
-Marble Map Theme=atlas
-Marble Projection=spherical
-Marble Show Compass=false
-Marble Show Navigation=false
-Marble Show Overview Map=false
-Marble Show Scale Bar=false
-Marker Grouping Radius=1
-Mouse Mode=0
-Preview Grouped Items=true
-Preview Single Items=true
-Show Thumbnails=true
-Show numbers on items=true
-Sticky Mode State=false
-Thumbnail Grouping Radius=30
-Thumbnail Size=60
-Zoom=marble:900
-
-[CameraGui Sidebar Right][Metadata Properties Tab]
-Current EXIF Item=
-Current IPTC Item=
-Current MAKERNOTE Item=
-Current XMP Item=
-EXIF Level=2
-IPTC Level=2
-ImagePropertiesMetaData Tab=0
-MAKERNOTE Level=2
-XMP Level=2
+TurnHighQualityThumbs=false
+UseDefaultTargetAlbum=false
+UseFileMetadata=false
 
 [Color Management]
 BPCAlgorithm=true
@@ -207,7 +113,6 @@ LastSpecifiedInputProfile=
 LastUncalibratedBehavior=2080
 ManagedPreviews=true
 ManagedView=true
-MonitorProfileFile[$e]=$HOME/dev/tilde/.color/icc/Dell_U2412M.icc
 ProofingRenderingIntent=3
 RenderingIntent=0
 WorkProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
@@ -778,7 +683,6 @@ Internal Database Server Path=
 
 [DateFolderView Sidebar]
 CurrentIndex=
-Expansion=
 Selection=
 SortColumn=0
 SortOrder=0
@@ -895,7 +799,6 @@ Detection Accuracy=0.8
 [Find Duplicates View]
 AlbumComboBox-Checked=
 AlbumComboBox-CurrentIndex=
-AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
 AlbumComboBox-Selection=
 AlbumComboBox-SortColumn=0
@@ -914,8 +817,6 @@ TagComboBox-Selection=
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
-UseWholePAlbumsEntry=true
-UseWholeTAlbumsEntry=true
 UseWholeTagsEntry=true
 
 [Fuzzy Search Sidebar]
@@ -983,22 +884,18 @@ Zoom=marble:900
 CaseSensitive=0
 
 [General Settings]
-Application Style=Oxygen
 Apply Sidebar Changes Directly=false
 Clean core DB At Start=false
-Finger Prints Generator First Run=true
 FullScreen Hide SideBars=false
 FullScreen Hide ThumbBar=true
 FullScreen Hide ToolBars=false
 Icon Theme=
-MenuBar=Disabled
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=false
 Show Trash Delete Dialog=false
-StatusBar=Disabled
 String Comparison Type=0
 ToolBarsMovable=Disabled
 Use Large Thumbs=false
@@ -1012,9 +909,6 @@ Do metadata operations on all=2
 Do slideshow operations on all=2
 Operate tools on all=2
 Rename all=2
-
-[HTML Settings]
-AutomaticDetectionLanguage=1
 
 [Image Properties SideBar]
 EXIF Tags Filter=
@@ -1066,10 +960,7 @@ JPEGCompression=95
 JPEGSubSampling=0
 LastSavedImageExtension=jpeg
 Median Filter Passes=0
-MenuBar=Disabled
 Noise Reduction Chrominance Threshold=0
-Noise Reduction Threshold=100
-Noise Reduction Type=1
 Output Color Space=1
 OverExposureColor=0,0,0
 OverExposureIndicator=true
@@ -1081,7 +972,6 @@ PreviewMode=128
 Show Thumbbar=false
 ShowImageSettingsDialog=false
 SixteenBitsImage=true
-SlideScreen=-1
 SlideShowDelay=5
 SlideShowLoop=false
 SlideShowPrintApertureFocal=false
@@ -1096,8 +986,6 @@ SlideShowPrintTags=false
 SlideShowPrintTitle=false
 SlideShowProgressIndicator=true
 SlideShowStartCurrent=false
-State=AAAA/wAAAAD9AAAAAAAAAAAAAAAAAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
-StatusBar=Disabled
 TIFFCompression=true
 ToolBarsMovable=Disabled
 Unclip Color=0
@@ -1117,11 +1005,9 @@ demosaicing Expanded=true
 whitebalance Expanded=true
 
 [ImageViewer Settings][Right Sidebar]
-ActiveTab=0
 DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
-Minimized=true
 PhotographProperties Expanded=true
 RestoreSize=-1
 VideoProperties Expanded=true
@@ -1197,7 +1083,6 @@ Version Properties View Mode=2
 ToolBarsMovable=Disabled
 
 [Import Filters]
-CurrentFilter[$d]
 Filter0=All Files|false|||
 Filter1=Only New Files|true|||
 Filter2=Raw Files|false|||image/x-nikon-nef;image/x-fuji-raf;image/x-adobe-dng;image/x-panasonic-raw;image/x-olympus-orf;image/x-kodak-dcr;image/x-kodak-k25;image/x-sony-arw;image/x-minolta-mrw;image/x-kodak-kdc;image/x-sigma-x3f;image/x-sony-srf;image/x-pentax-pef;image/x-panasonic-raw2;image/x-canon-crw;image/x-sony-sr2;image/x-canon-cr2
@@ -1217,7 +1102,6 @@ Icon Show Rating=true
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
-IconView Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 Image Group Mode=1
 Image Sort Order=0
 Image Sorting=0
@@ -1227,7 +1111,6 @@ Preview Load Full Image Size=false
 Preview Show Icons=true
 Show Thumbbar=true
 Show ToolTips=false
-ToolTips Font=Sans Serif,9,-1,0,50,0,0,0,0,0
 ToolTips Show File Date=false
 ToolTips Show File Name=true
 ToolTips Show File Size=false
@@ -1242,10 +1125,6 @@ ToolTips Show Photo Make=true
 ToolTips Show Photo WB=false
 ToolTips Show Tags=true
 
-[KFileDialog Settings]
-Recent Files[$e]=
-Recent URLs[$e]=
-
 [Labels Sidebar]
 ColorSelection=
 Expansion=
@@ -1258,10 +1137,8 @@ Auto Sync Preview=true
 Clear On Close=false
 FullScreen Hide SideBars=false
 FullScreen Hide ToolBars=false
-Load Full Image size=false
 Navigate By Pair=false
 Show Thumbbar=true
-ToolBarsMovable=Disabled
 
 [LightTable Settings][Left Sidebar]
 ActiveTab=0
@@ -1270,7 +1147,6 @@ FileProperties Expanded=true
 ItemProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=-1
 VideoProperties Expanded=true
 
 [LightTable Settings][Left Sidebar][Captions Tags Properties Tab]
@@ -1347,7 +1223,6 @@ FileProperties Expanded=true
 ItemProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=-1
 VideoProperties Expanded=true
 
 [LightTable Settings][Right Sidebar][Captions Tags Properties Tab]
@@ -1417,9 +1292,6 @@ XMP Level=2
 Version Properties Tab=versions
 Version Properties View Mode=2
 
-[LightTable Thumbbar]
-ToolBarsMovable=Disabled
-
 [MainWindow]
 
 [Metadata Settings]
@@ -1446,9 +1318,6 @@ Write RAW Files=false
 
 [MetadataSelectorView Search Text Tool]
 CaseSensitive=0
-
-[Notification Messages]
-Select Locked ItemsToggle LockCtrl+L=false
 
 [People Sidebar]
 CurrentIndex=
@@ -1478,8 +1347,6 @@ EnableCACorrection=true
 Es Median Filter Passes=0
 Expo Correction=true
 Expo Correction Highlight=0
-Expo Correction Shift=1
-FineExposure=0
 FixColorsHighlights=false
 Four Color RGB=false
 Gamma=1
@@ -1488,8 +1355,6 @@ Histogram Scale=1
 MainExposure=0
 Median Filter Passes=0
 Noise Reduction Chrominance Threshold=0
-Noise Reduction Threshold=100
-Noise Reduction Type=1
 Output Color Space=1
 RawCurveChannel0Point0=0,0
 RawCurveChannel0Point1=-1,-1
@@ -1587,7 +1452,6 @@ RawCurveChannel4Point8=-1,-1
 RawCurveChannel4Point9=-1,-1
 RawCurveChannel4Type=0
 Saturation=1
-Settings Page=0
 SixteenBitsImage=false
 Unclip Color=0
 Use Black Point=false
@@ -1602,13 +1466,6 @@ demosaicing Expanded=true
 exposure Expanded=true
 luminositycurve Expanded=false
 whitebalance Expanded=true
-
-[RawCameraDlgSearchBar Search Text Tool]
-CaseSensitive=0
-
-[Recent Dirs]
-collectionlocation[$e]=file://$HOME/pictures
-digikam-image-export[$e]=file://$HOME/,file://$HOME
 
 [Search Sidebar]
 CurrentIndex=
@@ -1663,9 +1520,6 @@ SortOrder=0
 [TimeLineViewSearchDateBar Search Text Tool]
 CaseSensitive=0
 
-[TipOfDay]
-RunOnStart=false
-
 [Versioning Settings]
 Auto-Save When Closing Editor=false
 Non-Destructive Editing Enabled=true
@@ -1695,170 +1549,6 @@ Histogram Scale=1
 Hor.Oriented Aspect Ratio=13
 Hor.Oriented Aspect Ratio Orientation=0
 Precise Aspect Ratio Crop=false
-Ver.Oriented Aspect Ratio=13
-Ver.Oriented Aspect Ratio Orientation=0
-
-[bcgadjust Tool]
-BrightnessAdjustment=0
-ContrastAdjustment=1
-GammaAdjustment=1
-Histogram Channel=0
-Histogram Scale=1
-
-[colorbalance Tool]
-BlueAdjustment=1
-GreenAdjustment=1
-Histogram Channel=0
-Histogram Scale=1
-RedAdjustment=1
-
-[convertbw Tool]
-BW Film=7
-BW Filter=0
-BW Tone=25
-BWSepiaCurveChannel0Point0=0,0
-BWSepiaCurveChannel0Point1=-1,-1
-BWSepiaCurveChannel0Point10=-1,-1
-BWSepiaCurveChannel0Point11=-1,-1
-BWSepiaCurveChannel0Point12=-1,-1
-BWSepiaCurveChannel0Point13=-1,-1
-BWSepiaCurveChannel0Point14=-1,-1
-BWSepiaCurveChannel0Point15=-1,-1
-BWSepiaCurveChannel0Point16=65025,65025
-BWSepiaCurveChannel0Point17=-1,-1
-BWSepiaCurveChannel0Point2=-1,-1
-BWSepiaCurveChannel0Point3=-1,-1
-BWSepiaCurveChannel0Point4=-1,-1
-BWSepiaCurveChannel0Point5=-1,-1
-BWSepiaCurveChannel0Point6=-1,-1
-BWSepiaCurveChannel0Point7=-1,-1
-BWSepiaCurveChannel0Point8=-1,-1
-BWSepiaCurveChannel0Point9=-1,-1
-BWSepiaCurveChannel0Type=0
-BWSepiaCurveChannel1Point0=0,0
-BWSepiaCurveChannel1Point1=-1,-1
-BWSepiaCurveChannel1Point10=-1,-1
-BWSepiaCurveChannel1Point11=-1,-1
-BWSepiaCurveChannel1Point12=-1,-1
-BWSepiaCurveChannel1Point13=-1,-1
-BWSepiaCurveChannel1Point14=-1,-1
-BWSepiaCurveChannel1Point15=-1,-1
-BWSepiaCurveChannel1Point16=65025,65025
-BWSepiaCurveChannel1Point17=-1,-1
-BWSepiaCurveChannel1Point2=-1,-1
-BWSepiaCurveChannel1Point3=-1,-1
-BWSepiaCurveChannel1Point4=-1,-1
-BWSepiaCurveChannel1Point5=-1,-1
-BWSepiaCurveChannel1Point6=-1,-1
-BWSepiaCurveChannel1Point7=-1,-1
-BWSepiaCurveChannel1Point8=-1,-1
-BWSepiaCurveChannel1Point9=-1,-1
-BWSepiaCurveChannel1Type=0
-BWSepiaCurveChannel2Point0=0,0
-BWSepiaCurveChannel2Point1=-1,-1
-BWSepiaCurveChannel2Point10=-1,-1
-BWSepiaCurveChannel2Point11=-1,-1
-BWSepiaCurveChannel2Point12=-1,-1
-BWSepiaCurveChannel2Point13=-1,-1
-BWSepiaCurveChannel2Point14=-1,-1
-BWSepiaCurveChannel2Point15=-1,-1
-BWSepiaCurveChannel2Point16=65025,65025
-BWSepiaCurveChannel2Point17=-1,-1
-BWSepiaCurveChannel2Point2=-1,-1
-BWSepiaCurveChannel2Point3=-1,-1
-BWSepiaCurveChannel2Point4=-1,-1
-BWSepiaCurveChannel2Point5=-1,-1
-BWSepiaCurveChannel2Point6=-1,-1
-BWSepiaCurveChannel2Point7=-1,-1
-BWSepiaCurveChannel2Point8=-1,-1
-BWSepiaCurveChannel2Point9=-1,-1
-BWSepiaCurveChannel2Type=0
-BWSepiaCurveChannel3Point0=0,0
-BWSepiaCurveChannel3Point1=-1,-1
-BWSepiaCurveChannel3Point10=-1,-1
-BWSepiaCurveChannel3Point11=-1,-1
-BWSepiaCurveChannel3Point12=-1,-1
-BWSepiaCurveChannel3Point13=-1,-1
-BWSepiaCurveChannel3Point14=-1,-1
-BWSepiaCurveChannel3Point15=-1,-1
-BWSepiaCurveChannel3Point16=65025,65025
-BWSepiaCurveChannel3Point17=-1,-1
-BWSepiaCurveChannel3Point2=-1,-1
-BWSepiaCurveChannel3Point3=-1,-1
-BWSepiaCurveChannel3Point4=-1,-1
-BWSepiaCurveChannel3Point5=-1,-1
-BWSepiaCurveChannel3Point6=-1,-1
-BWSepiaCurveChannel3Point7=-1,-1
-BWSepiaCurveChannel3Point8=-1,-1
-BWSepiaCurveChannel3Point9=-1,-1
-BWSepiaCurveChannel3Type=0
-BWSepiaCurveChannel4Point0=0,0
-BWSepiaCurveChannel4Point1=-1,-1
-BWSepiaCurveChannel4Point10=-1,-1
-BWSepiaCurveChannel4Point11=-1,-1
-BWSepiaCurveChannel4Point12=-1,-1
-BWSepiaCurveChannel4Point13=-1,-1
-BWSepiaCurveChannel4Point14=-1,-1
-BWSepiaCurveChannel4Point15=-1,-1
-BWSepiaCurveChannel4Point16=65025,65025
-BWSepiaCurveChannel4Point17=-1,-1
-BWSepiaCurveChannel4Point2=-1,-1
-BWSepiaCurveChannel4Point3=-1,-1
-BWSepiaCurveChannel4Point4=-1,-1
-BWSepiaCurveChannel4Point5=-1,-1
-BWSepiaCurveChannel4Point6=-1,-1
-BWSepiaCurveChannel4Point7=-1,-1
-BWSepiaCurveChannel4Point8=-1,-1
-BWSepiaCurveChannel4Point9=-1,-1
-BWSepiaCurveChannel4Type=0
-ContrastValueAdjustment=1
-Film Expanded=true
-Histogram Channel=0
-Histogram Scale=1
-Lens Filters Expanded=false
-Luminosity Expanded=false
-StrengthAdjustment=1
-Tone Expanded=false
-
-[freerotation Tool]
-Anti Aliasing=true
-Auto Crop Type=2
-AutoAdjustContainer Expanded=true
-SettingsContainer Expanded=true
-
-[hsladjust Tool]
-Histogram Channel=0
-Histogram Scale=1
-HueAdjustment=0
-LighnessAdjustment=0
-SaturationAdjustment=0
-VibranceAdjustment=0
-
-[import_mapwidgetview]
-Sort Order=0
-
-[import_mapwidgetview][Central Map Widget]
-Backend=marble
-Center=geo:52,6
-GoogleMaps Map Type=ROADMAP
-GoogleMaps Show Map Type Control=true
-GoogleMaps Show Navigation Control=true
-GoogleMaps Show Scale Control=true
-Marble Map Theme=atlas
-Marble Projection=spherical
-Marble Show Compass=false
-Marble Show Navigation=false
-Marble Show Overview Map=false
-Marble Show Scale Bar=false
-Marker Grouping Radius=1
-Mouse Mode=0
-Preview Grouped Items=true
-Preview Single Items=true
-Show Thumbnails=true
-Show numbers on items=true
-Thumbnail Grouping Radius=30
-Thumbnail Size=60
-Zoom=marble:900
 
 [mainwindow_mapwidgetview]
 Sort Order=0
@@ -1891,7 +1581,6 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=5
-Header State=\x00\x00\x00ˇ\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x05\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01Í\x00\x00\x00\x05\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00aˇˇˇˇ\x00\x00\x00Å\x00\x00\x00\x00\x00\x00\x00\x05\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00b\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03Ë\x00\x00\x00\x00b
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]
@@ -1913,20 +1602,3 @@ NSettings=0
 [mainwindow_tableview][Current Profile][Column 4]
 Column Id=digikam-title
 NSettings=0
-
-[perspective Tool]
-Draw Grid=false
-Draw While Moving=true
-Inverse Transformation=false
-
-[whitebalance Tool]
-Black=0
-Dark=0.5
-FineExposure=0
-Gamma=1
-Green=1
-Histogram Chanel=0
-Histogram Scale=1
-MainExposure=0
-Saturation=1
-Temperature=6500

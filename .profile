@@ -27,3 +27,5 @@ if [[ -e /usr/lib/jvm/default ]]
 then
     export JAVA_HOME=/usr/lib/jvm/default
 fi
+
+export QT_QPA_PLATFORMTHEME="qt5ct"
