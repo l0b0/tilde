@@ -1,5 +1,6 @@
 .*Idea*/system/token
 .*Idea*/**/*.lock
+.*Idea*/config/disabled_plugins.txt
 .*Idea*/config/javascript/
 .*Idea*/config/jdbc-drivers/
 .*Idea*/config/*.key
