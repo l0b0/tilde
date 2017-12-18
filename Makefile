@@ -28,6 +28,7 @@ dotfiles = .ackrc \
            .gitconfig \
            .imapfilter \
            .inputrc \
+           $(wildcard .IdeaIC*) \
            $(wildcard .IntelliJIdea*) \
            .ipython \
            .kde4 \
@@ -111,7 +112,7 @@ clean_sqlite:
 
 .PHONY: clean_xml
 clean_xml:
-	$(MAKE) XML_FILES_COMMAND='$(FIND) .idea .IntelliJIdea* -name "*.xml" -print0' sort-xml-files
+	$(MAKE) XML_FILES_COMMAND='$(FIND) .idea .IdeaIC* .IntelliJIdea* -name "*.xml" -print0' sort-xml-files
 
 .PHONY: clean
 clean: $(gpg_backup_path) clean_comments clean_line_endings clean_history_tags clean_x_resources clean_sort_text_files clean_signatures clean_sqlite clean_xml

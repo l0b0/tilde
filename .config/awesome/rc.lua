@@ -525,7 +525,7 @@ awful.rules.rules = {
 
     { rule_any = { class = { "Firefox", "Tor Browser" } },
       properties = { screen = 1, tag = browser_tag } },
-    { rule_any = { class = { "Digikam", "digikam", "Gimp", "Hugin", "Inkscape", "jetbrains-clion", "jetbrains-idea", "keepassxc", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman" } },
+    { rule_any = { class = { "Digikam", "digikam", "Gimp", "Hugin", "Inkscape", "jetbrains-clion", "jetbrains-idea", "jetbrains-idea-ce", "keepassxc", "libreoffice-startcenter", "Openscad", "Simple-scan", "Sqliteman" } },
       properties = { screen = 1, tag = editor_tag } },
     { rule_any = { class = { "Git-gui" } },
       properties = { screen = 1, tag = vcs_tag } },

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="LafManager">
+    <laf class-name="com.intellij.ide.ui.laf.IntelliJLaf"/>
+  </component>
+</application>

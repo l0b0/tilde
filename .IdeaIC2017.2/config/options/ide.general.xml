@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="GeneralSettings">
+    <option name="confirmExit" value="false"/>
+    <option name="showTipsOnStartup" value="false"/>
+  </component>
+</application>
