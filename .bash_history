@@ -1372,7 +1372,8 @@ pulseaudio --kill && pulseaudio --start
 puppet apply --noop --modulepath modules manifests/site.pp # no-op test configuration 
 puppet describe --short user 
 puppet help 
-puppet module install --modulepath modules puppetlabs-java 
+puppet module install --modulepath vendor puppetlabs/stdlib 
+puppet module upgrade --modulepath vendor puppetlabs/stdlib 
 puppet resource user 
 puppet resource user root 
 puppet resource --help 
