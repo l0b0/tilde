@@ -35,7 +35,7 @@ aplay --list-devices # list audio hardware
 aplay --list-pcms # list audio output speaker 
 appres URxvt # list x application resource database 
 appres XTerm # list x application resource database 
-apropos bash # help man 
+apropos REGEX # help man 
 apropos --exact mv # help man 
 archlinux-java status 
 arecord --duration 5 --format dat recording.wav # record audio file 
@@ -50,12 +50,12 @@ avconv -i input.mov -codec:video libx264 -codec:audio copy -filter transpose=clo
 avconv -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -an -r 25 -s hd1080 timelapse2.mp4 # video convert 
 awesome --check # configuration verify parse 
 awk '{ print $22 }' /proc/1/stat # process start time jiffies since boot 
-basename "$(find -L /dev/disk/by-uuid -samefile /dev/sda1)" # disk uuid 
+basename "$(find -L /dev/disk/by-uuid -samefile /dev/DISK)" # disk uuid 
+basename -- PATH.dat .dat # file name extension 
 basename -- "$PWD" # current directory name 
-basename -- /path/to/file.dat .dat # file name extension 
 bashdb example.sh # debug shell script 
 bash -o noexec ~/.bash_history # verify shell script syntax 
-bash --noprofile --norc -x # test trace shell 
+bash --noprofile --norc -o xtrace # test trace shell 
 bc --mathlib <<< 'e(1)' # calculator math e power 
 bc <<< '2+2' # calculator math 
 bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
@@ -1515,7 +1515,7 @@ sudo chroot /var/jail/"$USER" su --login "$USER" # jail
 sudo clamscan --quiet --recursive / # antivirus scan 
 sudo cpanm Net::LDAP # install ldap 
 sudo crontab -e # edit 
-sudo cryptsetup luksDump /dev/sda # list property luks 
+sudo cryptsetup luksDump /dev/DISK # list property luks 
 sudo cryptsetup status lvm # encryption disk 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
