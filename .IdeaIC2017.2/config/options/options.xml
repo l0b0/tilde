@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="PropertiesComponent">
+    <property name="LayoutCode.optimizeImports" value="true"/>
+    <property name="LayoutCode.processChangedText" value="false"/>
+    <property name="LayoutCode.rearrangeEntriesPython" value="false"/>
     <property name="ignoreUltimateEdition" value="true"/>
   </component>
 </application>
