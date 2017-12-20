@@ -1565,6 +1565,7 @@ sudo ip route del default via 1.2.3.4 dev eth0
 sudo kismet # wireless network monitor 
 sudo lastb | less # list all bad failed user login history 
 sudo ldconfig 
+sudo lightdm-gtk-greeter-settings # login config 
 sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
 sudo ln --symbolic /media/windows/Windows/Fonts /usr/share/fonts/WindowsFonts # enable windows fonts 
 sudo loadkeys dvorak # keyboard layout vt terminal 
