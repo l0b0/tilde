@@ -2,8 +2,6 @@
 ./configure --help | less # packaging 
 ./gradlew # java build project 
 ./setup.py test 
-~/dev/awmtt/awmtt start --config ~/.config/awesome/rc.lua # debug awesome configuration 
-~/dev/awmtt/awmtt stop # debug awesome configuration 
 ~/dev/flickrmirrorer/flickrmirrorer.py ~/backup/flickr.com 
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
@@ -26,7 +24,6 @@ adb devices # list android
 adb push PATHS /sdcard/ # upload file directory recursive android 
 adb reboot bootloader # fastboot android 
 adb shell logcat -T 10 # list follow android log 
-adb shell ls \$EXTERNAL_STORAGE # list file directory android 
 adb shell # android 
 alias ls 
 align_image_stack -vl -a aligned ./*.jpg # graphics 
@@ -39,18 +36,11 @@ aplay --list-pcms # list audio output speaker
 appres XTerm # list x application resource database 
 apropos bash # help man 
 apropos --exact mv # help man 
-apropos . # all help man 
-arandr & # screen layout graphics hardware 
 archlinux-java status 
-arch # hardware 
 arecord --duration 5 --format dat recording.wav # record audio file 
 arecord --format dat | aplay # test audio input capture output playback default microphone speakers 
 arecord --list-devices # list audio input capture microphones 
 arp -a # network list arp cache 
-ash -o noexec ~/dev/makeThin/makeThin.ash # verify syntax 
-aticonfig --initial=check # graphics amd x configuration 
-autoconf # compile 
-autoreconf --install # compile 
 avahi-browse --terminate --all # network services scan local remote 
 avahi-browse --terminate --ignore-local _workstation._tcp # network tcp workstations scan remote 
 avahi-browse-domains --terminate # network domains scan 
@@ -64,9 +54,7 @@ basename -- "$PWD" # current directory name
 basename -- /path/to/file.dat .dat # file name extension 
 bashdb example.sh # debug shell script 
 bash -o noexec ~/.bash_history # verify shell script syntax 
-bash -o xtrace # debug shell 
 bash --noprofile --norc -x # test trace shell 
-bchunk image.bin image.cue image.iso 
 bc --mathlib <<< 'e(1)' # calculator math e power 
 bc <<< '2+2' # calculator math 
 bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
