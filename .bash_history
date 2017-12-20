@@ -1527,6 +1527,7 @@ sudo clamscan --quiet --recursive / # antivirus scan
 sudo cpanm Net::LDAP # install ldap 
 sudo crontab -e # edit 
 sudo cryptsetup luksDump /dev/sda # list property luks 
+sudo cryptsetup status lvm # encryption disk 
 sudo delgroup example # delete group 
 sudo deluser example # delete user 
 sudo dmidecode --string system-product-name 
