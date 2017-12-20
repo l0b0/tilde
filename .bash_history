@@ -33,6 +33,7 @@ amixer --card 2 # list audio hardware device configuration
 aplay recording.wav # audio output 
 aplay --list-devices # list audio hardware 
 aplay --list-pcms # list audio output speaker 
+appres URxvt # list x application resource database 
 appres XTerm # list x application resource database 
 apropos bash # help man 
 apropos --exact mv # help man 
