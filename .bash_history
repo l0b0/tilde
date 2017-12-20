@@ -82,7 +82,7 @@ cat /proc/sys/dev/cdrom/info
 cat /proc/sys/kernel/pid_max # process 
 cat /proc/vmstat # hardware 
 cbatticon --help-all 
-cbatticon --list-batteries 
+cbatticon --list-power-supplies # battery 
 cd - # back 
 cd -- "$(mktemp --directory)" # create temporary directory 
 certutil # help 
