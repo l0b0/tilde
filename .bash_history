@@ -1690,7 +1690,7 @@ time bash -lc true # benchmark startup login shell
 time make test 
 tkmib & 
 tks -c ~/admin/timesheets/$(date +%Y-%m-%d).tks # timekeeping work commit 
-tks --list=month # timekeeping list work 
+tks --list=week # timekeeping list work 
 todos -- file # convert newline 
 top 
 top -c # command line 
