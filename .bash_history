@@ -2,7 +2,7 @@
 ./configure --help | less # packaging 
 ./gradlew # java build project 
 ./setup.py test 
-~/dev/flickrmirrorer/flickrmirrorer.py ~/backup/flickr.com 
+~/dev/flickrmirrorer/flickrmirrorer.py ~/pictures 
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
