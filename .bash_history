@@ -636,6 +636,7 @@ journalctl --catalog --since=today --unit=shadow.service
 jq . < *.json # json pretty-print 
 json_xs -t null < example.json # verify json format 
 json_xs < example.json # prettify json 
+kdiff3 --output OUTFILE OURS THEIRS # merge 
 keybase help 
 keybase login 
 keybase prove twitter 
