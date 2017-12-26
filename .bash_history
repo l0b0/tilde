@@ -1374,6 +1374,7 @@ pyflakes --help
 pylint --help 
 python -m py_compile script.py # verify code script 
 python -m timeit -s 'text = "sample string"; char = "g"' 'char in text' # timing benchmark 
+python -m venv virtualenv 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
@@ -1743,8 +1744,6 @@ vcard ~/contacts/*.vcf
 vim ~/admin/timesheets/$(date +%Y-%m-%d).tks 
 vim -c "setfiletype sh" example.txt 
 virtualbox & 
-virtualenv --help 
-virtualenv --python=python2.7 virtualenv 
 vlc http://www.lynnepublishing.com/surround/www_lynnemusic_com_surround_test.ac3 # audio 
 vlc --ffmpeg-hw --verbose 2 file.1080p.x264.mkv # video h.264 
 vlc --fullscreen --deinterlace -1 --deinterlace-mode yadif2x --video-filter postproc --postproc-q 6 --audio-language ja --sub-language en --verbose 2 --advanced dvdsimple:///dev/dvd & 
