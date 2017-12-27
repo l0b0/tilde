@@ -441,7 +441,7 @@ git push
 git push origin 123abc:master # push commit 
 git push origin :dead-branch # delete remote branch 
 git push origin :refs/tags/name # delete remote 
-git push --set-upstream origin master 
+git push --set-upstream origin BRANCH # push new branch 
 git push --tags 
 git rebase master 
 git rebase origin/master # avoid empty merge commit 
