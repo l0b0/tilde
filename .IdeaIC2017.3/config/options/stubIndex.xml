@@ -8,7 +8,6 @@
         <option value="Py.class.shortNameInsensitive"/>
         <option value="Py.class.super"/>
         <option value="Py.function.shortName"/>
-        <option value="Py.instanceAttribute.name"/>
         <option value="Py.variable.shortName"/>
         <option value="Python.Decorator"/>
         <option value="bash.function.name"/>
@@ -41,6 +40,8 @@
         <option value="java.module.name"/>
         <option value="jvm.static.member.name"/>
         <option value="jvm.static.member.type"/>
+        <option value="lua.global.name"/>
+        <option value="markdown.header"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex"/>
@@ -67,6 +68,11 @@
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasFqNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasByExpansionShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex"/>
+        <option value="org.rust.lang.core.resolve.indexes.RsLangItemIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustGotoClassIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustImplIndex.TraitImpls"/>
+        <option value="org.rust.lang.core.stubs.index.RustModulesIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RustNamedElementIndex"/>
         <option value="perl.glob"/>
         <option value="perl.global.array"/>
         <option value="perl.global.hash"/>

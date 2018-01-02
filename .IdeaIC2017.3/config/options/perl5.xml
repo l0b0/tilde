@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="Perl5ApplicationSettings">
+    <option name="pluginVersion" value="2017.4.1"/>
+    <option name="popupShown" value="true"/>
+  </component>
+  <component name="PerlInterpreters">
+    <perl version="2">
+      <additional/>
+      <homePath value="/usr/bin"/>
+      <name value="Perl v5.26.1"/>
+      <roots>
+        <annotationsPath>
+          <root type="composite"/>
+        </annotationsPath>
+        <classPath>
+          <root type="composite">
+            <root url="file:///usr/lib/perl5/5.26/core_perl" type="simple"/>
+            <root url="file:///usr/lib/perl5/5.26/site_perl" type="simple"/>
+            <root url="file:///usr/lib/perl5/5.26/vendor_perl" type="simple"/>
+            <root url="file:///usr/share/perl5/core_perl" type="simple"/>
+            <root url="file:///usr/share/perl5/site_perl" type="simple"/>
+            <root url="file:///usr/share/perl5/vendor_perl" type="simple"/>
+          </root>
+        </classPath>
+        <javadocPath>
+          <root type="composite"/>
+        </javadocPath>
+        <sourcePath>
+          <root type="composite"/>
+        </sourcePath>
+      </roots>
+      <type value="Perl5 Interpreter"/>
+      <version value="v5.26.1 for x86_64-linux-thread-multi"/>
+    </perl>
+  </component>
+</application>

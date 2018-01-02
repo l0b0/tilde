@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="PropertiesComponent">
+    <property name="Copy.OpenInEditor" value="true"/>
     <property name="LayoutCode.optimizeImports" value="true"/>
     <property name="LayoutCode.processChangedText" value="false"/>
     <property name="LayoutCode.rearrangeEntriesPython" value="false"/>
+    <property name="decompiler.legal.notice.accepted" value="true"/>
     <property name="ignoreUltimateEdition" value="true"/>
+    <property name="learn.toolwindow.button.info.shown" value="true"/>
   </component>
 </application>
