@@ -174,6 +174,7 @@ dotty graph.dot # graphics
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dot -V 
+drive=/dev/sdX && [[ -b "$drive" ]] && ! grep "^${drive}" /proc/mounts && sudo dd bs=4M if=ISO of="$drive" status=progress && sync # iso write disk 
 dropdb --username username dbname # postgresql 
 du --si --summarize --one-file-system .[!.]* * | sort --human-numeric-sort # find large directory file 
 du --si --summarize . # disk size 
