@@ -1535,6 +1535,7 @@ sudo extundelete --restore-all /dev/sdx1
 sudo faillog # log summary user 
 sudo fdisk -l # list all disks 
 sudo fdisk /dev/sdx # partition disk 
+sudo file --special-files /dev/sdX # detect disk type 
 sudo file /boot/vmlinuz-linux | grep --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
 sudo freshclam # antivirus update 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
