@@ -243,7 +243,6 @@ fgit --help
 fg # foreground job 
 fg && command # append command continue 
 file README.markdown 
-file /boot/vmlinuz-linux | grep --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
 find -L . -type l # broken symlinks 
 find -version 
 find . -empty 
@@ -1532,6 +1531,7 @@ sudo extundelete --restore-all /dev/sdx1
 sudo faillog # log summary user 
 sudo fdisk -l # list all disks 
 sudo fdisk /dev/sdx # partition disk 
+sudo file /boot/vmlinuz-linux | grep --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
 sudo freshclam # antivirus update 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
 sudo gpasswd --add "$USER" group # user add group 
