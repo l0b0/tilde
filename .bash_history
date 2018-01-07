@@ -1360,7 +1360,6 @@ ps -eo user= | sort | uniq --count | sort --reverse --numeric-sort # processes u
 ps -p $$ o ppid= # parent pid 
 ps --pid "$(find -L /proc/[0-9]*/exe ! -type l | cut --delimiter '/' --fields '3' | paste --serial --delimiters ',')" # non-kernel processes 
 ps --pid $$ # current shell 
-pulseaudio --kill && pulseaudio --start 
 puppet apply --noop --modulepath modules manifests/site.pp # no-op test configuration 
 puppet describe --short user 
 puppet help 
@@ -1668,6 +1667,7 @@ systemctl status display-manager.service
 systemctl status # service status 
 systemctl # service status 
 systemctl --failed # service status 
+systemctl --user restart pulseaudio.service 
 systemd-analyze blame # list boot service time 
 systemd-analyze critical-chain # boot process dependency time 
 systemd-analyze dot | dot -Tsvg > startup-dependencies.svg # 2d startup process dependencies 
