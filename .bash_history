@@ -225,6 +225,7 @@ facter id # user
 facter # hardware os 
 facter --help 
 fastboot devices # list android 
+fceux ROM # nes nintendo emulator game 
 fc # edit command history 
 fc -l # list commands history 
 fc -s # execute last command history 
@@ -826,6 +827,7 @@ man expand # help
 man expect # help 
 man faillog # help 
 man fakeroot # help 
+man fceux # help 
 man fc-cache # help 
 man fc-list # help 
 man fdisk # help 
