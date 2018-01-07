@@ -16,6 +16,9 @@ fi
 
 find "$(dirname "$directory")/patches" -type f -exec patch --directory=/ --forward --strip=0 --input={} ';'
 
+updatedb
+locate .pacnew
+
 running_kernel="$(uname -r)"
 installed_kernel="$(file --brief /boot/vmlinuz-linux | sed 's/.* version \([^ ]\+\).*/\1/')"
 if [ "$running_kernel" != "$installed_kernel" ]
