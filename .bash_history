@@ -283,6 +283,7 @@ for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 for path in ./*.zip; do unzip "$file"; done # all 
+for path in ./*/.git/..; do cd "$path"; git -C "$(git rev-parse --show-toplevel)" checkout-index --all --prefix="../$(basename "$(git rev-parse --show-toplevel)")-copy/"; cd -; done # backup repos 
 for path in /sys/class/net/*/address; do printf '%s\t%s\n' "$(cut --delimiter=/ --fields=5 <<< "$path")" "$(cat "$path")" ; done # list network interface mac address 
 for vcard in ~/contacts/*.vcf; do python2 ~/dev/msort/msort.py --bp 'BEGIN:VCARD.*?END:VCARD\r\n\r\n' --sp '^N:(.*)$' < "$vcard" > "$vcard"2; mv "$vcard"2 "$vcard"; done 
 free --human # memory 
