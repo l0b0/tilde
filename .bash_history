@@ -1112,6 +1112,7 @@ man tail # help
 man tar # help 
 man tcpdump # help 
 man tee # help 
+man tiff2pdf # help 
 man tig # help 
 man timedatectl # help 
 man timeout # help 
@@ -1679,6 +1680,7 @@ tar --extract --gzip --file ~/tilde.tar.gz # decompress gzip
 tar --extract --gzip --transform 's#.*/##' --file ~/tilde.tar.gz # decompress flatten gzip 
 tar --list --gzip --file ~/tilde.tar.gz 
 telnet localhost 1234 # network 
+tiff2pdf -o PDF_FILE TIFF_FILE # convert 
 tig 
 timedatectl status 
 timeout 1 sleep 2 
