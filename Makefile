@@ -94,7 +94,7 @@ clean_x_resources:
 
 .PHONY: clean_sort_text_files
 clean_sort_text_files:
-	for path in .ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .bash_history .config/darktable/keyboardrc_default; do \
+	for path in .gitignore .ipython/profile_default/history.py $(PREFIX)/.gnupg/ownertrust.txt .bash_history .config/darktable/keyboardrc_default; do \
 		$(SORT) --unique --output="$$path" "$$path" || exit $$?; \
 	done
 
