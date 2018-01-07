@@ -34,3 +34,4 @@
 .*Idea*/system/*/
 .*Idea*/**/*.lock
 Markdown_1.0.1*
+*.log*
