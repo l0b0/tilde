@@ -47,8 +47,6 @@ fi
 exec 1>&5 5>&- 2>&6 6>&- # Restore stdout and stderr pointers
 rm --recursive "$pipe_dir"
 
-/usr/bin/start-pulseaudio-x11
-
 wicd-client --tray >> "${HOME}/.wicd-client.log" 2>&1 &
 
 # Lock screen automatically

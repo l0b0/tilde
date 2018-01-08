@@ -143,8 +143,13 @@ $(dotfile_links): $(addprefix $(PREFIX)/,%) : $(addprefix $(CURDIR)/,%)
 .PHONY: dotfiles
 dotfiles: $(dotfile_links)
 
+.PHONY: pulseaudio
+pulseaudio:
+	systemctl --quiet --user is-enabled $@ || systemctl --user enable $@
+	systemctl --quiet --user is-active $@ || systemctl --user start $@
+
 .PHONY: install
-install: dotfiles
+install: dotfiles pulseaudio
 
 include make-includes/variables.mk
 include make-includes/xml.mk
