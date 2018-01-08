@@ -3,10 +3,6 @@ Home directory scripts and configuration
 
 These files are mostly my own settings and tools, but some may be more generally useful.
 
-This will probably be moved to a separate project after a while:
-
-* `scripts/duplicates.sh` - Check for duplicate files in two directories.
-
 Install
 -------
 
@@ -21,6 +17,6 @@ You'll need to remove existing dot files for this to install successfully.
 Test
 ----
 
-Requirements: `markdown`
+Requirements: `markdown-calibre`
 
     make test # Optional
