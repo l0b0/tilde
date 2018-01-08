@@ -166,6 +166,7 @@ dmesg --color=always | less -r # debug os startup
 docker build . 
 docker images # list 
 docker info 
+docker network inspect host # config 
 docker ps --all # list container 
 docker pull base/archlinux 
 docker run -it image /bin/bash # shell container 
