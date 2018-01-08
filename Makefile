@@ -14,6 +14,7 @@ SED = /usr/bin/sed
 SORT = LC_ALL=en_US.UTF-8 /usr/bin/sort --version-sort
 SQLITE = /usr/bin/sqlite3
 STRFILE = /usr/bin/strfile
+SYSTEMCTL = /usr/bin/systemctl
 UNZIP = /usr/bin/unzip
 WC = /usr/bin/wc
 WGET = /usr/bin/wget
@@ -145,8 +146,8 @@ dotfiles: $(dotfile_links)
 
 .PHONY: pulseaudio
 pulseaudio:
-	systemctl --quiet --user is-enabled $@ || systemctl --user enable $@
-	systemctl --quiet --user is-active $@ || systemctl --user start $@
+	$(SYSTEMCTL) --quiet --user is-enabled $@ || $(SYSTEMCTL) --user enable $@
+	$(SYSTEMCTL) --quiet --user is-active $@ || $(SYSTEMCTL) --user start $@
 
 .PHONY: install
 install: dotfiles pulseaudio
