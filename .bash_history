@@ -1666,6 +1666,7 @@ sudo -u postgres psql <<< "\dt" # public schema tables list all postgresql
 sudo -u postgres psql <<< "\du" # users list all postgresql 
 sudo -u postgres psql <<< "\encoding" # postgresql db encoding 
 sudo -u tor arm # anonymizing relay monitor service tor 
+sudo --list # show user capabilities 
 sudo /etc/init.d/postgresql reload 
 sum <<< '2 2' 
 su --login "$USER" # substitute user login 
