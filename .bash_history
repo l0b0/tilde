@@ -63,6 +63,9 @@ bg # background job
 bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
 bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 bluetoothctl 
+borg create --progress --remote-path=PATH --stats --verbose HOST:REPOSITORY/::$(date +%Y-%m-%d) DIRECTORY # backup directory 
+borg delete --remote-path=PATH HOST:REPOSITORY/::$(date +%Y-%m-%d) # remove backup 
+borg init --encryption=repokey --remote-path=PATH HOST:REPOSITORY 
 bsdtar --list --file /boot/initramfs-linux.img | less # print kernel image files 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
@@ -765,6 +768,10 @@ man bashdb # help
 man bash # help 
 man bc # help 
 man blkid # help 
+man borg # help 
+man borg-create # help 
+man borg-delete # help 
+man borg-init # help 
 man bsdtar # help 
 man builtins # help bash 
 man bunzip2 # help 
