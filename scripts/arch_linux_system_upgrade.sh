@@ -10,7 +10,7 @@ upgrade_start="$(date +%s)"
 pacman --sync --refresh --sysupgrade
 
 # Fix CUPS PPD files
-if /usr/sbin/cups-genppdupdate | grep Updated
+if /usr/sbin/cups-genppdupdate | grep --quiet Updated
 then
     systemctl restart org.cups.cupsd
 fi
