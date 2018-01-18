@@ -6,6 +6,7 @@ directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 pacman-key --refresh-keys
 
+upgrade_start="$(date +%s)"
 pacman --sync --refresh --sysupgrade
 
 # Fix CUPS PPD files
@@ -21,6 +22,12 @@ installed_kernel="$(file --brief /boot/vmlinuz-linux | sed 's/.* version \([^ ]\
 if [ "$running_kernel" != "$installed_kernel" ]
 then
     printf "Reboot needed to update running kernel from %s to %s\n" "$running_kernel" "$installed_kernel" >&2
+fi
+
+ramdisk_modified="$(stat --format=%Y /boot/initramfs-linux.img)"
+if [[ "$ramdisk_modified" > "$upgrade_start" ]]
+then
+    printf "Reboot needed to load new initial ramdisk environment\n" >&2
 fi
 
 updatedb
