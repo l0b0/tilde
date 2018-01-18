@@ -505,7 +505,7 @@ gpg --export --armor --output 92126B54.public.gpg.key 92126B54 # export public k
 gpg --full-gen-key # create key 
 gpg --gen-revoke --output 4DF0089E.rev 4DF0089E # generate revoke key certificate file 
 gpg --import ~/pubring.gpg 
-gpg --keyserver keys.gnupg.net --recv-keys 55D0C732 # import pgp signature 
+gpg --keyserver keys.gnupg.net --receive-keys 55D0C732 # import pgp signature 
 gpg --list-public-keys --with-fingerprint # print public keys 
 gpg --list-secret-keys --with-fingerprint # print private keys 
 gpg --list-sigs 92126B54 # key signature 
