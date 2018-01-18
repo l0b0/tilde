@@ -25,6 +25,7 @@ adb push PATHS /sdcard/ # upload file directory recursive android
 adb reboot bootloader # fastboot android 
 adb shell logcat -T 10 # list follow android log 
 adb shell # android 
+ag REGEX # search recursive 
 alias ls 
 align_image_stack -vl -a aligned ./*.jpg # graphics 
 alsamixer # audio input output volume 
@@ -744,6 +745,7 @@ man abcde # help
 man ack-grep # help 
 man acpid # help 
 man acpi_listen # help 
+man ag # help 
 man align_image_stack # help 
 man alsamixer # help 
 man amixer # help 
