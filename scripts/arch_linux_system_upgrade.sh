@@ -4,6 +4,8 @@ set -o errexit -o noclobber -o nounset -o pipefail
 
 directory="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+. "$(dirname "$directory")/shell-includes/warning.sh"
+
 pacman-key --refresh-keys
 
 upgrade_start="$(date +%s)"
@@ -21,13 +23,13 @@ running_kernel="$(uname -r)"
 installed_kernel="$(file --brief /boot/vmlinuz-linux | sed 's/.* version \([^ ]\+\).*/\1/')"
 if [[ "$running_kernel" != "$installed_kernel" ]]
 then
-    printf "Reboot needed to update running kernel from %s to %s\n" "$running_kernel" "$installed_kernel" >&2
+    warning "Reboot needed to update running kernel from ${running_kernel} to ${installed_kernel}"
 fi
 
 ramdisk_modified="$(stat --format=%Y /boot/initramfs-linux.img)"
 if [[ "$ramdisk_modified" > "$upgrade_start" ]]
 then
-    printf "Reboot needed to load new initial ramdisk environment\n" >&2
+    warning "Reboot needed to load new initial ramdisk environment"
 fi
 
 updatedb
