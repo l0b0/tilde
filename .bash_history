@@ -6,7 +6,7 @@
 ~/dev/img2vcard/img2vcard.sh photo.jpg > photo.vcf # convert image vcard 
 ~/dev/meta2jpeg/meta2jpeg.sh ./*.CR2 # copy metadata graphics image 
 ~/dev/schemaspy2svg/schemaspy2svg.sh ~/db # database graphics convert svg 
-~/dev/tilde/scripts/git-mergerequest.sh master 
+~/dev/tilde/scripts/git-mergerequest.sh master # create pull request 
 ~/dev/vcard/format-TEL.sh -i ~/contacts/*.vcf # format telephone number vcard 
 ~/dev/vcard/sort-lines.sh ~/dev/vcard/sorts/Gmail.re ~/contacts/*.vcf # sort vcard files 
 ~/dev/vcard/split.sh ~/contacts/*.vcf # split vcard files 
