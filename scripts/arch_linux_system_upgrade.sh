@@ -31,4 +31,6 @@ then
 fi
 
 updatedb
-! locate .pacnew
+set +o errexit
+locate .pacnew
+set -o errexit
