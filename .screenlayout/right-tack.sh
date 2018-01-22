@@ -14,6 +14,7 @@ xrandr \
         --mode ${monitor1_width}x${monitor1_height} \
         --pos ${monitor2_height}x${offset} \
         --rotate normal \
+        --primary \
     --output "$monitor2_name" \
         --mode ${monitor2_width}x${monitor2_height} \
         --pos 0x0 \
