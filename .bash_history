@@ -692,6 +692,7 @@ locate file
 lpstat -d # default printer cups 
 lpstat -v # list all printers cups 
 lsblk # list block device disk 
+lsblk --noheadings --output UUID /dev/mapper/vg-swap # disk uuid 
 lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
 lscpu | grep '^CPU op-mode' # detect cpu bit mode 
