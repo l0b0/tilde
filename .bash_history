@@ -1309,9 +1309,6 @@ pavucontrol & # pulseaudio volume
 pcmanfm & 
 pdfimages -j ./*.pdf . 
 pdfinfo file.pdf 
-pdftk A=first.pdf B=second.pdf C=third.pdf cat A B C output target.pdf # concatenate files 
-pdftk A=source.pdf cat A1-2 A4-end output target.pdf # remove page 
-pdfunite first.pdf second.pdf output.pdf # join pdf 
 pep8 setup.py 
 pep8 --help 
 pep8-python2 setup.py 
@@ -1392,6 +1389,8 @@ python -m timeit -s 'text = "sample string"; char = "g"' 'char in text' # timing
 python -m venv virtualenv 
 qemu-img create -f qcow2 /tmp/my.img 10G 
 qgit --all . & # gui 
+qpdf --empty --pages first.pdf 1-2,4-z -- target.pdf # remove page 
+qpdf --empty --pages first.pdf second.pdf -- target.pdf # concatenate files 
 qr2scad < ~/dev/qr2scad/tests/example_big.png > big.scad 
 qt5ct & 
 qtpfsgui & # hdr photo editor 
