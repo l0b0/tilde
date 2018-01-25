@@ -214,9 +214,6 @@ env --ignore-environment bash -c 'printf "%s\n" "${?+?=$?}" "${#+#=$#}" "${*+*=$
 eval "$traps" # signal 
 eval "$(resize -s 24 80)" # terminal 
 eval "$(ssh-agent)" && ssh-add 
-evince /usr/share/doc/gnu-standards/maintain.pdf.gz # help maintenance 
-evince /usr/share/doc/gnu-standards/standards.pdf.gz # help 
-evince /usr/share/doc/quilt/quilt.pdf.gz # help 
 exec "$SHELL" # replace 
 exiftool -AllDates+='-00:01:00 00:00:00' . # exif adjust date time images 
 exiftool -common . # exif images directory files 
