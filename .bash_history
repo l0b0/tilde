@@ -1291,6 +1291,7 @@ opentyrian "--net-player-name=${USER}" --net-player-number 1 --net=192.168.0.1 #
 pacman --query bash # package version 
 pacman --query # list all installed packages 
 pacman --query --explicit # list user installed package 
+pacman --query --foreign --quiet # list aur package 
 pacman --query --info bash # package info 
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
