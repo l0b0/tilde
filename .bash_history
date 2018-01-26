@@ -181,7 +181,6 @@ dot -Tsvg graph.dot # graphics
 dot -V 
 drive=/dev/sdX && [[ -b "$drive" ]] && ! grep "^${drive}" /proc/mounts && sudo dd bs=4M if=ISO of="$drive" status=progress && sync # iso write disk 
 dropdb --username username dbname # postgresql 
-du --si --summarize --one-file-system .[!.]* * | sort --human-numeric-sort # find large directory file 
 du --si --summarize . # disk size 
 dvdbackup --mirror --input=/dev/cdrom --output="$HOME" # rip dvd 
 echo 0 61 62 63 | xxd -revert # hex dump convert string character byte 
@@ -974,6 +973,7 @@ man mv # help
 man mysql # help 
 man nautilus # help 
 man ncal # help 
+man ncdu # help 
 man nc # help 
 man netctl # help 
 man netctl.profile # help 
@@ -1247,6 +1247,7 @@ mutt -v
 mutt-ldap.pl name # ldap search 
 mv file{.orig,} 
 ncal -3bM 
+ncdu # find large directory file 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
 netctl list # network profile 
