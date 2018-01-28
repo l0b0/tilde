@@ -1247,7 +1247,7 @@ mutt -v
 mutt-ldap.pl name # ldap search 
 mv file{.orig,} 
 ncal -3bM 
-ncdu # find large directory file 
+ncdu -x # find large directory file 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
 netctl list # network profile 
