@@ -8,6 +8,7 @@
       <mapping ext="pkg" type="DBN-PSQL"/>
       <mapping ext="pks" type="DBN-PSQL"/>
       <mapping ext="prc" type="DBN-PSQL"/>
+      <mapping ext="rules" type="PLAIN_TEXT"/>
       <mapping ext="tpb" type="DBN-PSQL"/>
       <mapping ext="tpe" type="DBN-PSQL"/>
       <mapping ext="tps" type="DBN-PSQL"/>

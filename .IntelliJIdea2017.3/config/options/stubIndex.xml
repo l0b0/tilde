@@ -138,6 +138,7 @@
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasByExpansionShortNameIndex"/>
         <option value="org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex"/>
         <option value="org.rust.lang.core.resolve.indexes.RsLangItemIndex"/>
+        <option value="org.rust.lang.core.stubs.index.RsReexportIndex"/>
         <option value="org.rust.lang.core.stubs.index.RustGotoClassIndex"/>
         <option value="org.rust.lang.core.stubs.index.RustImplIndex.TraitImpls"/>
         <option value="org.rust.lang.core.stubs.index.RustModulesIndex"/>

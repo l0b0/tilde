@@ -24,6 +24,7 @@
     <property name="evlsprt3.163" value="15"/>
     <property name="evlsprt3.171" value="16"/>
     <property name="evlsprt3.172" value="17"/>
+    <property name="evlsprt3.173" value="17"/>
     <property name="jdk.selected.JAVA_MODULE" value="1.8"/>
     <property name="log.debug.categories" value=""/>
     <property name="toolwindow.stripes.buttons.info.shown" value="true"/>
