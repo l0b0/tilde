@@ -1290,9 +1290,9 @@ pacman --query bash # package version
 pacman --query # list all installed packages 
 pacman --query --explicit # list user installed package 
 pacman --query --foreign --quiet # list aur package 
-pacman --query --info bash # package info 
 pacman --query --list bash # list all package files 
 pacman --query --owns "$(which bash)" # file package owner 
+pacman --sync --info bash # package info 
 pacman --sync --search bash # search packages 
 pacmd set-default-sink SINK_NAME # pulseaudio output 
 pactree bash # installed package dependencies 
