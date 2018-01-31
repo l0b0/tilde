@@ -719,6 +719,8 @@ lyx file.lyx
 l ~ 
 l 
 m4 --version # compile dev 
+makepkg --printsrcinfo > .SRCINFO # package generate metadata 
+makepkg --syncdeps --force # package build rebuild 
 makepkg --syncdeps --install # package build tarball install 
 make clean # dev 
 make install # dev 
@@ -974,6 +976,7 @@ man mp3fs # help
 man mutt # help 
 man mv # help 
 man mysql # help 
+man namcap # help 
 man nautilus # help 
 man ncal # help 
 man ncdu # help 
@@ -1023,6 +1026,7 @@ man pidof # help
 man ping # help 
 man pkcs8 # help 
 man pkcs12 # help 
+man pkgbuild # help 
 man pngcrush # help 
 man postgres # help postgresql server 
 man powertop # help 
@@ -1249,6 +1253,8 @@ mutt -vv
 mutt -v 
 mutt-ldap.pl name # ldap search 
 mv file{.orig,} 
+namcap --info PKGBUILD # package test 
+namcap --info *.pkg.tar.xz # package test 
 ncal -3bM 
 ncdu -x # find large directory file 
 nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
