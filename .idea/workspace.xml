@@ -157,18 +157,15 @@
   <component name="TaskManager">
     <servers/>
   </component>
-  <component name="TimeTrackingManager">
-  </component>
+  <component name="TimeTrackingManager"/>
   <component name="ToolWindowManager">
     <editor active="false"/>
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5197802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo"/>
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-  </component>
-  <component name="VcsContentAnnotationSettings">
-  </component>
+  <component name="TypeScriptGeneratedFilesManager"/>
+  <component name="VcsContentAnnotationSettings"/>
   <component name="XDebuggerManager">
     <breakpoint-manager/>
     <watches-manager/>
