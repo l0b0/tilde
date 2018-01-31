@@ -170,7 +170,7 @@ docker info
 docker network inspect host # config 
 docker ps --all # list container 
 docker pull base/archlinux 
-docker run -it image /bin/bash # shell container 
+docker run -it ubuntu:14.04 /bin/bash # shell container 
 docker system prune # clean remove container image 
 docker-compose build && docker-compose up -d 
 docker-compose run --rm test bash # shell container 
