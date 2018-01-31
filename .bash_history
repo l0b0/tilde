@@ -1418,6 +1418,7 @@ rsync --archive --human-readable --progress --verbose --remove-source-files sour
 rsync --rsh='ssh -p 2020 -i ~/.ssh/host.pem' --archive --human-readable --progress --verbose host:/path /target # network transfer 
 ruby -c test.rb # check verify syntax 
 runlevel # kernel 
+rustup default stable # rust install toolchain 
 rustup update # rust package update 
 sandbox="$(mktemp --directory)" 
 sane-find-scanner # list device 
