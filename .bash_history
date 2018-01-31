@@ -70,6 +70,7 @@ borg init --encryption=repokey --remote-path=PATH HOST:REPOSITORY
 bsdtar --list --file /boot/initramfs-linux.img | less # print kernel image files 
 builtin # bash list 
 bunzip2 file.bz2 # compression bzip 
+cargo build # rust 
 cargo init --bin project-name # rust project create 
 cargo test # rust build test 
 cat ~/contacts/*.vcf > ~/contacts.vcf # concatenate vcard 
