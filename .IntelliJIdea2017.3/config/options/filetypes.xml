@@ -2,6 +2,8 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="PKGBUILD" type="Bash"/>
+      <mapping ext="install" type="Bash"/>
       <mapping pattern="papersize" type="PLAIN_TEXT"/>
     </extensionMap>
   </component>
