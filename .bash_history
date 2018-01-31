@@ -155,6 +155,7 @@ df --human-readable . # filesystem current directory
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 dia --help 
 difff --help 
+diffoscope OLD NEW # file directory 
 diff --unified file{.orig,} # files 
 diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
@@ -809,6 +810,7 @@ man deluser # help
 man df # help 
 man dhclient # help 
 man dh_make # help 
+man diffoscope # help 
 man diff # help 
 man digikam # help 
 man dig # help 
