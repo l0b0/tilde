@@ -820,6 +820,7 @@ man dig # help
 man dirname # help 
 man dmesg # help 
 man dmidecode # help 
+man dockerfile # help 
 man dos2unix # help 
 man dotty # help 
 man dot # help 
