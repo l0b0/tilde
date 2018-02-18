@@ -882,6 +882,7 @@ man grive # help
 man groupadd # help 
 man groupdel # help 
 man groups # help 
+man grpck # help 
 man grub-mkconfig # help 
 man gsmartcontrol # help 
 man gs # help 
@@ -1038,6 +1039,7 @@ man psql # help postgresql
 man pstree # help 
 man ps # help 
 man pts # help 
+man pwck # help 
 man python # help 
 man qemu # help 
 man quilt # help 
@@ -1562,6 +1564,7 @@ sudo fsck -t exfat /dev/sdx # check exfat filesystem
 sudo gpasswd --add "$USER" group # user add group 
 sudo groupadd example # add create group 
 sudo groupdel example # delete remove group 
+sudo grpck --sort 
 sudo grub-install /dev/sda # fix boot mbr 
 sudo gsmartcontrol 
 sudo hdparm -I /dev/sda # harddisk hardware properties 
@@ -1613,6 +1616,7 @@ sudo pip install --upgrade https://github.com/l0b0/qr2scad/tarball/master
 sudo pip install --upgrade pip # python 
 sudo powertop # power monitoring configuration 
 sudo puppet apply --modulepath modules:vendor --detailed-exitcodes --hiera_config=hieradata/hiera.yaml --execute 'include module_name' 
+sudo pwck --sort 
 sudo reboot # restart 
 sudo sed --in-place 's/^mibs/#mibs/' /etc/snmp/snmp.conf # disable 
 sudo sed --in-place 's/^#LEDS=/LEDS=/' /etc/kbd/config # enable capslock boot 
