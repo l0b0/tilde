@@ -353,7 +353,7 @@ globalkeys = awful.util.table.join(
               {description = "show the menubar", group = "launcher"}),
 
     -- Lock screen
-    awful.key({ modkey }, "l", function () awful.spawn("xscreensaver-command -lock") end,
+    awful.key({ modkey }, "l", function () awful.spawn("light-locker-command --lock") end,
               {description = "lock the screen", group = "client"}),
 
     -- Screenshot

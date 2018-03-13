@@ -50,7 +50,7 @@ rm --recursive "$pipe_dir"
 wicd-client --tray >> "${HOME}/.wicd-client.log" 2>&1 &
 
 # Lock screen automatically
-xscreensaver -no-splash &
+light-locker &
 
 for service in cbatticon numlockx redshift
 do
