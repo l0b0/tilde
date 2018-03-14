@@ -522,6 +522,7 @@ gphoto2 --list-files # camera list photo
 gphoto2 --port usb: --abilities # camera list abilities usb 
 gphoto2 --set-config /main/settings/datetime=now # camera set time date 
 gphoto2 --summary # camera hardware 
+gradle tasks # list command 
 grep ":$USER\$" /etc/group 
 grep "^$USER:" /etc/passwd # password 
 grep 'GREEK SMALL LETTER PI' "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # unicode character 
