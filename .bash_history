@@ -61,8 +61,8 @@ bc --mathlib <<< 'e(1)' # calculator math e power
 bc <<< '2+2' # calculator math 
 bc <<< 'scale = 10; sqrt ( 2 )' # calculator math precision scale float decimal 
 bg # background job 
-bind -P | grep --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
-bind -p | grep --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
+bind -P | rg --fixed-strings ' can be found on ' | perl -pe 's/((?<!\\)(?:\\\\)*)\\C/\1Ctrl/g;s/((?<!\\)(?:\\\\)*)\\e/\1Esc,/g' # keyboard shortcuts 
+bind -p | rg --invert-match --regexp '^$' --regexp '^#' --regexp 'self-insert$' | sed "s/\(.*\)/bind '\1'/" | tr --squeeze-repeats '\n' ';' # shortcuts code 
 bluetoothctl 
 borg create --progress --remote-path=PATH --stats --verbose HOST:REPOSITORY/::$(date +%Y-%m-%d) DIRECTORY # backup directory 
 borg delete --remote-path=PATH HOST:REPOSITORY/::$(date +%Y-%m-%d) # remove backup 
@@ -98,7 +98,7 @@ chmod u+x example.sh # permission executable
 cmp --print-bytes "$(which arch)" "$(which uname)" # binary diff 
 coffee -v # coffeescript 
 comm -23 --nocheck-order <(alias -p) <(bash -lc 'alias -p') # list session aliases 
-comm -23 <(grep --no-filename ^FN: ~/contacts.vcf | sort --unique) <(grep --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
+comm -23 <(rg --no-filename ^FN: ~/contacts.vcf | sort --unique) <(rg --no-filename ^FN: ~/contacts/*.vcf | sort --unique) # compare vcard names 
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
 convert ./name-*.gif name-%04d.png # format number graphics 
 convert ./*.jpg output.pdf # graphics combine image 
@@ -153,7 +153,7 @@ declare -p # color variables functions
 deluge & # bittorrent gui 
 df --human-readable # filesystem list all 
 df --human-readable . # filesystem current directory 
-df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | grep --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
+df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | rg --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 dia --help 
 difff --help 
 diffoscope OLD NEW # file directory 
@@ -181,7 +181,7 @@ dotty graph.dot # graphics
 dot -O -Tsvg ./*.dot # graphics 
 dot -Tsvg graph.dot # graphics 
 dot -V 
-drive=/dev/sdX && [[ -b "$drive" ]] && ! grep "^${drive}" /proc/mounts && sudo dd bs=4M if=ISO of="$drive" status=progress oflag=sync # iso write disk 
+drive=/dev/sdX && [[ -b "$drive" ]] && ! rg "^${drive}" /proc/mounts && sudo dd bs=4M if=ISO of="$drive" status=progress oflag=sync # iso write disk 
 dropdb --username username dbname # postgresql 
 du --si --summarize . # disk size 
 dvdbackup --mirror --input=/dev/cdrom --output="$HOME" # rip dvd 
@@ -256,7 +256,7 @@ find . -exec printf '%s\0' {} + | while read -r -d ''; do printf %q "$REPLY"; pr
 find . -group 1000 -exec chgrp "$(id --group)" {} + # update files permissions 
 find . -mindepth 1 -exec printf x \; | wc -c # count files posix safe 
 find . -mindepth 1 -exec printf '%s\0' {} + | shuf --head-count 10 --zero-terminated # random shuffle files 
-find . -path ./.git -prune -o \( -type f -exec grep --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
+find . -path ./.git -prune -o \( -type f -exec rg --files-with-matches $'\t' {} + \) # exclude vcs directories tab files 
 find . -regex '.*\(\.orig$\|\(_\(BACKUP\|BASE\|LOCAL\|REMOTE\)_\).*\)' -delete # remove git rebase temp files 
 find . -type f -executable # files 
 find . -type f -name '*.odg' -execdir libreoffice --headless --convert-to fodg {} + # convert binary xml 
@@ -523,17 +523,6 @@ gphoto2 --port usb: --abilities # camera list abilities usb
 gphoto2 --set-config /main/settings/datetime=now # camera set time date 
 gphoto2 --summary # camera hardware 
 gradle tasks # list command 
-grep ":$USER\$" /etc/group 
-grep "^$USER:" /etc/passwd # password 
-grep 'GREEK SMALL LETTER PI' "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # unicode character 
-grep '\(\b\|^\)command\b.* .*help' ~/.bash_history # search 
-grep --files-with-matches --null --regexp "pattern1" ./* | xargs -0 grep --files-with-matches --regexp "pattern2" # search and patterns 
-grep --files-with-matches --null --regexp "pattern" ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
-grep --fixed-strings --recursive --exclude-dir .git --regexp 'foo' . # search literal source 
-grep --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | grep --invert-match --regexp '^ ' 
-grep --recursive --no-filename --only-matching 'foo' . | wc --lines # sum count search 
-grep --regexp ^ --regexp "^$USER:" /etc/passwd # context highlight 
-grep --version 
 grive # upload download sync files google drive 
 grive --auth # authenticate google drive 
 groups 
@@ -663,7 +652,7 @@ la
 ldconfig --print-cache # list all libraries 
 ldd "$(which bash)" 
 less Makefile 
-less "/usr/share/X11/locale/$(grep --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # keyboard shortcuts 
+less "/usr/share/X11/locale/$(rg --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # keyboard shortcuts 
 less --RAW-CONTROL-CHARS filename # color 
 less --raw-control-chars typescript 
 less /etc/issue 
@@ -694,22 +683,22 @@ lsblk # list block device disk
 lsblk --noheadings --output UUID /dev/mapper/vg-swap # disk uuid 
 lsb_release --all # linux version distro 
 lscpu # hardware architecture processor 
-lscpu | grep '^CPU op-mode' # detect cpu bit mode 
+lscpu | rg '^CPU op-mode' # detect cpu bit mode 
 lshw 
 lslocks # list file locks 
 lsmod # kernel modules 
 lsof # list open files 
 lsof +D /path # list open file directory recursive 
 lsof +L1 # list deleted files 
-lsof +c 0 | grep process-name | wc --lines # count files 
+lsof +c 0 | rg process-name | wc --lines # count files 
 lsof -i tcp # internet network 
 lsof -i :22 # internet port network 
 lsof -p $$ # files process 
 lspci # list pci hardware 
 lspci -v -s 00:1b.0 # pci device details 
-lspci | grep --ignore-case audio # pci device 
+lspci | rg --ignore-case audio # pci device 
 lsusb # list usb hardware 
-lsusb | grep --ignore-case cam 
+lsusb | rg --ignore-case cam 
 ls -lt /var/log/ # sort time list 
 ls -l --all # list 
 ls -l --block-size 1 # list files size bytes 
@@ -729,7 +718,7 @@ make test # dev
 make variables # dev 
 make variable-SHELL # dev 
 make # compile dev 
-make --silent python-pep8 | cut --delimiter=: --fields=4- | grep --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
+make --silent python-pep8 | cut --delimiter=: --fields=4- | rg --invert-match '^$' | sort | uniq --count | sort --numeric-sort 
 man 1p mv # posix help 
 man 1p sort # posix help 
 man 1p xargs # posix help 
@@ -744,7 +733,6 @@ man 7z # help
 man 7 glob # help 
 man Xorg # help 
 man abcde # help 
-man ack-grep # help 
 man acpid # help 
 man acpi_listen # help 
 man ag # help 
@@ -878,7 +866,6 @@ man gpasswd # help
 man gpg # help 
 man gphoto2 # help 
 man graphviz # help 
-man grep # help 
 man grive # help 
 man groupadd # help 
 man groupdel # help 
@@ -1261,7 +1248,7 @@ namcap --info PKGBUILD # package test
 namcap --info *.pkg.tar.xz # package test 
 ncal -3bM 
 ncdu -x # find large directory file 
-nc -l 12345 & netstat --tcp --all | grep :12345 && kill "$!" # test network listen port 
+nc -l 12345 & netstat --tcp --all | rg :12345 && kill "$!" # test network listen port 
 neato -O -Tsvg ./*.dot 
 netctl list # network profile 
 netctl-auto current # network profile 
@@ -1275,7 +1262,7 @@ nl ~/.bashrc # number lines
 nmap -T Aggressive -A -v 192.168.0.1 
 nmap -p 22 --open 192.168.0.0/24 # search list ssh hosts network 
 nmap -v -sP 192.168.0.0/24 
-nm libfoo.so | grep '^ *U ' # dev undefined object 
+nm libfoo.so | rg '^ *U ' # dev undefined object 
 node # javascript 
 node -v 
 notify-send "summary" "body" 
@@ -1333,7 +1320,7 @@ perl -d -e 1 # interactive console
 perl -ne 'print join("\n", split(/:/));print("\n");' input # split join 
 perl -pe 'chomp if eof' input > output # remove newline eof 
 perl --version 
-perl-rename --dry-run 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | grep --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
+perl-rename --dry-run 's/([^-]+)-.*-([^-]+)/$1-$2/' ./*.xml | rg --only-matching ' renamed as .*' | sort | uniq --repeated # safe 
 perl-rename --dry-run --verbose 's#/([^/]+)$#/prefix $1#' ./* # prefix 
 perl-rename --dry-run --verbose 's/(\d{4})(\d{2})(\d{2})/$1-$2-$3/' ./* # date 
 perl-rename --dry-run --verbose 's/.*/sprintf "%04d.jpg", ++$main::Mad/e' ./*.jpg # video 
@@ -1412,6 +1399,16 @@ read < "/path"
 read <<< "$text" 
 recordmydesktop --windowid "$(xdotool selectwindow)" --no-cursor --full-shots --fps 25 --no-wm-check --no-frame -o ~/out.ogv 
 reset # clear log remove terminal text 
+rg PATTERN # search 
+rg ":$USER\$" /etc/group 
+rg "^$USER:" /etc/passwd # password 
+rg 'GREEK SMALL LETTER PI' "/usr/share/X11/locale/$(rg --max-count=1 "${LANG%.*}.UTF-8\$" /usr/share/X11/locale/locale.dir | cut --delimiter=/ --fields 1)/Compose" # unicode character 
+rg '(\b|^)COMMAND\b.* .*help' ~/.bash_history # search 
+rg --files-with-matches --null --regexp PATTERN ./* 2>/dev/null | tr --complement --delete '\000' | wc --chars # count occurrences pattern 
+rg --files-with-matches --null --regexp PATTERN ./* | xargs -0 rg --files-with-matches --regexp OTHER # search and patterns 
+rg --invert-match --file ~/dev/vcard/sorts/Gmail.re < ~/contacts.vcf | rg --invert-match --regexp '^ ' 
+rg --no-filename --only-matching PATTERN . | wc --lines # sum count search 
+rg --passthru --regexp "^$USER:" /etc/passwd # context highlight 
 rmdir ./* 
 rm --recursive ~/.local/share/Trash/ && mkdir --parent ~/.local/share/Trash/{files,info,metadata} # clean kde trash bug 
 rm -- example.txt 
@@ -1527,7 +1524,7 @@ stat --format %i / # inode
 stat --format '%A %U %G %s %y %n' ./* # list permissions user group file 
 stat --printf '%A %U %G %s %y %n\0' ./* # list permissions user group file nul 
 strace -Cf bash -lc true # count calls profile summary 
-strace -fe open ./example.sh 2>&1 >/dev/null | grep --only-matching '^\(\[pid\s\+[0-9]*\] \)\?open("[^"]\+' | grep --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
+strace -fe open ./example.sh 2>&1 >/dev/null | rg --only-matching '^(\[pid\s+[0-9]*\] )?open\("[^"]+' | rg --only-matching '".*' | cut --characters 2- | sort --unique # script dependencies 
 strings "$(which strings)" 
 stty sane # restore terminal state 
 stty --all # terminal settings 
@@ -1559,7 +1556,7 @@ sudo faillog # log summary user
 sudo fdisk -l # list all disks 
 sudo fdisk /dev/sdx # partition disk 
 sudo file --special-files /dev/sdX # detect disk type 
-sudo file /boot/vmlinuz-linux | grep --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
+sudo file /boot/vmlinuz-linux | rg --fixed-strings --word-regexp --quiet "$(uname -r)" || echo 'You should reboot to use the new kernel' 
 sudo freshclam # antivirus update 
 sudo fsck -t exfat /dev/sdx # check exfat filesystem 
 sudo gpasswd --add "$USER" group # user add group 
@@ -1603,7 +1600,7 @@ sudo mount --options remount,ro /dev/sda1 # readonly restore
 sudo mount --options remount,rw /dev/sda1 # writeable 
 sudo mount --types tmpfs --options size=1m tmpfs -- "$(mktemp --directory --tmpdir -- ramdisk.XXXXXXXXXX)" # create ramdisk partition 
 sudo nethogs wlan0 # network monitor 
-sudo netstat --listening --tcp --numeric-ports --program | grep '\(^[A-Z]\|^\([^[:space:]]\+[[:space:]]\+\)\{3\}[^[:space:]]\+:22\b\)' # internet connections server search 
+sudo netstat --listening --tcp --numeric-ports --program | rg '(^[A-Z]|^([^[:space:]]+[[:space:]]+){3}[^[:space:]]+:22\b)' # internet connections server search 
 sudo openvpn --config /etc/openvpn/client/config.ovpn 
 sudo paccache --dryrun # pacman package cache clean files delete 
 sudo pacman --needed --refresh --sync PACKAGE # install package 
@@ -1629,7 +1626,7 @@ sudo sh -c 'systemctl start acpid.service && systemctl enable acpid.service' # s
 sudo sh -c 'systemctl start avahi-daemon.service && systemctl enable avahi-daemon.service' # printer discovery service 
 sudo sh -c 'systemctl start cronie.service && systemctl enable cronie.service' # cron service 
 sudo sh -c 'systemctl start dkms.service && systemctl enable dkms.service' # dynamic kernel module support 
-sudo sh -c 'tail --follow name --retry --lines 0 "$(find /var/log/ -type f -exec file -- {} + | grep ":.*\(ASCII\|UTF\)" | cut --delimiter : --field 1)"' # text 
+sudo sh -c 'tail --follow name --retry --lines 0 $(find /var/log/ -type f -exec file -- {} + | rg ":.*(ASCII|UTF)" | cut --delimiter : --field 1)' # text 
 sudo sh -c 'umount /media/encrypted && cryptsetup close encrypted' # disk unmount 
 sudo sh -c 'vim /etc/default/grub && grub-mkconfig --output=/boot/grub/grub.cfg' # edit boot kernel parameters 
 sudo sh -c 'vim /etc/mkinitcpio.conf && mkinitcpio -p linux' # edit generate ramdisk 
@@ -1733,7 +1730,7 @@ traceroute example.org
 traps="$(trap)" # signal 
 trap # signal 
 tshark -D # list network interface 
-tshark -G fields | grep --perl-regexp '\tdns\t' | cut --fields 2-4,6- # list field dns 
+tshark -G fields | rg '\tdns\t' | cut --fields 2-4,6- # list field dns 
 tshark -Y 'http.request and http contains "application/ocsp-request"' -T fields -e http.host tcp port 80 # network ocsp request 
 tshark -n -T fields -e dns.qry.name src port 53 # network dns 
 tty 
@@ -1831,7 +1828,7 @@ xmodmap ~/.Xmodmap # read configuration keyboard mouse
 xmodmap -pm # list keyboard modifiers 
 xmodmap -pp # list mouse buttons 
 xprop # x window properties 
-xprop | grep --color=none "WM_CLASS\|^WM_NAME" 
+xprop | rg --color=never "^(WM_CLASS|WM_NAME)" 
 xrandr --display :0 --output LVDS1 --mode 1366x768 # reset resolution graphics desktop 
 xrandr --verbose # graphics hardware 
 xrdb -load ~/.Xresources # replace x settings 
@@ -1850,13 +1847,11 @@ zip --update file.zip input # add file compress zip
 zless /proc/config.gz # kernel configuration parameter 
  make --directory ~/dev/tilde clean 
  vim ~/.bash_history # shell 
-! df --portability | awk '{print $5}' | grep --fixed-strings --line-regexp --quiet '100%' # disk space available 
 (echo 'ctrl_interface=/var/run/wpa_supplicant' && wpa_passphrase ssid passphrase) | sudo tee /etc/wpa_supplicant.conf # configuration wireless network wpa supplicant 
-(grep --invert-match '^nameserver' /etc/resolv.conf; echo nameserver 208.67.222.222; echo nameserver 208.67.220.220) | sudo tee /etc/resolv.conf # dns configuration 
 (path=$'--$`!*@\a\b\E\f\r\t\v\\\'"\360\240\202\211 \n'; diff <(ssh foo 'cat -- '"$(printf %q "$path")") <(ssh bar 'cat -- '"$(printf %q "$path")")) # remote 
 (printf '%s\n' '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' '<html xmlns="http://www.w3.org/1999/xhtml">' '<head>' '<title/>' '</head>' '<body>' && cat in.xhtml && printf '%s\n' '</body>' '</html>') > out.xhtml 
 (set -o posix; set) # list all options 
-(set -o posix; set) | grep --only-matching '^COMP[^=]*' 
+(set -o posix; set) | rg --only-matching '^COMP[^=]*' 
 (yes a & yes b) | cat >/dev/null & ~/dev/pspipe/fdpid.sh 0 "$!" # process pid pipe stdin 
 /usr/local/JDiveLog/bin/jdivelog 
-[[ "$(git diff --staged | grep --count ^-)" -eq "$(git diff --staged | grep --count ^+)" ]] # verify sort 
+[[ "$(git diff --staged | rg --count ^-)" -eq "$(git diff --staged | rg --count ^+)" ]] # verify sort 
