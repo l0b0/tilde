@@ -884,6 +884,7 @@ Zoom=marble:900
 CaseSensitive=0
 
 [General Settings]
+Application Style=qt5ct-style
 Apply Sidebar Changes Directly=false
 Clean core DB At Start=false
 FullScreen Hide SideBars=false
