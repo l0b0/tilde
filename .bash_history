@@ -1471,7 +1471,7 @@ shopt -s globstar && wc --lines ./**/**.ext # count recursive lines
 shopt -s nullglob # option set * 
 shopt -u nullglob # option unset * 
 showkey # keyboard console 
-shred --remove filename # overwrite delete file 
+shred --remove PATH # overwrite delete file 
 shuf --input-range 0-1 --head-count 1 # random number range 
 sh 
 simple-scan & 
