@@ -102,6 +102,8 @@ comm -23 <(rg --no-filename ^FN: ~/contacts.vcf | sort --unique) <(rg --no-filen
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
 convert ./name-*.gif name-%04d.png # format number graphics 
 convert ./*.jpg output.pdf # graphics combine image 
+coredumpctl gdb PID <<< bt # trace segfault 
+coredumpctl list # segfault 
 count . # filesystem 
 coverage help 
 coverage report --include='*/*' --fail-under=100 # python test coverage 
@@ -783,6 +785,7 @@ man cloc # help
 man cmp # help 
 man comm # help 
 man convert # help 
+man coredumpctl # help 
 man cpio # help 
 man cppcheck # help 
 man cp # help 
