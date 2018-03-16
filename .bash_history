@@ -1571,7 +1571,8 @@ sudo iftop -i wlp1s0 # bandwidth network interface monitor wireless
 sudo iotop # i/o storage repeat 
 sudo iotop --batch --iter 1 # i/o storage 
 sudo iotop --pid=$$ # i/o process 
-sudo iptables --list-rules # list all firewall rules network commands 
+sudo ip6tables --list-rules # list all ipv6 firewall rules network commands 
+sudo iptables --list-rules # list all ipv4 firewall rules network commands 
 sudo ip addr add 1.2.3.4/24 dev eth0 # network address 
 sudo ip addr del 1.2.3.4/24 dev eth0 # network address delete 
 sudo ip link set eth0 down # network disable device 
