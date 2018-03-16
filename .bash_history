@@ -1606,6 +1606,7 @@ sudo nethogs wlan0 # network monitor
 sudo netstat --listening --tcp --numeric-ports --program | rg '(^[A-Z]|^([^[:space:]]+[[:space:]]+){3}[^[:space:]]+:22\b)' # internet connections server search 
 sudo openvpn --config /etc/openvpn/client/config.ovpn 
 sudo paccache --dryrun # pacman package cache clean files delete 
+sudo pacman --files --refresh --search PATH # find package 
 sudo pacman --needed --refresh --sync PACKAGE # install package 
 sudo pacman --recursive --remove $(pacman --deps --query --quiet --unrequired) # clean remove orphan package dependencies 
 sudo pacman --sync --clean # remove cache temporary file 
