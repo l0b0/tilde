@@ -244,8 +244,8 @@ ffmpeg -i input.mov -vcodec copy -acodec copy -ss 00:00:00 -t 00:01:00 output.mo
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 timelapse.mp4 # video convert 
 ffmpeg -i %04d.jpg -vcodec libx264 -bf 0 -crf 12 -vpre medium -an -r 25 -s hd1080 -vf "transpose=2" timelapse.mp4 # video convert rotate 
 fgit gc -- ~/*/.git/.. ~/.*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. /run/media/"$USER"/*/*/.git/.. 
-fgit pull -- ~/*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
-fgit status -- ~/*/.git/.. ~/dev/*/.git/.. /media/*/*/.git/.. 
+fgit pull -- ~/*/.git/.. ~/dev/*/.git/.. "/run/media/${USER}"/*/*/.git/.. 
+fgit status -- ~/*/.git/.. ~/dev/*/.git/.. "/run/media/${USER}"/*/*/.git/.. 
 fgit --help 
 fg # foreground job 
 fg && command # append command continue 
@@ -296,8 +296,8 @@ free --human # memory
 fromdos -- file # convert newline 
 fswebcam --loop 5 --resolution 640x480 webcam.jpeg # webcam capture 
 full_name="$(getent passwd "$USER" | cut -d ':' -f 5)" && gphoto2 --set-config /main/settings/artist="$full_name" --set-config /main/settings/copyright="Copyright $full_name" --set-config /main/settings/ownername="$full_name" # set camera config 
-fuseiso -p file.bin "/media/mountpoint" # mount 
-fusermount -uz "/media/mountpoint" # lazy unmount 
+fuseiso -p file.bin "/run/media/${USER}/mountpoint" # mount 
+fusermount -uz "/run/media/${USER}/mountpoint" # lazy unmount 
 gcc -Wall -o a.out foo.c # compile 
 gcc --version 
 gdb program # debug 
@@ -1501,8 +1501,8 @@ splint foo.c
 sqlite3 -line db/development.sqlite3 "select * from table_name" 
 sqliteman name.sqlite # gui sqlite db 
 sqliteman --help 
-sshfs server: /media/server # sftp 
-sshfs -o port=22222 android:/storage/emulated/0 /media/phone # sftp android 
+sshfs server: "/run/media/${USER}/server" # sftp 
+sshfs -o port=22222 android:/storage/emulated/0 "/run/media/${USER}/phone" # sftp android 
 ssh example.org 
 ssh example.org uptime 
 ssh example.org < example.sh # execute shell script remote 
@@ -1538,7 +1538,7 @@ sudo blkid -o list
 sudo chfn -f "My Name" "$USER" # full name 
 sudo chgrp --recursive nogroup -- example.txt # set group file 
 sudo chown nobody "$sandbox" 
-sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/media/mountpoint" 
+sudo chown "$USER":"$(printf %q "$(groups | awk '{print $1}')")" "/run/media/${USER}/mountpoint" 
 sudo chroot /var/jail/"$USER" su --login "$USER" # jail 
 sudo clamscan --quiet --recursive / # antivirus scan 
 sudo cpanm Net::LDAP # install ldap 
@@ -1587,7 +1587,7 @@ sudo lastb | less # list all bad failed user login history
 sudo ldconfig 
 sudo lightdm-gtk-greeter-settings # login config 
 sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime # set system timezone 
-sudo ln --symbolic /media/windows/Windows/Fonts /usr/share/fonts/WindowsFonts # enable windows fonts 
+sudo ln --symbolic "/run/media/${USER}/windows/Windows/Fonts" /usr/share/fonts/WindowsFonts # enable windows fonts 
 sudo loadkeys dvorak # keyboard layout vt terminal 
 sudo localectl --no-convert set-keymap dvorak # x11 console vt keyboard layout 
 sudo localectl --no-convert set-x11-keymap us '' dvorak-alt-intl 
