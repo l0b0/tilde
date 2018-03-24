@@ -102,6 +102,7 @@ comm -23 <(rg --no-filename ^FN: ~/contacts.vcf | sort --unique) <(rg --no-filen
 convert -density 150 -quality 100 input.pdf output.jpg # graphics extract image 
 convert ./name-*.gif name-%04d.png # format number graphics 
 convert ./*.jpg output.pdf # graphics combine image 
+coredumpctl dump PID > coredump.bin # trace segfault 
 coredumpctl gdb PID <<< bt # trace segfault 
 coredumpctl list # segfault 
 count . # filesystem 
