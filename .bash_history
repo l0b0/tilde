@@ -159,7 +159,7 @@ df --human-readable . # filesystem current directory
 df --portability . | tail --lines 1 | cut --delimiter ' ' --fields 1 | rg --fixed-strings --invert-match --line-regexp --regexp '-' # directory partition 
 dia --help 
 difff --help 
-diffoscope OLD NEW # file directory 
+diffoscope --text-color=always OLD NEW | less --RAW-CONTROL-CHARS # file directory 
 diff --unified file{.orig,} # files 
 diff --unified <(hexdump -C /bin/uname) <(hexdump -C /usr/bin/arch) 
 diff --unified <(sudo sh -c env | sort) <(sudo -i sh -c env | sort) # environment variables root login shell 
