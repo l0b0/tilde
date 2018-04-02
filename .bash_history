@@ -1450,6 +1450,7 @@ sed '/^$/d' file # delete empty lines
 sed '/^[[:space:]]*$/d' file # delete whitespace line 
 sed --quiet '/^START$/,/END^$/{/^START$/d;/^END$/d;p;}' <<< $'START\nfirst\nEND\nSTART\nsecond\nEND' # extract delimiter lines 
 setxkbmap -device $(which-keyboard) -layout us -variant dvorak-alt-intl -option compose:caps # keyboard layout config 
+setxkbmap -layout us # keyboard layout qwerty us reset 
 setxkbmap -print # keyboard settings 
 setxkbmap -verbose | awk -F '+' '/^symbols:/ {print $2}' # keyboard layout settings 
 set +o noclobber # file error 
