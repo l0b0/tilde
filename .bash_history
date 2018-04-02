@@ -1384,6 +1384,7 @@ puppet resource --help
 puppet resource --types 
 pwd # current directory 
 pychecker --help 
+pycodestyle --max-line-length=120 # python lint style check file 
 pyflakes --help 
 pylint --help 
 python -m py_compile script.py # verify code script 
