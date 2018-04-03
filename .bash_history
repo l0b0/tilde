@@ -18,7 +18,7 @@ IFS=':' read -a paths <<< "$PATH" # tokenize array
 PATH=$(IFS=':'; echo "${paths[*]}") 
 TAGS=all guard 
 TAGS="$USER" guard 
-abcde -o mp3 # rip audio cd 
+abcde -Q cddb -o flac # rip audio cd 
 acpi_listen # events power configuration 
 adb devices # list android 
 adb push PATHS /sdcard/ # upload file directory recursive android 
