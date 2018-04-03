@@ -84,8 +84,6 @@ CaseSensitive=0
 Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
 
-[Batch Queue Manager Settings]
-
 [Camera Settings]
 DefaultTargetAlbumId=0
 FileSaveConflictRule=1
@@ -1292,8 +1290,6 @@ XMP Level=2
 [LightTable Settings][Right Sidebar][Version Properties Tab]
 Version Properties Tab=versions
 Version Properties View Mode=2
-
-[MainWindow]
 
 [Metadata Settings]
 EXIF Rotate=true
