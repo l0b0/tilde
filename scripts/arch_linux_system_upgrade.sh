@@ -33,6 +33,7 @@ then
 fi
 
 updatedb
-set +o errexit
-locate .pacnew
-set -o errexit
+while read -u9 line
+do
+    warning "$line"
+done 9< <(locate .pacnew)
