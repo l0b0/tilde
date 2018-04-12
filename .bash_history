@@ -1270,11 +1270,6 @@ nm libfoo.so | rg '^ *U ' # dev undefined object
 node # javascript 
 node -v 
 notify-send "summary" "body" 
-npm config set registry http://registry.npmjs.org/ 
-npm install jslint 
-npm install -g coffee-script # coffeescript 
-npm ls -g 
-npm -v 
 nproc # print processor count 
 nslookup example.org # dns internet lookup network 
 ntpq -p # query list peers 
