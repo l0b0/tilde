@@ -1270,6 +1270,7 @@ nm libfoo.so | rg '^ *U ' # dev undefined object
 node # javascript 
 node -v 
 notify-send "summary" "body" 
+npm install --local # package.json node.js 
 nproc # print processor count 
 nslookup example.org # dns internet lookup network 
 ntpq -p # query list peers 
