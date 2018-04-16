@@ -125,6 +125,7 @@ csplit --prefix header- --suffix-format %02d.txt --elide-empty-files --quiet hea
 cssh server{1,2,3} # ssh multiple servers 
 csvtool col 3 example.csv # csv column 
 csvtool --help | less 
+curl dict://dict.org/d:word # language dictionary 
 curl --request POST --header 'Content-Type: application/json' --data '{"foo": 1}' https://example.org/ # post web api 
 cut --delimiter ':' --fields 1 /etc/group | sort 
 darktable & # 2d image editor raw 
