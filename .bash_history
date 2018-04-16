@@ -16,6 +16,7 @@ COMPOSE_HTTP_TIMEOUT=99999999 docker-compose logs -f --tail=10
 GIT_CURL_VERBOSE=1 git pull # debug 
 IFS=':' read -a paths <<< "$PATH" # tokenize array 
 PATH=$(IFS=':'; echo "${paths[*]}") 
+PS1='\$ ' # prompt demo 
 TAGS=all guard 
 TAGS="$USER" guard 
 abcde -Q cddb -o flac # rip audio cd 
