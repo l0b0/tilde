@@ -90,7 +90,7 @@ cat /proc/vmstat # hardware
 cbatticon --help-all 
 cbatticon --list-power-supplies # battery 
 cd - # back 
-cd -- "$(mktemp --directory)" # create temporary directory 
+cd "$(mktemp --directory)" # create temporary directory 
 certutil # help 
 checkbashisms ./*.sh 
 chfn --full-name "John Doe" 
