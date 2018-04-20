@@ -290,6 +290,7 @@ fold --width 1 <<< foo # split characters lines
 fortune 
 for path in ./*.jpg; do mogrify -resize '1920x1080>' "$path"; done # resize 1080p height 
 for path in ./*.jpg; do mv --verbose "$path" "$(printf "%04d" "$index").jpg"; let index+=1; done; unset index 
+for path in ./*.mp4; do ffmpeg -ss 1 -i "$path" -qscale:v 4 -frames:v 1 -huffman optimal "${path%.mp4}.jpg"; done # convert video extract frame image podcast 
 for path in ./*.sass; do sass-convert "$path" "${path%.*}.scss"; done 
 for path in ./*.zip; do unzip "$file"; done # all 
 for path in ./*/.git/..; do cd "$path"; git -C "$(git rev-parse --show-toplevel)" checkout-index --all --prefix="../$(basename "$(git rev-parse --show-toplevel)")-copy/"; cd -; done # backup repos 
