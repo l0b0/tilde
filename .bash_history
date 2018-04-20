@@ -1849,6 +1849,7 @@ xxd "$(which xxd)" | head --lines=1 # binary hex
 yes -- example # repeat string 
 yes | dh_make --single && printf %s $'*.EX\n*.ex\n' > debian/.gitignore && git add debian 
 youtube-dl --all-subs --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" --continue --format best --prefer-free-formats '' # download video files 
+youtube-dl --continue --embed-thumbnail --format 140 --output "${HOME}/download/%(upload_date)s-%(title)s-%(id)s.%(ext)s" '' # download audio files thumbnail 
 zip --update file.zip input # add file compress zip 
 zless /proc/config.gz # kernel configuration parameter 
  make --directory ~/dev/tilde clean 
