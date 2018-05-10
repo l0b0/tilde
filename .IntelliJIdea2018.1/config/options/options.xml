@@ -13,6 +13,7 @@
     <property name="GradleModuleWizard.inheritVersion" value="true"/>
     <property name="JUnitSupport.hidePassedTests" value="true"/>
     <property name="LayoutCode.optimizeImports" value="true"/>
+    <property name="LayoutCode.rearrangeEntries" value="true"/>
     <property name="LayoutCode.rearrangeEntriesJava" value="true"/>
     <property name="MemberChooser.copyJavadoc" value="false"/>
     <property name="MemberChooser.showClasses" value="true"/>
