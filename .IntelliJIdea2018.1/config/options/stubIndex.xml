@@ -79,6 +79,7 @@
         <option value="dom.elementClass"/>
         <option value="dom.namespaceKey"/>
         <option value="es6.assignment.index"/>
+        <option value="es6.exported.index"/>
         <option value="gr.annot.members"/>
         <option value="gr.annot.method.name"/>
         <option value="gr.anonymous.class"/>
