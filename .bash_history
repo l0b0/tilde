@@ -1288,6 +1288,16 @@ openssl rsa -text -in name.key.pem # list key properties
 openssl s_client -connect example.com:443 -status <<< '' # get certificate connect host ssl https 
 openssl x509 -req -days 1 -in request.pem -signkey private.pem -out certificate.pem # create self-signed x509 certificate hex 
 openssl x509 -text -in name.crt.pem -noout # list x509 certificate properties 
+openstack flavor list --help 
+openstack flavor list --public # print list type machine hardware 
+openstack floating ip list # address network 
+openstack floating ip list --help 
+openstack image list --help 
+openstack image list --public # os 
+openstack keypair list # ssh 
+openstack keypair list --help 
+openstack network list # subnet 
+openstack network list --help 
 opentyrian "--net-player-name=${USER}" --net-player-number 1 --net=192.168.0.1 # tyrian game network 
 pacman --query bash # package version 
 pacman --query # list all installed packages 
